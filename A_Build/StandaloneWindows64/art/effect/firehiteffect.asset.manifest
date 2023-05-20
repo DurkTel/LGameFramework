@@ -1,0 +1,45 @@
+ManifestFileVersion: 0
+CRC: 681511780
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 670bfaceb48ceb3b0948e4962eb23d54
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2bc5b408432b704a02b5d6a01d546592
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 062a2dc8ef0593a459e35f15bea29537, type: 3}
+- Class: 210
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Art/Effect/fireHitEffect/fireHitEffect/fireHit_2.png
+- Assets/Art/Effect/fireHitEffect/fireHitEffect/fireHit_11.png
+- Assets/Art/Effect/fireHitEffect/fireHitEffect/fireHit_7.png
+- Assets/Art/Effect/fireHitEffect/fireHitEffect.prefab
+- Assets/Art/Effect/fireHitEffect/fireHitEffect/fireHit_13.png
+- Assets/Art/Effect/fireHitEffect/fireHitEffect/fireHit_10.png
+- Assets/Art/Effect/fireHitEffect/fireHitEffect/fireHit_0.png
+- Assets/Art/Effect/fireHitEffect/fireHitEffect/fireHit_3.png
+- Assets/Art/Effect/fireHitEffect/fireHitEffect/fireHit_8.png
+- Assets/Art/Effect/fireHitEffect/fireHitEffect/fireHit_5.png
+- Assets/Art/Effect/fireHitEffect/fireHitEffect/fireHit_pointOffsize.txt
+- Assets/Art/Effect/fireHitEffect/fireHitEffect/fireHit_9.png
+- Assets/Art/Effect/fireHitEffect/fireHitEffect/fireHit_6.png
+- Assets/Art/Effect/fireHitEffect/fireHitEffect/fireHit_4.png
+- Assets/Art/Effect/fireHitEffect/fireHitEffect/fireHit_1.png
+- Assets/Art/Effect/fireHitEffect/fireHitEffect/fireHit_offset.txt
+- Assets/Art/Effect/fireHitEffect/fireHitEffect/fireHit_12.png
+Dependencies: []

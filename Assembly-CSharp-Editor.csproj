@@ -58,10 +58,10 @@
   <ItemGroup>
     <Compile Include="Assets\Editor\AssetReName.cs" />
     <Compile Include="Assets\Editor\Build\LBuildUtility.cs" />
-    <Compile Include="Assets\Editor\AssetBundleMeun.cs" />
+    <Compile Include="Assets\Editor\Build\LBuild.cs" />
     <Compile Include="Assets\XLua\Src\Editor\Hotfix.cs" />
-    <Compile Include="Assets\Editor\AtlasImportSettings.cs" />
     <Compile Include="Assets\XLua\Src\Editor\LinkXmlGen\LinkXmlGen.cs" />
+    <Compile Include="Assets\Editor\AtlasImportSettings.cs" />
     <Compile Include="Assets\XLua\Src\Editor\TemplateRef.cs" />
     <Compile Include="Assets\Editor\BuildVersionFiles.cs" />
     <Compile Include="Assets\Editor\EditorMeunTest.cs" />

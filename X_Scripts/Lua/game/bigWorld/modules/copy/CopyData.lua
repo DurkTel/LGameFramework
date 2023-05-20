@@ -1,0 +1,4 @@
+local CopyData = {}
+
+
+return CopyData

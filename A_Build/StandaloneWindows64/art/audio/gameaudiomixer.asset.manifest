@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 3254417873
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c2cf5ff6eee5deb40afe82c7501e623e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b1b49958a09b1de43ba0dbcb0810e654
+HashAppended: 0
+ClassTypes:
+- Class: 241
+  Script: {instanceID: 0}
+- Class: 243
+  Script: {instanceID: 0}
+- Class: 245
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Art/Audio/GameAudioMixer.mixer
+Dependencies: []

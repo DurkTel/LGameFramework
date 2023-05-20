@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 2393374774
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 56b6109c7cb1de6e99dc5e12c21900f7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f267fd2d8bcb1179236b6179ac5313bc
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Art/GUI/Role/Images/Single/live2d/role_live2d_1_30.png
+Dependencies: []
