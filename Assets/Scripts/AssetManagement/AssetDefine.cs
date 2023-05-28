@@ -7,7 +7,7 @@ public class AssetDefine
 {
     public static string s_LuaPath = Application.dataPath + "/../X_Scripts/Lua/";
 
-    public static string localDataPath = Application.dataPath + "/../Data/";
+    public static string localDataPath = Application.dataPath + "/../A_AssetBundles/";
 
     public static string s_NetServerPath = "https://00-1256518392.cos.ap-guangzhou.myqcloud.com/Test/";
 

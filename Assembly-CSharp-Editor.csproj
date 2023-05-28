@@ -57,13 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\AssetReName.cs" />
-    <Compile Include="Assets\Editor\Build\LGBuildUtility.cs" />
-    <Compile Include="Assets\Editor\Build\LGBuild.cs" />
+    <Compile Include="Assets\Editor\Build\BuildUtility.cs" />
+    <Compile Include="Assets\Editor\Build\Build.cs" />
     <Compile Include="Assets\XLua\Src\Editor\Hotfix.cs" />
     <Compile Include="Assets\XLua\Src\Editor\LinkXmlGen\LinkXmlGen.cs" />
     <Compile Include="Assets\XLua\Src\Editor\TemplateRef.cs" />
-    <Compile Include="Assets\Editor\BuildVersionFiles.cs" />
-    <Compile Include="Assets\Editor\EditorMeunTest.cs" />
     <Compile Include="Assets\XLua\Src\Editor\Generator.cs" />
   </ItemGroup>
   <ItemGroup>

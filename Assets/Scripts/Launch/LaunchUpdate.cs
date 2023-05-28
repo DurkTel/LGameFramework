@@ -8,30 +8,82 @@ using UnityEngine.Networking;
 
 public class LaunchUpdate : MonoBehaviour
 {
+    public enum HotUpdateStep
+    {
+        GetLocalVersion,
+        GetNetVersion,
+        GetLocalFile,
+        GetNetFile,
+        GetLocalManifest,
+        GetNetManifest,
+        CheckDifferences,
+        CollectDownloadFile,
+    }
 
-    private string m_localVersion;
+    private string m_LocalVersion, m_NetVersion;
 
-    private string m_netVersion;
+    private List<string> m_DownloadList = new List<string>();
 
-    private List<string> m_downloadList = new List<string>();
+    private bool m_UpdateCShare;
 
-    public Action updateComplete;
+    private Dictionary<string, string> m_LocalFiles = new Dictionary<string, string>();
+
+    private Dictionary<string, string> m_NetFiles = new Dictionary<string, string>();
+
+    private Dictionary<string, string> m_LocalManifest = new Dictionary<string, string>();
+
+    private AssetManifest_AssetBundle m_NetManifest;
+
+    public Action UpdateComplete;
 
     void Start()
     {
-        StartCoroutine(HotUpdateSetp());
+        StartCoroutine(HotUpdateSetp(HotUpdateStep.GetLocalVersion));
     }
 
-
-    private IEnumerator HotUpdateSetp()
+    /// <summary>
+    /// 开始热更新步骤
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator HotUpdateSetp(HotUpdateStep updateStep)
     {
-        yield return GetLocalVersion();
+        switch (updateStep)
+        {
+            case HotUpdateStep.GetLocalVersion:
+                yield return GetLocalVersion();
+                break;
+            case HotUpdateStep.GetNetVersion:
+                yield return GetNetVersion();
+                break;
+            case HotUpdateStep.GetLocalFile:
+                yield return GetLocalFile();
+                break;
+            case HotUpdateStep.GetNetFile:
+                yield return GetNetFile();
+                break;
+            case HotUpdateStep.GetLocalManifest:
+                yield return GetLocalManifest();
+                break;
+            case HotUpdateStep.GetNetManifest:
+                yield return GetNetManifest();
+                break;
+            case HotUpdateStep.CheckDifferences:
+                yield return CheckDifferences();
+                break;
+            case HotUpdateStep.CollectDownloadFile:
+                yield return CollectDownloadFile();
+                break;
+            default:
+                break;
+        }
 
-        yield return GetNetVersion();
-
-        yield return CheckUpdate();
     }
 
+
+    /// <summary>
+    /// 获取本地版本号
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator GetLocalVersion()
     {
         string filePath = AssetDefine.localDataPath + "version.txt";
@@ -40,7 +92,7 @@ public class LaunchUpdate : MonoBehaviour
         {
             string str = File.ReadAllText(filePath);
             string[] data = str.Split('|');
-            m_localVersion = data[1];
+            m_LocalVersion = data[1];
             //print("本地版本号:" + m_localVersion);
         }
         else
@@ -58,10 +110,14 @@ public class LaunchUpdate : MonoBehaviour
                 }
             }
 
-            yield return GetLocalVersion();
         }
+        yield return HotUpdateSetp(HotUpdateStep.GetNetVersion);
     }
 
+    /// <summary>
+    /// 获取服务器版本号
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator GetNetVersion()
     {
         using (UnityWebRequest webRequest = UnityWebRequest.Get(AssetDefine.s_NetServerPath + "version.txt"))
@@ -69,36 +125,37 @@ public class LaunchUpdate : MonoBehaviour
             yield return webRequest.SendWebRequest();
             string str = webRequest.downloadHandler.text;
             string[] data = str.Split('|');
-            m_netVersion = data[1];
-            //print("服务器版本号:" + m_netVersion);
+            m_NetVersion = data[1];
+
+            yield return HotUpdateSetp(HotUpdateStep.GetLocalFile);
         }
     }
 
-
-    private IEnumerator CheckUpdate()
+    /// <summary>
+    /// 获取本地文件列表
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator GetLocalFile()
     {
-        //版本号不同
-        bool update = m_localVersion != m_netVersion;
-
-        yield return GetDownLoadList(update);
-
-        if (m_downloadList.Count > 0)
+        string[] paths = Directory.GetFiles(AssetDefine.localDataPath, "*", SearchOption.AllDirectories);
+        foreach (string path in paths)
         {
-            print(update ? "有可用更新，开始下载" : "文件异常，开始修复");
-            DownLoader();
-        }
-        else
-        {
-            print("无需更新");
-            updateComplete?.Invoke();
+            if (Path.GetExtension(path) == ".txt" || Path.GetDirectoryName(path).Contains("002"))
+                continue;
+
+            m_LocalFiles.Add(path.Substring(AssetDefine.localDataPath.Length), AssetUtility.GetMD5(path));
         }
 
+        yield return HotUpdateSetp(HotUpdateStep.GetNetFile);
     }
 
-    private IEnumerator GetDownLoadList(bool update)
+    /// <summary>
+    /// 获取服务器文件列表
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator GetNetFile()
     {
-        //获取资源地址的文件列表
-        using (UnityWebRequest webRequest = UnityWebRequest.Get(AssetDefine.s_NetServerPath + "file.txt"))
+        using (UnityWebRequest webRequest = UnityWebRequest.Get(Path.Combine(AssetDefine.s_NetServerPath, "file.txt")))
         {
             yield return webRequest.SendWebRequest();
             string str = webRequest.downloadHandler.text;
@@ -108,51 +165,167 @@ public class LaunchUpdate : MonoBehaviour
                 if (!string.IsNullOrEmpty(line))
                 {
                     string[] data = line.Split('|');
-
-                    bool needDown = false;
-
-                    if (File.Exists(AssetDefine.localDataPath + data[0]))
-                    {
-                        //如果存在此文件，比较当前文件md5与资源服务器文件的md5是否一致
-                        string md5 = AssetUtility.GetMD5(AssetDefine.localDataPath + data[0]);
-                        if (md5 != data[1])
-                            needDown = true;
-                    }
-                    else
-                    {
-                        //不存在加入下载清单
-                        needDown = true;
-                    }
-
-                    if (needDown)
-                        m_downloadList.Add(AssetDefine.s_NetServerPath + data[0]);
+                    m_NetFiles.Add(data[0], data[1]);
                 }
             }
-            //更新版本文件
-            if (update)
-                m_downloadList.Add(AssetDefine.s_NetServerPath + "version.txt");
+        }
+        yield return HotUpdateSetp(HotUpdateStep.CheckDifferences);
+
+    }
+
+    /// <summary>
+    /// 获取本地资源清单
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator GetLocalManifest()
+    {
+        string assetRoot = Path.Combine(AssetDefine.localDataPath, "002");
+        if (Directory.Exists(assetRoot))
+        {
+            string[] paths = Directory.GetFiles(assetRoot, "*", SearchOption.AllDirectories);
+            foreach (string path in paths)
+            {
+                string newPath = path.Substring(AssetDefine.localDataPath.Length).Replace("\\", "/");
+                m_LocalManifest.Add(newPath, AssetUtility.GetMD5(path));
+            }
+        }
+
+
+        yield return HotUpdateSetp(HotUpdateStep.GetNetManifest);
+    }
+
+    /// <summary>
+    /// 获取服务器资源清单
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator GetNetManifest()
+    {
+        string url = Path.Combine(AssetDefine.s_NetServerPath, "lgassetmanifest.asset");
+        using (UnityWebRequest req = UnityWebRequestAssetBundle.GetAssetBundle(url, 0))
+        {
+            yield return req.SendWebRequest();
+
+            AssetBundle bundle = DownloadHandlerAssetBundle.GetContent(req);
+            AssetBundleRequest re = bundle.LoadAssetAsync<AssetManifest_AssetBundle>("lgassetmanifest");
+            yield return re;
+
+            bundle.Unload(false);
+            m_NetManifest = re.asset as AssetManifest_AssetBundle;
         }
     }
 
-    private void DownLoader()
+    /// <summary>
+    /// 检查更新
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator CheckDifferences()
     {
-        if (m_downloadList.Count > 0)
+        //版本号相同 检查文件差异
+        bool needUpdate = m_LocalVersion == m_NetVersion;
+        if (!needUpdate)
         {
-            WebClient client = new WebClient();
-            string name = m_downloadList[0].Substring(m_downloadList[0].LastIndexOf('/'));
-            if (File.Exists(AssetDefine.localDataPath + name))
-                File.Delete(AssetDefine.localDataPath + name);
+            string localMD5;
 
-            client.DownloadFileAsync(new System.Uri(m_downloadList[0]), AssetDefine.localDataPath + name);
-            client.DownloadProgressChanged += (p, a) => { print(name + "下载进度:" + a.ProgressPercentage); };
-            client.DownloadFileCompleted += (p, a) => { 
-                m_downloadList.RemoveAt(0);
-                DownLoader();
+            foreach (var file in m_NetFiles)
+            {
+                //本地没有该文件或md5不同
+                if (m_LocalFiles == null || !m_LocalFiles.TryGetValue(file.Key, out localMD5) || localMD5 != file.Value)
+                {
+                    needUpdate = true;
+                    break;
+                }
+            }
+        }
+
+        if (needUpdate)
+            yield return HotUpdateSetp(HotUpdateStep.CollectDownloadFile);
+        else
+            yield return null;
+    }
+
+    /// <summary>
+    /// 收集下载清单
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator CollectDownloadFile()
+    {
+        string localMD5;
+
+        foreach (var file in m_NetFiles)
+        {
+            //本地没有该文件或md5不同
+            if (m_LocalFiles == null || !m_LocalFiles.TryGetValue(file.Key, out localMD5) || localMD5 != file.Value)
+            {
+                if (file.Key.Contains("001"))
+                    m_UpdateCShare = true;
+
+                m_DownloadList.Add(file.Key);
+            }
+        }
+
+        if (m_LocalFiles == null)
+        {
+            m_UpdateCShare = true;
+        }
+
+        //资源需要更新
+        yield return HotUpdateSetp(HotUpdateStep.GetLocalManifest);
+
+        string md5Code;
+        foreach (var asset in m_NetManifest.assetMap)
+        {
+            if (m_DownloadList.Contains(asset.Value.bundleName))
+                continue;
+
+            if (m_LocalManifest == null || !m_LocalManifest.TryGetValue(asset.Value.bundleName, out md5Code) || md5Code != asset.Value.md5Code)
+            {
+                m_DownloadList.Add(asset.Value.bundleName);
+            }
+        }
+
+        if (m_DownloadList.Count > 0)
+        {
+            m_DownloadList.Add("version.txt");
+        }
+
+        yield return null;
+
+        DownloadFile();
+    }
+
+
+    private void DownloadFile()
+    {
+        if (m_DownloadList.Count == 0)
+        {
+            UpdateCompleted();
+            return;
+        }
+
+        using (WebClient client = new WebClient())
+        {
+            string assetName = m_DownloadList[0];
+            string url = Path.Combine(AssetDefine.s_NetServerPath, assetName.Replace("\\", "/"));
+            string localPath = Path.Combine(AssetDefine.localDataPath, assetName).Replace("\\", "/");
+
+            if (!Directory.Exists(Path.GetDirectoryName(localPath)))
+                Directory.CreateDirectory(Path.GetDirectoryName(localPath));
+
+            if (File.Exists(localPath))
+                File.Delete(localPath);
+
+            client.DownloadFileAsync(new System.Uri(url), localPath);
+            client.DownloadProgressChanged += (p, a) => { print(localPath + "下载进度:" + a.ProgressPercentage); };
+            client.DownloadFileCompleted += (p, a) => {
+                m_DownloadList.RemoveAt(0);
+                DownloadFile();
             };
         }
-        else
-            updateComplete?.Invoke();
+    }
 
+    private void UpdateCompleted()
+    {
+        print("更新完成");
     }
 
 }

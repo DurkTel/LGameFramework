@@ -317,6 +317,8 @@
 "Assets/Scripts/AssetManagement/EditorAssetLoader.cs"
 "Assets/Scripts/AssetManagement/ResourcesAssetLoader.cs"
 "Assets/Scripts/DictionaryEx.cs"
+"Assets/Scripts/Launch/Launcher.cs"
+"Assets/Scripts/Launch/LaunchUpdate.cs"
 "Assets/Scripts/Singleton/SingletonBase.cs"
 "Assets/Scripts/Singleton/SingletonMono.cs"
 "Assets/Scripts/Singleton/SingletonMonoAuto.cs"

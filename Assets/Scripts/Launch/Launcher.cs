@@ -17,23 +17,23 @@ public class Launcher : MonoBehaviour
 
         bool useABLoadMode;
 
-//#if UNITY_EDITOR
-//        useABLoadMode = UnityEditor.EditorPrefs.GetBool("QuickMenuKey_LoadModeABTag", false);
-//#else
-//        useABLoadMode = true;
-//#endif
-//        AssetManager.Initialize(useABLoadMode);
+        //#if UNITY_EDITOR
+        //        useABLoadMode = UnityEditor.EditorPrefs.GetBool("QuickMenuKey_LoadModeABTag", false);
+        //#else
+        //        useABLoadMode = true;
+        //#endif
+        //        AssetManager.Initialize(useABLoadMode);
 
-//        //打开加载界面
-//        LoadingDefaultGUI.Open(transform);
+        //        //打开加载界面
+        //        LoadingDefaultGUI.Open(transform);
 
-        //LaunchUpdate update = gameObject.AddComponent<LaunchUpdate>();
-        //update.updateComplete = () =>
-        //{
-        //    //print("启动游戏计时" + Time.realtimeSinceStartup);
-        //    print("游戏更新完成！进入加载流程");
-        //    StartCoroutine(LaunchGame());
-        //};
+        LaunchUpdate update = gameObject.AddComponent<LaunchUpdate>();
+        update.UpdateComplete = () =>
+        {
+            //print("启动游戏计时" + Time.realtimeSinceStartup);
+            print("游戏更新完成！进入加载流程");
+            StartCoroutine(LaunchGame());
+        };
 
     }
 
