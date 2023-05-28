@@ -1,0 +1,342 @@
+ManifestFileVersion: 0
+CRC: 3890469878
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: artmodules/audio/music/city.asset
+      Dependencies: {}
+    Info_1:
+      Name: artmodules/audio/music/copy.asset
+      Dependencies: {}
+    Info_2:
+      Name: artmodules/audio/sound/goblin.asset
+      Dependencies: {}
+    Info_3:
+      Name: artmodules/audio/sound/swordman.asset
+      Dependencies: {}
+    Info_4:
+      Name: artmodules/audio/gameaudiomixer.asset
+      Dependencies: {}
+    Info_5:
+      Name: artmodules/effect/darkhiteffect.asset
+      Dependencies: {}
+    Info_6:
+      Name: artmodules/effect/earthquake.asset
+      Dependencies: {}
+    Info_7:
+      Name: artmodules/effect/firehiteffect.asset
+      Dependencies: {}
+    Info_8:
+      Name: artmodules/gui/role/images.asset
+      Dependencies: {}
+    Info_9:
+      Name: artmodules/gui/role/images/roleicon.asset
+      Dependencies: {}
+    Info_10:
+      Name: artmodules/gui/role/images/single/create_role_bg_1.asset
+      Dependencies: {}
+    Info_11:
+      Name: artmodules/gui/role/images/single/create_role_bg_2.asset
+      Dependencies: {}
+    Info_12:
+      Name: artmodules/gui/role/images/single/create_role_bg_3.asset
+      Dependencies: {}
+    Info_13:
+      Name: artmodules/gui/role/images/single/create_role_bg_4.asset
+      Dependencies: {}
+    Info_14:
+      Name: artmodules/gui/role/images/single/create_role_bg_5.asset
+      Dependencies: {}
+    Info_15:
+      Name: artmodules/gui/role/images/single/create_role_bg_6.asset
+      Dependencies: {}
+    Info_16:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_0.asset
+      Dependencies: {}
+    Info_17:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_1.asset
+      Dependencies: {}
+    Info_18:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_10.asset
+      Dependencies: {}
+    Info_19:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_11.asset
+      Dependencies: {}
+    Info_20:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_12.asset
+      Dependencies: {}
+    Info_21:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_13.asset
+      Dependencies: {}
+    Info_22:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_14.asset
+      Dependencies: {}
+    Info_23:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_15.asset
+      Dependencies: {}
+    Info_24:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_16.asset
+      Dependencies: {}
+    Info_25:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_17.asset
+      Dependencies: {}
+    Info_26:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_18.asset
+      Dependencies: {}
+    Info_27:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_19.asset
+      Dependencies: {}
+    Info_28:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_2.asset
+      Dependencies: {}
+    Info_29:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_20.asset
+      Dependencies: {}
+    Info_30:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_21.asset
+      Dependencies: {}
+    Info_31:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_22.asset
+      Dependencies: {}
+    Info_32:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_23.asset
+      Dependencies: {}
+    Info_33:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_24.asset
+      Dependencies: {}
+    Info_34:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_25.asset
+      Dependencies: {}
+    Info_35:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_26.asset
+      Dependencies: {}
+    Info_36:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_27.asset
+      Dependencies: {}
+    Info_37:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_28.asset
+      Dependencies: {}
+    Info_38:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_29.asset
+      Dependencies: {}
+    Info_39:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_3.asset
+      Dependencies: {}
+    Info_40:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_30.asset
+      Dependencies: {}
+    Info_41:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_31.asset
+      Dependencies: {}
+    Info_42:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_32.asset
+      Dependencies: {}
+    Info_43:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_33.asset
+      Dependencies: {}
+    Info_44:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_34.asset
+      Dependencies: {}
+    Info_45:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_35.asset
+      Dependencies: {}
+    Info_46:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_36.asset
+      Dependencies: {}
+    Info_47:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_37.asset
+      Dependencies: {}
+    Info_48:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_38.asset
+      Dependencies: {}
+    Info_49:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_39.asset
+      Dependencies: {}
+    Info_50:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_4.asset
+      Dependencies: {}
+    Info_51:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_40.asset
+      Dependencies: {}
+    Info_52:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_41.asset
+      Dependencies: {}
+    Info_53:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_42.asset
+      Dependencies: {}
+    Info_54:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_43.asset
+      Dependencies: {}
+    Info_55:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_44.asset
+      Dependencies: {}
+    Info_56:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_45.asset
+      Dependencies: {}
+    Info_57:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_46.asset
+      Dependencies: {}
+    Info_58:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_47.asset
+      Dependencies: {}
+    Info_59:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_48.asset
+      Dependencies: {}
+    Info_60:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_49.asset
+      Dependencies: {}
+    Info_61:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_5.asset
+      Dependencies: {}
+    Info_62:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_50.asset
+      Dependencies: {}
+    Info_63:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_51.asset
+      Dependencies: {}
+    Info_64:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_52.asset
+      Dependencies: {}
+    Info_65:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_53.asset
+      Dependencies: {}
+    Info_66:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_54.asset
+      Dependencies: {}
+    Info_67:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_55.asset
+      Dependencies: {}
+    Info_68:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_56.asset
+      Dependencies: {}
+    Info_69:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_57.asset
+      Dependencies: {}
+    Info_70:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_58.asset
+      Dependencies: {}
+    Info_71:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_59.asset
+      Dependencies: {}
+    Info_72:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_6.asset
+      Dependencies: {}
+    Info_73:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_60.asset
+      Dependencies: {}
+    Info_74:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_61.asset
+      Dependencies: {}
+    Info_75:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_62.asset
+      Dependencies: {}
+    Info_76:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_63.asset
+      Dependencies: {}
+    Info_77:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_64.asset
+      Dependencies: {}
+    Info_78:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_65.asset
+      Dependencies: {}
+    Info_79:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_66.asset
+      Dependencies: {}
+    Info_80:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_67.asset
+      Dependencies: {}
+    Info_81:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_68.asset
+      Dependencies: {}
+    Info_82:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_69.asset
+      Dependencies: {}
+    Info_83:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_7.asset
+      Dependencies: {}
+    Info_84:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_70.asset
+      Dependencies: {}
+    Info_85:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_71.asset
+      Dependencies: {}
+    Info_86:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_72.asset
+      Dependencies: {}
+    Info_87:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_73.asset
+      Dependencies: {}
+    Info_88:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_74.asset
+      Dependencies: {}
+    Info_89:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_75.asset
+      Dependencies: {}
+    Info_90:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_76.asset
+      Dependencies: {}
+    Info_91:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_77.asset
+      Dependencies: {}
+    Info_92:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_78.asset
+      Dependencies: {}
+    Info_93:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_79.asset
+      Dependencies: {}
+    Info_94:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_8.asset
+      Dependencies: {}
+    Info_95:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_80.asset
+      Dependencies: {}
+    Info_96:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_81.asset
+      Dependencies: {}
+    Info_97:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_82.asset
+      Dependencies: {}
+    Info_98:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_83.asset
+      Dependencies: {}
+    Info_99:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_84.asset
+      Dependencies: {}
+    Info_100:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_85.asset
+      Dependencies: {}
+    Info_101:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_86.asset
+      Dependencies: {}
+    Info_102:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_87.asset
+      Dependencies: {}
+    Info_103:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_88.asset
+      Dependencies: {}
+    Info_104:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_89.asset
+      Dependencies: {}
+    Info_105:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_9.asset
+      Dependencies: {}
+    Info_106:
+      Name: artmodules/gui/role/images/single/live2d/role_live2d_1_90.asset
+      Dependencies: {}
+    Info_107:
+      Name: artmodules/gui/role/prefabs/default_loading_gui.asset
+      Dependencies:
+        Dependency_0: artmodules/gui/role/images/roleicon.asset
+        Dependency_1: artmodules/gui/role/images/single/create_role_bg_1.asset
+    Info_108:
+      Name: artmodules/gui/role/prefabs/gui_createrole_view.asset
+      Dependencies: {}
+    Info_109:
+      Name: artmodules/gui/role/prefabs/gui_default_view.asset
+      Dependencies: {}
+    Info_110:
+      Name: artmodules/gui/role/prefabs/gui_default_view2.asset
+      Dependencies: {}
+    Info_111:
+      Name: artmodules/fonts.asset
+      Dependencies: {}

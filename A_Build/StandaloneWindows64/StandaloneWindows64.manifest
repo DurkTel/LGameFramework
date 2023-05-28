@@ -1,7 +1,7 @@
 ManifestFileVersion: 0
-CRC: 618320777
+CRC: 1682044320
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: 001.asset
+      Name: lgassetmanifest.asset
       Dependencies: {}

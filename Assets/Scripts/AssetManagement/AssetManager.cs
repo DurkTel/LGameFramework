@@ -34,7 +34,7 @@ public class AssetManager : MonoBehaviour
     /// <summary>
     /// ab包资源清单
     /// </summary>
-    private AssetManifest_Bundle m_fileManifest;
+    private AssetManifest_AssetBundle m_fileManifest;
     /// <summary>
     /// 所有加载过的ab包
     /// </summary>
@@ -47,13 +47,13 @@ public class AssetManager : MonoBehaviour
         m_instance = gameObject.AddComponent<AssetManager>();
     }
 
-    public AssetManifest_Bundle GetAssetManifest_Bundle()
+    public AssetManifest_AssetBundle GetAssetManifest_Bundle()
     { 
         if(m_fileManifest == null)
         {
-            AssetBundle file = AssetBundle.LoadFromFile(Path.Combine(AssetDefine.localDataPath, "filemanifest"));
-            m_allAB.Add("ABManifest.asset", file);
-            m_fileManifest = file.LoadAsset<AssetManifest_Bundle>("ABManifest.asset");
+            AssetBundle file = AssetBundle.LoadFromFile(Path.Combine(AssetDefine.localDataPath, "lgassetmanifest.asset"));
+            m_allAB.Add("LGAssetManifest.asset", file);
+            m_fileManifest = file.LoadAsset<AssetManifest_AssetBundle>("lgassetmanifest");
         }
 
         return m_fileManifest;

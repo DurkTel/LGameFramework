@@ -1,0 +1,39 @@
+ManifestFileVersion: 0
+CRC: 3023751572
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 7bf98c18ee7e1c7b12fbf43f369f9776
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f267fd2d8bcb1179236b6179ac5313bc
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_icon_3.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_head_portrait_3.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_head_portraitmask_1.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_icon_6.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_head_portraitmask_2.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_head_portrait_bg.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_head_portraitmask_4.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_icon_5.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_head_portrait_4.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_icon_1.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_head_portraitmask_3.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_head_portraitmask_5.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_head_portrait_2.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_head_portrait_1.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_head_portrait_5.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_head_portrait_6.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_icon_2.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_head_portraitmask_6.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_head_portrait_select_2.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_icon_4.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_head_portrait_select_1.png
+Dependencies: []

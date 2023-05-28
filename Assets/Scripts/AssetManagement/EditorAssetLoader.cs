@@ -30,7 +30,7 @@ public class EditorAssetLoader : AssetLoader
     public override string GetAssetPath(string assetName)
     {
 #if UNITY_EDITOR
-        return AssetManifest.GetAssetManifest(AssetManifest.editorPath).GetPath(assetName);
+        return AssetManifest_Editor.GetAssetManifest(AssetManifest_Editor.editorPath).GetPath(assetName);
 #else
         return "";
 #endif

@@ -1,0 +1,36 @@
+ManifestFileVersion: 0
+CRC: 3758353313
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 38d4aec3b73876bbe23a8a83bbb8ca9e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9a2ca7bdbd1871f7131daf57de908e0c
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/ArtModules/Audio/Sound/goblin/gbn_spin.ogg
+- Assets/ArtModules/Audio/Sound/goblin/gbn_talk_01.ogg
+- Assets/ArtModules/Audio/Sound/goblin/gbn_comm.ogg
+- Assets/ArtModules/Audio/Sound/goblin/gbn_die_02.ogg
+- Assets/ArtModules/Audio/Sound/goblin/gbn_dmg_04.ogg
+- Assets/ArtModules/Audio/Sound/goblin/gbn_talk_02.ogg
+- Assets/ArtModules/Audio/Sound/goblin/gbn_dmg_03.ogg
+- Assets/ArtModules/Audio/Sound/goblin/sticka_hit_02.ogg
+- Assets/ArtModules/Audio/Sound/goblin/gbn_die_01.ogg
+- Assets/ArtModules/Audio/Sound/goblin/gbn_dmg_02.ogg
+- Assets/ArtModules/Audio/Sound/goblin/gbn_talk_03.ogg
+- Assets/ArtModules/Audio/Sound/goblin/gbn_scared.ogg
+- Assets/ArtModules/Audio/Sound/goblin/sticka_hit_01.ogg
+- Assets/ArtModules/Audio/Sound/goblin/gbn_thw.ogg
+- Assets/ArtModules/Audio/Sound/goblin/gbn_suicidal.ogg
+- Assets/ArtModules/Audio/Sound/goblin/gbn_spinatk.ogg
+- Assets/ArtModules/Audio/Sound/goblin/gbn_talk_04.ogg
+- Assets/ArtModules/Audio/Sound/goblin/gbn_talk_05.ogg
+- Assets/ArtModules/Audio/Sound/goblin/gbn_fright.ogg
+- Assets/ArtModules/Audio/Sound/goblin/gbn_dmg_01.ogg
+Dependencies: []

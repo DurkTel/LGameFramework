@@ -60,7 +60,7 @@ public class AssetUtility
     /// 获取AB包资源清单
     /// </summary>
     /// <returns></returns>
-    public static AssetManifest_Bundle GetAssetManifest_Bundle()
+    public static AssetManifest_AssetBundle GetAssetManifest_Bundle()
     {
         return AssetManager.Instance.GetAssetManifest_Bundle();
     }

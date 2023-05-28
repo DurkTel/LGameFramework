@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-public class AssetBundleManager //: SingletonBase<AssetBundleManager>
+public class AssetBundleManager : SingletonBase<AssetBundleManager>
 {
     /// <summary>
     /// 包路径

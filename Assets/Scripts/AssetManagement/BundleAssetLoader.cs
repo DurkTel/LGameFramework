@@ -91,7 +91,7 @@ public class BundleAssetLoader : AssetLoader
 
     private UnityEngine.Object Load(string abName, string assetName, Type type)
     {
-        AssetUtility.LoadDependencies(GetDependsName(abName));
+        AssetUtility.LoadDependencies(GetDependsName(assetName));
         AssetBundle ab;
         if (!AssetUtility.TryGetAssetBundle(abName, out ab))
         {
@@ -106,7 +106,7 @@ public class BundleAssetLoader : AssetLoader
 
     private AssetBundleRequest LoadAsync(string abName, string assetName, Type type)
     {
-        AssetUtility.LoadDependencies(GetDependsName(abName));
+        AssetUtility.LoadDependencies(GetDependsName(assetName));
         AssetBundle ab;
         if (!AssetUtility.TryGetAssetBundle(abName, out ab))
         {
