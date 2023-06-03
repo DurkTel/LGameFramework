@@ -16,2737 +16,2202 @@ MonoBehaviour:
   - assetName: gameaudiomixer.mixer
     assetPath: gameaudiomixer.mixer
     bundleName: 002/artmodules/audio/gameaudiomixer.asset
-    md5Code: 93589546a123a02973afa8bde0e71fa9
+    md5Code: 8f08f606ebb33e56a6882aa86e6ac6b2
     dependencieBundleNames: []
   - assetName: gate_new.ogg
     assetPath: gate_new.ogg
     bundleName: 002/artmodules/audio/music/city.asset
-    md5Code: 3664dc1f53a1679d9eea9ceb8894fc8f
+    md5Code: 4de1f4926732802a2739537aeefbcf34
     dependencieBundleNames: []
   - assetName: forest_town.ogg
     assetPath: forest_town.ogg
     bundleName: 002/artmodules/audio/music/copy.asset
-    md5Code: 0a67308fb29367bf6ea82f11561829c9
+    md5Code: 974640c803f7e0a2ff36ef71d0026ad2
     dependencieBundleNames: []
   - assetName: pvp_pub.ogg
     assetPath: pvp_pub.ogg
     bundleName: 002/artmodules/audio/music/copy.asset
-    md5Code: 0a67308fb29367bf6ea82f11561829c9
+    md5Code: 974640c803f7e0a2ff36ef71d0026ad2
     dependencieBundleNames: []
   - assetName: gbn_comm.ogg
     assetPath: gbn_comm.ogg
     bundleName: 002/artmodules/audio/sound/goblin.asset
-    md5Code: fa5f8bf59f3076c961f4176f122ca3f5
+    md5Code: 99134617d0678dfc58f75bb087df46dd
     dependencieBundleNames: []
   - assetName: gbn_die_01.ogg
     assetPath: gbn_die_01.ogg
     bundleName: 002/artmodules/audio/sound/goblin.asset
-    md5Code: fa5f8bf59f3076c961f4176f122ca3f5
+    md5Code: 99134617d0678dfc58f75bb087df46dd
     dependencieBundleNames: []
   - assetName: gbn_die_02.ogg
     assetPath: gbn_die_02.ogg
     bundleName: 002/artmodules/audio/sound/goblin.asset
-    md5Code: fa5f8bf59f3076c961f4176f122ca3f5
+    md5Code: 99134617d0678dfc58f75bb087df46dd
     dependencieBundleNames: []
   - assetName: gbn_dmg_01.ogg
     assetPath: gbn_dmg_01.ogg
     bundleName: 002/artmodules/audio/sound/goblin.asset
-    md5Code: fa5f8bf59f3076c961f4176f122ca3f5
+    md5Code: 99134617d0678dfc58f75bb087df46dd
     dependencieBundleNames: []
   - assetName: gbn_dmg_02.ogg
     assetPath: gbn_dmg_02.ogg
     bundleName: 002/artmodules/audio/sound/goblin.asset
-    md5Code: fa5f8bf59f3076c961f4176f122ca3f5
+    md5Code: 99134617d0678dfc58f75bb087df46dd
     dependencieBundleNames: []
   - assetName: gbn_dmg_03.ogg
     assetPath: gbn_dmg_03.ogg
     bundleName: 002/artmodules/audio/sound/goblin.asset
-    md5Code: fa5f8bf59f3076c961f4176f122ca3f5
+    md5Code: 99134617d0678dfc58f75bb087df46dd
     dependencieBundleNames: []
   - assetName: gbn_dmg_04.ogg
     assetPath: gbn_dmg_04.ogg
     bundleName: 002/artmodules/audio/sound/goblin.asset
-    md5Code: fa5f8bf59f3076c961f4176f122ca3f5
+    md5Code: 99134617d0678dfc58f75bb087df46dd
     dependencieBundleNames: []
   - assetName: gbn_fright.ogg
     assetPath: gbn_fright.ogg
     bundleName: 002/artmodules/audio/sound/goblin.asset
-    md5Code: fa5f8bf59f3076c961f4176f122ca3f5
+    md5Code: 99134617d0678dfc58f75bb087df46dd
     dependencieBundleNames: []
   - assetName: gbn_scared.ogg
     assetPath: gbn_scared.ogg
     bundleName: 002/artmodules/audio/sound/goblin.asset
-    md5Code: fa5f8bf59f3076c961f4176f122ca3f5
+    md5Code: 99134617d0678dfc58f75bb087df46dd
     dependencieBundleNames: []
   - assetName: gbn_spin.ogg
     assetPath: gbn_spin.ogg
     bundleName: 002/artmodules/audio/sound/goblin.asset
-    md5Code: fa5f8bf59f3076c961f4176f122ca3f5
+    md5Code: 99134617d0678dfc58f75bb087df46dd
     dependencieBundleNames: []
   - assetName: gbn_spinatk.ogg
     assetPath: gbn_spinatk.ogg
     bundleName: 002/artmodules/audio/sound/goblin.asset
-    md5Code: fa5f8bf59f3076c961f4176f122ca3f5
+    md5Code: 99134617d0678dfc58f75bb087df46dd
     dependencieBundleNames: []
   - assetName: gbn_suicidal.ogg
     assetPath: gbn_suicidal.ogg
     bundleName: 002/artmodules/audio/sound/goblin.asset
-    md5Code: fa5f8bf59f3076c961f4176f122ca3f5
+    md5Code: 99134617d0678dfc58f75bb087df46dd
     dependencieBundleNames: []
   - assetName: gbn_talk_01.ogg
     assetPath: gbn_talk_01.ogg
     bundleName: 002/artmodules/audio/sound/goblin.asset
-    md5Code: fa5f8bf59f3076c961f4176f122ca3f5
+    md5Code: 99134617d0678dfc58f75bb087df46dd
     dependencieBundleNames: []
   - assetName: gbn_talk_02.ogg
     assetPath: gbn_talk_02.ogg
     bundleName: 002/artmodules/audio/sound/goblin.asset
-    md5Code: fa5f8bf59f3076c961f4176f122ca3f5
+    md5Code: 99134617d0678dfc58f75bb087df46dd
     dependencieBundleNames: []
   - assetName: gbn_talk_03.ogg
     assetPath: gbn_talk_03.ogg
     bundleName: 002/artmodules/audio/sound/goblin.asset
-    md5Code: fa5f8bf59f3076c961f4176f122ca3f5
+    md5Code: 99134617d0678dfc58f75bb087df46dd
     dependencieBundleNames: []
   - assetName: gbn_talk_04.ogg
     assetPath: gbn_talk_04.ogg
     bundleName: 002/artmodules/audio/sound/goblin.asset
-    md5Code: fa5f8bf59f3076c961f4176f122ca3f5
+    md5Code: 99134617d0678dfc58f75bb087df46dd
     dependencieBundleNames: []
   - assetName: gbn_talk_05.ogg
     assetPath: gbn_talk_05.ogg
     bundleName: 002/artmodules/audio/sound/goblin.asset
-    md5Code: fa5f8bf59f3076c961f4176f122ca3f5
+    md5Code: 99134617d0678dfc58f75bb087df46dd
     dependencieBundleNames: []
   - assetName: gbn_thw.ogg
     assetPath: gbn_thw.ogg
     bundleName: 002/artmodules/audio/sound/goblin.asset
-    md5Code: fa5f8bf59f3076c961f4176f122ca3f5
+    md5Code: 99134617d0678dfc58f75bb087df46dd
     dependencieBundleNames: []
   - assetName: sticka_hit_01.ogg
     assetPath: sticka_hit_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sticka_hit_02.ogg
     assetPath: sticka_hit_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: beamswd_touch.ogg
     assetPath: beamswd_touch.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: beamswda_01.ogg
     assetPath: beamswda_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: beamswda_02.ogg
     assetPath: beamswda_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: beamswda_03.ogg
     assetPath: beamswda_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: beamswda_hit_01.ogg
     assetPath: beamswda_hit_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: beamswda_hit_02.ogg
     assetPath: beamswda_hit_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: beamswdb.ogg
     assetPath: beamswdb.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: beamswdb_hit.ogg
     assetPath: beamswdb_hit.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: beamswdc_01.ogg
     assetPath: beamswdc_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: beamswdc_hit_01.ogg
     assetPath: beamswdc_hit_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: beamswdc_hit_02.ogg
     assetPath: beamswdc_hit_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: hadouken.ogg
     assetPath: hadouken.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: kat_touch.ogg
     assetPath: kat_touch.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: kata_01.ogg
     assetPath: kata_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: kata_02.ogg
     assetPath: kata_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: kata_03.ogg
     assetPath: kata_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: kata_hit_01.ogg
     assetPath: kata_hit_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: kata_hit_02.ogg
     assetPath: kata_hit_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: katb.ogg
     assetPath: katb.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: katb_hit.ogg
     assetPath: katb_hit.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: katc_01.ogg
     assetPath: katc_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: katc_02.ogg
     assetPath: katc_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: katc_hit_01.ogg
     assetPath: katc_hit_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: minswd_touch.ogg
     assetPath: minswd_touch.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: minswda_01.ogg
     assetPath: minswda_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: minswda_02.ogg
     assetPath: minswda_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: minswda_03.ogg
     assetPath: minswda_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: minswda_hit_01.ogg
     assetPath: minswda_hit_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: minswda_hit_02.ogg
     assetPath: minswda_hit_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: minswda_hit_03.ogg
     assetPath: minswda_hit_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: minswdb.ogg
     assetPath: minswdb.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: minswdb_hit.ogg
     assetPath: minswdb_hit.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: minswdc_01.ogg
     assetPath: minswdc_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: minswdc_02.ogg
     assetPath: minswdc_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: minswdc_03.ogg
     assetPath: minswdc_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: minswdc_hit.ogg
     assetPath: minswdc_hit.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sjh.ogg
     assetPath: sjh.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: slessswd_01.ogg
     assetPath: slessswd_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: slessswd_02.ogg
     assetPath: slessswd_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: slessswd_hit_01.ogg
     assetPath: slessswd_hit_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: slessswd_hit_02.ogg
     assetPath: slessswd_hit_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: slessswd_touch.ogg
     assetPath: slessswd_touch.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ancient.ogg
     assetPath: sm_ancient.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_atk_01.ogg
     assetPath: sm_atk_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_atk_02.ogg
     assetPath: sm_atk_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_atk_03.ogg
     assetPath: sm_atk_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_atk_bs_01_1.ogg
     assetPath: sm_atk_bs_01_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_atk_bs_01_2.ogg
     assetPath: sm_atk_bs_01_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_atk_bs_02_1.ogg
     assetPath: sm_atk_bs_02_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_atk_bs_02_2.ogg
     assetPath: sm_atk_bs_02_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_atk_bs_03_1.ogg
     assetPath: sm_atk_bs_03_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_atk_bs_03_2.ogg
     assetPath: sm_atk_bs_03_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_atk_bs_04_1.ogg
     assetPath: sm_atk_bs_04_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_atk_bs_04_2.ogg
     assetPath: sm_atk_bs_04_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_back.ogg
     assetPath: sm_back.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_bal1.ogg
     assetPath: sm_bal1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_bal2.ogg
     assetPath: sm_bal2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_bghost.ogg
     assetPath: sm_bghost.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_blade_phantom_01.ogg
     assetPath: sm_blade_phantom_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_blade_phantom_02.ogg
     assetPath: sm_blade_phantom_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_blood.ogg
     assetPath: sm_blood.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_blood_blastex.ogg
     assetPath: sm_blood_blastex.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_blood_rave_atk.ogg
     assetPath: sm_blood_rave_atk.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_blood_rave_storm.ogg
     assetPath: sm_blood_rave_storm.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_bloodboom_01.ogg
     assetPath: sm_bloodboom_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_bloodboom_02.ogg
     assetPath: sm_bloodboom_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_bloodmarble.ogg
     assetPath: sm_bloodmarble.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_bloodriven_01.ogg
     assetPath: sm_bloodriven_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_bloodriven_02.ogg
     assetPath: sm_bloodriven_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_bloodsnatch_01.ogg
     assetPath: sm_bloodsnatch_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_bloodsnatch_02.ogg
     assetPath: sm_bloodsnatch_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_boodong_explosion.ogg
     assetPath: sm_boodong_explosion.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_boodong_start.ogg
     assetPath: sm_boodong_start.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_boongsan.ogg
     assetPath: sm_boongsan.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_certain_extermination_01_1.ogg
     assetPath: sm_certain_extermination_01_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_certain_extermination_01_2.ogg
     assetPath: sm_certain_extermination_01_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_certain_extermination_02_1.ogg
     assetPath: sm_certain_extermination_02_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_certain_extermination_02_2.ogg
     assetPath: sm_certain_extermination_02_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_certain_extermination_03_1.ogg
     assetPath: sm_certain_extermination_03_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_certain_extermination_03_2.ogg
     assetPath: sm_certain_extermination_03_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_certain_extermination_04_1.ogg
     assetPath: sm_certain_extermination_04_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_certain_extermination_04_2.ogg
     assetPath: sm_certain_extermination_04_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_certain_extermination_05_1.ogg
     assetPath: sm_certain_extermination_05_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_certain_extermination_05_2.ogg
     assetPath: sm_certain_extermination_05_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_certain_extermination_06_1.ogg
     assetPath: sm_certain_extermination_06_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_certain_extermination_06_2.ogg
     assetPath: sm_certain_extermination_06_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_chargecrash.ogg
     assetPath: sm_chargecrash.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_chargecrash_down.ogg
     assetPath: sm_chargecrash_down.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_chargecrash_up.ogg
     assetPath: sm_chargecrash_up.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_cmdpet.ogg
     assetPath: sm_cmdpet.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_cmdpet_bs.ogg
     assetPath: sm_cmdpet_bs.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_congestion.ogg
     assetPath: sm_congestion.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_controlblade_01.ogg
     assetPath: sm_controlblade_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_controlblade_02.ogg
     assetPath: sm_controlblade_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_cooltime.ogg
     assetPath: sm_cooltime.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_cooltime_bs.ogg
     assetPath: sm_cooltime_bs.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_cooltime_vs.ogg
     assetPath: sm_cooltime_vs.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_die.ogg
     assetPath: sm_die.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_die_bs_01.ogg
     assetPath: sm_die_bs_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_die_bs_02.ogg
     assetPath: sm_die_bs_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_die_vs.ogg
     assetPath: sm_die_vs.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_dmg_01.ogg
     assetPath: sm_dmg_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_dmg_02.ogg
     assetPath: sm_dmg_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_dmg_03.ogg
     assetPath: sm_dmg_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_eop_v1_01.ogg
     assetPath: sm_eop_v1_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_eop_v1_02.ogg
     assetPath: sm_eop_v1_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_eop_v2_01.ogg
     assetPath: sm_eop_v2_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_eop_v2_02.ogg
     assetPath: sm_eop_v2_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_evocation.ogg
     assetPath: sm_evocation.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ex_01.ogg
     assetPath: sm_ex_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ex_02.ogg
     assetPath: sm_ex_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ex_03.ogg
     assetPath: sm_ex_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ex_04.ogg
     assetPath: sm_ex_04.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ex_05.ogg
     assetPath: sm_ex_05.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ex_06.ogg
     assetPath: sm_ex_06.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ex_07.ogg
     assetPath: sm_ex_07.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ex_08.ogg
     assetPath: sm_ex_08.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ex_bs.ogg
     assetPath: sm_ex_bs.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ex_vs.ogg
     assetPath: sm_ex_vs.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_extreamblood_01_1.ogg
     assetPath: sm_extreamblood_01_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_extreamblood_01_2.ogg
     assetPath: sm_extreamblood_01_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_extreamblood_01_3.ogg
     assetPath: sm_extreamblood_01_3.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_extreamblood_01_4.ogg
     assetPath: sm_extreamblood_01_4.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_extreamblood_02_1.ogg
     assetPath: sm_extreamblood_02_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_extreamblood_02_2.ogg
     assetPath: sm_extreamblood_02_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_extreamblood_02_3.ogg
     assetPath: sm_extreamblood_02_3.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_extreamblood_02_4.ogg
     assetPath: sm_extreamblood_02_4.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_fatalblood_01.ogg
     assetPath: sm_fatalblood_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_fatalblood_02.ogg
     assetPath: sm_fatalblood_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_fatalblood_03.ogg
     assetPath: sm_fatalblood_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_firewave.ogg
     assetPath: sm_firewave.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_firewave_ex.ogg
     assetPath: sm_firewave_ex.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_flashcut.ogg
     assetPath: sm_flashcut.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_flense.ogg
     assetPath: sm_flense.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_fullmoon_atk.ogg
     assetPath: sm_fullmoon_atk.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ghost_decollation_01.ogg
     assetPath: sm_ghost_decollation_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ghost_decollation_02.ogg
     assetPath: sm_ghost_decollation_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ghost_decollation_03.ogg
     assetPath: sm_ghost_decollation_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ghost_pierce_01_1.ogg
     assetPath: sm_ghost_pierce_01_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ghost_pierce_01_2.ogg
     assetPath: sm_ghost_pierce_01_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ghost_pierce_02_1.ogg
     assetPath: sm_ghost_pierce_02_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ghost_pierce_02_2.ogg
     assetPath: sm_ghost_pierce_02_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ghostgate_01_1.ogg
     assetPath: sm_ghostgate_01_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ghostgate_01_2.ogg
     assetPath: sm_ghostgate_01_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ghostgate_02_1.ogg
     assetPath: sm_ghostgate_02_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ghostgate_02_2.ogg
     assetPath: sm_ghostgate_02_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ghostgate_03_1.ogg
     assetPath: sm_ghostgate_03_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ghostgate_03_2.ogg
     assetPath: sm_ghostgate_03_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ghostgate_04_1.ogg
     assetPath: sm_ghostgate_04_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ghostgate_04_2.ogg
     assetPath: sm_ghostgate_04_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ghostslash_bs_01.ogg
     assetPath: sm_ghostslash_bs_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ghostslash_bs_02.ogg
     assetPath: sm_ghostslash_bs_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_gluttony_crevasse_01_1.ogg
     assetPath: sm_gluttony_crevasse_01_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_gluttony_crevasse_01_2.ogg
     assetPath: sm_gluttony_crevasse_01_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_gluttony_crevasse_02_1.ogg
     assetPath: sm_gluttony_crevasse_02_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_gluttony_crevasse_02_2.ogg
     assetPath: sm_gluttony_crevasse_02_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_gorecross.ogg
     assetPath: sm_gorecross.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_gorecross_atk_01.ogg
     assetPath: sm_gorecross_atk_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_gorecross_atk_02.ogg
     assetPath: sm_gorecross_atk_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_gorecross_atk_03.ogg
     assetPath: sm_gorecross_atk_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_gstep.ogg
     assetPath: sm_gstep.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_guard.ogg
     assetPath: sm_guard.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_gue_01.ogg
     assetPath: sm_gue_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_gue_02.ogg
     assetPath: sm_gue_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_gue_charge.ogg
     assetPath: sm_gue_charge.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_gue_fleetness.ogg
     assetPath: sm_gue_fleetness.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_gue_shooting.ogg
     assetPath: sm_gue_shooting.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_gue_sword.ogg
     assetPath: sm_gue_sword.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_hellbenter.ogg
     assetPath: sm_hellbenter.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_hellslash_bs_01_1.ogg
     assetPath: sm_hellslash_bs_01_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_hellslash_bs_01_2.ogg
     assetPath: sm_hellslash_bs_01_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_hellslash_bs_02_1.ogg
     assetPath: sm_hellslash_bs_02_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_hellslash_bs_02_2.ogg
     assetPath: sm_hellslash_bs_02_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_hellslash_vs_01_1.ogg
     assetPath: sm_hellslash_vs_01_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_hellslash_vs_01_2.ogg
     assetPath: sm_hellslash_vs_01_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_hellslash_vs_02_1.ogg
     assetPath: sm_hellslash_vs_02_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_hellslash_vs_02_2.ogg
     assetPath: sm_hellslash_vs_02_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_hellslash_vs_03_1.ogg
     assetPath: sm_hellslash_vs_03_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_hellslash_vs_03_2.ogg
     assetPath: sm_hellslash_vs_03_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_hey.ogg
     assetPath: sm_hey.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_hitback.ogg
     assetPath: sm_hitback.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_hoanyoung_01.ogg
     assetPath: sm_hoanyoung_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_hoanyoung_02.ogg
     assetPath: sm_hoanyoung_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_hoanyoung_03.ogg
     assetPath: sm_hoanyoung_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_hoanyoung_04.ogg
     assetPath: sm_hoanyoung_04.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_hoanyoung_fin.ogg
     assetPath: sm_hoanyoung_fin.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_hoanyoung_start.ogg
     assetPath: sm_hoanyoung_start.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_icewave.ogg
     assetPath: sm_icewave.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_icewave_ex.ogg
     assetPath: sm_icewave_ex.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_indara.ogg
     assetPath: sm_indara.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_infinitykilling_bs_01_1.ogg
     assetPath: sm_infinitykilling_bs_01_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_infinitykilling_bs_01_2.ogg
     assetPath: sm_infinitykilling_bs_01_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_infinitykilling_bs_01_3.ogg
     assetPath: sm_infinitykilling_bs_01_3.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_infinitykilling_bs_02_1.ogg
     assetPath: sm_infinitykilling_bs_02_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_infinitykilling_vs_01_1_1.ogg
     assetPath: sm_infinitykilling_vs_01_1_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_infinitykilling_vs_01_1_2.ogg
     assetPath: sm_infinitykilling_vs_01_1_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_infinitykilling_vs_01_1_3.ogg
     assetPath: sm_infinitykilling_vs_01_1_3.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_infinitykilling_vs_01_2.ogg
     assetPath: sm_infinitykilling_vs_01_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_infinitykilling_vs_01_3.ogg
     assetPath: sm_infinitykilling_vs_01_3.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_infinitykilling_vs_02_1.ogg
     assetPath: sm_infinitykilling_vs_02_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_infinitykilling_vs_02_2_1.ogg
     assetPath: sm_infinitykilling_vs_02_2_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_infinitykilling_vs_02_2_2.ogg
     assetPath: sm_infinitykilling_vs_02_2_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_invisible_swordcut_01.ogg
     assetPath: sm_invisible_swordcut_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_invisible_swordcut_02.ogg
     assetPath: sm_invisible_swordcut_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_invisible_swordcut_03.ogg
     assetPath: sm_invisible_swordcut_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_jakyeol_wave_01.ogg
     assetPath: sm_jakyeol_wave_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_jakyeol_wave_02.ogg
     assetPath: sm_jakyeol_wave_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_jingong.ogg
     assetPath: sm_jingong.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_jump.ogg
     assetPath: sm_jump.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_jumpatk_01.ogg
     assetPath: sm_jumpatk_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_jumpatk_02.ogg
     assetPath: sm_jumpatk_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_jumpatk_bs_01.ogg
     assetPath: sm_jumpatk_bs_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_jumpatk_bs_02.ogg
     assetPath: sm_jumpatk_bs_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_jumpatk_bs_03.ogg
     assetPath: sm_jumpatk_bs_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_kalra_01.ogg
     assetPath: sm_kalra_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_kalra_02.ogg
     assetPath: sm_kalra_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_kalra_atk.ogg
     assetPath: sm_kalra_atk.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_kalra_fin.ogg
     assetPath: sm_kalra_fin.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_keiga.ogg
     assetPath: sm_keiga.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_kghost.ogg
     assetPath: sm_kghost.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_kill_wave.ogg
     assetPath: sm_kill_wave.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_leap_buff.ogg
     assetPath: sm_leap_buff.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_lightninggod.ogg
     assetPath: sm_lightninggod.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_lightninggod_cast.ogg
     assetPath: sm_lightninggod_cast.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_mcurtain.ogg
     assetPath: sm_mcurtain.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_mengryong_01.ogg
     assetPath: sm_mengryong_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_mengryong_02.ogg
     assetPath: sm_mengryong_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_mengryong_03.ogg
     assetPath: sm_mengryong_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_mengryong_fin.ogg
     assetPath: sm_mengryong_fin.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_mengryong_start.ogg
     assetPath: sm_mengryong_start.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_moaning_01.ogg
     assetPath: sm_moaning_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_moaning_02.ogg
     assetPath: sm_moaning_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_moaning_03.ogg
     assetPath: sm_moaning_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_moaning_04.ogg
     assetPath: sm_moaning_04.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_moon_atk.ogg
     assetPath: sm_moon_atk.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_moonspiritslash_bs_01.ogg
     assetPath: sm_moonspiritslash_bs_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_moonspiritslash_bs_02.ogg
     assetPath: sm_moonspiritslash_bs_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_moonspiritslash_vs_01.ogg
     assetPath: sm_moonspiritslash_vs_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_moonspiritslash_vs_02.ogg
     assetPath: sm_moonspiritslash_vs_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_mussang_start.ogg
     assetPath: sm_mussang_start.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_mussang_strong.ogg
     assetPath: sm_mussang_strong.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_mussang_weak.ogg
     assetPath: sm_mussang_weak.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_nomana.ogg
     assetPath: sm_nomana.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_nomana_bs.ogg
     assetPath: sm_nomana_bs.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_oneslash_vs_01.ogg
     assetPath: sm_oneslash_vs_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_oneslash_vs_02.ogg
     assetPath: sm_oneslash_vs_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_outrage_break_01.ogg
     assetPath: sm_outrage_break_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_outrage_break_02.ogg
     assetPath: sm_outrage_break_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_overdrive.ogg
     assetPath: sm_overdrive.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_overhit.ogg
     assetPath: sm_overhit.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_phantomblade.ogg
     assetPath: sm_phantomblade.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_quake_wave.ogg
     assetPath: sm_quake_wave.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_rage_01.ogg
     assetPath: sm_rage_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_rage_02_1.ogg
     assetPath: sm_rage_02_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_rage_02_2.ogg
     assetPath: sm_rage_02_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_rage_03_1.ogg
     assetPath: sm_rage_03_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_rage_03_2.ogg
     assetPath: sm_rage_03_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_rage_03_3.ogg
     assetPath: sm_rage_03_3.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_rampantmadness_01_1.ogg
     assetPath: sm_rampantmadness_01_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_rampantmadness_01_2.ogg
     assetPath: sm_rampantmadness_01_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_rampantmadness_02_1.ogg
     assetPath: sm_rampantmadness_02_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_rampantmadness_02_2.ogg
     assetPath: sm_rampantmadness_02_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_rasa.ogg
     assetPath: sm_rasa.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_return_disk.ogg
     assetPath: sm_return_disk.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_sacri.ogg
     assetPath: sm_sacri.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_sarmor.ogg
     assetPath: sm_sarmor.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_sghost.ogg
     assetPath: sm_sghost.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_slash_boom.ogg
     assetPath: sm_slash_boom.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_slash_hell.ogg
     assetPath: sm_slash_hell.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_speedslash_01_1.ogg
     assetPath: sm_speedslash_01_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_speedslash_01_2.ogg
     assetPath: sm_speedslash_01_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_speedslash_02_1.ogg
     assetPath: sm_speedslash_02_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_speedslash_02_2.ogg
     assetPath: sm_speedslash_02_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_speedslash_upper_01.ogg
     assetPath: sm_speedslash_upper_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_speedslash_upper_02.ogg
     assetPath: sm_speedslash_upper_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_speedslash_upper_03.ogg
     assetPath: sm_speedslash_upper_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_speedslash_upper_04.ogg
     assetPath: sm_speedslash_upper_04.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_speedslash_vs_01_1.ogg
     assetPath: sm_speedslash_vs_01_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_speedslash_vs_01_2.ogg
     assetPath: sm_speedslash_vs_01_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_speedslash_vs_02_1.ogg
     assetPath: sm_speedslash_vs_02_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_speedslash_vs_02_2.ogg
     assetPath: sm_speedslash_vs_02_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_speedslash_vs_03_1.ogg
     assetPath: sm_speedslash_vs_03_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_speedslash_vs_03_2.ogg
     assetPath: sm_speedslash_vs_03_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_speedslash_vs_03_3.ogg
     assetPath: sm_speedslash_vs_03_3.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_spinningslash_vs_01_1.ogg
     assetPath: sm_spinningslash_vs_01_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_spinningslash_vs_01_2.ogg
     assetPath: sm_spinningslash_vs_01_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_spinningslash_vs_02_1.ogg
     assetPath: sm_spinningslash_vs_02_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_spinningslash_vs_02_2.ogg
     assetPath: sm_spinningslash_vs_02_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_spirit_move_01.ogg
     assetPath: sm_spirit_move_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_spiritconversion_bs_01.ogg
     assetPath: sm_spiritconversion_bs_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_spiritconversion_bs_02.ogg
     assetPath: sm_spiritconversion_bs_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_spiritconversion_vs.ogg
     assetPath: sm_spiritconversion_vs.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_spiritcrossslash_bs_01.ogg
     assetPath: sm_spiritcrossslash_bs_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_spiritcrossslash_bs_02.ogg
     assetPath: sm_spiritcrossslash_bs_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_spritcrossslash_vs_01.ogg
     assetPath: sm_spritcrossslash_vs_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_spritcrossslash_vs_02.ogg
     assetPath: sm_spritcrossslash_vs_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_stone_shower.ogg
     assetPath: sm_stone_shower.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_suddenstrike_vs_01.ogg
     assetPath: sm_suddenstrike_vs_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_suddenstrike_vs_02.ogg
     assetPath: sm_suddenstrike_vs_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_suddenstrike_vs_03.ogg
     assetPath: sm_suddenstrike_vs_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_sura_jingong.ogg
     assetPath: sm_sura_jingong.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_sworddance_bs_01.ogg
     assetPath: sm_sworddance_bs_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_sworddance_bs_02.ogg
     assetPath: sm_sworddance_bs_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_terriblekilling_01.ogg
     assetPath: sm_terriblekilling_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_terriblekilling_02.ogg
     assetPath: sm_terriblekilling_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_terriblekilling_03.ogg
     assetPath: sm_terriblekilling_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_throw.ogg
     assetPath: sm_throw.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_thrust.ogg
     assetPath: sm_thrust.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_tombstone.ogg
     assetPath: sm_tombstone.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_triple1.ogg
     assetPath: sm_triple1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_triple2.ogg
     assetPath: sm_triple2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_triple3.ogg
     assetPath: sm_triple3.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_tripleslash_bs_01_1.ogg
     assetPath: sm_tripleslash_bs_01_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_tripleslash_bs_01_2.ogg
     assetPath: sm_tripleslash_bs_01_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_tripleslash_bs_02_1.ogg
     assetPath: sm_tripleslash_bs_02_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_tripleslash_bs_02_2.ogg
     assetPath: sm_tripleslash_bs_02_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_tripleslash_bs_03_1.ogg
     assetPath: sm_tripleslash_bs_03_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_tripleslash_bs_03_2.ogg
     assetPath: sm_tripleslash_bs_03_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ultimatecrossslash_01.ogg
     assetPath: sm_ultimatecrossslash_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ultimatecrossslash_02.ogg
     assetPath: sm_ultimatecrossslash_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_ultimatecrossslash_03.ogg
     assetPath: sm_ultimatecrossslash_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_unlimitedspeedslash_bs_01_1.ogg
     assetPath: sm_unlimitedspeedslash_bs_01_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_unlimitedspeedslash_bs_02_1.ogg
     assetPath: sm_unlimitedspeedslash_bs_02_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_unlimitedspeedslash_bs_02_2.ogg
     assetPath: sm_unlimitedspeedslash_bs_02_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_unlimitedspeedslash_bs_02_3.ogg
     assetPath: sm_unlimitedspeedslash_bs_02_3.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_unlimitedspeedslash_vs_01_1.ogg
     assetPath: sm_unlimitedspeedslash_vs_01_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_unlimitedspeedslash_vs_01_2.ogg
     assetPath: sm_unlimitedspeedslash_vs_01_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_unlimitedspeedslash_vs_02_1.ogg
     assetPath: sm_unlimitedspeedslash_vs_02_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_unlimitedspeedslash_vs_02_2.ogg
     assetPath: sm_unlimitedspeedslash_vs_02_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_upperslash_add.ogg
     assetPath: sm_upperslash_add.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_upslash.ogg
     assetPath: sm_upslash.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_vajra.ogg
     assetPath: sm_vajra.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_vghost.ogg
     assetPath: sm_vghost.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_wave.ogg
     assetPath: sm_wave.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_wave_carving.ogg
     assetPath: sm_wave_carving.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_wave_eye.ogg
     assetPath: sm_wave_eye.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_white_ghostslash_01.ogg
     assetPath: sm_white_ghostslash_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_white_ghostslash_02.ogg
     assetPath: sm_white_ghostslash_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_white_ghostslash_03.ogg
     assetPath: sm_white_ghostslash_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_will_bs.ogg
     assetPath: sm_will_bs.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_windspirit_vs_01.ogg
     assetPath: sm_windspirit_vs_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_windspirit_vs_02.ogg
     assetPath: sm_windspirit_vs_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_wol_v1_01_1.ogg
     assetPath: sm_wol_v1_01_1.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_wol_v1_01_2.ogg
     assetPath: sm_wol_v1_01_2.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_wol_v1_02.ogg
     assetPath: sm_wol_v1_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_wol_v3_01.ogg
     assetPath: sm_wol_v3_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_wol_v3_02.ogg
     assetPath: sm_wol_v3_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_wol_v3_03.ogg
     assetPath: sm_wol_v3_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_yeolpa_down.ogg
     assetPath: sm_yeolpa_down.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_yeolpa_up.ogg
     assetPath: sm_yeolpa_up.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sm_zieg.ogg
     assetPath: sm_zieg.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sqrswd_touch.ogg
     assetPath: sqrswd_touch.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sqrswda_01.ogg
     assetPath: sqrswda_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sqrswda_02.ogg
     assetPath: sqrswda_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sqrswda_hit_01.ogg
     assetPath: sqrswda_hit_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sqrswda_hit_02.ogg
     assetPath: sqrswda_hit_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sqrswdb.ogg
     assetPath: sqrswdb.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sqrswdb_hit.ogg
     assetPath: sqrswdb_hit.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sqrswdc_01.ogg
     assetPath: sqrswdc_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sqrswdc_hit_01.ogg
     assetPath: sqrswdc_hit_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sqrswdc_hit_02.ogg
     assetPath: sqrswdc_hit_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: stick_touch.ogg
     assetPath: stick_touch.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sticka_01.ogg
     assetPath: sticka_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: sticka_02.ogg
     assetPath: sticka_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: stickb_01.ogg
     assetPath: stickb_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: stickb_hit_01.ogg
     assetPath: stickb_hit_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: stickc_01.ogg
     assetPath: stickc_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: stickc_hit_01.ogg
     assetPath: stickc_hit_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: stickc_hit_02.ogg
     assetPath: stickc_hit_02.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: swd_bal_03.ogg
     assetPath: swd_bal_03.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: swd_eff_01.ogg
     assetPath: swd_eff_01.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: swd_eff_05.ogg
     assetPath: swd_eff_05.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: swd_eff_06.ogg
     assetPath: swd_eff_06.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: swd_eff_08.ogg
     assetPath: swd_eff_08.ogg
     bundleName: 002/artmodules/audio/sound/swordman.asset
-    md5Code: 3b79e49ce18a3423be143f1d818303a0
+    md5Code: b2e89e50be4048d154cd27bd96e98a08
     dependencieBundleNames: []
   - assetName: darkhit01_0.png
     assetPath: darkhit01_0.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhit01_1.png
     assetPath: darkhit01_1.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhit01_2.png
     assetPath: darkhit01_2.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhit01_3.png
     assetPath: darkhit01_3.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhit01_4.png
     assetPath: darkhit01_4.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhit01_5.png
     assetPath: darkhit01_5.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhit01_6.png
     assetPath: darkhit01_6.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhit01_7.png
     assetPath: darkhit01_7.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhit01_8.png
     assetPath: darkhit01_8.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhit01_offset.txt
     assetPath: darkhit01_offset.txt
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhit01_pointoffsize.txt
     assetPath: darkhit01_pointoffsize.txt
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhit02_0.png
     assetPath: darkhit02_0.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhit02_1.png
     assetPath: darkhit02_1.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhit02_2.png
     assetPath: darkhit02_2.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhit02_3.png
     assetPath: darkhit02_3.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhit02_4.png
     assetPath: darkhit02_4.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhit02_5.png
     assetPath: darkhit02_5.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhit02_6.png
     assetPath: darkhit02_6.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhit02_7.png
     assetPath: darkhit02_7.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhit02_8.png
     assetPath: darkhit02_8.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhit02_offset.txt
     assetPath: darkhit02_offset.txt
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhit02_pointoffsize.txt
     assetPath: darkhit02_pointoffsize.txt
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
     dependencieBundleNames: []
   - assetName: darkhiteffect.prefab
     assetPath: darkhiteffect.prefab
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: 2bd15b2f4fb27b4d855e2f9411e564d0
+    dependencieBundleNames: []
+  - assetName: msyh sdf.asset
+    assetPath: msyh sdf.asset
+    bundleName: 002/artmodules/fonts.asset
+    md5Code: 93d29ef84df71adb77a56c744fdbd45a
     dependencieBundleNames: []
   - assetName: simsun sdf.asset
     assetPath: simsun sdf.asset
     bundleName: 002/artmodules/fonts.asset
-    md5Code: 06471f7752587270fbd5b1c15dbb34ff
+    md5Code: 93d29ef84df71adb77a56c744fdbd45a
     dependencieBundleNames: []
   - assetName: role_back_1.png
     assetPath: role_back_1.png
     bundleName: 002/artmodules/gui/role/images.asset
-    md5Code: 85da33c8950f34ebf3b250a40ff333c0
+    md5Code: aafd99781343081ffd2ae0d9c2a7ac54
     dependencieBundleNames: []
   - assetName: role_back_2.png
     assetPath: role_back_2.png
     bundleName: 002/artmodules/gui/role/images.asset
-    md5Code: 85da33c8950f34ebf3b250a40ff333c0
+    md5Code: aafd99781343081ffd2ae0d9c2a7ac54
     dependencieBundleNames: []
   - assetName: role_back_3.png
     assetPath: role_back_3.png
     bundleName: 002/artmodules/gui/role/images.asset
-    md5Code: 85da33c8950f34ebf3b250a40ff333c0
+    md5Code: aafd99781343081ffd2ae0d9c2a7ac54
     dependencieBundleNames: []
   - assetName: role_back_4.png
     assetPath: role_back_4.png
     bundleName: 002/artmodules/gui/role/images.asset
-    md5Code: 85da33c8950f34ebf3b250a40ff333c0
+    md5Code: aafd99781343081ffd2ae0d9c2a7ac54
     dependencieBundleNames: []
   - assetName: role_head_portrait_1.png
     assetPath: role_head_portrait_1.png
     bundleName: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: f76588c9daf38456ec6f0195d91b57c6
+    md5Code: 4c69d53d8b1485221c92069b24687b5e
     dependencieBundleNames: []
   - assetName: role_head_portrait_2.png
     assetPath: role_head_portrait_2.png
     bundleName: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: f76588c9daf38456ec6f0195d91b57c6
+    md5Code: 4c69d53d8b1485221c92069b24687b5e
     dependencieBundleNames: []
   - assetName: role_head_portrait_3.png
     assetPath: role_head_portrait_3.png
     bundleName: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: f76588c9daf38456ec6f0195d91b57c6
-    dependencieBundleNames: []
-  - assetName: role_head_portrait_4.png
-    assetPath: role_head_portrait_4.png
-    bundleName: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: f76588c9daf38456ec6f0195d91b57c6
-    dependencieBundleNames: []
-  - assetName: role_head_portrait_5.png
-    assetPath: role_head_portrait_5.png
-    bundleName: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: f76588c9daf38456ec6f0195d91b57c6
-    dependencieBundleNames: []
-  - assetName: role_head_portrait_6.png
-    assetPath: role_head_portrait_6.png
-    bundleName: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: f76588c9daf38456ec6f0195d91b57c6
-    dependencieBundleNames: []
-  - assetName: role_head_portrait_bg.png
-    assetPath: role_head_portrait_bg.png
-    bundleName: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: f76588c9daf38456ec6f0195d91b57c6
-    dependencieBundleNames: []
-  - assetName: role_head_portrait_select_1.png
-    assetPath: role_head_portrait_select_1.png
-    bundleName: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: f76588c9daf38456ec6f0195d91b57c6
-    dependencieBundleNames: []
-  - assetName: role_head_portrait_select_2.png
-    assetPath: role_head_portrait_select_2.png
-    bundleName: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: f76588c9daf38456ec6f0195d91b57c6
-    dependencieBundleNames: []
-  - assetName: role_head_portraitmask_1.png
-    assetPath: role_head_portraitmask_1.png
-    bundleName: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: f76588c9daf38456ec6f0195d91b57c6
-    dependencieBundleNames: []
-  - assetName: role_head_portraitmask_2.png
-    assetPath: role_head_portraitmask_2.png
-    bundleName: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: f76588c9daf38456ec6f0195d91b57c6
-    dependencieBundleNames: []
-  - assetName: role_head_portraitmask_3.png
-    assetPath: role_head_portraitmask_3.png
-    bundleName: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: f76588c9daf38456ec6f0195d91b57c6
-    dependencieBundleNames: []
-  - assetName: role_head_portraitmask_4.png
-    assetPath: role_head_portraitmask_4.png
-    bundleName: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: f76588c9daf38456ec6f0195d91b57c6
-    dependencieBundleNames: []
-  - assetName: role_head_portraitmask_5.png
-    assetPath: role_head_portraitmask_5.png
-    bundleName: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: f76588c9daf38456ec6f0195d91b57c6
-    dependencieBundleNames: []
-  - assetName: role_head_portraitmask_6.png
-    assetPath: role_head_portraitmask_6.png
-    bundleName: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: f76588c9daf38456ec6f0195d91b57c6
-    dependencieBundleNames: []
-  - assetName: role_icon_1.png
-    assetPath: role_icon_1.png
-    bundleName: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: f76588c9daf38456ec6f0195d91b57c6
-    dependencieBundleNames: []
-  - assetName: role_icon_2.png
-    assetPath: role_icon_2.png
-    bundleName: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: f76588c9daf38456ec6f0195d91b57c6
-    dependencieBundleNames: []
-  - assetName: role_icon_3.png
-    assetPath: role_icon_3.png
-    bundleName: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: f76588c9daf38456ec6f0195d91b57c6
-    dependencieBundleNames: []
-  - assetName: role_icon_4.png
-    assetPath: role_icon_4.png
-    bundleName: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: f76588c9daf38456ec6f0195d91b57c6
-    dependencieBundleNames: []
-  - assetName: role_icon_5.png
-    assetPath: role_icon_5.png
-    bundleName: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: f76588c9daf38456ec6f0195d91b57c6
-    dependencieBundleNames: []
-  - assetName: role_icon_6.png
-    assetPath: role_icon_6.png
-    bundleName: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: f76588c9daf38456ec6f0195d91b57c6
+    md5Code: 4c69d53d8b1485221c92069b24687b5e
     dependencieBundleNames: []
   - assetName: create_role_bg_1.png
     assetPath: create_role_bg_1.png
     bundleName: 002/artmodules/gui/role/images/single/create_role_bg_1.asset
-    md5Code: acaf1201a79850c10ff167f6adbbf113
+    md5Code: 6283204535d221f68d41537335be09f0
     dependencieBundleNames: []
   - assetName: create_role_bg_2.png
     assetPath: create_role_bg_2.png
     bundleName: 002/artmodules/gui/role/images/single/create_role_bg_2.asset
-    md5Code: e7d061d0d8a31699d450e1a8e09e071f
+    md5Code: 7936e8435ac1e39b5e2123afc643be61
     dependencieBundleNames: []
   - assetName: create_role_bg_3.png
     assetPath: create_role_bg_3.png
     bundleName: 002/artmodules/gui/role/images/single/create_role_bg_3.asset
-    md5Code: aca8856649056566f9d8dddef8d06b8c
+    md5Code: 4287e67cf4ef8974e4cbb9327b4f9230
     dependencieBundleNames: []
   - assetName: create_role_bg_4.png
     assetPath: create_role_bg_4.png
     bundleName: 002/artmodules/gui/role/images/single/create_role_bg_4.asset
-    md5Code: fbc2b26d93f1dcb9ce876b3de7484f11
+    md5Code: c57816860b2b84c41f7cd0f88edd5fcb
     dependencieBundleNames: []
   - assetName: create_role_bg_5.png
     assetPath: create_role_bg_5.png
     bundleName: 002/artmodules/gui/role/images/single/create_role_bg_5.asset
-    md5Code: 38cb763c3ca5d38626f22d0b9261cbce
+    md5Code: 45eb8c6a19060066070ee6bdc874e002
     dependencieBundleNames: []
   - assetName: create_role_bg_6.png
     assetPath: create_role_bg_6.png
     bundleName: 002/artmodules/gui/role/images/single/create_role_bg_6.asset
-    md5Code: aaa1c4f101e0f84f4e03feb957d0fefb
+    md5Code: 9abdbc9c62cfc09fd9a46774169d3113
     dependencieBundleNames: []
   - assetName: role_live2d_1_0.png
     assetPath: role_live2d_1_0.png
     bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_0.asset
-    md5Code: d94172059bfd9b83c6bbe454a0a27389
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_1.png
-    assetPath: role_live2d_1_1.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_1.asset
-    md5Code: c5e44a54e3aa52a92c43375eabfe200f
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_10.png
-    assetPath: role_live2d_1_10.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_10.asset
-    md5Code: 4ad37b02f9d8ce12ed99cc42eb070646
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_11.png
-    assetPath: role_live2d_1_11.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_11.asset
-    md5Code: 3cd28a3a3b59cc5c17dfa80a598afafd
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_12.png
-    assetPath: role_live2d_1_12.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_12.asset
-    md5Code: 3af06a8d3da4e69e84425e30a7492a5b
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_13.png
-    assetPath: role_live2d_1_13.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_13.asset
-    md5Code: 03c920d97928fc4ee035c4c552c3c5ae
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_14.png
-    assetPath: role_live2d_1_14.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_14.asset
-    md5Code: d5467396fa01acd6833f75d788f89a10
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_15.png
-    assetPath: role_live2d_1_15.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_15.asset
-    md5Code: 84c199ce66194c094842f1b45683c72f
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_16.png
-    assetPath: role_live2d_1_16.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_16.asset
-    md5Code: b843459cc6a670ab5ef9c22fa1b13363
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_17.png
-    assetPath: role_live2d_1_17.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_17.asset
-    md5Code: aac2c8b3d53465c593e8335d8004d295
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_18.png
-    assetPath: role_live2d_1_18.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_18.asset
-    md5Code: 19f7a467207687031183fd018aa81edc
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_19.png
-    assetPath: role_live2d_1_19.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_19.asset
-    md5Code: e0365060cf3cd269e18634b50679c046
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_2.png
-    assetPath: role_live2d_1_2.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_2.asset
-    md5Code: 1a8364f90c257d57be6b076f4c34a98a
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_20.png
-    assetPath: role_live2d_1_20.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_20.asset
-    md5Code: 664237d27c687f370594629fab8eb40e
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_21.png
-    assetPath: role_live2d_1_21.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_21.asset
-    md5Code: bf3405dd14df8c57358e72aeb1aae8c1
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_22.png
-    assetPath: role_live2d_1_22.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_22.asset
-    md5Code: 62f58876359b1a0c30547306514e83d4
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_23.png
-    assetPath: role_live2d_1_23.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_23.asset
-    md5Code: 484a854ec05f784f5ff09c1b55a5c7a4
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_24.png
-    assetPath: role_live2d_1_24.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_24.asset
-    md5Code: 2331f1acc116e14a7ed718682c203336
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_25.png
-    assetPath: role_live2d_1_25.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_25.asset
-    md5Code: 81b3435958a69d17945cd2901c16f6f5
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_26.png
-    assetPath: role_live2d_1_26.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_26.asset
-    md5Code: a71d3488f6dfecbf41651792324fcd2d
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_27.png
-    assetPath: role_live2d_1_27.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_27.asset
-    md5Code: e7ae4c7d8c4ead523307d6312c869941
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_28.png
-    assetPath: role_live2d_1_28.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_28.asset
-    md5Code: f3dcae7009b223a365827863ef793d04
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_29.png
-    assetPath: role_live2d_1_29.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_29.asset
-    md5Code: 40380c4ed3953b6c6e5a27dd9e927ede
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_3.png
-    assetPath: role_live2d_1_3.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_3.asset
-    md5Code: bbb1884c1289d79ee9184799f7f5a242
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_30.png
-    assetPath: role_live2d_1_30.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_30.asset
-    md5Code: 7a0778b9faaa0d9ce515782321246d66
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_31.png
-    assetPath: role_live2d_1_31.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_31.asset
-    md5Code: 337180a5f554e40edf1b7a963615c46a
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_32.png
-    assetPath: role_live2d_1_32.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_32.asset
-    md5Code: b29e57b5df65ef719bc47fc757ed1d8a
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_33.png
-    assetPath: role_live2d_1_33.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_33.asset
-    md5Code: a5baaf3a2e67e3a68f6b9bf23cbc79e2
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_34.png
-    assetPath: role_live2d_1_34.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_34.asset
-    md5Code: 37d2ac72f331003585778aa35bd7c150
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_35.png
-    assetPath: role_live2d_1_35.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_35.asset
-    md5Code: 324430efcc9d96fd5b02432d05d0ce0e
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_36.png
-    assetPath: role_live2d_1_36.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_36.asset
-    md5Code: 67a0502cf9f8f5ddc94799ccfd41530d
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_37.png
-    assetPath: role_live2d_1_37.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_37.asset
-    md5Code: 8ee33db97c214a46bcfd015b5938aaa6
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_38.png
-    assetPath: role_live2d_1_38.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_38.asset
-    md5Code: 56cbee7c94fb0b577bd0548a7fc09d05
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_39.png
-    assetPath: role_live2d_1_39.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_39.asset
-    md5Code: fced31b2036c1f287bbb45f564807003
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_4.png
-    assetPath: role_live2d_1_4.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_4.asset
-    md5Code: f29eb4ddc0ee1c301d609617c60a4dd0
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_40.png
-    assetPath: role_live2d_1_40.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_40.asset
-    md5Code: 78a088d7136f3d02a4c2dbd1373f69d4
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_41.png
-    assetPath: role_live2d_1_41.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_41.asset
-    md5Code: 3be57e2eb38d43768266c9d8d129a6ec
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_42.png
-    assetPath: role_live2d_1_42.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_42.asset
-    md5Code: 526bf526475ddfced69a7d5c3f8b165d
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_43.png
-    assetPath: role_live2d_1_43.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_43.asset
-    md5Code: 720872ff27d55d7ca27b5aea15944299
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_44.png
-    assetPath: role_live2d_1_44.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_44.asset
-    md5Code: cd9258b3ed9ba2667dc996c9ea3801f3
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_45.png
-    assetPath: role_live2d_1_45.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_45.asset
-    md5Code: 25254116cb8c5cbf8d66a0996f13e282
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_46.png
-    assetPath: role_live2d_1_46.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_46.asset
-    md5Code: d8d8c84bcbb0efe4cf07ba662711df16
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_47.png
-    assetPath: role_live2d_1_47.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_47.asset
-    md5Code: ca55caa80c8bbf687d0c626fbe643a53
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_48.png
-    assetPath: role_live2d_1_48.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_48.asset
-    md5Code: c981f64347f84ab3131bfd0ffc89f85c
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_49.png
-    assetPath: role_live2d_1_49.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_49.asset
-    md5Code: 76615f463c56e0d740b3fdd9b02c9e73
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_5.png
-    assetPath: role_live2d_1_5.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_5.asset
-    md5Code: 69a729c181ea1d0ebfc11c39db2d8380
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_50.png
-    assetPath: role_live2d_1_50.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_50.asset
-    md5Code: f2b62d313ebf0e4472419b25f80a78ab
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_51.png
-    assetPath: role_live2d_1_51.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_51.asset
-    md5Code: 093e5a5cb13abbed458911b2dc63ae4f
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_52.png
-    assetPath: role_live2d_1_52.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_52.asset
-    md5Code: 38a92199fd47469b4ad437d40ba8a42d
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_53.png
-    assetPath: role_live2d_1_53.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_53.asset
-    md5Code: cd303a60324adbb996b3099a36adc091
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_54.png
-    assetPath: role_live2d_1_54.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_54.asset
-    md5Code: f2ca66e1e9e3bc47208c886c67c9b22e
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_55.png
-    assetPath: role_live2d_1_55.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_55.asset
-    md5Code: a1b2095f1acb3874338ee4e2247b8e4b
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_56.png
-    assetPath: role_live2d_1_56.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_56.asset
-    md5Code: 4690fcffd00b1669ac1e5b591f6ecbc0
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_57.png
-    assetPath: role_live2d_1_57.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_57.asset
-    md5Code: 4798ecbf5439112699496b780e2e26a5
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_58.png
-    assetPath: role_live2d_1_58.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_58.asset
-    md5Code: 090e435f025eb5de62483c5c403784c5
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_59.png
-    assetPath: role_live2d_1_59.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_59.asset
-    md5Code: 103d37b764679c023a3eea351c6b6e8a
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_6.png
-    assetPath: role_live2d_1_6.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_6.asset
-    md5Code: f7be984ca296943b0ae1cd94428f8eca
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_60.png
-    assetPath: role_live2d_1_60.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_60.asset
-    md5Code: 62a4a04d8a510fbcf0b83833ef64162b
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_61.png
-    assetPath: role_live2d_1_61.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_61.asset
-    md5Code: 1debb650ea6097e0c35de9e6e0d2afce
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_62.png
-    assetPath: role_live2d_1_62.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_62.asset
-    md5Code: b09319be0edb52950014a43ee43a317d
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_63.png
-    assetPath: role_live2d_1_63.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_63.asset
-    md5Code: 565d4d21efbfc3a4416eea3a2d171f56
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_64.png
-    assetPath: role_live2d_1_64.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_64.asset
-    md5Code: 182f2f7cb01dacb78d5046232b51eb9c
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_65.png
-    assetPath: role_live2d_1_65.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_65.asset
-    md5Code: 748227e7ccee1bafe83c6d08b989d533
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_66.png
-    assetPath: role_live2d_1_66.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_66.asset
-    md5Code: 9cb89fb8d84887537f7e80de67048fab
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_67.png
-    assetPath: role_live2d_1_67.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_67.asset
-    md5Code: b3f2aeacf434a2bfd7b9570a0588a7fd
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_68.png
-    assetPath: role_live2d_1_68.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_68.asset
-    md5Code: 9d9bb7be9a85271d038a8967e24bf0c0
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_69.png
-    assetPath: role_live2d_1_69.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_69.asset
-    md5Code: 64eeee28e969964e5749590de7c3af5b
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_7.png
-    assetPath: role_live2d_1_7.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_7.asset
-    md5Code: 6cce23831e2e68814be2a56b7931f331
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_70.png
-    assetPath: role_live2d_1_70.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_70.asset
-    md5Code: 9a150aa4e99aaa8dec25b3cb8e700a48
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_71.png
-    assetPath: role_live2d_1_71.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_71.asset
-    md5Code: 405ef8b36b40ea2d004ccff8e2b6f96b
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_72.png
-    assetPath: role_live2d_1_72.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_72.asset
-    md5Code: d0ae93032d0159b2e65e8b178044c2b6
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_73.png
-    assetPath: role_live2d_1_73.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_73.asset
-    md5Code: 43e3d166092009c5740dd49e9afa261d
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_74.png
-    assetPath: role_live2d_1_74.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_74.asset
-    md5Code: 9c7c54d451a8b9636a7b55343f0118f6
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_75.png
-    assetPath: role_live2d_1_75.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_75.asset
-    md5Code: ca6964815e0168ccd3d3c7af4b22a7f9
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_76.png
-    assetPath: role_live2d_1_76.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_76.asset
-    md5Code: ed4f9b2c047abd662e7d9897f9963b03
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_77.png
-    assetPath: role_live2d_1_77.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_77.asset
-    md5Code: 604c70eebb600747d622849504f3681b
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_78.png
-    assetPath: role_live2d_1_78.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_78.asset
-    md5Code: 62d045a580fb1d870b88aac4076054d1
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_79.png
-    assetPath: role_live2d_1_79.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_79.asset
-    md5Code: 3923aa68720d3655291860397ba030a0
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_8.png
-    assetPath: role_live2d_1_8.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_8.asset
-    md5Code: 3ee4fece5978591cbbdfb5b84199aae8
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_80.png
-    assetPath: role_live2d_1_80.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_80.asset
-    md5Code: fa246af4c00de6c2d3142c5b020c55f7
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_81.png
-    assetPath: role_live2d_1_81.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_81.asset
-    md5Code: a2b07ebcb2b5e03efa59b7bf9f077c3b
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_82.png
-    assetPath: role_live2d_1_82.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_82.asset
-    md5Code: a49661a4e80bb4019b7b5315a9a0eaf8
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_83.png
-    assetPath: role_live2d_1_83.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_83.asset
-    md5Code: 0c7364f69771a712392f10aac711d574
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_84.png
-    assetPath: role_live2d_1_84.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_84.asset
-    md5Code: 20e28ae773bb3cd00c0fab1fcd1468a8
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_85.png
-    assetPath: role_live2d_1_85.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_85.asset
-    md5Code: 24a95e60e02c1f97bfb040d95cf32ce1
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_86.png
-    assetPath: role_live2d_1_86.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_86.asset
-    md5Code: 686925cb8a0a7b05e22fde57f837bd2c
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_87.png
-    assetPath: role_live2d_1_87.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_87.asset
-    md5Code: 681afee98e5a4ea9e85a13dcd49576e1
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_88.png
-    assetPath: role_live2d_1_88.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_88.asset
-    md5Code: e460cd286d2c204af3d32c5cf38372a2
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_89.png
-    assetPath: role_live2d_1_89.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_89.asset
-    md5Code: 45a1eeaa3375c791a91830810e421576
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_9.png
-    assetPath: role_live2d_1_9.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_9.asset
-    md5Code: dd9991272e0406df5dd6f93faf71aa79
-    dependencieBundleNames: []
-  - assetName: role_live2d_1_90.png
-    assetPath: role_live2d_1_90.png
-    bundleName: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_90.asset
-    md5Code: 6d1570f61823b028b602d8b1889454c4
+    md5Code: f3e5d0dfb73967a2f3f960159a2b8e39
     dependencieBundleNames: []
   - assetName: default_loading_gui.prefab
     assetPath: default_loading_gui.prefab
     bundleName: 002/artmodules/gui/role/prefabs/default_loading_gui.asset
-    md5Code: 58912b6a1ec992239c7dbc415e149fb8
+    md5Code: 72d53c3dfeb719e6ae57eaf84e7e9dcd
     dependencieBundleNames:
     - 002/artmodules/gui/role/images/roleicon.asset
     - 002/artmodules/gui/role/images/single/create_role_bg_1.asset
   - assetName: gui_createrole_view.prefab
     assetPath: gui_createrole_view.prefab
     bundleName: 002/artmodules/gui/role/prefabs/gui_createrole_view.asset
-    md5Code: 4228546d0ff8aa7b7b2173362e669ac4
+    md5Code: c65022c4fe0a6ac956fcf82dda7085c2
     dependencieBundleNames: []
   - assetName: gui_default_view.prefab
     assetPath: gui_default_view.prefab
     bundleName: 002/artmodules/gui/role/prefabs/gui_default_view.asset
-    md5Code: 4406b70abd34691fe9e024cf1e755f3c
+    md5Code: 2799720ec7a164f47ce043eb8f264144
     dependencieBundleNames: []

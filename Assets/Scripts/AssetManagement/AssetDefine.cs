@@ -7,10 +7,18 @@ public class AssetDefine
 {
     public static string s_LuaPath = Application.dataPath + "/../X_Scripts/Lua/";
 
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
     public static string localDataPath = Application.dataPath + "/../A_AssetBundles/";
+#elif UNITY_ANDROID
+    public static string localDataPath = Application.persistentDataPath + "/A_AssetBundles/";
+#endif
 
-    public static string s_NetServerPath = "https://00-1256518392.cos.ap-guangzhou.myqcloud.com/Test/";
 
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
+    public static string s_NetServerPath = "https://00-1256518392.cos.ap-guangzhou.myqcloud.com/Test/win/";
+#elif UNITY_ANDROID
+    public static string s_NetServerPath = "https://00-1256518392.cos.ap-guangzhou.myqcloud.com/Test/android/";
+#endif
     public static string s_LuaBuildTemp = Application.dataPath + "/LuaTemp/";
 
     public static string s_AudioBuildPath = "Assets/ArtModules/Audio";
@@ -27,5 +35,13 @@ public class AssetDefine
 
     public static string scriptObjectBuildPath = "Assets/Art/ScriptObject";
 
+
+#if UNITY_EDITOR
+    public static string DataDataPath = Path.Combine(Application.dataPath, "../");
+#elif UNITY_STANDALONE_WIN
+        public static string DataDataPath = Application.dataPath;
+#else
+        public static string DataDataPath = "/data/data/" + Application.identifier + "/files/";
+#endif
 
 }

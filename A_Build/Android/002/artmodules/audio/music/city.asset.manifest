@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 1977283056
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1d33c647b1abf668ecd50bdff6a1adcd
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9a2ca7bdbd1871f7131daf57de908e0c
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/ArtModules/Audio/Music/city/gate_new.ogg
+Dependencies: []

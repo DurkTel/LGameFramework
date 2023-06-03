@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 1688318621
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 05998258e54677ed92ccd6c6f2392f08
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9a2ca7bdbd1871f7131daf57de908e0c
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/ArtModules/Audio/Music/copy/forest_town.ogg
+- Assets/ArtModules/Audio/Music/copy/pvp_pub.ogg
+Dependencies: []
