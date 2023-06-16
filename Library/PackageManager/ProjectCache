@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638202343971534574
-    m_Hash: 4124370775
+      ticks: 638220513901296385
+    m_Hash: 421081806
   m_LockFileStatus:
     m_FilePath: D:/UnityProject/LGameFramework/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638202344277469425
-    m_Hash: 1788976777
+      ticks: 638220513901394907
+    m_Hash: 2066934129
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -22,6 +22,58 @@ m_LocalPackages:
 m_ProjectPath: D:/UnityProject/LGameFramework/Packages
 m_EditorVersion: 2021.3.23f1c1 (b82b1f861975)
 m_ResolvedPackages:
+- packageId: com.code-philosophy.hybridclr@https://github.com/focus-creative-games/hybridclr_unity.git
+  testable: 0
+  isDirectDependency: 1
+  version: 3.1.0
+  source: 5
+  resolvedPath: D:\UnityProject\LGameFramework\Library\PackageCache\com.code-philosophy.hybridclr@7d58454fdd
+  assetPath: Packages/com.code-philosophy.hybridclr
+  name: com.code-philosophy.hybridclr
+  displayName: HybridCLR
+  author:
+    name: Code Philosophy
+    email: hybridclr@code-philosophy.com
+    url: https://code-philosophy.com
+  category: Runtime
+  type: 
+  description: HybridCLR is a fully featured, zero-cost, high-performance, low-memory
+    solution for Unity's all-platform native c# hotupdate.
+  status: 0
+  errors: []
+  versions:
+    all: []
+    compatible: []
+    verified: 
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - HybridCLR
+  - hotupdate
+  - hotfix
+  - focus-creative-games
+  - code-philosophy
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.cn
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: https://hybridclr.doc.code-philosophy.com/#/
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
 - packageId: com.unity.collab-proxy@2.0.3
   testable: 0
   isDirectDependency: 1
@@ -107,16 +159,18 @@ m_ResolvedPackages:
     - 2.0.1
     - 2.0.3
     - 2.0.4
+    - 2.0.5
     - 2.1.0-preview.3
     - 2.1.0-preview.5
     - 2.1.0-preview.6
     compatible:
     - 2.0.3
     - 2.0.4
+    - 2.0.5
     - 2.1.0-preview.3
     - 2.1.0-preview.5
     - 2.1.0-preview.6
-    verified: 2.0.4
+    verified: 2.0.5
   dependencies: []
   resolvedDependencies: []
   keywords:
@@ -300,11 +354,13 @@ m_ResolvedPackages:
     - 3.0.18
     - 3.0.20
     - 3.0.21
+    - 3.0.22
     compatible:
     - 3.0.18
     - 3.0.20
     - 3.0.21
-    verified: 3.0.21
+    - 3.0.22
+    verified: 3.0.22
   dependencies:
   - name: com.unity.ext.nunit
     version: 1.0.6
@@ -969,6 +1025,7 @@ m_ResolvedPackages:
     - 1.8.0
     - 1.8.1
     - 1.8.2
+    - 1.8.3
     compatible:
     - 1.6.4
     - 1.6.5
@@ -982,6 +1039,7 @@ m_ResolvedPackages:
     - 1.8.0
     - 1.8.1
     - 1.8.2
+    - 1.8.3
     verified: 1.6.5
   dependencies:
   - name: com.unity.modules.director
@@ -3189,10 +3247,12 @@ m_ResolvedPackages:
     - 1.2.1
     - 1.2.2
     - 1.2.3
+    - 1.2.4
     compatible:
     - 1.2.2
     - 1.2.3
-    verified: 1.2.3
+    - 1.2.4
+    verified: 1.2.4
   dependencies:
   - name: com.unity.test-framework
     version: 1.0.16

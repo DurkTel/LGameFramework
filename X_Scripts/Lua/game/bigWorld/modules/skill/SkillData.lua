@@ -1,3 +1,0 @@
-local SkillData = {}
-
-return SkillData

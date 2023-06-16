@@ -77,27 +77,27 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1576}
+      Script: {instanceID: 1578}
     - Class: 114
-      Script: {instanceID: 2268}
+      Script: {instanceID: 2270}
     - Class: 114
-      Script: {instanceID: 2740}
+      Script: {instanceID: 2742}
     - Class: 114
-      Script: {instanceID: 2946}
+      Script: {instanceID: 2948}
     - Class: 114
-      Script: {instanceID: 4372}
+      Script: {instanceID: 4376}
     - Class: 114
-      Script: {instanceID: 4538}
+      Script: {instanceID: 4542}
     - Class: 114
-      Script: {instanceID: 4648}
+      Script: {instanceID: 4652}
     - Class: 114
-      Script: {instanceID: 5416}
+      Script: {instanceID: 5420}
     - Class: 114
-      Script: {instanceID: 6182}
+      Script: {instanceID: 6186}
     - Class: 114
-      Script: {instanceID: 6554}
+      Script: {instanceID: 6558}
     - Class: 114
-      Script: {instanceID: 8346}
+      Script: {instanceID: 8352}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1136,4 +1136,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: E:/Android
+  playerPath: D:/UnityProject/LGameFramework//GradleProject

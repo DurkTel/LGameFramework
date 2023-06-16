@@ -1,3 +1,0 @@
-local RoleData = {}
-
-return RoleData

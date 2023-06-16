@@ -1,3 +1,0 @@
-local MonsterData = {}
-
-return MonsterData

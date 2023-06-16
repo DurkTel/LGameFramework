@@ -1,3 +1,0 @@
-local BigworldData = {}
-
-return BigworldData

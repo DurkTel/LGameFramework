@@ -1,4 +1,0 @@
-local CommonConfig = {}
-
-
-return CommonConfig
