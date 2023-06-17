@@ -5,11 +5,7 @@ using UnityEditor;
 using System.IO;
 using System;
 using System.Linq;
-using UnityEngine.Networking;
 using System.Text;
-using static UnityEngine.GraphicsBuffer;
-using static Build;
-using UnityEditor.Android;
 
 public class Build : EditorWindow
 {
@@ -174,62 +170,62 @@ public class Build : EditorWindow
     }
 
     #region 打包lua
-    private static void BuildLua(LBuildParameter buildParameter)
-    {
-        string project = BuildUtility.GetProjectPath(AssetDefine.s_LuaBuildTemp);
-        //先清空临时文件夹
-        if (AssetDatabase.IsValidFolder(project))
-            AssetDatabase.DeleteAsset(project);
+    //private static void BuildLua(LBuildParameter buildParameter)
+    //{
+    //    string project = BuildUtility.GetProjectPath(AssetDefine.s_LuaBuildTemp);
+    //    //先清空临时文件夹
+    //    if (AssetDatabase.IsValidFolder(project))
+    //        AssetDatabase.DeleteAsset(project);
 
-        AssetDatabase.Refresh();
+    //    AssetDatabase.Refresh();
 
-        AssetBundleBuild abb_luaCode = new AssetBundleBuild();
-        abb_luaCode.assetBundleName = s_outPutNameLua;
-        abb_luaCode.assetNames = new string[0];
-        abb_luaCode.addressableNames = new string[0];
+    //    AssetBundleBuild abb_luaCode = new AssetBundleBuild();
+    //    abb_luaCode.assetBundleName = s_outPutNameLua;
+    //    abb_luaCode.assetNames = new string[0];
+    //    abb_luaCode.addressableNames = new string[0];
 
-        string[] allLuas = Directory.GetFiles(AssetDefine.s_LuaPath, "*.lua", SearchOption.AllDirectories);
-        //lua文件夹
-        int sidx = AssetDefine.s_LuaPath.Length;
-        //项目文件夹Dev根目录
-        int psidx = Application.dataPath.Length - 6;
-        //要复制到的路径
-        string projectFolder = AssetDefine.s_LuaBuildTemp;
+    //    string[] allLuas = Directory.GetFiles(AssetDefine.s_LuaPath, "*.lua", SearchOption.AllDirectories);
+    //    //lua文件夹
+    //    int sidx = AssetDefine.s_LuaPath.Length;
+    //    //项目文件夹Dev根目录
+    //    int psidx = Application.dataPath.Length - 6;
+    //    //要复制到的路径
+    //    string projectFolder = AssetDefine.s_LuaBuildTemp;
 
-        for (int i = 0; i < allLuas.Length; i++)
-        {
-            //lua文件在lua文件夹的路径
-            string relative = allLuas[i].Substring(sidx);
-            //lua文件在lua临时文件夹的路径
-            string projectPath = Path.Combine(projectFolder, relative);
-            projectPath = projectPath.Replace(Path.GetExtension(projectPath), ".txt");
-            string dirPath = Path.GetDirectoryName(projectPath);
+    //    for (int i = 0; i < allLuas.Length; i++)
+    //    {
+    //        //lua文件在lua文件夹的路径
+    //        string relative = allLuas[i].Substring(sidx);
+    //        //lua文件在lua临时文件夹的路径
+    //        string projectPath = Path.Combine(projectFolder, relative);
+    //        projectPath = projectPath.Replace(Path.GetExtension(projectPath), ".txt");
+    //        string dirPath = Path.GetDirectoryName(projectPath);
 
-            if (!Directory.Exists(dirPath))
-                Directory.CreateDirectory(dirPath);
+    //        if (!Directory.Exists(dirPath))
+    //            Directory.CreateDirectory(dirPath);
 
-            FileUtil.CopyFileOrDirectory(allLuas[i], projectPath);
+    //        FileUtil.CopyFileOrDirectory(allLuas[i], projectPath);
 
-            //实际路径与加载路径名
-            string assetPath = projectPath.Substring(psidx).Replace("\\", "/");
-            string addressPath = projectPath.Substring(AssetDefine.s_LuaBuildTemp.Length).Replace("/", ".");
+    //        //实际路径与加载路径名
+    //        string assetPath = projectPath.Substring(psidx).Replace("\\", "/");
+    //        string addressPath = projectPath.Substring(AssetDefine.s_LuaBuildTemp.Length).Replace("/", ".");
 
-            ArrayUtility.Add<string>(ref abb_luaCode.assetNames, assetPath);
-            ArrayUtility.Add<string>(ref abb_luaCode.addressableNames, addressPath);
-        }
+    //        ArrayUtility.Add<string>(ref abb_luaCode.assetNames, assetPath);
+    //        ArrayUtility.Add<string>(ref abb_luaCode.addressableNames, addressPath);
+    //    }
 
-        AssetDatabase.Refresh();
+    //    AssetDatabase.Refresh();
 
-        BuildAssetBundleOptions options = BuildAssetBundleOptions.None |
-                                          BuildAssetBundleOptions.IgnoreTypeTreeChanges |
-                                          BuildAssetBundleOptions.DisableLoadAssetByFileNameWithExtension;
+    //    BuildAssetBundleOptions options = BuildAssetBundleOptions.None |
+    //                                      BuildAssetBundleOptions.IgnoreTypeTreeChanges |
+    //                                      BuildAssetBundleOptions.DisableLoadAssetByFileNameWithExtension;
 
-        if (BuildWriteInfo(new List<AssetBundleBuild>() { abb_luaCode }, buildParameter.buildOutPath, options, buildParameter.buildTarget, buildParameter.clearFolder, Path.GetFileNameWithoutExtension(s_outPutNameLua)))
-            Debug.Log("打包Lua成功~   ^^_");
+    //    if (BuildWriteInfo(new List<AssetBundleBuild>() { abb_luaCode }, buildParameter.buildOutPath, options, buildParameter.buildTarget, buildParameter.clearFolder, Path.GetFileNameWithoutExtension(s_outPutNameLua)))
+    //        Debug.Log("打包Lua成功~   ^^_");
 
-        AssetDatabase.DeleteAsset(project);
-        AssetDatabase.Refresh();
-    }
+    //    AssetDatabase.DeleteAsset(project);
+    //    AssetDatabase.Refresh();
+    //}
     #endregion
 
     #region 打包资源
@@ -379,47 +375,92 @@ public class Build : EditorWindow
     #endregion
 
     #region 打包Dll
-    private static void BuildDll(LBuildParameter buildParameter)
-    { 
-        //AssetBundleBuild abb = new AssetBundleBuild();
-        //abb.assetBundleName = s_outPutNameCSharp;
-        //abb.assetNames = new string[0];
-        //abb.addressableNames = new string[0];
+    //private static void BuildDll(LBuildParameter buildParameter)
+    //{
+    //    AssetBundleBuild abb = new AssetBundleBuild();
+    //    abb.assetBundleName = s_outPutNameCSharp;
+    //    abb.assetNames = new string[0];
+    //    abb.addressableNames = new string[0];
 
-        //PlayerSettings.SetScriptingBackend(BuildTargetGroup.Android, ScriptingImplementation.Mono2x);
-        //AssetDatabase.Refresh();
-        //EditorApplication.ExecuteMenuItem("XLua/Generate Code");
-        //AssetDatabase.Refresh();
+    //    PlayerSettings.SetScriptingBackend(BuildTargetGroup.Android, ScriptingImplementation.Mono2x);
+    //    AssetDatabase.Refresh();
+    //    EditorApplication.ExecuteMenuItem("XLua/Generate Code");
+    //    AssetDatabase.Refresh();
 
-        //string[] dllNames = new string[] { "Assembly-CSharp.dll" };
-        //string dllPath;
-        //foreach (string dll in dllNames)
-        //{
-        //    dllPath = Path.Combine(Application.dataPath, string.Format("../Library/ScriptAssemblies/{0}", dll));
+    //    string[] dllNames = new string[] { "Assembly-CSharp.dll" };
+    //    string dllPath;
+    //    foreach (string dll in dllNames)
+    //    {
+    //        dllPath = Path.Combine(Application.dataPath, string.Format("../Library/ScriptAssemblies/{0}", dll));
 
-        //    if (File.Exists(dllPath))
-        //    {
-        //        string projectPath = string.Format("Assets/{0}", dll.Replace(".dll", ".bytes"));
-        //        string targetPath = BuildUtility.GetFullPath(projectPath);
+    //        if (File.Exists(dllPath))
+    //        {
+    //            string projectPath = string.Format("Assets/{0}", dll.Replace(".dll", ".bytes"));
+    //            string targetPath = BuildUtility.GetFullPath(projectPath);
 
-        //        if (File.Exists(projectPath))
-        //            AssetDatabase.DeleteAsset(projectPath);
+    //            if (File.Exists(projectPath))
+    //                AssetDatabase.DeleteAsset(projectPath);
 
-        //        FileUtil.CopyFileOrDirectory(dllPath, targetPath);
+    //            FileUtil.CopyFileOrDirectory(dllPath, targetPath);
 
-        //        byte[] bytes = File.ReadAllBytes(dllPath);
+    //            byte[] bytes = File.ReadAllBytes(dllPath);
 
-        //        File.WriteAllBytes(targetPath, bytes);
-        //        ArrayUtility.Add<string>(ref abb.assetNames, projectPath);
-        //        ArrayUtility.Add<string>(ref abb.addressableNames, dll);
-        //    }
-        //}
+    //            File.WriteAllBytes(targetPath, bytes);
+    //            ArrayUtility.Add<string>(ref abb.assetNames, projectPath);
+    //            ArrayUtility.Add<string>(ref abb.addressableNames, dll);
+    //        }
+    //    }
 
-        //AssetDatabase.Refresh();
+    //    AssetDatabase.Refresh();
 
 
-        //if (BuildWriteInfo(new List<AssetBundleBuild>() { abb }, buildParameter.buildOutPath, BuildAssetBundleOptions.ChunkBasedCompression, buildParameter.buildTarget, buildParameter.clearFolder, Path.GetFileNameWithoutExtension(s_outPutNameCSharp)))
-        //    Debug.Log("打包Dll成功~  ^^_");
+    //    if (BuildWriteInfo(new List<AssetBundleBuild>() { abb }, buildParameter.buildOutPath, BuildAssetBundleOptions.ChunkBasedCompression, buildParameter.buildTarget, buildParameter.clearFolder, Path.GetFileNameWithoutExtension(s_outPutNameCSharp)))
+    //        Debug.Log("打包Dll成功~  ^^_");
+    //}
+    #endregion
+
+    #region 打包il2cpp
+    private static void BuildIl2cpp(LBuildParameter buildParameter)
+    {
+        AssetBundleBuild abb = new AssetBundleBuild();
+        abb.assetBundleName = s_outPutNameCSharp;
+        abb.assetNames = new string[0];
+        abb.addressableNames = new string[0];
+
+        PlayerSettings.SetScriptingBackend(BuildTargetGroup.Android, ScriptingImplementation.IL2CPP);
+        AssetDatabase.Refresh();
+
+        HybridCLR.Editor.Commands.CompileDllCommand.CompileDll(buildParameter.buildTarget);
+        AssetDatabase.Refresh();
+
+        foreach (var dll in LaunchPath.s_HotUpdateDllName)
+        {
+            string dllPath = Application.dataPath + "/../HybridCLRData/HotUpdateDlls/" + buildParameter.buildTarget.ToString() + "/" + dll;
+
+            if (File.Exists(dllPath))
+            {
+                string projectPath = string.Format("Assets/{0}", dll.Replace(".dll", ".bytes"));
+                string targetPath = BuildUtility.GetFullPath(projectPath);
+
+                if (File.Exists(projectPath))
+                    AssetDatabase.DeleteAsset(projectPath);
+
+                FileUtil.CopyFileOrDirectory(dllPath, targetPath);
+
+                byte[] bytes = File.ReadAllBytes(dllPath);
+
+                File.WriteAllBytes(targetPath, bytes);
+                ArrayUtility.Add<string>(ref abb.assetNames, projectPath);
+                ArrayUtility.Add<string>(ref abb.addressableNames, dll);
+                File.Delete(targetPath);
+            }
+        }
+
+        AssetDatabase.Refresh();
+
+        if (BuildWriteInfo(new List<AssetBundleBuild>() { abb }, buildParameter.buildOutPath, BuildAssetBundleOptions.ChunkBasedCompression, buildParameter.buildTarget, buildParameter.clearFolder, Path.GetFileNameWithoutExtension(s_outPutNameCSharp)))
+            Debug.Log("打包Dll成功~  ^^_");
+
     }
     #endregion
 
@@ -429,24 +470,24 @@ public class Build : EditorWindow
         string targetName = buildParameter.buildTarget.ToString();
         RefreshAssetsBundleManifest(Path.Combine(buildParameter.buildOutPath, targetName));
 
-        //AssetBundleBuild abb = new AssetBundleBuild();
-        //string projectPath = AssetManifest_AssetBundle.s_abPath;
-        //abb.assetBundleName = projectPath.Substring(7);
-        //abb.assetNames = new string[] { projectPath };
-        //abb.addressableNames = new string[] { Path.GetFileNameWithoutExtension(projectPath) };
+        AssetBundleBuild abb = new AssetBundleBuild();
+        string projectPath = AssetManifest_AssetBundle.s_abPath;
+        abb.assetBundleName = projectPath.Substring(7);
+        abb.assetNames = new string[] { projectPath };
+        abb.addressableNames = new string[] { Path.GetFileNameWithoutExtension(projectPath) };
 
-        //if (BuildWriteInfo(new List<AssetBundleBuild>() { abb }, buildParameter.buildOutPath, BuildAssetBundleOptions.None | BuildAssetBundleOptions.ForceRebuildAssetBundle, buildParameter.buildTarget, buildParameter.clearFolder))
-        //    Debug.Log("打包资源清单成功~  ^^_");
+        if (BuildWriteInfo(new List<AssetBundleBuild>() { abb }, buildParameter.buildOutPath, BuildAssetBundleOptions.None | BuildAssetBundleOptions.ForceRebuildAssetBundle, buildParameter.buildTarget, buildParameter.clearFolder))
+            Debug.Log("打包资源清单成功~  ^^_");
 
-        //AssetDatabase.Refresh();
+        AssetDatabase.Refresh();
 
-        //string path1 = Path.Combine(buildParameter.buildOutPath, targetName, targetName);
-        //if (File.Exists(path1))
-        //    File.Delete(path1);
+        string path1 = Path.Combine(buildParameter.buildOutPath, targetName, targetName);
+        if (File.Exists(path1))
+            File.Delete(path1);
 
-        //string path2 = Path.Combine(buildParameter.buildOutPath, targetName, targetName) + ".manifest";
-        //if (File.Exists(path2))
-        //    File.Delete(path2);
+        string path2 = Path.Combine(buildParameter.buildOutPath, targetName, targetName) + ".manifest";
+        if (File.Exists(path2))
+            File.Delete(path2);
 
 
         AssetDatabase.Refresh();
@@ -561,8 +602,6 @@ public class Build : EditorWindow
 
         foreach (var child in dir)
         {
-            //if (Path.GetFileNameWithoutExtension(child) == "002") //资源直接用资源清单的md5 不必每个记录
-            //    continue;
 
             string[] allFiles = Directory.GetFiles(child, "*", SearchOption.AllDirectories);
 
@@ -582,75 +621,4 @@ public class Build : EditorWindow
     }
     #endregion
 
-    #region 上传资源
-    public IEnumerator UpLoadAsset(string path)
-    {
-        byte[] data = File.ReadAllBytes(path);
-        using (UnityWebRequest www = UnityWebRequest.Put(new Uri(AssetDefine.s_NetServerPath + path), data))
-        {
-
-            //www.SendWebRequest();
-
-            //while (www.uploadProgress < 1)
-            //{
-            //    Debug.Log("上传进度：" + www.uploadProgress);
-
-            //    yield return null;
-            //}
-            yield return www.SendWebRequest();
-
-            if (www.result != UnityWebRequest.Result.Success)
-                Debug.LogError("上传失败" + www.result);
-            else
-                Debug.Log("上传成功~  ^^_");
-        }
-        
-    }
-
-    #endregion
-
-    #region 打包il2cpp
-    private static void BuildIl2cpp(LBuildParameter buildParameter)
-    {
-        AssetBundleBuild abb = new AssetBundleBuild();
-        abb.assetBundleName = s_outPutNameCSharp;
-        abb.assetNames = new string[0];
-        abb.addressableNames = new string[0];
-
-        PlayerSettings.SetScriptingBackend(BuildTargetGroup.Android, ScriptingImplementation.IL2CPP);
-        AssetDatabase.Refresh();
-
-        HybridCLR.Editor.Commands.CompileDllCommand.CompileDll(buildParameter.buildTarget);
-        AssetDatabase.Refresh();
-
-        foreach (var dll in LaunchDefine.s_HotUpdateDllName)
-        {
-            string dllPath = Application.dataPath + "/../HybridCLRData/HotUpdateDlls/" + buildParameter.buildTarget.ToString() + "/" + dll;
-
-            if (File.Exists(dllPath))
-            {
-                string projectPath = string.Format("Assets/{0}", dll.Replace(".dll", ".bytes"));
-                string targetPath = BuildUtility.GetFullPath(projectPath);
-
-                if (File.Exists(projectPath))
-                    AssetDatabase.DeleteAsset(projectPath);
-
-                FileUtil.CopyFileOrDirectory(dllPath, targetPath);
-
-                byte[] bytes = File.ReadAllBytes(dllPath);
-
-                File.WriteAllBytes(targetPath, bytes);
-                ArrayUtility.Add<string>(ref abb.assetNames, projectPath);
-                ArrayUtility.Add<string>(ref abb.addressableNames, dll);
-                File.Delete(targetPath);
-            }
-        }
-
-        AssetDatabase.Refresh();
-
-        if (BuildWriteInfo(new List<AssetBundleBuild>() { abb }, buildParameter.buildOutPath, BuildAssetBundleOptions.ChunkBasedCompression, buildParameter.buildTarget, buildParameter.clearFolder, Path.GetFileNameWithoutExtension(s_outPutNameCSharp)))
-            Debug.Log("打包Dll成功~  ^^_");
-
-    }
-    #endregion
 }

@@ -5,8 +5,8 @@ namespace hybridclr
 	const char* g_placeHolderAssemblies[] =
 	{
 		//!!!{{PLACE_HOLDER
-		"HotUpdate",
-		"Assembly-CSharp",
+		"Assembly-GameCore",
+		"Assembly-GameLogic",
 
 		//!!!}}PLACE_HOLDER
 		nullptr,

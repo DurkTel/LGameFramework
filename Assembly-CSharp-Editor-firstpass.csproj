@@ -826,9 +826,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="HotUpdate.csproj">
-      <Project>{366D9F34-BDBE-7DBF-EE7B-DCD2CA79EB99}</Project>
-      <Name>HotUpdate</Name>
+    <ProjectReference Include="Assembly-GameCore.csproj">
+      <Project>{E0335D1D-7C57-5C1B-03BD-4D92E59A2749}</Project>
+      <Name>Assembly-GameCore</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

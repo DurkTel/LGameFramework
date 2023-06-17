@@ -30,7 +30,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	public void RefMethods()
 	{
 		// object System.Activator.CreateInstance<object>()
-		// object[] UnityEngine.AssetBundle.LoadAllAssets<object>()
 		// object UnityEngine.AssetBundle.LoadAsset<object>(string)
 		// object UnityEngine.GameObject.AddComponent<object>()
 	}

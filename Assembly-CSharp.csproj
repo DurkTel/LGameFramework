@@ -56,11 +56,12 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AOT\ConsoleToScreen.cs" />
+    <Compile Include="Assets\Scripts\ConsoleToScreen.cs" />
     <Compile Include="Assets\HybridCLRData\Generated\AOTGenericReferences.cs" />
-    <Compile Include="Assets\Scripts\AOT\Launch\LaunchDefine.cs" />
-    <Compile Include="Assets\Scripts\AOT\Launch\LaunchUpdate.cs" />
-    <Compile Include="Assets\Scripts\AOT\Launch\Launcher.cs" />
+    <Compile Include="Assets\Scripts\Launch\LaunchPath.cs" />
+    <Compile Include="Assets\Scripts\Launch\LaunchUpdate.cs" />
+    <Compile Include="Assets\Scripts\Launch\Launcher.cs" />
+    <Compile Include="Assets\Scripts\Launch\AssetFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -70,7 +71,6 @@
     <None Include="Assets\ArtModules\Effect\darkHitEffect\darkHit02\darkHit02_pointOffsize.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-    <None Include="Assets\StreamingAssets\StandaloneWindows64\file.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\Texts.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
@@ -88,7 +88,6 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
-    <None Include="Assets\StreamingAssets\StandaloneWindows64\version.txt" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
@@ -816,9 +815,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="HotUpdate.csproj">
-      <Project>{366D9F34-BDBE-7DBF-EE7B-DCD2CA79EB99}</Project>
-      <Name>HotUpdate</Name>
+    <ProjectReference Include="Assembly-GameCore.csproj">
+      <Project>{E0335D1D-7C57-5C1B-03BD-4D92E59A2749}</Project>
+      <Name>Assembly-GameCore</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

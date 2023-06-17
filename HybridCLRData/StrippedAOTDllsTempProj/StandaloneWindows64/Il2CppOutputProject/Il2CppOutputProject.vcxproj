@@ -35,6 +35,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Assembly-CSharp.cpp">
+    </ClCompile>
     <ClCompile Include="Source\GenericMethods.cpp">
     </ClCompile>
     <ClCompile Include="Source\GenericMethods__1.cpp">
@@ -42,8 +44,6 @@
     <ClCompile Include="Source\GenericMethods__10.cpp">
     </ClCompile>
     <ClCompile Include="Source\GenericMethods__11.cpp">
-    </ClCompile>
-    <ClCompile Include="Source\GenericMethods__12.cpp">
     </ClCompile>
     <ClCompile Include="Source\GenericMethods__2.cpp">
     </ClCompile>
@@ -147,8 +147,6 @@
     </ClCompile>
     <ClCompile Include="Source\Generics__47.cpp">
     </ClCompile>
-    <ClCompile Include="Source\Generics__48.cpp">
-    </ClCompile>
     <ClCompile Include="Source\Generics__5.cpp">
     </ClCompile>
     <ClCompile Include="Source\Generics__6.cpp">
@@ -166,8 +164,6 @@
     <ClCompile Include="Source\Il2CppCCalculateFieldValues1.cpp">
     </ClCompile>
     <ClCompile Include="Source\Il2CppCCalculateTypeValues.cpp">
-    </ClCompile>
-    <ClCompile Include="Source\Il2CppCCalculateTypeValues1.cpp">
     </ClCompile>
     <ClCompile Include="Source\Il2CppCCFieldValuesTable.cpp">
     </ClCompile>
@@ -218,8 +214,6 @@
     <ClCompile Include="Source\mscorlib__22.cpp">
     </ClCompile>
     <ClCompile Include="Source\mscorlib__23.cpp">
-    </ClCompile>
-    <ClCompile Include="Source\mscorlib__24.cpp">
     </ClCompile>
     <ClCompile Include="Source\mscorlib__3.cpp">
     </ClCompile>
@@ -414,6 +408,8 @@
     <ClCompile Include="Source\UnresolvedVirtualCallStubs.cpp">
     </ClCompile>
     <ClCompile Include="Source\__Generated.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Assembly-CSharp_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\HybridCLR.Runtime_CodeGen.c">
     </ClCompile>

@@ -76,7 +76,7 @@
     <Compile Include="Assets\Scripts\HotUpdate\AssetManagement\ResourcesAssetLoader.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Scripts\HotUpdate\HotUpdate.asmdef" />
+    <None Include="Assets\Scripts\HotUpdate\Assembly-GameCore.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
