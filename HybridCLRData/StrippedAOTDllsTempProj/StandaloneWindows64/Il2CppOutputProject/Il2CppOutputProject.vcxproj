@@ -37,6 +37,8 @@
   <ItemGroup>
     <ClCompile Include="Source\Assembly-CSharp.cpp">
     </ClCompile>
+    <ClCompile Include="Source\Assembly-GameBase.cpp">
+    </ClCompile>
     <ClCompile Include="Source\GenericMethods.cpp">
     </ClCompile>
     <ClCompile Include="Source\GenericMethods__1.cpp">
@@ -164,6 +166,8 @@
     <ClCompile Include="Source\Il2CppCCalculateFieldValues1.cpp">
     </ClCompile>
     <ClCompile Include="Source\Il2CppCCalculateTypeValues.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Il2CppCCalculateTypeValues1.cpp">
     </ClCompile>
     <ClCompile Include="Source\Il2CppCCFieldValuesTable.cpp">
     </ClCompile>
@@ -410,6 +414,8 @@
     <ClCompile Include="Source\__Generated.cpp">
     </ClCompile>
     <ClCompile Include="Source\Assembly-CSharp_CodeGen.c">
+    </ClCompile>
+    <ClCompile Include="Source\Assembly-GameBase_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\HybridCLR.Runtime_CodeGen.c">
     </ClCompile>
@@ -4339,7 +4345,7 @@
     <IntDir>$(SolutionDir)\build\obj\il2cppOutputProject\$(BuilderArchitecture)\$(Configuration)\</IntDir>
     <NMakeOutput>$(OutDir)GameAssembly.dll</NMakeOutput>
     <IncludePath>$(VC_IncludePath);$(UniversalCRT_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)\IL2CPP\libil2cpp;$(ProjectDir)\IL2CPP\libil2cpp\pch;$(ProjectDir)\IL2CPP\external\bdwgc\include</IncludePath>
-    <NMakeBuildCommandLine>"$(ProjectDir)\IL2CPP/build/deploy/il2cpp.exe" --compile-cpp --platform=WindowsDesktop --outputpath="GameAssembly.dll" --libil2cpp-static --baselib-directory="D:/SoftWare/UnityEditor/2021.3.23f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_il2cpp" --dotnetprofile=unityaot-win32 --profiler-report --profiler-output-file="D:/UnityProject/LGameFramework/Library/Bee/artifacts/il2cpp_conv_3j54.traceevents" --print-command-line --architecture=$(BuilderArchitecture) --configuration=$(BuilderConfiguration) --outputpath="$(NMakeOutput)" --data-folder="$(OutDir)\" --cachedirectory="$(IntDir)\" --generatedcppdir="$(ProjectDir)\Source" $(Il2CppDebuggerFlags) --verbose</NMakeBuildCommandLine>
+    <NMakeBuildCommandLine>"$(ProjectDir)\IL2CPP/build/deploy/il2cpp.exe" --compile-cpp --platform=WindowsDesktop --outputpath="GameAssembly.dll" --libil2cpp-static --baselib-directory="D:/Software/UnityEditor/2021.3.23f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_il2cpp" --dotnetprofile=unityaot-win32 --profiler-report --profiler-output-file="D:/UnityProject/LGameFramework/Library/Bee/artifacts/il2cpp_conv_3j54.traceevents" --print-command-line --architecture=$(BuilderArchitecture) --configuration=$(BuilderConfiguration) --outputpath="$(NMakeOutput)" --data-folder="$(OutDir)\" --cachedirectory="$(IntDir)\" --generatedcppdir="$(ProjectDir)\Source" $(Il2CppDebuggerFlags) --verbose</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>$(NMakeBuildCommandLine) -forcerebuild</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>del "$(NMakeOutput)"</NMakeCleanCommandLine>
   </PropertyGroup>

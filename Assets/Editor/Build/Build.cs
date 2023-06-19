@@ -595,7 +595,11 @@ public class Build : EditorWindow
 
         string name = assetManifestName;
         string md5 = BuildUtility.GetMD5(assetManifestPath);
-        file_str.Append(string.Format("{0}|{1}\n", name, md5));
+        //file_str.Append(string.Format("{0}|{1}\n", name, md5));
+        List<AssetFile> files = new List<AssetFile>
+        {
+            new AssetFile() { path = name, md5 = md5 }
+        };
 
 
         string[] dir = Directory.GetDirectories(path);
@@ -610,11 +614,15 @@ public class Build : EditorWindow
                 name = file.Substring(path.Length + 1);
                 name = name.Replace("\\", "/");
                 md5 = BuildUtility.GetMD5(file);
-                file_str.Append(string.Format("{0}|{1}\n", name, md5));
+                files.Add(new AssetFile() { path = name, md5 = md5 });
+
+                //file_str.Append(string.Format("{0}|{1}\n", name, md5));
             }
         }
 
-        File.WriteAllText(filePath, file_str.ToString());
+        string str = LJsonUtility.ToJason(files);
+        //File.WriteAllText(filePath, file_str.ToString());
+        File.WriteAllText(filePath, str);
         File.WriteAllText(versionPath, "version|1.00");
 
         AssetDatabase.Refresh();

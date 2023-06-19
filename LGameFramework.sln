@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-GameCore", "Assemb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{C40673CF-0B03-1654-08BC-658D40EFAD33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-GameBase", "Assembly-GameBase.csproj", "{E3881B5C-8B66-CD92-1CD0-A75948BBF486}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-GameLogic", "Assembly-GameLogic.csproj", "{517359A3-72AF-E633-8DB1-FA87B4FEC7C3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{593C060F-91FD-D68F-B8D7-AAEDE40F00C0}"
@@ -25,6 +27,10 @@ Global
 		{C40673CF-0B03-1654-08BC-658D40EFAD33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C40673CF-0B03-1654-08BC-658D40EFAD33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C40673CF-0B03-1654-08BC-658D40EFAD33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3881B5C-8B66-CD92-1CD0-A75948BBF486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3881B5C-8B66-CD92-1CD0-A75948BBF486}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3881B5C-8B66-CD92-1CD0-A75948BBF486}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3881B5C-8B66-CD92-1CD0-A75948BBF486}.Release|Any CPU.Build.0 = Release|Any CPU
 		{517359A3-72AF-E633-8DB1-FA87B4FEC7C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{517359A3-72AF-E633-8DB1-FA87B4FEC7C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{517359A3-72AF-E633-8DB1-FA87B4FEC7C3}.Release|Any CPU.ActiveCfg = Release|Any CPU

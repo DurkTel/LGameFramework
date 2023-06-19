@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 3740270033
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c8471cc5719a6cbff41e6427be776a7d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f267fd2d8bcb1179236b6179ac5313bc
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/ArtModules/GUI/Role/Images/Single/create_role_bg_5.png
+Dependencies: []

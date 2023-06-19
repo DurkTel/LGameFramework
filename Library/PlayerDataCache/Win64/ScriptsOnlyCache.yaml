@@ -70,9 +70,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4656}
     - Class: 114
-      Script: {instanceID: 5432}
+      Script: {instanceID: 5434}
     - Class: 114
-      Script: {instanceID: 8362}
+      Script: {instanceID: 8366}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -780,6 +780,12 @@ ScriptsOnlyBuild:
     className: UnityOnMouseUpAsButtonMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-GameLogic.dll
+    namespaceName: 
+    className: GameTest
+  - hash:
+      serializedVersion: 2
       Hash: e09e8bebc0fcd32bb8af1287a6b44816
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -1084,12 +1090,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-GameLogic.dll
-    namespaceName: 
-    className: GameTest
   platform: 19
   scenePathNames:
   - Assets/Scenes/main.unity

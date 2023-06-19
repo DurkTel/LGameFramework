@@ -1040,6 +1040,24 @@ struct SelectObservable_2_t4ADEB0A66E1B189DA58E41F39A4DDCD77901A14B  : public Ru
 	Func_2_tACBF5A1656250800CE861707354491F0611F6624* ___m_Filter_1;
 };
 
+// LJsonUtility/Serialization`1<System.Object>
+struct Serialization_1_t3368B793F64F9ACC7F84FA0E87CCFA70B660C773  : public RuntimeObject
+{
+	// System.Collections.Generic.List`1<T> LJsonUtility/Serialization`1::m_Target
+	List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ___m_Target_0;
+};
+
+// LJsonUtility/Serialization`2<System.Object,System.Object>
+struct Serialization_2_tE647C5715134F093EEAC99A12AD5D9838F1A9D29  : public RuntimeObject
+{
+	// System.Collections.Generic.List`1<T> LJsonUtility/Serialization`2::m_Keys
+	List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ___m_Keys_0;
+	// System.Collections.Generic.List`1<V> LJsonUtility/Serialization`2::m_Values
+	List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ___m_Values_1;
+	// System.Collections.Generic.Dictionary`2<T,V> LJsonUtility/Serialization`2::m_Target
+	Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* ___m_Target_2;
+};
+
 // UnityEngine.InputSystem.Utilities.TakeNObservable`1<System.Object>
 struct TakeNObservable_1_tF45527F7BBA0251B85E07FC49CB4ECD0194717C4  : public RuntimeObject
 {
@@ -1138,6 +1156,11 @@ struct JitHelpers_t15439654973DBC6512239BD04D2E0A3E0EDCCE62  : public RuntimeObj
 
 // UnityEngine.JsonUtility
 struct JsonUtility_t731013D97E03B7EDAE6186D6D6826A53B85F7197  : public RuntimeObject
+{
+};
+
+// LJsonUtility
+struct LJsonUtility_t5D300386F8E0FC17ABABFED257A98ECF1EC28DB7  : public RuntimeObject
 {
 };
 
@@ -8205,6 +8228,14 @@ struct List_1_t6115BBE78FE9310B180A2027321DF46F2A06AC95_StaticFields
 
 // UnityEngine.InputSystem.LowLevel.SelectObservable`2<System.Object,System.Object>
 
+// LJsonUtility/Serialization`1<System.Object>
+
+// LJsonUtility/Serialization`1<System.Object>
+
+// LJsonUtility/Serialization`2<System.Object,System.Object>
+
+// LJsonUtility/Serialization`2<System.Object,System.Object>
+
 // UnityEngine.InputSystem.Utilities.TakeNObservable`1<System.Object>
 
 // UnityEngine.InputSystem.Utilities.TakeNObservable`1<System.Object>
@@ -8293,6 +8324,10 @@ struct InputSystem_t4120CA4FE7DCFD56AF9391933FC3F1F485350164_StaticFields
 // UnityEngine.JsonUtility
 
 // UnityEngine.JsonUtility
+
+// LJsonUtility
+
+// LJsonUtility
 
 // System.Threading.LazyInitializer
 
@@ -20577,6 +20612,73 @@ IL_0019:
 	{
 		Data_tE3251F7D0B2D45AB9D13E3019F828403D96DB059 L_4 = V_0;
 		return L_4;
+	}
+}
+// T LJsonUtility::FromJson<System.Object>(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LJsonUtility_FromJson_TisRuntimeObject_m0862EC34BCC7EAEF4D2D8918374513330860EC51_gshared (String_t* ___0_json, const RuntimeMethod* method) 
+{
+	{
+		// return JsonUtility.FromJson<T>(json);
+		String_t* L_0 = ___0_json;
+		RuntimeObject* L_1;
+		L_1 = ((  RuntimeObject* (*) (String_t*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(L_0, il2cpp_rgctx_method(method->rgctx_data, 0));
+		return L_1;
+	}
+}
+// System.Collections.Generic.Dictionary`2<T,V> LJsonUtility::FromJsonToDictionary<System.Object,System.Object>(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* LJsonUtility_FromJsonToDictionary_TisRuntimeObject_TisRuntimeObject_mF29B5B3E4D43C8859F81C7A2FA2656658C5A8AF3_gshared (String_t* ___0_json, const RuntimeMethod* method) 
+{
+	{
+		// return JsonUtility.FromJson<Serialization<T, V>>(json).Reduction();
+		String_t* L_0 = ___0_json;
+		Serialization_2_tE647C5715134F093EEAC99A12AD5D9838F1A9D29* L_1;
+		L_1 = ((  Serialization_2_tE647C5715134F093EEAC99A12AD5D9838F1A9D29* (*) (String_t*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(L_0, il2cpp_rgctx_method(method->rgctx_data, 0));
+		NullCheck(L_1);
+		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_2;
+		L_2 = ((  Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* (*) (Serialization_2_tE647C5715134F093EEAC99A12AD5D9838F1A9D29*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 2)))(L_1, il2cpp_rgctx_method(method->rgctx_data, 2));
+		return L_2;
+	}
+}
+// System.Collections.Generic.List`1<T> LJsonUtility::FromJsonToList<System.Object>(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* LJsonUtility_FromJsonToList_TisRuntimeObject_m91C1F563F068947AB3D83A86A1ACB2C4FD5E69C0_gshared (String_t* ___0_json, const RuntimeMethod* method) 
+{
+	{
+		// return JsonUtility.FromJson<Serialization<T>>(json).Reduction();
+		String_t* L_0 = ___0_json;
+		Serialization_1_t3368B793F64F9ACC7F84FA0E87CCFA70B660C773* L_1;
+		L_1 = ((  Serialization_1_t3368B793F64F9ACC7F84FA0E87CCFA70B660C773* (*) (String_t*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(L_0, il2cpp_rgctx_method(method->rgctx_data, 0));
+		NullCheck(L_1);
+		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_2;
+		L_2 = ((  List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* (*) (Serialization_1_t3368B793F64F9ACC7F84FA0E87CCFA70B660C773*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 2)))(L_1, il2cpp_rgctx_method(method->rgctx_data, 2));
+		return L_2;
+	}
+}
+// System.String LJsonUtility::ToJason<System.Object>(System.Collections.Generic.List`1<T>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* LJsonUtility_ToJason_TisRuntimeObject_mA6D4278A53AF0B2541F5B22A815435BBFA798902_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ___0_list, const RuntimeMethod* method) 
+{
+	{
+		// return JsonUtility.ToJson(new Serialization<T>(list));
+		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_0 = ___0_list;
+		Serialization_1_t3368B793F64F9ACC7F84FA0E87CCFA70B660C773* L_1 = (Serialization_1_t3368B793F64F9ACC7F84FA0E87CCFA70B660C773*)il2cpp_codegen_object_new(il2cpp_rgctx_data(method->rgctx_data, 0));
+		NullCheck(L_1);
+		((  void (*) (Serialization_1_t3368B793F64F9ACC7F84FA0E87CCFA70B660C773*, List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(L_1, L_0, il2cpp_rgctx_method(method->rgctx_data, 1));
+		String_t* L_2;
+		L_2 = JsonUtility_ToJson_m28CC6843B9D3723D88AD13EA3829B71FDE7826BA((RuntimeObject*)L_1, NULL);
+		return L_2;
+	}
+}
+// System.String LJsonUtility::ToJason<System.Object,System.Object>(System.Collections.Generic.Dictionary`2<T,V>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* LJsonUtility_ToJason_TisRuntimeObject_TisRuntimeObject_mFED0816F35CA87BE53936E30F1692DFC6DDF7D74_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* ___0_dictionary, const RuntimeMethod* method) 
+{
+	{
+		// return JsonUtility.ToJson(new Serialization<T, V>(dictionary));
+		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_0 = ___0_dictionary;
+		Serialization_2_tE647C5715134F093EEAC99A12AD5D9838F1A9D29* L_1 = (Serialization_2_tE647C5715134F093EEAC99A12AD5D9838F1A9D29*)il2cpp_codegen_object_new(il2cpp_rgctx_data(method->rgctx_data, 0));
+		NullCheck(L_1);
+		((  void (*) (Serialization_2_tE647C5715134F093EEAC99A12AD5D9838F1A9D29*, Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(L_1, L_0, il2cpp_rgctx_method(method->rgctx_data, 1));
+		String_t* L_2;
+		L_2 = JsonUtility_ToJson_m28CC6843B9D3723D88AD13EA3829B71FDE7826BA((RuntimeObject*)L_1, NULL);
+		return L_2;
 	}
 }
 // System.Void UnityEngine.UI.LayoutGroup::SetProperty<System.Boolean>(T&,T)
