@@ -167,8 +167,6 @@
     </ClCompile>
     <ClCompile Include="Source\Il2CppCCalculateTypeValues.cpp">
     </ClCompile>
-    <ClCompile Include="Source\Il2CppCCalculateTypeValues1.cpp">
-    </ClCompile>
     <ClCompile Include="Source\Il2CppCCFieldValuesTable.cpp">
     </ClCompile>
     <ClCompile Include="Source\Il2CppCCTypeValuesTable.cpp">

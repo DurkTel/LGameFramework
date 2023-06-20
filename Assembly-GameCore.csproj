@@ -58,21 +58,15 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\HotUpdate\GameCore\GameEntry.cs" />
     <Compile Include="Assets\Scripts\HotUpdate\GameCore\AssetManagement\BundleAssetLoader.cs" />
-    <Compile Include="Assets\Scripts\HotUpdate\GameCore\Singleton\SingletonMono.cs" />
     <Compile Include="Assets\Scripts\HotUpdate\GameCore\AssetManagement\AssetManifest_Editor.cs" />
     <Compile Include="Assets\Scripts\HotUpdate\GameCore\AssetManagement\AssetDefine.cs" />
     <Compile Include="Assets\Scripts\HotUpdate\GameCore\AssetManagement\AssetUtility.cs" />
-    <Compile Include="Assets\Scripts\HotUpdate\GameCore\Utility\MobileUtility.cs" />
     <Compile Include="Assets\Scripts\HotUpdate\GameCore\AssetManagement\AssetLoader.cs" />
-    <Compile Include="Assets\Scripts\HotUpdate\GameCore\Singleton\SingletonMonoAuto.cs" />
     <Compile Include="Assets\Scripts\HotUpdate\GameCore\AssetManagement\AssetManager.cs" />
     <Compile Include="Assets\Scripts\HotUpdate\GameCore\AssetManagement\EditorAssetLoader.cs" />
     <Compile Include="Assets\Scripts\HotUpdate\GameCore\AssetManagement\AssetManifest_AssetBundle.cs" />
     <Compile Include="Assets\Scripts\HotUpdate\GameCore\AssetManagement\AssetBundleManager.cs" />
-    <Compile Include="Assets\Scripts\HotUpdate\GameCore\Singleton\SingletonBase.cs" />
     <Compile Include="Assets\Scripts\HotUpdate\GameCore\AssetManagement\AssetCache.cs" />
-    <Compile Include="Assets\Scripts\HotUpdate\GameCore\Utility\DictionaryEx.cs" />
-    <Compile Include="Assets\Scripts\HotUpdate\GameCore\Utility\TimerManager.cs" />
     <Compile Include="Assets\Scripts\HotUpdate\GameCore\AssetManagement\ResourcesAssetLoader.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -771,6 +765,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-GameBase.csproj">
+      <Project>{E3881B5C-8B66-CD92-1CD0-A75948BBF486}</Project>
+      <Name>Assembly-GameBase</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

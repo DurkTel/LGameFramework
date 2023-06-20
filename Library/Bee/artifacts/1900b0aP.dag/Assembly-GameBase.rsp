@@ -301,6 +301,13 @@
 -r:"Library/Bee/artifacts/1900b0aP.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/AOT/GameBase/AssetFile.cs"
 "Assets/Scripts/AOT/GameBase/Expansion/LJsonUtility.cs"
+"Assets/Scripts/AOT/GameBase/Expansion/Utility.cs"
+"Assets/Scripts/AOT/GameBase/Singleton/SingletonBase.cs"
+"Assets/Scripts/AOT/GameBase/Singleton/SingletonMono.cs"
+"Assets/Scripts/AOT/GameBase/Singleton/SingletonMonoAuto.cs"
+"Assets/Scripts/AOT/GameBase/Utility/DictionaryEx.cs"
+"Assets/Scripts/AOT/GameBase/Utility/MobileUtility.cs"
+"Assets/Scripts/AOT/GameBase/Utility/TimerManager.cs"
 -langversion:9.0
 
 /deterministic

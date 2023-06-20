@@ -595,10 +595,11 @@ public class Build : EditorWindow
 
         string name = assetManifestName;
         string md5 = BuildUtility.GetMD5(assetManifestPath);
+        int size = Utility.GetFileSize(assetManifestPath);
         //file_str.Append(string.Format("{0}|{1}\n", name, md5));
         List<AssetFile> files = new List<AssetFile>
         {
-            new AssetFile() { path = name, md5 = md5 }
+            new AssetFile() { path = name, md5 = md5, size = size }
         };
 
 
@@ -614,7 +615,9 @@ public class Build : EditorWindow
                 name = file.Substring(path.Length + 1);
                 name = name.Replace("\\", "/");
                 md5 = BuildUtility.GetMD5(file);
-                files.Add(new AssetFile() { path = name, md5 = md5 });
+                size = Utility.GetFileSize(file);
+
+                files.Add(new AssetFile() { path = name, md5 = md5, size = size });
 
                 //file_str.Append(string.Format("{0}|{1}\n", name, md5));
             }

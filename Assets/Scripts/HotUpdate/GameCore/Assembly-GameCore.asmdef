@@ -2,7 +2,8 @@
     "name": "Assembly-GameCore",
     "rootNamespace": "GameCore",
     "references": [
-        "GUID:75469ad4d38634e559750d17036d5f7c"
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:3072bfba8acc8ff4ca4c09cf933bdd1e"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

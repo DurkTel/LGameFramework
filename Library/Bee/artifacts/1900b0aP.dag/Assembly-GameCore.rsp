@@ -298,6 +298,7 @@
 -r:"D:/Software/UnityEditor/2021.3.23f1c1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Xml.dll"
 -r:"D:/Software/UnityEditor/2021.3.23f1c1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Xml.Linq.dll"
 -r:"D:/UnityProject/LGameFramework/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/Assembly-GameBase.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.InputSystem.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/HotUpdate/GameCore/AssetManagement/AssetBundleManager.cs"
@@ -312,12 +313,6 @@
 "Assets/Scripts/HotUpdate/GameCore/AssetManagement/EditorAssetLoader.cs"
 "Assets/Scripts/HotUpdate/GameCore/AssetManagement/ResourcesAssetLoader.cs"
 "Assets/Scripts/HotUpdate/GameCore/GameEntry.cs"
-"Assets/Scripts/HotUpdate/GameCore/Singleton/SingletonBase.cs"
-"Assets/Scripts/HotUpdate/GameCore/Singleton/SingletonMono.cs"
-"Assets/Scripts/HotUpdate/GameCore/Singleton/SingletonMonoAuto.cs"
-"Assets/Scripts/HotUpdate/GameCore/Utility/DictionaryEx.cs"
-"Assets/Scripts/HotUpdate/GameCore/Utility/MobileUtility.cs"
-"Assets/Scripts/HotUpdate/GameCore/Utility/TimerManager.cs"
 -langversion:9.0
 
 /deterministic

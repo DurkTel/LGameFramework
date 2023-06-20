@@ -104,6 +104,12 @@ struct InvokerFuncInvoker4<R, T1*, T2*, T3, T4>
 	}
 };
 
+// System.IO.Enumeration.FileSystemEnumerable`1/DelegateEnumerator<System.IO.DirectoryInfo>
+struct DelegateEnumerator_t2D23B8A53B3E35F236A1DC1F2F96F4262EF7B79A;
+// System.IO.Enumeration.FileSystemEnumerable`1/DelegateEnumerator<System.IO.FileInfo>
+struct DelegateEnumerator_t697D581CD85A006B07B85D57212DFBBC2E8BA51F;
+// System.IO.Enumeration.FileSystemEnumerable`1/DelegateEnumerator<System.IO.FileSystemInfo>
+struct DelegateEnumerator_tD4C21B09320116235EC77E0F441A2911451B2C50;
 // System.IO.Enumeration.FileSystemEnumerable`1/DelegateEnumerator<System.Object>
 struct DelegateEnumerator_t03CC726F1198053E252AFEE23D3871C1435B4970;
 // System.IO.Enumeration.FileSystemEnumerable`1/DelegateEnumerator<System.String>
@@ -114,18 +120,42 @@ struct Dictionary_2_t9FA6D82CAFC18769F7515BB51D1C56DAE09381C3;
 struct Dictionary_2_t87EDE08B2E48F793A22DE50D6B3CC2E7EBB2DB54;
 // System.Collections.Generic.Dictionary`2<System.String,System.Globalization.CultureInfo>
 struct Dictionary_2_tE1603CE612C16451D1E56FF4D4859D4FE4087C28;
+// System.IO.Enumeration.FileSystemEnumerable`1<System.IO.DirectoryInfo>
+struct FileSystemEnumerable_1_t9C950A0D8C8B2EB9B11B70F470990A99D009A1FB;
+// System.IO.Enumeration.FileSystemEnumerable`1<System.IO.FileInfo>
+struct FileSystemEnumerable_1_t8196C813B8208C9B20BC0764C83466E896524F79;
+// System.IO.Enumeration.FileSystemEnumerable`1<System.IO.FileSystemInfo>
+struct FileSystemEnumerable_1_t27B3DA4E512787E62768A89F2D1D5AA5CB06CBC7;
 // System.IO.Enumeration.FileSystemEnumerable`1<System.Object>
 struct FileSystemEnumerable_1_t6CDB6C3CCEAAD4602A46A2EA5211E12D2DB57B94;
 // System.IO.Enumeration.FileSystemEnumerable`1<System.String>
 struct FileSystemEnumerable_1_tF87C4E8695D9DF204B68A5EE4054C3B765F86376;
+// System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.IO.DirectoryInfo>
+struct FindPredicate_tB9EFFCED41838E88AE71B517440E1A0774823BE4;
+// System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.IO.FileInfo>
+struct FindPredicate_t22C2CB6CB0638F1A35C31C32B242A3EE27335440;
+// System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.IO.FileSystemInfo>
+struct FindPredicate_t24739D159880B605AFC0F3CC2FE8440811AE65BF;
 // System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.Object>
 struct FindPredicate_tD904DBA38C8844BD03538991F629C55781F3000D;
 // System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.String>
 struct FindPredicate_t499C8427CD4BE5D7A56A078EE964AFDF307D9855;
+// System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.IO.DirectoryInfo>
+struct FindTransform_t75D6595DE7881AA25EABC0FB89AC2E76CA291D13;
+// System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.IO.FileInfo>
+struct FindTransform_t1BA8EE39BE6152C5BFC859D5984703E33DEB9578;
+// System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.IO.FileSystemInfo>
+struct FindTransform_t9E2F83F81BF4D57C63DE8DA621CAE37DAEB999B8;
 // System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.Object>
 struct FindTransform_tC499583A33189BE267A9A28ED61DB4DE63B28851;
 // System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.String>
 struct FindTransform_t29F67D66AC165CC30E712816DBDF9D6706687246;
+// System.Collections.Generic.IEnumerable`1<System.IO.DirectoryInfo>
+struct IEnumerable_1_tC61234C675E197381ED0C6E05C543D07C5A595D6;
+// System.Collections.Generic.IEnumerable`1<System.IO.FileInfo>
+struct IEnumerable_1_t768DFB9B6219E03ADE076DED519B272E9BBF1580;
+// System.Collections.Generic.IEnumerable`1<System.IO.FileSystemInfo>
+struct IEnumerable_1_t8D7AC720F84EFB74460403413F0F6BE54649BAF0;
 // System.Collections.Generic.IEnumerable`1<System.String>
 struct IEnumerable_1_t349E66EC5F09B881A8E52EE40A1AB9EC60E08E44;
 // System.Buffers.SpanAction`2<System.Char,System.ValueTuple`5<System.IntPtr,System.Int32,System.IntPtr,System.Int32,System.Boolean>>
@@ -190,6 +220,8 @@ struct DecoderFallback_t7324102215E4ED41EC065C02EB501CB0BC23CD90;
 struct Delegate_t;
 // System.DelegateData
 struct DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E;
+// System.IO.DirectoryInfo
+struct DirectoryInfo_tEAEEC018EB49B4A71907FFEAFE935FAA8F9C1FE2;
 // System.IO.DirectoryNotFoundException
 struct DirectoryNotFoundException_tBE92A20AAC24C3B22DE38973ABE6886FA97419BF;
 // System.Text.Encoder
@@ -202,12 +234,16 @@ struct Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095;
 struct EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B;
 // System.Exception
 struct Exception_t;
+// System.IO.FileInfo
+struct FileInfo_t62782BBAFA832A78724E4CF2EE96548B8466AB1C;
 // System.IO.FileNotFoundException
 struct FileNotFoundException_t17F1B49AD996E4A60C87C7ADC9D3A25EB5808A9A;
 // System.IO.FileStream
 struct FileStream_t07C7222EE10B75F352B89B76E60820160FF10AD8;
 // System.IO.FileStreamAsyncResult
 struct FileStreamAsyncResult_t63112633BC368A3723281F1E7B27E0AFD372F215;
+// System.IO.FileSystemInfo
+struct FileSystemInfo_tE3063B9229F46B05A5F6D018C8C4CA510104E8E9;
 // System.Collections.Hashtable
 struct Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D;
 // System.IAsyncResult
@@ -294,6 +330,12 @@ struct U3CU3Ec__DisplayClass3_0_t9EA606314FB42C5CD7C5252C99995FC7CD85D9FF;
 struct U3CU3Ec__DisplayClass4_0_t1A795A86414F79BA9521856D91A0E2FAEFE2EB82;
 // System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass5_0
 struct U3CU3Ec__DisplayClass5_0_t511D5B53D024031FC3E4CA181F6C7BAF4AF73C13;
+// System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass6_0
+struct U3CU3Ec__DisplayClass6_0_t42B15982543543495A584C3DF4144E7683B6B14C;
+// System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass7_0
+struct U3CU3Ec__DisplayClass7_0_t0929EFC34D7883630E211C3F3354BD7A33F1E327;
+// System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass8_0
+struct U3CU3Ec__DisplayClass8_0_tE9518B723C9279791CE6BD1989EB3E8062D2AC9B;
 // System.IO.Path/<>c
 struct U3CU3Ec_t0E1743DF1718ED7BB55A76E001B03936CAA8CF46;
 // System.IO.Stream/ReadWriteTask
@@ -312,16 +354,27 @@ IL2CPP_EXTERN_C RuntimeClass* Char_t521A6F19B456D956AF452D926C32709DC03D6B17_il2
 IL2CPP_EXTERN_C RuntimeClass* ConsoleDriver_tC98607842465524D6078EB6C21FEA25BBC1A6E80_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Console_t5EDF9498D011BD48287171978EDBBA6964829C3E_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* DirectoryInfo_tEAEEC018EB49B4A71907FFEAFE935FAA8F9C1FE2_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* DirectoryNotFoundException_tBE92A20AAC24C3B22DE38973ABE6886FA97419BF_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Exception_t_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* FileInfo_t62782BBAFA832A78724E4CF2EE96548B8466AB1C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* FileNotFoundException_t17F1B49AD996E4A60C87C7ADC9D3A25EB5808A9A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* FileStreamAsyncResult_t63112633BC368A3723281F1E7B27E0AFD372F215_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* FileStream_t07C7222EE10B75F352B89B76E60820160FF10AD8_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* FileSystemEnumerableFactory_t07E8E9F0677BFB13D4C8995A085259ABD554562F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* FileSystemEnumerable_1_t27B3DA4E512787E62768A89F2D1D5AA5CB06CBC7_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* FileSystemEnumerable_1_t8196C813B8208C9B20BC0764C83466E896524F79_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* FileSystemEnumerable_1_t9C950A0D8C8B2EB9B11B70F470990A99D009A1FB_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* FileSystemEnumerable_1_tF87C4E8695D9DF204B68A5EE4054C3B765F86376_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* FileSystemName_tDF3D4DCE58F5592CA8BCEBC4B1F730C09F652F38_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* FindPredicate_t22C2CB6CB0638F1A35C31C32B242A3EE27335440_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* FindPredicate_t24739D159880B605AFC0F3CC2FE8440811AE65BF_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* FindPredicate_t499C8427CD4BE5D7A56A078EE964AFDF307D9855_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* FindPredicate_tB9EFFCED41838E88AE71B517440E1A0774823BE4_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* FindTransform_t1BA8EE39BE6152C5BFC859D5984703E33DEB9578_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* FindTransform_t29F67D66AC165CC30E712816DBDF9D6706687246_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* FindTransform_t75D6595DE7881AA25EABC0FB89AC2E76CA291D13_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* FindTransform_t9E2F83F81BF4D57C63DE8DA621CAE37DAEB999B8_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* IOException_t5D599190B003D41D45D4839A9B6B9AB53A755910_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var;
@@ -349,6 +402,9 @@ IL2CPP_EXTERN_C RuntimeClass* Type_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass3_0_t9EA606314FB42C5CD7C5252C99995FC7CD85D9FF_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass4_0_t1A795A86414F79BA9521856D91A0E2FAEFE2EB82_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass5_0_t511D5B53D024031FC3E4CA181F6C7BAF4AF73C13_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass6_0_t42B15982543543495A584C3DF4144E7683B6B14C_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass7_0_t0929EFC34D7883630E211C3F3354BD7A33F1E327_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass8_0_tE9518B723C9279791CE6BD1989EB3E8062D2AC9B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t0E1743DF1718ED7BB55A76E001B03936CAA8CF46_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UnauthorizedAccessException_t8FC1F1DE7AA62456E9E25EFDFC658A623A626791_il2cpp_TypeInfo_var;
@@ -434,8 +490,14 @@ IL2CPP_EXTERN_C const RuntimeMethod* CStreamReader_Read_mF326C19B1DCECDEE67D5FF1
 IL2CPP_EXTERN_C const RuntimeMethod* FileStreamAsyncResult_CBWrapper_mACCBD60374BA19FDC03F26FAA266703EEAF2855B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* FileSystemEnumerableFactory_MatchesPattern_mBFF4020C20F0DEEE54A7D92BB1D3D721E47C3191_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* FileSystemEnumerableFactory_NormalizeInputs_mA8683D48B9B7F73E1639EBBA7B2EB96568FBF6CC_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* FileSystemEnumerable_1__ctor_m1CC06D762AD983968DE3D8A2F5A78EA0B07F65DE_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* FileSystemEnumerable_1__ctor_m8CACA54C7675FE41E6A1A8B4D279FE3AA5B5C812_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* FileSystemEnumerable_1__ctor_mD1163F82BD861CA1D7F1850CFDC3785B267E9AE1_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* FileSystemEnumerable_1__ctor_mFBCFD7E49A0EDBA99AD9E9EE7F50C17A049120D7_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* FileSystemEnumerable_1_set_ShouldIncludePredicate_m1DB558F739B9E19BB23C96C93408ECE4D191A072_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* FileSystemEnumerable_1_set_ShouldIncludePredicate_m3831C543CC5FFD8E0C98E9344895F2F78FDB7FC9_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* FileSystemEnumerable_1_set_ShouldIncludePredicate_m9FCC6D3F20539816932C7422A28AB932B38E096E_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* FileSystemEnumerable_1_set_ShouldIncludePredicate_mF2AC1C5E55282C7E73C18E0E99D2472604014E84_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* MemoryExtensions_IndexOfAny_TisChar_t521A6F19B456D956AF452D926C32709DC03D6B17_mA7B2F1EED62DC3407C2E5BD78194539BB9D7667E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* MemoryMarshal_GetReference_TisChar_t521A6F19B456D956AF452D926C32709DC03D6B17_mE4C181D41EF4A4EC432CD3610B2969041E6F2F7A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Path_ChangeExtension_mBC1AFA3E5E6FE1F855925EA34A4FAB7248478A83_RuntimeMethod_var;
@@ -478,6 +540,9 @@ IL2CPP_EXTERN_C const RuntimeMethod* String_Create_TisValueTuple_5_t558B9F95CA55
 IL2CPP_EXTERN_C const RuntimeMethod* String_Create_TisValueTuple_8_t1F4E549E8EC10C379822BE78A432A9E340BED1FA_m1D42C3819E4E9F6707E9AB305BF68AEE2D1D71B2_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* String_Create_TisValueTuple_8_t9B4E1B0569C36F02E150189D05FFCC0A69667F85_m6F505BE8BEAF8A3324DDCED5C13F3EC1970BA9B2_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ThrowStub_ThrowNotSupportedException_m02C318CA8F5812C025CBEDEA07A5DE5D0FDBB25F_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CDirectoryInfosU3Eb__7_0_m3D3D664BFD618E447141AC68D184D85874F53B60_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CFileInfosU3Eb__6_0_m6CE09DEBB1B5D86A4C84C06820E1BED676DB7AD1_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CFileSystemInfosU3Eb__8_0_m75F0120FE217E3EB81907AA9F20EB3B35111E27C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CJoinInternalU3Eb__59_0_m2E286A800D54578ECBF47D50F6D3273ADB894356_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CJoinInternalU3Eb__60_0_m7920C5FDD23EE413D943156DC9DC1A33C0EE233A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CJoinInternalU3Eb__61_0_mBFB35E7617F2BCF5E0441AB16F33F448B7FB43F3_RuntimeMethod_var;
@@ -487,6 +552,9 @@ IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CUserFilesU3Eb__3_0_m388CFF04D9EB
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass3_0_U3CUserFilesU3Eb__1_m2427827CD0D1AF4B508346294C42AD13FFA7FAD9_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass4_0_U3CUserDirectoriesU3Eb__1_m9D02B1EA4F99F32AEB1C15E03956CC611C0F06B0_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass5_0_U3CUserEntriesU3Eb__1_mCAE83636AB13AF6E3F825C02D6910C749A0B2FDE_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass6_0_U3CFileInfosU3Eb__1_mDC0D6176A72DE297D33169BB701F4B5C38B649AF_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass7_0_U3CDirectoryInfosU3Eb__1_m62ABD45598CF2AFCAC00C51BC71F03FD0322F4D4_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass8_0_U3CFileSystemInfosU3Eb__1_m76E622C639EDBC1D4E9C3BBB90B4FA9A903A243E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnexceptionalStreamReader_Read_m22BD0BB94B4575905541068A2BF813CEDCB1F513_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ValueTuple_1__ctor_m2B4EF8C088990188A745920EA2047AB386E94FBB_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ValueTuple_4__ctor_m3D788E379A9D1653C4A411225FC5FC31E16A2EDD_RuntimeMethod_var;
@@ -523,6 +591,57 @@ IL2CPP_EXTERN_C_END
 // System.EmptyArray`1<System.Object>
 struct EmptyArray_1_tDF0DD7256B115243AA6BD5558417387A734240EE  : public RuntimeObject
 {
+};
+
+// System.IO.Enumeration.FileSystemEnumerable`1<System.IO.DirectoryInfo>
+struct FileSystemEnumerable_1_t9C950A0D8C8B2EB9B11B70F470990A99D009A1FB  : public RuntimeObject
+{
+	// System.IO.Enumeration.FileSystemEnumerable`1/DelegateEnumerator<TResult> System.IO.Enumeration.FileSystemEnumerable`1::_enumerator
+	DelegateEnumerator_t2D23B8A53B3E35F236A1DC1F2F96F4262EF7B79A* ____enumerator_0;
+	// System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<TResult> System.IO.Enumeration.FileSystemEnumerable`1::_transform
+	FindTransform_t75D6595DE7881AA25EABC0FB89AC2E76CA291D13* ____transform_1;
+	// System.IO.EnumerationOptions System.IO.Enumeration.FileSystemEnumerable`1::_options
+	EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* ____options_2;
+	// System.String System.IO.Enumeration.FileSystemEnumerable`1::_directory
+	String_t* ____directory_3;
+	// System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<TResult> System.IO.Enumeration.FileSystemEnumerable`1::<ShouldIncludePredicate>k__BackingField
+	FindPredicate_tB9EFFCED41838E88AE71B517440E1A0774823BE4* ___U3CShouldIncludePredicateU3Ek__BackingField_4;
+	// System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<TResult> System.IO.Enumeration.FileSystemEnumerable`1::<ShouldRecursePredicate>k__BackingField
+	FindPredicate_tB9EFFCED41838E88AE71B517440E1A0774823BE4* ___U3CShouldRecursePredicateU3Ek__BackingField_5;
+};
+
+// System.IO.Enumeration.FileSystemEnumerable`1<System.IO.FileInfo>
+struct FileSystemEnumerable_1_t8196C813B8208C9B20BC0764C83466E896524F79  : public RuntimeObject
+{
+	// System.IO.Enumeration.FileSystemEnumerable`1/DelegateEnumerator<TResult> System.IO.Enumeration.FileSystemEnumerable`1::_enumerator
+	DelegateEnumerator_t697D581CD85A006B07B85D57212DFBBC2E8BA51F* ____enumerator_0;
+	// System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<TResult> System.IO.Enumeration.FileSystemEnumerable`1::_transform
+	FindTransform_t1BA8EE39BE6152C5BFC859D5984703E33DEB9578* ____transform_1;
+	// System.IO.EnumerationOptions System.IO.Enumeration.FileSystemEnumerable`1::_options
+	EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* ____options_2;
+	// System.String System.IO.Enumeration.FileSystemEnumerable`1::_directory
+	String_t* ____directory_3;
+	// System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<TResult> System.IO.Enumeration.FileSystemEnumerable`1::<ShouldIncludePredicate>k__BackingField
+	FindPredicate_t22C2CB6CB0638F1A35C31C32B242A3EE27335440* ___U3CShouldIncludePredicateU3Ek__BackingField_4;
+	// System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<TResult> System.IO.Enumeration.FileSystemEnumerable`1::<ShouldRecursePredicate>k__BackingField
+	FindPredicate_t22C2CB6CB0638F1A35C31C32B242A3EE27335440* ___U3CShouldRecursePredicateU3Ek__BackingField_5;
+};
+
+// System.IO.Enumeration.FileSystemEnumerable`1<System.IO.FileSystemInfo>
+struct FileSystemEnumerable_1_t27B3DA4E512787E62768A89F2D1D5AA5CB06CBC7  : public RuntimeObject
+{
+	// System.IO.Enumeration.FileSystemEnumerable`1/DelegateEnumerator<TResult> System.IO.Enumeration.FileSystemEnumerable`1::_enumerator
+	DelegateEnumerator_tD4C21B09320116235EC77E0F441A2911451B2C50* ____enumerator_0;
+	// System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<TResult> System.IO.Enumeration.FileSystemEnumerable`1::_transform
+	FindTransform_t9E2F83F81BF4D57C63DE8DA621CAE37DAEB999B8* ____transform_1;
+	// System.IO.EnumerationOptions System.IO.Enumeration.FileSystemEnumerable`1::_options
+	EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* ____options_2;
+	// System.String System.IO.Enumeration.FileSystemEnumerable`1::_directory
+	String_t* ____directory_3;
+	// System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<TResult> System.IO.Enumeration.FileSystemEnumerable`1::<ShouldIncludePredicate>k__BackingField
+	FindPredicate_t24739D159880B605AFC0F3CC2FE8440811AE65BF* ___U3CShouldIncludePredicateU3Ek__BackingField_4;
+	// System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<TResult> System.IO.Enumeration.FileSystemEnumerable`1::<ShouldRecursePredicate>k__BackingField
+	FindPredicate_t24739D159880B605AFC0F3CC2FE8440811AE65BF* ___U3CShouldRecursePredicateU3Ek__BackingField_5;
 };
 
 // System.IO.Enumeration.FileSystemEnumerable`1<System.Object>
@@ -984,6 +1103,33 @@ struct U3CU3Ec__DisplayClass5_0_t511D5B53D024031FC3E4CA181F6C7BAF4AF73C13  : pub
 	// System.String System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass5_0::expression
 	String_t* ___expression_0;
 	// System.IO.EnumerationOptions System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass5_0::options
+	EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* ___options_1;
+};
+
+// System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass6_0
+struct U3CU3Ec__DisplayClass6_0_t42B15982543543495A584C3DF4144E7683B6B14C  : public RuntimeObject
+{
+	// System.String System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass6_0::expression
+	String_t* ___expression_0;
+	// System.IO.EnumerationOptions System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass6_0::options
+	EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* ___options_1;
+};
+
+// System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass7_0
+struct U3CU3Ec__DisplayClass7_0_t0929EFC34D7883630E211C3F3354BD7A33F1E327  : public RuntimeObject
+{
+	// System.String System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass7_0::expression
+	String_t* ___expression_0;
+	// System.IO.EnumerationOptions System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass7_0::options
+	EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* ___options_1;
+};
+
+// System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass8_0
+struct U3CU3Ec__DisplayClass8_0_tE9518B723C9279791CE6BD1989EB3E8062D2AC9B  : public RuntimeObject
+{
+	// System.String System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass8_0::expression
+	String_t* ___expression_0;
+	// System.IO.EnumerationOptions System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass8_0::options
 	EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* ___options_1;
 };
 
@@ -1970,6 +2116,15 @@ struct LongFileTime_tD764D5FF9255F38CECB9942EBA9F074A07BE4783
 	int64_t ___TicksSince1601_0;
 };
 
+// Interop/Kernel32/FILE_TIME
+struct FILE_TIME_tBD950B410C18B85474477EEA8F3651A2BD367965 
+{
+	// System.UInt32 Interop/Kernel32/FILE_TIME::dwLowDateTime
+	uint32_t ___dwLowDateTime_0;
+	// System.UInt32 Interop/Kernel32/FILE_TIME::dwHighDateTime
+	uint32_t ___dwHighDateTime_1;
+};
+
 // System.ByReference`1<System.Char>
 struct ByReference_1_t7BA5A6CA164F770BC688F21C5978D368716465F5 
 {
@@ -2332,6 +2487,23 @@ struct WaitHandle_t08F8DB54593B241FE32E0DD0BD3D82785D3AE3D8_marshaled_com : publ
 	int32_t ___hasThreadAffinity_5;
 };
 
+// Interop/Kernel32/WIN32_FILE_ATTRIBUTE_DATA
+struct WIN32_FILE_ATTRIBUTE_DATA_tD093F8658579DA72CCD2E158A681DDE37834F73B 
+{
+	// System.Int32 Interop/Kernel32/WIN32_FILE_ATTRIBUTE_DATA::dwFileAttributes
+	int32_t ___dwFileAttributes_0;
+	// Interop/Kernel32/FILE_TIME Interop/Kernel32/WIN32_FILE_ATTRIBUTE_DATA::ftCreationTime
+	FILE_TIME_tBD950B410C18B85474477EEA8F3651A2BD367965 ___ftCreationTime_1;
+	// Interop/Kernel32/FILE_TIME Interop/Kernel32/WIN32_FILE_ATTRIBUTE_DATA::ftLastAccessTime
+	FILE_TIME_tBD950B410C18B85474477EEA8F3651A2BD367965 ___ftLastAccessTime_2;
+	// Interop/Kernel32/FILE_TIME Interop/Kernel32/WIN32_FILE_ATTRIBUTE_DATA::ftLastWriteTime
+	FILE_TIME_tBD950B410C18B85474477EEA8F3651A2BD367965 ___ftLastWriteTime_3;
+	// System.UInt32 Interop/Kernel32/WIN32_FILE_ATTRIBUTE_DATA::nFileSizeHigh
+	uint32_t ___nFileSizeHigh_4;
+	// System.UInt32 Interop/Kernel32/WIN32_FILE_ATTRIBUTE_DATA::nFileSizeLow
+	uint32_t ___nFileSizeLow_5;
+};
+
 // Interop/NtDll/FILE_FULL_DIR_INFORMATION
 struct FILE_FULL_DIR_INFORMATION_tDADD8F92D8F406A7386185DFC40A55717F4574E4 
 {
@@ -2407,6 +2579,21 @@ struct EventWaitHandle_t18F2EB0161747B0646A9A406015A61A214A1EB7E  : public WaitH
 {
 };
 
+// System.IO.FileSystemInfo
+struct FileSystemInfo_tE3063B9229F46B05A5F6D018C8C4CA510104E8E9  : public MarshalByRefObject_t8C2F4C5854177FD60439EB1FCCFC1B3CFAFE8DCE
+{
+	// Interop/Kernel32/WIN32_FILE_ATTRIBUTE_DATA System.IO.FileSystemInfo::_data
+	WIN32_FILE_ATTRIBUTE_DATA_tD093F8658579DA72CCD2E158A681DDE37834F73B ____data_1;
+	// System.Int32 System.IO.FileSystemInfo::_dataInitialized
+	int32_t ____dataInitialized_2;
+	// System.String System.IO.FileSystemInfo::FullPath
+	String_t* ___FullPath_3;
+	// System.String System.IO.FileSystemInfo::OriginalPath
+	String_t* ___OriginalPath_4;
+	// System.String System.IO.FileSystemInfo::_name
+	String_t* ____name_5;
+};
+
 // System.MulticastDelegate
 struct MulticastDelegate_t  : public Delegate_t
 {
@@ -2470,6 +2657,16 @@ struct ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263  : public Sys
 
 // System.AsyncCallback
 struct AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C  : public MulticastDelegate_t
+{
+};
+
+// System.IO.DirectoryInfo
+struct DirectoryInfo_tEAEEC018EB49B4A71907FFEAFE935FAA8F9C1FE2  : public FileSystemInfo_tE3063B9229F46B05A5F6D018C8C4CA510104E8E9
+{
+};
+
+// System.IO.FileInfo
+struct FileInfo_t62782BBAFA832A78724E4CF2EE96548B8466AB1C  : public FileSystemInfo_tE3063B9229F46B05A5F6D018C8C4CA510104E8E9
 {
 };
 
@@ -2546,6 +2743,21 @@ struct WriteDelegate_tACBC1C867E4248D4A20626FCBFB1C886993FA3BA  : public Multica
 {
 };
 
+// System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.IO.DirectoryInfo>
+struct FindPredicate_tB9EFFCED41838E88AE71B517440E1A0774823BE4  : public MulticastDelegate_t
+{
+};
+
+// System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.IO.FileInfo>
+struct FindPredicate_t22C2CB6CB0638F1A35C31C32B242A3EE27335440  : public MulticastDelegate_t
+{
+};
+
+// System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.IO.FileSystemInfo>
+struct FindPredicate_t24739D159880B605AFC0F3CC2FE8440811AE65BF  : public MulticastDelegate_t
+{
+};
+
 // System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.Object>
 struct FindPredicate_tD904DBA38C8844BD03538991F629C55781F3000D  : public MulticastDelegate_t
 {
@@ -2553,6 +2765,21 @@ struct FindPredicate_tD904DBA38C8844BD03538991F629C55781F3000D  : public Multica
 
 // System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.String>
 struct FindPredicate_t499C8427CD4BE5D7A56A078EE964AFDF307D9855  : public MulticastDelegate_t
+{
+};
+
+// System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.IO.DirectoryInfo>
+struct FindTransform_t75D6595DE7881AA25EABC0FB89AC2E76CA291D13  : public MulticastDelegate_t
+{
+};
+
+// System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.IO.FileInfo>
+struct FindTransform_t1BA8EE39BE6152C5BFC859D5984703E33DEB9578  : public MulticastDelegate_t
+{
+};
+
+// System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.IO.FileSystemInfo>
+struct FindTransform_t9E2F83F81BF4D57C63DE8DA621CAE37DAEB999B8  : public MulticastDelegate_t
 {
 };
 
@@ -2617,6 +2844,18 @@ struct EmptyArray_1_tDF0DD7256B115243AA6BD5558417387A734240EE_StaticFields
 };
 
 // System.EmptyArray`1<System.Object>
+
+// System.IO.Enumeration.FileSystemEnumerable`1<System.IO.DirectoryInfo>
+
+// System.IO.Enumeration.FileSystemEnumerable`1<System.IO.DirectoryInfo>
+
+// System.IO.Enumeration.FileSystemEnumerable`1<System.IO.FileInfo>
+
+// System.IO.Enumeration.FileSystemEnumerable`1<System.IO.FileInfo>
+
+// System.IO.Enumeration.FileSystemEnumerable`1<System.IO.FileSystemInfo>
+
+// System.IO.Enumeration.FileSystemEnumerable`1<System.IO.FileSystemInfo>
 
 // System.IO.Enumeration.FileSystemEnumerable`1<System.Object>
 
@@ -3089,6 +3328,12 @@ struct U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_StaticFields
 	FindTransform_t29F67D66AC165CC30E712816DBDF9D6706687246* ___U3CU3E9__4_0_2;
 	// System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.String> System.IO.Enumeration.FileSystemEnumerableFactory/<>c::<>9__5_0
 	FindTransform_t29F67D66AC165CC30E712816DBDF9D6706687246* ___U3CU3E9__5_0_3;
+	// System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.IO.FileInfo> System.IO.Enumeration.FileSystemEnumerableFactory/<>c::<>9__6_0
+	FindTransform_t1BA8EE39BE6152C5BFC859D5984703E33DEB9578* ___U3CU3E9__6_0_4;
+	// System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.IO.DirectoryInfo> System.IO.Enumeration.FileSystemEnumerableFactory/<>c::<>9__7_0
+	FindTransform_t75D6595DE7881AA25EABC0FB89AC2E76CA291D13* ___U3CU3E9__7_0_5;
+	// System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.IO.FileSystemInfo> System.IO.Enumeration.FileSystemEnumerableFactory/<>c::<>9__8_0
+	FindTransform_t9E2F83F81BF4D57C63DE8DA621CAE37DAEB999B8* ___U3CU3E9__8_0_6;
 };
 
 // System.IO.Enumeration.FileSystemEnumerableFactory/<>c
@@ -3104,6 +3349,18 @@ struct U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_StaticFields
 // System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass5_0
 
 // System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass5_0
+
+// System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass6_0
+
+// System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass6_0
+
+// System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass7_0
+
+// System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass7_0
+
+// System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass8_0
+
+// System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass8_0
 
 // System.IO.Path/<>c
 struct U3CU3Ec_t0E1743DF1718ED7BB55A76E001B03936CAA8CF46_StaticFields
@@ -3532,6 +3789,10 @@ struct WaitHandle_t08F8DB54593B241FE32E0DD0BD3D82785D3AE3D8_StaticFields
 
 // System.IO.CStreamWriter
 
+// System.IO.FileSystemInfo
+
+// System.IO.FileSystemInfo
+
 // System.Type
 struct Type_t_StaticFields
 {
@@ -3588,6 +3849,14 @@ struct UnexceptionalStreamReader_tC2A87A1C1570111DE6003BF1891C8D2E3C9AA9FE_Stati
 
 // System.AsyncCallback
 
+// System.IO.DirectoryInfo
+
+// System.IO.DirectoryInfo
+
+// System.IO.FileInfo
+
+// System.IO.FileInfo
+
 // System.IO.Enumeration.FileSystemEntry
 
 // System.IO.Enumeration.FileSystemEntry
@@ -3616,6 +3885,18 @@ struct UnexceptionalStreamReader_tC2A87A1C1570111DE6003BF1891C8D2E3C9AA9FE_Stati
 
 // System.IO.FileStream/WriteDelegate
 
+// System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.IO.DirectoryInfo>
+
+// System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.IO.DirectoryInfo>
+
+// System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.IO.FileInfo>
+
+// System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.IO.FileInfo>
+
+// System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.IO.FileSystemInfo>
+
+// System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.IO.FileSystemInfo>
+
 // System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.Object>
 
 // System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.Object>
@@ -3623,6 +3904,18 @@ struct UnexceptionalStreamReader_tC2A87A1C1570111DE6003BF1891C8D2E3C9AA9FE_Stati
 // System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.String>
 
 // System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.String>
+
+// System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.IO.DirectoryInfo>
+
+// System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.IO.DirectoryInfo>
+
+// System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.IO.FileInfo>
+
+// System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.IO.FileInfo>
+
+// System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.IO.FileSystemInfo>
+
+// System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.IO.FileSystemInfo>
 
 // System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.String>
 
@@ -4433,6 +4726,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCB
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FileSystemEntry_get_Attributes_mFD1D48D0F605BE2117617194F55B5E2CB4FBA0D9 (FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* __this, const RuntimeMethod* method) ;
 // System.ReadOnlySpan`1<System.Char> System.IO.Enumeration.FileSystemEntry::get_Directory()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1 FileSystemEntry_get_Directory_m6D30A6BF9BD8C8197DB3DF0A4800E593D767A064_inline (FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* __this, const RuntimeMethod* method) ;
+// System.ReadOnlySpan`1<System.Char> System.IO.Enumeration.FileSystemEntry::get_FileName()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1 FileSystemEntry_get_FileName_m33D89416B0459807829E6A0F521E423616EC92E4 (FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* __this, const RuntimeMethod* method) ;
+// System.IO.FileSystemInfo System.IO.FileSystemInfo::Create(System.String,System.IO.Enumeration.FileSystemEntry&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FileSystemInfo_tE3063B9229F46B05A5F6D018C8C4CA510104E8E9* FileSystemInfo_Create_mBDB88E3D2AE60B1BDB46F2DFDE9CA9AB17573FBF (String_t* ___0_fullPath, FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* ___1_findData, const RuntimeMethod* method) ;
 // System.ReadOnlySpan`1<System.Char> System.IO.Enumeration.FileSystemEntry::get_RootDirectory()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1 FileSystemEntry_get_RootDirectory_mDE11F0376F476FDB023259BD2C6C467BA2C63CAD_inline (FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* __this, const RuntimeMethod* method) ;
 // System.ReadOnlySpan`1<T> System.ReadOnlySpan`1<System.Char>::Slice(System.Int32)
@@ -4442,8 +4739,6 @@ inline ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1 ReadOnlySpan_1_S
 }
 // System.ReadOnlySpan`1<System.Char> System.IO.Enumeration.FileSystemEntry::get_OriginalRootDirectory()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1 FileSystemEntry_get_OriginalRootDirectory_m013005841C530C69E570F013577DFEA397CCAA86_inline (FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* __this, const RuntimeMethod* method) ;
-// System.ReadOnlySpan`1<System.Char> System.IO.Enumeration.FileSystemEntry::get_FileName()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1 FileSystemEntry_get_FileName_m33D89416B0459807829E6A0F521E423616EC92E4 (FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* __this, const RuntimeMethod* method) ;
 // System.String System.IO.Path::Join(System.ReadOnlySpan`1<System.Char>,System.ReadOnlySpan`1<System.Char>,System.ReadOnlySpan`1<System.Char>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Path_Join_mCEAA3D6E4A40574CE578D59CF8081E725D4220B6 (ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1 ___0_path1, ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1 ___1_path2, ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1 ___2_path3, const RuntimeMethod* method) ;
 // System.ReadOnlySpan`1<System.Char> System.IO.Path::GetDirectoryName(System.ReadOnlySpan`1<System.Char>)
@@ -4492,6 +4787,72 @@ inline void FileSystemEnumerable_1_set_ShouldIncludePredicate_m1DB558F739B9E19BB
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass4_0__ctor_mC6C37EDD2ADD3FD0ED3D08667C10A280D5CC0011 (U3CU3Ec__DisplayClass4_0_t1A795A86414F79BA9521856D91A0E2FAEFE2EB82* __this, const RuntimeMethod* method) ;
 // System.Void System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass5_0::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0__ctor_m400BA8EA0210B51F667BE71AD0C1D02ECD5E6D8A (U3CU3Ec__DisplayClass5_0_t511D5B53D024031FC3E4CA181F6C7BAF4AF73C13* __this, const RuntimeMethod* method) ;
+// System.Void System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass6_0::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass6_0__ctor_m848166D3235A5F10207DE7490D9F6CFACDCBDF02 (U3CU3Ec__DisplayClass6_0_t42B15982543543495A584C3DF4144E7683B6B14C* __this, const RuntimeMethod* method) ;
+// System.Void System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.IO.FileInfo>::.ctor(System.Object,System.IntPtr)
+inline void FindTransform__ctor_mD422B9150CA552F0DBB518409121156B6C3B452C (FindTransform_t1BA8EE39BE6152C5BFC859D5984703E33DEB9578* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method)
+{
+	((  void (*) (FindTransform_t1BA8EE39BE6152C5BFC859D5984703E33DEB9578*, RuntimeObject*, intptr_t, const RuntimeMethod*))FindTransform__ctor_m5D94CE6E329F716B1D97EFF18D8CE823937724C7_gshared)(__this, ___0_object, ___1_method, method);
+}
+// System.Void System.IO.Enumeration.FileSystemEnumerable`1<System.IO.FileInfo>::.ctor(System.String,System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<TResult>,System.IO.EnumerationOptions)
+inline void FileSystemEnumerable_1__ctor_m1CC06D762AD983968DE3D8A2F5A78EA0B07F65DE (FileSystemEnumerable_1_t8196C813B8208C9B20BC0764C83466E896524F79* __this, String_t* ___0_directory, FindTransform_t1BA8EE39BE6152C5BFC859D5984703E33DEB9578* ___1_transform, EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* ___2_options, const RuntimeMethod* method)
+{
+	((  void (*) (FileSystemEnumerable_1_t8196C813B8208C9B20BC0764C83466E896524F79*, String_t*, FindTransform_t1BA8EE39BE6152C5BFC859D5984703E33DEB9578*, EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B*, const RuntimeMethod*))FileSystemEnumerable_1__ctor_mF6874E1BE659F4D6EB45D6A1F84373BE934DD68A_gshared)(__this, ___0_directory, ___1_transform, ___2_options, method);
+}
+// System.Void System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.IO.FileInfo>::.ctor(System.Object,System.IntPtr)
+inline void FindPredicate__ctor_mB1BA69B3D82C0FD83F4F7F4484091E92A503D82B (FindPredicate_t22C2CB6CB0638F1A35C31C32B242A3EE27335440* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method)
+{
+	((  void (*) (FindPredicate_t22C2CB6CB0638F1A35C31C32B242A3EE27335440*, RuntimeObject*, intptr_t, const RuntimeMethod*))FindPredicate__ctor_mAF116DE60357979F24F32D9F728B193CBD6FFEB9_gshared)(__this, ___0_object, ___1_method, method);
+}
+// System.Void System.IO.Enumeration.FileSystemEnumerable`1<System.IO.FileInfo>::set_ShouldIncludePredicate(System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<TResult>)
+inline void FileSystemEnumerable_1_set_ShouldIncludePredicate_mF2AC1C5E55282C7E73C18E0E99D2472604014E84_inline (FileSystemEnumerable_1_t8196C813B8208C9B20BC0764C83466E896524F79* __this, FindPredicate_t22C2CB6CB0638F1A35C31C32B242A3EE27335440* ___0_value, const RuntimeMethod* method)
+{
+	((  void (*) (FileSystemEnumerable_1_t8196C813B8208C9B20BC0764C83466E896524F79*, FindPredicate_t22C2CB6CB0638F1A35C31C32B242A3EE27335440*, const RuntimeMethod*))FileSystemEnumerable_1_set_ShouldIncludePredicate_m4F616581922D0AEAD04F00CE5E00B511031FD6D1_gshared_inline)(__this, ___0_value, method);
+}
+// System.Void System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass7_0::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass7_0__ctor_mE110AB4775FBD7A1DF94AEF53160EAF67F9F8E09 (U3CU3Ec__DisplayClass7_0_t0929EFC34D7883630E211C3F3354BD7A33F1E327* __this, const RuntimeMethod* method) ;
+// System.Void System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.IO.DirectoryInfo>::.ctor(System.Object,System.IntPtr)
+inline void FindTransform__ctor_m83D22894BC3F00C45E7C18AFBB7A00A612C52D99 (FindTransform_t75D6595DE7881AA25EABC0FB89AC2E76CA291D13* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method)
+{
+	((  void (*) (FindTransform_t75D6595DE7881AA25EABC0FB89AC2E76CA291D13*, RuntimeObject*, intptr_t, const RuntimeMethod*))FindTransform__ctor_m5D94CE6E329F716B1D97EFF18D8CE823937724C7_gshared)(__this, ___0_object, ___1_method, method);
+}
+// System.Void System.IO.Enumeration.FileSystemEnumerable`1<System.IO.DirectoryInfo>::.ctor(System.String,System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<TResult>,System.IO.EnumerationOptions)
+inline void FileSystemEnumerable_1__ctor_mFBCFD7E49A0EDBA99AD9E9EE7F50C17A049120D7 (FileSystemEnumerable_1_t9C950A0D8C8B2EB9B11B70F470990A99D009A1FB* __this, String_t* ___0_directory, FindTransform_t75D6595DE7881AA25EABC0FB89AC2E76CA291D13* ___1_transform, EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* ___2_options, const RuntimeMethod* method)
+{
+	((  void (*) (FileSystemEnumerable_1_t9C950A0D8C8B2EB9B11B70F470990A99D009A1FB*, String_t*, FindTransform_t75D6595DE7881AA25EABC0FB89AC2E76CA291D13*, EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B*, const RuntimeMethod*))FileSystemEnumerable_1__ctor_mF6874E1BE659F4D6EB45D6A1F84373BE934DD68A_gshared)(__this, ___0_directory, ___1_transform, ___2_options, method);
+}
+// System.Void System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.IO.DirectoryInfo>::.ctor(System.Object,System.IntPtr)
+inline void FindPredicate__ctor_m28E26C0AD83B4CE8BA8159F12EFB797B604A2590 (FindPredicate_tB9EFFCED41838E88AE71B517440E1A0774823BE4* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method)
+{
+	((  void (*) (FindPredicate_tB9EFFCED41838E88AE71B517440E1A0774823BE4*, RuntimeObject*, intptr_t, const RuntimeMethod*))FindPredicate__ctor_mAF116DE60357979F24F32D9F728B193CBD6FFEB9_gshared)(__this, ___0_object, ___1_method, method);
+}
+// System.Void System.IO.Enumeration.FileSystemEnumerable`1<System.IO.DirectoryInfo>::set_ShouldIncludePredicate(System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<TResult>)
+inline void FileSystemEnumerable_1_set_ShouldIncludePredicate_m3831C543CC5FFD8E0C98E9344895F2F78FDB7FC9_inline (FileSystemEnumerable_1_t9C950A0D8C8B2EB9B11B70F470990A99D009A1FB* __this, FindPredicate_tB9EFFCED41838E88AE71B517440E1A0774823BE4* ___0_value, const RuntimeMethod* method)
+{
+	((  void (*) (FileSystemEnumerable_1_t9C950A0D8C8B2EB9B11B70F470990A99D009A1FB*, FindPredicate_tB9EFFCED41838E88AE71B517440E1A0774823BE4*, const RuntimeMethod*))FileSystemEnumerable_1_set_ShouldIncludePredicate_m4F616581922D0AEAD04F00CE5E00B511031FD6D1_gshared_inline)(__this, ___0_value, method);
+}
+// System.Void System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass8_0::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass8_0__ctor_mB84FB59A131156C8B1FC2212016493D905A0B67F (U3CU3Ec__DisplayClass8_0_tE9518B723C9279791CE6BD1989EB3E8062D2AC9B* __this, const RuntimeMethod* method) ;
+// System.Void System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<System.IO.FileSystemInfo>::.ctor(System.Object,System.IntPtr)
+inline void FindTransform__ctor_m6E724A9F10594FB598DE771ADCF7A59A1F0C69A0 (FindTransform_t9E2F83F81BF4D57C63DE8DA621CAE37DAEB999B8* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method)
+{
+	((  void (*) (FindTransform_t9E2F83F81BF4D57C63DE8DA621CAE37DAEB999B8*, RuntimeObject*, intptr_t, const RuntimeMethod*))FindTransform__ctor_m5D94CE6E329F716B1D97EFF18D8CE823937724C7_gshared)(__this, ___0_object, ___1_method, method);
+}
+// System.Void System.IO.Enumeration.FileSystemEnumerable`1<System.IO.FileSystemInfo>::.ctor(System.String,System.IO.Enumeration.FileSystemEnumerable`1/FindTransform<TResult>,System.IO.EnumerationOptions)
+inline void FileSystemEnumerable_1__ctor_mD1163F82BD861CA1D7F1850CFDC3785B267E9AE1 (FileSystemEnumerable_1_t27B3DA4E512787E62768A89F2D1D5AA5CB06CBC7* __this, String_t* ___0_directory, FindTransform_t9E2F83F81BF4D57C63DE8DA621CAE37DAEB999B8* ___1_transform, EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* ___2_options, const RuntimeMethod* method)
+{
+	((  void (*) (FileSystemEnumerable_1_t27B3DA4E512787E62768A89F2D1D5AA5CB06CBC7*, String_t*, FindTransform_t9E2F83F81BF4D57C63DE8DA621CAE37DAEB999B8*, EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B*, const RuntimeMethod*))FileSystemEnumerable_1__ctor_mF6874E1BE659F4D6EB45D6A1F84373BE934DD68A_gshared)(__this, ___0_directory, ___1_transform, ___2_options, method);
+}
+// System.Void System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<System.IO.FileSystemInfo>::.ctor(System.Object,System.IntPtr)
+inline void FindPredicate__ctor_mC273F15A7A63C35AA056D3B22222B7ECDBE56BDF (FindPredicate_t24739D159880B605AFC0F3CC2FE8440811AE65BF* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method)
+{
+	((  void (*) (FindPredicate_t24739D159880B605AFC0F3CC2FE8440811AE65BF*, RuntimeObject*, intptr_t, const RuntimeMethod*))FindPredicate__ctor_mAF116DE60357979F24F32D9F728B193CBD6FFEB9_gshared)(__this, ___0_object, ___1_method, method);
+}
+// System.Void System.IO.Enumeration.FileSystemEnumerable`1<System.IO.FileSystemInfo>::set_ShouldIncludePredicate(System.IO.Enumeration.FileSystemEnumerable`1/FindPredicate<TResult>)
+inline void FileSystemEnumerable_1_set_ShouldIncludePredicate_m9FCC6D3F20539816932C7422A28AB932B38E096E_inline (FileSystemEnumerable_1_t27B3DA4E512787E62768A89F2D1D5AA5CB06CBC7* __this, FindPredicate_t24739D159880B605AFC0F3CC2FE8440811AE65BF* ___0_value, const RuntimeMethod* method)
+{
+	((  void (*) (FileSystemEnumerable_1_t27B3DA4E512787E62768A89F2D1D5AA5CB06CBC7*, FindPredicate_t24739D159880B605AFC0F3CC2FE8440811AE65BF*, const RuntimeMethod*))FileSystemEnumerable_1_set_ShouldIncludePredicate_m4F616581922D0AEAD04F00CE5E00B511031FD6D1_gshared_inline)(__this, ___0_value, method);
+}
 // System.Boolean System.IO.Enumeration.FileSystemEntry::get_IsDirectory()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FileSystemEntry_get_IsDirectory_mDAD3A4C87FC9FA2F0D305497266D2E14D135F7CF (FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* __this, const RuntimeMethod* method) ;
 // System.Boolean System.IO.Enumeration.FileSystemEnumerableFactory::MatchesPattern(System.String,System.ReadOnlySpan`1<System.Char>,System.IO.EnumerationOptions)
@@ -4500,6 +4861,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FileSystemEnumerableFactory_MatchesPatte
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m0499FE3028330DB904D14AF0BCAB83F737172566 (U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C* __this, const RuntimeMethod* method) ;
 // System.String System.IO.Enumeration.FileSystemEntry::ToSpecifiedFullPath()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* FileSystemEntry_ToSpecifiedFullPath_mADF59883D5AE262198A6B7E0A3418B827077076D (FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* __this, const RuntimeMethod* method) ;
+// System.IO.FileSystemInfo System.IO.Enumeration.FileSystemEntry::ToFileSystemInfo()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FileSystemInfo_tE3063B9229F46B05A5F6D018C8C4CA510104E8E9* FileSystemEntry_ToFileSystemInfo_mCAE56C0B077C9F4154C2A28341A8F4E3468A518F (FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* __this, const RuntimeMethod* method) ;
 // System.Void System.Text.ValueStringBuilder::.ctor(System.Span`1<System.Char>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueStringBuilder__ctor_m9898C3DA07C643BDD0DD94617069181564C92D12 (ValueStringBuilder_tC142140E6C0B9CD2BA423636F1BB5822672673E9* __this, Span_1_tEDDF15FCF9EC6DEBA0F696BAACDDBAB9D92C252D ___0_initialBuffer, const RuntimeMethod* method) ;
 // System.Int32 System.Text.ValueStringBuilder::get_Length()
@@ -15797,6 +16160,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FileSystemEntry_get_IsDirectory_mDAD3A4C
 		return (bool)((!(((uint32_t)((int32_t)((int32_t)L_0&((int32_t)16)))) <= ((uint32_t)0)))? 1 : 0);
 	}
 }
+// System.IO.FileSystemInfo System.IO.Enumeration.FileSystemEntry::ToFileSystemInfo()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FileSystemInfo_tE3063B9229F46B05A5F6D018C8C4CA510104E8E9* FileSystemEntry_ToFileSystemInfo_mCAE56C0B077C9F4154C2A28341A8F4E3468A518F (FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1 L_0;
+		L_0 = FileSystemEntry_get_Directory_m6D30A6BF9BD8C8197DB3DF0A4800E593D767A064_inline(__this, NULL);
+		ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1 L_1;
+		L_1 = FileSystemEntry_get_FileName_m33D89416B0459807829E6A0F521E423616EC92E4(__this, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
+		String_t* L_2;
+		L_2 = Path_Join_mA8659405C90B9441AA2249C7D45B587808ABCB3F(L_0, L_1, NULL);
+		FileSystemInfo_tE3063B9229F46B05A5F6D018C8C4CA510104E8E9* L_3;
+		L_3 = FileSystemInfo_Create_mBDB88E3D2AE60B1BDB46F2DFDE9CA9AB17573FBF(L_2, __this, NULL);
+		return L_3;
+	}
+}
 // System.String System.IO.Enumeration.FileSystemEntry::ToSpecifiedFullPath()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* FileSystemEntry_ToSpecifiedFullPath_mADF59883D5AE262198A6B7E0A3418B827077076D (FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* __this, const RuntimeMethod* method) 
 {
@@ -16451,6 +16836,249 @@ IL_0034:
 		return L_14;
 	}
 }
+// System.Collections.Generic.IEnumerable`1<System.IO.FileInfo> System.IO.Enumeration.FileSystemEnumerableFactory::FileInfos(System.String,System.String,System.IO.EnumerationOptions)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FileSystemEnumerableFactory_FileInfos_m38DCBDA029524ED38AAC4F3AD4F2BAB66A32F661 (String_t* ___0_directory, String_t* ___1_expression, EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* ___2_options, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FileSystemEnumerable_1__ctor_m1CC06D762AD983968DE3D8A2F5A78EA0B07F65DE_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FileSystemEnumerable_1_set_ShouldIncludePredicate_mF2AC1C5E55282C7E73C18E0E99D2472604014E84_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FileSystemEnumerable_1_t8196C813B8208C9B20BC0764C83466E896524F79_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FindPredicate_t22C2CB6CB0638F1A35C31C32B242A3EE27335440_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FindTransform_t1BA8EE39BE6152C5BFC859D5984703E33DEB9578_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3CFileInfosU3Eb__6_0_m6CE09DEBB1B5D86A4C84C06820E1BED676DB7AD1_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass6_0_U3CFileInfosU3Eb__1_mDC0D6176A72DE297D33169BB701F4B5C38B649AF_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass6_0_t42B15982543543495A584C3DF4144E7683B6B14C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CU3Ec__DisplayClass6_0_t42B15982543543495A584C3DF4144E7683B6B14C* V_0 = NULL;
+	FindTransform_t1BA8EE39BE6152C5BFC859D5984703E33DEB9578* G_B2_0 = NULL;
+	String_t* G_B2_1 = NULL;
+	FindTransform_t1BA8EE39BE6152C5BFC859D5984703E33DEB9578* G_B1_0 = NULL;
+	String_t* G_B1_1 = NULL;
+	{
+		U3CU3Ec__DisplayClass6_0_t42B15982543543495A584C3DF4144E7683B6B14C* L_0 = (U3CU3Ec__DisplayClass6_0_t42B15982543543495A584C3DF4144E7683B6B14C*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass6_0_t42B15982543543495A584C3DF4144E7683B6B14C_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		U3CU3Ec__DisplayClass6_0__ctor_m848166D3235A5F10207DE7490D9F6CFACDCBDF02(L_0, NULL);
+		V_0 = L_0;
+		U3CU3Ec__DisplayClass6_0_t42B15982543543495A584C3DF4144E7683B6B14C* L_1 = V_0;
+		String_t* L_2 = ___1_expression;
+		NullCheck(L_1);
+		L_1->___expression_0 = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___expression_0), (void*)L_2);
+		U3CU3Ec__DisplayClass6_0_t42B15982543543495A584C3DF4144E7683B6B14C* L_3 = V_0;
+		EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* L_4 = ___2_options;
+		NullCheck(L_3);
+		L_3->___options_1 = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&L_3->___options_1), (void*)L_4);
+		String_t* L_5 = ___0_directory;
+		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var);
+		FindTransform_t1BA8EE39BE6152C5BFC859D5984703E33DEB9578* L_6 = ((U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var))->___U3CU3E9__6_0_4;
+		FindTransform_t1BA8EE39BE6152C5BFC859D5984703E33DEB9578* L_7 = L_6;
+		G_B1_0 = L_7;
+		G_B1_1 = L_5;
+		if (L_7)
+		{
+			G_B2_0 = L_7;
+			G_B2_1 = L_5;
+			goto IL_0034;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var);
+		U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C* L_8 = ((U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var))->___U3CU3E9_0;
+		FindTransform_t1BA8EE39BE6152C5BFC859D5984703E33DEB9578* L_9 = (FindTransform_t1BA8EE39BE6152C5BFC859D5984703E33DEB9578*)il2cpp_codegen_object_new(FindTransform_t1BA8EE39BE6152C5BFC859D5984703E33DEB9578_il2cpp_TypeInfo_var);
+		NullCheck(L_9);
+		FindTransform__ctor_mD422B9150CA552F0DBB518409121156B6C3B452C(L_9, L_8, (intptr_t)((void*)U3CU3Ec_U3CFileInfosU3Eb__6_0_m6CE09DEBB1B5D86A4C84C06820E1BED676DB7AD1_RuntimeMethod_var), NULL);
+		FindTransform_t1BA8EE39BE6152C5BFC859D5984703E33DEB9578* L_10 = L_9;
+		((U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var))->___U3CU3E9__6_0_4 = L_10;
+		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var))->___U3CU3E9__6_0_4), (void*)L_10);
+		G_B2_0 = L_10;
+		G_B2_1 = G_B1_1;
+	}
+
+IL_0034:
+	{
+		U3CU3Ec__DisplayClass6_0_t42B15982543543495A584C3DF4144E7683B6B14C* L_11 = V_0;
+		NullCheck(L_11);
+		EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* L_12 = L_11->___options_1;
+		FileSystemEnumerable_1_t8196C813B8208C9B20BC0764C83466E896524F79* L_13 = (FileSystemEnumerable_1_t8196C813B8208C9B20BC0764C83466E896524F79*)il2cpp_codegen_object_new(FileSystemEnumerable_1_t8196C813B8208C9B20BC0764C83466E896524F79_il2cpp_TypeInfo_var);
+		NullCheck(L_13);
+		FileSystemEnumerable_1__ctor_m1CC06D762AD983968DE3D8A2F5A78EA0B07F65DE(L_13, G_B2_1, G_B2_0, L_12, FileSystemEnumerable_1__ctor_m1CC06D762AD983968DE3D8A2F5A78EA0B07F65DE_RuntimeMethod_var);
+		FileSystemEnumerable_1_t8196C813B8208C9B20BC0764C83466E896524F79* L_14 = L_13;
+		U3CU3Ec__DisplayClass6_0_t42B15982543543495A584C3DF4144E7683B6B14C* L_15 = V_0;
+		FindPredicate_t22C2CB6CB0638F1A35C31C32B242A3EE27335440* L_16 = (FindPredicate_t22C2CB6CB0638F1A35C31C32B242A3EE27335440*)il2cpp_codegen_object_new(FindPredicate_t22C2CB6CB0638F1A35C31C32B242A3EE27335440_il2cpp_TypeInfo_var);
+		NullCheck(L_16);
+		FindPredicate__ctor_mB1BA69B3D82C0FD83F4F7F4484091E92A503D82B(L_16, L_15, (intptr_t)((void*)U3CU3Ec__DisplayClass6_0_U3CFileInfosU3Eb__1_mDC0D6176A72DE297D33169BB701F4B5C38B649AF_RuntimeMethod_var), NULL);
+		NullCheck(L_14);
+		FileSystemEnumerable_1_set_ShouldIncludePredicate_mF2AC1C5E55282C7E73C18E0E99D2472604014E84_inline(L_14, L_16, FileSystemEnumerable_1_set_ShouldIncludePredicate_mF2AC1C5E55282C7E73C18E0E99D2472604014E84_RuntimeMethod_var);
+		return L_14;
+	}
+}
+// System.Collections.Generic.IEnumerable`1<System.IO.DirectoryInfo> System.IO.Enumeration.FileSystemEnumerableFactory::DirectoryInfos(System.String,System.String,System.IO.EnumerationOptions)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FileSystemEnumerableFactory_DirectoryInfos_m584BDCC8114BBBD3739C9A856AC4BB8036EF48F3 (String_t* ___0_directory, String_t* ___1_expression, EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* ___2_options, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FileSystemEnumerable_1__ctor_mFBCFD7E49A0EDBA99AD9E9EE7F50C17A049120D7_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FileSystemEnumerable_1_set_ShouldIncludePredicate_m3831C543CC5FFD8E0C98E9344895F2F78FDB7FC9_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FileSystemEnumerable_1_t9C950A0D8C8B2EB9B11B70F470990A99D009A1FB_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FindPredicate_tB9EFFCED41838E88AE71B517440E1A0774823BE4_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FindTransform_t75D6595DE7881AA25EABC0FB89AC2E76CA291D13_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3CDirectoryInfosU3Eb__7_0_m3D3D664BFD618E447141AC68D184D85874F53B60_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass7_0_U3CDirectoryInfosU3Eb__1_m62ABD45598CF2AFCAC00C51BC71F03FD0322F4D4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass7_0_t0929EFC34D7883630E211C3F3354BD7A33F1E327_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CU3Ec__DisplayClass7_0_t0929EFC34D7883630E211C3F3354BD7A33F1E327* V_0 = NULL;
+	FindTransform_t75D6595DE7881AA25EABC0FB89AC2E76CA291D13* G_B2_0 = NULL;
+	String_t* G_B2_1 = NULL;
+	FindTransform_t75D6595DE7881AA25EABC0FB89AC2E76CA291D13* G_B1_0 = NULL;
+	String_t* G_B1_1 = NULL;
+	{
+		U3CU3Ec__DisplayClass7_0_t0929EFC34D7883630E211C3F3354BD7A33F1E327* L_0 = (U3CU3Ec__DisplayClass7_0_t0929EFC34D7883630E211C3F3354BD7A33F1E327*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass7_0_t0929EFC34D7883630E211C3F3354BD7A33F1E327_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		U3CU3Ec__DisplayClass7_0__ctor_mE110AB4775FBD7A1DF94AEF53160EAF67F9F8E09(L_0, NULL);
+		V_0 = L_0;
+		U3CU3Ec__DisplayClass7_0_t0929EFC34D7883630E211C3F3354BD7A33F1E327* L_1 = V_0;
+		String_t* L_2 = ___1_expression;
+		NullCheck(L_1);
+		L_1->___expression_0 = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___expression_0), (void*)L_2);
+		U3CU3Ec__DisplayClass7_0_t0929EFC34D7883630E211C3F3354BD7A33F1E327* L_3 = V_0;
+		EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* L_4 = ___2_options;
+		NullCheck(L_3);
+		L_3->___options_1 = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&L_3->___options_1), (void*)L_4);
+		String_t* L_5 = ___0_directory;
+		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var);
+		FindTransform_t75D6595DE7881AA25EABC0FB89AC2E76CA291D13* L_6 = ((U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var))->___U3CU3E9__7_0_5;
+		FindTransform_t75D6595DE7881AA25EABC0FB89AC2E76CA291D13* L_7 = L_6;
+		G_B1_0 = L_7;
+		G_B1_1 = L_5;
+		if (L_7)
+		{
+			G_B2_0 = L_7;
+			G_B2_1 = L_5;
+			goto IL_0034;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var);
+		U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C* L_8 = ((U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var))->___U3CU3E9_0;
+		FindTransform_t75D6595DE7881AA25EABC0FB89AC2E76CA291D13* L_9 = (FindTransform_t75D6595DE7881AA25EABC0FB89AC2E76CA291D13*)il2cpp_codegen_object_new(FindTransform_t75D6595DE7881AA25EABC0FB89AC2E76CA291D13_il2cpp_TypeInfo_var);
+		NullCheck(L_9);
+		FindTransform__ctor_m83D22894BC3F00C45E7C18AFBB7A00A612C52D99(L_9, L_8, (intptr_t)((void*)U3CU3Ec_U3CDirectoryInfosU3Eb__7_0_m3D3D664BFD618E447141AC68D184D85874F53B60_RuntimeMethod_var), NULL);
+		FindTransform_t75D6595DE7881AA25EABC0FB89AC2E76CA291D13* L_10 = L_9;
+		((U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var))->___U3CU3E9__7_0_5 = L_10;
+		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var))->___U3CU3E9__7_0_5), (void*)L_10);
+		G_B2_0 = L_10;
+		G_B2_1 = G_B1_1;
+	}
+
+IL_0034:
+	{
+		U3CU3Ec__DisplayClass7_0_t0929EFC34D7883630E211C3F3354BD7A33F1E327* L_11 = V_0;
+		NullCheck(L_11);
+		EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* L_12 = L_11->___options_1;
+		FileSystemEnumerable_1_t9C950A0D8C8B2EB9B11B70F470990A99D009A1FB* L_13 = (FileSystemEnumerable_1_t9C950A0D8C8B2EB9B11B70F470990A99D009A1FB*)il2cpp_codegen_object_new(FileSystemEnumerable_1_t9C950A0D8C8B2EB9B11B70F470990A99D009A1FB_il2cpp_TypeInfo_var);
+		NullCheck(L_13);
+		FileSystemEnumerable_1__ctor_mFBCFD7E49A0EDBA99AD9E9EE7F50C17A049120D7(L_13, G_B2_1, G_B2_0, L_12, FileSystemEnumerable_1__ctor_mFBCFD7E49A0EDBA99AD9E9EE7F50C17A049120D7_RuntimeMethod_var);
+		FileSystemEnumerable_1_t9C950A0D8C8B2EB9B11B70F470990A99D009A1FB* L_14 = L_13;
+		U3CU3Ec__DisplayClass7_0_t0929EFC34D7883630E211C3F3354BD7A33F1E327* L_15 = V_0;
+		FindPredicate_tB9EFFCED41838E88AE71B517440E1A0774823BE4* L_16 = (FindPredicate_tB9EFFCED41838E88AE71B517440E1A0774823BE4*)il2cpp_codegen_object_new(FindPredicate_tB9EFFCED41838E88AE71B517440E1A0774823BE4_il2cpp_TypeInfo_var);
+		NullCheck(L_16);
+		FindPredicate__ctor_m28E26C0AD83B4CE8BA8159F12EFB797B604A2590(L_16, L_15, (intptr_t)((void*)U3CU3Ec__DisplayClass7_0_U3CDirectoryInfosU3Eb__1_m62ABD45598CF2AFCAC00C51BC71F03FD0322F4D4_RuntimeMethod_var), NULL);
+		NullCheck(L_14);
+		FileSystemEnumerable_1_set_ShouldIncludePredicate_m3831C543CC5FFD8E0C98E9344895F2F78FDB7FC9_inline(L_14, L_16, FileSystemEnumerable_1_set_ShouldIncludePredicate_m3831C543CC5FFD8E0C98E9344895F2F78FDB7FC9_RuntimeMethod_var);
+		return L_14;
+	}
+}
+// System.Collections.Generic.IEnumerable`1<System.IO.FileSystemInfo> System.IO.Enumeration.FileSystemEnumerableFactory::FileSystemInfos(System.String,System.String,System.IO.EnumerationOptions)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FileSystemEnumerableFactory_FileSystemInfos_m75734EF7E53CC2F28EA416B49975EF43F280A3D4 (String_t* ___0_directory, String_t* ___1_expression, EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* ___2_options, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FileSystemEnumerable_1__ctor_mD1163F82BD861CA1D7F1850CFDC3785B267E9AE1_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FileSystemEnumerable_1_set_ShouldIncludePredicate_m9FCC6D3F20539816932C7422A28AB932B38E096E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FileSystemEnumerable_1_t27B3DA4E512787E62768A89F2D1D5AA5CB06CBC7_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FindPredicate_t24739D159880B605AFC0F3CC2FE8440811AE65BF_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FindTransform_t9E2F83F81BF4D57C63DE8DA621CAE37DAEB999B8_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3CFileSystemInfosU3Eb__8_0_m75F0120FE217E3EB81907AA9F20EB3B35111E27C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass8_0_U3CFileSystemInfosU3Eb__1_m76E622C639EDBC1D4E9C3BBB90B4FA9A903A243E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass8_0_tE9518B723C9279791CE6BD1989EB3E8062D2AC9B_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CU3Ec__DisplayClass8_0_tE9518B723C9279791CE6BD1989EB3E8062D2AC9B* V_0 = NULL;
+	FindTransform_t9E2F83F81BF4D57C63DE8DA621CAE37DAEB999B8* G_B2_0 = NULL;
+	String_t* G_B2_1 = NULL;
+	FindTransform_t9E2F83F81BF4D57C63DE8DA621CAE37DAEB999B8* G_B1_0 = NULL;
+	String_t* G_B1_1 = NULL;
+	{
+		U3CU3Ec__DisplayClass8_0_tE9518B723C9279791CE6BD1989EB3E8062D2AC9B* L_0 = (U3CU3Ec__DisplayClass8_0_tE9518B723C9279791CE6BD1989EB3E8062D2AC9B*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass8_0_tE9518B723C9279791CE6BD1989EB3E8062D2AC9B_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		U3CU3Ec__DisplayClass8_0__ctor_mB84FB59A131156C8B1FC2212016493D905A0B67F(L_0, NULL);
+		V_0 = L_0;
+		U3CU3Ec__DisplayClass8_0_tE9518B723C9279791CE6BD1989EB3E8062D2AC9B* L_1 = V_0;
+		String_t* L_2 = ___1_expression;
+		NullCheck(L_1);
+		L_1->___expression_0 = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___expression_0), (void*)L_2);
+		U3CU3Ec__DisplayClass8_0_tE9518B723C9279791CE6BD1989EB3E8062D2AC9B* L_3 = V_0;
+		EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* L_4 = ___2_options;
+		NullCheck(L_3);
+		L_3->___options_1 = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&L_3->___options_1), (void*)L_4);
+		String_t* L_5 = ___0_directory;
+		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var);
+		FindTransform_t9E2F83F81BF4D57C63DE8DA621CAE37DAEB999B8* L_6 = ((U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var))->___U3CU3E9__8_0_6;
+		FindTransform_t9E2F83F81BF4D57C63DE8DA621CAE37DAEB999B8* L_7 = L_6;
+		G_B1_0 = L_7;
+		G_B1_1 = L_5;
+		if (L_7)
+		{
+			G_B2_0 = L_7;
+			G_B2_1 = L_5;
+			goto IL_0034;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var);
+		U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C* L_8 = ((U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var))->___U3CU3E9_0;
+		FindTransform_t9E2F83F81BF4D57C63DE8DA621CAE37DAEB999B8* L_9 = (FindTransform_t9E2F83F81BF4D57C63DE8DA621CAE37DAEB999B8*)il2cpp_codegen_object_new(FindTransform_t9E2F83F81BF4D57C63DE8DA621CAE37DAEB999B8_il2cpp_TypeInfo_var);
+		NullCheck(L_9);
+		FindTransform__ctor_m6E724A9F10594FB598DE771ADCF7A59A1F0C69A0(L_9, L_8, (intptr_t)((void*)U3CU3Ec_U3CFileSystemInfosU3Eb__8_0_m75F0120FE217E3EB81907AA9F20EB3B35111E27C_RuntimeMethod_var), NULL);
+		FindTransform_t9E2F83F81BF4D57C63DE8DA621CAE37DAEB999B8* L_10 = L_9;
+		((U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var))->___U3CU3E9__8_0_6 = L_10;
+		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C_il2cpp_TypeInfo_var))->___U3CU3E9__8_0_6), (void*)L_10);
+		G_B2_0 = L_10;
+		G_B2_1 = G_B1_1;
+	}
+
+IL_0034:
+	{
+		U3CU3Ec__DisplayClass8_0_tE9518B723C9279791CE6BD1989EB3E8062D2AC9B* L_11 = V_0;
+		NullCheck(L_11);
+		EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* L_12 = L_11->___options_1;
+		FileSystemEnumerable_1_t27B3DA4E512787E62768A89F2D1D5AA5CB06CBC7* L_13 = (FileSystemEnumerable_1_t27B3DA4E512787E62768A89F2D1D5AA5CB06CBC7*)il2cpp_codegen_object_new(FileSystemEnumerable_1_t27B3DA4E512787E62768A89F2D1D5AA5CB06CBC7_il2cpp_TypeInfo_var);
+		NullCheck(L_13);
+		FileSystemEnumerable_1__ctor_mD1163F82BD861CA1D7F1850CFDC3785B267E9AE1(L_13, G_B2_1, G_B2_0, L_12, FileSystemEnumerable_1__ctor_mD1163F82BD861CA1D7F1850CFDC3785B267E9AE1_RuntimeMethod_var);
+		FileSystemEnumerable_1_t27B3DA4E512787E62768A89F2D1D5AA5CB06CBC7* L_14 = L_13;
+		U3CU3Ec__DisplayClass8_0_tE9518B723C9279791CE6BD1989EB3E8062D2AC9B* L_15 = V_0;
+		FindPredicate_t24739D159880B605AFC0F3CC2FE8440811AE65BF* L_16 = (FindPredicate_t24739D159880B605AFC0F3CC2FE8440811AE65BF*)il2cpp_codegen_object_new(FindPredicate_t24739D159880B605AFC0F3CC2FE8440811AE65BF_il2cpp_TypeInfo_var);
+		NullCheck(L_16);
+		FindPredicate__ctor_mC273F15A7A63C35AA056D3B22222B7ECDBE56BDF(L_16, L_15, (intptr_t)((void*)U3CU3Ec__DisplayClass8_0_U3CFileSystemInfosU3Eb__1_m76E622C639EDBC1D4E9C3BBB90B4FA9A903A243E_RuntimeMethod_var), NULL);
+		NullCheck(L_14);
+		FileSystemEnumerable_1_set_ShouldIncludePredicate_m9FCC6D3F20539816932C7422A28AB932B38E096E_inline(L_14, L_16, FileSystemEnumerable_1_set_ShouldIncludePredicate_m9FCC6D3F20539816932C7422A28AB932B38E096E_RuntimeMethod_var);
+		return L_14;
+	}
+}
 // System.Void System.IO.Enumeration.FileSystemEnumerableFactory::.cctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FileSystemEnumerableFactory__cctor_m0AF17877CDFF804934E1DA6A5584C6F045C70E56 (const RuntimeMethod* method) 
 {
@@ -16587,6 +17215,48 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CUserEntriesU3Eb__5_0_mD5
 		return L_1;
 	}
 }
+// System.IO.FileInfo System.IO.Enumeration.FileSystemEnumerableFactory/<>c::<FileInfos>b__6_0(System.IO.Enumeration.FileSystemEntry&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FileInfo_t62782BBAFA832A78724E4CF2EE96548B8466AB1C* U3CU3Ec_U3CFileInfosU3Eb__6_0_m6CE09DEBB1B5D86A4C84C06820E1BED676DB7AD1 (U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C* __this, FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* ___0_entry, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FileInfo_t62782BBAFA832A78724E4CF2EE96548B8466AB1C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* L_0 = ___0_entry;
+		FileSystemInfo_tE3063B9229F46B05A5F6D018C8C4CA510104E8E9* L_1;
+		L_1 = FileSystemEntry_ToFileSystemInfo_mCAE56C0B077C9F4154C2A28341A8F4E3468A518F(L_0, NULL);
+		return ((FileInfo_t62782BBAFA832A78724E4CF2EE96548B8466AB1C*)CastclassSealed((RuntimeObject*)L_1, FileInfo_t62782BBAFA832A78724E4CF2EE96548B8466AB1C_il2cpp_TypeInfo_var));
+	}
+}
+// System.IO.DirectoryInfo System.IO.Enumeration.FileSystemEnumerableFactory/<>c::<DirectoryInfos>b__7_0(System.IO.Enumeration.FileSystemEntry&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DirectoryInfo_tEAEEC018EB49B4A71907FFEAFE935FAA8F9C1FE2* U3CU3Ec_U3CDirectoryInfosU3Eb__7_0_m3D3D664BFD618E447141AC68D184D85874F53B60 (U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C* __this, FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* ___0_entry, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DirectoryInfo_tEAEEC018EB49B4A71907FFEAFE935FAA8F9C1FE2_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* L_0 = ___0_entry;
+		FileSystemInfo_tE3063B9229F46B05A5F6D018C8C4CA510104E8E9* L_1;
+		L_1 = FileSystemEntry_ToFileSystemInfo_mCAE56C0B077C9F4154C2A28341A8F4E3468A518F(L_0, NULL);
+		return ((DirectoryInfo_tEAEEC018EB49B4A71907FFEAFE935FAA8F9C1FE2*)CastclassSealed((RuntimeObject*)L_1, DirectoryInfo_tEAEEC018EB49B4A71907FFEAFE935FAA8F9C1FE2_il2cpp_TypeInfo_var));
+	}
+}
+// System.IO.FileSystemInfo System.IO.Enumeration.FileSystemEnumerableFactory/<>c::<FileSystemInfos>b__8_0(System.IO.Enumeration.FileSystemEntry&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FileSystemInfo_tE3063B9229F46B05A5F6D018C8C4CA510104E8E9* U3CU3Ec_U3CFileSystemInfosU3Eb__8_0_m75F0120FE217E3EB81907AA9F20EB3B35111E27C (U3CU3Ec_t3F46F6A3E1DFBAE5F32EA4631FF9DF510888F94C* __this, FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* ___0_entry, const RuntimeMethod* method) 
+{
+	{
+		FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* L_0 = ___0_entry;
+		FileSystemInfo_tE3063B9229F46B05A5F6D018C8C4CA510104E8E9* L_1;
+		L_1 = FileSystemEntry_ToFileSystemInfo_mCAE56C0B077C9F4154C2A28341A8F4E3468A518F(L_0, NULL);
+		return L_1;
+	}
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -16656,6 +17326,145 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0__ctor_m400BA8EA
 }
 // System.Boolean System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass5_0::<UserEntries>b__1(System.IO.Enumeration.FileSystemEntry&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass5_0_U3CUserEntriesU3Eb__1_mCAE83636AB13AF6E3F825C02D6910C749A0B2FDE (U3CU3Ec__DisplayClass5_0_t511D5B53D024031FC3E4CA181F6C7BAF4AF73C13* __this, FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* ___0_entry, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FileSystemEnumerableFactory_t07E8E9F0677BFB13D4C8995A085259ABD554562F_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = __this->___expression_0;
+		FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* L_1 = ___0_entry;
+		ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1 L_2;
+		L_2 = FileSystemEntry_get_FileName_m33D89416B0459807829E6A0F521E423616EC92E4(L_1, NULL);
+		EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* L_3 = __this->___options_1;
+		il2cpp_codegen_runtime_class_init_inline(FileSystemEnumerableFactory_t07E8E9F0677BFB13D4C8995A085259ABD554562F_il2cpp_TypeInfo_var);
+		bool L_4;
+		L_4 = FileSystemEnumerableFactory_MatchesPattern_mBFF4020C20F0DEEE54A7D92BB1D3D721E47C3191(L_0, L_2, L_3, NULL);
+		return L_4;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass6_0::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass6_0__ctor_m848166D3235A5F10207DE7490D9F6CFACDCBDF02 (U3CU3Ec__DisplayClass6_0_t42B15982543543495A584C3DF4144E7683B6B14C* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+// System.Boolean System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass6_0::<FileInfos>b__1(System.IO.Enumeration.FileSystemEntry&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass6_0_U3CFileInfosU3Eb__1_mDC0D6176A72DE297D33169BB701F4B5C38B649AF (U3CU3Ec__DisplayClass6_0_t42B15982543543495A584C3DF4144E7683B6B14C* __this, FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* ___0_entry, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FileSystemEnumerableFactory_t07E8E9F0677BFB13D4C8995A085259ABD554562F_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* L_0 = ___0_entry;
+		bool L_1;
+		L_1 = FileSystemEntry_get_IsDirectory_mDAD3A4C87FC9FA2F0D305497266D2E14D135F7CF(L_0, NULL);
+		if (L_1)
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		String_t* L_2 = __this->___expression_0;
+		FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* L_3 = ___0_entry;
+		ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1 L_4;
+		L_4 = FileSystemEntry_get_FileName_m33D89416B0459807829E6A0F521E423616EC92E4(L_3, NULL);
+		EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* L_5 = __this->___options_1;
+		il2cpp_codegen_runtime_class_init_inline(FileSystemEnumerableFactory_t07E8E9F0677BFB13D4C8995A085259ABD554562F_il2cpp_TypeInfo_var);
+		bool L_6;
+		L_6 = FileSystemEnumerableFactory_MatchesPattern_mBFF4020C20F0DEEE54A7D92BB1D3D721E47C3191(L_2, L_4, L_5, NULL);
+		return L_6;
+	}
+
+IL_0020:
+	{
+		return (bool)0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass7_0::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass7_0__ctor_mE110AB4775FBD7A1DF94AEF53160EAF67F9F8E09 (U3CU3Ec__DisplayClass7_0_t0929EFC34D7883630E211C3F3354BD7A33F1E327* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+// System.Boolean System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass7_0::<DirectoryInfos>b__1(System.IO.Enumeration.FileSystemEntry&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass7_0_U3CDirectoryInfosU3Eb__1_m62ABD45598CF2AFCAC00C51BC71F03FD0322F4D4 (U3CU3Ec__DisplayClass7_0_t0929EFC34D7883630E211C3F3354BD7A33F1E327* __this, FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* ___0_entry, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FileSystemEnumerableFactory_t07E8E9F0677BFB13D4C8995A085259ABD554562F_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* L_0 = ___0_entry;
+		bool L_1;
+		L_1 = FileSystemEntry_get_IsDirectory_mDAD3A4C87FC9FA2F0D305497266D2E14D135F7CF(L_0, NULL);
+		if (!L_1)
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		String_t* L_2 = __this->___expression_0;
+		FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* L_3 = ___0_entry;
+		ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1 L_4;
+		L_4 = FileSystemEntry_get_FileName_m33D89416B0459807829E6A0F521E423616EC92E4(L_3, NULL);
+		EnumerationOptions_t7C636684933367EC8E4B428073BF1FD4C5CDCA0B* L_5 = __this->___options_1;
+		il2cpp_codegen_runtime_class_init_inline(FileSystemEnumerableFactory_t07E8E9F0677BFB13D4C8995A085259ABD554562F_il2cpp_TypeInfo_var);
+		bool L_6;
+		L_6 = FileSystemEnumerableFactory_MatchesPattern_mBFF4020C20F0DEEE54A7D92BB1D3D721E47C3191(L_2, L_4, L_5, NULL);
+		return L_6;
+	}
+
+IL_0020:
+	{
+		return (bool)0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass8_0::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass8_0__ctor_mB84FB59A131156C8B1FC2212016493D905A0B67F (U3CU3Ec__DisplayClass8_0_tE9518B723C9279791CE6BD1989EB3E8062D2AC9B* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+// System.Boolean System.IO.Enumeration.FileSystemEnumerableFactory/<>c__DisplayClass8_0::<FileSystemInfos>b__1(System.IO.Enumeration.FileSystemEntry&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass8_0_U3CFileSystemInfosU3Eb__1_m76E622C639EDBC1D4E9C3BBB90B4FA9A903A243E (U3CU3Ec__DisplayClass8_0_tE9518B723C9279791CE6BD1989EB3E8062D2AC9B* __this, FileSystemEntry_t1AC410E35234CAADD69D36A0EB6730D40BB1484B* ___0_entry, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)

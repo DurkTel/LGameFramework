@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 3877285688
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 83beb149f908b3b0a6c1e27b1bb252d1
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f267fd2d8bcb1179236b6179ac5313bc
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_head_portrait_3.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_head_portrait_2.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_head_portrait_1.png
+Dependencies: []

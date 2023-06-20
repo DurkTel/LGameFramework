@@ -204,11 +204,16 @@ public class LaunchUpdate : MonoBehaviour
     {
 
         string localMD5;
+        AssetFile assetFile;
 
         foreach (var file in m_NetFiles)
         {
+            assetFile = file.Value;
+            //如果是扩展资源 跳过下载
+            if ((assetFile.flag & AssetFile.AssetFileFlag.ExtendDLC) == AssetFile.AssetFileFlag.ExtendDLC)
+                continue;
             //本地没有该文件或md5不同
-            if (m_LocalFiles == null || !m_LocalFiles.TryGetValue(file.Key, out localMD5) || localMD5 != file.Value.md5)
+            if (m_LocalFiles == null || !m_LocalFiles.TryGetValue(file.Key, out localMD5) || localMD5 != assetFile.md5)
             {
                 if (file.Key.Contains("001"))
                     m_UpdateCShare = true;

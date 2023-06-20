@@ -8,7 +8,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>LGameFramework.GameBase</RootNamespace>
     <ProjectGuid>{E3881B5C-8B66-CD92-1CD0-A75948BBF486}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -56,8 +56,17 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AOT\GameBase\AssetFile.cs" />
-    <Compile Include="Assets\Scripts\AOT\GameBase\Expansion\LJsonUtility.cs" />
+    <Compile Include="Assets\Scripts\AOT\GameBase\Singleton\SingletonMono.cs" />
+    <Compile Include="Assets\Scripts\AOT\GameBase\Utility\MobileUtility.cs" />
+    <Compile Include="Assets\Scripts\AOT\GameBase\Singleton\SingletonMonoAuto.cs" />
+    <Compile Include="Assets\Scripts\AOT\GameBase\Utility\LJsonUtility.cs" />
+    <Compile Include="Assets\Scripts\AOT\GameBase\Files\AssetFile.cs" />
+    <Compile Include="Assets\Scripts\AOT\GameBase\Singleton\SingletonBase.cs" />
+    <Compile Include="Assets\Scripts\AOT\GameBase\Expansion\DictionaryEx.cs" />
+    <Compile Include="Assets\Scripts\AOT\GameBase\Expansion\TimerManager.cs" />
+    <Compile Include="Assets\Scripts\AOT\GameBase\Utility\Utility.cs" />
+    <Compile Include="Assets\Scripts\AOT\GameBase\Expansion\Pool\ObjectPool.cs" />
+    <Compile Include="Assets\Scripts\AOT\GameBase\Files\AssetFileDownloader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\AOT\GameBase\Assembly-GameBase.asmdef" />
