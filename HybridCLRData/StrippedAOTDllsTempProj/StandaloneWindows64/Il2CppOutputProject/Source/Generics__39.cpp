@@ -5927,8 +5927,8 @@ struct RefCounted_t78303B1CD3D08C664ABB15EBD7C882DA3E06CF7D_StaticFields
 // SingletonMonoAuto`1<System.Object>
 struct SingletonMonoAuto_1_tE7979B11F926115EBA546B4166AED237DC1888A0_StaticFields
 {
-	// T SingletonMonoAuto`1::instance
-	RuntimeObject* ___instance_4;
+	// T SingletonMonoAuto`1::m_Instance
+	RuntimeObject* ___m_Instance_4;
 };
 
 // SingletonMonoAuto`1<System.Object>
@@ -28234,8 +28234,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* SingletonMonoAuto_1_get_Instan
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// if (instance == null)
-		RuntimeObject* L_0 = ((SingletonMonoAuto_1_tE7979B11F926115EBA546B4166AED237DC1888A0_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 0)))->___instance_4;
+		// if (m_Instance == null)
+		RuntimeObject* L_0 = ((SingletonMonoAuto_1_tE7979B11F926115EBA546B4166AED237DC1888A0_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 0)))->___m_Instance_4;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605((Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -28260,18 +28260,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* SingletonMonoAuto_1_get_Instan
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = L_5;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_DontDestroyOnLoad_m4B70C3AEF886C176543D1295507B6455C9DCAEA7((Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)L_6, NULL);
-		// instance = temp.AddComponent<T>();
+		// m_Instance = temp.AddComponent<T>();
 		NullCheck(L_6);
 		RuntimeObject* L_7;
 		L_7 = ((  RuntimeObject* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 3)))(L_6, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 3));
-		((SingletonMonoAuto_1_tE7979B11F926115EBA546B4166AED237DC1888A0_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 0)))->___instance_4 = L_7;
-		Il2CppCodeGenWriteBarrier((void**)(&((SingletonMonoAuto_1_tE7979B11F926115EBA546B4166AED237DC1888A0_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 0)))->___instance_4), (void*)L_7);
+		((SingletonMonoAuto_1_tE7979B11F926115EBA546B4166AED237DC1888A0_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 0)))->___m_Instance_4 = L_7;
+		Il2CppCodeGenWriteBarrier((void**)(&((SingletonMonoAuto_1_tE7979B11F926115EBA546B4166AED237DC1888A0_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 0)))->___m_Instance_4), (void*)L_7);
 	}
 
 IL_0036:
 	{
-		// return instance;
-		RuntimeObject* L_8 = ((SingletonMonoAuto_1_tE7979B11F926115EBA546B4166AED237DC1888A0_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 0)))->___instance_4;
+		// return m_Instance;
+		RuntimeObject* L_8 = ((SingletonMonoAuto_1_tE7979B11F926115EBA546B4166AED237DC1888A0_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 0)))->___m_Instance_4;
 		return L_8;
 	}
 }

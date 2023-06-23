@@ -1,8 +1,10 @@
-﻿using System;
+﻿using LGameFramework.GameBase;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Net.Configuration;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -17,6 +19,7 @@ public class LaunchUpdate : MonoBehaviour
         GetNetFile,
         CheckDifferences,
         CollectDownloadFile,
+        DownloadFile,
     }
 
     private string m_LocalVersion, m_NetVersion;
@@ -232,43 +235,27 @@ public class LaunchUpdate : MonoBehaviour
             m_DownloadList.Add("version.txt");
         }
 
-        yield return null;
+        yield return DownloadFile();
 
-        DownloadFile();
+        UpdateCompleted();
     }
 
 
-    private void DownloadFile()
+    private IEnumerator DownloadFile()
     {
-        if (m_DownloadList.Count == 0)
+        float timeS = Time.realtimeSinceStartup;
+        foreach (var assetName in m_DownloadList)
         {
-            UpdateCompleted();
-            return;
-        }
-
-        using (WebClient client = new WebClient())
-        {
-            string assetName = m_DownloadList[0];
             string url = Path.Combine(LaunchPath.s_NetServerPath, assetName.Replace("\\", "/"));
             string localPath = Path.Combine(LaunchPath.localDataPath, assetName).Replace("\\", "/");
-
-            if (!Directory.Exists(Path.GetDirectoryName(localPath)))
-                Directory.CreateDirectory(Path.GetDirectoryName(localPath));
-
-            if (File.Exists(localPath))
-                File.Delete(localPath);
-
-            client.DownloadFileAsync(new System.Uri(url), localPath);
-            client.DownloadProgressChanged += (p, a) => 
-            {
-
-                print(localPath + "下载进度:" + a.ProgressPercentage); 
-            };
-            client.DownloadFileCompleted += (p, a) => {
-                m_DownloadList.RemoveAt(0);
-                DownloadFile();
-            };
+            AssetFileDownloadQueue.Enqueue(url, localPath);
         }
+
+        yield return new WaitUntil(() => { return AssetFileDownloadQueue.Instance.downloadingCurrent.Count == 0; });
+
+        float timeE = Time.realtimeSinceStartup;
+        print("下载时长:" + (timeE - timeS));
+        m_DownloadList.Clear();
     }
 
     private void UpdateCompleted()

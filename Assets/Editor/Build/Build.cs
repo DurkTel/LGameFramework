@@ -433,8 +433,11 @@ public class Build : EditorWindow
         HybridCLR.Editor.Commands.CompileDllCommand.CompileDll(buildParameter.buildTarget);
         AssetDatabase.Refresh();
 
-        foreach (var dll in LaunchPath.s_HotUpdateDllName)
+        string[] deleteArray = new string[LaunchPath.s_HotUpdateDllName.Length];
+
+        for (int i = 0; i < LaunchPath.s_HotUpdateDllName.Length; i++)
         {
+            string dll = LaunchPath.s_HotUpdateDllName[i];
             string dllPath = Application.dataPath + "/../HybridCLRData/HotUpdateDlls/" + buildParameter.buildTarget.ToString() + "/" + dll;
 
             if (File.Exists(dllPath))
@@ -452,7 +455,8 @@ public class Build : EditorWindow
                 File.WriteAllBytes(targetPath, bytes);
                 ArrayUtility.Add<string>(ref abb.assetNames, projectPath);
                 ArrayUtility.Add<string>(ref abb.addressableNames, dll);
-                File.Delete(targetPath);
+
+                deleteArray[i] = targetPath;
             }
         }
 
@@ -460,6 +464,12 @@ public class Build : EditorWindow
 
         if (BuildWriteInfo(new List<AssetBundleBuild>() { abb }, buildParameter.buildOutPath, BuildAssetBundleOptions.ChunkBasedCompression, buildParameter.buildTarget, buildParameter.clearFolder, Path.GetFileNameWithoutExtension(s_outPutNameCSharp)))
             Debug.Log("打包Dll成功~  ^^_");
+
+
+        foreach (var item in deleteArray)
+        {
+            File.Delete(item);
+        }
 
     }
     #endregion

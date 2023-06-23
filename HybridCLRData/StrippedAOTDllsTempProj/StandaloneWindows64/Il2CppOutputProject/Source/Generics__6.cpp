@@ -181,6 +181,8 @@ struct InvokerFuncInvoker3<R, T1*, T2, T3>
 	}
 };
 
+// System.Action`1<DictionaryEx`2<System.Object,System.Object>>
+struct Action_1_t01A4D26911DBF97D6DD912609BB888C238892CE2;
 // System.Action`1<System.Object>
 struct Action_1_t6F9EB113EB3F16226AEF811A2744F4111C116C87;
 // System.Comparison`1<UnityEngine.RaycastHit2D>
@@ -341,6 +343,8 @@ struct Dictionary_2_t9283A2526EFCCE82F0B8EBAF55887B5456F4480A;
 struct Dictionary_2_t01224C8DBCCFE276E97D2BF52F4D7B10D3642682;
 // System.Collections.Generic.Dictionary`2<System.Int32,System.Threading.Tasks.Task>
 struct Dictionary_2_t403063CE4960B4F46C688912237C6A27E550FF55;
+// System.Collections.Generic.Dictionary`2<System.Object,System.Object>
+struct Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA;
 // System.Collections.Generic.Dictionary`2<System.String,System.Int32>
 struct Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588;
 // System.Collections.Generic.Dictionary`2<System.String,UnityEngine.InputSystem.Utilities.JsonParser/JsonValue>
@@ -443,6 +447,8 @@ struct List_1_t41896DF347A129D13205BBFADE03DFB21E05E459;
 struct List_1_t4A80BCCFB0BC8742C8BB601365DB07226750573A;
 // System.Collections.Concurrent.ConcurrentDictionary`2/Node<System.Object,System.Object>
 struct Node_t821211F0535E80E80FDC8FFB600F681E98286BF0;
+// ObjectPool`1<DictionaryEx`2<System.Object,System.Object>>
+struct ObjectPool_1_t10BB4A0209E05F0C8C08511FAFADD68F16B8FC36;
 // System.Predicate`1<System.Object>
 struct Predicate_1_t8342C85FF4E41CD1F7024AC0CDC3E5312A32CB12;
 // System.Predicate`1<System.Threading.Tasks.Task>
@@ -451,6 +457,8 @@ struct Predicate_1_t7F48518B008C1472339EEEBABA3DE203FE1F26ED;
 struct Queue_1_t8AE59B42D21EB8315E2DD7EB15576A1BE58105EF;
 // System.Collections.ObjectModel.ReadOnlyCollection`1<System.Object>
 struct ReadOnlyCollection_1_t5397DF0DB61D1090E7BBC89395CECB8D020CED92;
+// System.Collections.Generic.Stack`1<DictionaryEx`2<System.Object,System.Object>>
+struct Stack_1_tF84B432585AD6B19ECF9AF8B9FE75D9D78A0A465;
 // System.Collections.Concurrent.ConcurrentDictionary`2/Tables<System.Object,System.Object>
 struct Tables_t14D3B197594232ACFA76B87EB205EB3661F6EAA6;
 // System.Threading.Tasks.TaskFactory`1<System.Nullable`1<System.Int32>>
@@ -841,6 +849,11 @@ struct DictionaryKeyCollectionDebugView_2_tC08631BE531E5EC3854703EE353C49F6DF4E7
 {
 };
 
+// DictionaryPool`2<System.Object,System.Object>
+struct DictionaryPool_2_tC5E773E80310D8EE8D510EBB7B44D3A6450BFEC2  : public RuntimeObject
+{
+};
+
 // System.Collections.Generic.DictionaryValueCollectionDebugView`2<System.Object,System.Object>
 struct DictionaryValueCollectionDebugView_2_t6C31CED4F7155C1B76E1E11EAC2ECE098A5F612B  : public RuntimeObject
 {
@@ -1033,6 +1046,17 @@ struct Node_t821211F0535E80E80FDC8FFB600F681E98286BF0  : public RuntimeObject
 	Node_t821211F0535E80E80FDC8FFB600F681E98286BF0* ____next_2;
 	// System.Int32 System.Collections.Concurrent.ConcurrentDictionary`2/Node::_hashcode
 	int32_t ____hashcode_3;
+};
+
+// ObjectPool`1<DictionaryEx`2<System.Object,System.Object>>
+struct ObjectPool_1_t10BB4A0209E05F0C8C08511FAFADD68F16B8FC36  : public RuntimeObject
+{
+	// System.Collections.Generic.Stack`1<T> ObjectPool`1::m_stack
+	Stack_1_tF84B432585AD6B19ECF9AF8B9FE75D9D78A0A465* ___m_stack_0;
+	// System.Action`1<T> ObjectPool`1::m_onGet
+	Action_1_t01A4D26911DBF97D6DD912609BB888C238892CE2* ___m_onGet_1;
+	// System.Action`1<T> ObjectPool`1::m_onRelease
+	Action_1_t01A4D26911DBF97D6DD912609BB888C238892CE2* ___m_onRelease_2;
 };
 
 // System.Collections.ObjectModel.ReadOnlyCollection`1<System.Object>
@@ -4762,6 +4786,11 @@ struct JsonValue_t01DB320267C848E729A400EF2345979978F851D2_marshaled_com
 	Il2CppIUnknown* ___anyValue_7;
 };
 
+// System.Action`1<DictionaryEx`2<System.Object,System.Object>>
+struct Action_1_t01A4D26911DBF97D6DD912609BB888C238892CE2  : public MulticastDelegate_t
+{
+};
+
 // System.Action`1<System.Threading.Tasks.Task`1<System.Nullable`1<System.Int32>>>
 struct Action_1_tE7E60800BAB8D8D90AE806130B19787F3CD867DC  : public MulticastDelegate_t
 {
@@ -5262,6 +5291,15 @@ struct ConcurrentDictionary_2_tF598E45B2A3ECB23FD311D829FB0AB32B1201ACF_StaticFi
 
 // System.Collections.Generic.DictionaryKeyCollectionDebugView`2<System.Object,System.Object>
 
+// DictionaryPool`2<System.Object,System.Object>
+struct DictionaryPool_2_tC5E773E80310D8EE8D510EBB7B44D3A6450BFEC2_StaticFields
+{
+	// ObjectPool`1<DictionaryEx`2<K,V>> DictionaryPool`2::s_DicPool
+	ObjectPool_1_t10BB4A0209E05F0C8C08511FAFADD68F16B8FC36* ___s_DicPool_0;
+};
+
+// DictionaryPool`2<System.Object,System.Object>
+
 // System.Collections.Generic.DictionaryValueCollectionDebugView`2<System.Object,System.Object>
 
 // System.Collections.Generic.DictionaryValueCollectionDebugView`2<System.Object,System.Object>
@@ -5355,6 +5393,10 @@ struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D_StaticFields
 // System.Collections.Concurrent.ConcurrentDictionary`2/Node<System.Object,System.Object>
 
 // System.Collections.Concurrent.ConcurrentDictionary`2/Node<System.Object,System.Object>
+
+// ObjectPool`1<DictionaryEx`2<System.Object,System.Object>>
+
+// ObjectPool`1<DictionaryEx`2<System.Object,System.Object>>
 
 // System.Collections.ObjectModel.ReadOnlyCollection`1<System.Object>
 
@@ -6227,6 +6269,10 @@ struct Type_t_StaticFields
 // UnityEngine.InputSystem.Utilities.JsonParser/JsonValue
 
 // UnityEngine.InputSystem.Utilities.JsonParser/JsonValue
+
+// System.Action`1<DictionaryEx`2<System.Object,System.Object>>
+
+// System.Action`1<DictionaryEx`2<System.Object,System.Object>>
 
 // System.Action`1<System.Threading.Tasks.Task`1<System.Nullable`1<System.Int32>>>
 
@@ -22838,6 +22884,69 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DictionaryEx_2_Clear_m37D8C28AC2948786D4
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void DictionaryPool`2<System.Object,System.Object>::Clear(System.Collections.Generic.Dictionary`2<K,V>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DictionaryPool_2_Clear_m8769439D5E3C45F3DE42D088A67D060855DC4837_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* ___0_l, const RuntimeMethod* method) 
+{
+	{
+		// static void Clear(Dictionary<K, V> l) { l.Clear(); }
+		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_0 = ___0_l;
+		NullCheck(L_0);
+		((  void (*) (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 1)))(L_0, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 1));
+		// static void Clear(Dictionary<K, V> l) { l.Clear(); }
+		return;
+	}
+}
+// DictionaryEx`2<K,V> DictionaryPool`2<System.Object,System.Object>::Get()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DictionaryEx_2_t56CD9A1FF915556F98789BB19BF4AD03E715B318* DictionaryPool_2_Get_mA1768C6F10A959DCF32D648943B67F73C60F733E_gshared (const RuntimeMethod* method) 
+{
+	{
+		// return s_DicPool.Get();
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
+		ObjectPool_1_t10BB4A0209E05F0C8C08511FAFADD68F16B8FC36* L_0 = ((DictionaryPool_2_tC5E773E80310D8EE8D510EBB7B44D3A6450BFEC2_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->___s_DicPool_0;
+		NullCheck(L_0);
+		DictionaryEx_2_t56CD9A1FF915556F98789BB19BF4AD03E715B318* L_1;
+		L_1 = ((  DictionaryEx_2_t56CD9A1FF915556F98789BB19BF4AD03E715B318* (*) (ObjectPool_1_t10BB4A0209E05F0C8C08511FAFADD68F16B8FC36*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 4)))(L_0, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 4));
+		return L_1;
+	}
+}
+// System.Void DictionaryPool`2<System.Object,System.Object>::Release(DictionaryEx`2<K,V>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DictionaryPool_2_Release_mAB354B1DF6DAC61041D4C3EB08C9584E0C31A658_gshared (DictionaryEx_2_t56CD9A1FF915556F98789BB19BF4AD03E715B318* ___0_toRelease, const RuntimeMethod* method) 
+{
+	{
+		// s_DicPool.Release(toRelease);
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
+		ObjectPool_1_t10BB4A0209E05F0C8C08511FAFADD68F16B8FC36* L_0 = ((DictionaryPool_2_tC5E773E80310D8EE8D510EBB7B44D3A6450BFEC2_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->___s_DicPool_0;
+		DictionaryEx_2_t56CD9A1FF915556F98789BB19BF4AD03E715B318* L_1 = ___0_toRelease;
+		NullCheck(L_0);
+		((  void (*) (ObjectPool_1_t10BB4A0209E05F0C8C08511FAFADD68F16B8FC36*, DictionaryEx_2_t56CD9A1FF915556F98789BB19BF4AD03E715B318*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 5)))(L_0, L_1, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 5));
+		// }
+		return;
+	}
+}
+// System.Void DictionaryPool`2<System.Object,System.Object>::.cctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DictionaryPool_2__cctor_m895DC18D8D9141EA3BF63176B5171A2704C0C99A_gshared (const RuntimeMethod* method) 
+{
+	{
+		// private static readonly ObjectPool<DictionaryEx<K, V>> s_DicPool = new ObjectPool<DictionaryEx<K, V>>(null, Clear);
+		Action_1_t01A4D26911DBF97D6DD912609BB888C238892CE2* L_0 = (Action_1_t01A4D26911DBF97D6DD912609BB888C238892CE2*)il2cpp_codegen_object_new(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 7));
+		NullCheck(L_0);
+		((  void (*) (Action_1_t01A4D26911DBF97D6DD912609BB888C238892CE2*, RuntimeObject*, intptr_t, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 8)))(L_0, NULL, (intptr_t)((void*)il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 6)), il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 8));
+		ObjectPool_1_t10BB4A0209E05F0C8C08511FAFADD68F16B8FC36* L_1 = (ObjectPool_1_t10BB4A0209E05F0C8C08511FAFADD68F16B8FC36*)il2cpp_codegen_object_new(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 3));
+		NullCheck(L_1);
+		((  void (*) (ObjectPool_1_t10BB4A0209E05F0C8C08511FAFADD68F16B8FC36*, Action_1_t01A4D26911DBF97D6DD912609BB888C238892CE2*, Action_1_t01A4D26911DBF97D6DD912609BB888C238892CE2*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 9)))(L_1, (Action_1_t01A4D26911DBF97D6DD912609BB888C238892CE2*)NULL, L_0, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 9));
+		((DictionaryPool_2_tC5E773E80310D8EE8D510EBB7B44D3A6450BFEC2_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->___s_DicPool_0 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&((DictionaryPool_2_tC5E773E80310D8EE8D510EBB7B44D3A6450BFEC2_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->___s_DicPool_0), (void*)L_1);
+		return;
+	}
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

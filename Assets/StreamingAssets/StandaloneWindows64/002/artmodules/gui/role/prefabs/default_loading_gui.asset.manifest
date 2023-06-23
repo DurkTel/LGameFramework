@@ -35,5 +35,5 @@ SerializeReferenceClassIdentifiers:
 Assets:
 - Assets/ArtModules/GUI/Role/Prefabs/Default_Loading_GUI.prefab
 Dependencies:
-- E:/UnityBuild/AssetBundle/StandaloneWindows64/002/artmodules/gui/role/images/roleicon.asset
-- E:/UnityBuild/AssetBundle/StandaloneWindows64/002/artmodules/gui/role/images/single/create_role_bg_1.asset
+- E:/UnityBundle/StandaloneWindows64/002/artmodules/gui/role/images/roleicon.asset
+- E:/UnityBundle/StandaloneWindows64/002/artmodules/gui/role/images/single/create_role_bg_1.asset
