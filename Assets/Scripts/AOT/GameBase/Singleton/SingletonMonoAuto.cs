@@ -5,7 +5,7 @@ public class SingletonMonoAuto<T> : MonoBehaviour where T : MonoBehaviour
 {
     private static T m_Instance;
 
-    public static T Instance
+    public static T instance
     {
         get
         {

@@ -3,18 +3,18 @@
 //继承Mono的单例基类
 public class SingletonMono<T> : MonoBehaviour where T : MonoBehaviour
 {
-    private static T instance;
+    private static T m_Instance;
 
-    public static T Instance
+    public static T instance
     {
         get
         {
-            return instance;
+            return m_Instance;
         }
     }
 
     protected virtual void Awake()
     {
-        instance = this as T;
+        m_Instance = this as T;
     }
 }

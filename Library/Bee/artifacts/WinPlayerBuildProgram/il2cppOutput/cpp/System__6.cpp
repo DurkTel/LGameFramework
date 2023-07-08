@@ -2433,9 +2433,9 @@ struct Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C
 struct Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE  : public MarshalByRefObject_t8C2F4C5854177FD60439EB1FCCFC1B3CFAFE8DCE
 {
 	// System.IO.Stream/ReadWriteTask System.IO.Stream::_activeReadWriteTask
-	ReadWriteTask_t0821BF49EE38596C7734E86E1A6A39D769BE2C05* ____activeReadWriteTask_3;
+	ReadWriteTask_t0821BF49EE38596C7734E86E1A6A39D769BE2C05* ____activeReadWriteTask_2;
 	// System.Threading.SemaphoreSlim System.IO.Stream::_asyncActiveSemaphore
-	SemaphoreSlim_t0D5CB5685D9BFA5BF95CEC6E7395490F933E8DB2* ____asyncActiveSemaphore_4;
+	SemaphoreSlim_t0D5CB5685D9BFA5BF95CEC6E7395490F933E8DB2* ____asyncActiveSemaphore_3;
 };
 
 // System.Runtime.Serialization.StreamingContext
@@ -2926,35 +2926,35 @@ struct Exception_t_marshaled_com
 struct FileStream_t07C7222EE10B75F352B89B76E60820160FF10AD8  : public Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE
 {
 	// System.Byte[] System.IO.FileStream::buf
-	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___buf_8;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___buf_6;
 	// System.String System.IO.FileStream::name
-	String_t* ___name_9;
+	String_t* ___name_7;
 	// Microsoft.Win32.SafeHandles.SafeFileHandle System.IO.FileStream::safeHandle
-	SafeFileHandle_t033FA6AAAC65F4BB25F4CBA9A242A58C95CD406E* ___safeHandle_10;
+	SafeFileHandle_t033FA6AAAC65F4BB25F4CBA9A242A58C95CD406E* ___safeHandle_8;
 	// System.Boolean System.IO.FileStream::isExposed
-	bool ___isExposed_11;
+	bool ___isExposed_9;
 	// System.Int64 System.IO.FileStream::append_startpos
-	int64_t ___append_startpos_12;
+	int64_t ___append_startpos_10;
 	// System.IO.FileAccess System.IO.FileStream::access
-	int32_t ___access_13;
+	int32_t ___access_11;
 	// System.Boolean System.IO.FileStream::owner
-	bool ___owner_14;
+	bool ___owner_12;
 	// System.Boolean System.IO.FileStream::async
-	bool ___async_15;
+	bool ___async_13;
 	// System.Boolean System.IO.FileStream::canseek
-	bool ___canseek_16;
+	bool ___canseek_14;
 	// System.Boolean System.IO.FileStream::anonymous
-	bool ___anonymous_17;
+	bool ___anonymous_15;
 	// System.Boolean System.IO.FileStream::buf_dirty
-	bool ___buf_dirty_18;
+	bool ___buf_dirty_16;
 	// System.Int32 System.IO.FileStream::buf_size
-	int32_t ___buf_size_19;
+	int32_t ___buf_size_17;
 	// System.Int32 System.IO.FileStream::buf_length
-	int32_t ___buf_length_20;
+	int32_t ___buf_length_18;
 	// System.Int32 System.IO.FileStream::buf_offset
-	int32_t ___buf_offset_21;
+	int32_t ___buf_offset_19;
 	// System.Int64 System.IO.FileStream::buf_start
-	int64_t ___buf_start_22;
+	int64_t ___buf_start_20;
 };
 
 // System.Net.FileWebRequest
@@ -3284,11 +3284,11 @@ struct WebHeaderCollection_tAF1CF77FB39D8E1EB782174E30566BAF55F71AE8  : public N
 struct WebReadStream_tA0E8969A97C6FE537A2DDF2040A64AFE63F04C86  : public Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE
 {
 	// System.Net.WebOperation System.Net.WebReadStream::<Operation>k__BackingField
-	WebOperation_t32CC0FAFF5B575DB5E11E5C50A7D7542A70D74C9* ___U3COperationU3Ek__BackingField_5;
+	WebOperation_t32CC0FAFF5B575DB5E11E5C50A7D7542A70D74C9* ___U3COperationU3Ek__BackingField_4;
 	// System.IO.Stream System.Net.WebReadStream::<InnerStream>k__BackingField
-	Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* ___U3CInnerStreamU3Ek__BackingField_6;
+	Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* ___U3CInnerStreamU3Ek__BackingField_5;
 	// System.Boolean System.Net.WebReadStream::disposed
-	bool ___disposed_7;
+	bool ___disposed_6;
 };
 
 // System.Security.Cryptography.X509Certificates.X509Certificate
@@ -3370,7 +3370,7 @@ struct Span_1_tDADAC65069DFE6B57C458109115ECD795ED39305
 struct BufferedReadStream_t02C23C74C829832E0FE18150F609CFB3F8560479  : public WebReadStream_tA0E8969A97C6FE537A2DDF2040A64AFE63F04C86
 {
 	// System.Net.BufferOffsetSize System.Net.BufferedReadStream::readBuffer
-	BufferOffsetSize_t46A7671E4C06281BB2D4C4AC98A6263715BDAC71* ___readBuffer_8;
+	BufferOffsetSize_t46A7671E4C06281BB2D4C4AC98A6263715BDAC71* ___readBuffer_7;
 };
 
 // System.Threading.EventWaitHandle
@@ -3382,7 +3382,7 @@ struct EventWaitHandle_t18F2EB0161747B0646A9A406015A61A214A1EB7E  : public WaitH
 struct FileWebStream_t4F9875530A08D3E605D048A4A9686A970E61D3A5  : public FileStream_t07C7222EE10B75F352B89B76E60820160FF10AD8
 {
 	// System.Net.FileWebRequest System.Net.FileWebStream::m_request
-	FileWebRequest_tD1A538307AB2949504F97926635635C573CDF49A* ___m_request_23;
+	FileWebRequest_tD1A538307AB2949504F97926635635C573CDF49A* ___m_request_21;
 };
 
 // System.MulticastDelegate
@@ -4457,9 +4457,9 @@ struct Exception_t_StaticFields
 struct FileStream_t07C7222EE10B75F352B89B76E60820160FF10AD8_StaticFields
 {
 	// System.Byte[] System.IO.FileStream::buf_recycle
-	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___buf_recycle_6;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___buf_recycle_4;
 	// System.Object System.IO.FileStream::buf_recycle_lock
-	RuntimeObject* ___buf_recycle_lock_7;
+	RuntimeObject* ___buf_recycle_lock_5;
 };
 
 // System.IO.FileStream
@@ -26452,7 +26452,7 @@ IL_007c_2:
 				{
 					Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_21 = V_3;
 					NullCheck(L_21);
-					VirtualActionInvoker0::Invoke(20 /* System.Void System.IO.Stream::Close() */, L_21);
+					VirtualActionInvoker0::Invoke(18 /* System.Void System.IO.Stream::Close() */, L_21);
 				}
 
 IL_0082_2:
@@ -26586,8 +26586,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FileWebStream__ctor_m0F3CC822C4DEE7C71B3
 		il2cpp_codegen_runtime_class_init_inline(FileStream_t07C7222EE10B75F352B89B76E60820160FF10AD8_il2cpp_TypeInfo_var);
 		FileStream__ctor_mA39506EF7A1F33FCA0199B880BE1D82217E33EEC(__this, L_0, L_1, L_2, L_3, NULL);
 		FileWebRequest_tD1A538307AB2949504F97926635635C573CDF49A* L_4 = ___0_request;
-		__this->___m_request_23 = L_4;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_request_23), (void*)L_4);
+		__this->___m_request_21 = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_request_21), (void*)L_4);
 		return;
 	}
 }
@@ -26610,8 +26610,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FileWebStream__ctor_m9E118415C0F3AD53809
 		il2cpp_codegen_runtime_class_init_inline(FileStream_t07C7222EE10B75F352B89B76E60820160FF10AD8_il2cpp_TypeInfo_var);
 		FileStream__ctor_mB51E4FD96A6B396795C835EFD7B0F0018A3A5029(__this, L_0, L_1, L_2, L_3, L_4, L_5, NULL);
 		FileWebRequest_tD1A538307AB2949504F97926635635C573CDF49A* L_6 = ___0_request;
-		__this->___m_request_23 = L_6;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_request_23), (void*)L_6);
+		__this->___m_request_21 = L_6;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_request_21), (void*)L_6);
 		return;
 	}
 }
@@ -26639,14 +26639,14 @@ FINALLY_0018:
 				}
 			}
 			{
-				FileWebRequest_tD1A538307AB2949504F97926635635C573CDF49A* L_2 = __this->___m_request_23;
+				FileWebRequest_tD1A538307AB2949504F97926635635C573CDF49A* L_2 = __this->___m_request_21;
 				if (!L_2)
 				{
 					goto IL_0016_1;
 				}
 			}
 			{
-				FileWebRequest_tD1A538307AB2949504F97926635635C573CDF49A* L_3 = __this->___m_request_23;
+				FileWebRequest_tD1A538307AB2949504F97926635635C573CDF49A* L_3 = __this->___m_request_21;
 				NullCheck(L_3);
 				FileWebRequest_UnblockReader_mC1E7C9618A64BC7785D882EB222D92A95244F8B3(L_3, NULL);
 			}
@@ -26679,7 +26679,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FileWebStream_System_Net_ICloseEx_CloseE
 	}
 	{
 		SafeFileHandle_t033FA6AAAC65F4BB25F4CBA9A242A58C95CD406E* L_1;
-		L_1 = VirtualFuncInvoker0< SafeFileHandle_t033FA6AAAC65F4BB25F4CBA9A242A58C95CD406E* >::Invoke(46 /* Microsoft.Win32.SafeHandles.SafeFileHandle System.IO.FileStream::get_SafeFileHandle() */, __this);
+		L_1 = VirtualFuncInvoker0< SafeFileHandle_t033FA6AAAC65F4BB25F4CBA9A242A58C95CD406E* >::Invoke(37 /* Microsoft.Win32.SafeHandles.SafeFileHandle System.IO.FileStream::get_SafeFileHandle() */, __this);
 		NullCheck(L_1);
 		SafeHandle_Close_mC881D1BD3DC7240B9682460FBEDBB5146102851F(L_1, NULL);
 		return;
@@ -26687,7 +26687,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FileWebStream_System_Net_ICloseEx_CloseE
 
 IL_0011:
 	{
-		VirtualActionInvoker0::Invoke(20 /* System.Void System.IO.Stream::Close() */, __this);
+		VirtualActionInvoker0::Invoke(18 /* System.Void System.IO.Stream::Close() */, __this);
 		return;
 	}
 }
@@ -26921,7 +26921,7 @@ IL_0012:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FileWebStream_CheckError_m7C73A2B18D870AB5869B1F38F325C32E83305F6B (FileWebStream_t4F9875530A08D3E605D048A4A9686A970E61D3A5* __this, const RuntimeMethod* method) 
 {
 	{
-		FileWebRequest_tD1A538307AB2949504F97926635635C573CDF49A* L_0 = __this->___m_request_23;
+		FileWebRequest_tD1A538307AB2949504F97926635635C573CDF49A* L_0 = __this->___m_request_21;
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = FileWebRequest_get_Aborted_mDCF5639158777EE8240560751536AF4CFF1FB3BE(L_0, NULL);
@@ -27290,7 +27290,7 @@ IL_002f_1:
 			{
 				Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_6 = V_0;
 				NullCheck(L_6);
-				VirtualActionInvoker0::Invoke(20 /* System.Void System.IO.Stream::Close() */, L_6);
+				VirtualActionInvoker0::Invoke(18 /* System.Void System.IO.Stream::Close() */, L_6);
 			}
 
 IL_0035_1:
@@ -30541,8 +30541,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BufferedReadStream__ctor_mD3E731B98242D6
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_1 = ___1_innerStream;
 		WebReadStream__ctor_mC68E90C384FD3ABF616222CCC813193A55C764B5(__this, L_0, L_1, NULL);
 		BufferOffsetSize_t46A7671E4C06281BB2D4C4AC98A6263715BDAC71* L_2 = ___2_readBuffer;
-		__this->___readBuffer_8 = L_2;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___readBuffer_8), (void*)L_2);
+		__this->___readBuffer_7 = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___readBuffer_7), (void*)L_2);
 		return;
 	}
 }
@@ -30603,7 +30603,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BufferedReadStream_TryReadFromBuffer_m44
 	int32_t G_B3_0 = 0;
 	int32_t G_B8_0 = 0;
 	{
-		BufferOffsetSize_t46A7671E4C06281BB2D4C4AC98A6263715BDAC71* L_0 = __this->___readBuffer_8;
+		BufferOffsetSize_t46A7671E4C06281BB2D4C4AC98A6263715BDAC71* L_0 = __this->___readBuffer_7;
 		BufferOffsetSize_t46A7671E4C06281BB2D4C4AC98A6263715BDAC71* L_1 = L_0;
 		G_B1_0 = L_1;
 		if (L_1)
@@ -30665,24 +30665,24 @@ IL_002c:
 IL_002d:
 	{
 		V_1 = G_B8_0;
-		BufferOffsetSize_t46A7671E4C06281BB2D4C4AC98A6263715BDAC71* L_10 = __this->___readBuffer_8;
+		BufferOffsetSize_t46A7671E4C06281BB2D4C4AC98A6263715BDAC71* L_10 = __this->___readBuffer_7;
 		NullCheck(L_10);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_11 = L_10->___Buffer_0;
-		BufferOffsetSize_t46A7671E4C06281BB2D4C4AC98A6263715BDAC71* L_12 = __this->___readBuffer_8;
+		BufferOffsetSize_t46A7671E4C06281BB2D4C4AC98A6263715BDAC71* L_12 = __this->___readBuffer_7;
 		NullCheck(L_12);
 		int32_t L_13 = L_12->___Offset_1;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_14 = ___0_buffer;
 		int32_t L_15 = ___1_offset;
 		int32_t L_16 = V_1;
 		Buffer_BlockCopy_m2F7BC0C5BA97C500E3F87D5008718F797E02B358((RuntimeArray*)L_11, L_13, (RuntimeArray*)L_14, L_15, L_16, NULL);
-		BufferOffsetSize_t46A7671E4C06281BB2D4C4AC98A6263715BDAC71* L_17 = __this->___readBuffer_8;
+		BufferOffsetSize_t46A7671E4C06281BB2D4C4AC98A6263715BDAC71* L_17 = __this->___readBuffer_7;
 		BufferOffsetSize_t46A7671E4C06281BB2D4C4AC98A6263715BDAC71* L_18 = L_17;
 		NullCheck(L_18);
 		int32_t L_19 = L_18->___Offset_1;
 		int32_t L_20 = V_1;
 		NullCheck(L_18);
 		L_18->___Offset_1 = ((int32_t)il2cpp_codegen_add(L_19, L_20));
-		BufferOffsetSize_t46A7671E4C06281BB2D4C4AC98A6263715BDAC71* L_21 = __this->___readBuffer_8;
+		BufferOffsetSize_t46A7671E4C06281BB2D4C4AC98A6263715BDAC71* L_21 = __this->___readBuffer_7;
 		BufferOffsetSize_t46A7671E4C06281BB2D4C4AC98A6263715BDAC71* L_22 = L_21;
 		NullCheck(L_22);
 		int32_t L_23 = L_22->___Size_2;
@@ -31141,7 +31141,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Uri_t1500A52B5F71A04F5D05C0852D0F
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* WebReadStream_get_InnerStream_mC1E0B821B64C303C532069D0213522FE6BE2F8FF_inline (WebReadStream_tA0E8969A97C6FE537A2DDF2040A64AFE63F04C86* __this, const RuntimeMethod* method) 
 {
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->___U3CInnerStreamU3Ek__BackingField_6;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->___U3CInnerStreamU3Ek__BackingField_5;
 		return L_0;
 	}
 }

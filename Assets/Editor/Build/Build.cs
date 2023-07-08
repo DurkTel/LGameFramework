@@ -481,7 +481,7 @@ public class Build : EditorWindow
         RefreshAssetsBundleManifest(Path.Combine(buildParameter.buildOutPath, targetName));
 
         AssetBundleBuild abb = new AssetBundleBuild();
-        string projectPath = AssetManifest_AssetBundle.s_abPath;
+        string projectPath = AssetManifest_AssetBundle.s_AbPath;
         abb.assetBundleName = projectPath.Substring(7);
         abb.assetNames = new string[] { projectPath };
         abb.addressableNames = new string[] { Path.GetFileNameWithoutExtension(projectPath) };
@@ -566,12 +566,12 @@ public class Build : EditorWindow
 
     public static AssetManifest_AssetBundle GetAssetManifest()
     {
-        AssetManifest_AssetBundle assetManifest = AssetDatabase.LoadAssetAtPath<AssetManifest_AssetBundle>(AssetManifest_AssetBundle.s_abPath);
+        AssetManifest_AssetBundle assetManifest = AssetDatabase.LoadAssetAtPath<AssetManifest_AssetBundle>(AssetManifest_AssetBundle.s_AbPath);
 
         if (assetManifest == null)
         {
             assetManifest = ScriptableObject.CreateInstance<AssetManifest_AssetBundle>();
-            AssetDatabase.CreateAsset(assetManifest, AssetManifest_AssetBundle.s_abPath);
+            AssetDatabase.CreateAsset(assetManifest, AssetManifest_AssetBundle.s_AbPath);
         }
 
         return assetManifest;

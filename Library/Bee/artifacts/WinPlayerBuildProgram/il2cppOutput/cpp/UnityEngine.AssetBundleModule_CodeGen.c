@@ -169,43 +169,29 @@ extern void AssetBundleLoadingCache_get_blockSize_m03DC5F56278056003283B8878EE2F
 extern void AssetBundleLoadingCache_get_memoryBudgetKB_m29A67C3A16A863A1AA0CA01327049BFB7BB6DF01 (void);
 // 0x00000053 System.Void UnityEngine.AssetBundleLoadingCache::set_memoryBudgetKB(System.UInt32)
 extern void AssetBundleLoadingCache_set_memoryBudgetKB_m29DE6B7CA5A4A3713806E59432EF17268BF734D6 (void);
-// 0x00000054 System.Void UnityEngine.AssetBundleManifest::.ctor()
-extern void AssetBundleManifest__ctor_mB9CBA729A674E0A566E5F45E91C4607F35C0C785 (void);
-// 0x00000055 System.String[] UnityEngine.AssetBundleManifest::GetAllAssetBundles()
-extern void AssetBundleManifest_GetAllAssetBundles_m0B9B68B03401B23693582DFE66F7B10A8C80EE54 (void);
-// 0x00000056 System.String[] UnityEngine.AssetBundleManifest::GetAllAssetBundlesWithVariant()
-extern void AssetBundleManifest_GetAllAssetBundlesWithVariant_m1259F23E830335D322DC7B659CA3A2A68794D237 (void);
-// 0x00000057 UnityEngine.Hash128 UnityEngine.AssetBundleManifest::GetAssetBundleHash(System.String)
-extern void AssetBundleManifest_GetAssetBundleHash_mD37180E92D8740FFD6696CC8DEFF3D5A270A70E2 (void);
-// 0x00000058 System.String[] UnityEngine.AssetBundleManifest::GetDirectDependencies(System.String)
-extern void AssetBundleManifest_GetDirectDependencies_mF74E87F6BAF8FF42DAF93A6246407A73C624872D (void);
-// 0x00000059 System.String[] UnityEngine.AssetBundleManifest::GetAllDependencies(System.String)
-extern void AssetBundleManifest_GetAllDependencies_mB1DEAC63DED6BF14A3997326F0ADCB9DFD20C63A (void);
-// 0x0000005A System.Void UnityEngine.AssetBundleManifest::GetAssetBundleHash_Injected(System.String,UnityEngine.Hash128&)
-extern void AssetBundleManifest_GetAssetBundleHash_Injected_mE92D11CD83E3B3B165CBBEBA395D777F291AA92D (void);
-// 0x0000005B System.Void UnityEngine.AssetBundleRecompressOperation::.ctor()
+// 0x00000054 System.Void UnityEngine.AssetBundleRecompressOperation::.ctor()
 extern void AssetBundleRecompressOperation__ctor_m8E08403D355CF9145ABAF7DD50352D29D4BB14B1 (void);
-// 0x0000005C UnityEngine.Object UnityEngine.AssetBundleRequest::GetResult()
+// 0x00000055 UnityEngine.Object UnityEngine.AssetBundleRequest::GetResult()
 extern void AssetBundleRequest_GetResult_mC1C60D584906835F86BF82C44E8B62B6EB9171D6 (void);
-// 0x0000005D UnityEngine.Object UnityEngine.AssetBundleRequest::get_asset()
+// 0x00000056 UnityEngine.Object UnityEngine.AssetBundleRequest::get_asset()
 extern void AssetBundleRequest_get_asset_mE9FDA3900215925371E7D15E7E19AA98713F5D6C (void);
-// 0x0000005E UnityEngine.Object[] UnityEngine.AssetBundleRequest::get_allAssets()
+// 0x00000057 UnityEngine.Object[] UnityEngine.AssetBundleRequest::get_allAssets()
 extern void AssetBundleRequest_get_allAssets_mCA7BF6BCBBDA2E6DF596655254842B5380B4919D (void);
-// 0x0000005F System.Void UnityEngine.AssetBundleRequest::.ctor()
+// 0x00000058 System.Void UnityEngine.AssetBundleRequest::.ctor()
 extern void AssetBundleRequest__ctor_mD73743E1532E41D8AD2871C00A7FCDA5157171C0 (void);
-// 0x00000060 System.Void UnityEngine.BuildCompression::set_compression(UnityEngine.CompressionType)
+// 0x00000059 System.Void UnityEngine.BuildCompression::set_compression(UnityEngine.CompressionType)
 extern void BuildCompression_set_compression_m5A949911212FBC3AAE239CFA415D166316B02914 (void);
-// 0x00000061 System.Void UnityEngine.BuildCompression::set_level(UnityEngine.CompressionLevel)
+// 0x0000005A System.Void UnityEngine.BuildCompression::set_level(UnityEngine.CompressionLevel)
 extern void BuildCompression_set_level_mA6E6591FEF0C2EB19E99E08866BB34CCE000B032 (void);
-// 0x00000062 System.Void UnityEngine.BuildCompression::set_blockSize(System.UInt32)
+// 0x0000005B System.Void UnityEngine.BuildCompression::set_blockSize(System.UInt32)
 extern void BuildCompression_set_blockSize_m65F9E777405F3F2CC093EB323175B085075FFFA0 (void);
-// 0x00000063 System.Void UnityEngine.BuildCompression::set_enableProtect(System.Boolean)
+// 0x0000005C System.Void UnityEngine.BuildCompression::set_enableProtect(System.Boolean)
 extern void BuildCompression_set_enableProtect_mE59E37207CE3910DC5E6D3A58097B034EE93E9A5 (void);
-// 0x00000064 System.Void UnityEngine.BuildCompression::.ctor(UnityEngine.CompressionType,UnityEngine.CompressionLevel,System.UInt32)
+// 0x0000005D System.Void UnityEngine.BuildCompression::.ctor(UnityEngine.CompressionType,UnityEngine.CompressionLevel,System.UInt32)
 extern void BuildCompression__ctor_mE830D168EE02EF00B341D18C6A7F4A6E1B424DB8 (void);
-// 0x00000065 System.Void UnityEngine.BuildCompression::.cctor()
+// 0x0000005E System.Void UnityEngine.BuildCompression::.cctor()
 extern void BuildCompression__cctor_mE4C3AF6FBB2AED49C4A6F45876E9582429534EF6 (void);
-static Il2CppMethodPointer s_methodPointers[101] = 
+static Il2CppMethodPointer s_methodPointers[94] = 
 {
 	AssetBundle__ctor_m12989CA081324BB49ED893BDA5E3B4E758D61410,
 	AssetBundle_get_mainAsset_mBB663F2D2D3593437EF1A90F464CBEBF9F3D1F5C,
@@ -290,13 +276,6 @@ static Il2CppMethodPointer s_methodPointers[101] =
 	AssetBundleLoadingCache_get_blockSize_m03DC5F56278056003283B8878EE2F1C1132BD6A0,
 	AssetBundleLoadingCache_get_memoryBudgetKB_m29A67C3A16A863A1AA0CA01327049BFB7BB6DF01,
 	AssetBundleLoadingCache_set_memoryBudgetKB_m29DE6B7CA5A4A3713806E59432EF17268BF734D6,
-	AssetBundleManifest__ctor_mB9CBA729A674E0A566E5F45E91C4607F35C0C785,
-	AssetBundleManifest_GetAllAssetBundles_m0B9B68B03401B23693582DFE66F7B10A8C80EE54,
-	AssetBundleManifest_GetAllAssetBundlesWithVariant_m1259F23E830335D322DC7B659CA3A2A68794D237,
-	AssetBundleManifest_GetAssetBundleHash_mD37180E92D8740FFD6696CC8DEFF3D5A270A70E2,
-	AssetBundleManifest_GetDirectDependencies_mF74E87F6BAF8FF42DAF93A6246407A73C624872D,
-	AssetBundleManifest_GetAllDependencies_mB1DEAC63DED6BF14A3997326F0ADCB9DFD20C63A,
-	AssetBundleManifest_GetAssetBundleHash_Injected_mE92D11CD83E3B3B165CBBEBA395D777F291AA92D,
 	AssetBundleRecompressOperation__ctor_m8E08403D355CF9145ABAF7DD50352D29D4BB14B1,
 	AssetBundleRequest_GetResult_mC1C60D584906835F86BF82C44E8B62B6EB9171D6,
 	AssetBundleRequest_get_asset_mE9FDA3900215925371E7D15E7E19AA98713F5D6C,
@@ -316,115 +295,108 @@ extern void BuildCompression_set_enableProtect_mE59E37207CE3910DC5E6D3A58097B034
 extern void BuildCompression__ctor_mE830D168EE02EF00B341D18C6A7F4A6E1B424DB8_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[5] = 
 {
-	{ 0x06000060, BuildCompression_set_compression_m5A949911212FBC3AAE239CFA415D166316B02914_AdjustorThunk },
-	{ 0x06000061, BuildCompression_set_level_mA6E6591FEF0C2EB19E99E08866BB34CCE000B032_AdjustorThunk },
-	{ 0x06000062, BuildCompression_set_blockSize_m65F9E777405F3F2CC093EB323175B085075FFFA0_AdjustorThunk },
-	{ 0x06000063, BuildCompression_set_enableProtect_mE59E37207CE3910DC5E6D3A58097B034EE93E9A5_AdjustorThunk },
-	{ 0x06000064, BuildCompression__ctor_mE830D168EE02EF00B341D18C6A7F4A6E1B424DB8_AdjustorThunk },
+	{ 0x06000059, BuildCompression_set_compression_m5A949911212FBC3AAE239CFA415D166316B02914_AdjustorThunk },
+	{ 0x0600005A, BuildCompression_set_level_mA6E6591FEF0C2EB19E99E08866BB34CCE000B032_AdjustorThunk },
+	{ 0x0600005B, BuildCompression_set_blockSize_m65F9E777405F3F2CC093EB323175B085075FFFA0_AdjustorThunk },
+	{ 0x0600005C, BuildCompression_set_enableProtect_mE59E37207CE3910DC5E6D3A58097B034EE93E9A5_AdjustorThunk },
+	{ 0x0600005D, BuildCompression__ctor_mE830D168EE02EF00B341D18C6A7F4A6E1B424DB8_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[101] = 
+static const int32_t s_InvokerIndices[94] = 
 {
-	5248,
-	5138,
-	7526,
-	7689,
-	7847,
-	7847,
-	6451,
-	7526,
-	6997,
-	6451,
-	6451,
-	7526,
-	6997,
-	6451,
-	6997,
-	7526,
-	6997,
-	6997,
-	7526,
-	6997,
-	7699,
-	6450,
-	6997,
-	7526,
-	6450,
-	6997,
-	7526,
-	6450,
-	6450,
-	5051,
-	7699,
-	3052,
-	3766,
+	5336,
+	5225,
+	7872,
+	8043,
+	8213,
+	8213,
+	6718,
+	7872,
+	7285,
+	6718,
+	6718,
+	7872,
+	7285,
+	6718,
+	7285,
+	7872,
+	7285,
+	7285,
+	7872,
+	7285,
+	8054,
+	6717,
+	7285,
+	7872,
+	6717,
+	7285,
+	7872,
+	6717,
+	6717,
+	5136,
+	8054,
+	3111,
+	3835,
 	0,
-	1956,
-	1956,
-	3766,
-	5138,
+	1998,
+	1998,
+	3835,
+	5225,
 	0,
-	3766,
+	3835,
 	0,
-	1956,
-	1956,
-	3766,
+	1998,
+	1998,
+	3835,
 	0,
-	1956,
-	3766,
+	1998,
+	3835,
 	0,
 	0,
-	1956,
-	3766,
+	1998,
+	3835,
 	0,
-	1956,
-	5138,
+	1998,
+	5225,
 	0,
-	3766,
-	5138,
+	3835,
+	5225,
 	0,
-	3766,
-	5138,
-	1956,
-	4146,
-	3751,
-	5138,
-	5138,
-	1956,
-	1956,
-	5716,
-	5716,
-	7880,
-	7707,
-	5715,
-	5138,
-	4146,
-	5248,
-	5248,
-	7880,
-	7707,
-	7880,
-	7707,
-	7880,
-	7880,
-	7707,
-	5248,
-	5138,
-	5138,
-	3314,
-	3766,
-	3766,
-	2435,
-	5248,
-	5138,
-	5138,
-	5138,
-	5248,
-	4209,
-	4209,
-	4312,
-	4146,
-	1300,
-	7885,
+	3835,
+	5225,
+	1998,
+	4220,
+	3822,
+	5225,
+	5225,
+	1998,
+	1998,
+	5908,
+	5908,
+	8246,
+	8065,
+	5907,
+	5225,
+	4220,
+	5336,
+	5336,
+	8246,
+	8065,
+	8246,
+	8065,
+	8246,
+	8246,
+	8065,
+	5336,
+	5225,
+	5225,
+	5225,
+	5336,
+	4283,
+	4283,
+	4389,
+	4220,
+	1334,
+	8252,
 };
 static const Il2CppTokenRangePair s_rgctxIndices[7] = 
 {
@@ -465,7 +437,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_AssetBundleModule_CodeGe
 const Il2CppCodeGenModule g_UnityEngine_AssetBundleModule_CodeGenModule = 
 {
 	"UnityEngine.AssetBundleModule.dll",
-	101,
+	94,
 	s_methodPointers,
 	5,
 	s_adjustorThunks,

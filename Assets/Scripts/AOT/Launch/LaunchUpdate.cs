@@ -251,7 +251,7 @@ public class LaunchUpdate : MonoBehaviour
             AssetFileDownloadQueue.Enqueue(url, localPath);
         }
 
-        yield return new WaitUntil(() => { return AssetFileDownloadQueue.Instance.downloadingCurrent.Count == 0; });
+        yield return new WaitUntil(() => { return AssetFileDownloadQueue.instance.downloadingCurrent.Count == 0; });
 
         float timeE = Time.realtimeSinceStartup;
         print("下载时长:" + (timeE - timeS));

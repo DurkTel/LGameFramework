@@ -65,6 +65,8 @@ struct AssetFile_t01FC6EC1F95844E4C5A9981989CECF5DE91B05F0;
 struct AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620;
 // LGameFramework.GameBase.AssetFileDownloader
 struct AssetFileDownloader_tBBB0747F4710B98462AE7A01DC95D371BE62DC46;
+// System.AsyncCallback
+struct AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C;
 // System.ComponentModel.AsyncCompletedEventArgs
 struct AsyncCompletedEventArgs_t801BFEA7C4C260D6666B4EB313E4CB49C4B151E9;
 // System.ComponentModel.AsyncCompletedEventHandler
@@ -97,6 +99,8 @@ struct EventHandlerList_t057D7531265C1DF014C8C83AF251E908D1A0B1C8;
 struct Exception_t;
 // System.IO.FileInfo
 struct FileInfo_t62782BBAFA832A78724E4CF2EE96548B8466AB1C;
+// System.IAsyncResult
+struct IAsyncResult_t7B9B5A0ECB35DCEC31B8A8122C37D687369253B5;
 // System.Net.ICredentials
 struct ICredentials_t8FDA6AF64B852DA0631D4BE66962B20E51E230F0;
 // System.Collections.IEnumerator
@@ -215,6 +219,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mF590592E32D421DE2C6E2F0D5
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m9455A484939B86B3178E31F4BF7379E2A7C6AE4E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Pool_1_Get_m9AE9A23ED73EDBE8A02D812C79BC6138E0CDA80E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Pool_1_Get_mB6984C3BA6DB5DAAC03B8D52B3C20B4EE7E0D38D_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Pool_1_Release_m100907CB11310E053938E42099DB7713C784EA78_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Pool_1_Release_mFCEC197A70F21DECEF92F2F9A3BB48B23B5C22EC_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Queue_1_Dequeue_m6278AEE0FFCE27C1C1608830E3BC8A7FBEC7E7CB_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Queue_1_Enqueue_m0DB17830938D31A733B94DF3A408CF9F4DE19836_RuntimeMethod_var;
@@ -222,8 +227,8 @@ IL2CPP_EXTERN_C const RuntimeMethod* Queue_1__ctor_m551A616064149645939015212FD9
 IL2CPP_EXTERN_C const RuntimeMethod* Queue_1_get_Count_m8C3D1628DED4ADD4EBF493862DD27085FB481ED9_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* SingletonMonoAuto_1__ctor_m3F35595FD5D7BD0EE142A90CEDC8D693E2D71DD7_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* SingletonMonoAuto_1__ctor_mB19076158A5F00E8F55EC881BA87E2A0D63460EB_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* SingletonMonoAuto_1_get_Instance_m3CA306425D8A03D8BA429CB79FC54F5B35945D61_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* SingletonMonoAuto_1_get_Instance_mDCF023E825CF1D18E53EFE1A5C4D2DD15B35FBF4_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SingletonMonoAuto_1_get_instance_m33369D378C153C73DA9FF2FA0B382889E32D2C09_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SingletonMonoAuto_1_get_instance_mC002CD7E2E950BF9CECE83A9FFF8BAD927FB1CA7_RuntimeMethod_var;
 struct Delegate_t_marshaled_com;
 struct Delegate_t_marshaled_pinvoke;
 
@@ -1416,8 +1421,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m7F078BB342729BDF11327FD89D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_Add_mAF1EF7DA16BD70E252EA5C4B0F74DE519A02CBCD_gshared (Dictionary_2_tA75D1125AC9BE8F005BA9B868B373398E643C907* __this, int32_t ___0_key, RuntimeObject* ___1_value, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<System.Int32>::Add(T)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_gshared_inline (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* __this, int32_t ___0_item, const RuntimeMethod* method) ;
-// T SingletonMonoAuto`1<System.Object>::get_Instance()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* SingletonMonoAuto_1_get_Instance_mAB0C19F6A2138A5ED273A2EABDA3AA4F8B9A2C63_gshared (const RuntimeMethod* method) ;
+// T SingletonMonoAuto`1<System.Object>::get_instance()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* SingletonMonoAuto_1_get_instance_m695006B61218203EBB659E8DCAFACD4B881E7CFC_gshared (const RuntimeMethod* method) ;
 // System.Int32 System.Collections.Generic.Dictionary`2<System.Int32,System.Object>::get_Count()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Dictionary_2_get_Count_mB1687BC0FFB3D5E49E5129641D4FB9EA23743F91_gshared (Dictionary_2_tA75D1125AC9BE8F005BA9B868B373398E643C907* __this, const RuntimeMethod* method) ;
 // System.Collections.Generic.Dictionary`2/Enumerator<TKey,TValue> System.Collections.Generic.Dictionary`2<System.Int32,System.Object>::GetEnumerator()
@@ -1500,10 +1505,10 @@ inline void List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_inline (List_1_
 {
 	((  void (*) (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73*, int32_t, const RuntimeMethod*))List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_gshared_inline)(__this, ___0_item, method);
 }
-// T SingletonMonoAuto`1<TimerManager>::get_Instance()
-inline TimerManager_t4019F711E6DEA08F79AF852727F3B8FF32983169* SingletonMonoAuto_1_get_Instance_m3CA306425D8A03D8BA429CB79FC54F5B35945D61 (const RuntimeMethod* method)
+// T SingletonMonoAuto`1<TimerManager>::get_instance()
+inline TimerManager_t4019F711E6DEA08F79AF852727F3B8FF32983169* SingletonMonoAuto_1_get_instance_mC002CD7E2E950BF9CECE83A9FFF8BAD927FB1CA7 (const RuntimeMethod* method)
 {
-	return ((  TimerManager_t4019F711E6DEA08F79AF852727F3B8FF32983169* (*) (const RuntimeMethod*))SingletonMonoAuto_1_get_Instance_mAB0C19F6A2138A5ED273A2EABDA3AA4F8B9A2C63_gshared)(method);
+	return ((  TimerManager_t4019F711E6DEA08F79AF852727F3B8FF32983169* (*) (const RuntimeMethod*))SingletonMonoAuto_1_get_instance_m695006B61218203EBB659E8DCAFACD4B881E7CFC_gshared)(method);
 }
 // UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812 (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, RuntimeObject* ___0_routine, const RuntimeMethod* method) ;
@@ -1692,10 +1697,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Single_ToString_mE282EDA9CA4F7DF884
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B (String_t* ___0_str0, String_t* ___1_str1, String_t* ___2_str2, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Debug::Log(System.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
-// T SingletonMonoAuto`1<LGameFramework.GameBase.AssetFileDownloadQueue>::get_Instance()
-inline AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620* SingletonMonoAuto_1_get_Instance_mDCF023E825CF1D18E53EFE1A5C4D2DD15B35FBF4 (const RuntimeMethod* method)
+// T SingletonMonoAuto`1<LGameFramework.GameBase.AssetFileDownloadQueue>::get_instance()
+inline AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620* SingletonMonoAuto_1_get_instance_m33369D378C153C73DA9FF2FA0B382889E32D2C09 (const RuntimeMethod* method)
 {
-	return ((  AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620* (*) (const RuntimeMethod*))SingletonMonoAuto_1_get_Instance_mAB0C19F6A2138A5ED273A2EABDA3AA4F8B9A2C63_gshared)(method);
+	return ((  AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620* (*) (const RuntimeMethod*))SingletonMonoAuto_1_get_instance_m695006B61218203EBB659E8DCAFACD4B881E7CFC_gshared)(method);
 }
 // System.Void System.Collections.Generic.Queue`1<LGameFramework.GameBase.AssetFileDownloader>::.ctor()
 inline void Queue_1__ctor_m551A616064149645939015212FD9E626D6252D6D (Queue_1_t9C0F14A00EBBB8D904EDB2CF581EEA06FDEB9020* __this, const RuntimeMethod* method)
@@ -1754,6 +1759,11 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool AssetFileDownloader_get_isDo
 inline bool List_1_Remove_m3CF76534C6E57AFB20C2BED895BE06A318A054D7 (List_1_tB17812479988EED86D6D0FCF7424F41FEC175756* __this, AssetFileDownloader_tBBB0747F4710B98462AE7A01DC95D371BE62DC46* ___0_item, const RuntimeMethod* method)
 {
 	return ((  bool (*) (List_1_tB17812479988EED86D6D0FCF7424F41FEC175756*, AssetFileDownloader_tBBB0747F4710B98462AE7A01DC95D371BE62DC46*, const RuntimeMethod*))List_1_Remove_m4DFA48F4CEB9169601E75FC28517C5C06EFA5AD7_gshared)(__this, ___0_item, method);
+}
+// System.Void Pool`1<LGameFramework.GameBase.AssetFileDownloader>::Release(T)
+inline void Pool_1_Release_m100907CB11310E053938E42099DB7713C784EA78 (AssetFileDownloader_tBBB0747F4710B98462AE7A01DC95D371BE62DC46* ___0_item, const RuntimeMethod* method)
+{
+	((  void (*) (AssetFileDownloader_tBBB0747F4710B98462AE7A01DC95D371BE62DC46*, const RuntimeMethod*))Pool_1_Release_m7EA68C7BB11D35631BD8BB2D346EB0BC5EB66CDA_gshared)(___0_item, method);
 }
 // System.Void SingletonMonoAuto`1<LGameFramework.GameBase.AssetFileDownloadQueue>::.ctor()
 inline void SingletonMonoAuto_1__ctor_mB19076158A5F00E8F55EC881BA87E2A0D63460EB (SingletonMonoAuto_1_tCF7D5B3D33361FE48B54965CCEDA8E986E9FEF40* __this, const RuntimeMethod* method)
@@ -1929,13 +1939,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF87
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SingletonMonoAuto_1_get_Instance_m3CA306425D8A03D8BA429CB79FC54F5B35945D61_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SingletonMonoAuto_1_get_instance_mC002CD7E2E950BF9CECE83A9FFF8BAD927FB1CA7_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// return Instance.StartCoroutine(routine);
+		// return instance.StartCoroutine(routine);
 		TimerManager_t4019F711E6DEA08F79AF852727F3B8FF32983169* L_0;
-		L_0 = SingletonMonoAuto_1_get_Instance_m3CA306425D8A03D8BA429CB79FC54F5B35945D61(SingletonMonoAuto_1_get_Instance_m3CA306425D8A03D8BA429CB79FC54F5B35945D61_RuntimeMethod_var);
+		L_0 = SingletonMonoAuto_1_get_instance_mC002CD7E2E950BF9CECE83A9FFF8BAD927FB1CA7(SingletonMonoAuto_1_get_instance_mC002CD7E2E950BF9CECE83A9FFF8BAD927FB1CA7_RuntimeMethod_var);
 		RuntimeObject* L_1 = ___0_routine;
 		NullCheck(L_0);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_2;
@@ -1949,13 +1959,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimerManager_DelCoroutine_mECE54FA48041F
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SingletonMonoAuto_1_get_Instance_m3CA306425D8A03D8BA429CB79FC54F5B35945D61_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SingletonMonoAuto_1_get_instance_mC002CD7E2E950BF9CECE83A9FFF8BAD927FB1CA7_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// Instance.StopCoroutine(coroutine);
+		// instance.StopCoroutine(coroutine);
 		TimerManager_t4019F711E6DEA08F79AF852727F3B8FF32983169* L_0;
-		L_0 = SingletonMonoAuto_1_get_Instance_m3CA306425D8A03D8BA429CB79FC54F5B35945D61(SingletonMonoAuto_1_get_Instance_m3CA306425D8A03D8BA429CB79FC54F5B35945D61_RuntimeMethod_var);
+		L_0 = SingletonMonoAuto_1_get_instance_mC002CD7E2E950BF9CECE83A9FFF8BAD927FB1CA7(SingletonMonoAuto_1_get_instance_mC002CD7E2E950BF9CECE83A9FFF8BAD927FB1CA7_RuntimeMethod_var);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_1 = ___0_coroutine;
 		NullCheck(L_0);
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(L_0, L_1, NULL);
@@ -3127,13 +3137,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssetFileDownloadQueue_Pause_m5D2CC4E695
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SingletonMonoAuto_1_get_Instance_mDCF023E825CF1D18E53EFE1A5C4D2DD15B35FBF4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SingletonMonoAuto_1_get_instance_m33369D378C153C73DA9FF2FA0B382889E32D2C09_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// Instance.m_Pause = value;
+		// instance.m_Pause = value;
 		AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620* L_0;
-		L_0 = SingletonMonoAuto_1_get_Instance_mDCF023E825CF1D18E53EFE1A5C4D2DD15B35FBF4(SingletonMonoAuto_1_get_Instance_mDCF023E825CF1D18E53EFE1A5C4D2DD15B35FBF4_RuntimeMethod_var);
+		L_0 = SingletonMonoAuto_1_get_instance_m33369D378C153C73DA9FF2FA0B382889E32D2C09(SingletonMonoAuto_1_get_instance_m33369D378C153C73DA9FF2FA0B382889E32D2C09_RuntimeMethod_var);
 		bool L_1 = ___0_value;
 		NullCheck(L_0);
 		L_0->___m_Pause_5 = L_1;
@@ -3150,14 +3160,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssetFileDownloadQueue_Enqueue_mA0F0B8AF
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Queue_1_Enqueue_m0DB17830938D31A733B94DF3A408CF9F4DE19836_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Queue_1__ctor_m551A616064149645939015212FD9E626D6252D6D_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Queue_1_t9C0F14A00EBBB8D904EDB2CF581EEA06FDEB9020_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SingletonMonoAuto_1_get_Instance_mDCF023E825CF1D18E53EFE1A5C4D2DD15B35FBF4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SingletonMonoAuto_1_get_instance_m33369D378C153C73DA9FF2FA0B382889E32D2C09_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620* V_0 = NULL;
 	{
-		// Instance.m_DownloaderQueuePrepare ??= new Queue<AssetFileDownloader>();
+		// instance.m_DownloaderQueuePrepare ??= new Queue<AssetFileDownloader>();
 		AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620* L_0;
-		L_0 = SingletonMonoAuto_1_get_Instance_mDCF023E825CF1D18E53EFE1A5C4D2DD15B35FBF4(SingletonMonoAuto_1_get_Instance_mDCF023E825CF1D18E53EFE1A5C4D2DD15B35FBF4_RuntimeMethod_var);
+		L_0 = SingletonMonoAuto_1_get_instance_m33369D378C153C73DA9FF2FA0B382889E32D2C09(SingletonMonoAuto_1_get_instance_m33369D378C153C73DA9FF2FA0B382889E32D2C09_RuntimeMethod_var);
 		V_0 = L_0;
 		AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620* L_1 = V_0;
 		NullCheck(L_1);
@@ -3179,17 +3189,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssetFileDownloadQueue_Enqueue_mA0F0B8AF
 
 IL_0019:
 	{
-		// Instance.m_DownloaderQueuePrepare.Enqueue(loader);
+		// instance.m_DownloaderQueuePrepare.Enqueue(loader);
 		AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620* L_5;
-		L_5 = SingletonMonoAuto_1_get_Instance_mDCF023E825CF1D18E53EFE1A5C4D2DD15B35FBF4(SingletonMonoAuto_1_get_Instance_mDCF023E825CF1D18E53EFE1A5C4D2DD15B35FBF4_RuntimeMethod_var);
+		L_5 = SingletonMonoAuto_1_get_instance_m33369D378C153C73DA9FF2FA0B382889E32D2C09(SingletonMonoAuto_1_get_instance_m33369D378C153C73DA9FF2FA0B382889E32D2C09_RuntimeMethod_var);
 		NullCheck(L_5);
 		Queue_1_t9C0F14A00EBBB8D904EDB2CF581EEA06FDEB9020* L_6 = L_5->___m_DownloaderQueuePrepare_7;
 		AssetFileDownloader_tBBB0747F4710B98462AE7A01DC95D371BE62DC46* L_7 = ___0_loader;
 		NullCheck(L_6);
 		Queue_1_Enqueue_m0DB17830938D31A733B94DF3A408CF9F4DE19836(L_6, L_7, Queue_1_Enqueue_m0DB17830938D31A733B94DF3A408CF9F4DE19836_RuntimeMethod_var);
-		// Instance.DownloadStart();
+		// instance.DownloadStart();
 		AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620* L_8;
-		L_8 = SingletonMonoAuto_1_get_Instance_mDCF023E825CF1D18E53EFE1A5C4D2DD15B35FBF4(SingletonMonoAuto_1_get_Instance_mDCF023E825CF1D18E53EFE1A5C4D2DD15B35FBF4_RuntimeMethod_var);
+		L_8 = SingletonMonoAuto_1_get_instance_m33369D378C153C73DA9FF2FA0B382889E32D2C09(SingletonMonoAuto_1_get_instance_m33369D378C153C73DA9FF2FA0B382889E32D2C09_RuntimeMethod_var);
 		NullCheck(L_8);
 		AssetFileDownloadQueue_DownloadStart_m120D8E1B17754FCFDB2BA42F39C907B5731A0107(L_8, NULL);
 		// }
@@ -3321,6 +3331,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssetFileDownloadQueue_Update_m71F7EE7B2
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Remove_m3CF76534C6E57AFB20C2BED895BE06A318A054D7_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m504138B7699BE68921AD73E2E4FD012C8BA9F45E_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_m9455A484939B86B3178E31F4BF7379E2A7C6AE4E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Pool_1_Release_m100907CB11310E053938E42099DB7713C784EA78_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Pool_1_t1792DCA57209E489233B956E266D9AF55CB63BF9_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	AssetFileDownloader_tBBB0747F4710B98462AE7A01DC95D371BE62DC46* V_0 = NULL;
@@ -3367,7 +3379,7 @@ IL_001e:
 		int32_t L_5;
 		L_5 = List_1_get_Count_m504138B7699BE68921AD73E2E4FD012C8BA9F45E_inline(L_4, List_1_get_Count_m504138B7699BE68921AD73E2E4FD012C8BA9F45E_RuntimeMethod_var);
 		V_1 = ((int32_t)il2cpp_codegen_subtract(L_5, 1));
-		goto IL_0062;
+		goto IL_0068;
 	}
 
 IL_0030:
@@ -3386,7 +3398,7 @@ IL_0030:
 		L_10 = AssetFileDownloader_get_isDone_m48733C9D1C08BA415176C65655366A2FB369865A_inline(L_9, NULL);
 		if (!L_10)
 		{
-			goto IL_005e;
+			goto IL_0064;
 		}
 	}
 	{
@@ -3400,22 +3412,26 @@ IL_0030:
 		AssetFileDownloader_tBBB0747F4710B98462AE7A01DC95D371BE62DC46* L_14 = V_0;
 		NullCheck(L_14);
 		AssetFileDownloader_Dispose_m9A551E01C4CD109A2A464C5CC362CB5440478FE4(L_14, NULL);
+		// Pool<AssetFileDownloader>.Release(loader);
+		AssetFileDownloader_tBBB0747F4710B98462AE7A01DC95D371BE62DC46* L_15 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(Pool_1_t1792DCA57209E489233B956E266D9AF55CB63BF9_il2cpp_TypeInfo_var);
+		Pool_1_Release_m100907CB11310E053938E42099DB7713C784EA78(L_15, Pool_1_Release_m100907CB11310E053938E42099DB7713C784EA78_RuntimeMethod_var);
 		// DownloadStart();
 		AssetFileDownloadQueue_DownloadStart_m120D8E1B17754FCFDB2BA42F39C907B5731A0107(__this, NULL);
 	}
 
-IL_005e:
-	{
-		// for (int i = m_DownloadingCurrent.Count - 1; i >= 0; i--)
-		int32_t L_15 = V_1;
-		V_1 = ((int32_t)il2cpp_codegen_subtract(L_15, 1));
-	}
-
-IL_0062:
+IL_0064:
 	{
 		// for (int i = m_DownloadingCurrent.Count - 1; i >= 0; i--)
 		int32_t L_16 = V_1;
-		if ((((int32_t)L_16) >= ((int32_t)0)))
+		V_1 = ((int32_t)il2cpp_codegen_subtract(L_16, 1));
+	}
+
+IL_0068:
+	{
+		// for (int i = m_DownloadingCurrent.Count - 1; i >= 0; i--)
+		int32_t L_17 = V_1;
+		if ((((int32_t)L_17) >= ((int32_t)0)))
 		{
 			goto IL_0030;
 		}
@@ -3435,8 +3451,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssetFileDownloadQueue__ctor_mBBF3B302DA
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// private int m_MaximumSimultaneouslyDownloading = 5;
-		__this->___m_MaximumSimultaneouslyDownloading_6 = 5;
+		// private int m_MaximumSimultaneouslyDownloading = 10;
+		__this->___m_MaximumSimultaneouslyDownloading_6 = ((int32_t)10);
 		SingletonMonoAuto_1__ctor_mB19076158A5F00E8F55EC881BA87E2A0D63460EB(__this, SingletonMonoAuto_1__ctor_mB19076158A5F00E8F55EC881BA87E2A0D63460EB_RuntimeMethod_var);
 		return;
 	}

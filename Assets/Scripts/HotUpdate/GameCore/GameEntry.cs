@@ -6,7 +6,12 @@ public class GameEntry : MonoBehaviour
 {
     void Start()
     {
-        
+        AssetManager.Initialize(AssetLoadMode.AssetBundle);
+        AssetLoader loader = AssetUtility.LoadAssetAsync("Default_Loading_GUI.prefab", typeof(GameObject));
+        loader.onComplete = (p) =>
+        {
+            Instantiate(p.rawObject as GameObject);
+        };
     }
 
     void Update()

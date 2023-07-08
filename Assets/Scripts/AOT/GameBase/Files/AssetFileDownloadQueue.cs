@@ -30,14 +30,14 @@ namespace LGameFramework.GameBase
 
         public static void Pause(bool value)
         {
-            Instance.m_Pause = value;
+            instance.m_Pause = value;
         }
 
         public static void Enqueue(AssetFileDownloader loader)
         {
-            Instance.m_DownloaderQueuePrepare ??= new Queue<AssetFileDownloader>();
-            Instance.m_DownloaderQueuePrepare.Enqueue(loader);
-            Instance.DownloadStart();
+            instance.m_DownloaderQueuePrepare ??= new Queue<AssetFileDownloader>();
+            instance.m_DownloaderQueuePrepare.Enqueue(loader);
+            instance.DownloadStart();
         }
 
 
