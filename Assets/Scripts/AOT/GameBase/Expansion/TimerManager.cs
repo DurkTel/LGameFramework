@@ -1,19 +1,21 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class TimerManager : SingletonMonoAuto<TimerManager>
 {
-    private Dictionary<int, Timer> m_allTimer = new Dictionary<int, Timer>();
+    private Dictionary<int, Timer> m_AllTimer = new Dictionary<int, Timer>();
 
-    private Dictionary<int, Timer> m_waitAdd = new Dictionary<int, Timer>();
+    private Dictionary<int, Timer> m_WaitAdd = new Dictionary<int, Timer>();
 
-    private List<int> m_waitRemove = new List<int>();
+    private List<int> m_WaitRemove = new List<int>();
 
     private Timer SetTimer(TimerType timerType, UnityAction callback, float delay, float interval, int duration)
     {
-        Timer timer = new Timer().SetData(timerType, callback, delay, interval, duration);
+        Timer timer = Pool<Timer>.Get();
+        timer.SetData(timerType, callback, delay, interval, duration);
         return timer;
     }
 
@@ -21,7 +23,7 @@ public class TimerManager : SingletonMonoAuto<TimerManager>
     {
         Timer timer = SetTimer(TimerType.NOMAL, callback, delay, interval, duration);
         int id = timer.id;
-        m_waitAdd.Add(id, timer);
+        m_WaitAdd.Add(id, timer);
 
         return id;
     }
@@ -30,14 +32,14 @@ public class TimerManager : SingletonMonoAuto<TimerManager>
     {
         Timer timer = SetTimer(TimerType.FRAME, callback, delay, interval, duration);
         int id = timer.id;
-        m_waitAdd.Add(id, timer);
+        m_WaitAdd.Add(id, timer);
 
         return id;
     }
 
     public void DelTimer(int id)
     {
-        m_waitRemove.Add(id);
+        m_WaitRemove.Add(id);
     }
 
     //启协协程
@@ -54,35 +56,35 @@ public class TimerManager : SingletonMonoAuto<TimerManager>
 
     private void Update()
     {
-        if (m_waitAdd.Count > 0)
+        if (m_WaitAdd.Count > 0)
         {
-            foreach (var item in m_waitAdd)
+            foreach (var item in m_WaitAdd)
             {
-                m_allTimer.Add(item.Key, item.Value);
+                m_AllTimer.Add(item.Key, item.Value);
             }
-            m_waitAdd.Clear();
+            m_WaitAdd.Clear();
         }
 
-        if (m_waitRemove.Count > 0)
+        if (m_WaitRemove.Count > 0)
         {
-            foreach (var key in m_waitRemove)
+            Timer timer;
+            foreach (var key in m_WaitRemove)
             {
-                if (m_allTimer.ContainsKey(key))
+                if (m_AllTimer.TryGetValue(key, out timer))
                 {
-                    m_allTimer.Remove(key);
+                    Pool<Timer>.Release(timer);
+                    m_AllTimer.Remove(key);
                 }
             }
-            m_waitRemove.Clear();
+            m_WaitRemove.Clear();
         }
 
-        if (m_allTimer.Count > 0)
+        if (m_AllTimer.Count > 0)
         {
-            foreach (var item in m_allTimer)
+            foreach (var item in m_AllTimer)
             {
-                item.Value.Update();
-
-                if (item.Value.dispose)
-                    m_waitRemove.Add(item.Key);
+                if (item.Value.Update())
+                    m_WaitRemove.Add(item.Key);
             }
         }
 
@@ -94,72 +96,79 @@ public class TimerManager : SingletonMonoAuto<TimerManager>
         NOMAL
     }
 
-    public class Timer
+    public class Timer : IDisposable
     {
         private static int m_ID = 99;
 
         public int id { get { return ++m_ID; } }
 
-        private TimerType m_timerType;
+        private TimerType m_TimerType;
 
-        private float m_nextTime;
+        private float m_NextTime;
 
-        private float m_nextFrame;
+        private float m_NextFrame;
 
-        private UnityAction m_callback;
+        private UnityAction m_Callback;
 
-        private float m_delay;
+        private float m_Delay;
 
-        private float m_interval;
+        private float m_Interval;
 
-        private int m_duration;
+        private int m_Duration;
 
-        private int m_allCount;
-
-        private bool m_dispose;
-
-        public bool dispose { get { return m_dispose; } }
+        private int m_AllCount;
 
         public Timer SetData(TimerType timerType, UnityAction callback, float delay, float interval, int duration)
         {
-            this.m_timerType = timerType;
-            this.m_callback = callback;
-            this.m_delay = delay;
-            this.m_interval = interval;
-            this.m_duration = duration;
-            this.m_nextFrame = Time.frameCount + this.m_delay + Mathf.Max(0, this.m_interval);
-            this.m_nextTime = Time.realtimeSinceStartup + this.m_delay + Mathf.Max(0, this.m_interval);
+            this.m_TimerType = timerType;
+            this.m_Callback = callback;
+            this.m_Delay = delay;
+            this.m_Interval = interval;
+            this.m_Duration = duration;
+            this.m_NextFrame = Time.frameCount + this.m_Delay + Mathf.Max(0, this.m_Interval);
+            this.m_NextTime = Time.realtimeSinceStartup + this.m_Delay + Mathf.Max(0, this.m_Interval);
             return this;
         }
 
-        public void Clear()
+        public void Dispose()
         {
-            m_dispose = true;
+            this.m_Callback = null;
+            this.m_Delay = 0f;
+            this.m_Interval = 0f;
+            this.m_Duration = 0;
+            this.m_NextFrame = 0f;
+            this.m_NextTime = 0f;
         }
 
-        public void Update()
+        public bool Update()
         {
-            if (m_timerType == TimerType.FRAME)
+            if (m_TimerType == TimerType.FRAME)
             {
-                if (Time.frameCount >= m_nextFrame)
+                if (Time.frameCount >= m_NextFrame)
                 {
-                    m_callback.Invoke();
-                    m_allCount++;
-                    m_nextFrame = Time.frameCount + Mathf.Max(0, m_interval);
+                    m_Callback.Invoke();
+                    m_AllCount++;
+                    m_NextFrame = Time.frameCount + Mathf.Max(0, m_Interval);
                 }
             }
             else
             {
-                if (Time.realtimeSinceStartup >= m_nextTime)
+                if (Time.realtimeSinceStartup >= m_NextTime)
                 {
-                    m_callback.Invoke();
-                    m_allCount++;
-                    m_nextTime = Time.realtimeSinceStartup + Mathf.Max(0, m_interval);
+                    m_Callback.Invoke();
+                    m_AllCount++;
+                    m_NextTime = Time.realtimeSinceStartup + Mathf.Max(0, m_Interval);
                 }
             }
 
-            if (m_duration > 0 && m_allCount >= m_duration)
-                Clear();
+            if (m_Duration > 0 && m_AllCount >= m_Duration)
+            { 
+                Dispose();
+                return true;
+            }
+
+            return false;
         }
+
     }
 }

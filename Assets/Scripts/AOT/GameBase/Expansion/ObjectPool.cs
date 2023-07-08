@@ -14,27 +14,18 @@ public interface IPool
 }
 
 /// <summary>
-/// 存放所有的对象池
-/// </summary>
-public static class ObjectPoolList
-{
-    public static List<IPool> poolList = new List<IPool>();
-}
-
-
-/// <summary>
 /// 对象池基类
 /// </summary>
 /// <typeparam name="T"></typeparam>
 public class ObjectPool<T> : IPool where T : new()
 {
-    private readonly Stack<T> m_stack = new Stack<T>();
+    private readonly Stack<T> m_Stack = new Stack<T>();
 
-    private readonly Action<T> m_onGet;
+    private readonly Action<T> m_OnGet;
 
-    private readonly Action<T> m_onRelease;
+    private readonly Action<T> m_OnRelease;
     public Type type => typeof(T);
-    public ICollection collection => m_stack;
+    public ICollection collection => m_Stack;
 
     /// <summary>
     /// 无参构造
@@ -51,38 +42,37 @@ public class ObjectPool<T> : IPool where T : new()
     /// <param name="onRelease"></param>
     public ObjectPool(Action<T> onGet, Action<T> onRelease)
     {
-        m_onGet = onGet;
-        m_onRelease = onRelease;
-        ObjectPoolList.poolList.Add(this);
+        m_OnGet = onGet;
+        m_OnRelease = onRelease;
     }
 
     public T Get()
     {
-        if (m_stack.Count > 0)
+        if (m_Stack.Count > 0)
         {
-            return m_stack.Pop();
+            return m_Stack.Pop();
         }
 
         T newObj = new T();
-        m_onGet?.Invoke(newObj);
+        m_OnGet?.Invoke(newObj);
 
         return newObj;
     }
 
     public void Release(T item)
     {
-        if (m_stack.Count > 0 && m_stack.Contains(item))
+        if (m_Stack.Count > 0 && m_Stack.Contains(item))
         {
             Debug.LogErrorFormat("{0}该对象池以存在此对象{1}", typeof(T).Name, item.ToString());
             return;
         }
-        m_stack.Push(item);
-        m_onRelease?.Invoke(item);
+        m_Stack.Push(item);
+        m_OnRelease?.Invoke(item);
     }
 
     public void Clear()
     {
-        m_stack.Clear();
+        m_Stack.Clear();
     }
 
 }
@@ -112,7 +102,7 @@ public static class Pool<T> where T : new()
 }
 
 /// <summary>
-/// 通用列表静态池
+/// 通用列表对象池
 /// </summary>
 /// <typeparam name="T"></typeparam>
 public static class ListPool<T>
@@ -130,6 +120,10 @@ public static class ListPool<T>
     }
 }
 
+/// <summary>
+/// 通用队列对象池
+/// </summary>
+/// <typeparam name="T"></typeparam>
 public static class QueuePool<T>
 {
     private static readonly ObjectPool<Queue<T>> s_QueuePool = new ObjectPool<Queue<T>>(null, Clear);

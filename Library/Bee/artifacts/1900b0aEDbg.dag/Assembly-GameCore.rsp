@@ -390,8 +390,6 @@
 "Assets/Scripts/HotUpdate/GameCore/Entity/Renender/SortSprite2D.cs"
 "Assets/Scripts/HotUpdate/GameCore/Event/EventDefine.cs"
 "Assets/Scripts/HotUpdate/GameCore/Event/EventDispatcher.cs"
-"Assets/Scripts/HotUpdate/GameCore/Expansion/DictionaryEx.cs"
-"Assets/Scripts/HotUpdate/GameCore/Expansion/TimerManager.cs"
 "Assets/Scripts/HotUpdate/GameCore/GameEntry.cs"
 "Assets/Scripts/HotUpdate/GameCore/Input/New/InputControls.cs"
 "Assets/Scripts/HotUpdate/GameCore/Input/New/InputReader.cs"

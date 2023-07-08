@@ -120,6 +120,11 @@ public class LaunchUpdate : MonoBehaviour
 
             yield return webRequest.SendWebRequest();
             string str = webRequest.downloadHandler.text;
+            if (string.IsNullOrEmpty(str))
+            { 
+                Debug.LogError("连接服务器版本文件失败：" + LaunchPath.s_NetServerPath + "version.txt");
+                yield break;
+            }
             string[] data = str.Split('|');
             m_NetVersion = data[1];
 
