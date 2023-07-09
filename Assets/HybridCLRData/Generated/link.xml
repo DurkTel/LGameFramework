@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <linker>
   <assembly fullname="Assembly-GameBase">
+    <type fullname="DictionaryEx`2" preserve="all" />
     <type fullname="ObjectPool`1" preserve="all" />
     <type fullname="Pool`1" preserve="all" />
     <type fullname="QueuePool`1" preserve="all" />
     <type fullname="SingletonBase`1" preserve="all" />
     <type fullname="SingletonMono`1" preserve="all" />
-    <type fullname="SingletonMonoAuto`1" preserve="all" />
   </assembly>
   <assembly fullname="mscorlib">
     <type fullname="System.Action" preserve="all" />
@@ -118,7 +118,6 @@
     <type fullname="UnityEngine.RangeAttribute" preserve="all" />
     <type fullname="UnityEngine.Renderer" preserve="all" />
     <type fullname="UnityEngine.RequireComponent" preserve="all" />
-    <type fullname="UnityEngine.ResourceRequest" preserve="all" />
     <type fullname="UnityEngine.Resources" preserve="all" />
     <type fullname="UnityEngine.ScriptableObject" preserve="all" />
     <type fullname="UnityEngine.SerializeField" preserve="all" />
@@ -147,5 +146,8 @@
   </assembly>
   <assembly fullname="UnityEngine.UI">
     <type fullname="UnityEngine.EventSystems.EventTrigger" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.VirtualTexturingModule">
+    <type fullname="UnityEngine.Rendering.VirtualTexturing.Debugging" preserve="all" />
   </assembly>
 </linker>

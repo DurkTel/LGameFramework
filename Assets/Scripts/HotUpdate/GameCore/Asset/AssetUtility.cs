@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameCore;
+using System;
 using System.CodeDom;
 using System.Collections;
 using System.Collections.Generic;
@@ -64,9 +65,9 @@ public class AssetUtility
     /// </summary>
     /// <param name="abName"></param>
     /// <param name="bundle"></param>
-    public static void AddAssetBundle(string abName, AssetBundle bundle)
+    public static AssetBundleRecord AddAssetBundle(string abName, AssetBundle bundle)
     {
-        AssetManager.instance.AddAssetBundle(abName, bundle);
+        return AssetManager.instance.AddAssetBundle(abName, bundle);
     }
 
     /// <summary>
@@ -75,7 +76,7 @@ public class AssetUtility
     /// <param name="abName"></param>
     /// <param name="bundle"></param>
     /// <returns></returns>
-    public static bool TryGetAssetBundle(string abName, out AssetBundle bundle)
+    public static bool TryGetAssetBundle(string abName, out AssetBundleRecord bundle)
     {
         return AssetManager.instance.TryGetAssetBundle(abName, out bundle);
     }
@@ -89,15 +90,6 @@ public class AssetUtility
     public static bool IsExistAssetBundle(string abName)
     {
         return AssetManager.instance.IsExistAssetBundle(abName);
-    }
-
-    /// <summary>
-    /// 加载AB包依赖
-    /// </summary>
-    /// <param name="abNames"></param>
-    public static void LoadDependencies(List<string> abNames)
-    {
-        AssetManager.instance.LoadDependencies(abNames);
     }
 
     /// <summary>

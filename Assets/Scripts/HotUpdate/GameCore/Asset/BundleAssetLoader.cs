@@ -1,3 +1,4 @@
+using GameCore;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -33,6 +34,10 @@ public class BundleAssetLoader : AssetLoader
     /// </summary>
     private string m_BundleName;
     /// <summary>
+    /// AB包
+    /// </summary>
+    private AssetBundleRecord m_AssetRecord;
+    /// <summary>
     /// 加载此资源需要的未加载的依赖包
     /// </summary>
     private List<string> m_NeedDepends;
@@ -49,6 +54,9 @@ public class BundleAssetLoader : AssetLoader
         onProgress = null;
         onComplete = null;
         m_AssetRequest = null;
+        m_AssetRecord = null;
+        m_NeedDepends.Clear();
+        m_NeedDepends = null;
     }
 
     public override string GetAssetPath(string assetName)
@@ -69,16 +77,25 @@ public class BundleAssetLoader : AssetLoader
     public List<string> GetAbsentDependsName(string assetName)
     {
         List<string> result = AssetUtility.GetAssetManifest_Bundle().GetDependsName(assetName);
+        AssetBundleRecord record;
         for (int i = result.Count - 1; i >= 0; i--)
         {
-            if (AssetUtility.IsExistAssetBundle(result[i]))
-                result.RemoveAt(i); 
+            if (AssetUtility.TryGetAssetBundle(result[i], out record))
+            { 
+                result.RemoveAt(i);
+                record.dpendsReferenceCount++; //已经加载过了 引用计数加1
+            }
         }
 
         return result;
     }
 
-    private bool LoadDependencies(string assetName)
+    /// <summary>
+    /// 异步加载该资源的依赖包
+    /// </summary>
+    /// <param name="assetName"></param>
+    /// <returns></returns>
+    private bool LoadDependenciesAsync(string assetName)
     {
         m_NeedDepends ??= GetAbsentDependsName(assetName);
 
@@ -90,7 +107,8 @@ public class BundleAssetLoader : AssetLoader
 
         if (m_DependsBundleRequest != null && m_DependsBundleRequest.isDone)
         {
-            AssetUtility.AddAssetBundle(m_NeedDepends[0], m_DependsBundleRequest.assetBundle);
+            AssetBundleRecord record = AssetUtility.AddAssetBundle(m_NeedDepends[0], m_DependsBundleRequest.assetBundle);
+            record.dpendsReferenceCount++;
             m_NeedDepends.RemoveAt(0);
             m_DependsBundleRequest = null;
         }
@@ -98,37 +116,59 @@ public class BundleAssetLoader : AssetLoader
         return m_NeedDepends.Count <= 0;
     }
 
+    /// <summary>
+    /// 同步加载该资源的依赖包
+    /// </summary>
+    /// <param name="assetName"></param>
+    private void LoadDependencies(string assetName)
+    {
+        m_NeedDepends = GetAbsentDependsName(assetName);
+        foreach (string dependPath in m_NeedDepends)
+        {
+            AssetBundle ab = AssetBundle.LoadFromFile(Path.Combine(AssetDefine.localDataPath, dependPath));
+            AssetBundleRecord record = AssetUtility.AddAssetBundle(m_NeedDepends[0], ab);
+            record.dpendsReferenceCount++;
+        }
+        m_NeedDepends.Clear();
+    }
+
+    /// <summary>
+    /// 同步加载资源
+    /// </summary>
+    /// <param name="abName"></param>
+    /// <param name="assetName"></param>
+    /// <param name="type"></param>
+    /// <returns></returns>
     private UnityEngine.Object Load(string abName, string assetName, Type type)
     {
-        AssetUtility.LoadDependencies(GetAbsentDependsName(assetName));
-        AssetBundle ab;
-        if (!AssetUtility.TryGetAssetBundle(abName, out ab))
-        {
-            ab = AssetBundle.LoadFromFile(Path.Combine(AssetDefine.localDataPath, abName));
-            AssetUtility.AddAssetBundle(abName, ab);
-        }
+        if (!AssetUtility.TryGetAssetBundle(abName, out m_AssetRecord))
+            m_AssetRecord = AssetUtility.AddAssetBundle(abName, AssetBundle.LoadFromFile(Path.Combine(AssetDefine.localDataPath, abName)));
 
-        UnityEngine.Object obj = ab.LoadAsset(assetName, type);
+        UnityEngine.Object obj = m_AssetRecord.assetBundle.LoadAsset(assetName, type);
 
         return obj;
     }
 
+    /// <summary>
+    /// 异步加载资源
+    /// </summary>
+    /// <param name="abName"></param>
+    /// <param name="assetName"></param>
+    /// <param name="type"></param>
+    /// <returns></returns>
     private AssetBundleRequest LoadAsync(string abName, string assetName, Type type)
     {
-        AssetBundle ab;
-        if (!AssetUtility.TryGetAssetBundle(abName, out ab))
+        if (!AssetUtility.TryGetAssetBundle(abName, out m_AssetRecord))
         {
             m_BundleRequest ??= AssetBundle.LoadFromFileAsync(Path.Combine(AssetDefine.localDataPath, abName));
             if (m_BundleRequest.isDone)
-            {
-                ab = m_BundleRequest.assetBundle;
-                AssetUtility.AddAssetBundle(abName, ab);
-            }
+                m_AssetRecord = AssetUtility.AddAssetBundle(abName, m_BundleRequest.assetBundle);
             else
                 return null;
         }
 
-        return ab.LoadAssetAsync(assetName, type);
+        m_AssetRecord.isAssetLoading = true;
+        return m_AssetRecord.assetBundle.LoadAssetAsync(assetName, type);
     }
 
     public override void Update()
@@ -136,7 +176,7 @@ public class BundleAssetLoader : AssetLoader
         if (m_IsDone || m_Error)
             return;
 
-        if (!AssetCache.TryGetRawObject(m_AssetName, out m_RawObject))
+        if (!AssetCache.TryGetRawObject(m_AssetName, out m_RawObjectInfo))
         {
             m_BundleName ??= GetBundleName(m_AssetName);
             if (string.IsNullOrEmpty(m_BundleName))
@@ -148,7 +188,7 @@ public class BundleAssetLoader : AssetLoader
 
             if (m_Async)
             {
-                if (!LoadDependencies(assetName))
+                if (!LoadDependenciesAsync(m_AssetName))
                     return;
 
                 m_AssetRequest ??= LoadAsync(m_BundleName, m_AssetName, m_AssetType);
@@ -158,14 +198,24 @@ public class BundleAssetLoader : AssetLoader
             }
             else
             {
+                LoadDependencies(m_AssetName);
+
                 m_RawObject = Load(m_BundleName, m_AssetName, m_AssetType);
             }
 
             if (m_RawObject != null)
-                AssetCache.AddRawObject(m_AssetName, m_RawObject);
+            { 
+                m_RawObjectInfo = AssetCache.AddRawObject(m_AssetName, m_RawObject);
+                m_AssetRecord.isAssetLoading = false;
+                //新加载出源资源
+                m_AssetRecord.rawReferenceCount++;
+            }
         }
         else
-            m_RawObject = AssetCache.GetRawObject(m_AssetName);
+        {
+            m_RawObjectInfo = AssetCache.GetRawObject(m_AssetName);
+            m_RawObject = m_RawObjectInfo.rawObject;
+        }
 
 
         m_IsDone = m_RawObject != null;

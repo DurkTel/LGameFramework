@@ -30,6 +30,8 @@ public class AssetManifest_AssetBundle : ScriptableObject, ISerializationCallbac
 
     public Dictionary<string, AssetInfo> assetMap = new Dictionary<string, AssetInfo>(5000);
 
+    public Dictionary<string, List<string>> dependsMap = new Dictionary<string, List<string>>(5000);
+
     public void Add(string assetName, string assetPath, string bundleName, string md5Code, List<string> dependencieBundleNames)
     {
         if (assetMap.ContainsKey(assetName))
@@ -75,16 +77,31 @@ public class AssetManifest_AssetBundle : ScriptableObject, ISerializationCallbac
         return default;
     }
 
+    public List<string> GetBundleDepends(string bundleName)
+    {
+        if (dependsMap.ContainsKey(bundleName))
+            return dependsMap[bundleName];
+
+        Debug.LogWarning("资源清单中没有名为：" + bundleName + "的包，请更新资源清单或检查资源名称");
+        return default;
+    }
+
     public void Clear()
     {
         assetMap.Clear();
+        dependsMap.Clear();
     }
 
     public void OnAfterDeserialize()
     {
         foreach (var item in assetList)
+        { 
             if (!this.assetMap.ContainsKey(item.assetName))
                 this.assetMap.Add(item.assetName, item);
+
+            if (!this.dependsMap.ContainsKey(item.bundleName))
+                this.dependsMap.Add(item.bundleName, item.dependencieBundleNames);
+        }
     }
 
     public void OnBeforeSerialize()

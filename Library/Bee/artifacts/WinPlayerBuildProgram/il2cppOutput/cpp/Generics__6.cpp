@@ -1127,12 +1127,12 @@ struct Node_t821211F0535E80E80FDC8FFB600F681E98286BF0  : public RuntimeObject
 // ObjectPool`1<DictionaryEx`2<System.Object,System.Object>>
 struct ObjectPool_1_t10BB4A0209E05F0C8C08511FAFADD68F16B8FC36  : public RuntimeObject
 {
-	// System.Collections.Generic.Stack`1<T> ObjectPool`1::m_stack
-	Stack_1_tF84B432585AD6B19ECF9AF8B9FE75D9D78A0A465* ___m_stack_0;
-	// System.Action`1<T> ObjectPool`1::m_onGet
-	Action_1_t01A4D26911DBF97D6DD912609BB888C238892CE2* ___m_onGet_1;
-	// System.Action`1<T> ObjectPool`1::m_onRelease
-	Action_1_t01A4D26911DBF97D6DD912609BB888C238892CE2* ___m_onRelease_2;
+	// System.Collections.Generic.Stack`1<T> ObjectPool`1::m_Stack
+	Stack_1_tF84B432585AD6B19ECF9AF8B9FE75D9D78A0A465* ___m_Stack_0;
+	// System.Action`1<T> ObjectPool`1::m_OnGet
+	Action_1_t01A4D26911DBF97D6DD912609BB888C238892CE2* ___m_OnGet_1;
+	// System.Action`1<T> ObjectPool`1::m_OnRelease
+	Action_1_t01A4D26911DBF97D6DD912609BB888C238892CE2* ___m_OnRelease_2;
 };
 
 // System.Collections.ObjectModel.ReadOnlyCollection`1<System.Object>

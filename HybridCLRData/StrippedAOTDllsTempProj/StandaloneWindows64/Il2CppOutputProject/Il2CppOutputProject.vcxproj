@@ -407,6 +407,8 @@
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.VideoModule.cpp">
     </ClCompile>
+    <ClCompile Include="Source\UnityEngine.VirtualTexturingModule.cpp">
+    </ClCompile>
     <ClCompile Include="Source\UnityEngine.VRModule.cpp">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.XRModule.cpp">
@@ -520,6 +522,8 @@
     <ClCompile Include="Source\UnityEngine.VFXModule_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.VideoModule_CodeGen.c">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.VirtualTexturingModule_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.VRModule_CodeGen.c">
     </ClCompile>

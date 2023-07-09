@@ -1,14 +1,15 @@
+using GameCore;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using static UnityEngine.Rendering.VirtualTexturing.Debugging;
 
 public enum AssetLoadMode
 {
     AssetBundle,
-    Editor,
-    Resources
+    Editor
 }
 public class AssetManager : MonoBehaviour
 {
@@ -32,7 +33,15 @@ public class AssetManager : MonoBehaviour
     /// <summary>
     /// 所有加载过的ab包
     /// </summary>
-    private Dictionary<string, AssetBundle> m_AllAB = new Dictionary<string, AssetBundle>();
+    private Dictionary<string, AssetBundleRecord> m_AllAB = new Dictionary<string, AssetBundleRecord>(100);
+    /// <summary>
+    /// 等待释放的ab包列表
+    /// </summary>
+    private List<string> m_WaitDestroyABList;
+    /// <summary>
+    /// 等待释放ab包的时间
+    /// </summary>
+    private float m_WaitDestroyTime;
 
     public static void Initialize(AssetLoadMode assetLoadMode)
     {
@@ -46,7 +55,7 @@ public class AssetManager : MonoBehaviour
         if(m_FileManifest == null)
         {
             AssetBundle file = AssetBundle.LoadFromFile(Path.Combine(AssetDefine.localDataPath, "lgassetmanifest.asset"));
-            m_AllAB.Add("LGAssetManifest.asset", file);
+            AddAssetBundle("LGAssetManifest.asset", file);
             m_FileManifest = file.LoadAsset<AssetManifest_AssetBundle>("lgassetmanifest");
         }
 
@@ -58,10 +67,16 @@ public class AssetManager : MonoBehaviour
     /// </summary>
     /// <param name="abName">包名</param>
     /// <param name="bundle">包</param>
-    public void AddAssetBundle(string abName, AssetBundle bundle)
+    public AssetBundleRecord AddAssetBundle(string abName, AssetBundle bundle)
     {
+        AssetBundleRecord record = Pool<AssetBundleRecord>.Get();
+        record.assetBundle = bundle;
+        record.bundleName = abName;
+
         if (!m_AllAB.ContainsKey(abName))
-            m_AllAB.Add(abName, bundle);
+            m_AllAB.Add(abName, record);
+
+        return record;
     }
 
     /// <summary>
@@ -71,8 +86,10 @@ public class AssetManager : MonoBehaviour
     /// <returns>是否移除成功</returns>
     public bool RemoveAssetBundle(string abName)
     {
-        if (m_AllAB.ContainsKey(abName))
-        { 
+        AssetBundleRecord bundle;
+        if (m_AllAB.TryGetValue(abName, out bundle))
+        {
+            bundle.Unload(true);
             m_AllAB.Remove(abName);
             return true;
         }
@@ -86,7 +103,7 @@ public class AssetManager : MonoBehaviour
     /// <param name="abName">包名</param>
     /// <param name="bundle">包</param>
     /// <returns>是否获取成功</returns>
-    public bool TryGetAssetBundle(string abName, out AssetBundle bundle)
+    public bool TryGetAssetBundle(string abName, out AssetBundleRecord bundle)
     {
         return m_AllAB.TryGetValue(abName, out bundle);
     }
@@ -99,23 +116,6 @@ public class AssetManager : MonoBehaviour
     public bool IsExistAssetBundle(string abName)
     {
         return m_AllAB.ContainsKey(abName);
-    }
-
-    /// <summary>
-    /// 加载依赖
-    /// </summary>
-    public void LoadDependencies(List<string> abNames)
-    {
-        if (abNames == null || abNames.Count == 0) return; 
-        foreach (string dependPath in abNames)
-        {
-            if (!m_AllAB.ContainsKey(dependPath))
-            {
-                AssetBundle ab = AssetBundle.LoadFromFile(Path.Combine(AssetDefine.localDataPath, dependPath));
-                m_AllAB.Add(dependPath, ab);
-            }
-        }
-
     }
 
     /// <summary>
@@ -137,12 +137,6 @@ public class AssetManager : MonoBehaviour
                     break;
                 case AssetLoadMode.Editor:
                     loader = new EditorAssetLoader(assetName, type);
-                    break;
-                case AssetLoadMode.Resources:
-                    loader = new ResourcesAssetLoader(assetName, type, true);
-                    break;
-                default:
-                    loader = new ResourcesAssetLoader(assetName, type, true);
                     break;
             }
 
@@ -172,12 +166,6 @@ public class AssetManager : MonoBehaviour
                     break;
                 case AssetLoadMode.Editor:
                     loader = new EditorAssetLoader(assetName, typeof(T));
-                    break;
-                case AssetLoadMode.Resources:
-                    loader = new ResourcesAssetLoader(assetName, typeof(T), false);
-                    break;
-                default:
-                    loader = new ResourcesAssetLoader(assetName, typeof(T), false);
                     break;
             }
 
@@ -218,9 +206,7 @@ public class AssetManager : MonoBehaviour
             loader.Update();
 
             if (loader.isDone)
-            {
                 m_CompleteList.Add(name);
-            }
         }
 
 
@@ -238,5 +224,39 @@ public class AssetManager : MonoBehaviour
         }
 
         m_CompleteList.Clear();
+    }
+
+    private void LateUpdate()
+    {
+        if(m_AllAB.Count <= 0) return;
+
+        string abName;
+        AssetBundleRecord record;
+        foreach (var ab in m_AllAB)
+        {
+            abName = ab.Key;
+            record = ab.Value;
+            if (m_WaitDestroyABList != null && m_WaitDestroyABList.Contains(abName))
+                continue;
+
+            if (record.dpendsReferenceCount <= 0 && record.rawReferenceCount <= 0 && !record.isAssetLoading)
+            {
+                m_WaitDestroyABList ??= new List<string>();
+                record.beginDestroyTime = Time.realtimeSinceStartup;
+                m_WaitDestroyABList.Add(abName);
+            }
+        }
+
+        for (int i = m_WaitDestroyABList.Count - 1; i >= 0; i--)
+        {
+            abName = m_WaitDestroyABList[i];
+            record = m_AllAB[abName];
+            if (Time.realtimeSinceStartup - record.beginDestroyTime >= m_WaitDestroyTime)
+            {
+                record.Unload(true);
+                m_WaitDestroyABList.RemoveAt(i);
+                m_AllAB.Remove(abName);
+            }
+        }
     }
 }

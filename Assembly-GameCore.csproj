@@ -89,7 +89,6 @@
     <Compile Include="Assets\Scripts\HotUpdate\GameCore\Entity\Partials\Entity_Skin.cs" />
     <Compile Include="Assets\Scripts\HotUpdate\GameCore\Entity\Partials\Entity_Collider.cs" />
     <Compile Include="Assets\Scripts\HotUpdate\GameCore\Entity\Partials\Entity_Animator.cs" />
-    <Compile Include="Assets\Scripts\HotUpdate\GameCore\Asset\ResourcesAssetLoader.cs" />
     <Compile Include="Assets\Scripts\HotUpdate\GameCore\Entity\Partials\Entity.cs" />
     <Compile Include="Assets\Scripts\HotUpdate\GameCore\Animator\SpiteAnimator.cs" />
     <Compile Include="Assets\Scripts\HotUpdate\GameCore\Event\EventDefine.cs" />
@@ -109,6 +108,7 @@
     <Compile Include="Assets\Scripts\HotUpdate\GameCore\Input\New\InputReader.cs" />
     <Compile Include="Assets\Scripts\HotUpdate\GameCore\Entity\Partials\Entity_Move.cs" />
     <Compile Include="Assets\Scripts\HotUpdate\GameCore\Avatar\AvatarPart.cs" />
+    <Compile Include="Assets\Scripts\HotUpdate\GameCore\Asset\AssetBundleRecord.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\HotUpdate\GameCore\Assembly-GameCore.asmdef" />

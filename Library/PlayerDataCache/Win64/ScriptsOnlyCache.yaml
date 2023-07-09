@@ -3,6 +3,8 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - ConsoleToScreen
     - Launcher
+    Assembly-GameCore.dll:
+    - AssetManifest_AssetBundle
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
@@ -62,17 +64,17 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2318}
+      Script: {instanceID: 2258}
     - Class: 114
-      Script: {instanceID: 2464}
+      Script: {instanceID: 2406}
     - Class: 114
-      Script: {instanceID: 4448}
+      Script: {instanceID: 4412}
     - Class: 114
-      Script: {instanceID: 4724}
+      Script: {instanceID: 4690}
     - Class: 114
-      Script: {instanceID: 5506}
+      Script: {instanceID: 5476}
     - Class: 114
-      Script: {instanceID: 8440}
+      Script: {instanceID: 8452}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -126,6 +128,12 @@ ScriptsOnlyBuild:
     className: PlayerInput
   - hash:
       serializedVersion: 2
+      Hash: 41e6873b98617a644ddaedd4fc4f00ba
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: AI
+    className: NavigationData
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -148,6 +156,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: 
+    className: GMPoolManager
   - hash:
       serializedVersion: 2
       Hash: 8d0e6036071a6b6bdb906120fa3c5490
@@ -178,6 +192,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseExitMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: b7fd733d27b3ebe45002c34b86f59855
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: 
+    className: OrbitCamera
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -216,6 +236,12 @@ ScriptsOnlyBuild:
     className: PlaymodeTestsController
   - hash:
       serializedVersion: 2
+      Hash: 02620a7c2e2e95c29ea195eed0258920
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: 
+    className: AssetManifest_AssetBundle
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -232,6 +258,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ConsoleToScreen
+  - hash:
+      serializedVersion: 2
+      Hash: 4a2c481bd09ca410df775fb6e3974608
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: 
+    className: GMEntityHotRadius
+  - hash:
+      serializedVersion: 2
+      Hash: 26b12a795a068db827f1028656c70ae4
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: 
+    className: ColliderTrigger
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -292,6 +330,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: 
+    className: Avatar
   - hash:
       serializedVersion: 2
       Hash: f40fedccd4adbc76605bea6d67537e4b
@@ -355,15 +399,21 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Unity.VisualScripting.Core.dll
-    namespaceName: Unity.VisualScripting
-    className: UnityOnInputFieldValueChangedMessageListener
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: 
+    className: AssetManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseDownMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.VisualScripting.Core.dll
+    namespaceName: Unity.VisualScripting
+    className: UnityOnInputFieldValueChangedMessageListener
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -409,6 +459,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: 
+    className: GameObjectPool
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayerQuitHandler
@@ -418,6 +474,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: bf686beca4949599f9348ccbdc852675
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: 
+    className: AssetManifest_Editor
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -480,10 +542,22 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: 
+    className: GMEntityManager
+  - hash:
+      serializedVersion: 2
       Hash: fb9c864b454c238286d08e8fbf46a31f
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
     className: InputDebuggerWindow
+  - hash:
+      serializedVersion: 2
+      Hash: 0bee1b2810a96536bc63e2b8b47f2ba8
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: 
+    className: GMCullingGroup
   - hash:
       serializedVersion: 2
       Hash: 9706e27e13ef8b6ca2a6360f0aaade32
@@ -532,6 +606,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 0d00bfe3b72367fabdf55e2c7d3614ad
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: 
+    className: AnimationMap
   - hash:
       serializedVersion: 2
       Hash: ef5c43f921427d03730f6ea4c848f07d
@@ -703,6 +783,18 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: 
+    className: GMUpdateCollider
+  - hash:
+      serializedVersion: 2
+      Hash: 54a0754b3d78e02e9d85db07225836c4
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: 
+    className: RenenderSprite
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnBecameInvisibleMessageListener
@@ -744,6 +836,12 @@ ScriptsOnlyBuild:
     className: PlayerInputManagerEditor
   - hash:
       serializedVersion: 2
+      Hash: a019497dbd90681aa84bd313686282f1
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: 
+    className: SpiteAnimator
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -760,6 +858,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: b7baca8bbdc2a4b8bd3fb60a74800012
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: 
+    className: AudioGroup
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -828,6 +932,12 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
+      Hash: 66d316c346aa805b633cd6ec5f1e1868
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: 
+    className: ColliderInfos
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
@@ -868,6 +978,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 14e6f940f31de01bd3542afbaab54b68
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: 
+    className: AnimationData
   - hash:
       serializedVersion: 2
       Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
@@ -948,6 +1064,12 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
+      Hash: 7263ed4f31a8e119e88dae4b450001aa
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: AI
+    className: Navigation2D
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -976,6 +1098,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: 
+    className: GMAudioManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1032,6 +1160,12 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: e5795cfaef539f8c1dca92eed99a856c
+    assemblyName: Assembly-GameCore.dll
+    namespaceName: 
+    className: SortSprite2D
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1075,153 +1209,15 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Unity.VisualScripting.Core.dll
-    namespaceName: Unity.VisualScripting
-    className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 02620a7c2e2e95c29ea195eed0258920
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: 
-    className: AssetManifest_AssetBundle
-  - hash:
-      serializedVersion: 2
-      Hash: 41e6873b98617a644ddaedd4fc4f00ba
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: AI
-    className: NavigationData
-  - hash:
-      serializedVersion: 2
-      Hash: 54a0754b3d78e02e9d85db07225836c4
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: 
-    className: RenenderSprite
-  - hash:
-      serializedVersion: 2
-      Hash: 0bee1b2810a96536bc63e2b8b47f2ba8
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: 
-    className: GMCullingGroup
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: 
-    className: AssetManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: 
-    className: GMAudioManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-GameCore.dll
     namespaceName: 
     className: InputReader
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: 
-    className: TimerManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: 
-    className: GameObjectPool
-  - hash:
-      serializedVersion: 2
-      Hash: 7263ed4f31a8e119e88dae4b450001aa
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: AI
-    className: Navigation2D
-  - hash:
-      serializedVersion: 2
-      Hash: bf686beca4949599f9348ccbdc852675
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: 
-    className: AssetManifest_Editor
-  - hash:
-      serializedVersion: 2
-      Hash: 0d00bfe3b72367fabdf55e2c7d3614ad
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: 
-    className: AnimationMap
-  - hash:
-      serializedVersion: 2
-      Hash: 4a2c481bd09ca410df775fb6e3974608
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: 
-    className: GMEntityHotRadius
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: 
-    className: GMEntityManager
-  - hash:
-      serializedVersion: 2
-      Hash: b7fd733d27b3ebe45002c34b86f59855
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: 
-    className: OrbitCamera
-  - hash:
-      serializedVersion: 2
-      Hash: e5795cfaef539f8c1dca92eed99a856c
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: 
-    className: SortSprite2D
-  - hash:
-      serializedVersion: 2
-      Hash: 26b12a795a068db827f1028656c70ae4
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: 
-    className: ColliderTrigger
-  - hash:
-      serializedVersion: 2
-      Hash: b7baca8bbdc2a4b8bd3fb60a74800012
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: 
-    className: AudioGroup
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: 
-    className: Avatar
-  - hash:
-      serializedVersion: 2
-      Hash: 14e6f940f31de01bd3542afbaab54b68
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: 
-    className: AnimationData
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: 
-    className: GMUpdateCollider
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: 
-    className: GMPoolManager
-  - hash:
-      serializedVersion: 2
-      Hash: a019497dbd90681aa84bd313686282f1
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: 
-    className: SpiteAnimator
-  - hash:
-      serializedVersion: 2
-      Hash: 66d316c346aa805b633cd6ec5f1e1868
-    assemblyName: Assembly-GameCore.dll
-    namespaceName: 
-    className: ColliderInfos
+    assemblyName: Unity.VisualScripting.Core.dll
+    namespaceName: Unity.VisualScripting
+    className: UnityOnSliderValueChangedMessageListener
   platform: 19
   scenePathNames:
   - Assets/Scenes/main.unity

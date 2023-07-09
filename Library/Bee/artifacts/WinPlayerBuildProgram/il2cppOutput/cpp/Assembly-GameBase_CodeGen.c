@@ -20,148 +20,144 @@
 // 0x00000006 System.Void DictionaryEx`2::Clear()
 // 0x00000007 System.Type IPool::get_type()
 // 0x00000008 System.Collections.ICollection IPool::get_collection()
-// 0x00000009 System.Void ObjectPoolList::.cctor()
-extern void ObjectPoolList__cctor_mD4C4BFE5185AC21D1DCC1DEF153D2BAA3AF4322B (void);
-// 0x0000000A System.Type ObjectPool`1::get_type()
-// 0x0000000B System.Collections.ICollection ObjectPool`1::get_collection()
-// 0x0000000C System.Void ObjectPool`1::.ctor()
-// 0x0000000D System.Void ObjectPool`1::.ctor(System.Action`1<T>,System.Action`1<T>)
-// 0x0000000E T ObjectPool`1::Get()
-// 0x0000000F System.Void ObjectPool`1::Release(T)
-// 0x00000010 System.Void ObjectPool`1::Clear()
-// 0x00000011 T Pool`1::Get()
-// 0x00000012 System.Void Pool`1::Release(T)
-// 0x00000013 System.Void Pool`1::Clear()
-// 0x00000014 System.Void Pool`1::.cctor()
-// 0x00000015 System.Void ListPool`1::Clear(System.Collections.Generic.List`1<T>)
-// 0x00000016 System.Collections.Generic.List`1<T> ListPool`1::Get()
-// 0x00000017 System.Void ListPool`1::Release(System.Collections.Generic.List`1<T>)
-// 0x00000018 System.Void ListPool`1::.cctor()
-// 0x00000019 System.Void QueuePool`1::Clear(System.Collections.Generic.Queue`1<T>)
-// 0x0000001A System.Collections.Generic.Queue`1<T> QueuePool`1::Get()
-// 0x0000001B System.Void QueuePool`1::Release(System.Collections.Generic.Queue`1<T>)
-// 0x0000001C System.Void QueuePool`1::.cctor()
-// 0x0000001D System.Void DictionaryPool`2::Clear(System.Collections.Generic.Dictionary`2<K,V>)
-// 0x0000001E DictionaryEx`2<K,V> DictionaryPool`2::Get()
-// 0x0000001F System.Void DictionaryPool`2::Release(DictionaryEx`2<K,V>)
-// 0x00000020 System.Void DictionaryPool`2::.cctor()
-// 0x00000021 TimerManager/Timer TimerManager::SetTimer(TimerManager/TimerType,UnityEngine.Events.UnityAction,System.Single,System.Single,System.Int32)
+// 0x00000009 System.Type ObjectPool`1::get_type()
+// 0x0000000A System.Collections.ICollection ObjectPool`1::get_collection()
+// 0x0000000B System.Void ObjectPool`1::.ctor()
+// 0x0000000C System.Void ObjectPool`1::.ctor(System.Action`1<T>,System.Action`1<T>)
+// 0x0000000D T ObjectPool`1::Get()
+// 0x0000000E System.Void ObjectPool`1::Release(T)
+// 0x0000000F System.Void ObjectPool`1::Clear()
+// 0x00000010 T Pool`1::Get()
+// 0x00000011 System.Void Pool`1::Release(T)
+// 0x00000012 System.Void Pool`1::Clear()
+// 0x00000013 System.Void Pool`1::.cctor()
+// 0x00000014 System.Void ListPool`1::Clear(System.Collections.Generic.List`1<T>)
+// 0x00000015 System.Collections.Generic.List`1<T> ListPool`1::Get()
+// 0x00000016 System.Void ListPool`1::Release(System.Collections.Generic.List`1<T>)
+// 0x00000017 System.Void ListPool`1::.cctor()
+// 0x00000018 System.Void QueuePool`1::Clear(System.Collections.Generic.Queue`1<T>)
+// 0x00000019 System.Collections.Generic.Queue`1<T> QueuePool`1::Get()
+// 0x0000001A System.Void QueuePool`1::Release(System.Collections.Generic.Queue`1<T>)
+// 0x0000001B System.Void QueuePool`1::.cctor()
+// 0x0000001C System.Void DictionaryPool`2::Clear(System.Collections.Generic.Dictionary`2<K,V>)
+// 0x0000001D DictionaryEx`2<K,V> DictionaryPool`2::Get()
+// 0x0000001E System.Void DictionaryPool`2::Release(DictionaryEx`2<K,V>)
+// 0x0000001F System.Void DictionaryPool`2::.cctor()
+// 0x00000020 TimerManager/Timer TimerManager::SetTimer(TimerManager/TimerType,UnityEngine.Events.UnityAction,System.Single,System.Single,System.Int32)
 extern void TimerManager_SetTimer_mD2BB34039F699316279F502AEFA8072E550B0185 (void);
-// 0x00000022 System.Int32 TimerManager::AddTimer(UnityEngine.Events.UnityAction,System.Single,System.Single,System.Int32)
+// 0x00000021 System.Int32 TimerManager::AddTimer(UnityEngine.Events.UnityAction,System.Single,System.Single,System.Int32)
 extern void TimerManager_AddTimer_mA46ECEF0E45E637CB766E1313A02F7869A45E173 (void);
-// 0x00000023 System.Int32 TimerManager::AddFrame(UnityEngine.Events.UnityAction,System.Single,System.Single,System.Int32)
+// 0x00000022 System.Int32 TimerManager::AddFrame(UnityEngine.Events.UnityAction,System.Single,System.Single,System.Int32)
 extern void TimerManager_AddFrame_mD72BD26F80F379F57134FDBF789D3C244C90683B (void);
-// 0x00000024 System.Void TimerManager::DelTimer(System.Int32)
+// 0x00000023 System.Void TimerManager::DelTimer(System.Int32)
 extern void TimerManager_DelTimer_m5492839E915D43D596D3704EE854BB439B6F58D9 (void);
-// 0x00000025 UnityEngine.Coroutine TimerManager::AddCoroutine(System.Collections.IEnumerator)
+// 0x00000024 UnityEngine.Coroutine TimerManager::AddCoroutine(System.Collections.IEnumerator)
 extern void TimerManager_AddCoroutine_mF0DA73C82708BCE830813399249858EB747ED465 (void);
-// 0x00000026 System.Void TimerManager::DelCoroutine(UnityEngine.Coroutine)
+// 0x00000025 System.Void TimerManager::DelCoroutine(UnityEngine.Coroutine)
 extern void TimerManager_DelCoroutine_mECE54FA48041FDAFD56985D62A7CF2B6FF50AC6F (void);
-// 0x00000027 System.Void TimerManager::Update()
+// 0x00000026 System.Void TimerManager::Update()
 extern void TimerManager_Update_m4270AD522863E3DA1D8063E8C1224F2B791A558B (void);
-// 0x00000028 System.Void TimerManager::.ctor()
+// 0x00000027 System.Void TimerManager::.ctor()
 extern void TimerManager__ctor_mBCBFC23D99E83C0C2565FFEC288CE4AE06E2D4DE (void);
-// 0x00000029 System.Int32 TimerManager/Timer::get_id()
+// 0x00000028 System.Int32 TimerManager/Timer::get_id()
 extern void Timer_get_id_m5971893920B329C110F6E483C40F865F0EBBCC7A (void);
-// 0x0000002A System.Boolean TimerManager/Timer::get_dispose()
-extern void Timer_get_dispose_m54EA34ECFDAB9DA4FDAEBCACE564EF382F3459A1 (void);
-// 0x0000002B TimerManager/Timer TimerManager/Timer::SetData(TimerManager/TimerType,UnityEngine.Events.UnityAction,System.Single,System.Single,System.Int32)
+// 0x00000029 TimerManager/Timer TimerManager/Timer::SetData(TimerManager/TimerType,UnityEngine.Events.UnityAction,System.Single,System.Single,System.Int32)
 extern void Timer_SetData_m2F91C40410D397461360EC9366EF85142995EFA7 (void);
-// 0x0000002C System.Void TimerManager/Timer::Clear()
-extern void Timer_Clear_mE0686558FD70BF811D11FBDF8BE6E301E2C747DC (void);
-// 0x0000002D System.Void TimerManager/Timer::Update()
-extern void Timer_Update_m9DA25A9A7C823B387D81CA66DBACD3BED18674D2 (void);
-// 0x0000002E System.Void TimerManager/Timer::.ctor()
+// 0x0000002A System.Void TimerManager/Timer::Dispose()
+extern void Timer_Dispose_m82F91D1C904A96E6BE9BEE4F84589A752F436317 (void);
+// 0x0000002B System.Boolean TimerManager/Timer::Update()
+extern void Timer_Update_mEDEA49FB20A660B01CA3B0B934603A4134219BAC (void);
+// 0x0000002C System.Void TimerManager/Timer::.ctor()
 extern void Timer__ctor_m4DB2D8165CACA6D59FC5314A8909D403F85BB221 (void);
-// 0x0000002F System.Void TimerManager/Timer::.cctor()
+// 0x0000002D System.Void TimerManager/Timer::.cctor()
 extern void Timer__cctor_mA6EC0AA484D24FD8AEEECCC54FFCD9E9832FEBB1 (void);
-// 0x00000030 System.Void AssetFile::.ctor()
+// 0x0000002E System.Void AssetFile::.ctor()
 extern void AssetFile__ctor_m8BDCF6B261B0B6C46648A4AA82C9AE2FA882B2B0 (void);
-// 0x00000031 T SingletonBase`1::get_instance()
-// 0x00000032 System.Void SingletonBase`1::.ctor()
-// 0x00000033 T SingletonMono`1::get_instance()
-// 0x00000034 System.Void SingletonMono`1::Awake()
-// 0x00000035 System.Void SingletonMono`1::.ctor()
-// 0x00000036 T SingletonMonoAuto`1::get_instance()
-// 0x00000037 System.Void SingletonMonoAuto`1::.ctor()
-// 0x00000038 System.String LJsonUtility::ToJason(System.Collections.Generic.List`1<T>)
-// 0x00000039 System.String LJsonUtility::ToJason(System.Collections.Generic.Dictionary`2<T,V>)
-// 0x0000003A System.String LJsonUtility::ToJason(System.Object)
+// 0x0000002F T SingletonBase`1::get_instance()
+// 0x00000030 System.Void SingletonBase`1::.ctor()
+// 0x00000031 T SingletonMono`1::get_instance()
+// 0x00000032 System.Void SingletonMono`1::Awake()
+// 0x00000033 System.Void SingletonMono`1::.ctor()
+// 0x00000034 T SingletonMonoAuto`1::get_instance()
+// 0x00000035 System.Void SingletonMonoAuto`1::.ctor()
+// 0x00000036 System.String LJsonUtility::ToJason(System.Collections.Generic.List`1<T>)
+// 0x00000037 System.String LJsonUtility::ToJason(System.Collections.Generic.Dictionary`2<T,V>)
+// 0x00000038 System.String LJsonUtility::ToJason(System.Object)
 extern void LJsonUtility_ToJason_mE87C5DB102A88916529F6CB1EFC0620E42E3586A (void);
-// 0x0000003B System.Collections.Generic.List`1<T> LJsonUtility::FromJsonToList(System.String)
-// 0x0000003C System.Collections.Generic.Dictionary`2<T,V> LJsonUtility::FromJsonToDictionary(System.String)
-// 0x0000003D T LJsonUtility::FromJson(System.String)
-// 0x0000003E System.Object LJsonUtility::FromJson(System.String,System.Type)
+// 0x00000039 System.Collections.Generic.List`1<T> LJsonUtility::FromJsonToList(System.String)
+// 0x0000003A System.Collections.Generic.Dictionary`2<T,V> LJsonUtility::FromJsonToDictionary(System.String)
+// 0x0000003B T LJsonUtility::FromJson(System.String)
+// 0x0000003C System.Object LJsonUtility::FromJson(System.String,System.Type)
 extern void LJsonUtility_FromJson_m6F20E51A99F6BDE972FA18F3196994E7AB7F1D82 (void);
-// 0x0000003F System.Void LJsonUtility::FromJsonOverwrite(System.String,System.Object)
+// 0x0000003D System.Void LJsonUtility::FromJsonOverwrite(System.String,System.Object)
 extern void LJsonUtility_FromJsonOverwrite_mC10822A8D458883024FC5DDA9ADC456C3187730D (void);
-// 0x00000040 System.Void LJsonUtility/Serialization`1::.ctor(System.Collections.Generic.List`1<T>)
-// 0x00000041 System.Collections.Generic.List`1<T> LJsonUtility/Serialization`1::Reduction()
-// 0x00000042 System.Void LJsonUtility/Serialization`2::.ctor(System.Collections.Generic.Dictionary`2<T,V>)
-// 0x00000043 System.Collections.Generic.Dictionary`2<T,V> LJsonUtility/Serialization`2::Reduction()
-// 0x00000044 System.Void LJsonUtility/Serialization`2::OnAfterDeserialize()
-// 0x00000045 System.Void LJsonUtility/Serialization`2::OnBeforeSerialize()
-// 0x00000046 System.Void MobileUtility::RestartApplication()
+// 0x0000003E System.Void LJsonUtility/Serialization`1::.ctor(System.Collections.Generic.List`1<T>)
+// 0x0000003F System.Collections.Generic.List`1<T> LJsonUtility/Serialization`1::Reduction()
+// 0x00000040 System.Void LJsonUtility/Serialization`2::.ctor(System.Collections.Generic.Dictionary`2<T,V>)
+// 0x00000041 System.Collections.Generic.Dictionary`2<T,V> LJsonUtility/Serialization`2::Reduction()
+// 0x00000042 System.Void LJsonUtility/Serialization`2::OnAfterDeserialize()
+// 0x00000043 System.Void LJsonUtility/Serialization`2::OnBeforeSerialize()
+// 0x00000044 System.Void MobileUtility::RestartApplication()
 extern void MobileUtility_RestartApplication_mC3CF1B6DFEFD17E7D5B4B5917224A7E93B6FDA55 (void);
-// 0x00000047 System.Void MobileUtility::.ctor()
+// 0x00000045 System.Void MobileUtility::.ctor()
 extern void MobileUtility__ctor_m1536591162EB02C523289AECBD985FBBA17E1A90 (void);
-// 0x00000048 System.Int32 Utility::GetFileSize(System.String)
+// 0x00000046 System.Int32 Utility::GetFileSize(System.String)
 extern void Utility_GetFileSize_mC7BA86E62B49CE6A70BA73052A88340231841E99 (void);
-// 0x00000049 System.Int32 Utility::GetDirectorySize(System.String)
+// 0x00000047 System.Int32 Utility::GetDirectorySize(System.String)
 extern void Utility_GetDirectorySize_mEBADB8B9686DE1FD6BDB250B45D54DFDC86C5B41 (void);
-// 0x0000004A System.Void Utility::.ctor()
+// 0x00000048 System.Void Utility::.ctor()
 extern void Utility__ctor_m5C682D6BB0B4C94F29666E161C2699474DD36B3D (void);
-// 0x0000004B System.Object LGameFramework.GameBase.AssetFileDownloader::get_Current()
+// 0x00000049 System.Object LGameFramework.GameBase.AssetFileDownloader::get_Current()
 extern void AssetFileDownloader_get_Current_m079E8AE1F052BA5800AC3EA2BFEDB12BFB1E7850 (void);
-// 0x0000004C System.String LGameFramework.GameBase.AssetFileDownloader::get_downloadURL()
+// 0x0000004A System.String LGameFramework.GameBase.AssetFileDownloader::get_downloadURL()
 extern void AssetFileDownloader_get_downloadURL_m2A1596EC87315FB2DC660A12A6BF051DE5A7225C (void);
-// 0x0000004D System.String LGameFramework.GameBase.AssetFileDownloader::get_downloadPath()
+// 0x0000004B System.String LGameFramework.GameBase.AssetFileDownloader::get_downloadPath()
 extern void AssetFileDownloader_get_downloadPath_mB54D536302FFF26611BF4570EE762B240930624A (void);
-// 0x0000004E System.Single LGameFramework.GameBase.AssetFileDownloader::get_progress()
+// 0x0000004C System.Single LGameFramework.GameBase.AssetFileDownloader::get_progress()
 extern void AssetFileDownloader_get_progress_mF4B95F152B4AEFCA64591F0C1E896BA985E834F3 (void);
-// 0x0000004F System.Boolean LGameFramework.GameBase.AssetFileDownloader::get_isDone()
+// 0x0000004D System.Boolean LGameFramework.GameBase.AssetFileDownloader::get_isDone()
 extern void AssetFileDownloader_get_isDone_m48733C9D1C08BA415176C65655366A2FB369865A (void);
-// 0x00000050 System.Net.WebClient LGameFramework.GameBase.AssetFileDownloader::get_webClient()
+// 0x0000004E System.Net.WebClient LGameFramework.GameBase.AssetFileDownloader::get_webClient()
 extern void AssetFileDownloader_get_webClient_mD5E6369E6F7A9CD1410E927ABDA68550877F54A1 (void);
-// 0x00000051 System.Void LGameFramework.GameBase.AssetFileDownloader::Download()
+// 0x0000004F System.Void LGameFramework.GameBase.AssetFileDownloader::Download()
 extern void AssetFileDownloader_Download_mD43C1CC330DD1803920B420AC8B075745E12BDF1 (void);
-// 0x00000052 System.Void LGameFramework.GameBase.AssetFileDownloader::DownloadFileAsync(System.String,System.String)
+// 0x00000050 System.Void LGameFramework.GameBase.AssetFileDownloader::DownloadFileAsync(System.String,System.String)
 extern void AssetFileDownloader_DownloadFileAsync_m0F9D9091D9B5D1E443D2555A5935D323C93ABC04 (void);
-// 0x00000053 System.Void LGameFramework.GameBase.AssetFileDownloader::SetData(System.String,System.String)
+// 0x00000051 System.Void LGameFramework.GameBase.AssetFileDownloader::SetData(System.String,System.String)
 extern void AssetFileDownloader_SetData_mF7ED7267E32693A4F42E273FF78CAA14AA770554 (void);
-// 0x00000054 System.Boolean LGameFramework.GameBase.AssetFileDownloader::MoveNext()
+// 0x00000052 System.Boolean LGameFramework.GameBase.AssetFileDownloader::MoveNext()
 extern void AssetFileDownloader_MoveNext_mFFC8768A3F8129BFB925B3CB4C64DAF2C0A027C3 (void);
-// 0x00000055 System.Void LGameFramework.GameBase.AssetFileDownloader::Reset()
+// 0x00000053 System.Void LGameFramework.GameBase.AssetFileDownloader::Reset()
 extern void AssetFileDownloader_Reset_m4C37408BB39995FF24FDDEF151269FF1A6580594 (void);
-// 0x00000056 System.Void LGameFramework.GameBase.AssetFileDownloader::Dispose()
+// 0x00000054 System.Void LGameFramework.GameBase.AssetFileDownloader::Dispose()
 extern void AssetFileDownloader_Dispose_m9A551E01C4CD109A2A464C5CC362CB5440478FE4 (void);
-// 0x00000057 System.Void LGameFramework.GameBase.AssetFileDownloader::DownloadProgressChanged(System.Object,System.Net.DownloadProgressChangedEventArgs)
+// 0x00000055 System.Void LGameFramework.GameBase.AssetFileDownloader::DownloadProgressChanged(System.Object,System.Net.DownloadProgressChangedEventArgs)
 extern void AssetFileDownloader_DownloadProgressChanged_m98E27C47150979B46D48AF66CAC227546C02623D (void);
-// 0x00000058 System.Void LGameFramework.GameBase.AssetFileDownloader::DownloadFileCompleted(System.Object,System.ComponentModel.AsyncCompletedEventArgs)
+// 0x00000056 System.Void LGameFramework.GameBase.AssetFileDownloader::DownloadFileCompleted(System.Object,System.ComponentModel.AsyncCompletedEventArgs)
 extern void AssetFileDownloader_DownloadFileCompleted_mA264E8C5E62145DA32CCFB9821DB60BCF318D47F (void);
-// 0x00000059 System.Void LGameFramework.GameBase.AssetFileDownloader::.ctor()
+// 0x00000057 System.Void LGameFramework.GameBase.AssetFileDownloader::.ctor()
 extern void AssetFileDownloader__ctor_m2EF677CC96B4738A2BF6C2626B13E3284FD2F6B6 (void);
-// 0x0000005A System.Boolean LGameFramework.GameBase.AssetFileDownloadQueue::get_pause()
+// 0x00000058 System.Boolean LGameFramework.GameBase.AssetFileDownloadQueue::get_pause()
 extern void AssetFileDownloadQueue_get_pause_mA464A2A3904EEB85BCAF67C2842CF4523621EAF3 (void);
-// 0x0000005B System.Int32 LGameFramework.GameBase.AssetFileDownloadQueue::get_maximumSimultaneouslyDownloading()
+// 0x00000059 System.Int32 LGameFramework.GameBase.AssetFileDownloadQueue::get_maximumSimultaneouslyDownloading()
 extern void AssetFileDownloadQueue_get_maximumSimultaneouslyDownloading_m82F3467C6D78860C81DD6357E88AFB4889385E1A (void);
-// 0x0000005C System.Collections.Generic.Queue`1<LGameFramework.GameBase.AssetFileDownloader> LGameFramework.GameBase.AssetFileDownloadQueue::get_downloaderQueuePrepare()
+// 0x0000005A System.Collections.Generic.Queue`1<LGameFramework.GameBase.AssetFileDownloader> LGameFramework.GameBase.AssetFileDownloadQueue::get_downloaderQueuePrepare()
 extern void AssetFileDownloadQueue_get_downloaderQueuePrepare_mEFC7DA7058625DF937E6DF5F56A058DDE29D7FA6 (void);
-// 0x0000005D System.Collections.Generic.List`1<LGameFramework.GameBase.AssetFileDownloader> LGameFramework.GameBase.AssetFileDownloadQueue::get_downloadingCurrent()
+// 0x0000005B System.Collections.Generic.List`1<LGameFramework.GameBase.AssetFileDownloader> LGameFramework.GameBase.AssetFileDownloadQueue::get_downloadingCurrent()
 extern void AssetFileDownloadQueue_get_downloadingCurrent_mAD8C4CC0E2A501761D0E2CB061809E9631DF9F92 (void);
-// 0x0000005E System.Void LGameFramework.GameBase.AssetFileDownloadQueue::Pause(System.Boolean)
+// 0x0000005C System.Void LGameFramework.GameBase.AssetFileDownloadQueue::Pause(System.Boolean)
 extern void AssetFileDownloadQueue_Pause_m5D2CC4E695F96E10ACD66228ADB50C841E6E90AE (void);
-// 0x0000005F System.Void LGameFramework.GameBase.AssetFileDownloadQueue::Enqueue(LGameFramework.GameBase.AssetFileDownloader)
+// 0x0000005D System.Void LGameFramework.GameBase.AssetFileDownloadQueue::Enqueue(LGameFramework.GameBase.AssetFileDownloader)
 extern void AssetFileDownloadQueue_Enqueue_mA0F0B8AFD0F732D332C8B0F9E3ABADAF696E330D (void);
-// 0x00000060 System.Void LGameFramework.GameBase.AssetFileDownloadQueue::Enqueue(System.String,System.String)
+// 0x0000005E System.Void LGameFramework.GameBase.AssetFileDownloadQueue::Enqueue(System.String,System.String)
 extern void AssetFileDownloadQueue_Enqueue_mD6DCDA1FD202BEB2BA0DC796F8E6D0647B7756E1 (void);
-// 0x00000061 System.Void LGameFramework.GameBase.AssetFileDownloadQueue::DownloadStart()
+// 0x0000005F System.Void LGameFramework.GameBase.AssetFileDownloadQueue::DownloadStart()
 extern void AssetFileDownloadQueue_DownloadStart_m120D8E1B17754FCFDB2BA42F39C907B5731A0107 (void);
-// 0x00000062 System.Void LGameFramework.GameBase.AssetFileDownloadQueue::Update()
+// 0x00000060 System.Void LGameFramework.GameBase.AssetFileDownloadQueue::Update()
 extern void AssetFileDownloadQueue_Update_m71F7EE7B2727EE5B4FED33E5F642A141449F4352 (void);
-// 0x00000063 System.Void LGameFramework.GameBase.AssetFileDownloadQueue::.ctor()
+// 0x00000061 System.Void LGameFramework.GameBase.AssetFileDownloadQueue::.ctor()
 extern void AssetFileDownloadQueue__ctor_mBBF3B302DAE29BE07C43E4F5BCA4577ADE02E45D (void);
-static Il2CppMethodPointer s_methodPointers[99] = 
+static Il2CppMethodPointer s_methodPointers[97] = 
 {
 	NULL,
 	NULL,
@@ -171,7 +167,6 @@ static Il2CppMethodPointer s_methodPointers[99] =
 	NULL,
 	NULL,
 	NULL,
-	ObjectPoolList__cctor_mD4C4BFE5185AC21D1DCC1DEF153D2BAA3AF4322B,
 	NULL,
 	NULL,
 	NULL,
@@ -204,10 +199,9 @@ static Il2CppMethodPointer s_methodPointers[99] =
 	TimerManager_Update_m4270AD522863E3DA1D8063E8C1224F2B791A558B,
 	TimerManager__ctor_mBCBFC23D99E83C0C2565FFEC288CE4AE06E2D4DE,
 	Timer_get_id_m5971893920B329C110F6E483C40F865F0EBBCC7A,
-	Timer_get_dispose_m54EA34ECFDAB9DA4FDAEBCACE564EF382F3459A1,
 	Timer_SetData_m2F91C40410D397461360EC9366EF85142995EFA7,
-	Timer_Clear_mE0686558FD70BF811D11FBDF8BE6E301E2C747DC,
-	Timer_Update_m9DA25A9A7C823B387D81CA66DBACD3BED18674D2,
+	Timer_Dispose_m82F91D1C904A96E6BE9BEE4F84589A752F436317,
+	Timer_Update_mEDEA49FB20A660B01CA3B0B934603A4134219BAC,
 	Timer__ctor_m4DB2D8165CACA6D59FC5314A8909D403F85BB221,
 	Timer__cctor_mA6EC0AA484D24FD8AEEECCC54FFCD9E9832FEBB1,
 	AssetFile__ctor_m8BDCF6B261B0B6C46648A4AA82C9AE2FA882B2B0,
@@ -263,7 +257,7 @@ static Il2CppMethodPointer s_methodPointers[99] =
 	AssetFileDownloadQueue_Update_m71F7EE7B2727EE5B4FED33E5F642A141449F4352,
 	AssetFileDownloadQueue__ctor_mBBF3B302DAE29BE07C43E4F5BCA4577ADE02E45D,
 };
-static const int32_t s_InvokerIndices[99] = 
+static const int32_t s_InvokerIndices[97] = 
 {
 	0,
 	0,
@@ -273,7 +267,6 @@ static const int32_t s_InvokerIndices[99] =
 	0,
 	0,
 	0,
-	8252,
 	0,
 	0,
 	0,
@@ -306,10 +299,9 @@ static const int32_t s_InvokerIndices[99] =
 	5336,
 	5336,
 	5199,
-	5136,
 	347,
 	5336,
-	5336,
+	5136,
 	5336,
 	8252,
 	5336,
@@ -368,20 +360,20 @@ static const int32_t s_InvokerIndices[99] =
 static const Il2CppTokenRangePair s_rgctxIndices[15] = 
 {
 	{ 0x02000002, { 0, 15 } },
-	{ 0x02000005, { 15, 13 } },
-	{ 0x02000006, { 28, 6 } },
-	{ 0x02000007, { 34, 10 } },
-	{ 0x02000008, { 44, 10 } },
-	{ 0x02000009, { 54, 10 } },
-	{ 0x0200000F, { 64, 3 } },
-	{ 0x02000010, { 67, 2 } },
-	{ 0x02000011, { 69, 4 } },
-	{ 0x02000014, { 84, 13 } },
-	{ 0x06000038, { 73, 2 } },
-	{ 0x06000039, { 75, 2 } },
-	{ 0x0600003B, { 77, 3 } },
-	{ 0x0600003C, { 80, 3 } },
-	{ 0x0600003D, { 83, 1 } },
+	{ 0x02000004, { 15, 13 } },
+	{ 0x02000005, { 28, 6 } },
+	{ 0x02000006, { 34, 10 } },
+	{ 0x02000007, { 44, 10 } },
+	{ 0x02000008, { 54, 10 } },
+	{ 0x0200000E, { 64, 3 } },
+	{ 0x0200000F, { 67, 2 } },
+	{ 0x02000010, { 69, 4 } },
+	{ 0x02000013, { 84, 13 } },
+	{ 0x06000036, { 73, 2 } },
+	{ 0x06000037, { 75, 2 } },
+	{ 0x06000039, { 77, 3 } },
+	{ 0x0600003A, { 80, 3 } },
+	{ 0x0600003B, { 83, 1 } },
 };
 extern const uint32_t g_rgctx_Dictionary_2__ctor_m214C8552CB536C451DE56AA3FE7620CC7EC0A540;
 extern const uint32_t g_rgctx_Dictionary_2_t2EB397F569DD52A407BC6A68D4DCEB94840935C1;
@@ -584,7 +576,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DGameBase_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DGameBase_CodeGenModule = 
 {
 	"Assembly-GameBase.dll",
-	99,
+	97,
 	s_methodPointers,
 	0,
 	NULL,

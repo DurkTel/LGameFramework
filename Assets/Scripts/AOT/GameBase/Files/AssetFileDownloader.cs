@@ -10,8 +10,8 @@ namespace LGameFramework.GameBase
 {
     public class AssetFileDownloader : IEnumerator, IDisposable
     {
-        protected object m_current;
-        public object Current { get { return m_current; } }
+        protected object m_Current;
+        public object Current { get { return m_Current; } }
 
         protected string m_DownloadURL;
         public string downloadURL { get { return m_DownloadURL; } }
@@ -76,7 +76,7 @@ namespace LGameFramework.GameBase
             m_WebClient.DownloadFileCompleted -= DownloadFileCompleted;
             m_WebClient.CancelAsync();
             m_WebClient.Dispose();
-            m_current = null;
+            m_Current = null;
             Pool<WebClient>.Release(m_WebClient);
         }
 
@@ -89,7 +89,7 @@ namespace LGameFramework.GameBase
         protected void DownloadFileCompleted(object obj, AsyncCompletedEventArgs eventArgs)
         {
             m_IsDone = true;
-            m_current = obj;
+            m_Current = obj;
         }
     }
 }

@@ -31,6 +31,9 @@ public abstract class AssetLoader : IEnumerator
     protected Object m_RawObject;
     public Object rawObject { get { return m_RawObject; } }
 
+    protected AssetCache.RawObjectInfo m_RawObjectInfo;
+    public AssetCache.RawObjectInfo rawObjectInfo { get { return m_RawObjectInfo; } }
+
     public object Current { get; }
 
     public UnityAction<float> onProgress;

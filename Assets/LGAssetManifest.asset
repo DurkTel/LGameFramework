@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b40ebcf3e05108d4cbcbed9749f84b39, type: 3}
+  m_Script: {fileID: 11500000, guid: f0c67cf36fcaa6f48b8a6f90f8efc213, type: 3}
   m_Name: LGAssetManifest
   m_EditorClassIdentifier: 
   assetList:
@@ -2006,117 +2006,117 @@ MonoBehaviour:
   - assetName: darkhit01_0.png
     assetPath: darkhit01_0.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhit01_1.png
     assetPath: darkhit01_1.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhit01_2.png
     assetPath: darkhit01_2.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhit01_3.png
     assetPath: darkhit01_3.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhit01_4.png
     assetPath: darkhit01_4.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhit01_5.png
     assetPath: darkhit01_5.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhit01_6.png
     assetPath: darkhit01_6.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhit01_7.png
     assetPath: darkhit01_7.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhit01_8.png
     assetPath: darkhit01_8.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhit01_offset.txt
     assetPath: darkhit01_offset.txt
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhit01_pointoffsize.txt
     assetPath: darkhit01_pointoffsize.txt
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhit02_0.png
     assetPath: darkhit02_0.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhit02_1.png
     assetPath: darkhit02_1.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhit02_2.png
     assetPath: darkhit02_2.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhit02_3.png
     assetPath: darkhit02_3.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhit02_4.png
     assetPath: darkhit02_4.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhit02_5.png
     assetPath: darkhit02_5.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhit02_6.png
     assetPath: darkhit02_6.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhit02_7.png
     assetPath: darkhit02_7.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhit02_8.png
     assetPath: darkhit02_8.png
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhit02_offset.txt
     assetPath: darkhit02_offset.txt
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhit02_pointoffsize.txt
     assetPath: darkhit02_pointoffsize.txt
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: darkhiteffect.prefab
     assetPath: darkhiteffect.prefab
     bundleName: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 32440c6ace4689f3f901e68faea7918e
+    md5Code: cc115778277501dbf6b9028d38381191
     dependencieBundleNames: []
   - assetName: msyh sdf.asset
     assetPath: msyh sdf.asset
@@ -2201,10 +2201,12 @@ MonoBehaviour:
   - assetName: default_loading_gui.prefab
     assetPath: default_loading_gui.prefab
     bundleName: 002/artmodules/gui/role/prefabs/default_loading_gui.asset
-    md5Code: c632dd624c1a4b5d2b562397608e124b
+    md5Code: 5b1c1ebea9023f9a11a7d454fede7c34
     dependencieBundleNames:
+    - 002/artmodules/gui/role/images.asset
     - 002/artmodules/gui/role/images/roleicon.asset
     - 002/artmodules/gui/role/images/single/create_role_bg_1.asset
+    - 002/artmodules/gui/role/images/single/live2d/role_live2d_1_0.asset
   - assetName: gui_createrole_view.prefab
     assetPath: gui_createrole_view.prefab
     bundleName: 002/artmodules/gui/role/prefabs/gui_createrole_view.asset

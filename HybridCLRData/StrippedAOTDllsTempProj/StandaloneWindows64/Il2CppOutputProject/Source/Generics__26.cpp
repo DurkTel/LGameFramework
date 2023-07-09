@@ -653,12 +653,12 @@ struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D  : public RuntimeObject
 // ObjectPool`1<System.Collections.Generic.List`1<System.Object>>
 struct ObjectPool_1_t0D3D917E6CEECE3DDA0F650D4792EDF41F33A141  : public RuntimeObject
 {
-	// System.Collections.Generic.Stack`1<T> ObjectPool`1::m_stack
-	Stack_1_t08E9B72954DC89AD9AC1DCAFDC7EFFDB16799DDF* ___m_stack_0;
-	// System.Action`1<T> ObjectPool`1::m_onGet
-	Action_1_t90425964BF9D6282116C192CAA76B05EB0EEF123* ___m_onGet_1;
-	// System.Action`1<T> ObjectPool`1::m_onRelease
-	Action_1_t90425964BF9D6282116C192CAA76B05EB0EEF123* ___m_onRelease_2;
+	// System.Collections.Generic.Stack`1<T> ObjectPool`1::m_Stack
+	Stack_1_t08E9B72954DC89AD9AC1DCAFDC7EFFDB16799DDF* ___m_Stack_0;
+	// System.Action`1<T> ObjectPool`1::m_OnGet
+	Action_1_t90425964BF9D6282116C192CAA76B05EB0EEF123* ___m_OnGet_1;
+	// System.Action`1<T> ObjectPool`1::m_OnRelease
+	Action_1_t90425964BF9D6282116C192CAA76B05EB0EEF123* ___m_OnRelease_2;
 };
 
 // System.Collections.ObjectModel.ReadOnlyCollection`1<System.Collections.Generic.KeyValuePair`2<System.Object,UnityEngine.InputSystem.Utilities.JsonParser/JsonValue>>

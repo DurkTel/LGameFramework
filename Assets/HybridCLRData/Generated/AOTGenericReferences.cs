@@ -13,48 +13,47 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// }} 
 
 	// {{ AOT generic types
+	// DictionaryEx<int,byte>
+	// DictionaryEx<int,object>
+	// DictionaryEx<object,object>
 	// ObjectPool<object>
 	// Pool<object>
 	// QueuePool<object>
 	// SingletonBase<object>
 	// SingletonMono<object>
-	// SingletonMonoAuto<object>
 	// System.Action<int>
 	// System.Action<object>
 	// System.Action<UnityEngine.InputSystem.InputAction.CallbackContext>
 	// System.Action<GMUpdateCollider.ContactPair>
+	// System.Collections.Generic.Dictionary<EventDefine,object>
 	// System.Collections.Generic.Dictionary<int,object>
 	// System.Collections.Generic.Dictionary<object,object>
 	// System.Collections.Generic.Dictionary<object,int>
-	// System.Collections.Generic.Dictionary<EventDefine,object>
 	// System.Collections.Generic.Dictionary<int,byte>
-	// System.Collections.Generic.Dictionary.Enumerator<int,object>
 	// System.Collections.Generic.Dictionary.Enumerator<object,object>
 	// System.Collections.Generic.Dictionary.ValueCollection<int,object>
 	// System.Collections.Generic.Dictionary.ValueCollection.Enumerator<int,object>
 	// System.Collections.Generic.IEnumerable<object>
 	// System.Collections.Generic.IEnumerator<object>
-	// System.Collections.Generic.KeyValuePair<int,object>
 	// System.Collections.Generic.KeyValuePair<object,object>
-	// System.Collections.Generic.List<FrameCollInfo>
-	// System.Collections.Generic.List<GMUpdateCollider.ContactPair>
 	// System.Collections.Generic.List<ColliderInfo>
+	// System.Collections.Generic.List<GMUpdateCollider.ContactPair>
+	// System.Collections.Generic.List<int>
+	// System.Collections.Generic.List<SwitchingConditions>
+	// System.Collections.Generic.List<object>
 	// System.Collections.Generic.List<UnityEngine.Vector2>
 	// System.Collections.Generic.List<UnityEngine.Vector2Int>
-	// System.Collections.Generic.List<int>
-	// System.Collections.Generic.List<object>
-	// System.Collections.Generic.List<SwitchingConditions>
 	// System.Collections.Generic.List<AnimationMap.AniType>
+	// System.Collections.Generic.List<FrameCollInfo>
 	// System.Collections.Generic.List.Enumerator<FrameCollInfo>
 	// System.Collections.Generic.List.Enumerator<object>
-	// System.Collections.Generic.List.Enumerator<int>
 	// System.Collections.Generic.Queue<object>
 	// System.Func<byte>
 	// UnityEngine.Events.UnityAction<int>
 	// UnityEngine.Events.UnityAction<object>
-	// UnityEngine.Events.UnityAction<UnityEngine.Vector2>
 	// UnityEngine.Events.UnityAction<Avatar.AvatarPartType>
 	// UnityEngine.Events.UnityAction<float>
+	// UnityEngine.Events.UnityAction<UnityEngine.Vector2>
 	// UnityEngine.Events.UnityAction<int,int>
 	// UnityEngine.Events.UnityAction<object,byte>
 	// UnityEngine.Events.UnityAction<object,object,int>
