@@ -153,6 +153,8 @@
     </ClCompile>
     <ClCompile Include="Source\Generics__48.cpp">
     </ClCompile>
+    <ClCompile Include="Source\Generics__49.cpp">
+    </ClCompile>
     <ClCompile Include="Source\Generics__5.cpp">
     </ClCompile>
     <ClCompile Include="Source\Generics__6.cpp">
@@ -316,6 +318,8 @@
     <ClCompile Include="Source\UnityEngine.CoreModule__1.cpp">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.CoreModule__2.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\UnityEngine.CoreModule__3.cpp">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.cpp">
     </ClCompile>

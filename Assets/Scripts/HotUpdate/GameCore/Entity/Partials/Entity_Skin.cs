@@ -110,7 +110,7 @@ public partial class Entity
         AssetLoader loader = AssetUtility.LoadAssetAsync<GameObject>(boneAssetName);
         loader.onComplete = (p) =>
         {
-            rootBone = Object.Instantiate(p.rawObject as GameObject).transform;
+            rootBone = p.GetInstantiate<GameObject>().transform;
             rootBone.SetParent(mainAvatar.gameObject.transform);
             rootBone.localPosition = Vector3.zero;
 

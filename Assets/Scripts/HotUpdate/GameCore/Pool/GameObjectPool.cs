@@ -44,7 +44,7 @@ public class GameObjectPool : MonoBehaviour
             AssetLoader loader = AssetUtility.LoadAssetAsync<GameObject>(assetName);
             loader.onComplete = (p) =>
             {
-                GameObject go = Instantiate(p.rawObject as GameObject);
+                GameObject go = p.GetInstantiate<GameObject>();
                 callBack?.Invoke(go);
                 constructor?.Invoke(go);
             };

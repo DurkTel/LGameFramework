@@ -12,7 +12,7 @@ public class GameEntry : MonoBehaviour
         AssetLoader loader = AssetUtility.LoadAssetAsync("Default_Loading_GUI.prefab", typeof(GameObject));
         loader.onComplete = (p) =>
         {
-            test = Instantiate(p.rawObject as GameObject);
+            test = p.GetInstantiate<GameObject>();
         };
     }
 

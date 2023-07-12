@@ -37,7 +37,7 @@ public class AssetManager : MonoBehaviour
     /// <summary>
     /// 等待释放的ab包列表
     /// </summary>
-    private List<string> m_WaitDestroyABList;
+    private List<string> m_WaitDestroyABList = new List<string>(100);
     /// <summary>
     /// 等待释放ab包的时间
     /// </summary>
@@ -55,7 +55,7 @@ public class AssetManager : MonoBehaviour
         if(m_FileManifest == null)
         {
             AssetBundle file = AssetBundle.LoadFromFile(Path.Combine(AssetDefine.localDataPath, "lgassetmanifest.asset"));
-            AddAssetBundle("LGAssetManifest.asset", file);
+            //AddAssetBundle("LGAssetManifest.asset", file); 不记录 防止被卸载
             m_FileManifest = file.LoadAsset<AssetManifest_AssetBundle>("lgassetmanifest");
         }
 
@@ -67,7 +67,7 @@ public class AssetManager : MonoBehaviour
     /// </summary>
     /// <param name="abName">包名</param>
     /// <param name="bundle">包</param>
-    public AssetBundleRecord AddAssetBundle(string abName, AssetBundle bundle)
+    internal AssetBundleRecord AddAssetBundle(string abName, AssetBundle bundle)
     {
         AssetBundleRecord record = Pool<AssetBundleRecord>.Get();
         record.assetBundle = bundle;
@@ -84,7 +84,7 @@ public class AssetManager : MonoBehaviour
     /// </summary>
     /// <param name="abName">包名</param>
     /// <returns>是否移除成功</returns>
-    public bool RemoveAssetBundle(string abName)
+    internal bool RemoveAssetBundle(string abName)
     {
         AssetBundleRecord bundle;
         if (m_AllAB.TryGetValue(abName, out bundle))
@@ -103,7 +103,7 @@ public class AssetManager : MonoBehaviour
     /// <param name="abName">包名</param>
     /// <param name="bundle">包</param>
     /// <returns>是否获取成功</returns>
-    public bool TryGetAssetBundle(string abName, out AssetBundleRecord bundle)
+    internal bool TryGetAssetBundle(string abName, out AssetBundleRecord bundle)
     {
         return m_AllAB.TryGetValue(abName, out bundle);
     }
@@ -113,7 +113,7 @@ public class AssetManager : MonoBehaviour
     /// </summary>
     /// <param name="abName"></param>
     /// <returns></returns>
-    public bool IsExistAssetBundle(string abName)
+    internal bool IsExistAssetBundle(string abName)
     {
         return m_AllAB.ContainsKey(abName);
     }
@@ -124,7 +124,7 @@ public class AssetManager : MonoBehaviour
     /// <param name="assetName"></param>
     /// <param name="type"></param>
     /// <returns></returns>
-    public AssetLoader LoadAssetAsync(string assetName, Type type)
+    internal AssetLoader LoadAssetAsync(string assetName, Type type)
     {
         AssetLoader loader;
 
@@ -153,7 +153,7 @@ public class AssetManager : MonoBehaviour
     /// <param name="assetName"></param>
     /// <param name="type"></param>
     /// <returns></returns>
-    public T LoadAsset<T>(string assetName) where T : UnityEngine.Object
+    internal T LoadAsset<T>(string assetName) where T : UnityEngine.Object
     {
         AssetLoader loader;
 
@@ -173,14 +173,14 @@ public class AssetManager : MonoBehaviour
             m_AssetLoaders.Add(assetName, loader);
         }
 
-        return loader.rawObject as T;
+        return loader.GetRawObject<T>();
     }
 
     /// <summary>
     /// 移除加载器
     /// </summary>
     /// <param name="assetName"></param>
-    public void RemoveAssetLoader(string assetName)
+    internal void RemoveAssetLoader(string assetName)
     {
         if (m_AssetLoaders.TryGetValue(assetName, out AssetLoader loader))
         {
@@ -236,12 +236,11 @@ public class AssetManager : MonoBehaviour
         {
             abName = ab.Key;
             record = ab.Value;
-            if (m_WaitDestroyABList != null && m_WaitDestroyABList.Contains(abName))
+            if (m_WaitDestroyABList.Contains(abName))
                 continue;
 
             if (record.dpendsReferenceCount <= 0 && record.rawReferenceCount <= 0 && !record.isAssetLoading)
             {
-                m_WaitDestroyABList ??= new List<string>();
                 record.beginDestroyTime = Time.realtimeSinceStartup;
                 m_WaitDestroyABList.Add(abName);
             }
@@ -254,6 +253,7 @@ public class AssetManager : MonoBehaviour
             if (Time.realtimeSinceStartup - record.beginDestroyTime >= m_WaitDestroyTime)
             {
                 record.Unload(true);
+                Pool<AssetBundleRecord>.Release(record);
                 m_WaitDestroyABList.RemoveAt(i);
                 m_AllAB.Remove(abName);
             }

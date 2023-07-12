@@ -60,7 +60,6 @@ public class EditorAssetLoader : AssetLoader
         }
         else
         {
-            m_RawObjectInfo = AssetCache.GetRawObject(m_AssetName);
             m_RawObject = m_RawObjectInfo.rawObject;
         }
 

@@ -32,7 +32,7 @@ public class GMAudioManager : MonoBehaviour
 
         yield return loader;
 
-        m_audioMixer = loader.rawObject as AudioMixer;
+        m_audioMixer = loader.GetRawObject<AudioMixer>();
 
         audioObject = new ObjectPool<AudioObject>((ao) => ao.Init(new GameObject()), (ao) => ao.Release());
 

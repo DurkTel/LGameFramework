@@ -29,7 +29,6 @@ public abstract class AssetLoader : IEnumerator
     public bool error { get { return m_Error; } }
 
     protected Object m_RawObject;
-    public Object rawObject { get { return m_RawObject; } }
 
     protected AssetCache.RawObjectInfo m_RawObjectInfo;
     public AssetCache.RawObjectInfo rawObjectInfo { get { return m_RawObjectInfo; } }
@@ -52,12 +51,38 @@ public abstract class AssetLoader : IEnumerator
         this.m_Async = async;
     }
 
-
     public abstract void Update();
 
     public abstract string GetAssetPath(string assetName);
 
     public abstract void Dispose();
+
+    public virtual T GetRawObject<T>() where T : Object
+    {
+        if (!m_IsDone)
+        {
+            Debug.LogError("资源未加载完成，就尝试获取源对象");
+            return null;    
+        }
+        
+        AssetCache.RawObjectInfo rawObject = AssetCache.GetRawObject(m_AssetName);
+        return rawObject as T;
+    }
+
+    public virtual T GetInstantiate<T>() where T : Object
+    {
+        if (!m_IsDone)
+        {
+            Debug.LogError("资源未加载完成，就尝试获取源对象");
+            return null;
+        }
+
+        AssetCache.RawObjectInfo rawObject = AssetCache.GetRawObject(m_AssetName);
+        Object instance = Object.Instantiate(rawObject.rawObject);
+        AssetCache.AddInstanceObject(instance.GetInstanceID(), instance, rawObject);
+
+        return instance as T;
+    }
 
     public bool MoveNext()
     {

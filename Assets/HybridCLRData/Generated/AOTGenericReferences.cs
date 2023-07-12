@@ -25,28 +25,28 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Action<object>
 	// System.Action<UnityEngine.InputSystem.InputAction.CallbackContext>
 	// System.Action<GMUpdateCollider.ContactPair>
+	// System.Collections.Generic.Dictionary<object,object>
 	// System.Collections.Generic.Dictionary<EventDefine,object>
 	// System.Collections.Generic.Dictionary<int,object>
-	// System.Collections.Generic.Dictionary<object,object>
-	// System.Collections.Generic.Dictionary<object,int>
 	// System.Collections.Generic.Dictionary<int,byte>
+	// System.Collections.Generic.Dictionary<object,int>
 	// System.Collections.Generic.Dictionary.Enumerator<object,object>
 	// System.Collections.Generic.Dictionary.ValueCollection<int,object>
 	// System.Collections.Generic.Dictionary.ValueCollection.Enumerator<int,object>
 	// System.Collections.Generic.IEnumerable<object>
 	// System.Collections.Generic.IEnumerator<object>
 	// System.Collections.Generic.KeyValuePair<object,object>
-	// System.Collections.Generic.List<ColliderInfo>
-	// System.Collections.Generic.List<GMUpdateCollider.ContactPair>
-	// System.Collections.Generic.List<int>
-	// System.Collections.Generic.List<SwitchingConditions>
-	// System.Collections.Generic.List<object>
-	// System.Collections.Generic.List<UnityEngine.Vector2>
 	// System.Collections.Generic.List<UnityEngine.Vector2Int>
-	// System.Collections.Generic.List<AnimationMap.AniType>
+	// System.Collections.Generic.List<UnityEngine.Vector2>
+	// System.Collections.Generic.List<object>
+	// System.Collections.Generic.List<int>
 	// System.Collections.Generic.List<FrameCollInfo>
-	// System.Collections.Generic.List.Enumerator<FrameCollInfo>
+	// System.Collections.Generic.List<GMUpdateCollider.ContactPair>
+	// System.Collections.Generic.List<ColliderInfo>
+	// System.Collections.Generic.List<AnimationMap.AniType>
+	// System.Collections.Generic.List<SwitchingConditions>
 	// System.Collections.Generic.List.Enumerator<object>
+	// System.Collections.Generic.List.Enumerator<FrameCollInfo>
 	// System.Collections.Generic.Queue<object>
 	// System.Func<byte>
 	// UnityEngine.Events.UnityAction<int>
@@ -73,6 +73,5 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 		// object UnityEngine.GameObject.AddComponent<object>()
 		// bool UnityEngine.GameObject.TryGetComponent<object>(object&)
 		// UnityEngine.Vector2 UnityEngine.InputSystem.InputAction.CallbackContext.ReadValue<UnityEngine.Vector2>()
-		// object UnityEngine.Object.Instantiate<object>(object)
 	}
 }

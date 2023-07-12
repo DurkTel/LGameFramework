@@ -35,7 +35,7 @@ public class AudioObject
         AssetLoader loader = AssetUtility.LoadAssetAsync<AudioClip>(assetName);
         loader.onComplete = (p) =>
         {
-            PlayInternal(p.rawObject as AudioClip);
+            PlayInternal(p.GetRawObject<AudioClip>());
         };
     }
 

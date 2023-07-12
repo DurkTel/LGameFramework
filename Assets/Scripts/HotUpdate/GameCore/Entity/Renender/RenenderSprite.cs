@@ -101,7 +101,7 @@ public class RenenderSprite : MonoBehaviour
 
             yield return loader;
 
-            m_singSprite = loader.rawObject as Sprite;
+            m_singSprite = loader.GetRawObject<Sprite>();
 
             part_Sprite.Add(m_singSprite);
             i++;
