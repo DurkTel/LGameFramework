@@ -318,6 +318,8 @@ public class Build : EditorWindow
         if (!Directory.Exists(guiFolder))
             return;
 
+        //EditorSettings.spritePackerMode = SpritePackerMode.BuildTimeOnlyAtlas;
+
         string[] allFolder = Directory.GetDirectories(guiFolder);
         
         foreach (var folder in allFolder)
@@ -341,6 +343,7 @@ public class Build : EditorWindow
                         ArrayUtility.Add<string>(ref addressableNames, fileName);
                         ArrayUtility.Add<string>(ref assetNames, projectPath);
                     }
+
                     list.Add(BuildUtility.CreateAssetBundleBuild(bundlName, addressableNames, assetNames));
                 }
 
