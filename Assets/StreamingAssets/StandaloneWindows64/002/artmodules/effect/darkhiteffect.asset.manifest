@@ -1,0 +1,53 @@
+ManifestFileVersion: 0
+CRC: 1861904622
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 79bb93800b24994cca6d2070d163838f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 0ffbc157de8272f77e51ae3498b0e803
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 062a2dc8ef0593a459e35f15bea29537, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 210
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/ArtModules/Effect/darkHitEffect/darkHit01/darkHit01_offset.txt
+- Assets/ArtModules/Effect/darkHitEffect/darkHit01/darkHit01_5.png
+- Assets/ArtModules/Effect/darkHitEffect/darkHit02/darkHit02_offset.txt
+- Assets/ArtModules/Effect/darkHitEffect/darkHit01/darkHit01_2.png
+- Assets/ArtModules/Effect/darkHitEffect/darkHit02/darkHit02_5.png
+- Assets/ArtModules/Effect/darkHitEffect/darkHit02/darkHit02_8.png
+- Assets/ArtModules/Effect/darkHitEffect/darkHit01/darkHit01_6.png
+- Assets/ArtModules/Effect/darkHitEffect/darkHit01/darkHit01_8.png
+- Assets/ArtModules/Effect/darkHitEffect/darkHit01/darkHit01_3.png
+- Assets/ArtModules/Effect/darkHitEffect/darkHit02/darkHit02_4.png
+- Assets/ArtModules/Effect/darkHitEffect/darkHit02/darkHit02_1.png
+- Assets/ArtModules/Effect/darkHitEffect/darkHit01/darkHit01_0.png
+- Assets/ArtModules/Effect/darkHitEffect/darkHitEffect.prefab
+- Assets/ArtModules/Effect/darkHitEffect/darkHit01/darkHit01_4.png
+- Assets/ArtModules/Effect/darkHitEffect/darkHit02/darkHit02_2.png
+- Assets/ArtModules/Effect/darkHitEffect/darkHit01/darkHit01_7.png
+- Assets/ArtModules/Effect/darkHitEffect/darkHit02/darkHit02_7.png
+- Assets/ArtModules/Effect/darkHitEffect/darkHit01/darkHit01_pointOffsize.txt
+- Assets/ArtModules/Effect/darkHitEffect/darkHit02/darkHit02_6.png
+- Assets/ArtModules/Effect/darkHitEffect/darkHit02/darkHit02_pointOffsize.txt
+- Assets/ArtModules/Effect/darkHitEffect/darkHit01/darkHit01_1.png
+- Assets/ArtModules/Effect/darkHitEffect/darkHit02/darkHit02_3.png
+- Assets/ArtModules/Effect/darkHitEffect/darkHit02/darkHit02_0.png
+Dependencies: []

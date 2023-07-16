@@ -58,6 +58,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// UnityEngine.Events.UnityAction<object,byte>
 	// UnityEngine.Events.UnityAction<object,object,int>
 	// UnityEngine.Events.UnityAction<object,int,int>
+	// UnityEngine.Events.UnityEvent<UnityEngine.Vector2>
 	// UnityEngine.InputSystem.Utilities.ReadOnlyArray<object>
 	// UnityEngine.InputSystem.Utilities.ReadOnlyArray.Enumerator<object>
 	// }}
@@ -71,7 +72,9 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 		// object[] UnityEngine.Component.GetComponentsInChildren<object>()
 		// bool UnityEngine.Component.TryGetComponent<object>(object&)
 		// object UnityEngine.GameObject.AddComponent<object>()
+		// object UnityEngine.GameObject.GetComponent<object>()
 		// bool UnityEngine.GameObject.TryGetComponent<object>(object&)
 		// UnityEngine.Vector2 UnityEngine.InputSystem.InputAction.CallbackContext.ReadValue<UnityEngine.Vector2>()
+		// object UnityEngine.Object.Instantiate<object>(object)
 	}
 }

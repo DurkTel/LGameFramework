@@ -2647,6 +2647,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Canvas_get_renderMode_m1BEF259548C6CA
 	int32_t icallRetVal = _il2cpp_icall_func(__this);
 	return icallRetVal;
 }
+// System.Void UnityEngine.Canvas::set_renderMode(UnityEngine.RenderMode)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_set_renderMode_mD73E953F8A115CF469508448A00D0EDAFAF5AB47 (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, int32_t ___0_value, const RuntimeMethod* method) 
+{
+	typedef void (*Canvas_set_renderMode_mD73E953F8A115CF469508448A00D0EDAFAF5AB47_ftn) (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26*, int32_t);
+	static Canvas_set_renderMode_mD73E953F8A115CF469508448A00D0EDAFAF5AB47_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Canvas_set_renderMode_mD73E953F8A115CF469508448A00D0EDAFAF5AB47_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::set_renderMode(UnityEngine.RenderMode)");
+	_il2cpp_icall_func(__this, ___0_value);
+}
 // System.Boolean UnityEngine.Canvas::get_isRootCanvas()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Canvas_get_isRootCanvas_m57410F800ED6E96C75E2703468B66DE0D5AC6846 (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, const RuntimeMethod* method) 
 {
@@ -2706,6 +2715,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_set_referencePixelsPerUnit_m7114F
 	_il2cpp_icall_func = (Canvas_set_referencePixelsPerUnit_m7114F49D5EAAA8FA40AA5A3191B02325FEBF9B30_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::set_referencePixelsPerUnit(System.Single)");
 	_il2cpp_icall_func(__this, ___0_value);
 }
+// System.Boolean UnityEngine.Canvas::get_overridePixelPerfect()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Canvas_get_overridePixelPerfect_mB21AFBB874D36098315B886D943D2381E96CF2E6 (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, const RuntimeMethod* method) 
+{
+	typedef bool (*Canvas_get_overridePixelPerfect_mB21AFBB874D36098315B886D943D2381E96CF2E6_ftn) (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26*);
+	static Canvas_get_overridePixelPerfect_mB21AFBB874D36098315B886D943D2381E96CF2E6_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Canvas_get_overridePixelPerfect_mB21AFBB874D36098315B886D943D2381E96CF2E6_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::get_overridePixelPerfect()");
+	bool icallRetVal = _il2cpp_icall_func(__this);
+	return icallRetVal;
+}
+// System.Void UnityEngine.Canvas::set_overridePixelPerfect(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_set_overridePixelPerfect_m09F509C6DD5D8BC7F356586E43CCACF727FB5352 (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, bool ___0_value, const RuntimeMethod* method) 
+{
+	typedef void (*Canvas_set_overridePixelPerfect_m09F509C6DD5D8BC7F356586E43CCACF727FB5352_ftn) (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26*, bool);
+	static Canvas_set_overridePixelPerfect_m09F509C6DD5D8BC7F356586E43CCACF727FB5352_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Canvas_set_overridePixelPerfect_m09F509C6DD5D8BC7F356586E43CCACF727FB5352_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::set_overridePixelPerfect(System.Boolean)");
+	_il2cpp_icall_func(__this, ___0_value);
+}
 // System.Boolean UnityEngine.Canvas::get_pixelPerfect()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Canvas_get_pixelPerfect_mFD997D340F57D87C0307F92A9AA1155EF3DF7E75 (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, const RuntimeMethod* method) 
 {
@@ -2715,6 +2743,34 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Canvas_get_pixelPerfect_mFD997D340F57D87
 	_il2cpp_icall_func = (Canvas_get_pixelPerfect_mFD997D340F57D87C0307F92A9AA1155EF3DF7E75_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::get_pixelPerfect()");
 	bool icallRetVal = _il2cpp_icall_func(__this);
 	return icallRetVal;
+}
+// System.Void UnityEngine.Canvas::set_pixelPerfect(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_set_pixelPerfect_m4610F1B69D813E93BC21F06E0FC4981A509963A5 (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, bool ___0_value, const RuntimeMethod* method) 
+{
+	typedef void (*Canvas_set_pixelPerfect_m4610F1B69D813E93BC21F06E0FC4981A509963A5_ftn) (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26*, bool);
+	static Canvas_set_pixelPerfect_m4610F1B69D813E93BC21F06E0FC4981A509963A5_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Canvas_set_pixelPerfect_m4610F1B69D813E93BC21F06E0FC4981A509963A5_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::set_pixelPerfect(System.Boolean)");
+	_il2cpp_icall_func(__this, ___0_value);
+}
+// System.Single UnityEngine.Canvas::get_planeDistance()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Canvas_get_planeDistance_mA37842426E220D0CDA03606E674B581F67BC3338 (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, const RuntimeMethod* method) 
+{
+	typedef float (*Canvas_get_planeDistance_mA37842426E220D0CDA03606E674B581F67BC3338_ftn) (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26*);
+	static Canvas_get_planeDistance_mA37842426E220D0CDA03606E674B581F67BC3338_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Canvas_get_planeDistance_mA37842426E220D0CDA03606E674B581F67BC3338_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::get_planeDistance()");
+	float icallRetVal = _il2cpp_icall_func(__this);
+	return icallRetVal;
+}
+// System.Void UnityEngine.Canvas::set_planeDistance(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_set_planeDistance_m730278089C7546A512385305C1F250C6477C279E (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	typedef void (*Canvas_set_planeDistance_m730278089C7546A512385305C1F250C6477C279E_ftn) (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26*, float);
+	static Canvas_set_planeDistance_m730278089C7546A512385305C1F250C6477C279E_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Canvas_set_planeDistance_m730278089C7546A512385305C1F250C6477C279E_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::set_planeDistance(System.Single)");
+	_il2cpp_icall_func(__this, ___0_value);
 }
 // System.Int32 UnityEngine.Canvas::get_renderOrder()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Canvas_get_renderOrder_m4BC79FD8062270F9848DFE38DE6CC578BBF7DFAC (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, const RuntimeMethod* method) 
@@ -2774,6 +2830,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Canvas_get_targetDisplay_m2F2FCEA6885
 	int32_t icallRetVal = _il2cpp_icall_func(__this);
 	return icallRetVal;
 }
+// System.Void UnityEngine.Canvas::set_targetDisplay(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_set_targetDisplay_mE0E9078C5DBE321BF15B3F02D85FD255897ADA7B (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, int32_t ___0_value, const RuntimeMethod* method) 
+{
+	typedef void (*Canvas_set_targetDisplay_mE0E9078C5DBE321BF15B3F02D85FD255897ADA7B_ftn) (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26*, int32_t);
+	static Canvas_set_targetDisplay_mE0E9078C5DBE321BF15B3F02D85FD255897ADA7B_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Canvas_set_targetDisplay_mE0E9078C5DBE321BF15B3F02D85FD255897ADA7B_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::set_targetDisplay(System.Int32)");
+	_il2cpp_icall_func(__this, ___0_value);
+}
 // System.Int32 UnityEngine.Canvas::get_sortingLayerID()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Canvas_get_sortingLayerID_m38FE23D0D6A2001F62CA24676298E95BEE968AB6 (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, const RuntimeMethod* method) 
 {
@@ -2793,6 +2858,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_set_sortingLayerID_m402DC8D59AAF6
 	_il2cpp_icall_func = (Canvas_set_sortingLayerID_m402DC8D59AAF66A6696BFE682D0B7AF489EA13FE_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::set_sortingLayerID(System.Int32)");
 	_il2cpp_icall_func(__this, ___0_value);
 }
+// System.Int32 UnityEngine.Canvas::get_cachedSortingLayerValue()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Canvas_get_cachedSortingLayerValue_m10B2DDEC28AE6A70059D578457C2925AD433335A (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, const RuntimeMethod* method) 
+{
+	typedef int32_t (*Canvas_get_cachedSortingLayerValue_m10B2DDEC28AE6A70059D578457C2925AD433335A_ftn) (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26*);
+	static Canvas_get_cachedSortingLayerValue_m10B2DDEC28AE6A70059D578457C2925AD433335A_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Canvas_get_cachedSortingLayerValue_m10B2DDEC28AE6A70059D578457C2925AD433335A_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::get_cachedSortingLayerValue()");
+	int32_t icallRetVal = _il2cpp_icall_func(__this);
+	return icallRetVal;
+}
 // UnityEngine.AdditionalCanvasShaderChannels UnityEngine.Canvas::get_additionalShaderChannels()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Canvas_get_additionalShaderChannels_m3039B1E9ADDCDC514E444A4BB56527FFAC3E6287 (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, const RuntimeMethod* method) 
 {
@@ -2810,6 +2885,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_set_additionalShaderChannels_m182
 	static Canvas_set_additionalShaderChannels_m182712BE72B72BE41FAFE97F2FD79C2476132DB0_ftn _il2cpp_icall_func;
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Canvas_set_additionalShaderChannels_m182712BE72B72BE41FAFE97F2FD79C2476132DB0_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::set_additionalShaderChannels(UnityEngine.AdditionalCanvasShaderChannels)");
+	_il2cpp_icall_func(__this, ___0_value);
+}
+// System.String UnityEngine.Canvas::get_sortingLayerName()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Canvas_get_sortingLayerName_mEBB0FD08B3B7763947CCB308B55AA3BFD9484B21 (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, const RuntimeMethod* method) 
+{
+	typedef String_t* (*Canvas_get_sortingLayerName_mEBB0FD08B3B7763947CCB308B55AA3BFD9484B21_ftn) (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26*);
+	static Canvas_get_sortingLayerName_mEBB0FD08B3B7763947CCB308B55AA3BFD9484B21_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Canvas_get_sortingLayerName_mEBB0FD08B3B7763947CCB308B55AA3BFD9484B21_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::get_sortingLayerName()");
+	String_t* icallRetVal = _il2cpp_icall_func(__this);
+	return icallRetVal;
+}
+// System.Void UnityEngine.Canvas::set_sortingLayerName(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_set_sortingLayerName_m5812AF732B17DB18E574D41F9AB133B8798EC32D (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	typedef void (*Canvas_set_sortingLayerName_m5812AF732B17DB18E574D41F9AB133B8798EC32D_ftn) (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26*, String_t*);
+	static Canvas_set_sortingLayerName_m5812AF732B17DB18E574D41F9AB133B8798EC32D_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Canvas_set_sortingLayerName_m5812AF732B17DB18E574D41F9AB133B8798EC32D_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::set_sortingLayerName(System.String)");
 	_il2cpp_icall_func(__this, ___0_value);
 }
 // UnityEngine.Canvas UnityEngine.Canvas::get_rootCanvas()
@@ -2942,6 +3036,63 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E
 	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* icallRetVal = _il2cpp_icall_func(__this);
 	return icallRetVal;
 }
+// System.Void UnityEngine.Canvas::set_worldCamera(UnityEngine.Camera)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_set_worldCamera_m007F7DABDB5A3A6BFB043E3500DA82A4D936EDD4 (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* ___0_value, const RuntimeMethod* method) 
+{
+	typedef void (*Canvas_set_worldCamera_m007F7DABDB5A3A6BFB043E3500DA82A4D936EDD4_ftn) (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26*, Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184*);
+	static Canvas_set_worldCamera_m007F7DABDB5A3A6BFB043E3500DA82A4D936EDD4_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Canvas_set_worldCamera_m007F7DABDB5A3A6BFB043E3500DA82A4D936EDD4_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::set_worldCamera(UnityEngine.Camera)");
+	_il2cpp_icall_func(__this, ___0_value);
+}
+// System.Single UnityEngine.Canvas::get_normalizedSortingGridSize()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Canvas_get_normalizedSortingGridSize_mF7452EC8FC2EF133A2D2C9988620A3624828368E (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, const RuntimeMethod* method) 
+{
+	typedef float (*Canvas_get_normalizedSortingGridSize_mF7452EC8FC2EF133A2D2C9988620A3624828368E_ftn) (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26*);
+	static Canvas_get_normalizedSortingGridSize_mF7452EC8FC2EF133A2D2C9988620A3624828368E_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Canvas_get_normalizedSortingGridSize_mF7452EC8FC2EF133A2D2C9988620A3624828368E_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::get_normalizedSortingGridSize()");
+	float icallRetVal = _il2cpp_icall_func(__this);
+	return icallRetVal;
+}
+// System.Void UnityEngine.Canvas::set_normalizedSortingGridSize(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_set_normalizedSortingGridSize_mBFF42D7BE6330782C4D76B0E9EC5A8D60DB76078 (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	typedef void (*Canvas_set_normalizedSortingGridSize_mBFF42D7BE6330782C4D76B0E9EC5A8D60DB76078_ftn) (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26*, float);
+	static Canvas_set_normalizedSortingGridSize_mBFF42D7BE6330782C4D76B0E9EC5A8D60DB76078_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Canvas_set_normalizedSortingGridSize_mBFF42D7BE6330782C4D76B0E9EC5A8D60DB76078_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::set_normalizedSortingGridSize(System.Single)");
+	_il2cpp_icall_func(__this, ___0_value);
+}
+// System.Int32 UnityEngine.Canvas::get_sortingGridNormalizedSize()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Canvas_get_sortingGridNormalizedSize_m25ECF2311D0498FB9CF81665B1CA2047FD0A8550 (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, const RuntimeMethod* method) 
+{
+	typedef int32_t (*Canvas_get_sortingGridNormalizedSize_m25ECF2311D0498FB9CF81665B1CA2047FD0A8550_ftn) (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26*);
+	static Canvas_get_sortingGridNormalizedSize_m25ECF2311D0498FB9CF81665B1CA2047FD0A8550_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Canvas_get_sortingGridNormalizedSize_m25ECF2311D0498FB9CF81665B1CA2047FD0A8550_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::get_sortingGridNormalizedSize()");
+	int32_t icallRetVal = _il2cpp_icall_func(__this);
+	return icallRetVal;
+}
+// System.Void UnityEngine.Canvas::set_sortingGridNormalizedSize(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_set_sortingGridNormalizedSize_mA9AC63EEC92AAA9479593B55D2E1A7402FF5D75E (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, int32_t ___0_value, const RuntimeMethod* method) 
+{
+	typedef void (*Canvas_set_sortingGridNormalizedSize_mA9AC63EEC92AAA9479593B55D2E1A7402FF5D75E_ftn) (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26*, int32_t);
+	static Canvas_set_sortingGridNormalizedSize_mA9AC63EEC92AAA9479593B55D2E1A7402FF5D75E_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Canvas_set_sortingGridNormalizedSize_mA9AC63EEC92AAA9479593B55D2E1A7402FF5D75E_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::set_sortingGridNormalizedSize(System.Int32)");
+	_il2cpp_icall_func(__this, ___0_value);
+}
+// UnityEngine.Material UnityEngine.Canvas::GetDefaultCanvasTextMaterial()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* Canvas_GetDefaultCanvasTextMaterial_mEA05C0C7135284D5BA07056C9B19956356F04143 (const RuntimeMethod* method) 
+{
+	typedef Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* (*Canvas_GetDefaultCanvasTextMaterial_mEA05C0C7135284D5BA07056C9B19956356F04143_ftn) ();
+	static Canvas_GetDefaultCanvasTextMaterial_mEA05C0C7135284D5BA07056C9B19956356F04143_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Canvas_GetDefaultCanvasTextMaterial_mEA05C0C7135284D5BA07056C9B19956356F04143_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::GetDefaultCanvasTextMaterial()");
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* icallRetVal = _il2cpp_icall_func();
+	return icallRetVal;
+}
 // UnityEngine.Material UnityEngine.Canvas::GetDefaultCanvasMaterial()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* Canvas_GetDefaultCanvasMaterial_m7A0E204A9DC6A1390692788E37DBE7D8C6B71CD2 (const RuntimeMethod* method) 
 {
@@ -2961,6 +3112,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Material_t18053F08F347D0DCA5E1140EC7EC4533DD8
 	_il2cpp_icall_func = (Canvas_GetETC1SupportedCanvasMaterial_mFABE1BCF145256FC155BD038DD44784E8832FAEA_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::GetETC1SupportedCanvasMaterial()");
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* icallRetVal = _il2cpp_icall_func();
 	return icallRetVal;
+}
+// System.Void UnityEngine.Canvas::UpdateCanvasRectTransform(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_UpdateCanvasRectTransform_m259CD24664F239C035EDA5158FA1D3D6405DB680 (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, bool ___0_alignWithCamera, const RuntimeMethod* method) 
+{
+	typedef void (*Canvas_UpdateCanvasRectTransform_m259CD24664F239C035EDA5158FA1D3D6405DB680_ftn) (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26*, bool);
+	static Canvas_UpdateCanvasRectTransform_m259CD24664F239C035EDA5158FA1D3D6405DB680_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Canvas_UpdateCanvasRectTransform_m259CD24664F239C035EDA5158FA1D3D6405DB680_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::UpdateCanvasRectTransform(System.Boolean)");
+	_il2cpp_icall_func(__this, ___0_alignWithCamera);
 }
 // System.Void UnityEngine.Canvas::ForceUpdateCanvases()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_ForceUpdateCanvases_m6ECDBC5E85ADA3301BB20611753C45769F15EB51 (const RuntimeMethod* method) 

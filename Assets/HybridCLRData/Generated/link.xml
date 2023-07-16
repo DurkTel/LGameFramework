@@ -69,6 +69,7 @@
     <type fullname="UnityEngine.InputSystem.InputControlScheme" preserve="all" />
     <type fullname="UnityEngine.InputSystem.InputDevice" preserve="all" />
     <type fullname="UnityEngine.InputSystem.Interactions.HoldInteraction" preserve="all" />
+    <type fullname="UnityEngine.InputSystem.UI.InputSystemUIInputModule" preserve="all" />
     <type fullname="UnityEngine.InputSystem.Utilities.ReadOnlyArray`1" preserve="all" />
     <type fullname="UnityEngine.InputSystem.Utilities.ReadOnlyArray`1/Enumerator" preserve="all" />
   </assembly>
@@ -104,6 +105,7 @@
     <type fullname="UnityEngine.Events.UnityAction`1" preserve="all" />
     <type fullname="UnityEngine.Events.UnityAction`2" preserve="all" />
     <type fullname="UnityEngine.Events.UnityAction`3" preserve="all" />
+    <type fullname="UnityEngine.Events.UnityEvent`1" preserve="all" />
     <type fullname="UnityEngine.GameObject" preserve="all" />
     <type fullname="UnityEngine.Gizmos" preserve="all" />
     <type fullname="UnityEngine.HideInInspector" preserve="all" />
@@ -118,6 +120,8 @@
     <type fullname="UnityEngine.Quaternion" preserve="all" />
     <type fullname="UnityEngine.Random" preserve="all" />
     <type fullname="UnityEngine.RangeAttribute" preserve="all" />
+    <type fullname="UnityEngine.Rect" preserve="all" />
+    <type fullname="UnityEngine.RectTransform" preserve="all" />
     <type fullname="UnityEngine.Renderer" preserve="all" />
     <type fullname="UnityEngine.RequireComponent" preserve="all" />
     <type fullname="UnityEngine.Resources" preserve="all" />
@@ -151,6 +155,16 @@
   </assembly>
   <assembly fullname="UnityEngine.UI">
     <type fullname="UnityEngine.EventSystems.EventTrigger" preserve="all" />
+    <type fullname="UnityEngine.UI.CanvasScaler" preserve="all" />
+    <type fullname="UnityEngine.UI.CanvasScaler/ScaleMode" preserve="all" />
+    <type fullname="UnityEngine.UI.CanvasScaler/ScreenMatchMode" preserve="all" />
+    <type fullname="UnityEngine.UI.GraphicRaycaster" preserve="all" />
+    <type fullname="UnityEngine.UI.ScrollRect" preserve="all" />
+    <type fullname="UnityEngine.UI.ScrollRect/ScrollRectEvent" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.UIModule">
+    <type fullname="UnityEngine.Canvas" preserve="all" />
+    <type fullname="UnityEngine.RenderMode" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.VirtualTexturingModule">
     <type fullname="UnityEngine.Rendering.VirtualTexturing.Debugging" preserve="all" />

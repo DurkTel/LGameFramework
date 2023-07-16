@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public static class ToolExtensions
 {
@@ -37,6 +38,16 @@ public static class ToolExtensions
         }
 
         return gameObject.AddComponent<T>();
+    }
+
+    public static T TryAddComponent<T>(this Transform transform) where T : Component
+    {
+        if (transform.TryGetComponent(out T component))
+        {
+            return component;
+        }
+
+        return transform.gameObject.AddComponent<T>();
     }
 
     public static Component TryAddComponent(this GameObject gameObject, string type)
@@ -108,4 +119,5 @@ public static class ToolExtensions
     {
         return obj == null || obj.Equals(null);
     }
+
 }

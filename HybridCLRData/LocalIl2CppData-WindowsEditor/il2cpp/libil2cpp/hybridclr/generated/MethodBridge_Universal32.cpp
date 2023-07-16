@@ -6872,6 +6872,14 @@ static void __M2N_S8S12(const MethodInfo* method, uint16_t* argVarIndexs, StackO
 }
 
 
+// UnityEngine.Vector2 UnityEngine.Rect::NormalizedToPoint(UnityEngine.Rect,UnityEngine.Vector2)
+static void __M2N_S8S16S8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef ValueTypeSize<8> (*NativeMethod)(ValueTypeSize<16> __arg0, ValueTypeSize<8> __arg1, const MethodInfo* method);
+    *(ValueTypeSize<8>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(ValueTypeSize<16>*)(localVarBase+argVarIndexs[0]), *(ValueTypeSize<8>*)(localVarBase+argVarIndexs[1]), method);
+}
+
+
 // System.Nullable`1<T> System.Nullable`1::op_Implicit(T)
 static void __M2N_S8S4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -7232,7 +7240,7 @@ static void __M2N_u1i4C56C56(const MethodInfo* method, uint16_t* argVarIndexs, S
 }
 
 
-// TResult System.Func`2::Invoke(T)
+// System.Boolean System.Collections.Generic.List`1::Contains(T)
 static void __M2N_u1i4C64(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef uint8_t (*NativeMethod)(int32_t __arg0, ValueTypeSizeAlign8<64> __arg1, const MethodInfo* method);
@@ -7933,6 +7941,14 @@ static void __M2N_u1i4S12S16i4S12S16i4i4(const MethodInfo* method, uint16_t* arg
 {
     typedef uint8_t (*NativeMethod)(int32_t __arg0, ValueTypeSize<12> __arg1, ValueTypeSize<16> __arg2, int32_t __arg3, ValueTypeSize<12> __arg4, ValueTypeSize<16> __arg5, int32_t __arg6, int32_t __arg7, const MethodInfo* method);
     *(uint8_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int32_t*)(localVarBase+argVarIndexs[0]), *(ValueTypeSize<12>*)(localVarBase+argVarIndexs[1]), *(ValueTypeSize<16>*)(localVarBase+argVarIndexs[2]), *(int32_t*)(localVarBase+argVarIndexs[3]), *(ValueTypeSize<12>*)(localVarBase+argVarIndexs[4]), *(ValueTypeSize<16>*)(localVarBase+argVarIndexs[5]), *(int32_t*)(localVarBase+argVarIndexs[6]), *(int32_t*)(localVarBase+argVarIndexs[7]), method);
+}
+
+
+// System.Boolean UnityEngine.Rect::Contains(UnityEngine.Vector3,System.Boolean)
+static void __M2N_u1i4S12u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef uint8_t (*NativeMethod)(int32_t __arg0, ValueTypeSize<12> __arg1, uint8_t __arg2, const MethodInfo* method);
+    *(uint8_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int32_t*)(localVarBase+argVarIndexs[0]), *(ValueTypeSize<12>*)(localVarBase+argVarIndexs[1]), *(uint8_t*)(localVarBase+argVarIndexs[2]), method);
 }
 
 
@@ -13812,6 +13828,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"S8r4r4r4r4", __M2N_S8r4r4r4r4},
 	{"S8r4S8", __M2N_S8r4S8},
 	{"S8S12", __M2N_S8S12},
+	{"S8S16S8", __M2N_S8S16S8},
 	{"S8S4", __M2N_S8S4},
 	{"S8S52S16", __M2N_S8S52S16},
 	{"S8S52S16i4", __M2N_S8S52S16i4},
@@ -13945,6 +13962,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"u1i4S12S12r4S12i4r4i4i4", __M2N_u1i4S12S12r4S12i4r4i4i4},
 	{"u1i4S12S12S12i4S16r4i4i4", __M2N_u1i4S12S12S12i4S16r4i4i4},
 	{"u1i4S12S16i4S12S16i4i4", __M2N_u1i4S12S16i4S12S16i4i4},
+	{"u1i4S12u1", __M2N_u1i4S12u1},
 	{"u1i4S136", __M2N_u1i4S136},
 	{"u1i4S16", __M2N_u1i4S16},
 	{"u1i4S16i4", __M2N_u1i4S16i4},
@@ -17875,7 +17893,7 @@ static uint8_t __N2M_u1i4C56C56(int32_t __arg0, ValueTypeSizeAlign8<56> __arg1, 
 }
 
 
-// TResult System.Func`2::Invoke(T)
+// System.Boolean System.Collections.Generic.List`1::Contains(T)
 static uint8_t __N2M_u1i4C64(int32_t __arg0, ValueTypeSizeAlign8<64> __arg1, const MethodInfo* method)
 {
     StackObject args[3] = {*(uint64_t*)&__arg0, (uint64_t)&__arg1 };

@@ -1,3 +1,4 @@
+using GameCore;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,18 +10,21 @@ public class GameEntry : MonoBehaviour
     void Start()
     {
         AssetManager.Initialize(AssetLoadMode.AssetBundle);
-        AssetLoader loader = AssetUtility.LoadAssetAsync("Default_Loading_GUI.prefab", typeof(GameObject));
-        loader.onComplete = (p) =>
-        {
-            test = p.GetInstantiate<GameObject>();
-        };
+        GUIManager.instance.Initialize();
     }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)) 
+        if(Input.GetKeyDown(KeyCode.A)) 
         {
-            AssetUtility.Destroy(test);
+            GUIManager.instance.OpenView<TestView>();
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            GUIManager.instance.OpenView<TestView2>();
+
         }
     }
 

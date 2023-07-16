@@ -179,7 +179,7 @@ public class BundleAssetLoader : AssetLoader
         if (!AssetCache.TryGetRawObject(m_AssetName, out m_RawObjectInfo))
         {
             m_BundleName ??= GetBundleName(m_AssetName);
-            if (string.IsNullOrEmpty(m_BundleName))
+            if (string.IsNullOrEmpty(m_BundleName) || string.IsNullOrEmpty(m_AssetName))
             {
                 m_Error = true;
                 AssetUtility.StopLoadingAsset(m_AssetName);

@@ -1424,6 +1424,14 @@ static void __M2N_B8B12(const MethodInfo* method, uint16_t* argVarIndexs, StackO
 }
 
 
+// UnityEngine.Vector2 UnityEngine.Rect::NormalizedToPoint(UnityEngine.Rect,UnityEngine.Vector2)
+static void __M2N_B8B16B8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef ValueTypeSizeAlign4<8> (*NativeMethod)(ValueTypeSizeAlign4<16> __arg0, ValueTypeSizeAlign4<8> __arg1, const MethodInfo* method);
+    *(ValueTypeSizeAlign4<8>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(ValueTypeSizeAlign4<16>*)(localVarBase+argVarIndexs[0]), *(ValueTypeSizeAlign4<8>*)(localVarBase+argVarIndexs[1]), method);
+}
+
+
 // UnityEngine.Vector2 UnityEngine.UIElements.TextNative::GetOffset(UnityEngine.UIElements.TextNativeSettings,UnityEngine.Rect)
 static void __M2N_B8B52B16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -7232,6 +7240,14 @@ static void __M2N_u1i4B12r4B12i4r4i4i4(const MethodInfo* method, uint16_t* argVa
 }
 
 
+// System.Boolean UnityEngine.Rect::Contains(UnityEngine.Vector3,System.Boolean)
+static void __M2N_u1i4B12u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef uint8_t (*NativeMethod)(int32_t __arg0, ValueTypeSizeAlign4<12> __arg1, uint8_t __arg2, const MethodInfo* method);
+    *(uint8_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int32_t*)(localVarBase+argVarIndexs[0]), *(ValueTypeSizeAlign4<12>*)(localVarBase+argVarIndexs[1]), *(uint8_t*)(localVarBase+argVarIndexs[2]), method);
+}
+
+
 // System.Boolean UnityEngine.UIElements.VisualData::Equals(UnityEngine.UIElements.VisualData)
 static void __M2N_u1i4B136(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -7744,7 +7760,7 @@ static void __M2N_u1i4C56C56(const MethodInfo* method, uint16_t* argVarIndexs, S
 }
 
 
-// TResult System.Func`2::Invoke(T)
+// System.Boolean System.Collections.Generic.List`1::Contains(T)
 static void __M2N_u1i4C64(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef uint8_t (*NativeMethod)(int32_t __arg0, ValueTypeSizeAlign8<64> __arg1, const MethodInfo* method);
@@ -12915,6 +12931,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"B88i4", __M2N_B88i4},
 	{"B88i4B8", __M2N_B88i4B8},
 	{"B8B12", __M2N_B8B12},
+	{"B8B16B8", __M2N_B8B16B8},
 	{"B8B52B16", __M2N_B8B52B16},
 	{"B8B52B16i4", __M2N_B8B52B16i4},
 	{"B8B8", __M2N_B8B8},
@@ -13641,6 +13658,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"u1i4B12i4i4", __M2N_u1i4B12i4i4},
 	{"u1i4B12i4i4i4u1", __M2N_u1i4B12i4i4i4u1},
 	{"u1i4B12r4B12i4r4i4i4", __M2N_u1i4B12r4B12i4r4i4i4},
+	{"u1i4B12u1", __M2N_u1i4B12u1},
 	{"u1i4B136", __M2N_u1i4B136},
 	{"u1i4B16", __M2N_u1i4B16},
 	{"u1i4B16B16", __M2N_u1i4B16B16},
@@ -18152,7 +18170,7 @@ static uint8_t __N2M_u1i4C56C56(int32_t __arg0, ValueTypeSizeAlign8<56> __arg1, 
 }
 
 
-// TResult System.Func`2::Invoke(T)
+// System.Boolean System.Collections.Generic.List`1::Contains(T)
 static uint8_t __N2M_u1i4C64(int32_t __arg0, ValueTypeSizeAlign8<64> __arg1, const MethodInfo* method)
 {
     StackObject args[3] = {*(uint64_t*)&__arg0, (uint64_t)&__arg1 };

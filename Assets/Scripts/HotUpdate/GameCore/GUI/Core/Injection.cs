@@ -1,0 +1,41 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
+
+public class Injection : UIBehaviour
+{
+    public List<InjectionObject> injectionObjects = new List<InjectionObject>();
+
+    protected Dictionary<string, Component> m_Components;
+
+    public Component this[string name]
+    { 
+        get 
+        {
+            if (m_Components == null)
+            { 
+                m_Components = new Dictionary<string, Component>(injectionObjects.Count);
+                foreach (InjectionObject obj in injectionObjects)
+                {
+                    m_Components.Add(obj.name, obj.component);
+                }
+            }
+            return m_Components[name]; 
+        }
+    }
+}
+
+[System.Serializable]
+public class InjectionObject
+{
+    [SerializeField]
+    private string m_Name;
+    public string name { get { return m_Name; } }
+    [SerializeField]
+    private Object m_Target;
+    public Object target { get { return m_Target; } }
+    [SerializeField]
+    private Component m_Component;
+    public Component component { get { return m_Component; } }
+}

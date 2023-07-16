@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 1142916516
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8729a44ce06911776563cd1d121652d3
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 0d677c6dec2405a43fe6dd294cca7c3e
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 687078895
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_head_portrait_3.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/New Sprite Atlas.spriteatlas
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_head_portrait_2.png
+- Assets/ArtModules/GUI/Role/Images/roleIcon/role_head_portrait_1.png
+Dependencies: []
