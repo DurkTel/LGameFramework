@@ -21,9 +21,9 @@ public class GameEntry : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Input.GetKeyDown(KeyCode.S))
         {
-            GUIManager.instance.OpenView<TestView2>();
+            GUIManager.instance.CloseView<TestView>();
 
         }
     }

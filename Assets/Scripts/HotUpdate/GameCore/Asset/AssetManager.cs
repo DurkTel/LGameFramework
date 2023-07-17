@@ -47,6 +47,7 @@ public class AssetManager : MonoBehaviour
         s_AssetLoadMode = assetLoadMode;
         GameObject gameObject = new GameObject("AssetManager");
         s_Instance = gameObject.AddComponent<AssetManager>();
+        DontDestroyOnLoad(gameObject);
     }
 
     public AssetManifest_AssetBundle GetAssetManifest_Bundle()

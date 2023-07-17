@@ -18,18 +18,34 @@ public class GUIManager : SingletonMonoAuto<GUIManager>
 
     private Dictionary<Type, IView> m_AllViewDict = new Dictionary<Type, IView>(50);
 
+    private Dictionary<IView, float> m_WaitDestroy;
+
     private List<IView> m_DestroyList;
 
     private int m_OffsetOrder = 1000;
 
     private void Update()
     {
-        if (m_DestroyList == null || m_DestroyList.Count < 0) return;
+        if (m_WaitDestroy == null || m_WaitDestroy.Count <= 0) return;
 
-        for (int i = m_DestroyList.Count - 1; i > 0; i--)
+        foreach (var view in m_WaitDestroy)
         {
+            if (Time.unscaledTime < view.Value)
+                continue;
 
+            m_DestroyList ??= new List<IView>();
+            m_DestroyList.Add(view.Key);
         }
+
+        if (m_DestroyList == null || m_DestroyList.Count <= 0) return;
+
+        foreach (var view in m_DestroyList)
+        {
+            m_WaitDestroy.Remove(view);
+            m_AllViewDict.Remove(view.GetType());
+            view.OnDisposeView();
+        }
+        m_DestroyList.Clear();
     }
 
     public void Initialize()
@@ -114,8 +130,11 @@ public class GUIManager : SingletonMonoAuto<GUIManager>
     public bool CloseView(Type type)
     {
         IView view;
-        if(m_AllViewDict.TryGetValue(type, out view))
+        if (m_AllViewDict.TryGetValue(type, out view))
+        { 
             (view as GUIView).OnBeforeDisableEffect();
+            return true;
+        }
 
         return false;
     }
@@ -135,6 +154,9 @@ public class GUIManager : SingletonMonoAuto<GUIManager>
         else
         {
             view = m_AllViewDict[viewType];
+            if (m_WaitDestroy != null && m_WaitDestroy.ContainsKey(view))
+                m_WaitDestroy.Remove(view);
+
             T guiView = view as T;
             GUIViewLayer layer = m_Layers[guiView.layerLevel];
             layer.UpdateSortingOrder(view);
@@ -152,18 +174,19 @@ public class GUIManager : SingletonMonoAuto<GUIManager>
         GUIViewLayer layer = m_Layers[view.layerLevel];
 
         view.OnInit(go, layer);
+
         layer.AddView(view);
 
+        AssetLoader loader = AssetUtility.LoadAssetAsync<GameObject>(view.prefabName);
+        loader.onComplete = (loader) => { view.OnLoadComplete(loader); };
         return view as T;
     }
 
-    public void OnViewLoadComplete(IView view)
+    public void WaitToDestroy(IView view, float destroyTime)
     {
+        m_WaitDestroy ??= new Dictionary<IView, float>();
 
-    }
-
-    public void OnViewDisable(IView view, float destroyTime)
-    {
-        m_DestroyList.Add(view);
+        if (!m_WaitDestroy.ContainsKey(view))
+            m_WaitDestroy.Add(view, destroyTime + Time.unscaledTime);
     }
 }

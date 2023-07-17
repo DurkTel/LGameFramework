@@ -1,6 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Unity.VisualScripting.YamlDotNet.Core.Tokens;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,6 +6,8 @@ namespace GameCore
 {
     public class GUIView : IView
     {
+        private static Vector2 s_HidePosition = new Vector2 (9999, 9999);
+
         #region 内部属性
         protected GameObject m_GameObject;
         public GameObject gameObject { get { return m_GameObject; } }
@@ -47,8 +47,8 @@ namespace GameCore
         /// <summary>
         /// 销毁时间
         /// </summary>
-        protected virtual float m_DestroyTime { get { return 10f; } }
-        public float DestroyTime { get { return m_DestroyTime; } }
+        protected virtual float m_DestroyTime { get { return 5f; } }
+        public float destroyTime { get { return m_DestroyTime; } }
 
         #endregion
 
@@ -57,8 +57,6 @@ namespace GameCore
             m_GUIViewLayer = layer;
             m_GameObject = go;
             m_RectTransform = m_GameObject.TryAddComponent<RectTransform>();
-            AssetLoader loader = AssetUtility.LoadAssetAsync<GameObject>(prefabName);
-            loader.onComplete = OnLoadComplete;
             m_IsLoading = true;
         }
 
@@ -71,8 +69,6 @@ namespace GameCore
             rect.TileRectTransform();
 
             m_Injection = m_PrefabInstantiate.GetComponent<Injection>();
-            //通知管理器 界面加载完成
-            GUIManager.instance.OnViewLoadComplete(this);
 
             OnInitView();
         }
@@ -84,6 +80,7 @@ namespace GameCore
 
         public virtual void OnBeforeOpenEffect()
         {
+            SetVisible(true);
             OnOpenEffect();
         }
 
@@ -115,17 +112,24 @@ namespace GameCore
 
         public virtual void OnDisableView()
         {
-            GUIManager.instance.OnViewDisable(this, DestroyTime);
+            SetVisible(false);
+            GUIManager.instance.WaitToDestroy(this, destroyTime);
         }
 
         public virtual void OnDisposeView()
         {
-            
+            AssetUtility.Destroy(m_PrefabInstantiate);
+            Object.Destroy(m_GameObject);
         }
 
         public virtual void Close()
         {
             GUIManager.instance.CloseView(GetType());
+        }
+
+        public void SetVisible(bool value)
+        {
+            m_RectTransform.anchoredPosition = value ? Vector2.zero : s_HidePosition;
         }
     }
 }

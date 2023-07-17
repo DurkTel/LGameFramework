@@ -12,5 +12,6 @@ namespace GameCore
         void OnEnableView();
         void OnDisableView();
         void OnDisposeView();
+        void SetVisible(bool value);
     }
 }
