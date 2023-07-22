@@ -61,12 +61,12 @@ public class BundleAssetLoader : AssetLoader
 
     public override string GetAssetPath(string assetName)
     {
-        return AssetUtility.GetAssetManifest_Bundle().GetPath(assetName);
+        return module.GetAssetManifest_Bundle().GetPath(assetName);
     }
 
     public string GetBundleName(string assetName)
     {
-        return AssetUtility.GetAssetManifest_Bundle().GetBundleName(assetName);
+        return module.GetAssetManifest_Bundle().GetBundleName(assetName);
     }
 
     /// <summary>
@@ -76,11 +76,11 @@ public class BundleAssetLoader : AssetLoader
     /// <returns></returns>
     public List<string> GetAbsentDependsName(string assetName)
     {
-        List<string> result = AssetUtility.GetAssetManifest_Bundle().GetDependsName(assetName);
+        List<string> result = module.GetAssetManifest_Bundle().GetDependsName(assetName);
         AssetBundleRecord record;
         for (int i = result.Count - 1; i >= 0; i--)
         {
-            if (AssetUtility.TryGetAssetBundle(result[i], out record))
+            if (module.TryGetAssetBundle(result[i], out record))
             { 
                 result.RemoveAt(i);
                 record.dpendsReferenceCount++; //已经加载过了 引用计数加1
@@ -107,7 +107,7 @@ public class BundleAssetLoader : AssetLoader
 
         if (m_DependsBundleRequest != null && m_DependsBundleRequest.isDone)
         {
-            AssetBundleRecord record = AssetUtility.AddAssetBundle(m_NeedDepends[0], m_DependsBundleRequest.assetBundle);
+            AssetBundleRecord record = module.AddAssetBundle(m_NeedDepends[0], m_DependsBundleRequest.assetBundle);
             record.dpendsReferenceCount++;
             m_NeedDepends.RemoveAt(0);
             m_DependsBundleRequest = null;
@@ -126,7 +126,7 @@ public class BundleAssetLoader : AssetLoader
         foreach (string dependPath in m_NeedDepends)
         {
             AssetBundle ab = AssetBundle.LoadFromFile(Path.Combine(AssetDefine.localDataPath, dependPath));
-            AssetBundleRecord record = AssetUtility.AddAssetBundle(m_NeedDepends[0], ab);
+            AssetBundleRecord record = module.AddAssetBundle(m_NeedDepends[0], ab);
             record.dpendsReferenceCount++;
         }
         m_NeedDepends.Clear();
@@ -141,8 +141,8 @@ public class BundleAssetLoader : AssetLoader
     /// <returns></returns>
     private UnityEngine.Object Load(string abName, string assetName, Type type)
     {
-        if (!AssetUtility.TryGetAssetBundle(abName, out m_AssetRecord))
-            m_AssetRecord = AssetUtility.AddAssetBundle(abName, AssetBundle.LoadFromFile(Path.Combine(AssetDefine.localDataPath, abName)));
+        if (!module.TryGetAssetBundle(abName, out m_AssetRecord))
+            m_AssetRecord = module.AddAssetBundle(abName, AssetBundle.LoadFromFile(Path.Combine(AssetDefine.localDataPath, abName)));
 
         UnityEngine.Object obj = m_AssetRecord.assetBundle.LoadAsset(assetName, type);
 
@@ -158,11 +158,11 @@ public class BundleAssetLoader : AssetLoader
     /// <returns></returns>
     private AssetBundleRequest LoadAsync(string abName, string assetName, Type type)
     {
-        if (!AssetUtility.TryGetAssetBundle(abName, out m_AssetRecord))
+        if (!module.TryGetAssetBundle(abName, out m_AssetRecord))
         {
             m_BundleRequest ??= AssetBundle.LoadFromFileAsync(Path.Combine(AssetDefine.localDataPath, abName));
             if (m_BundleRequest.isDone)
-                m_AssetRecord = AssetUtility.AddAssetBundle(abName, m_BundleRequest.assetBundle);
+                m_AssetRecord = module.AddAssetBundle(abName, m_BundleRequest.assetBundle);
             else
                 return null;
         }
@@ -182,7 +182,7 @@ public class BundleAssetLoader : AssetLoader
             if (string.IsNullOrEmpty(m_BundleName) || string.IsNullOrEmpty(m_AssetName))
             {
                 m_Error = true;
-                AssetUtility.StopLoadingAsset(m_AssetName);
+                module.RemoveAssetLoader(m_AssetName);
                 return;
             }
 

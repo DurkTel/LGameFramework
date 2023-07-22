@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public abstract class AssetLoader : IEnumerator
 {
+    public AssetModule module { get; set; }
 
     protected string m_AssetName;
     public string assetName { get { return m_AssetName; } }

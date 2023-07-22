@@ -11,7 +11,7 @@ public class SingletonMonoAuto<T> : MonoBehaviour where T : MonoBehaviour
         {
             if (m_Instance == null)
             {
-                GameObject temp = new GameObject(typeof(T).ToString());
+                GameObject temp = new GameObject(typeof(T).Name);
                 DontDestroyOnLoad(temp);
                 m_Instance = temp.AddComponent<T>();
             }

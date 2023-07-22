@@ -17,6 +17,17 @@ public class AssetCache
         public RawObjectInfo rawObjectInfo;
     }
 
+    private static AssetModule m_AssetModule;
+    public static AssetModule assetModule 
+    { 
+        get 
+        { 
+            if (m_AssetModule == null)
+                m_AssetModule = GameEntry.GetModule<AssetModule>();
+
+            return m_AssetModule; 
+        } 
+    }
 
     private static Dictionary<string, RawObjectInfo> m_RawAssetMap = new Dictionary<string, RawObjectInfo>();
 
@@ -166,18 +177,18 @@ public class AssetCache
             return;
 
         //AB包模式下计算引用
-        if (AssetManager.assetLoadMode == AssetLoadMode.AssetBundle)
+        if (AssetModule.assetLoadMode == AssetLoadMode.AssetBundle)
         {
-            AssetManifest_AssetBundle assetManifest = AssetUtility.GetAssetManifest_Bundle();
+            AssetManifest_AssetBundle assetManifest = assetModule.GetAssetManifest_Bundle();
             List<string> result = assetManifest.GetDependsName(rawInfo.asstName);
             //这个资源被卸载 被这个资源依赖的AB包引用计数减1
             AssetBundleRecord record;
             foreach (string abName in result) 
-                if (AssetUtility.TryGetAssetBundle(abName, out record))
+                if (assetModule.TryGetAssetBundle(abName, out record))
                     record.dpendsReferenceCount--;
 
             //这个资源的AB引用减1
-            if (AssetUtility.TryGetAssetBundle(assetManifest.GetBundleName(rawInfo.asstName), out record))
+            if (assetModule.TryGetAssetBundle(assetManifest.GetBundleName(rawInfo.asstName), out record))
                 record.rawReferenceCount--;
         }
 

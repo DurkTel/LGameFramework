@@ -73,13 +73,6 @@ public class OrbitCamera : SingletonMono<OrbitCamera>
         DontDestroyOnLoad(go);
     }
 
-    public void SetFocus(Entity entity)
-    {
-        GameObject target = new GameObject("CameraTarget");
-        target.transform.localPosition = new Vector3(0, 0.6f, 0);
-        target.transform.SetParentIgnore(entity.transform);
-        focus = target.transform;
-    }
 
     private void LateUpdate()
     {

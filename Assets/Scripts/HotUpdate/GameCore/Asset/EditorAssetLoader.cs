@@ -50,7 +50,7 @@ public class EditorAssetLoader : AssetLoader
             if (path == "")
             {
                 m_Error = true;
-                AssetUtility.StopLoadingAsset(m_AssetName);
+                module.RemoveAssetLoader(m_AssetName);
                 return;
             }
 

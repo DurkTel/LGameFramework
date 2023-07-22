@@ -308,8 +308,7 @@ public class LaunchUpdate : MonoBehaviour
         UpdateComplete?.Invoke();
 
     }
-
-
+    
     public string GetMD5(string file)
     {
         try

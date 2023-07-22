@@ -48,7 +48,7 @@ public class Launcher : MonoBehaviour
         }
 #endif
 
-        Type type = coreAssembly.GetType("GameEntry");
+        Type type = coreAssembly.GetType("GameCore.GameEntry");
         type.GetMethod("Instantiate").Invoke(null, null);
 
         yield return null;
