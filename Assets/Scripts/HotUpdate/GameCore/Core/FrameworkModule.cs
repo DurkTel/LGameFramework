@@ -50,5 +50,10 @@ namespace GameCore
         /// <param name="fixedDeltaTime">固定更新间隔</param>
         /// <param name="unscaledTime">游戏开始后所运行的时间，不受时间缩放比例影响</param>
         internal virtual void FixedUpdate(float fixedDeltaTime, float unscaledTime) { }
+
+        /// <summary>
+        /// 销毁
+        /// </summary>
+        internal virtual void OnDestroy() { }
     }
 }

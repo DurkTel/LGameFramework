@@ -47,8 +47,6 @@
     </ClCompile>
     <ClCompile Include="Source\GenericMethods__11.cpp">
     </ClCompile>
-    <ClCompile Include="Source\GenericMethods__12.cpp">
-    </ClCompile>
     <ClCompile Include="Source\GenericMethods__2.cpp">
     </ClCompile>
     <ClCompile Include="Source\GenericMethods__3.cpp">
@@ -152,8 +150,6 @@
     <ClCompile Include="Source\Generics__47.cpp">
     </ClCompile>
     <ClCompile Include="Source\Generics__48.cpp">
-    </ClCompile>
-    <ClCompile Include="Source\Generics__49.cpp">
     </ClCompile>
     <ClCompile Include="Source\Generics__5.cpp">
     </ClCompile>
@@ -411,8 +407,6 @@
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.VideoModule.cpp">
     </ClCompile>
-    <ClCompile Include="Source\UnityEngine.VirtualTexturingModule.cpp">
-    </ClCompile>
     <ClCompile Include="Source\UnityEngine.VRModule.cpp">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.XRModule.cpp">
@@ -526,8 +520,6 @@
     <ClCompile Include="Source\UnityEngine.VFXModule_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.VideoModule_CodeGen.c">
-    </ClCompile>
-    <ClCompile Include="Source\UnityEngine.VirtualTexturingModule_CodeGen.c">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.VRModule_CodeGen.c">
     </ClCompile>

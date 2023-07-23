@@ -127,8 +127,6 @@ struct AssetBundle_tB38418819A49060CD738CB21541649340F082943;
 struct AssetFile_t01FC6EC1F95844E4C5A9981989CECF5DE91B05F0;
 // LGameFramework.GameBase.AssetFileDownloadQueue
 struct AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620;
-// System.AsyncCallback
-struct AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C;
 // System.Reflection.Binder
 struct Binder_t91BFCE95A7057FADF4D8A1A342AFE52872246235;
 // UnityEngine.Networking.CertificateHandler
@@ -157,8 +155,6 @@ struct GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95;
 struct GameObject_t76FEDD663AB33C991A9C9A23129337651094216F;
 // System.Security.Cryptography.HashAlgorithm
 struct HashAlgorithm_t299ECE61BBF4582B1F75734D43A96DDEC9B2004D;
-// System.IAsyncResult
-struct IAsyncResult_t7B9B5A0ECB35DCEC31B8A8122C37D687369253B5;
 // System.Collections.IDictionary
 struct IDictionary_t6D03155AF1FA9083817AA5B6AD7DEEACC26AB220;
 // System.Collections.IEnumerator
@@ -279,9 +275,9 @@ IL2CPP_EXTERN_C String_t* _stringLiteral09B11B6CC411D8B9FFB75EAAE9A35B2AF248CE40
 IL2CPP_EXTERN_C String_t* _stringLiteral0B34DFC38793BF0AF6DEA9A94F7CCB4150E999A6;
 IL2CPP_EXTERN_C String_t* _stringLiteral1788F1F97AD86A3245D2B1A0D860E2E4504B62BD;
 IL2CPP_EXTERN_C String_t* _stringLiteral1BA46D2FDED261D9EBFFC277917E32CC44A3F821;
-IL2CPP_EXTERN_C String_t* _stringLiteral1F1133B46379B1B74780C17A916B994A3A4AAC57;
 IL2CPP_EXTERN_C String_t* _stringLiteral225BE7524111A905CE72776BC9F4CAF219EE2F68;
 IL2CPP_EXTERN_C String_t* _stringLiteral2BB84B130322E3FCB48651A998BC00F60A084AFE;
+IL2CPP_EXTERN_C String_t* _stringLiteral32A8C30FD78739DA19BDB219CBEB9D0F435A681E;
 IL2CPP_EXTERN_C String_t* _stringLiteral3AC0ADA0D9BF6C6397C71857226CBA06D9E6EB0E;
 IL2CPP_EXTERN_C String_t* _stringLiteral58F2819662FABE76C91AAA1741BA17EBED7727FD;
 IL2CPP_EXTERN_C String_t* _stringLiteral5C3EE31A245F14716837552067C7D6821200E399;
@@ -3185,7 +3181,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CLaunchGameU3Ed__1_MoveNext_mAE20988E7
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&LaunchPath_tA376175FFB836615C0E92D593AC2F1D37555E91F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1F1133B46379B1B74780C17A916B994A3A4AAC57);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral32A8C30FD78739DA19BDB219CBEB9D0F435A681E);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD517C7CD0B15AC7D7FED8521FC3CE0FC3C729432);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralEC4C5477D8BA260A27C36AFD7E8C1C289169E9CF);
@@ -3285,11 +3281,11 @@ IL_0062:
 		}
 	}
 	{
-		// Type type = coreAssembly.GetType("GameEntry");
+		// Type type = coreAssembly.GetType("GameCore.GameEntry");
 		Assembly_t* L_19 = V_1;
 		NullCheck(L_19);
 		Type_t* L_20;
-		L_20 = VirtualFuncInvoker1< Type_t*, String_t* >::Invoke(16 /* System.Type System.Reflection.Assembly::GetType(System.String) */, L_19, _stringLiteral1F1133B46379B1B74780C17A916B994A3A4AAC57);
+		L_20 = VirtualFuncInvoker1< Type_t*, String_t* >::Invoke(16 /* System.Type System.Reflection.Assembly::GetType(System.String) */, L_19, _stringLiteral32A8C30FD78739DA19BDB219CBEB9D0F435A681E);
 		// type.GetMethod("Instantiate").Invoke(null, null);
 		NullCheck(L_20);
 		MethodInfo_t* L_21;

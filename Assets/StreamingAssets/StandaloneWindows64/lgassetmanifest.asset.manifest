@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3816008683
+CRC: 3738319836
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 2f1e2a208945b7009391625e4e215ebb
+    Hash: 8c709bf818e1e368bb475378b191d5b2
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 18504429b9f8377ce007ef2f7d94ca8e
+    Hash: e28809c5d8a0ff4540fb7d661c76e75c
 HashAppended: 0
 ClassTypes:
 - Class: 114
@@ -15,7 +15,7 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers:
 - AssemblyName: Assembly-GameCore
-  ClassName: AssetManifest_AssetBundle/AssetInfo
+  ClassName: GameCore.Asset.AssetManifest_Bundle/AssetInfo
 Assets:
 - Assets/LGAssetManifest.asset
 Dependencies: []

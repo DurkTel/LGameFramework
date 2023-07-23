@@ -6,6 +6,7 @@ using System.IO;
 using System;
 using System.Linq;
 using System.Text;
+using GameCore.Asset;
 
 public class Build : EditorWindow
 {
@@ -233,6 +234,8 @@ public class Build : EditorWindow
     {
         List<AssetBundleBuild> list = new List<AssetBundleBuild>();
 
+        BuildUtility.CollectionFile(list, "Assets/ArtModules/GameLogic.prefab");
+
         CollectionAudio(ref list, AssetDefine.s_AudioBuildPath);
 
         CollectionEffect(ref list, AssetDefine.s_EffectBuildPath);
@@ -294,7 +297,6 @@ public class Build : EditorWindow
             BuildUtility.CollectionFolder(list, folder);
         }
     }
-
     /// <summary>
     /// 打包字体
     /// </summary>
@@ -484,7 +486,7 @@ public class Build : EditorWindow
         RefreshAssetsBundleManifest(Path.Combine(buildParameter.buildOutPath, targetName));
 
         AssetBundleBuild abb = new AssetBundleBuild();
-        string projectPath = AssetManifest_AssetBundle.s_AbPath;
+        string projectPath = AssetManifest_Bundle.s_AbPath;
         abb.assetBundleName = projectPath.Substring(7);
         abb.assetNames = new string[] { projectPath };
         abb.addressableNames = new string[] { Path.GetFileNameWithoutExtension(projectPath) };
@@ -511,7 +513,7 @@ public class Build : EditorWindow
     {
         AssetBundle.UnloadAllAssetBundles(true);
 
-        AssetManifest_AssetBundle assetManifest = GetAssetManifest();
+        AssetManifest_Bundle assetManifest = GetAssetManifest();
         assetManifest.Clear();
 
         string[] allDir = Directory.GetDirectories(path);
@@ -567,14 +569,14 @@ public class Build : EditorWindow
         Debug.Log("更新AB资源清单完成");
     }
 
-    public static AssetManifest_AssetBundle GetAssetManifest()
+    public static AssetManifest_Bundle GetAssetManifest()
     {
-        AssetManifest_AssetBundle assetManifest = AssetDatabase.LoadAssetAtPath<AssetManifest_AssetBundle>(AssetManifest_AssetBundle.s_AbPath);
+        AssetManifest_Bundle assetManifest = AssetDatabase.LoadAssetAtPath<AssetManifest_Bundle>(AssetManifest_Bundle.s_AbPath);
 
         if (assetManifest == null)
         {
-            assetManifest = ScriptableObject.CreateInstance<AssetManifest_AssetBundle>();
-            AssetDatabase.CreateAsset(assetManifest, AssetManifest_AssetBundle.s_AbPath);
+            assetManifest = ScriptableObject.CreateInstance<AssetManifest_Bundle>();
+            AssetDatabase.CreateAsset(assetManifest, AssetManifest_Bundle.s_AbPath);
         }
 
         return assetManifest;

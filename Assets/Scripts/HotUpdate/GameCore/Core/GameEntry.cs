@@ -17,8 +17,9 @@ namespace GameCore
 
         private void Awake()
         {
-            GameEntry.GetModule<GUI.GUIModule>().OpenView<GUI.TestView>();
-         
+            OrbitCamera.Initialize();
+            GameObject gameLogic = GetModule<Asset.FMAssetManager>().LoadAsset<GameObject>("GameLogic.prefab");
+            DontDestroyOnLoad(gameLogic);
         }
 
         private void Update()
@@ -103,6 +104,14 @@ namespace GameCore
             go.AddComponent<GameEntry>();
             DontDestroyOnLoad(go);
             Debug.Log("游戏入口实例化完成，进入游戏");
+        }
+
+        public void OnDestroy()
+        {
+            foreach (FrameworkModule module in s_AllFrameworkModule)
+            {
+                module.OnDestroy();
+            }
         }
     }
 }
