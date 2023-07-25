@@ -438,11 +438,11 @@ public class Build : EditorWindow
         HybridCLR.Editor.Commands.CompileDllCommand.CompileDll(buildParameter.buildTarget);
         AssetDatabase.Refresh();
 
-        string[] deleteArray = new string[LaunchPath.s_HotUpdateDllName.Length];
+        string[] deleteArray = new string[ProcedureLaunchPath.s_HotUpdateDllName.Length];
 
-        for (int i = 0; i < LaunchPath.s_HotUpdateDllName.Length; i++)
+        for (int i = 0; i < ProcedureLaunchPath.s_HotUpdateDllName.Length; i++)
         {
-            string dll = LaunchPath.s_HotUpdateDllName[i];
+            string dll = ProcedureLaunchPath.s_HotUpdateDllName[i];
             string dllPath = Application.dataPath + "/../HybridCLRData/HotUpdateDlls/" + buildParameter.buildTarget.ToString() + "/" + dll;
 
             if (File.Exists(dllPath))

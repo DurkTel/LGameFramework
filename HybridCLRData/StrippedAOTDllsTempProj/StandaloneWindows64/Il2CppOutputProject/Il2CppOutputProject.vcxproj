@@ -47,6 +47,8 @@
     </ClCompile>
     <ClCompile Include="Source\GenericMethods__11.cpp">
     </ClCompile>
+    <ClCompile Include="Source\GenericMethods__12.cpp">
+    </ClCompile>
     <ClCompile Include="Source\GenericMethods__2.cpp">
     </ClCompile>
     <ClCompile Include="Source\GenericMethods__3.cpp">

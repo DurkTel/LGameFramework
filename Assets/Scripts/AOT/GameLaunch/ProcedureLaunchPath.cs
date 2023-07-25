@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-public class LaunchPath
+public class ProcedureLaunchPath
 {
 #if UNITY_EDITOR || UNITY_STANDALONE_WIN
     public static string localDataPath = Application.dataPath + "/../A_AssetBundles/";

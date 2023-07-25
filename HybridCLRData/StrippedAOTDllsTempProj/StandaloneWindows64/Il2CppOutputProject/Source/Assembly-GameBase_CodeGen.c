@@ -43,121 +43,206 @@
 // 0x0000001D DictionaryEx`2<K,V> DictionaryPool`2::Get()
 // 0x0000001E System.Void DictionaryPool`2::Release(DictionaryEx`2<K,V>)
 // 0x0000001F System.Void DictionaryPool`2::.cctor()
-// 0x00000020 TimerManager/Timer TimerManager::SetTimer(TimerManager/TimerType,UnityEngine.Events.UnityAction,System.Single,System.Single,System.Int32)
-extern void TimerManager_SetTimer_mD2BB34039F699316279F502AEFA8072E550B0185 (void);
-// 0x00000021 System.Int32 TimerManager::AddTimer(UnityEngine.Events.UnityAction,System.Single,System.Single,System.Int32)
-extern void TimerManager_AddTimer_mA46ECEF0E45E637CB766E1313A02F7869A45E173 (void);
-// 0x00000022 System.Int32 TimerManager::AddFrame(UnityEngine.Events.UnityAction,System.Single,System.Single,System.Int32)
-extern void TimerManager_AddFrame_mD72BD26F80F379F57134FDBF789D3C244C90683B (void);
-// 0x00000023 System.Void TimerManager::DelTimer(System.Int32)
-extern void TimerManager_DelTimer_m5492839E915D43D596D3704EE854BB439B6F58D9 (void);
-// 0x00000024 UnityEngine.Coroutine TimerManager::AddCoroutine(System.Collections.IEnumerator)
-extern void TimerManager_AddCoroutine_mF0DA73C82708BCE830813399249858EB747ED465 (void);
-// 0x00000025 System.Void TimerManager::DelCoroutine(UnityEngine.Coroutine)
-extern void TimerManager_DelCoroutine_mECE54FA48041FDAFD56985D62A7CF2B6FF50AC6F (void);
-// 0x00000026 System.Void TimerManager::Update()
-extern void TimerManager_Update_m4270AD522863E3DA1D8063E8C1224F2B791A558B (void);
-// 0x00000027 System.Void TimerManager::.ctor()
-extern void TimerManager__ctor_mBCBFC23D99E83C0C2565FFEC288CE4AE06E2D4DE (void);
-// 0x00000028 System.Int32 TimerManager/Timer::get_id()
-extern void Timer_get_id_m5971893920B329C110F6E483C40F865F0EBBCC7A (void);
-// 0x00000029 TimerManager/Timer TimerManager/Timer::SetData(TimerManager/TimerType,UnityEngine.Events.UnityAction,System.Single,System.Single,System.Int32)
-extern void Timer_SetData_m2F91C40410D397461360EC9366EF85142995EFA7 (void);
-// 0x0000002A System.Void TimerManager/Timer::Dispose()
-extern void Timer_Dispose_m82F91D1C904A96E6BE9BEE4F84589A752F436317 (void);
-// 0x0000002B System.Boolean TimerManager/Timer::Update()
-extern void Timer_Update_mEDEA49FB20A660B01CA3B0B934603A4134219BAC (void);
-// 0x0000002C System.Void TimerManager/Timer::.ctor()
-extern void Timer__ctor_m4DB2D8165CACA6D59FC5314A8909D403F85BB221 (void);
-// 0x0000002D System.Void TimerManager/Timer::.cctor()
-extern void Timer__cctor_mA6EC0AA484D24FD8AEEECCC54FFCD9E9832FEBB1 (void);
-// 0x0000002E System.Void AssetFile::.ctor()
+// 0x00000020 System.Void AssetFile::.ctor()
 extern void AssetFile__ctor_m8BDCF6B261B0B6C46648A4AA82C9AE2FA882B2B0 (void);
-// 0x0000002F T SingletonBase`1::get_instance()
-// 0x00000030 System.Void SingletonBase`1::.ctor()
-// 0x00000031 T SingletonMono`1::get_instance()
-// 0x00000032 System.Void SingletonMono`1::Awake()
-// 0x00000033 System.Void SingletonMono`1::.ctor()
-// 0x00000034 T SingletonMonoAuto`1::get_instance()
-// 0x00000035 System.Void SingletonMonoAuto`1::.ctor()
-// 0x00000036 System.String LJsonUtility::ToJason(System.Collections.Generic.List`1<T>)
-// 0x00000037 System.String LJsonUtility::ToJason(System.Collections.Generic.Dictionary`2<T,V>)
-// 0x00000038 System.String LJsonUtility::ToJason(System.Object)
+// 0x00000021 T SingletonBase`1::get_instance()
+// 0x00000022 System.Void SingletonBase`1::.ctor()
+// 0x00000023 T SingletonMono`1::get_instance()
+// 0x00000024 System.Void SingletonMono`1::Awake()
+// 0x00000025 System.Void SingletonMono`1::.ctor()
+// 0x00000026 T SingletonMonoAuto`1::get_instance()
+// 0x00000027 System.Void SingletonMonoAuto`1::.ctor()
+// 0x00000028 System.String LJsonUtility::ToJason(System.Collections.Generic.List`1<T>)
+// 0x00000029 System.String LJsonUtility::ToJason(System.Collections.Generic.Dictionary`2<T,V>)
+// 0x0000002A System.String LJsonUtility::ToJason(System.Object)
 extern void LJsonUtility_ToJason_mE87C5DB102A88916529F6CB1EFC0620E42E3586A (void);
-// 0x00000039 System.Collections.Generic.List`1<T> LJsonUtility::FromJsonToList(System.String)
-// 0x0000003A System.Collections.Generic.Dictionary`2<T,V> LJsonUtility::FromJsonToDictionary(System.String)
-// 0x0000003B T LJsonUtility::FromJson(System.String)
-// 0x0000003C System.Object LJsonUtility::FromJson(System.String,System.Type)
+// 0x0000002B System.Collections.Generic.List`1<T> LJsonUtility::FromJsonToList(System.String)
+// 0x0000002C System.Collections.Generic.Dictionary`2<T,V> LJsonUtility::FromJsonToDictionary(System.String)
+// 0x0000002D T LJsonUtility::FromJson(System.String)
+// 0x0000002E System.Object LJsonUtility::FromJson(System.String,System.Type)
 extern void LJsonUtility_FromJson_m6F20E51A99F6BDE972FA18F3196994E7AB7F1D82 (void);
-// 0x0000003D System.Void LJsonUtility::FromJsonOverwrite(System.String,System.Object)
+// 0x0000002F System.Void LJsonUtility::FromJsonOverwrite(System.String,System.Object)
 extern void LJsonUtility_FromJsonOverwrite_mC10822A8D458883024FC5DDA9ADC456C3187730D (void);
-// 0x0000003E System.Void LJsonUtility/Serialization`1::.ctor(System.Collections.Generic.List`1<T>)
-// 0x0000003F System.Collections.Generic.List`1<T> LJsonUtility/Serialization`1::Reduction()
-// 0x00000040 System.Void LJsonUtility/Serialization`2::.ctor(System.Collections.Generic.Dictionary`2<T,V>)
-// 0x00000041 System.Collections.Generic.Dictionary`2<T,V> LJsonUtility/Serialization`2::Reduction()
-// 0x00000042 System.Void LJsonUtility/Serialization`2::OnAfterDeserialize()
-// 0x00000043 System.Void LJsonUtility/Serialization`2::OnBeforeSerialize()
-// 0x00000044 System.Void MobileUtility::RestartApplication()
+// 0x00000030 System.Void LJsonUtility/Serialization`1::.ctor(System.Collections.Generic.List`1<T>)
+// 0x00000031 System.Collections.Generic.List`1<T> LJsonUtility/Serialization`1::Reduction()
+// 0x00000032 System.Void LJsonUtility/Serialization`2::.ctor(System.Collections.Generic.Dictionary`2<T,V>)
+// 0x00000033 System.Collections.Generic.Dictionary`2<T,V> LJsonUtility/Serialization`2::Reduction()
+// 0x00000034 System.Void LJsonUtility/Serialization`2::OnAfterDeserialize()
+// 0x00000035 System.Void LJsonUtility/Serialization`2::OnBeforeSerialize()
+// 0x00000036 System.Void MobileUtility::RestartApplication()
 extern void MobileUtility_RestartApplication_mC3CF1B6DFEFD17E7D5B4B5917224A7E93B6FDA55 (void);
-// 0x00000045 System.Void MobileUtility::.ctor()
+// 0x00000037 System.Void MobileUtility::.ctor()
 extern void MobileUtility__ctor_m1536591162EB02C523289AECBD985FBBA17E1A90 (void);
-// 0x00000046 System.Int32 Utility::GetFileSize(System.String)
+// 0x00000038 System.Int32 Utility::GetFileSize(System.String)
 extern void Utility_GetFileSize_mC7BA86E62B49CE6A70BA73052A88340231841E99 (void);
-// 0x00000047 System.Int32 Utility::GetDirectorySize(System.String)
+// 0x00000039 System.Int32 Utility::GetDirectorySize(System.String)
 extern void Utility_GetDirectorySize_mEBADB8B9686DE1FD6BDB250B45D54DFDC86C5B41 (void);
-// 0x00000048 System.Void Utility::.ctor()
+// 0x0000003A System.String Utility::GetMD5(System.String)
+extern void Utility_GetMD5_m8936EBFED59AEF24482A3857240A5DD95C8D64B8 (void);
+// 0x0000003B System.Void Utility::.ctor()
 extern void Utility__ctor_m5C682D6BB0B4C94F29666E161C2699474DD36B3D (void);
-// 0x00000049 System.Object LGameFramework.GameBase.AssetFileDownloader::get_Current()
+// 0x0000003C System.String GameBase.FSM.IFSM_Condition::get_dataName()
+// 0x0000003D System.Void GameBase.FSM.IFSM_Condition::set_dataName(System.String)
+// 0x0000003E System.Boolean GameBase.FSM.IFSM_Condition::Tick(GameBase.FSM.FSM_DataBase)
+// 0x0000003F System.String GameBase.FSM.FSM_Condition`1::get_dataName()
+// 0x00000040 System.Void GameBase.FSM.FSM_Condition`1::set_dataName(System.String)
+// 0x00000041 T GameBase.FSM.FSM_Condition`1::get_target()
+// 0x00000042 System.Void GameBase.FSM.FSM_Condition`1::set_target(T)
+// 0x00000043 T GameBase.FSM.FSM_Condition`1::get_curData()
+// 0x00000044 System.Void GameBase.FSM.FSM_Condition`1::set_curData(T)
+// 0x00000045 System.Void GameBase.FSM.FSM_Condition`1::.ctor()
+// 0x00000046 System.Void GameBase.FSM.FSM_Condition`1::.ctor(System.String,T)
+// 0x00000047 System.Boolean GameBase.FSM.FSM_Condition`1::Tick(GameBase.FSM.FSM_DataBase)
+// 0x00000048 GameBase.FSM.FSM_Condition_Float/FloatCondition GameBase.FSM.FSM_Condition_Float::get_condition()
+extern void FSM_Condition_Float_get_condition_mEFDCCAB17D479DB389A476F3047BAF6899C9DCB1 (void);
+// 0x00000049 System.Void GameBase.FSM.FSM_Condition_Float::set_condition(GameBase.FSM.FSM_Condition_Float/FloatCondition)
+extern void FSM_Condition_Float_set_condition_m50DC0F672B71EB5517A03D05E2700F86F0A8A6A1 (void);
+// 0x0000004A System.Void GameBase.FSM.FSM_Condition_Float::.ctor()
+extern void FSM_Condition_Float__ctor_m032636E5F431ECACAF45A6D9E56DDEC922DDD5F6 (void);
+// 0x0000004B System.Void GameBase.FSM.FSM_Condition_Float::.ctor(System.String,System.Single,GameBase.FSM.FSM_Condition_Float/FloatCondition)
+extern void FSM_Condition_Float__ctor_m64D0937FD4DB20A4633B1F40690B8848627E283D (void);
+// 0x0000004C System.Boolean GameBase.FSM.FSM_Condition_Float::Tick(GameBase.FSM.FSM_DataBase)
+extern void FSM_Condition_Float_Tick_m7A105AA53B631343BC6452B347F31D3775573FE4 (void);
+// 0x0000004D GameBase.FSM.FSM_Condition_Int/IntCondition GameBase.FSM.FSM_Condition_Int::get_condition()
+extern void FSM_Condition_Int_get_condition_m8F98F79707064367D75619DD72F8973C36F8CCEB (void);
+// 0x0000004E System.Void GameBase.FSM.FSM_Condition_Int::set_condition(GameBase.FSM.FSM_Condition_Int/IntCondition)
+extern void FSM_Condition_Int_set_condition_m6D9AE040AEF9504FBF5F021AF8E15D308FE06D4C (void);
+// 0x0000004F System.Void GameBase.FSM.FSM_Condition_Int::.ctor()
+extern void FSM_Condition_Int__ctor_mBE0DAE85D7DC3DAEFD48C94B8214F7EB43A8CC19 (void);
+// 0x00000050 System.Void GameBase.FSM.FSM_Condition_Int::.ctor(System.String,System.Int32,GameBase.FSM.FSM_Condition_Int/IntCondition)
+extern void FSM_Condition_Int__ctor_m7A172FE51BA4A7E75C7F49DC187989A129F63605 (void);
+// 0x00000051 System.Boolean GameBase.FSM.FSM_Condition_Int::Tick(GameBase.FSM.FSM_DataBase)
+extern void FSM_Condition_Int_Tick_mEA4E9FBC5E21F4325B794FF2D1D6F6CD5B76F323 (void);
+// 0x00000052 GameBase.FSM.FSM_Condition_Booler/BoolerCondition GameBase.FSM.FSM_Condition_Booler::get_condition()
+extern void FSM_Condition_Booler_get_condition_m8CC6AE8CC063B704EE45E37169875D1ECC7570BA (void);
+// 0x00000053 System.Void GameBase.FSM.FSM_Condition_Booler::set_condition(GameBase.FSM.FSM_Condition_Booler/BoolerCondition)
+extern void FSM_Condition_Booler_set_condition_mA8F3D298CFC37BF9A7D43ED736B99B3650A71B1C (void);
+// 0x00000054 System.Void GameBase.FSM.FSM_Condition_Booler::.ctor()
+extern void FSM_Condition_Booler__ctor_mBBA1DCFFDEAAD00EC3C3EFADDAF1343E8EB8381D (void);
+// 0x00000055 System.Void GameBase.FSM.FSM_Condition_Booler::.ctor(System.String,GameBase.FSM.FSM_Condition_Booler/BoolerCondition)
+extern void FSM_Condition_Booler__ctor_mA92856A84F876088AD70B74E14761A56C573E5E1 (void);
+// 0x00000056 System.Boolean GameBase.FSM.FSM_Condition_Booler::Tick(GameBase.FSM.FSM_DataBase)
+extern void FSM_Condition_Booler_Tick_m962F2957E5E214E1BFFB2B4C5BF2EC085C10D35F (void);
+// 0x00000057 System.Void GameBase.FSM.FSM_Condition_Trigger::.ctor()
+extern void FSM_Condition_Trigger__ctor_m0311396D1BE5C853D38F397244E0E21DA1CF2415 (void);
+// 0x00000058 System.Void GameBase.FSM.FSM_Condition_Trigger::.ctor(System.String)
+extern void FSM_Condition_Trigger__ctor_mB53C8F5D6B063A5A7FB61C964E3C66A8364218AE (void);
+// 0x00000059 System.Boolean GameBase.FSM.FSM_Condition_Trigger::Tick(GameBase.FSM.FSM_DataBase)
+extern void FSM_Condition_Trigger_Tick_mF70239A6520226B9613F3ECEE0A1549FD4318332 (void);
+// 0x0000005A System.Int32 GameBase.FSM.FSM_DataBase::GetIndexOfDataId(System.String)
+extern void FSM_DataBase_GetIndexOfDataId_m1ED5A3AB02D43EE13EBE9EEE48B902B8726F415C (void);
+// 0x0000005B System.Int32 GameBase.FSM.FSM_DataBase::TryGetDataId(System.String)
+extern void FSM_DataBase_TryGetDataId_mE0CA23EA16A5E3E0F8F34320A9BD1C290764FB9B (void);
+// 0x0000005C T GameBase.FSM.FSM_DataBase::GetData(System.String)
+// 0x0000005D T GameBase.FSM.FSM_DataBase::GetData(System.Int32)
+// 0x0000005E System.Void GameBase.FSM.FSM_DataBase::SetData(System.String,T)
+// 0x0000005F System.Void GameBase.FSM.FSM_DataBase::SetData(System.Int32,T)
+// 0x00000060 System.Boolean GameBase.FSM.FSM_DataBase::Contains(System.String)
+extern void FSM_DataBase_Contains_mF2D80870C5E15D49554D2E755C275E44D35FFE36 (void);
+// 0x00000061 System.Void GameBase.FSM.FSM_DataBase::.ctor()
+extern void FSM_DataBase__ctor_m45705B091E7A34FBE0975351E59F03261399859A (void);
+// 0x00000062 GameBase.FSM.FSM_Status`1<TStateId> GameBase.FSM.FSM_StateMachine`1::get_activeState()
+// 0x00000063 System.Void GameBase.FSM.FSM_StateMachine`1::set_activeState(GameBase.FSM.FSM_Status`1<TStateId>)
+// 0x00000064 GameBase.FSM.FSM_Status`1<TStateId> GameBase.FSM.FSM_StateMachine`1::get_lastState()
+// 0x00000065 System.Void GameBase.FSM.FSM_StateMachine`1::set_lastState(GameBase.FSM.FSM_Status`1<TStateId>)
+// 0x00000066 GameBase.FSM.FSM_Status`1<TStateId> GameBase.FSM.FSM_StateMachine`1::get_defaultState()
+// 0x00000067 System.Void GameBase.FSM.FSM_StateMachine`1::set_defaultState(GameBase.FSM.FSM_Status`1<TStateId>)
+// 0x00000068 TStateId GameBase.FSM.FSM_StateMachine`1::get_activeStateName()
+// 0x00000069 System.Boolean GameBase.FSM.FSM_StateMachine`1::get_isRootMachine()
+// 0x0000006A System.Void GameBase.FSM.FSM_StateMachine`1::OnInit()
+// 0x0000006B System.Void GameBase.FSM.FSM_StateMachine`1::ChangeState(TStateId)
+// 0x0000006C System.Void GameBase.FSM.FSM_StateMachine`1::AddStatus(TStateId,GameBase.FSM.FSM_Status`1<TStateId>)
+// 0x0000006D System.Void GameBase.FSM.FSM_StateMachine`1::AddTransition(GameBase.FSM.FSM_Transition`1<TStateId>)
+// 0x0000006E System.Void GameBase.FSM.FSM_StateMachine`1::AddTransitionFromAny(GameBase.FSM.FSM_Transition`1<TStateId>)
+// 0x0000006F System.Boolean GameBase.FSM.FSM_StateMachine`1::TryTransition(GameBase.FSM.FSM_Transition`1<TStateId>)
+// 0x00000070 GameBase.FSM.FSM_Status`1<TStateId> GameBase.FSM.FSM_StateMachine`1::GetState(TStateId)
+// 0x00000071 System.Void GameBase.FSM.FSM_StateMachine`1::OnAction()
+// 0x00000072 System.Void GameBase.FSM.FSM_StateMachine`1::OnEnter()
+// 0x00000073 System.Void GameBase.FSM.FSM_StateMachine`1::OnExit()
+// 0x00000074 System.Void GameBase.FSM.FSM_StateMachine`1::.ctor()
+// 0x00000075 System.Void GameBase.FSM.FSM_StateMachine`1::.cctor()
+// 0x00000076 System.Void GameBase.FSM.FSM_StateMachine::.ctor()
+extern void FSM_StateMachine__ctor_m91755EA0F2A7A5D3C91A993E4C3C53C6B014F6EF (void);
+// 0x00000077 System.Void GameBase.FSM.FSM_Status`1::.ctor(System.Action`1<GameBase.FSM.FSM_Status`1<TStateId>>,System.Action`1<GameBase.FSM.FSM_Status`1<TStateId>>,System.Action`1<GameBase.FSM.FSM_Status`1<TStateId>>)
+// 0x00000078 System.Void GameBase.FSM.FSM_Status`1::AddTransition(GameBase.FSM.FSM_Transition`1<TStateId>)
+// 0x00000079 System.Void GameBase.FSM.FSM_Status`1::OnInit()
+// 0x0000007A System.Void GameBase.FSM.FSM_Status`1::OnAction()
+// 0x0000007B System.Void GameBase.FSM.FSM_Status`1::OnEnter()
+// 0x0000007C System.Void GameBase.FSM.FSM_Status`1::OnExit()
+// 0x0000007D System.Void GameBase.FSM.FSM_Status::.ctor(System.Action`1<GameBase.FSM.FSM_Status`1<System.String>>,System.Action`1<GameBase.FSM.FSM_Status`1<System.String>>,System.Action`1<GameBase.FSM.FSM_Status`1<System.String>>)
+extern void FSM_Status__ctor_mD2DCCDE785FA0CEBD7D0B07F8E50E71681D726A9 (void);
+// 0x0000007E TStateId GameBase.FSM.FSM_Transition`1::get_formStatusID()
+// 0x0000007F TStateId GameBase.FSM.FSM_Transition`1::get_toStatusID()
+// 0x00000080 System.Int32 GameBase.FSM.FSM_Transition`1::get_weightOrder()
+// 0x00000081 System.Void GameBase.FSM.FSM_Transition`1::.ctor(TStateId,TStateId,System.Int32)
+// 0x00000082 System.Void GameBase.FSM.FSM_Transition`1::AddCondition(GameBase.FSM.IFSM_Condition)
+// 0x00000083 System.Boolean GameBase.FSM.FSM_Transition`1::Tick(GameBase.FSM.FSM_DataBase)
+// 0x00000084 System.Boolean GameBase.FSM.FSM_Transition`1::Equals(TStateId,TStateId)
+// 0x00000085 System.Void GameBase.FSM.FSM_Transition::.ctor(System.String,System.String,System.Int32)
+extern void FSM_Transition__ctor_m6FD8F3180477E44843BF15BB45381E41D1C3F753 (void);
+// 0x00000086 System.Void GameBase.FSM.IFSM_Machine`1::ChangeState(TStateId)
+// 0x00000087 GameBase.FSM.FSM_Status`1<TStateId> GameBase.FSM.IFSM_Machine`1::get_activeState()
+// 0x00000088 System.Void GameBase.FSM.IFSM_Machine`1::set_activeState(GameBase.FSM.FSM_Status`1<TStateId>)
+// 0x00000089 GameBase.FSM.FSM_Status`1<TStateId> GameBase.FSM.IFSM_Machine`1::get_lastState()
+// 0x0000008A System.Void GameBase.FSM.IFSM_Machine`1::set_lastState(GameBase.FSM.FSM_Status`1<TStateId>)
+// 0x0000008B TStateId GameBase.FSM.IFSM_Machine`1::get_activeStateName()
+// 0x0000008C TStateID GameBase.FSM.IFSM_Status`1::get_name()
+// 0x0000008D System.Void GameBase.FSM.IFSM_Status`1::set_name(TStateID)
+// 0x0000008E System.Void GameBase.FSM.IFSM_Status`1::OnAction()
+// 0x0000008F System.Void GameBase.FSM.IFSM_Status`1::OnEnter()
+// 0x00000090 System.Void GameBase.FSM.IFSM_Status`1::OnExit()
+// 0x00000091 System.Void GameBase.FSM.IFSM_Status`1::Tick()
+// 0x00000092 System.Object LGameFramework.GameBase.AssetFileDownloader::get_Current()
 extern void AssetFileDownloader_get_Current_m079E8AE1F052BA5800AC3EA2BFEDB12BFB1E7850 (void);
-// 0x0000004A System.String LGameFramework.GameBase.AssetFileDownloader::get_downloadURL()
+// 0x00000093 System.String LGameFramework.GameBase.AssetFileDownloader::get_downloadURL()
 extern void AssetFileDownloader_get_downloadURL_m2A1596EC87315FB2DC660A12A6BF051DE5A7225C (void);
-// 0x0000004B System.String LGameFramework.GameBase.AssetFileDownloader::get_downloadPath()
+// 0x00000094 System.String LGameFramework.GameBase.AssetFileDownloader::get_downloadPath()
 extern void AssetFileDownloader_get_downloadPath_mB54D536302FFF26611BF4570EE762B240930624A (void);
-// 0x0000004C System.Single LGameFramework.GameBase.AssetFileDownloader::get_progress()
+// 0x00000095 System.Single LGameFramework.GameBase.AssetFileDownloader::get_progress()
 extern void AssetFileDownloader_get_progress_mF4B95F152B4AEFCA64591F0C1E896BA985E834F3 (void);
-// 0x0000004D System.Boolean LGameFramework.GameBase.AssetFileDownloader::get_isDone()
+// 0x00000096 System.Boolean LGameFramework.GameBase.AssetFileDownloader::get_isDone()
 extern void AssetFileDownloader_get_isDone_m48733C9D1C08BA415176C65655366A2FB369865A (void);
-// 0x0000004E System.Net.WebClient LGameFramework.GameBase.AssetFileDownloader::get_webClient()
+// 0x00000097 System.Net.WebClient LGameFramework.GameBase.AssetFileDownloader::get_webClient()
 extern void AssetFileDownloader_get_webClient_mD5E6369E6F7A9CD1410E927ABDA68550877F54A1 (void);
-// 0x0000004F System.Void LGameFramework.GameBase.AssetFileDownloader::Download()
+// 0x00000098 System.Void LGameFramework.GameBase.AssetFileDownloader::Download()
 extern void AssetFileDownloader_Download_mD43C1CC330DD1803920B420AC8B075745E12BDF1 (void);
-// 0x00000050 System.Void LGameFramework.GameBase.AssetFileDownloader::DownloadFileAsync(System.String,System.String)
+// 0x00000099 System.Void LGameFramework.GameBase.AssetFileDownloader::DownloadFileAsync(System.String,System.String)
 extern void AssetFileDownloader_DownloadFileAsync_m0F9D9091D9B5D1E443D2555A5935D323C93ABC04 (void);
-// 0x00000051 System.Void LGameFramework.GameBase.AssetFileDownloader::SetData(System.String,System.String)
+// 0x0000009A System.Void LGameFramework.GameBase.AssetFileDownloader::SetData(System.String,System.String)
 extern void AssetFileDownloader_SetData_mF7ED7267E32693A4F42E273FF78CAA14AA770554 (void);
-// 0x00000052 System.Boolean LGameFramework.GameBase.AssetFileDownloader::MoveNext()
+// 0x0000009B System.Boolean LGameFramework.GameBase.AssetFileDownloader::MoveNext()
 extern void AssetFileDownloader_MoveNext_mFFC8768A3F8129BFB925B3CB4C64DAF2C0A027C3 (void);
-// 0x00000053 System.Void LGameFramework.GameBase.AssetFileDownloader::Reset()
+// 0x0000009C System.Void LGameFramework.GameBase.AssetFileDownloader::Reset()
 extern void AssetFileDownloader_Reset_m4C37408BB39995FF24FDDEF151269FF1A6580594 (void);
-// 0x00000054 System.Void LGameFramework.GameBase.AssetFileDownloader::Dispose()
+// 0x0000009D System.Void LGameFramework.GameBase.AssetFileDownloader::Dispose()
 extern void AssetFileDownloader_Dispose_m9A551E01C4CD109A2A464C5CC362CB5440478FE4 (void);
-// 0x00000055 System.Void LGameFramework.GameBase.AssetFileDownloader::DownloadProgressChanged(System.Object,System.Net.DownloadProgressChangedEventArgs)
+// 0x0000009E System.Void LGameFramework.GameBase.AssetFileDownloader::DownloadProgressChanged(System.Object,System.Net.DownloadProgressChangedEventArgs)
 extern void AssetFileDownloader_DownloadProgressChanged_m98E27C47150979B46D48AF66CAC227546C02623D (void);
-// 0x00000056 System.Void LGameFramework.GameBase.AssetFileDownloader::DownloadFileCompleted(System.Object,System.ComponentModel.AsyncCompletedEventArgs)
+// 0x0000009F System.Void LGameFramework.GameBase.AssetFileDownloader::DownloadFileCompleted(System.Object,System.ComponentModel.AsyncCompletedEventArgs)
 extern void AssetFileDownloader_DownloadFileCompleted_mA264E8C5E62145DA32CCFB9821DB60BCF318D47F (void);
-// 0x00000057 System.Void LGameFramework.GameBase.AssetFileDownloader::.ctor()
+// 0x000000A0 System.Void LGameFramework.GameBase.AssetFileDownloader::.ctor()
 extern void AssetFileDownloader__ctor_m2EF677CC96B4738A2BF6C2626B13E3284FD2F6B6 (void);
-// 0x00000058 System.Boolean LGameFramework.GameBase.AssetFileDownloadQueue::get_pause()
+// 0x000000A1 System.Boolean LGameFramework.GameBase.AssetFileDownloadQueue::get_pause()
 extern void AssetFileDownloadQueue_get_pause_mA464A2A3904EEB85BCAF67C2842CF4523621EAF3 (void);
-// 0x00000059 System.Int32 LGameFramework.GameBase.AssetFileDownloadQueue::get_maximumSimultaneouslyDownloading()
+// 0x000000A2 System.Int32 LGameFramework.GameBase.AssetFileDownloadQueue::get_maximumSimultaneouslyDownloading()
 extern void AssetFileDownloadQueue_get_maximumSimultaneouslyDownloading_m82F3467C6D78860C81DD6357E88AFB4889385E1A (void);
-// 0x0000005A System.Collections.Generic.Queue`1<LGameFramework.GameBase.AssetFileDownloader> LGameFramework.GameBase.AssetFileDownloadQueue::get_downloaderQueuePrepare()
+// 0x000000A3 System.Collections.Generic.Queue`1<LGameFramework.GameBase.AssetFileDownloader> LGameFramework.GameBase.AssetFileDownloadQueue::get_downloaderQueuePrepare()
 extern void AssetFileDownloadQueue_get_downloaderQueuePrepare_mEFC7DA7058625DF937E6DF5F56A058DDE29D7FA6 (void);
-// 0x0000005B System.Collections.Generic.List`1<LGameFramework.GameBase.AssetFileDownloader> LGameFramework.GameBase.AssetFileDownloadQueue::get_downloadingCurrent()
+// 0x000000A4 System.Collections.Generic.List`1<LGameFramework.GameBase.AssetFileDownloader> LGameFramework.GameBase.AssetFileDownloadQueue::get_downloadingCurrent()
 extern void AssetFileDownloadQueue_get_downloadingCurrent_mAD8C4CC0E2A501761D0E2CB061809E9631DF9F92 (void);
-// 0x0000005C System.Void LGameFramework.GameBase.AssetFileDownloadQueue::Pause(System.Boolean)
+// 0x000000A5 System.Void LGameFramework.GameBase.AssetFileDownloadQueue::Pause(System.Boolean)
 extern void AssetFileDownloadQueue_Pause_m5D2CC4E695F96E10ACD66228ADB50C841E6E90AE (void);
-// 0x0000005D System.Void LGameFramework.GameBase.AssetFileDownloadQueue::Enqueue(LGameFramework.GameBase.AssetFileDownloader)
+// 0x000000A6 System.Void LGameFramework.GameBase.AssetFileDownloadQueue::Enqueue(LGameFramework.GameBase.AssetFileDownloader)
 extern void AssetFileDownloadQueue_Enqueue_mA0F0B8AFD0F732D332C8B0F9E3ABADAF696E330D (void);
-// 0x0000005E System.Void LGameFramework.GameBase.AssetFileDownloadQueue::Enqueue(System.String,System.String)
+// 0x000000A7 System.Void LGameFramework.GameBase.AssetFileDownloadQueue::Enqueue(System.String,System.String)
 extern void AssetFileDownloadQueue_Enqueue_mD6DCDA1FD202BEB2BA0DC796F8E6D0647B7756E1 (void);
-// 0x0000005F System.Void LGameFramework.GameBase.AssetFileDownloadQueue::DownloadStart()
+// 0x000000A8 System.Void LGameFramework.GameBase.AssetFileDownloadQueue::DownloadStart()
 extern void AssetFileDownloadQueue_DownloadStart_m120D8E1B17754FCFDB2BA42F39C907B5731A0107 (void);
-// 0x00000060 System.Void LGameFramework.GameBase.AssetFileDownloadQueue::Update()
+// 0x000000A9 System.Void LGameFramework.GameBase.AssetFileDownloadQueue::Update()
 extern void AssetFileDownloadQueue_Update_m71F7EE7B2727EE5B4FED33E5F642A141449F4352 (void);
-// 0x00000061 System.Void LGameFramework.GameBase.AssetFileDownloadQueue::.ctor()
+// 0x000000AA System.Void LGameFramework.GameBase.AssetFileDownloadQueue::.ctor()
 extern void AssetFileDownloadQueue__ctor_mBBF3B302DAE29BE07C43E4F5BCA4577ADE02E45D (void);
-static Il2CppMethodPointer s_methodPointers[97] = 
+static Il2CppMethodPointer s_methodPointers[170] = 
 {
 	NULL,
 	NULL,
@@ -190,20 +275,6 @@ static Il2CppMethodPointer s_methodPointers[97] =
 	NULL,
 	NULL,
 	NULL,
-	TimerManager_SetTimer_mD2BB34039F699316279F502AEFA8072E550B0185,
-	TimerManager_AddTimer_mA46ECEF0E45E637CB766E1313A02F7869A45E173,
-	TimerManager_AddFrame_mD72BD26F80F379F57134FDBF789D3C244C90683B,
-	TimerManager_DelTimer_m5492839E915D43D596D3704EE854BB439B6F58D9,
-	TimerManager_AddCoroutine_mF0DA73C82708BCE830813399249858EB747ED465,
-	TimerManager_DelCoroutine_mECE54FA48041FDAFD56985D62A7CF2B6FF50AC6F,
-	TimerManager_Update_m4270AD522863E3DA1D8063E8C1224F2B791A558B,
-	TimerManager__ctor_mBCBFC23D99E83C0C2565FFEC288CE4AE06E2D4DE,
-	Timer_get_id_m5971893920B329C110F6E483C40F865F0EBBCC7A,
-	Timer_SetData_m2F91C40410D397461360EC9366EF85142995EFA7,
-	Timer_Dispose_m82F91D1C904A96E6BE9BEE4F84589A752F436317,
-	Timer_Update_mEDEA49FB20A660B01CA3B0B934603A4134219BAC,
-	Timer__ctor_m4DB2D8165CACA6D59FC5314A8909D403F85BB221,
-	Timer__cctor_mA6EC0AA484D24FD8AEEECCC54FFCD9E9832FEBB1,
 	AssetFile__ctor_m8BDCF6B261B0B6C46648A4AA82C9AE2FA882B2B0,
 	NULL,
 	NULL,
@@ -230,7 +301,94 @@ static Il2CppMethodPointer s_methodPointers[97] =
 	MobileUtility__ctor_m1536591162EB02C523289AECBD985FBBA17E1A90,
 	Utility_GetFileSize_mC7BA86E62B49CE6A70BA73052A88340231841E99,
 	Utility_GetDirectorySize_mEBADB8B9686DE1FD6BDB250B45D54DFDC86C5B41,
+	Utility_GetMD5_m8936EBFED59AEF24482A3857240A5DD95C8D64B8,
 	Utility__ctor_m5C682D6BB0B4C94F29666E161C2699474DD36B3D,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	FSM_Condition_Float_get_condition_mEFDCCAB17D479DB389A476F3047BAF6899C9DCB1,
+	FSM_Condition_Float_set_condition_m50DC0F672B71EB5517A03D05E2700F86F0A8A6A1,
+	FSM_Condition_Float__ctor_m032636E5F431ECACAF45A6D9E56DDEC922DDD5F6,
+	FSM_Condition_Float__ctor_m64D0937FD4DB20A4633B1F40690B8848627E283D,
+	FSM_Condition_Float_Tick_m7A105AA53B631343BC6452B347F31D3775573FE4,
+	FSM_Condition_Int_get_condition_m8F98F79707064367D75619DD72F8973C36F8CCEB,
+	FSM_Condition_Int_set_condition_m6D9AE040AEF9504FBF5F021AF8E15D308FE06D4C,
+	FSM_Condition_Int__ctor_mBE0DAE85D7DC3DAEFD48C94B8214F7EB43A8CC19,
+	FSM_Condition_Int__ctor_m7A172FE51BA4A7E75C7F49DC187989A129F63605,
+	FSM_Condition_Int_Tick_mEA4E9FBC5E21F4325B794FF2D1D6F6CD5B76F323,
+	FSM_Condition_Booler_get_condition_m8CC6AE8CC063B704EE45E37169875D1ECC7570BA,
+	FSM_Condition_Booler_set_condition_mA8F3D298CFC37BF9A7D43ED736B99B3650A71B1C,
+	FSM_Condition_Booler__ctor_mBBA1DCFFDEAAD00EC3C3EFADDAF1343E8EB8381D,
+	FSM_Condition_Booler__ctor_mA92856A84F876088AD70B74E14761A56C573E5E1,
+	FSM_Condition_Booler_Tick_m962F2957E5E214E1BFFB2B4C5BF2EC085C10D35F,
+	FSM_Condition_Trigger__ctor_m0311396D1BE5C853D38F397244E0E21DA1CF2415,
+	FSM_Condition_Trigger__ctor_mB53C8F5D6B063A5A7FB61C964E3C66A8364218AE,
+	FSM_Condition_Trigger_Tick_mF70239A6520226B9613F3ECEE0A1549FD4318332,
+	FSM_DataBase_GetIndexOfDataId_m1ED5A3AB02D43EE13EBE9EEE48B902B8726F415C,
+	FSM_DataBase_TryGetDataId_mE0CA23EA16A5E3E0F8F34320A9BD1C290764FB9B,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	FSM_DataBase_Contains_mF2D80870C5E15D49554D2E755C275E44D35FFE36,
+	FSM_DataBase__ctor_m45705B091E7A34FBE0975351E59F03261399859A,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	FSM_StateMachine__ctor_m91755EA0F2A7A5D3C91A993E4C3C53C6B014F6EF,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	FSM_Status__ctor_mD2DCCDE785FA0CEBD7D0B07F8E50E71681D726A9,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	FSM_Transition__ctor_m6FD8F3180477E44843BF15BB45381E41D1C3F753,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
 	AssetFileDownloader_get_Current_m079E8AE1F052BA5800AC3EA2BFEDB12BFB1E7850,
 	AssetFileDownloader_get_downloadURL_m2A1596EC87315FB2DC660A12A6BF051DE5A7225C,
 	AssetFileDownloader_get_downloadPath_mB54D536302FFF26611BF4570EE762B240930624A,
@@ -257,7 +415,7 @@ static Il2CppMethodPointer s_methodPointers[97] =
 	AssetFileDownloadQueue_Update_m71F7EE7B2727EE5B4FED33E5F642A141449F4352,
 	AssetFileDownloadQueue__ctor_mBBF3B302DAE29BE07C43E4F5BCA4577ADE02E45D,
 };
-static const int32_t s_InvokerIndices[97] = 
+static const int32_t s_InvokerIndices[170] = 
 {
 	0,
 	0,
@@ -290,21 +448,7 @@ static const int32_t s_InvokerIndices[97] =
 	0,
 	0,
 	0,
-	342,
-	593,
-	593,
-	4249,
-	7773,
-	7951,
-	5297,
-	5297,
-	5161,
-	342,
-	5297,
-	5099,
-	5297,
-	8143,
-	5297,
+	5307,
 	0,
 	0,
 	0,
@@ -314,50 +458,137 @@ static const int32_t s_InvokerIndices[97] =
 	0,
 	0,
 	0,
-	7773,
+	7769,
 	0,
 	0,
 	0,
-	7222,
-	7428,
+	7219,
+	7425,
 	0,
 	0,
 	0,
 	0,
 	0,
 	0,
-	8143,
-	5297,
-	7689,
-	7689,
-	5297,
-	5188,
-	5188,
-	5188,
-	5229,
-	5099,
-	5188,
-	5297,
-	2467,
-	2467,
-	5099,
-	5297,
-	5297,
-	2467,
-	2467,
-	5297,
-	5099,
-	5161,
-	5188,
-	5188,
-	7940,
-	7951,
-	7428,
-	5297,
-	5297,
-	5297,
+	8139,
+	5307,
+	7685,
+	7685,
+	7769,
+	5307,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	5170,
+	4256,
+	5307,
+	1376,
+	3086,
+	5170,
+	4256,
+	5307,
+	1347,
+	3086,
+	5170,
+	4256,
+	5307,
+	2462,
+	3086,
+	5307,
+	4279,
+	3086,
+	3589,
+	3589,
+	0,
+	0,
+	0,
+	0,
+	3086,
+	5307,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	5307,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	1368,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	1366,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	5197,
+	5197,
+	5197,
+	5238,
+	5108,
+	5197,
+	5307,
+	2468,
+	2468,
+	5108,
+	5307,
+	5307,
+	2468,
+	2468,
+	5307,
+	5108,
+	5170,
+	5197,
+	5197,
+	7936,
+	7947,
+	7425,
+	5307,
+	5307,
+	5307,
 };
-static const Il2CppTokenRangePair s_rgctxIndices[15] = 
+static const Il2CppTokenRangePair s_rgctxIndices[23] = 
 {
 	{ 0x02000002, { 0, 15 } },
 	{ 0x02000004, { 15, 13 } },
@@ -365,15 +596,23 @@ static const Il2CppTokenRangePair s_rgctxIndices[15] =
 	{ 0x02000006, { 34, 10 } },
 	{ 0x02000007, { 44, 10 } },
 	{ 0x02000008, { 54, 10 } },
-	{ 0x0200000E, { 64, 3 } },
-	{ 0x0200000F, { 67, 2 } },
-	{ 0x02000010, { 69, 4 } },
-	{ 0x02000013, { 84, 13 } },
-	{ 0x06000036, { 73, 2 } },
-	{ 0x06000037, { 75, 2 } },
-	{ 0x06000039, { 77, 3 } },
-	{ 0x0600003A, { 80, 3 } },
-	{ 0x0600003B, { 83, 1 } },
+	{ 0x0200000B, { 64, 3 } },
+	{ 0x0200000C, { 67, 2 } },
+	{ 0x0200000D, { 69, 4 } },
+	{ 0x02000010, { 84, 13 } },
+	{ 0x02000014, { 97, 5 } },
+	{ 0x0200001D, { 106, 35 } },
+	{ 0x0200001F, { 141, 5 } },
+	{ 0x02000021, { 146, 4 } },
+	{ 0x06000028, { 73, 2 } },
+	{ 0x06000029, { 75, 2 } },
+	{ 0x0600002B, { 77, 3 } },
+	{ 0x0600002C, { 80, 3 } },
+	{ 0x0600002D, { 83, 1 } },
+	{ 0x0600005C, { 102, 1 } },
+	{ 0x0600005D, { 103, 1 } },
+	{ 0x0600005E, { 104, 1 } },
+	{ 0x0600005F, { 105, 1 } },
 };
 extern const uint32_t g_rgctx_Dictionary_2__ctor_m214C8552CB536C451DE56AA3FE7620CC7EC0A540;
 extern const uint32_t g_rgctx_Dictionary_2_t2EB397F569DD52A407BC6A68D4DCEB94840935C1;
@@ -472,7 +711,60 @@ extern const uint32_t g_rgctx_Dictionary_2_get_Keys_m94357E5C3CF39986A1ECE0591A1
 extern const uint32_t g_rgctx_List_1__ctor_m861DCD09A4B0E71A82BC16EC4416F5FA7F89704E;
 extern const uint32_t g_rgctx_Dictionary_2_get_Values_m25B8EEBD431C8E704FB369567750A94EC19F2D81;
 extern const uint32_t g_rgctx_List_1__ctor_m1DAB7A2BD293A3C47F6E8819B1D20D2591DEDE40;
-static const Il2CppRGCTXDefinition s_rgctxValues[97] = 
+extern const uint32_t g_rgctx_FSM_Condition_1_set_dataName_mF6705D7CEBBE98D07D2893B9B22F7CEE19381E68;
+extern const uint32_t g_rgctx_FSM_Condition_1_set_target_m181172FFCD8A86AC50AFBBC5A18CE9C8133F0C83;
+extern const uint32_t g_rgctx_FSM_Condition_1_get_dataName_m3F6020FFEECC91FCD5FA292129CAF6DF7646F407;
+extern const uint32_t g_rgctx_FSM_DataBase_GetData_TisT_t85781E472AF634A6819D68391D53B4B92730B3DC_m2F3B4F4AB42A6E68C4B95A68E6414E6BB2F70D64;
+extern const uint32_t g_rgctx_FSM_Condition_1_set_curData_m803EDEDB5A62B027B06D5E4D75780F5DC61CAA98;
+extern const uint32_t g_rgctx_T_t573FF4231787FC4856F4FD0190F2B94B4D61D539;
+extern const uint32_t g_rgctx_T_t4396B7023696DA5C244480B636C950FFF15A3043;
+extern const uint32_t g_rgctx_T_tDD94600B50C8F1964461BB6ACA680485FC9EE79B;
+extern const uint32_t g_rgctx_T_t5ED7DB7BEC31B6A8CD1A6B589BFBAAD9FC0CF5F0;
+extern const uint32_t g_rgctx_FSM_StateMachine_1_get_activeState_m31B407142D75B8299FE9BFB74B3CBB422D331201;
+extern const uint32_t g_rgctx_FSM_StateMachine_1_get_isRootMachine_mA25FE2BDC0FA42837E673CF65DDE7C569DEA7D36;
+extern const uint32_t g_rgctx_FSM_Status_1_t7AA756424F5AE637076378AE0CCC0D5D249577F8;
+extern const uint32_t g_rgctx_FSM_Status_1_OnEnter_m221575F7A0825300D0BC52942744F368ACF59256;
+extern const uint32_t g_rgctx_FSM_Status_1_OnExit_m36EF5FCEE7F0EAB15E8C3FEF313C0068AEA4F4BF;
+extern const uint32_t g_rgctx_FSM_StateMachine_1_set_lastState_m5B18E1DA0CE76D68D22A3AA8509B422AE1303135;
+extern const uint32_t g_rgctx_Dictionary_2_tBCFA45DB0D33B7AEE8A33B4CC5BF7F1BDCF87C9E;
+extern const uint32_t g_rgctx_Dictionary_2_TryGetValue_m1AAD48EDE6BD125F82BE7C5761E4AB13EC508A7B;
+extern const uint32_t g_rgctx_FSM_StateMachine_1_tABB1FD514B85E57F768AFD418B7CD9BA0F785C89;
+extern const uint32_t g_rgctx_FSM_Status_1_t7AA756424F5AE637076378AE0CCC0D5D249577F8;
+extern const uint32_t g_rgctx_FSM_StateMachine_1_set_activeState_m027DBEAC3C4A4AEB92AF8F63FD888387B865990A;
+extern const uint32_t g_rgctx_FSM_Status_1_OnInit_m02225D1ADA0ECA959A0DD3607722B64F0AFFA320;
+extern const uint32_t g_rgctx_Dictionary_2_get_Count_m95290B461FEF238EE533360430F299EB122E740B;
+extern const uint32_t g_rgctx_FSM_StateMachine_1_set_defaultState_mFD48955D89B72C6A74E097BA787AA9D11EF21CC0;
+extern const uint32_t g_rgctx_Dictionary_2_Add_m58585A7017C6515F99AAA1FAB456654E4E15ABB8;
+extern const uint32_t g_rgctx_FSM_Transition_1_t26FF04A5F9FB057363BA7A92EC41560723E152AB;
+extern const uint32_t g_rgctx_FSM_Transition_1_get_formStatusID_m1014B8131CD2FB16D30C2D815EC5C2FEDA26E8EF;
+extern const uint32_t g_rgctx_FSM_Status_1_AddTransition_mC959781BC66A331059D29134158195D46A4D8696;
+extern const uint32_t g_rgctx_List_1_t08ED48D7017D1471A5C2DD2BCCFE7A3834D93454;
+extern const uint32_t g_rgctx_List_1_Add_mA891420CD9CFE9A6337D340898EF3EC461037289;
+extern const uint32_t g_rgctx_FSM_Transition_1_Tick_m838867D1CF22F1072FAD85133329DECA0843A432;
+extern const uint32_t g_rgctx_FSM_Transition_1_get_toStatusID_mD34909CFF0000623EAA170483BC6B1AE84FC392B;
+extern const uint32_t g_rgctx_FSM_StateMachine_1_tABB1FD514B85E57F768AFD418B7CD9BA0F785C89;
+extern const uint32_t g_rgctx_FSM_StateMachine_1_ChangeState_m7F0DBCE70E31F9545E24A764A8DE055DE8A0CA3E;
+extern const uint32_t g_rgctx_TStateId_t0155EB745C477DAA1FE82BB90CDFEE60F88514CC;
+extern const Il2CppRGCTXConstrainedData g_rgctx_TStateId_t0155EB745C477DAA1FE82BB90CDFEE60F88514CC_Object_ToString_mF8AC1EB9D85AB52EC8FD8B8BDD131E855E69673F;
+extern const uint32_t g_rgctx_FSM_Status_1_OnAction_mC71F4BC71CB4B3E938260EB9CCF76A8AEBB5E439;
+extern const uint32_t g_rgctx_List_1_get_Item_m77590445EDEC7B829715D7A4210731E9066BBB11;
+extern const uint32_t g_rgctx_FSM_Transition_1_Equals_mB4DB5F222B7F81D3416A9AA711F744C2F6AAA18D;
+extern const uint32_t g_rgctx_FSM_StateMachine_1_TryTransition_mF89161D593551248C5F49BB326A6B888D41CDC17;
+extern const uint32_t g_rgctx_List_1_get_Count_mE1C1658957B531B514920AE5982AD9D458F72EE4;
+extern const uint32_t g_rgctx_FSM_StateMachine_1_get_defaultState_m100451C527850C6C1BFB70375D9A955F6C1ED564;
+extern const uint32_t g_rgctx_Dictionary_2__ctor_m38603B17974BE601AF97642B79DFED5CDF125B97;
+extern const uint32_t g_rgctx_List_1__ctor_m8FFD4E5BA00805E4A23609EB004576068F30D221;
+extern const uint32_t g_rgctx_FSM_Status_1__ctor_m8F0272DF2E8DA7A9A0811AB8A531B9F364F2E3F7;
+extern const uint32_t g_rgctx_List_1_t55037ABEE5C769526BDE056617863B69B54F8BD2;
+extern const uint32_t g_rgctx_List_1__ctor_mCFCC504926EA2158993A7E06D4FBC384093A6850;
+extern const uint32_t g_rgctx_List_1_Add_mEC84FA2A3774DFE3CFCA0F2A9934FD500DDFFB41;
+extern const uint32_t g_rgctx_Action_1_t388726D99A140D165AB7A761A5AA781013C4E522;
+extern const uint32_t g_rgctx_Action_1_Invoke_m05A22DD598850404B465A9F6A7DD22B137AF4298;
+extern const uint32_t g_rgctx_EqualityComparer_1_get_Default_m1215203D575B03218593651D9DD4787F3D8CB208;
+extern const uint32_t g_rgctx_EqualityComparer_1_t5B6F29FF391A176DD6F65796DC5D394DB72A12D6;
+extern const uint32_t g_rgctx_EqualityComparer_1_t5B6F29FF391A176DD6F65796DC5D394DB72A12D6;
+extern const uint32_t g_rgctx_EqualityComparer_1_Equals_mFD7E2B54416F5683AC6510DF45409DA38EAE44BC;
+static const Il2CppRGCTXDefinition s_rgctxValues[150] = 
 {
 	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Dictionary_2__ctor_m214C8552CB536C451DE56AA3FE7620CC7EC0A540 },
 	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Dictionary_2_t2EB397F569DD52A407BC6A68D4DCEB94840935C1 },
@@ -571,21 +863,74 @@ static const Il2CppRGCTXDefinition s_rgctxValues[97] =
 	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1__ctor_m861DCD09A4B0E71A82BC16EC4416F5FA7F89704E },
 	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Dictionary_2_get_Values_m25B8EEBD431C8E704FB369567750A94EC19F2D81 },
 	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1__ctor_m1DAB7A2BD293A3C47F6E8819B1D20D2591DEDE40 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_Condition_1_set_dataName_mF6705D7CEBBE98D07D2893B9B22F7CEE19381E68 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_Condition_1_set_target_m181172FFCD8A86AC50AFBBC5A18CE9C8133F0C83 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_Condition_1_get_dataName_m3F6020FFEECC91FCD5FA292129CAF6DF7646F407 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_DataBase_GetData_TisT_t85781E472AF634A6819D68391D53B4B92730B3DC_m2F3B4F4AB42A6E68C4B95A68E6414E6BB2F70D64 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_Condition_1_set_curData_m803EDEDB5A62B027B06D5E4D75780F5DC61CAA98 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_T_t573FF4231787FC4856F4FD0190F2B94B4D61D539 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_T_t4396B7023696DA5C244480B636C950FFF15A3043 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_T_tDD94600B50C8F1964461BB6ACA680485FC9EE79B },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_T_t5ED7DB7BEC31B6A8CD1A6B589BFBAAD9FC0CF5F0 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_StateMachine_1_get_activeState_m31B407142D75B8299FE9BFB74B3CBB422D331201 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_StateMachine_1_get_isRootMachine_mA25FE2BDC0FA42837E673CF65DDE7C569DEA7D36 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_FSM_Status_1_t7AA756424F5AE637076378AE0CCC0D5D249577F8 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_Status_1_OnEnter_m221575F7A0825300D0BC52942744F368ACF59256 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_Status_1_OnExit_m36EF5FCEE7F0EAB15E8C3FEF313C0068AEA4F4BF },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_StateMachine_1_set_lastState_m5B18E1DA0CE76D68D22A3AA8509B422AE1303135 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Dictionary_2_tBCFA45DB0D33B7AEE8A33B4CC5BF7F1BDCF87C9E },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Dictionary_2_TryGetValue_m1AAD48EDE6BD125F82BE7C5761E4AB13EC508A7B },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_FSM_StateMachine_1_tABB1FD514B85E57F768AFD418B7CD9BA0F785C89 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_FSM_Status_1_t7AA756424F5AE637076378AE0CCC0D5D249577F8 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_StateMachine_1_set_activeState_m027DBEAC3C4A4AEB92AF8F63FD888387B865990A },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_Status_1_OnInit_m02225D1ADA0ECA959A0DD3607722B64F0AFFA320 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Dictionary_2_get_Count_m95290B461FEF238EE533360430F299EB122E740B },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_StateMachine_1_set_defaultState_mFD48955D89B72C6A74E097BA787AA9D11EF21CC0 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Dictionary_2_Add_m58585A7017C6515F99AAA1FAB456654E4E15ABB8 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_FSM_Transition_1_t26FF04A5F9FB057363BA7A92EC41560723E152AB },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_Transition_1_get_formStatusID_m1014B8131CD2FB16D30C2D815EC5C2FEDA26E8EF },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_Status_1_AddTransition_mC959781BC66A331059D29134158195D46A4D8696 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_List_1_t08ED48D7017D1471A5C2DD2BCCFE7A3834D93454 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_Add_mA891420CD9CFE9A6337D340898EF3EC461037289 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_Transition_1_Tick_m838867D1CF22F1072FAD85133329DECA0843A432 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_Transition_1_get_toStatusID_mD34909CFF0000623EAA170483BC6B1AE84FC392B },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_FSM_StateMachine_1_tABB1FD514B85E57F768AFD418B7CD9BA0F785C89 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_StateMachine_1_ChangeState_m7F0DBCE70E31F9545E24A764A8DE055DE8A0CA3E },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_TStateId_t0155EB745C477DAA1FE82BB90CDFEE60F88514CC },
+	{ (Il2CppRGCTXDataType)5, (const void *)&g_rgctx_TStateId_t0155EB745C477DAA1FE82BB90CDFEE60F88514CC_Object_ToString_mF8AC1EB9D85AB52EC8FD8B8BDD131E855E69673F },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_Status_1_OnAction_mC71F4BC71CB4B3E938260EB9CCF76A8AEBB5E439 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_get_Item_m77590445EDEC7B829715D7A4210731E9066BBB11 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_Transition_1_Equals_mB4DB5F222B7F81D3416A9AA711F744C2F6AAA18D },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_StateMachine_1_TryTransition_mF89161D593551248C5F49BB326A6B888D41CDC17 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_get_Count_mE1C1658957B531B514920AE5982AD9D458F72EE4 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_StateMachine_1_get_defaultState_m100451C527850C6C1BFB70375D9A955F6C1ED564 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Dictionary_2__ctor_m38603B17974BE601AF97642B79DFED5CDF125B97 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1__ctor_m8FFD4E5BA00805E4A23609EB004576068F30D221 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_FSM_Status_1__ctor_m8F0272DF2E8DA7A9A0811AB8A531B9F364F2E3F7 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_List_1_t55037ABEE5C769526BDE056617863B69B54F8BD2 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1__ctor_mCFCC504926EA2158993A7E06D4FBC384093A6850 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_Add_mEC84FA2A3774DFE3CFCA0F2A9934FD500DDFFB41 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Action_1_t388726D99A140D165AB7A761A5AA781013C4E522 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Action_1_Invoke_m05A22DD598850404B465A9F6A7DD22B137AF4298 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_EqualityComparer_1_get_Default_m1215203D575B03218593651D9DD4787F3D8CB208 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_EqualityComparer_1_t5B6F29FF391A176DD6F65796DC5D394DB72A12D6 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_EqualityComparer_1_t5B6F29FF391A176DD6F65796DC5D394DB72A12D6 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_EqualityComparer_1_Equals_mFD7E2B54416F5683AC6510DF45409DA38EAE44BC },
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DGameBase_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DGameBase_CodeGenModule = 
 {
 	"Assembly-GameBase.dll",
-	97,
+	170,
 	s_methodPointers,
 	0,
 	NULL,
 	s_InvokerIndices,
 	0,
 	NULL,
-	15,
+	23,
 	s_rgctxIndices,
-	97,
+	150,
 	s_rgctxValues,
 	NULL,
 	NULL, // module initializer,
