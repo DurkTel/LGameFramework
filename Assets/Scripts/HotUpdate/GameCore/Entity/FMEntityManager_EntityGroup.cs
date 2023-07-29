@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Security.Principal;
 using UnityEngine;
 using UnityEngine.Rendering;
+using LGameFramework.GameBase.Pool;
 
 namespace GameCore.Entity
 {
@@ -16,17 +17,17 @@ namespace GameCore.Entity
             private readonly float m_DestroyTime = 60f;
 
             private readonly EntityType m_EntityGroupType;
-            public EntityType entityGroupType { get { return m_EntityGroupType; } } 
+            public EntityType EntityGroupType { get { return m_EntityGroupType; } } 
 
             private List<Entity> m_Entitys; 
-            public List<Entity> entitys { get { return m_Entitys; } }
+            public List<Entity> Entitys { get { return m_Entitys; } }
 
-            private List<Entity> m_WaitCreateList;
+            private readonly List<Entity> m_WaitCreateList;
 
-            private List<Entity> m_WaitReleaseList;
+            private readonly List<Entity> m_WaitReleaseList;
 
-            private List<Entity> m_ReleaseList;
-            public int count { get {  return m_Entitys.Count; } }
+            private readonly List<Entity> m_ReleaseList;
+            public int Count { get {  return m_Entitys.Count; } }
 
             public EntityGroup(EntityType groupType)
             {
@@ -44,13 +45,13 @@ namespace GameCore.Entity
                 foreach (Entity entity in m_Entitys)
                 {
                     entity.CullGroupUpdate(deltaTime);
-                    if (entity.visible && !entity.skinInstantiate && !entity.skinLoading)
+                    if (entity.Visible && !entity.SkinInstantiate && !entity.SkinLoading)
                     {
                         entity.SetStatus(EntityStatus.WillCreate);
                         m_WaitCreateList.Add(entity);
                         continue;
                     }
-                    if (entity.status == EntityStatus.Showed)
+                    if (entity.Status == EntityStatus.Showed)
                         entity.Update();
                 }
 
@@ -83,7 +84,7 @@ namespace GameCore.Entity
                 for (int i = m_ReleaseList.Count - 1; i >= 0; i--)
                 {
                     entity = m_WaitReleaseList[i];
-                    if (entity.releaseTimesStamp + m_DestroyTime < Time.unscaledTime)
+                    if (entity.ReleaseTimesStamp + m_DestroyTime < Time.unscaledTime)
                         continue;
 
                     entity.Dispose();

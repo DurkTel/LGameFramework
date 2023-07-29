@@ -12,17 +12,17 @@ namespace GameCore
         /// <summary>
         /// 模块优先级
         /// </summary>
-        internal abstract int priority { get; }
+        internal abstract int Priority { get; }
 
         /// <summary>
         /// 游戏物体
         /// </summary>
-        internal abstract GameObject gameObject { get; set; }
+        internal abstract GameObject GameObject { get; set; }
 
         /// <summary>
         /// 变换组件
         /// </summary>
-        internal abstract Transform transform { get; set; }
+        internal abstract Transform Transform { get; set; }
 
         /// <summary>
         /// 初始化

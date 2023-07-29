@@ -8,27 +8,27 @@ namespace GameBase.FSM
         /// <summary>
         /// 当前状态
         /// </summary>
-        private TStateId m_formStatusID;
-        public TStateId formStatusID { get { return m_formStatusID; } }
+        private readonly TStateId m_FormStatusID;
+        public TStateId FormStatusID { get { return m_FormStatusID; } }
         /// <summary>
         /// 要切换的状态
         /// </summary>
-        private TStateId m_toStatusID;
-        public TStateId toStatusID { get { return m_toStatusID; } }
+        private readonly TStateId m_ToStatusID;
+        public TStateId ToStatusID { get { return m_ToStatusID; } }
         /// <summary>
         /// 排序权重
         /// </summary>
-        private int m_weightOrder;
-        public int weightOrder { get { return m_weightOrder; } }
+        private readonly int m_WeightOrder;
+        public int WeightOrder { get { return m_WeightOrder; } }
         /// <summary>
         /// 切换条件
         /// </summary>
         public List<IFSM_Condition> conditions = new List<IFSM_Condition>();
         public FSM_Transition(TStateId formStatus, TStateId toStatus, int weightOrder = 0)
         {
-            m_formStatusID = formStatus;
-            m_toStatusID = toStatus;
-            m_weightOrder = weightOrder;
+            m_FormStatusID = formStatus;
+            m_ToStatusID = toStatus;
+            m_WeightOrder = weightOrder;
         }
         /// <summary>
         /// 添加切换条件

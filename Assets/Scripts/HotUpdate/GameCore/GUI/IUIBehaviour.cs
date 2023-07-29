@@ -6,8 +6,8 @@ namespace GameCore.GUI
 {
     public interface IUIBehaviour
     {
-        GameObject gameObject { get; }
-        RectTransform rectTransform { get; }
+        GameObject GameObject { get; }
+        RectTransform RectTransform { get; }
         void OnInit();
         void OnEnable();
         void OnDisable();

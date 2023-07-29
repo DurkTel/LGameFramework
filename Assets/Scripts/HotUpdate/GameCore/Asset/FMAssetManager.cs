@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using LGameFramework.GameBase.Pool;
 
 namespace GameCore.Asset
 {
@@ -15,12 +16,10 @@ namespace GameCore.Asset
     public class FMAssetManager : FrameworkModule
     {
         private static AssetLoadMode s_AssetLoadMode;
-        public static AssetLoadMode assetLoadMode { get { return s_AssetLoadMode; } }
-
-        internal override int priority { get { return 99; } }
-
-        internal override GameObject gameObject { get; set; }
-        internal override Transform transform { get; set; }
+        public static AssetLoadMode AssetLoadMode { get { return s_AssetLoadMode; } }
+        internal override int Priority { get { return 99; } }
+        internal override GameObject GameObject { get; set; }
+        internal override Transform Transform { get; set; }
 
         /// <summary>
         /// 正在加载的资源加载器
@@ -63,11 +62,11 @@ namespace GameCore.Asset
             {
                 string name = m_AssetLoaders.keyList[i];
                 loader = m_AssetLoaders[name];
-                loader.onProgress?.Invoke(loader.progress);
+                loader.onProgress?.Invoke(loader.Progress);
 
                 loader.Update();
 
-                if (loader.isDone)
+                if (loader.IsDone)
                     m_CompleteList.Add(name);
             }
 
@@ -101,9 +100,9 @@ namespace GameCore.Asset
                 if (m_WaitDestroyABList.Contains(abName))
                     continue;
 
-                if (record.dpendsReferenceCount <= 0 && record.rawReferenceCount <= 0 && !record.isAssetLoading)
+                if (record.DpendsReferenceCount <= 0 && record.RawReferenceCount <= 0 && !record.IsAssetLoading)
                 {
-                    record.beginDestroyTime = unscaleDeltaTime;
+                    record.BeginDestroyTime = unscaleDeltaTime;
                     m_WaitDestroyABList.Add(abName);
                 }
             }
@@ -112,7 +111,7 @@ namespace GameCore.Asset
             {
                 abName = m_WaitDestroyABList[i];
                 record = m_AllAB[abName];
-                if (unscaleDeltaTime - record.beginDestroyTime >= m_WaitDestroyTime)
+                if (unscaleDeltaTime - record.BeginDestroyTime >= m_WaitDestroyTime)
                 {
                     record.Unload(true);
                     Pool<AssetBundleRecord>.Release(record);
@@ -142,8 +141,8 @@ namespace GameCore.Asset
         public AssetBundleRecord AddAssetBundle(string abName, AssetBundle bundle)
         {
             AssetBundleRecord record = Pool<AssetBundleRecord>.Get();
-            record.assetBundle = bundle;
-            record.bundleName = abName;
+            record.AssetBundle = bundle;
+            record.BundleName = abName;
 
             if (!m_AllAB.ContainsKey(abName))
                 m_AllAB.Add(abName, record);
@@ -217,7 +216,7 @@ namespace GameCore.Asset
                         break;
                 }
 
-                loader.module = this;
+                loader.Module = this;
                 m_AssetLoaders.Add(assetName, loader);
             }
 
@@ -247,7 +246,7 @@ namespace GameCore.Asset
                         break;
                 }
 
-                loader.module = this;
+                loader.Module = this;
                 loader.Update();
                 m_AssetLoaders.Add(assetName, loader);
             }

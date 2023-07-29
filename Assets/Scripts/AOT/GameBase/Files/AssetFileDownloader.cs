@@ -4,29 +4,32 @@ using System.ComponentModel;
 using System.IO;
 using System.Net;
 using UnityEngine;
-using UnityEngine.Events;
+using LGameFramework.GameBase.Pool;
 
 namespace LGameFramework.GameBase
 {
+    /// <summary>
+    /// ÎÄ¼þÏÂÔØÆ÷
+    /// </summary>
     public class AssetFileDownloader : IEnumerator, IDisposable
     {
         protected object m_Current;
         public object Current { get { return m_Current; } }
 
         protected string m_DownloadURL;
-        public string downloadURL { get { return m_DownloadURL; } }
+        public string DownloadURL { get { return m_DownloadURL; } }
 
         protected string m_DownloadPath;
-        public string downloadPath { get { return m_DownloadPath; } }
+        public string DownloadPath { get { return m_DownloadPath; } }
 
         protected float m_Progress;
-        public float progress { get { return m_Progress; } }
+        public float Progress { get { return m_Progress; } }
 
         protected bool m_IsDone;
-        public bool isDone { get { return m_IsDone; } } 
+        public bool IsDone { get { return m_IsDone; } } 
 
         protected WebClient m_WebClient;
-        public WebClient webClient { get { return m_WebClient; } }
+        public WebClient WebClient { get { return m_WebClient; } }
 
         private void Download()
         {

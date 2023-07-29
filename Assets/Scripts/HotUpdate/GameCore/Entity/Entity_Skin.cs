@@ -11,17 +11,17 @@ namespace GameCore.Entity
         /// 外观是否实例化完成
         /// </summary>
         private bool m_SkinInstantiate;
-        public bool skinInstantiate { get { return m_SkinInstantiate; } }
+        public bool SkinInstantiate { get { return m_SkinInstantiate; } }
         /// <summary>
         /// 外观是否加载中
         /// </summary>
         private bool m_SkinLoading;
-        public bool skinLoading { get { return m_SkinLoading; } }
+        public bool SkinLoading { get { return m_SkinLoading; } }
         /// <summary>
         /// 是否可见
         /// </summary>
         private bool m_Visible;
-        public bool visible
+        public bool Visible
         {
             set
             {

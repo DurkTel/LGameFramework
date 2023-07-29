@@ -1,7 +1,6 @@
-using GameCore;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using LGameFramework.GameBase.Pool;
 
 namespace GameCore.Asset
 {
@@ -20,7 +19,7 @@ namespace GameCore.Asset
         }
 
         private static FMAssetManager m_AssetModule;
-        public static FMAssetManager assetModule
+        public static FMAssetManager AssetModule
         {
             get
             {
@@ -179,19 +178,19 @@ namespace GameCore.Asset
                 return;
 
             //AB包模式下计算引用
-            if (FMAssetManager.assetLoadMode == AssetLoadMode.AssetBundle)
+            if (FMAssetManager.AssetLoadMode == AssetLoadMode.AssetBundle)
             {
-                AssetManifest_Bundle assetManifest = assetModule.GetAssetManifest_Bundle();
+                AssetManifest_Bundle assetManifest = AssetModule.GetAssetManifest_Bundle();
                 List<string> result = assetManifest.GetDependsName(rawInfo.asstName);
                 //这个资源被卸载 被这个资源依赖的AB包引用计数减1
                 AssetBundleRecord record;
                 foreach (string abName in result)
-                    if (assetModule.TryGetAssetBundle(abName, out record))
-                        record.dpendsReferenceCount--;
+                    if (AssetModule.TryGetAssetBundle(abName, out record))
+                        record.DpendsReferenceCount--;
 
                 //这个资源的AB引用减1
-                if (assetModule.TryGetAssetBundle(assetManifest.GetBundleName(rawInfo.asstName), out record))
-                    record.rawReferenceCount--;
+                if (AssetModule.TryGetAssetBundle(assetManifest.GetBundleName(rawInfo.asstName), out record))
+                    record.RawReferenceCount--;
             }
 
             //销毁源对象

@@ -14,7 +14,7 @@ namespace GameCore.GUI
         public Camera UICamera { get { return m_UICamera; } }
 
         private Transform m_CanvasRoot;
-        public Transform canvasRoot { get { return m_CanvasRoot; } }
+        public Transform CanvasRoot { get { return m_CanvasRoot; } }
 
         private int m_UILayer = LayerMask.NameToLayer("UI");
 
@@ -30,10 +30,10 @@ namespace GameCore.GUI
 
         private int m_OffsetOrder = 1000;
 
-        internal override int priority => 2;
+        internal override int Priority => 2;
 
-        internal override GameObject gameObject { get; set; }
-        internal override Transform transform { get; set; }
+        internal override GameObject GameObject { get; set; }
+        internal override Transform Transform { get; set; }
 
         internal override void OnInit()
         {
@@ -65,8 +65,8 @@ namespace GameCore.GUI
             {
                 m_WaitDestroy.Remove(view);
                 m_AllViewDict.Remove(view.GetType());
-                m_AssetModule.Destroy(view.prefabInstantiate);
-                UnityEngine.Object.Destroy(view.gameObject);
+                m_AssetModule.Destroy(view.PrefabInstantiate);
+                UnityEngine.Object.Destroy(view.GameObject);
 
                 view.OnDispose();
             }
@@ -121,7 +121,7 @@ namespace GameCore.GUI
                     m_WaitDestroy.Remove(view);
 
                 T guiView = view as T;
-                GUIViewLayer layer = m_Layers[guiView.layerLevel];
+                GUIViewLayer layer = m_Layers[guiView.LayerLevel];
                 layer.UpdateSortingOrder(view);
                 layer.SetAsTop(view);
                 guiView.OnBeforeOpenEffect();
@@ -134,13 +134,13 @@ namespace GameCore.GUI
         {
             T view = new T();
             GameObject go = new GameObject(view.GetType().Name + "_Container");
-            GUIViewLayer layer = m_Layers[view.layerLevel];
+            GUIViewLayer layer = m_Layers[view.LayerLevel];
 
             view.OnConstructor(go, layer);
 
             layer.AddView(view);
 
-            AssetLoader loader = m_AssetModule.LoadAssetAsync<GameObject>(view.prefabName);
+            AssetLoader loader = m_AssetModule.LoadAssetAsync<GameObject>(view.PrefabName);
             loader.onComplete = (loader) => { view.OnLoadComplete(loader); };
             return view as T;
         }
@@ -156,11 +156,11 @@ namespace GameCore.GUI
         #region ³õÊ¼»¯º¯Êý
         private void InitializeCamera()
         {
-            transform.localPosition = new Vector3(5000, 5000, 0);
-            gameObject.layer = m_UILayer;
+            Transform.localPosition = new Vector3(5000, 5000, 0);
+            GameObject.layer = m_UILayer;
             GameObject cameraGO = new GameObject("UI_Camera");
             cameraGO.layer = m_UILayer;
-            cameraGO.transform.SetParentZero(transform);
+            cameraGO.transform.SetParentZero(Transform);
             cameraGO.tag = "UICamera";
             m_UICamera = cameraGO.AddComponent<Camera>();
             m_UICamera.clearFlags = CameraClearFlags.Depth;
@@ -174,7 +174,7 @@ namespace GameCore.GUI
         {
             GameObject canvasGO = new GameObject("UI_Canvas");
             canvasGO.layer = m_UILayer;
-            canvasGO.transform.SetParentZero(transform);
+            canvasGO.transform.SetParentZero(Transform);
             Canvas canvas = canvasGO.AddComponent<Canvas>();
             canvasGO.AddComponent<GraphicRaycaster>();
             canvas.renderMode = RenderMode.ScreenSpaceCamera;
@@ -189,7 +189,7 @@ namespace GameCore.GUI
 
             GameObject eventGO = new GameObject("EventSystem", typeof(InputSystemUIInputModule));
             eventGO.layer = m_UILayer;
-            eventGO.transform.SetParentZero(transform);
+            eventGO.transform.SetParentZero(Transform);
         }
 
         private void InitializeLayer()

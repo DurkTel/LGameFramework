@@ -29,28 +29,28 @@ namespace GameBase.FSM
         /// <summary>
         /// 每帧刷新的事件
         /// </summary>
-        private Action<FSM_Status<TStateId>> m_onAction;
+        private readonly Action<FSM_Status<TStateId>> m_OnAction;
         /// <summary>
         /// 进入该状态的事件
         /// </summary>
-        private Action<FSM_Status<TStateId>> m_onEnter;
+        private readonly Action<FSM_Status<TStateId>> m_OnEnter;
         /// <summary>
         /// 退出该状态的事件
         /// </summary>
-        private Action<FSM_Status<TStateId>> m_onExit;
+        private readonly Action<FSM_Status<TStateId>> m_OnExit;
 
         public FSM_Status(Action<FSM_Status<TStateId>> onEnter = null, Action<FSM_Status<TStateId>> onExit = null, Action<FSM_Status<TStateId>> onAction = null)
         {
-            this.m_onEnter = onEnter;
-            this.m_onExit = onExit;
-            this.m_onAction = onAction;
+            this.m_OnEnter = onEnter;
+            this.m_OnExit = onExit;
+            this.m_OnAction = onAction;
         }
         /// <summary>
         /// 添加过渡
         /// </summary>
         public virtual void AddTransition(FSM_Transition<TStateId> transition)
         {
-            transitions = transitions ?? new List<FSM_Transition<TStateId>>();
+            transitions ??= new List<FSM_Transition<TStateId>>();
             transitions.Add(transition);
         }
         /// <summary>
@@ -65,21 +65,21 @@ namespace GameBase.FSM
         /// </summary>
         public virtual void OnAction()
         {
-            m_onAction?.Invoke(this);
+            m_OnAction?.Invoke(this);
         }
         /// <summary>
         /// 进入该状态
         /// </summary>
         public virtual void OnEnter()
         {
-            m_onEnter?.Invoke(this);
+            m_OnEnter?.Invoke(this);
         }
         /// <summary>
         /// 退出该状态
         /// </summary>
         public virtual void OnExit()
         {
-            m_onExit?.Invoke(this);
+            m_OnExit?.Invoke(this);
         }
     }
 

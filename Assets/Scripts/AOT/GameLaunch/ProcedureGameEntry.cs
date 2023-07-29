@@ -35,6 +35,9 @@ public class ProcedureGameEntry : FSM_Status<ProcedureLaunchProcess>
 
         Type type = coreAssembly.GetType("GameCore.GameEntry");
         type.GetMethod("Instantiate").Invoke(null, null);
+
+        //进入游戏成功 销毁启动器
+        UnityEngine.Object.Destroy(dataBase.gameObject);
     }
 
     private void LoadMetadataForAOTAssemblies()

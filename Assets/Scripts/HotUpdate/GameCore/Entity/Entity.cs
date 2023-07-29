@@ -9,47 +9,47 @@ namespace GameCore.Entity
         /// 实体id
         /// </summary>
         private int m_EntityId;
-        public int entityId { get { return m_EntityId; } }
+        public int EntityId { get { return m_EntityId; } }
         /// <summary>
         /// 实体类型
         /// </summary>
         private EntityType m_EntityType;
-        public EntityType entityType { get { return m_EntityType; } }
+        public EntityType EntityType { get { return m_EntityType; } }
         /// <summary>
         /// 实体状态
         /// </summary>
         private EntityStatus m_Status;
-        public EntityStatus status { get { return m_Status; } }
+        public EntityStatus Status { get { return m_Status; } }
         /// <summary>
         /// 所属实体组
         /// </summary>
         private EntityGroup m_EntityGroup;
-        public EntityGroup entityGroup { get { return m_EntityGroup; } }
+        public EntityGroup EntityGroup { get { return m_EntityGroup; } }
         /// <summary>
         /// 生成时间戳
         /// </summary>
         private float m_CreateTimeStamp;
-        public float createTimeStamp { get { return m_CreateTimeStamp; } }
+        public float CreateTimeStamp { get { return m_CreateTimeStamp; } }
         /// <summary>
         /// 回事时间戳
         /// </summary>
         private float m_ReleaseTimeStamp;
-        public float releaseTimesStamp { get { return m_ReleaseTimeStamp; } }
+        public float ReleaseTimesStamp { get { return m_ReleaseTimeStamp; } }
         /// <summary>
         /// 当前游戏对象
         /// </summary>
         private GameObject m_GameObject;
-        public GameObject gameObject { get { return m_GameObject; } }
+        public GameObject GameObject { get { return m_GameObject; } }
         /// <summary>
         /// 当前变换组件
         /// </summary>
         private Transform m_Transform;
-        public Transform transform { get { return m_Transform; } }
+        public Transform Transform { get { return m_Transform; } }
         /// <summary>
         /// 脏状态
         /// </summary>
         private bool m_Dirty;
-        public bool dirty { get { return m_Dirty; } }
+        public bool Dirty { get { return m_Dirty; } }
 
         public void OnInit(int eid, EntityType etype, EntityGroup egroup)
         {

@@ -7,9 +7,9 @@ namespace GameBase.FSM
     public class FSM_DataBase : MonoBehaviour
     {
         //data列表和key列表时一一对应的关系
-        private List<object> m_dataBase = new List<object>();
+        private readonly List<object> m_DataBase = new List<object>();
 
-        private List<string> m_dataName = new List<string>();
+        private readonly List<string> m_DataName = new List<string>();
 
         /// <summary>
         /// 获取这个key在列表中的id
@@ -18,9 +18,9 @@ namespace GameBase.FSM
         /// <returns></returns>
         private int GetIndexOfDataId(string dataName)
         {
-            for (int i = 0; i < m_dataName.Count; i++)
+            for (int i = 0; i < m_DataName.Count; i++)
             {
-                if (m_dataName[i].Equals(dataName))
+                if (m_DataName[i].Equals(dataName))
                     return i;
             }
 
@@ -37,9 +37,9 @@ namespace GameBase.FSM
             int dataId = GetIndexOfDataId(dataName);
             if (dataId == -1)
             {
-                m_dataName.Add(dataName);
-                m_dataBase.Add(null);
-                dataId = m_dataName.Count - 1;
+                m_DataName.Add(dataName);
+                m_DataBase.Add(null);
+                dataId = m_DataName.Count - 1;
             }
             return dataId;
         }
@@ -59,7 +59,7 @@ namespace GameBase.FSM
                 return default(T);
             }
 
-            return (T)m_dataBase[dataId];
+            return (T)m_DataBase[dataId];
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace GameBase.FSM
         /// <returns></returns>
         public T GetData<T>(int dataId)
         {
-            return (T)m_dataBase[dataId];
+            return (T)m_DataBase[dataId];
         }
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace GameBase.FSM
         public void SetData<T>(string dataName, T data)
         {
             int dataId = TryGetDataId(dataName);
-            m_dataBase[dataId] = data;
+            m_DataBase[dataId] = data;
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace GameBase.FSM
         /// <param name="data"></param>
         public void SetData<T>(int dataId, T data)
         {
-            m_dataBase[dataId] = data;
+            m_DataBase[dataId] = data;
         }
 
         /// <summary>

@@ -7992,7 +7992,7 @@ static void __M2N_u1i4S88S88(const MethodInfo* method, uint16_t* argVarIndexs, S
 }
 
 
-// System.Boolean System.Version::TryFormat(System.Span`1<System.Char>,System.Int32&)
+// System.Boolean System.Boolean::TryFormat(System.Span`1<System.Char>,System.Int32&)
 static void __M2N_u1i4S8i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef uint8_t (*NativeMethod)(int32_t __arg0, ValueTypeSize<8> __arg1, int32_t __arg2, const MethodInfo* method);

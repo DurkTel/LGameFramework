@@ -75,6 +75,10 @@ struct InterfaceFuncInvoker2
 	}
 };
 
+// System.Action`1<GameBase.FSM.FSM_Status`1<System.Int32Enum>>
+struct Action_1_tF9D9C9F774164A2075AC1D49D76FDBB34B87509A;
+// System.Action`1<GameBase.FSM.FSM_Status`1<System.Object>>
+struct Action_1_t9061A5C51A94DE99C3AE01F14F18895316F650A9;
 // System.Action`1<System.IAsyncResult>
 struct Action_1_t8AE9CB3E5DC764211C9FEAC59DE7B65AD1444780;
 // System.Action`1<UnityEngine.UIElements.MeshGenerationContext>
@@ -87,6 +91,10 @@ struct BasicNode_1_t7B4D545DCD6949B2E1C85D63DF038E44602F7DDB;
 struct Converter_2_tC9AFAC88B7B2F2A78BE628A4D126535F0A4A1486;
 // System.Collections.Generic.Dictionary`2<System.Int32,System.Threading.Tasks.Task>
 struct Dictionary_2_t403063CE4960B4F46C688912237C6A27E550FF55;
+// System.Collections.Generic.Dictionary`2<System.Int32Enum,GameBase.FSM.FSM_Status`1<System.Int32Enum>>
+struct Dictionary_2_t9506E12ED4855EC554CC1441AC042B6DA54C9833;
+// System.Collections.Generic.Dictionary`2<System.Object,GameBase.FSM.FSM_Status`1<System.Object>>
+struct Dictionary_2_t64953B2015EAD22055324B3B8E5F310DE403CF5F;
 // System.Collections.Generic.Dictionary`2<System.String,UnityEngine.UIElements.StyleSheets.StylePropertyValue>
 struct Dictionary_2_t645C7B1DAE2D839B52A5E387C165CE13D5465B00;
 // System.Collections.Generic.Dictionary`2<System.String,UnityEngine.InputSystem.Utilities.JsonParser/JsonValue>
@@ -95,6 +103,14 @@ struct Dictionary_2_t6682243BDABA638FCBE4F1D9875B5B1455A7686E;
 struct Dictionary_2_t4055F6540F36F21F9FEDAFB92D8E0089B38EBBC8;
 // System.EventHandler`1<System.Threading.Tasks.UnobservedTaskExceptionEventArgs>
 struct EventHandler_1_tE698654C3F437D97ABCCA3FD0AD8F86E776DC77A;
+// GameBase.FSM.FSM_StateMachine`1<System.Int32Enum>
+struct FSM_StateMachine_1_tA00CFD7B700A6EC31771B7EA9EBF74D6F2933F92;
+// GameBase.FSM.FSM_StateMachine`1<System.Object>
+struct FSM_StateMachine_1_tB2B90C7211FEE0CCFA62FD6CA771EE574A38577B;
+// GameBase.FSM.FSM_Status`1<System.Int32Enum>
+struct FSM_Status_1_tC0EFD939C1F5D64DC72BB77974B570F3D9CE20A3;
+// GameBase.FSM.FSM_Status`1<System.Object>
+struct FSM_Status_1_t258D8A5E387BE4382AC19770F01F8CCDB0EDDA6E;
 // System.Func`1<System.Boolean>
 struct Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457;
 // System.Func`1<System.Threading.Tasks.Task/ContingentProperties>
@@ -215,10 +231,18 @@ struct IEnumerator_1_t4CA3732E083480E40018894623B3C184576E5EFD;
 struct IEnumerator_1_t28314E682493CA936A454DA48BFB000CAF4F5D74;
 // System.Collections.Generic.IEnumerator`1<UnityEngine.InputSystem.Utilities.JsonParser/JsonValue>
 struct IEnumerator_1_tF129A86A709F185A2268C6A66EEC790456389E7C;
+// GameBase.FSM.IFSM_Machine`1<System.Int32Enum>
+struct IFSM_Machine_1_t1E7A1C8BE9BEA87DC84B3FBC188BC4FDE0A94596;
+// GameBase.FSM.IFSM_Machine`1<System.Object>
+struct IFSM_Machine_1_t35205707BDCE6F584AE777D82870EF71C6B12057;
 // System.Linq.IOrderedEnumerable`1<UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord>
 struct IOrderedEnumerable_1_tF01059B4E37CC5D11A61FCA09D884F07708D5829;
 // System.Linq.IOrderedEnumerable`1<System.Object>
 struct IOrderedEnumerable_1_t0E680E8E1A4A676334F2A0C9A6F9B93135A65EAC;
+// System.Collections.Generic.List`1<GameBase.FSM.FSM_Transition`1<System.Int32Enum>>
+struct List_1_tE4BDD153B118C994171BCBA84E40832564C47652;
+// System.Collections.Generic.List`1<GameBase.FSM.FSM_Transition`1<System.Object>>
+struct List_1_t7A0FDEBDC0A68EA5DC083DDA4DE1FAFDF03A2D6F;
 // System.Collections.Generic.List`1<System.Collections.Generic.KeyValuePair`2<System.Object,UnityEngine.InputSystem.Utilities.JsonParser/JsonValue>>
 struct List_1_t8722BDA3E6F39614DB740A6467F64680B62B8D3F;
 // System.Collections.Generic.List`1<System.Collections.Generic.KeyValuePair`2<UnityEngine.PropertyName,System.Object>>
@@ -485,6 +509,8 @@ struct EventCallbackRegistry_tE18297C3F7E535BD82EDA83EC6D6DAA386226B85;
 struct Exception_t;
 // System.Threading.ExecutionContext
 struct ExecutionContext_t9D6EDFD92F0B2D391751963E2D77A8B03CB81710;
+// GameBase.FSM.FSM_DataBase
+struct FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D;
 // System.Net.FixedSizeReadStream
 struct FixedSizeReadStream_t36A722CECAA40C689D9604980ECB1FF98343B251;
 // UnityEngine.GlobalJavaObjectRef
@@ -801,6 +827,48 @@ struct U3CU3Ec__DisplayClass41_0_2_t98C4B33FA43000ADB44B00D9A66BDAA1064AFDB0  : 
 	Action_1_t8AE9CB3E5DC764211C9FEAC59DE7B65AD1444780* ___endAction_1;
 	// System.Threading.Tasks.Task`1<TResult> System.Threading.Tasks.TaskFactory`1/<>c__DisplayClass41_0`2::promise
 	Task_1_tE41CFF640EB7C045550D9D0D92BE67533B084C17* ___promise_2;
+};
+
+// GameBase.FSM.FSM_Status`1<System.Int32Enum>
+struct FSM_Status_1_tC0EFD939C1F5D64DC72BB77974B570F3D9CE20A3  : public RuntimeObject
+{
+	// TStateId GameBase.FSM.FSM_Status`1::name
+	int32_t ___name_0;
+	// GameBase.FSM.IFSM_Machine`1<TStateId> GameBase.FSM.FSM_Status`1::subMachine
+	RuntimeObject* ___subMachine_1;
+	// System.Boolean GameBase.FSM.FSM_Status`1::activated
+	bool ___activated_2;
+	// GameBase.FSM.FSM_DataBase GameBase.FSM.FSM_Status`1::dataBase
+	FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* ___dataBase_3;
+	// System.Collections.Generic.List`1<GameBase.FSM.FSM_Transition`1<TStateId>> GameBase.FSM.FSM_Status`1::transitions
+	List_1_tE4BDD153B118C994171BCBA84E40832564C47652* ___transitions_4;
+	// System.Action`1<GameBase.FSM.FSM_Status`1<TStateId>> GameBase.FSM.FSM_Status`1::m_OnAction
+	Action_1_tF9D9C9F774164A2075AC1D49D76FDBB34B87509A* ___m_OnAction_5;
+	// System.Action`1<GameBase.FSM.FSM_Status`1<TStateId>> GameBase.FSM.FSM_Status`1::m_OnEnter
+	Action_1_tF9D9C9F774164A2075AC1D49D76FDBB34B87509A* ___m_OnEnter_6;
+	// System.Action`1<GameBase.FSM.FSM_Status`1<TStateId>> GameBase.FSM.FSM_Status`1::m_OnExit
+	Action_1_tF9D9C9F774164A2075AC1D49D76FDBB34B87509A* ___m_OnExit_7;
+};
+
+// GameBase.FSM.FSM_Status`1<System.Object>
+struct FSM_Status_1_t258D8A5E387BE4382AC19770F01F8CCDB0EDDA6E  : public RuntimeObject
+{
+	// TStateId GameBase.FSM.FSM_Status`1::name
+	RuntimeObject* ___name_0;
+	// GameBase.FSM.IFSM_Machine`1<TStateId> GameBase.FSM.FSM_Status`1::subMachine
+	RuntimeObject* ___subMachine_1;
+	// System.Boolean GameBase.FSM.FSM_Status`1::activated
+	bool ___activated_2;
+	// GameBase.FSM.FSM_DataBase GameBase.FSM.FSM_Status`1::dataBase
+	FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* ___dataBase_3;
+	// System.Collections.Generic.List`1<GameBase.FSM.FSM_Transition`1<TStateId>> GameBase.FSM.FSM_Status`1::transitions
+	List_1_t7A0FDEBDC0A68EA5DC083DDA4DE1FAFDF03A2D6F* ___transitions_4;
+	// System.Action`1<GameBase.FSM.FSM_Status`1<TStateId>> GameBase.FSM.FSM_Status`1::m_OnAction
+	Action_1_t9061A5C51A94DE99C3AE01F14F18895316F650A9* ___m_OnAction_5;
+	// System.Action`1<GameBase.FSM.FSM_Status`1<TStateId>> GameBase.FSM.FSM_Status`1::m_OnEnter
+	Action_1_t9061A5C51A94DE99C3AE01F14F18895316F650A9* ___m_OnEnter_6;
+	// System.Action`1<GameBase.FSM.FSM_Status`1<TStateId>> GameBase.FSM.FSM_Status`1::m_OnExit
+	Action_1_t9061A5C51A94DE99C3AE01F14F18895316F650A9* ___m_OnExit_7;
 };
 
 // UnityEngine.UIElements.UQuery/IsOfType`1<System.Object>
@@ -1232,6 +1300,40 @@ struct Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A
 	int32_t ____version_2;
 	// T System.Collections.Generic.List`1/Enumerator::_current
 	RuntimeObject* ____current_3;
+};
+
+// GameBase.FSM.FSM_StateMachine`1<System.Int32Enum>
+struct FSM_StateMachine_1_tA00CFD7B700A6EC31771B7EA9EBF74D6F2933F92  : public FSM_Status_1_tC0EFD939C1F5D64DC72BB77974B570F3D9CE20A3
+{
+	// GameBase.FSM.FSM_Status`1<TStateId> GameBase.FSM.FSM_StateMachine`1::<ActiveState>k__BackingField
+	FSM_Status_1_tC0EFD939C1F5D64DC72BB77974B570F3D9CE20A3* ___U3CActiveStateU3Ek__BackingField_8;
+	// GameBase.FSM.FSM_Status`1<TStateId> GameBase.FSM.FSM_StateMachine`1::<LastState>k__BackingField
+	FSM_Status_1_tC0EFD939C1F5D64DC72BB77974B570F3D9CE20A3* ___U3CLastStateU3Ek__BackingField_9;
+	// GameBase.FSM.FSM_Status`1<TStateId> GameBase.FSM.FSM_StateMachine`1::<DefaultState>k__BackingField
+	FSM_Status_1_tC0EFD939C1F5D64DC72BB77974B570F3D9CE20A3* ___U3CDefaultStateU3Ek__BackingField_10;
+	// System.Collections.Generic.Dictionary`2<TStateId,GameBase.FSM.FSM_Status`1<TStateId>> GameBase.FSM.FSM_StateMachine`1::allStatus
+	Dictionary_2_t9506E12ED4855EC554CC1441AC042B6DA54C9833* ___allStatus_11;
+	// System.Collections.Generic.List`1<GameBase.FSM.FSM_Transition`1<TStateId>> GameBase.FSM.FSM_StateMachine`1::transitionsFromAny
+	List_1_tE4BDD153B118C994171BCBA84E40832564C47652* ___transitionsFromAny_12;
+	// System.Collections.Generic.List`1<GameBase.FSM.FSM_Transition`1<TStateId>> GameBase.FSM.FSM_StateMachine`1::activeTransitions
+	List_1_tE4BDD153B118C994171BCBA84E40832564C47652* ___activeTransitions_13;
+};
+
+// GameBase.FSM.FSM_StateMachine`1<System.Object>
+struct FSM_StateMachine_1_tB2B90C7211FEE0CCFA62FD6CA771EE574A38577B  : public FSM_Status_1_t258D8A5E387BE4382AC19770F01F8CCDB0EDDA6E
+{
+	// GameBase.FSM.FSM_Status`1<TStateId> GameBase.FSM.FSM_StateMachine`1::<ActiveState>k__BackingField
+	FSM_Status_1_t258D8A5E387BE4382AC19770F01F8CCDB0EDDA6E* ___U3CActiveStateU3Ek__BackingField_8;
+	// GameBase.FSM.FSM_Status`1<TStateId> GameBase.FSM.FSM_StateMachine`1::<LastState>k__BackingField
+	FSM_Status_1_t258D8A5E387BE4382AC19770F01F8CCDB0EDDA6E* ___U3CLastStateU3Ek__BackingField_9;
+	// GameBase.FSM.FSM_Status`1<TStateId> GameBase.FSM.FSM_StateMachine`1::<DefaultState>k__BackingField
+	FSM_Status_1_t258D8A5E387BE4382AC19770F01F8CCDB0EDDA6E* ___U3CDefaultStateU3Ek__BackingField_10;
+	// System.Collections.Generic.Dictionary`2<TStateId,GameBase.FSM.FSM_Status`1<TStateId>> GameBase.FSM.FSM_StateMachine`1::allStatus
+	Dictionary_2_t64953B2015EAD22055324B3B8E5F310DE403CF5F* ___allStatus_11;
+	// System.Collections.Generic.List`1<GameBase.FSM.FSM_Transition`1<TStateId>> GameBase.FSM.FSM_StateMachine`1::transitionsFromAny
+	List_1_t7A0FDEBDC0A68EA5DC083DDA4DE1FAFDF03A2D6F* ___transitionsFromAny_12;
+	// System.Collections.Generic.List`1<GameBase.FSM.FSM_Transition`1<TStateId>> GameBase.FSM.FSM_StateMachine`1::activeTransitions
+	List_1_t7A0FDEBDC0A68EA5DC083DDA4DE1FAFDF03A2D6F* ___activeTransitions_13;
 };
 
 // UnityEngine.InputSystem.Utilities.InlinedArray`1<System.Object>
@@ -6149,6 +6251,14 @@ struct MissingMethodException_t3D861B41F6520C32A7994A884343802925703155  : publi
 
 // System.Threading.Tasks.TaskFactory`1/<>c__DisplayClass41_0`2<System.Threading.Tasks.VoidTaskResult,System.Object,System.Object>
 
+// GameBase.FSM.FSM_Status`1<System.Int32Enum>
+
+// GameBase.FSM.FSM_Status`1<System.Int32Enum>
+
+// GameBase.FSM.FSM_Status`1<System.Object>
+
+// GameBase.FSM.FSM_Status`1<System.Object>
+
 // UnityEngine.UIElements.UQuery/IsOfType`1<System.Object>
 struct IsOfType_1_tAD57152B527BA8DDBDA8E8C388140620049ADBE4_StaticFields
 {
@@ -6287,19 +6397,6 @@ struct String_t_StaticFields
 // System.String
 
 // System.Threading.SynchronizationContext
-struct SynchronizationContext_tCDB842BBE53B050802CBBB59C6E6DC45B5B06DC0_StaticFields
-{
-	// System.Type System.Threading.SynchronizationContext::s_cachedPreparedType1
-	Type_t* ___s_cachedPreparedType1_1;
-	// System.Type System.Threading.SynchronizationContext::s_cachedPreparedType2
-	Type_t* ___s_cachedPreparedType2_2;
-	// System.Type System.Threading.SynchronizationContext::s_cachedPreparedType3
-	Type_t* ___s_cachedPreparedType3_3;
-	// System.Type System.Threading.SynchronizationContext::s_cachedPreparedType4
-	Type_t* ___s_cachedPreparedType4_4;
-	// System.Type System.Threading.SynchronizationContext::s_cachedPreparedType5
-	Type_t* ___s_cachedPreparedType5_5;
-};
 
 // System.Threading.SynchronizationContext
 
@@ -6388,6 +6485,24 @@ struct MoveNextRunner_t57DA5A6E2423AE86889DAA6D20097BBE3C75101E_StaticFields
 // System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1/ConfiguredTaskAwaiter<System.Object>
 
 // System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1/ConfiguredTaskAwaiter<System.Object>
+
+// GameBase.FSM.FSM_StateMachine`1<System.Int32Enum>
+struct FSM_StateMachine_1_tA00CFD7B700A6EC31771B7EA9EBF74D6F2933F92_StaticFields
+{
+	// System.Collections.Generic.List`1<GameBase.FSM.FSM_Transition`1<TStateId>> GameBase.FSM.FSM_StateMachine`1::s_NoTransitions
+	List_1_tE4BDD153B118C994171BCBA84E40832564C47652* ___s_NoTransitions_14;
+};
+
+// GameBase.FSM.FSM_StateMachine`1<System.Int32Enum>
+
+// GameBase.FSM.FSM_StateMachine`1<System.Object>
+struct FSM_StateMachine_1_tB2B90C7211FEE0CCFA62FD6CA771EE574A38577B_StaticFields
+{
+	// System.Collections.Generic.List`1<GameBase.FSM.FSM_Transition`1<TStateId>> GameBase.FSM.FSM_StateMachine`1::s_NoTransitions
+	List_1_t7A0FDEBDC0A68EA5DC083DDA4DE1FAFDF03A2D6F* ___s_NoTransitions_14;
+};
+
+// GameBase.FSM.FSM_StateMachine`1<System.Object>
 
 // UnityEngine.InputSystem.Utilities.InlinedArray`1<System.Object>
 
@@ -17774,6 +17889,32 @@ IL2CPP_EXTERN_C  void AsyncValueTaskMethodBuilder_1_Start_TisRuntimeObject_m55DA
 	int32_t _offset = 1;
 	_thisAdjusted = reinterpret_cast<AsyncValueTaskMethodBuilder_1_tC52370C9D79190662723A5015241A6CA0D150DC2*>(__this + _offset);
 	AsyncValueTaskMethodBuilder_1_Start_TisRuntimeObject_m55DA5DA01C3062E2C184C227ADFB7B06F755DA52_inline(_thisAdjusted, ___0_stateMachine, method);
+}
+// System.Void GameBase.FSM.FSM_StateMachine`1<System.Int32Enum>::AddStatus<System.Object>(TStateId)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FSM_StateMachine_1_AddStatus_TisRuntimeObject_m809F7C727DA1F3D22130D41DCB0CA371453AC609_gshared (FSM_StateMachine_1_tA00CFD7B700A6EC31771B7EA9EBF74D6F2933F92* __this, int32_t ___0_name, const RuntimeMethod* method) 
+{
+	{
+		// AddStatus(name, new T());
+		int32_t L_0 = ___0_name;
+		RuntimeObject* L_1;
+		L_1 = ((  RuntimeObject* (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		((  void (*) (FSM_StateMachine_1_tA00CFD7B700A6EC31771B7EA9EBF74D6F2933F92*, int32_t, FSM_Status_1_tC0EFD939C1F5D64DC72BB77974B570F3D9CE20A3*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 15)))(__this, L_0, (FSM_Status_1_tC0EFD939C1F5D64DC72BB77974B570F3D9CE20A3*)L_1, il2cpp_rgctx_method(method->klass->rgctx_data, 15));
+		// }
+		return;
+	}
+}
+// System.Void GameBase.FSM.FSM_StateMachine`1<System.Object>::AddStatus<System.Object>(TStateId)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FSM_StateMachine_1_AddStatus_TisRuntimeObject_mB5D6A954AEDFA9AFBE8E7D18B296A66B4870DC5D_gshared (FSM_StateMachine_1_tB2B90C7211FEE0CCFA62FD6CA771EE574A38577B* __this, RuntimeObject* ___0_name, const RuntimeMethod* method) 
+{
+	{
+		// AddStatus(name, new T());
+		RuntimeObject* L_0 = ___0_name;
+		RuntimeObject* L_1;
+		L_1 = ((  RuntimeObject* (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		((  void (*) (FSM_StateMachine_1_tB2B90C7211FEE0CCFA62FD6CA771EE574A38577B*, RuntimeObject*, FSM_Status_1_t258D8A5E387BE4382AC19770F01F8CCDB0EDDA6E*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 15)))(__this, L_0, (FSM_Status_1_t258D8A5E387BE4382AC19770F01F8CCDB0EDDA6E*)L_1, il2cpp_rgctx_method(method->klass->rgctx_data, 15));
+		// }
+		return;
+	}
 }
 // TOther[] UnityEngine.InputSystem.Utilities.InlinedArray`1<UnityEngine.InputSystem.Utilities.InternedString>::ToArray<System.Object>(System.Func`2<TValue,TOther>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* InlinedArray_1_ToArray_TisRuntimeObject_m55E036D5E6132DB8F77958D0DEFB5BB9031AF4BA_gshared (InlinedArray_1_tAFDFE0972A71B9760077CFA9D4A1DBD7BE435800* __this, Func_2_t63BCD2DEBA7363CAD4DAAF9703EF65C11A4C7BBB* ___0_mapFunction, const RuntimeMethod* method) 

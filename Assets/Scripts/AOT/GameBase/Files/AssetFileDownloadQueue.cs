@@ -1,51 +1,52 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
-using UnityEngine;
+using LGameFramework.GameBase.Pool;
 
 namespace LGameFramework.GameBase
 {
-    public class AssetFileDownloadQueue : SingletonMonoAuto<AssetFileDownloadQueue>
+    /// <summary>
+    /// 并发文件下载队列
+    /// </summary>
+    public class AssetFileDownloadQueue : IDisposable
     {
         private bool m_Pause;
-        public bool pause { get { return m_Pause; } }
+        public bool Pause { get { return m_Pause; } }
 
-        private int m_MaximumSimultaneouslyDownloading = 10;
+        private readonly int m_MaximumSimultaneouslyDownloading = 10;
         /// <summary>
         /// 最大同时下载数
         /// </summary>
-        public int maximumSimultaneouslyDownloading { get { return m_MaximumSimultaneouslyDownloading; } }
+        public int MaximumSimultaneouslyDownloading { get { return m_MaximumSimultaneouslyDownloading; } }
         
         private Queue<AssetFileDownloader> m_DownloaderQueuePrepare;
         /// <summary>
         /// 预备下载队列
         /// </summary>
-        public Queue<AssetFileDownloader> downloaderQueuePrepare { get { return m_DownloaderQueuePrepare; } }
+        public Queue<AssetFileDownloader> DownloaderQueuePrepare { get { return m_DownloaderQueuePrepare; } }
         
         private List<AssetFileDownloader> m_DownloadingCurrent;
         /// <summary>
         /// 正在下载列表
         /// </summary>
-        public List<AssetFileDownloader> downloadingCurrent { get { return m_DownloadingCurrent; } }
+        public List<AssetFileDownloader> DownloadingCurrent { get { return m_DownloadingCurrent; } }
 
-
-        public static void Pause(bool value)
+        public void SetPause(bool value)
         {
-            instance.m_Pause = value;
+            m_Pause = value;
         }
 
-        public static void Enqueue(AssetFileDownloader loader)
-        {
-            instance.m_DownloaderQueuePrepare ??= new Queue<AssetFileDownloader>();
-            instance.m_DownloaderQueuePrepare.Enqueue(loader);
-            instance.DownloadStart();
-        }
-
-
-        public static void Enqueue(string downloadURL, string downloadPath)
+        public void Enqueue(string downloadURL, string downloadPath)
         {
             AssetFileDownloader assetFileDownloader = Pool<AssetFileDownloader>.Get();
             assetFileDownloader.SetData(downloadURL, downloadPath);
             Enqueue(assetFileDownloader);
+        }
+
+        public void Enqueue(AssetFileDownloader loader)
+        {
+            m_DownloaderQueuePrepare ??= new Queue<AssetFileDownloader>();
+            m_DownloaderQueuePrepare.Enqueue(loader);
+            DownloadStart();
         }
 
         private void DownloadStart()
@@ -61,7 +62,7 @@ namespace LGameFramework.GameBase
         }
 
 
-        private void Update()
+        public void Update()
         {
             if (m_Pause || m_DownloadingCurrent == null || m_DownloadingCurrent.Count == 0)
                 return;
@@ -71,7 +72,7 @@ namespace LGameFramework.GameBase
             {
                 loader = m_DownloadingCurrent[i];
 
-                if (loader.isDone)
+                if (loader.IsDone)
                 {
                     m_DownloadingCurrent.Remove(loader);
                     loader.Dispose();
@@ -79,6 +80,19 @@ namespace LGameFramework.GameBase
                     DownloadStart();
                 }
             }
+        }
+
+        public void Dispose()
+        {
+            if (m_DownloadingCurrent != null)
+                m_DownloadingCurrent.Clear();
+
+            m_DownloadingCurrent = null;
+
+            if (m_DownloaderQueuePrepare != null)
+                m_DownloaderQueuePrepare.Clear();
+
+            m_DownloaderQueuePrepare = null;
         }
     }
 }

@@ -1604,9 +1604,9 @@ struct ConsoleKeyInfo_t84640C60F53D0F6946B147ADAAF0366BBF1DE900_marshaled_com
 struct CultureAwareComparer_t5822A6535A6EB4C448D1B7736067D1188BAEE8CD  : public StringComparer_t6268F19CA34879176651429C0D8A3D0002BB8E06
 {
 	// System.Globalization.CompareInfo System.CultureAwareComparer::_compareInfo
-	CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57* ____compareInfo_5;
+	CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57* ____compareInfo_4;
 	// System.Globalization.CompareOptions System.CultureAwareComparer::_options
-	int32_t ____options_6;
+	int32_t ____options_5;
 };
 
 // System.DateTime
@@ -15455,8 +15455,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CultureAwareComparer__ctor_mFC8D18B6DE64
 		il2cpp_codegen_runtime_class_init_inline(StringComparer_t6268F19CA34879176651429C0D8A3D0002BB8E06_il2cpp_TypeInfo_var);
 		StringComparer__ctor_m55A87A4DAD2E915ABEBB4108C5EE5757669EA7D3(__this, NULL);
 		CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57* L_0 = ___0_compareInfo;
-		__this->____compareInfo_5 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____compareInfo_5), (void*)L_0);
+		__this->____compareInfo_4 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____compareInfo_4), (void*)L_0);
 		int32_t L_1 = ___1_options;
 		if (!((int32_t)((int32_t)L_1&((int32_t)-536870944))))
 		{
@@ -15473,7 +15473,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CultureAwareComparer__ctor_mFC8D18B6DE64
 IL_0026:
 	{
 		int32_t L_3 = ___1_options;
-		__this->____options_6 = L_3;
+		__this->____options_5 = L_3;
 		return;
 	}
 }
@@ -15514,8 +15514,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CultureAwareComparer__ctor_m956C86D1EDC6
 		NullCheck(L_0);
 		RuntimeObject* L_3;
 		L_3 = SerializationInfo_GetValue_mE6091C2E906E113455D05E734C86F43B8E1D1034(L_0, _stringLiteralD0769C2ACDC6A8BB10DB687C30BB48D3DAAD230D, L_2, NULL);
-		__this->____compareInfo_5 = ((CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57*)CastclassClass((RuntimeObject*)L_3, CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57_il2cpp_TypeInfo_var));
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____compareInfo_5), (void*)((CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57*)CastclassClass((RuntimeObject*)L_3, CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57_il2cpp_TypeInfo_var)));
+		__this->____compareInfo_4 = ((CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57*)CastclassClass((RuntimeObject*)L_3, CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57_il2cpp_TypeInfo_var));
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____compareInfo_4), (void*)((CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57*)CastclassClass((RuntimeObject*)L_3, CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57_il2cpp_TypeInfo_var)));
 		SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* L_4 = ___0_info;
 		NullCheck(L_4);
 		bool L_5;
@@ -15537,12 +15537,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CultureAwareComparer__ctor_m956C86D1EDC6
 	}
 	{
 		RuntimeObject* L_11 = V_1;
-		__this->____options_6 = ((*(int32_t*)((int32_t*)(int32_t*)UnBox(L_11, CompareOptions_tE5E7275E1FCBD5F8F3B53CC0038A11CABE120B00_il2cpp_TypeInfo_var))));
+		__this->____options_5 = ((*(int32_t*)((int32_t*)(int32_t*)UnBox(L_11, CompareOptions_tE5E7275E1FCBD5F8F3B53CC0038A11CABE120B00_il2cpp_TypeInfo_var))));
 	}
 
 IL_0057:
 	{
-		int32_t L_12 = __this->____options_6;
+		int32_t L_12 = __this->____options_5;
 		bool L_13 = V_0;
 		G_B3_0 = L_12;
 		G_B3_1 = __this;
@@ -15570,7 +15570,7 @@ IL_0064:
 IL_0065:
 	{
 		NullCheck(G_B5_2);
-		G_B5_2->____options_6 = ((int32_t)((int32_t)G_B5_1|G_B5_0));
+		G_B5_2->____options_5 = ((int32_t)((int32_t)G_B5_1|G_B5_0));
 		return;
 	}
 }
@@ -15615,10 +15615,10 @@ IL_000b:
 
 IL_0010:
 	{
-		CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57* L_4 = __this->____compareInfo_5;
+		CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57* L_4 = __this->____compareInfo_4;
 		String_t* L_5 = ___0_x;
 		String_t* L_6 = ___1_y;
-		int32_t L_7 = __this->____options_6;
+		int32_t L_7 = __this->____options_5;
 		NullCheck(L_4);
 		int32_t L_8;
 		L_8 = VirtualFuncInvoker3< int32_t, String_t*, String_t*, int32_t >::Invoke(7 /* System.Int32 System.Globalization.CompareInfo::Compare(System.String,System.String,System.Globalization.CompareOptions) */, L_4, L_5, L_6, L_7);
@@ -15663,10 +15663,10 @@ IL_000c:
 
 IL_000e:
 	{
-		CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57* L_4 = __this->____compareInfo_5;
+		CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57* L_4 = __this->____compareInfo_4;
 		String_t* L_5 = ___0_x;
 		String_t* L_6 = ___1_y;
-		int32_t L_7 = __this->____options_6;
+		int32_t L_7 = __this->____options_5;
 		NullCheck(L_4);
 		int32_t L_8;
 		L_8 = VirtualFuncInvoker3< int32_t, String_t*, String_t*, int32_t >::Invoke(7 /* System.Int32 System.Globalization.CompareInfo::Compare(System.String,System.String,System.Globalization.CompareOptions) */, L_4, L_5, L_6, L_7);
@@ -15692,9 +15692,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CultureAwareComparer_GetHashCode_mB0C
 
 IL_000e:
 	{
-		CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57* L_2 = __this->____compareInfo_5;
+		CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57* L_2 = __this->____compareInfo_4;
 		String_t* L_3 = ___0_obj;
-		int32_t L_4 = __this->____options_6;
+		int32_t L_4 = __this->____options_5;
 		NullCheck(L_2);
 		int32_t L_5;
 		L_5 = CompareInfo_GetHashCodeOfString_m6CAF73F87A15B3C35C33C87C3DB49EA3FDEBAD92(L_2, L_3, L_4, NULL);
@@ -15721,20 +15721,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool CultureAwareComparer_Equals_m67EC2CA2EF3
 		}
 	}
 	{
-		int32_t L_2 = __this->____options_6;
+		int32_t L_2 = __this->____options_5;
 		CultureAwareComparer_t5822A6535A6EB4C448D1B7736067D1188BAEE8CD* L_3 = V_0;
 		NullCheck(L_3);
-		int32_t L_4 = L_3->____options_6;
+		int32_t L_4 = L_3->____options_5;
 		if ((!(((uint32_t)L_2) == ((uint32_t)L_4))))
 		{
 			goto IL_002a;
 		}
 	}
 	{
-		CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57* L_5 = __this->____compareInfo_5;
+		CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57* L_5 = __this->____compareInfo_4;
 		CultureAwareComparer_t5822A6535A6EB4C448D1B7736067D1188BAEE8CD* L_6 = V_0;
 		NullCheck(L_6);
-		CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57* L_7 = L_6->____compareInfo_5;
+		CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57* L_7 = L_6->____compareInfo_4;
 		NullCheck(L_5);
 		bool L_8;
 		L_8 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(0 /* System.Boolean System.Object::Equals(System.Object) */, L_5, L_7);
@@ -15750,11 +15750,11 @@ IL_002a:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CultureAwareComparer_GetHashCode_m8BAA3154380492A1729C5E60B5B362E3D2C7506C (CultureAwareComparer_t5822A6535A6EB4C448D1B7736067D1188BAEE8CD* __this, const RuntimeMethod* method) 
 {
 	{
-		CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57* L_0 = __this->____compareInfo_5;
+		CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57* L_0 = __this->____compareInfo_4;
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(2 /* System.Int32 System.Object::GetHashCode() */, L_0);
-		int32_t L_2 = __this->____options_6;
+		int32_t L_2 = __this->____options_5;
 		return ((int32_t)(L_1^((int32_t)((int32_t)L_2&((int32_t)2147483647LL)))));
 	}
 }
@@ -15772,17 +15772,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CultureAwareComparer_GetObjectData_mC510
 	}
 	{
 		SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* L_0 = ___0_info;
-		CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57* L_1 = __this->____compareInfo_5;
+		CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57* L_1 = __this->____compareInfo_4;
 		NullCheck(L_0);
 		SerializationInfo_AddValue_m28FE9B110F21DDB8FF5F5E35A0EABD659DB22C2F(L_0, _stringLiteralD0769C2ACDC6A8BB10DB687C30BB48D3DAAD230D, L_1, NULL);
 		SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* L_2 = ___0_info;
-		int32_t L_3 = __this->____options_6;
+		int32_t L_3 = __this->____options_5;
 		int32_t L_4 = L_3;
 		RuntimeObject* L_5 = Box(CompareOptions_tE5E7275E1FCBD5F8F3B53CC0038A11CABE120B00_il2cpp_TypeInfo_var, &L_4);
 		NullCheck(L_2);
 		SerializationInfo_AddValue_m28FE9B110F21DDB8FF5F5E35A0EABD659DB22C2F(L_2, _stringLiteral8D7B0824DA4C41FD5844035EC0530A44A11BC72E, L_5, NULL);
 		SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* L_6 = ___0_info;
-		int32_t L_7 = __this->____options_6;
+		int32_t L_7 = __this->____options_5;
 		NullCheck(L_6);
 		SerializationInfo_AddValue_mC52253CB19C98F82A26E32C941F8F20E106D4C0D(L_6, _stringLiteral4EC0A8C0F8AF6FD87F89085B7CC3CCE760ECF2FD, (bool)((!(((uint32_t)((int32_t)((int32_t)L_7&1))) <= ((uint32_t)0)))? 1 : 0), NULL);
 		return;

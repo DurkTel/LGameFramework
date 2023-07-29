@@ -11,14 +11,16 @@ public class ProcedureUpdateVersion : FSM_Status<ProcedureLaunchProcess>
 
     private bool m_UpdateCShare;
 
-    private bool m_IsRunning;
-
     private List<string> m_DownloadList;
+
+    private AssetFileDownloadQueue m_FileDownloadQueue;
+
     public override void OnAction()
     {
-        if (!m_IsRunning) return;
+        if (m_FileDownloadQueue != null)
+            m_FileDownloadQueue.Update();
 
-        if (!m_IsNeedUpdate || AssetFileDownloadQueue.instance.downloadingCurrent.Count <= 0)
+        if (!m_IsNeedUpdate || m_FileDownloadQueue.DownloadingCurrent.Count <= 0)
         {
             Debug.Log("更新完成");
             if (m_UpdateCShare)
@@ -105,16 +107,16 @@ public class ProcedureUpdateVersion : FSM_Status<ProcedureLaunchProcess>
         { 
             m_DownloadList.Add("version.txt");
             m_IsNeedUpdate = true;
+            m_FileDownloadQueue = new AssetFileDownloadQueue();
         }
 
         foreach (var assetName in m_DownloadList)
         {
             string url = Path.Combine(ProcedureLaunchPath.s_NetServerPath, assetName.Replace("\\", "/"));
             string localPath = Path.Combine(ProcedureLaunchPath.localDataPath, assetName).Replace("\\", "/");
-            AssetFileDownloadQueue.Enqueue(url, localPath);
+            m_FileDownloadQueue.Enqueue(url, localPath);
         }
 
-        m_IsRunning = true;
     }
 
     public override void OnExit()
@@ -123,7 +125,9 @@ public class ProcedureUpdateVersion : FSM_Status<ProcedureLaunchProcess>
             m_DownloadList.Clear();
 
         m_DownloadList = null;
-        m_IsRunning = false;
         m_UpdateCShare = false;
+
+        m_FileDownloadQueue.Dispose();
+        m_FileDownloadQueue = null;
     }
 }

@@ -13,22 +13,22 @@ namespace GameCore.GUI
         public GUIModule GUIModule { get { return m_GUIModule; } }
 
         protected GameObject m_GameObject;
-        public GameObject gameObject { get { return m_GameObject; } }
+        public GameObject GameObject { get { return m_GameObject; } }
 
         protected RectTransform m_RectTransform;
-        public RectTransform rectTransform { get { return m_RectTransform; } }
+        public RectTransform RectTransform { get { return m_RectTransform; } }
 
         protected GameObject m_PrefabInstantiate;
-        public GameObject prefabInstantiate { get { return m_PrefabInstantiate; } }
+        public GameObject PrefabInstantiate { get { return m_PrefabInstantiate; } }
 
         protected Injection m_Injection;
-        public Injection injection { get { return m_Injection; } }
+        public Injection Injection { get { return m_Injection; } }
 
         protected bool m_IsLoading;
-        public bool isLoading { get { return m_IsLoading; } }
+        public bool IsLoading { get { return m_IsLoading; } }
 
         protected GUIModule.GUIViewLayer m_GUIViewLayer;
-        public GUIModule.GUIViewLayer guiViewLayer { get { return m_GUIViewLayer; } }
+        public GUIModule.GUIViewLayer GUIViewLayer { get { return m_GUIViewLayer; } }
         #endregion
 
         #region 派生参数
@@ -36,22 +36,22 @@ namespace GameCore.GUI
         /// 该界面对应预制体
         /// </summary>
         protected virtual string m_PrefabName { get { return "GUI_Default_View.prefab"; } }
-        public string prefabName { get { return m_PrefabName; } }
+        public string PrefabName { get { return m_PrefabName; } }
         /// <summary>
         /// 该界面对应层级
         /// </summary>
         protected virtual GUIModule.UILayerLevel m_LayerLevel { get { return GUIModule.UILayerLevel.ViewUILayer; } }
-        public GUIModule.UILayerLevel layerLevel { get { return m_LayerLevel; } }
+        public GUIModule.UILayerLevel LayerLevel { get { return m_LayerLevel; } }
         /// <summary>
         /// 界面动画
         /// </summary>
         protected virtual UnityAction<GUIView, bool, UnityAction> m_OpenTween { get { return GUIModule.GUITweenDefault; } }
-        protected UnityAction<GUIView, bool, UnityAction> openTween { get { return m_OpenTween; } }
+        protected UnityAction<GUIView, bool, UnityAction> OpenTween { get { return m_OpenTween; } }
         /// <summary>
         /// 销毁时间
         /// </summary>
         protected virtual float m_DestroyTime { get { return 5f; } }
-        public float destroyTime { get { return m_DestroyTime; } }
+        public float DestroyTime { get { return m_DestroyTime; } }
 
         #endregion
 
@@ -89,8 +89,8 @@ namespace GameCore.GUI
 
         public virtual void OnOpenEffect()
         {
-            if (openTween != null)
-                openTween.Invoke(this, true, OnEnable);
+            if (OpenTween != null)
+                OpenTween.Invoke(this, true, OnEnable);
             else
                 OnEnable();
         }
@@ -107,8 +107,8 @@ namespace GameCore.GUI
 
         public virtual void OnDisableEffect()
         {
-            if (openTween != null)
-                openTween.Invoke(this, false, OnDisable);
+            if (OpenTween != null)
+                OpenTween.Invoke(this, false, OnDisable);
             else
                 OnDisable();
         }
@@ -116,7 +116,7 @@ namespace GameCore.GUI
         public virtual void OnDisable()
         {
             SetVisible(false);
-            m_GUIModule.WaitToDestroy(this, destroyTime);
+            m_GUIModule.WaitToDestroy(this, DestroyTime);
         }
 
         public virtual void OnDispose()

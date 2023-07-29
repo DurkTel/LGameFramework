@@ -9,27 +9,27 @@ namespace GameCore.Asset
         /// <summary>
         /// AB包
         /// </summary>
-        public AssetBundle assetBundle { get; set; }
+        public AssetBundle AssetBundle { get; set; }
         /// <summary>
         /// 包名
         /// </summary>
-        public string bundleName { get; set; }
+        public string BundleName { get; set; }
         /// <summary>
         /// 依赖此AB包的引用计数
         /// </summary>
-        public int dpendsReferenceCount { get; set; }
+        public int DpendsReferenceCount { get; set; }
         /// <summary>
         /// 此AB包加载出来的源对象计数
         /// </summary>
-        public int rawReferenceCount { get; set; }
+        public int RawReferenceCount { get; set; }
         /// <summary>
         /// 此AB是否正在加载资源
         /// </summary>
-        public bool isAssetLoading { get; set; }
+        public bool IsAssetLoading { get; set; }
         /// <summary>
         /// 开始等待销毁事件
         /// </summary>
-        public float beginDestroyTime { get; set; }
+        public float BeginDestroyTime { get; set; }
 
         /// <summary>
         /// 卸载此AB包
@@ -37,11 +37,11 @@ namespace GameCore.Asset
         /// <param name="unloadAllLoadedObjects"></param>
         internal void Unload(bool unloadAllLoadedObjects = false)
         {
-            assetBundle.Unload(unloadAllLoadedObjects);
-            assetBundle = null;
-            bundleName = null;
-            dpendsReferenceCount = 0;
-            rawReferenceCount = 0;
+            AssetBundle.Unload(unloadAllLoadedObjects);
+            AssetBundle = null;
+            BundleName = null;
+            DpendsReferenceCount = 0;
+            RawReferenceCount = 0;
         }
     }
 }

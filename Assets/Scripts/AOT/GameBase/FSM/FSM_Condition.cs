@@ -5,7 +5,7 @@ namespace GameBase.FSM
 {
     public interface IFSM_Condition
     {
-        string dataName { get; set; }
+        string DataName { get; set; }
         bool Tick(FSM_DataBase dataBase);
     }
 
@@ -18,22 +18,22 @@ namespace GameBase.FSM
         /// <summary>
         /// 判断该条件所需数据名称
         /// </summary>
-        public string dataName { get; set; }
+        public string DataName { get; set; }
         /// <summary>
         /// 条件数据的预期值
         /// </summary>
-        public T target { get; set; }
+        public T Target { get; set; }
         /// <summary>
         /// 当前条件数据的值
         /// </summary>
-        public T curData { get; set; }
+        public T CurData { get; set; }
 
         public FSM_Condition() { }
 
         public FSM_Condition(string dataName, T target)
         {
-            this.dataName = dataName;
-            this.target = target;
+            this.DataName = dataName;
+            this.Target = target;
         }
         /// <summary>
         /// 返回条件是否满足
@@ -41,7 +41,7 @@ namespace GameBase.FSM
         /// <returns></returns>
         public virtual bool Tick(FSM_DataBase dataBase)
         {
-            curData = dataBase.GetData<T>(dataName);
+            CurData = dataBase.GetData<T>(DataName);
 
             return false;
         }
@@ -57,19 +57,19 @@ namespace GameBase.FSM
             Greater,
             Less
         }
-        public FloatCondition condition { get; set; }
+        public FloatCondition Condition { get; set; }
         public FSM_Condition_Float() { }
-        public FSM_Condition_Float(string dataName, float target, FloatCondition condition) : base(dataName, target) { this.condition = condition; }
+        public FSM_Condition_Float(string dataName, float target, FloatCondition condition) : base(dataName, target) { this.Condition = condition; }
 
         public override bool Tick(FSM_DataBase dataBase)
         {
             base.Tick(dataBase);
-            switch (condition)
+            switch (Condition)
             {
                 case FloatCondition.Greater:
-                    return curData > target;
+                    return CurData > Target;
                 case FloatCondition.Less:
-                    return curData < target;
+                    return CurData < Target;
             }
 
             return false;
@@ -88,23 +88,23 @@ namespace GameBase.FSM
             Equals,
             NotEquals
         }
-        public IntCondition condition { get; set; }
+        public IntCondition Condition { get; set; }
         public FSM_Condition_Int() { }
-        public FSM_Condition_Int(string dataName, int target, IntCondition condition) : base(dataName, target) { this.condition = condition; }
+        public FSM_Condition_Int(string dataName, int target, IntCondition condition) : base(dataName, target) { this.Condition = condition; }
 
         public override bool Tick(FSM_DataBase dataBase)
         {
             base.Tick(dataBase);
-            switch (condition)
+            switch (Condition)
             {
                 case IntCondition.Greater:
-                    return curData > target;
+                    return CurData > Target;
                 case IntCondition.Less:
-                    return curData < target;
+                    return CurData < Target;
                 case IntCondition.Equals:
-                    return curData == target;
+                    return CurData == Target;
                 case IntCondition.NotEquals:
-                    return curData != target;
+                    return CurData != Target;
             }
 
             return false;
@@ -122,23 +122,23 @@ namespace GameBase.FSM
             True,
             False
         }
-        public BoolerCondition condition { get; set; }
+        public BoolerCondition Condition { get; set; }
         public FSM_Condition_Booler() { }
         public FSM_Condition_Booler(string dataName, BoolerCondition condition)
         {
-            this.dataName = dataName;
-            this.condition = condition;
+            this.DataName = dataName;
+            this.Condition = condition;
         }
 
         public override bool Tick(FSM_DataBase dataBase)
         {
             base.Tick(dataBase);
-            switch (condition)
+            switch (Condition)
             {
                 case BoolerCondition.True:
-                    return curData == true;
+                    return CurData == true;
                 case BoolerCondition.False:
-                    return curData == false;
+                    return CurData == false;
             }
 
             return false;
@@ -154,14 +154,14 @@ namespace GameBase.FSM
         public FSM_Condition_Trigger() { }
         public FSM_Condition_Trigger(string dataName)
         {
-            this.dataName = dataName;
+            this.DataName = dataName;
         }
 
         public override bool Tick(FSM_DataBase dataBase)
         {
             base.Tick(dataBase);
-            dataBase.SetData<bool>(dataName, false);
-            return curData;
+            dataBase.SetData<bool>(DataName, false);
+            return CurData;
         }
     }
 }

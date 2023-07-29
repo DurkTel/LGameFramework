@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using LGameFramework.GameBase.Pool;
 
 namespace GameCore.Timer
 {
@@ -14,10 +15,10 @@ namespace GameCore.Timer
 
         private List<int> m_WaitRemove;
 
-        internal override int priority => 3;
+        internal override int Priority => 3;
 
-        internal override GameObject gameObject { get; set; }
-        internal override Transform transform { get; set; }
+        internal override GameObject GameObject { get; set; }
+        internal override Transform Transform { get; set; }
 
         internal override void OnInit()
         {
@@ -72,7 +73,7 @@ namespace GameCore.Timer
         public int AddTimer(UnityAction callback, float delay = 0f, float interval = 1f, int duration = 1)
         {
             Timer timer = SetTimer(TimerType.NOMAL, callback, delay, interval, duration);
-            int id = timer.id;
+            int id = timer.Id;
             m_WaitAdd.Add(id, timer);
 
             return id;
@@ -81,7 +82,7 @@ namespace GameCore.Timer
         public int AddFrame(UnityAction callback, float delay = 0f, float interval = 1f, int duration = 1)
         {
             Timer timer = SetTimer(TimerType.FRAME, callback, delay, interval, duration);
-            int id = timer.id;
+            int id = timer.Id;
             m_WaitAdd.Add(id, timer);
 
             return id;
@@ -103,7 +104,7 @@ namespace GameCore.Timer
         {
             private static int m_ID = 99;
 
-            public int id { get { return ++m_ID; } }
+            public int Id { get { return ++m_ID; } }
 
             private TimerType m_TimerType;
 

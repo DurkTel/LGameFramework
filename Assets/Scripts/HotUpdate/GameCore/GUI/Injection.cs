@@ -18,7 +18,7 @@ public class Injection : UIBehaviour
                 m_Components = new Dictionary<string, Component>(injectionObjects.Count);
                 foreach (InjectionObject obj in injectionObjects)
                 {
-                    m_Components.Add(obj.name, obj.component);
+                    m_Components.Add(obj.Name, obj.Component);
                 }
             }
             return m_Components[name]; 
@@ -31,11 +31,11 @@ public class InjectionObject
 {
     [SerializeField]
     private string m_Name;
-    public string name { get { return m_Name; } }
+    public string Name { get { return m_Name; } }
     [SerializeField]
     private Object m_Target;
-    public Object target { get { return m_Target; } }
+    public Object Target { get { return m_Target; } }
     [SerializeField]
     private Component m_Component;
-    public Component component { get { return m_Component; } }
+    public Component Component { get { return m_Component; } }
 }

@@ -10,27 +10,27 @@ namespace GameCore.Entity
         /// 相机裁切是否开启
         /// </summary>
         private bool m_CullingGroupEnabled;
-        public bool cullingGroupEnabled { get { return m_CullingGroupEnabled; } }
+        public bool CullingGroupEnabled { get { return m_CullingGroupEnabled; } }
         /// <summary>
         /// 相机裁切半径
         /// </summary>
         private float m_CullingRadius;
-        public float cullingRadius { get { return m_CullingRadius; } }
+        public float CullingRadius { get { return m_CullingRadius; } }
         /// <summary>
         /// 裁切lod
         /// </summary>
         private int m_CullingLod;
-        public int cullingLod { get { return m_CullingLod; } }
-        public FMEntityManager.EntityCullingGroup cullingGroup { get; set; }
+        public int CullingLod { get { return m_CullingLod; } }
+        public FMEntityManager.EntityCullingGroup CullingGroup { get; set; }
 
         private void CullGroupInit()
         {
             m_CullingGroupEnabled = true;
             m_CullingRadius = 0.5f;
-            if (cullingGroup != null)
+            if (CullingGroup != null)
             {
-                m_CullingLod = cullingGroup.GetDistance(this);
-                OnCullingVisible(cullingGroup.IsVisible(this));
+                m_CullingLod = CullingGroup.GetDistance(this);
+                OnCullingVisible(CullingGroup.IsVisible(this));
             }
         }
 
@@ -43,7 +43,7 @@ namespace GameCore.Entity
         {
             if (!m_CullingGroupEnabled) return;
 
-            visible = value;
+            Visible = value;
         }
 
         public void CullGroupUpdate(float deltaTime)
@@ -51,7 +51,7 @@ namespace GameCore.Entity
             if (!m_CullingGroupEnabled)
                 return;
 
-            cullingGroup.UpdateBoundingSphere(this, transform.position, cullingRadius);
+            CullingGroup.UpdateBoundingSphere(this, Transform.position, CullingRadius);
         }
 
         private void ReleaseCullGroup()

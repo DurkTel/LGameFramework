@@ -2,6 +2,7 @@ using GameBase.FSM;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using LGameFramework.GameBase;
 
 /// <summary>
 /// Á÷³Ì¼ÓÔØÆ÷
@@ -10,11 +11,15 @@ public class ProcedureLauncher : MonoBehaviour
 {
     public static string procedureMarkHead = "Procedure_";
 
+    public GameLaunchSetting launchSetting;
+
     private ProcedureFSM m_Procedure;
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if (launchSetting == null)
+            launchSetting = ScriptableObject.CreateInstance<GameLaunchSetting>();
+
         m_Procedure = new ProcedureFSM();
         m_Procedure.dataBase = gameObject.AddComponent<FSM_DataBase>();
         m_Procedure.AddStatus<ProcedureLaunch>(ProcedureLaunchProcess.Launch);
@@ -22,7 +27,7 @@ public class ProcedureLauncher : MonoBehaviour
         m_Procedure.AddStatus<ProcedureCheckLocalFile>(ProcedureLaunchProcess.CheckLocalFile);
         m_Procedure.AddStatus<ProcedureUpdateVersion>(ProcedureLaunchProcess.UpdateVersion);
         m_Procedure.AddStatus<ProcedureGameEntry>(ProcedureLaunchProcess.GameEntry);
-
+        
         m_Procedure.OnInit();
     }
 

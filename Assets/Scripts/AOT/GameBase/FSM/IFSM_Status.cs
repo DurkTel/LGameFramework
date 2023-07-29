@@ -5,7 +5,7 @@ namespace GameBase.FSM
 {
     public interface IFSM_Status<TStateID>
     {
-        TStateID name { get; set; }
+        TStateID Name { get; set; }
         void OnAction();
         void OnEnter();
         void OnExit();

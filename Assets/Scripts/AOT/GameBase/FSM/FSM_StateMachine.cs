@@ -9,19 +9,19 @@ namespace GameBase.FSM
         /// <summary>
         /// 当前状态
         /// </summary>
-        public FSM_Status<TStateId> activeState { get; set; }
+        public FSM_Status<TStateId> ActiveState { get; set; }
         /// <summary>
         /// 上次状态
         /// </summary>
-        public FSM_Status<TStateId> lastState { get; set; }
+        public FSM_Status<TStateId> LastState { get; set; }
         /// <summary>
         /// 默认状态
         /// </summary>
-        public FSM_Status<TStateId> defaultState { get; set; }
+        public FSM_Status<TStateId> DefaultState { get; set; }
         /// <summary>
         /// 当前状态名称
         /// </summary>
-        public TStateId activeStateName { get { return activeState.name; } }
+        public TStateId ActiveStateName { get { return ActiveState.name; } }
         /// <summary>
         /// 所有的状态
         /// </summary>
@@ -37,17 +37,17 @@ namespace GameBase.FSM
         /// <summary>
         /// 一个空过渡线
         /// </summary>
-        private static readonly List<FSM_Transition<TStateId>> noTransitions = new List<FSM_Transition<TStateId>>(0);
+        private static readonly List<FSM_Transition<TStateId>> s_NoTransitions = new List<FSM_Transition<TStateId>>(0);
         /// <summary>
         /// 是否是根状态机
         /// </summary>
-        public bool isRootMachine { get { return subMachine == null; } }
+        public bool IsRootMachine { get { return subMachine == null; } }
         /// <summary>
         /// 初始化
         /// </summary>
         public override void OnInit()
         {
-            if (!isRootMachine) return;
+            if (!IsRootMachine) return;
             OnEnter();
         }
         /// <summary>
@@ -56,10 +56,9 @@ namespace GameBase.FSM
         /// <param name="newStatusID"></param>
         public virtual void ChangeState(TStateId name)
         {
-            if (activeState != null)
-                activeState.OnExit();
+            ActiveState?.OnExit();
 
-            lastState = activeState;
+            LastState = ActiveState;
             FSM_Status<TStateId> newState;
 
             if (!allStatus.TryGetValue(name, out newState))
@@ -68,10 +67,10 @@ namespace GameBase.FSM
             }
 
             //重置当前需要检测的过渡线
-            activeTransitions = newState.transitions ?? noTransitions;
+            activeTransitions = newState.transitions ?? s_NoTransitions;
 
-            activeState = newState;
-            activeState.OnEnter();
+            ActiveState = newState;
+            ActiveState.OnEnter();
 
         }
 
@@ -88,7 +87,7 @@ namespace GameBase.FSM
             state.OnInit();
 
             if (allStatus.Count == 0)
-                defaultState = state;
+                DefaultState = state;
 
             allStatus.Add(name, state);
         }
@@ -108,7 +107,7 @@ namespace GameBase.FSM
         /// </summary>
         public override void AddTransition(FSM_Transition<TStateId> transition)
         {
-            if (allStatus.TryGetValue(transition.formStatusID, out FSM_Status<TStateId> form))
+            if (allStatus.TryGetValue(transition.FormStatusID, out FSM_Status<TStateId> form))
             {
                 form.AddTransition(transition);
             }
@@ -135,7 +134,7 @@ namespace GameBase.FSM
             if (!transition.Tick(dataBase))
                 return false;
 
-            ChangeState(transition.toStatusID);
+            ChangeState(transition.ToStatusID);
 
             return true;
         }
@@ -169,7 +168,7 @@ namespace GameBase.FSM
                 transition = transitionsFromAny[i];
 
                 //不需要检测从自己到自己的过渡
-                if (transition.Equals(activeState.name, transition.toStatusID))
+                if (transition.Equals(ActiveState.name, transition.ToStatusID))
                     continue;
 
                 if (TryTransition(transition))
@@ -188,7 +187,7 @@ namespace GameBase.FSM
                 }
             }
 
-            activeState.OnAction();
+            ActiveState.OnAction();
         }
         /// <summary>
         /// 进入该状态
@@ -196,10 +195,10 @@ namespace GameBase.FSM
         public override void OnEnter()
         {
             base.OnEnter();
-            if (defaultState == null)
+            if (DefaultState == null)
                 Debug.LogError("没有默认状态，状态机至少在AddStatus方法中添加一个状态");
 
-            ChangeState(defaultState.name);
+            ChangeState(DefaultState.name);
         }
         /// <summary>
         /// 退出该状态
@@ -207,10 +206,10 @@ namespace GameBase.FSM
         public override void OnExit()
         {
             base.OnExit();
-            if (activeState != null)
+            if (ActiveState != null)
             {
-                activeState.OnExit();
-                activeState = null;
+                ActiveState.OnExit();
+                ActiveState = null;
             }
         }
     }

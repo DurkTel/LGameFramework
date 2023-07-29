@@ -2393,16 +2393,16 @@ struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915
 struct ReadOnlyArrayList_t8BE44A98B45F512DBD83604A0D468C79822107E7  : public ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A
 {
 	// System.Collections.ArrayList System.Collections.ArrayList/ReadOnlyArrayList::_list
-	ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* ____list_6;
+	ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* ____list_4;
 };
 
 // System.Collections.ArrayList/SyncArrayList
 struct SyncArrayList_t05563DC68A3F29C79CC5D512A857D898DFA4E8DB  : public ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A
 {
 	// System.Collections.ArrayList System.Collections.ArrayList/SyncArrayList::_list
-	ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* ____list_6;
+	ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* ____list_4;
 	// System.Object System.Collections.ArrayList/SyncArrayList::_root
-	RuntimeObject* ____root_7;
+	RuntimeObject* ____root_5;
 };
 
 // System.Globalization.CultureInfo/Data

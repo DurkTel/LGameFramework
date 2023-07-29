@@ -8,33 +8,33 @@ namespace GameCore.Asset
 {
     public abstract class AssetLoader : IEnumerator
     {
-        public FMAssetManager module { get; set; }
+        public FMAssetManager Module { get; set; }
 
         protected string m_AssetName;
-        public string assetName { get { return m_AssetName; } }
+        public string AssetName { get { return m_AssetName; } }
 
         protected System.Type m_AssetType;
-        public System.Type assetType { get { return m_AssetType; } }
+        public System.Type AssetType { get { return m_AssetType; } }
 
         protected bool m_IsDone;
-        public bool isDone { get { return m_IsDone; } }
+        public bool IsDone { get { return m_IsDone; } }
 
         protected float m_Progress;
-        public float progress { get { return m_Progress; } }
+        public float Progress { get { return m_Progress; } }
 
         protected int m_Priority;
-        public int priority { get { return m_Priority; } }
+        public int Priority { get { return m_Priority; } }
 
         protected bool m_Async;
-        public bool async { get { return m_Async; } }
+        public bool Async { get { return m_Async; } }
 
         protected bool m_Error;
-        public bool error { get { return m_Error; } }
+        public bool Error { get { return m_Error; } }
 
         protected Object m_RawObject;
 
         protected AssetCache.RawObjectInfo m_RawObjectInfo;
-        public AssetCache.RawObjectInfo rawObjectInfo { get { return m_RawObjectInfo; } }
+        public AssetCache.RawObjectInfo RawObjectInfo { get { return m_RawObjectInfo; } }
 
         public object Current { get; }
 

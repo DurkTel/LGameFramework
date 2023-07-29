@@ -16,14 +16,14 @@ namespace GameCore.GUI
 
         public class GUIViewLayer
         {
-            private GameObject m_GameObject;
-            public GameObject gameObject { get { return m_GameObject; } }
+            private readonly GameObject m_GameObject;
+            public GameObject GameObject { get { return m_GameObject; } }
 
-            private Transform m_Transform;
-            public Transform transform { get { return m_Transform; } }
+            private readonly Transform m_Transform;
+            public Transform Transform { get { return m_Transform; } }
 
-            private Canvas m_Canvas;
-            public Canvas canvas { get { return m_Canvas; } }
+            private readonly Canvas m_Canvas;
+            public Canvas Canvas { get { return m_Canvas; } }
 
             private Dictionary<GUIView, int> m_SortingOrder;
 
@@ -50,8 +50,8 @@ namespace GameCore.GUI
 
             public void AddView(GUIView view)
             {
-                view.rectTransform.SetParentZero(m_Transform);
-                view.rectTransform.TileRectTransform();
+                view.RectTransform.SetParentZero(m_Transform);
+                view.RectTransform.TileRectTransform();
 
                 m_SortingOrder ??= new Dictionary<GUIView, int>();
                 m_SortingOrder.Add(view, 0);
@@ -87,15 +87,15 @@ namespace GameCore.GUI
                     {
                         order = m_MinSortingOrder + i * m_ViewOffsetOrder;
                         temp = m_Views[i];
-                        temp.gameObject.UpdateCanvas(order);
-                        temp.rectTransform.SetAsLastSibling();
+                        temp.GameObject.UpdateCanvas(order);
+                        temp.RectTransform.SetAsLastSibling();
                         m_SortingOrder[view] = order;
                     }
                     topOrder = order + m_ViewOffsetOrder;
                 }
 
-                view.gameObject.UpdateCanvas(topOrder);
-                view.rectTransform.SetAsLastSibling();
+                view.GameObject.UpdateCanvas(topOrder);
+                view.RectTransform.SetAsLastSibling();
                 m_SortingOrder[view] = topOrder;
             }
 

@@ -31,15 +31,15 @@ public class ListView : Injection
 
     [SerializeField]
     private ScrollRect m_scrollRect;
-    public ScrollRect scrollRect { get { return m_scrollRect; } set { m_scrollRect = value; } }
+    public ScrollRect ScrollRect { get { return m_scrollRect; } set { m_scrollRect = value; } }
 
     [SerializeField]
     private RectTransform m_viewPort;
-    public RectTransform viewPort { get { return m_viewPort; } set { m_viewPort = value; } }
+    public RectTransform ViewPort { get { return m_viewPort; } set { m_viewPort = value; } }
 
     [SerializeField]
     private RectTransform m_content;
-    public RectTransform content { get { return m_content; } set { m_content = value; } }
+    public RectTransform Content { get { return m_content; } set { m_content = value; } }
 
     [SerializeField]
     private GameObject m_template;
@@ -49,14 +49,14 @@ public class ListView : Injection
 
     [SerializeField]
     private int m_dataCount;
-    public int dataCount { get { return m_dataCount; } set { m_dataCount = value; ForceRefresh(); } }
+    public int DataCount { get { return m_dataCount; } set { m_dataCount = value; ForceRefresh(); } }
 
     [SerializeField]
     private int m_waitCreateCount;
 
     [SerializeField]
     private Vector2 m_spacing;
-    public Vector2 spacing { get { return m_spacing; } set { m_spacing = value; ForceRefresh(); } }
+    public Vector2 Spacing { get { return m_spacing; } set { m_spacing = value; ForceRefresh(); } }
 
     private int m_waitIndex;
 
@@ -84,10 +84,10 @@ public class ListView : Injection
             return m_itemSize;
         }
     }
-    public UnityAction<ListViewItemRender> onItemCreate { get; set; }
-    public UnityAction<ListViewItemRender> onItemUpdate { get; set; }
-    public UnityAction<ListViewItemRender> onItemRelease { get; set; }
-    public UnityAction onUpdateComplete { get; set; }
+    public UnityAction<ListViewItemRender> OnItemCreate { get; set; }
+    public UnityAction<ListViewItemRender> OnItemUpdate { get; set; }
+    public UnityAction<ListViewItemRender> OnItemRelease { get; set; }
+    public UnityAction OnUpdateComplete { get; set; }
 
     private void Start()
     {
@@ -186,7 +186,7 @@ public class ListView : Injection
                     m_visibleList.Remove(index);
                     m_releaseList.TryUniqueAdd(item);
                     item.Release();
-                    onItemRelease?.Invoke(item);
+                    OnItemRelease?.Invoke(item);
                 }
             }
 
@@ -218,7 +218,7 @@ public class ListView : Injection
 
                     item.SetData(i);
                     item.Create(go);
-                    onItemCreate?.Invoke(item);
+                    OnItemCreate?.Invoke(item);
                 }
                 else
                 {
@@ -230,14 +230,14 @@ public class ListView : Injection
             }
             item.SetData(i);
             item.Refresh();
-            onItemUpdate?.Invoke(item);
+            OnItemUpdate?.Invoke(item);
         }
 
         if (m_visibleList.Count > lastIndex - firstIndex)
         {
             m_forceRefresh = false;
             m_waitIndex = 0;
-            onUpdateComplete?.Invoke();
+            OnUpdateComplete?.Invoke();
         }
 
         m_lastRage.Set(firstIndex, lastIndex);

@@ -8,9 +8,9 @@ namespace GameCore.Entity
     public sealed partial class FMEntityManager : FrameworkModule
     {
         private static int m_GUID = 0;
-        internal override int priority => 3;
-        internal override GameObject gameObject { get; set; }
-        internal override Transform transform { get; set; }
+        internal override int Priority => 3;
+        internal override GameObject GameObject { get; set; }
+        internal override Transform Transform { get; set; }
 
         private EntityCullingGroup m_CullingGroup;
 
@@ -30,8 +30,8 @@ namespace GameCore.Entity
             m_EntityGroupMap = new Dictionary<EntityType, EntityGroup>();
             m_Enable = new GameObject("EnableEntitys").transform;
             m_Disable = new GameObject("DisableEntitys").transform;
-            m_Enable.SetParentZero(transform);
-            m_Disable.SetParentZero(transform);
+            m_Enable.SetParentZero(Transform);
+            m_Disable.SetParentZero(Transform);
         }
 
         internal override void Update(float deltaTime, float unscaledTime)
@@ -80,7 +80,7 @@ namespace GameCore.Entity
 
             int eid = ++m_GUID;
             entity.OnInit(eid, etype, group);
-            entity.transform.SetParentZero(m_Enable);
+            entity.Transform.SetParentZero(m_Enable);
             m_EntityMap.Add(eid, entity);
             m_CullingGroup.AddCullingObject(entity);
             return entity;
@@ -93,8 +93,8 @@ namespace GameCore.Entity
             {
                 entity.SetStatus(EntityStatus.WillRelease);
                 entity.Release();
-                entity.transform.SetParent(m_Disable);
-                entity.transform.localPosition = new Vector3(0, -99999, 0);
+                entity.Transform.SetParent(m_Disable);
+                entity.Transform.localPosition = new Vector3(0, -99999, 0);
                 m_CullingGroup.RemoveCullingObject(entity);
                 return true;
             }

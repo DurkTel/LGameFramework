@@ -70,18 +70,18 @@ namespace GameCore
         private static T CreateModule<T>() where T : FrameworkModule, new()
         { 
             T module = new T();
-            module.gameObject = new GameObject(typeof(T).Name);
-            module.transform = module.gameObject.transform;
+            module.GameObject = new GameObject(typeof(T).Name);
+            module.Transform = module.GameObject.transform;
             module.OnInit();
-            DontDestroyOnLoad(module.gameObject);
-            module.transform.SetParentZero(m_GameRoot);
+            DontDestroyOnLoad(module.GameObject);
+            module.Transform.SetParentZero(m_GameRoot);
 
             LinkedListNode<FrameworkModule> current = s_AllFrameworkModule.First;
 
             //根据优先级选择插入的位置
             while (current != null)
             {
-                if (module.priority > current.Value.priority)
+                if (module.Priority > current.Value.Priority)
                 {
                     break;
                 }

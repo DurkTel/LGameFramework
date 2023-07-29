@@ -60,18 +60,18 @@ extern void ProcedureLaunch_OnEnter_mA0FA50C27C112C05B87D6D809DE7C55CBE69102E (v
 extern void ProcedureLaunch_OnExit_m0F13AF977E678EFE0312813CDAC9EB26F9029CC8 (void);
 // 0x00000018 System.Void ProcedureLaunch::.ctor()
 extern void ProcedureLaunch__ctor_mF3886C96EC2FEE3899991AFF6AC467CCF7936022 (void);
-// 0x00000019 System.Void ProcedureFSM::ChangeState(ProcedureLaunchProcess)
-extern void ProcedureFSM_ChangeState_m75D5E4B999A2D6534118BF4182A2A46C7371488F (void);
-// 0x0000001A System.Void ProcedureFSM::.ctor()
-extern void ProcedureFSM__ctor_mD53F279AF5CE96885888E305E747DDC164D3FB07 (void);
-// 0x0000001B System.Void ProcedureLauncher::Awake()
+// 0x00000019 System.Void ProcedureLauncher::Awake()
 extern void ProcedureLauncher_Awake_mA9530B416DA4A698798E74A62C40EAD1B72C212C (void);
-// 0x0000001C System.Void ProcedureLauncher::Update()
+// 0x0000001A System.Void ProcedureLauncher::Update()
 extern void ProcedureLauncher_Update_m6646F961932AF83C7CFB37212FDDA0A4C3233A3E (void);
-// 0x0000001D System.Void ProcedureLauncher::.ctor()
+// 0x0000001B System.Void ProcedureLauncher::.ctor()
 extern void ProcedureLauncher__ctor_mBE42A3B81F0D6BCB385BE0F7FD12E1F3584CBC27 (void);
-// 0x0000001E System.Void ProcedureLauncher::.cctor()
+// 0x0000001C System.Void ProcedureLauncher::.cctor()
 extern void ProcedureLauncher__cctor_m550A3B5A742D2841FAA3580EF78EA15BC519EE6B (void);
+// 0x0000001D System.Void ProcedureFSM::ChangeState(ProcedureLaunchProcess)
+extern void ProcedureFSM_ChangeState_m75D5E4B999A2D6534118BF4182A2A46C7371488F (void);
+// 0x0000001E System.Void ProcedureFSM::.ctor()
+extern void ProcedureFSM__ctor_mD53F279AF5CE96885888E305E747DDC164D3FB07 (void);
 // 0x0000001F System.Void ProcedureLaunchPath::.ctor()
 extern void ProcedureLaunchPath__ctor_mA5EA557BEEAB31BAEBA2737A30649170F15954EA (void);
 // 0x00000020 System.Void ProcedureLaunchPath::.cctor()
@@ -110,12 +110,12 @@ static Il2CppMethodPointer s_methodPointers[36] =
 	ProcedureLaunch_OnEnter_mA0FA50C27C112C05B87D6D809DE7C55CBE69102E,
 	ProcedureLaunch_OnExit_m0F13AF977E678EFE0312813CDAC9EB26F9029CC8,
 	ProcedureLaunch__ctor_mF3886C96EC2FEE3899991AFF6AC467CCF7936022,
-	ProcedureFSM_ChangeState_m75D5E4B999A2D6534118BF4182A2A46C7371488F,
-	ProcedureFSM__ctor_mD53F279AF5CE96885888E305E747DDC164D3FB07,
 	ProcedureLauncher_Awake_mA9530B416DA4A698798E74A62C40EAD1B72C212C,
 	ProcedureLauncher_Update_m6646F961932AF83C7CFB37212FDDA0A4C3233A3E,
 	ProcedureLauncher__ctor_mBE42A3B81F0D6BCB385BE0F7FD12E1F3584CBC27,
 	ProcedureLauncher__cctor_m550A3B5A742D2841FAA3580EF78EA15BC519EE6B,
+	ProcedureFSM_ChangeState_m75D5E4B999A2D6534118BF4182A2A46C7371488F,
+	ProcedureFSM__ctor_mD53F279AF5CE96885888E305E747DDC164D3FB07,
 	ProcedureLaunchPath__ctor_mA5EA557BEEAB31BAEBA2737A30649170F15954EA,
 	ProcedureLaunchPath__cctor_mEA5974035553F997095CDD133F993B92E721FB10,
 	ProcedureUpdateVersion_OnAction_m44FB317086830AC253E230F196F4C2B80D58344C,
@@ -125,42 +125,42 @@ static Il2CppMethodPointer s_methodPointers[36] =
 };
 static const int32_t s_InvokerIndices[36] = 
 {
-	5307,
-	5307,
-	5307,
-	5307,
-	1366,
-	5307,
-	5307,
-	5307,
-	5307,
-	5307,
-	5307,
-	8139,
-	5307,
-	5307,
-	5307,
-	5307,
-	8139,
-	5307,
-	5307,
-	5307,
-	5307,
-	5307,
-	5307,
-	5307,
-	4256,
-	5307,
-	5307,
-	5307,
-	5307,
-	8139,
-	5307,
-	8139,
-	5307,
-	5307,
-	5307,
-	5307,
+	5314,
+	5314,
+	5314,
+	5314,
+	1368,
+	5314,
+	5314,
+	5314,
+	5314,
+	5314,
+	5314,
+	8148,
+	5314,
+	5314,
+	5314,
+	5314,
+	8148,
+	5314,
+	5314,
+	5314,
+	5314,
+	5314,
+	5314,
+	5314,
+	5314,
+	5314,
+	5314,
+	8148,
+	4260,
+	5314,
+	5314,
+	8148,
+	5314,
+	5314,
+	5314,
+	5314,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 

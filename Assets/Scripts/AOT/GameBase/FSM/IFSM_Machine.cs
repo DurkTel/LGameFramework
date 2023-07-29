@@ -14,14 +14,14 @@ namespace GameBase.FSM
         /// <summary>
         /// 当前处于的状态
         /// </summary>
-        FSM_Status<TStateId> activeState { get; set; }
+        FSM_Status<TStateId> ActiveState { get; set; }
         /// <summary>
         /// 上次处于的状态
         /// </summary>
-        FSM_Status<TStateId> lastState { get; set; }
+        FSM_Status<TStateId> LastState { get; set; }
         /// <summary>
         /// 当前处于的状态的状态id
         /// </summary>
-        TStateId activeStateName { get; }
+        TStateId ActiveStateName { get; }
     }
 }
