@@ -9,8 +9,8 @@ namespace GameCore.GUI
         private static Vector2 s_HidePosition = new Vector2 (9999, 9999);
 
         #region 内部属性
-        protected GUIModule m_GUIModule;
-        public GUIModule GUIModule { get { return m_GUIModule; } }
+        protected FMGUIManager m_GUIModule;
+        public FMGUIManager GUIModule { get { return m_GUIModule; } }
 
         protected GameObject m_GameObject;
         public GameObject GameObject { get { return m_GameObject; } }
@@ -27,8 +27,8 @@ namespace GameCore.GUI
         protected bool m_IsLoading;
         public bool IsLoading { get { return m_IsLoading; } }
 
-        protected GUIModule.GUIViewLayer m_GUIViewLayer;
-        public GUIModule.GUIViewLayer GUIViewLayer { get { return m_GUIViewLayer; } }
+        protected FMGUIManager.GUIViewLayer m_GUIViewLayer;
+        public FMGUIManager.GUIViewLayer GUIViewLayer { get { return m_GUIViewLayer; } }
         #endregion
 
         #region 派生参数
@@ -40,12 +40,12 @@ namespace GameCore.GUI
         /// <summary>
         /// 该界面对应层级
         /// </summary>
-        protected virtual GUIModule.UILayerLevel m_LayerLevel { get { return GUIModule.UILayerLevel.ViewUILayer; } }
-        public GUIModule.UILayerLevel LayerLevel { get { return m_LayerLevel; } }
+        protected virtual FMGUIManager.UILayerLevel m_LayerLevel { get { return FMGUIManager.UILayerLevel.ViewUILayer; } }
+        public FMGUIManager.UILayerLevel LayerLevel { get { return m_LayerLevel; } }
         /// <summary>
         /// 界面动画
         /// </summary>
-        protected virtual UnityAction<GUIView, bool, UnityAction> m_OpenTween { get { return GUIModule.GUITweenDefault; } }
+        protected virtual UnityAction<GUIView, bool, UnityAction> m_OpenTween { get { return FMGUIManager.GUITweenDefault; } }
         protected UnityAction<GUIView, bool, UnityAction> OpenTween { get { return m_OpenTween; } }
         /// <summary>
         /// 销毁时间
@@ -55,7 +55,7 @@ namespace GameCore.GUI
 
         #endregion
 
-        public virtual void OnConstructor(GameObject go, GUIModule.GUIViewLayer layer)
+        public virtual void OnConstructor(GameObject go, FMGUIManager.GUIViewLayer layer)
         {
             m_GUIViewLayer = layer;
             m_GameObject = go;

@@ -52,6 +52,16 @@ namespace GameCore
         internal virtual void FixedUpdate(float fixedDeltaTime, float unscaledTime) { }
 
         /// <summary>
+        /// 启动脚本时
+        /// </summary>
+        internal virtual void OnEnable() { }
+
+        /// <summary>
+        /// 关闭脚本时
+        /// </summary>
+        internal virtual void OnDisable() { }
+
+        /// <summary>
         /// 销毁
         /// </summary>
         internal virtual void OnDestroy() { }

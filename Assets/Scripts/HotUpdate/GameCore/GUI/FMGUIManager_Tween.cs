@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 namespace GameCore.GUI
 {
-    public partial class GUIModule
+    public partial class FMGUIManager
     {
         public static void GUITweenDefault(GUIView view, bool open, UnityAction callBack)
         {

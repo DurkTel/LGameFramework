@@ -10,8 +10,8 @@ namespace GameCore
         /// </summary>
         private sealed class Event
         {
-            private int m_Id;
-            public int Id { get { return m_Id; } }
+            private FMEventRegister m_Id;
+            public FMEventRegister Id { get { return m_Id; } }
 
             private object m_Sender;
             public object Sender { get { return m_Sender; } }
@@ -19,7 +19,7 @@ namespace GameCore
             private EventArgs m_EventArgs;
             public EventArgs EventArgs { get { return m_EventArgs; } }
 
-            public static Event Get(int id, object sender, EventArgs e)
+            public static Event Get(FMEventRegister id, object sender, EventArgs e)
             {
                 Event eventNode = Pool<Event>.Get();
                 eventNode.m_Id = id;
@@ -30,10 +30,12 @@ namespace GameCore
 
             public void Clear()
             {
-                m_Id = -1;
+                m_Id = FMEventRegister.NONE;
                 m_Sender = null;
+                Pool<EventArgs>.Release(m_EventArgs);
                 m_EventArgs = null;
             }
         }
+
     }
 }

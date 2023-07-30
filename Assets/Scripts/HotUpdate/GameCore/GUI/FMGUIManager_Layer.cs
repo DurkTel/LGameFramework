@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace GameCore.GUI
 {
-    public partial class GUIModule
+    public partial class FMGUIManager
     {
         public enum UILayerLevel
         {

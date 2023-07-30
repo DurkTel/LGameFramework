@@ -8,6 +8,6 @@ namespace GameCore.GUI
     {
         protected override string m_PrefabName => "GUI_CreateRole_View.prefab";
 
-        protected override GUIModule.UILayerLevel m_LayerLevel => GUIModule.UILayerLevel.MainUILayer;
+        protected override FMGUIManager.UILayerLevel m_LayerLevel => FMGUIManager.UILayerLevel.MainUILayer;
     }
 }

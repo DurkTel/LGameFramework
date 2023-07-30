@@ -13,7 +13,7 @@ namespace GameCore
         /// <summary>
         /// 所有注册的委托
         /// </summary>
-        private Dictionary<int, LinkedList<EventHandler<EventArgs>>> m_EventHandlers;
+        private Dictionary<FMEventRegister, LinkedList<EventHandler<EventArgs>>> m_EventHandlers;
 
         /// <summary>
         /// 临时变量
@@ -52,7 +52,7 @@ namespace GameCore
 
         internal override void OnInit()
         {
-            m_EventHandlers = new Dictionary<int, LinkedList<EventHandler<EventArgs>>>();
+            m_EventHandlers = new Dictionary<FMEventRegister, LinkedList<EventHandler<EventArgs>>>();
             m_EventQueue = new Queue<Event>();
             m_StopWatch = new System.Diagnostics.Stopwatch();
             m_AsyncMaxTime = 30; //30ms 约 30fps/s
@@ -97,7 +97,7 @@ namespace GameCore
         /// </summary>
         /// <param name="id">事件ID</param>
         /// <param name="handler">委托方法</param>
-        public void Register(int id, EventHandler<EventArgs> handler)
+        public void Register(FMEventRegister id, EventHandler<EventArgs> handler)
         {
             if (handler == null)
             {
@@ -111,6 +111,7 @@ namespace GameCore
                 linked = Pool<LinkedList<EventHandler<EventArgs>>>.Get();
                 m_EventHandlers.Add(id, linked);
             }
+
             linked.AddLast(handler);
         }
 
@@ -120,7 +121,7 @@ namespace GameCore
         /// <param name="id">事件ID</param>
         /// <param name="handler">委托方法</param>
         /// <returns>移除结果</returns>
-        public bool UnRegister(int id, EventHandler<EventArgs> handler)
+        public bool UnRegister(FMEventRegister id, EventHandler<EventArgs> handler)
         {
             if (m_EventHandlers.TryGetValue(id, out var linked))
             {
@@ -138,7 +139,7 @@ namespace GameCore
         /// <param name="id">事件ID</param>
         /// <param name="sender">发布者</param>
         /// <param name="args">事件参数</param>
-        public void Dispatch(int id, object sender, EventArgs args)
+        public void Dispatch(FMEventRegister id, object sender, EventArgs args)
         {
             Event eventNode = Event.Get(id, sender, args);
             m_EventQueue.Enqueue(eventNode);
@@ -150,18 +151,18 @@ namespace GameCore
         /// <param name="id">事件ID</param>
         /// <param name="sender">发布者</param>
         /// <param name="args">事件参数</param>
-        public void DispatchImmediately(int id, object sender, EventArgs args)
+        public void DispatchImmediately(FMEventRegister id, object sender, EventArgs args)
         {
             Event eventNode = Event.Get(id, sender, args);
             HandleEvent(sender, eventNode, false);
         }
 
         /// <summary>
-        /// 是否存在该事件
+        /// 是否订阅该事件
         /// </summary>
         /// <param name="id">事件ID</param>
         /// <returns>是否存在</returns>
-        public bool Exist(int id)
+        public bool Exist(FMEventRegister id)
         {
             return m_EventHandlers.ContainsKey(id); 
         }

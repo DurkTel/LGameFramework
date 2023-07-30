@@ -38,6 +38,17 @@ namespace GameCore.Entity
                 m_WaitReleaseList = new List<Entity>();
             }
 
+            public void FixedUpdate(float fixedDeltaTime, float unscaledTime)
+            {
+                if (m_Entitys.Count < 0) return;
+
+                foreach (Entity entity in m_Entitys)
+                {
+                    if (entity.Status == EntityStatus.Showed)
+                        entity.FixedUpdate(fixedDeltaTime, unscaledTime);
+                }
+            }
+
             public void Update(float deltaTime, float unscaledTime)
             {
                 if (m_Entitys.Count < 0) return;
@@ -52,7 +63,7 @@ namespace GameCore.Entity
                         continue;
                     }
                     if (entity.Status == EntityStatus.Showed)
-                        entity.Update();
+                        entity.Update(deltaTime, unscaledTime);
                 }
 
                 //一帧调一次生成

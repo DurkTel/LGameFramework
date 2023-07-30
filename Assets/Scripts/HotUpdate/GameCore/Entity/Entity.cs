@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEditor.SceneManagement;
+using UnityEngine;
 using static GameCore.Entity.FMEntityManager;
 
 namespace GameCore.Entity
@@ -50,6 +52,11 @@ namespace GameCore.Entity
         /// </summary>
         private bool m_Dirty;
         public bool Dirty { get { return m_Dirty; } }
+        /// <summary>
+        /// 实体组件
+        /// </summary>
+        private List<IEntityComponent> m_EntityComponents;
+        public List<IEntityComponent> EntityComponents { get { return m_EntityComponents; } }
 
         public void OnInit(int eid, EntityType etype, EntityGroup egroup)
         {
@@ -66,9 +73,26 @@ namespace GameCore.Entity
             CullGroupInit();
         }
 
-        public void Update()
+        public void Update(float deltaTime, float unscaledTime)
         {
+            if (m_EntityComponents != null && m_EntityComponents.Count > 0)
+            { 
+                foreach (var component in m_EntityComponents)
+                {
+                    component.Update(deltaTime, unscaledTime);
+                }
+            }    
+        }
 
+        public void FixedUpdate(float fixedDeltaTime, float unscaledTime)
+        {
+            if (m_EntityComponents != null && m_EntityComponents.Count > 0)
+            {
+                foreach (var component in m_EntityComponents)
+                {
+                    component.FixedUpdate(fixedDeltaTime, unscaledTime);
+                }
+            }
         }
 
         public void SetStatus(EntityStatus status)
@@ -87,6 +111,19 @@ namespace GameCore.Entity
         public void Dispose()
         {
             Object.Destroy(m_GameObject);
+        }
+
+        /// <summary>
+        /// 添加实体组件
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        public void AddComponent<T>() where T : IEntityComponent, new()
+        {
+            m_EntityComponents ??= new List<IEntityComponent>();
+            IEntityComponent entityComponent = new T();
+            entityComponent.OnInit(this);
+            m_EntityComponents.Add(entityComponent);
+            m_EntityComponents.Sort(delegate (IEntityComponent a, IEntityComponent b) { return a.Priority - b.Priority; });
         }
 
     }

@@ -52,6 +52,14 @@ namespace GameCore.Entity
             
         }
 
+        internal override void FixedUpdate(float fixedDeltaTime, float unscaledTime)
+        {
+            if (m_EntityGroupMap.Count <= 0) return;
+
+            foreach (EntityGroup group in m_EntityGroupMap.Values)
+                group.FixedUpdate(fixedDeltaTime, unscaledTime);
+        }
+
         internal EntityGroup AddEntityGroup(EntityType etype)
         {
             EntityGroup group;

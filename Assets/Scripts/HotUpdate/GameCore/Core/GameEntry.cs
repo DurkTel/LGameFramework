@@ -15,6 +15,22 @@ namespace GameCore
 
         private static readonly LinkedList<FrameworkModule> s_AllFrameworkModule = new LinkedList<FrameworkModule>();
 
+        private void OnEnable()
+        {
+            foreach (FrameworkModule module in s_AllFrameworkModule)
+            {
+                module.OnEnable();
+            }
+        }
+
+        private void OnDisable()
+        {
+            foreach (FrameworkModule module in s_AllFrameworkModule)
+            {
+                module.OnDisable();
+            }
+        }
+
         private void Awake()
         {
             OrbitCamera.Initialize();

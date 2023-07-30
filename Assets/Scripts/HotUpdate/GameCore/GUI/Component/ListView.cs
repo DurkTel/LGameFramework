@@ -93,7 +93,7 @@ public class ListView : Injection
     {
         if (m_template != null)
             m_template.SetActive(false);
-
+        
         Init();
         RefreshContent();
         ForceRefresh();
