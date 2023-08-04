@@ -153,6 +153,8 @@
     </ClCompile>
     <ClCompile Include="Source\Generics__48.cpp">
     </ClCompile>
+    <ClCompile Include="Source\Generics__49.cpp">
+    </ClCompile>
     <ClCompile Include="Source\Generics__5.cpp">
     </ClCompile>
     <ClCompile Include="Source\Generics__6.cpp">

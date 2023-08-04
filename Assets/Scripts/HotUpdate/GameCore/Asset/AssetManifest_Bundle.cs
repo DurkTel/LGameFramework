@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
+using LGameFramework.GameBase;
 
 namespace GameCore.Asset
 {
@@ -10,41 +11,18 @@ namespace GameCore.Asset
     {
         public static string s_AbPath = "Assets/LGAssetManifest.asset";
 
-        [System.Serializable]
-        public class AssetInfo
-        {
-            public string assetName;
-            public string assetPath;
-            public string bundleName;
-            public string md5Code;
-            public List<string> dependencieBundleNames;
-            public AssetInfo(string assetName, string assetPath, string bundleName, string md5Code, List<string> dependencieBundleNames)
-            {
-                this.assetName = assetName;
-                this.assetPath = assetPath;
-                this.bundleName = bundleName;
-                this.md5Code = md5Code;
-                this.dependencieBundleNames = dependencieBundleNames;
-            }
-        }
+        public List<AssetFile> assetList = new List<AssetFile>(5000);
 
-        public List<AssetInfo> assetList = new List<AssetInfo>(5000);
-
-        public Dictionary<string, AssetInfo> assetMap = new Dictionary<string, AssetInfo>(5000);
+        public Dictionary<string, AssetFile> assetMap = new Dictionary<string, AssetFile>(5000);
 
         public Dictionary<string, List<string>> dependsMap = new Dictionary<string, List<string>>(5000);
 
-        public void Add(string assetName, string assetPath, string bundleName, string md5Code, List<string> dependencieBundleNames)
+        public void Add(AssetFile file)
         {
-            if (assetMap.ContainsKey(assetName))
-            {
-                assetMap[assetName].assetPath = assetPath;
-                assetMap[assetName].bundleName = bundleName;
-                assetMap[assetName].md5Code = md5Code;
-
-            }
+            if (assetMap.ContainsKey(file.assetName))
+                assetMap[file.assetName] = file;
             else
-                assetMap.Add(assetName, new AssetInfo(assetName, assetPath, bundleName, md5Code, dependencieBundleNames));
+                assetMap.Add(file.assetName, file);
         }
 
         public bool Contains(string assetName)

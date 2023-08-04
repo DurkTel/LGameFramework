@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using LGameFramework.GameBase.Pool;
+using LGameFramework.GameBase;
 
 namespace GameCore.Asset
 {
@@ -125,9 +126,14 @@ namespace GameCore.Asset
         {
             if (m_FileManifest == null)
             {
-                AssetBundle file = AssetBundle.LoadFromFile(Path.Combine(AssetDefine.localDataPath, "lgassetmanifest.asset"));
-                //AddAssetBundle("LGAssetManifest.asset", file); ²»¼ÇÂ¼ ·ÀÖ¹±»Ð¶ÔØ
-                m_FileManifest = file.LoadAsset<AssetManifest_Bundle>("lgassetmanifest");
+                m_FileManifest = ScriptableObject.CreateInstance<AssetManifest_Bundle>();
+                string path = Path.Combine(AssetDefine.localDataPath, "assetManifest.json");
+                if(!File.Exists(path))
+                    path = Path.Combine(AssetDefine.s_BuildInPath, "assetManifest.json");
+
+                string allData = File.ReadAllText(path);
+                if (!string.IsNullOrEmpty(allData))
+                    JsonHelper.FromJsonOverwrite(allData, m_FileManifest, true);
             }
 
             return m_FileManifest;

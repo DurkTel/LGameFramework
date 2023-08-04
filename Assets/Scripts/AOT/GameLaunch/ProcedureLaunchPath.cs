@@ -19,6 +19,8 @@ public class ProcedureLaunchPath
         public static string s_NetServerPath = "https://00-1256518392.cos.ap-guangzhou.myqcloud.com/Test/android/";
 #endif
 
+    public static string s_BuildInPath = Application.streamingAssetsPath + "/A_AssetBundles/";
+
     public static string s_HotUpdateDll = localDataPath + "/dll/";
 
     //必须按依赖关系顺序加载

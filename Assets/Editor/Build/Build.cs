@@ -7,6 +7,7 @@ using System;
 using System.Linq;
 using System.Text;
 using GameCore.Asset;
+using LGameFramework.GameBase;
 
 public class Build : EditorWindow
 {
@@ -483,33 +484,16 @@ public class Build : EditorWindow
     private static void BuildManifest(LBuildParameter buildParameter)
     {
         string targetName = buildParameter.buildTarget.ToString();
-        RefreshAssetsBundleManifest(Path.Combine(buildParameter.buildOutPath, targetName));
-
-        AssetBundleBuild abb = new AssetBundleBuild();
-        string projectPath = AssetManifest_Bundle.s_AbPath;
-        abb.assetBundleName = projectPath.Substring(7);
-        abb.assetNames = new string[] { projectPath };
-        abb.addressableNames = new string[] { Path.GetFileNameWithoutExtension(projectPath) };
-
-        if (BuildWriteInfo(new List<AssetBundleBuild>() { abb }, buildParameter.buildOutPath, BuildAssetBundleOptions.None | BuildAssetBundleOptions.ForceRebuildAssetBundle, buildParameter.buildTarget, buildParameter.clearFolder))
-            Debug.Log("打包资源清单成功~  ^^_");
-
-        AssetDatabase.Refresh();
-
-        string path1 = Path.Combine(buildParameter.buildOutPath, targetName, targetName);
-        if (File.Exists(path1))
-            File.Delete(path1);
-
-        string path2 = Path.Combine(buildParameter.buildOutPath, targetName, targetName) + ".manifest";
-        if (File.Exists(path2))
-            File.Delete(path2);
-
+        
+        AssetManifest_Bundle assetManifest = RefreshAssetsBundleManifest(Path.Combine(buildParameter.buildOutPath, targetName));
+        string assetJson = JsonHelper.ToJason(assetManifest, true);
+        File.WriteAllText(Path.Combine(buildParameter.buildOutPath, targetName, "assetManifest.json"), assetJson);
 
         AssetDatabase.Refresh();
 
     }
 
-    public static void RefreshAssetsBundleManifest(string path)
+    public static AssetManifest_Bundle RefreshAssetsBundleManifest(string path)
     {
         AssetBundle.UnloadAllAssetBundles(true);
 
@@ -520,8 +504,8 @@ public class Build : EditorWindow
         foreach (var childDir in allDir)
         {
             string fileName = Path.GetFileNameWithoutExtension(childDir);
-            if (fileName == "000" || fileName == "001")
-                continue;
+            //if (fileName == "000" || fileName == "001")
+            //    continue;
 
             string manifestPath = Path.Combine(childDir, fileName);
             AssetBundle manifestAB = AssetBundle.LoadFromFile(manifestPath);
@@ -548,11 +532,16 @@ public class Build : EditorWindow
                 }
 
                 string[] allAsset = ab.GetAllAssetNames();
+                uint crc = 0;
                 foreach (var assetName in allAsset)
                 {
-                    string name = Path.GetFileName(assetName);
-                    string md5 = BuildUtility.GetMD5(Path.Combine(path, newABName));
-                    assetManifest.Add(name, assetName, newABName, md5, newDependBundleNames);
+                    string fullPath = Path.Combine(path, newABName);
+                    AssetFile file = AssetFile.GetAssetFile(assetName, fullPath);
+                    file.bundleName = newABName;
+                    file.dependencieBundleNames = newDependBundleNames;
+                    if (BuildPipeline.GetCRCForAssetBundle(fullPath, out crc))
+                        file.crc = crc;
+                    assetManifest.Add(file);
                 }
 
             }
@@ -567,6 +556,7 @@ public class Build : EditorWindow
 
 
         Debug.Log("更新AB资源清单完成");
+        return assetManifest;
     }
 
     public static AssetManifest_Bundle GetAssetManifest()
@@ -584,12 +574,12 @@ public class Build : EditorWindow
 
     #endregion
 
-    #region 更新版本文件
+    #region 更新版本/首包文件
     public static void BuildVersion(LBuildParameter buildParameter)
     {
         string path = Path.Combine(buildParameter.buildOutPath, buildParameter.buildTarget.ToString());
 
-        string filePath = path + "/file.txt";
+        string filePath = path + "/buildingFile.json";
         string versionPath = path + "/version.txt";
 
         if (File.Exists(filePath))
@@ -598,52 +588,22 @@ public class Build : EditorWindow
         if (File.Exists(versionPath))
             File.Delete(versionPath);
 
-        StringBuilder file_str = new StringBuilder();
 
-        string assetManifestName = "lgassetmanifest.asset";
-        string assetManifestPath = Path.Combine(path, assetManifestName);
-        if (!File.Exists(assetManifestPath))
+        Dictionary<string, AssetFile> buildingFile = new Dictionary<string, AssetFile>();
+        AssetManifest_Bundle assetManifest = GetAssetManifest();
+
+        foreach (var file in assetManifest.assetList)
         {
-            Debug.LogError("没有找到资源清单AB");
-            return;
+            if (file.fileFlag.HasFlag(AssetFile.AssetFileFlag.Build)
+                || file.fileFlag.HasFlag(AssetFile.AssetFileFlag.Dll))
+                buildingFile.Add(file.assetName, file);
         }
 
-        string name = assetManifestName;
-        string md5 = BuildUtility.GetMD5(assetManifestPath);
-        int size = Utility.GetFileSize(assetManifestPath);
-        //file_str.Append(string.Format("{0}|{1}\n", name, md5));
-        List<AssetFile> files = new List<AssetFile>
-        {
-            new AssetFile() { path = name, md5 = md5, size = size }
-        };
-
-
-        string[] dir = Directory.GetDirectories(path);
-
-        foreach (var child in dir)
-        {
-
-            string[] allFiles = Directory.GetFiles(child, "*", SearchOption.AllDirectories);
-
-            foreach (var file in allFiles)
-            {
-                name = file.Substring(path.Length + 1);
-                name = name.Replace("\\", "/");
-                md5 = BuildUtility.GetMD5(file);
-                size = Utility.GetFileSize(file);
-
-                files.Add(new AssetFile() { path = name, md5 = md5, size = size });
-
-                //file_str.Append(string.Format("{0}|{1}\n", name, md5));
-            }
-        }
-
-        string str = LJsonUtility.ToJason(files);
-        //File.WriteAllText(filePath, file_str.ToString());
+        string str = JsonHelper.ToJason<string, AssetFile>(buildingFile, true);
         File.WriteAllText(filePath, str);
         File.WriteAllText(versionPath, "version|1.00");
-
         AssetDatabase.Refresh();
+
     }
     #endregion
 

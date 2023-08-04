@@ -69,11 +69,11 @@ public class ProcedureUpdateVersion : FSM_Status<ProcedureLaunchProcess>
     {
         m_DownloadList = new List<string>();
         Dictionary<string, AssetFile> netFiles;
-        Dictionary<string, string> localFiles;
+        Dictionary<string, AssetFile> localFiles;
         try
         {
             netFiles = dataBase.GetData<Dictionary<string, AssetFile>>(ProcedureLauncher.procedureMarkHead + ProcedureCheckLocalFile.netFilesName);
-            localFiles = dataBase.GetData<Dictionary<string, string>>(ProcedureLauncher.procedureMarkHead + ProcedureCheckLocalFile.localFilesName);
+            localFiles = dataBase.GetData<Dictionary<string, AssetFile>>(ProcedureLauncher.procedureMarkHead + ProcedureCheckLocalFile.localFilesName);
         }
         catch (System.Exception)
         {
@@ -81,22 +81,23 @@ public class ProcedureUpdateVersion : FSM_Status<ProcedureLaunchProcess>
             throw;
         }
 
-        string localMD5;
-        AssetFile assetFile;
+        AssetFile localFile;
+        AssetFile netFile;
 
         foreach (var file in netFiles)
         {
-            assetFile = file.Value;
+            netFile = file.Value;
             //如果是扩展资源 跳过下载
-            if ((assetFile.flag & AssetFile.AssetFileFlag.ExtendDLC) == AssetFile.AssetFileFlag.ExtendDLC)
+            if (netFile.fileFlag == AssetFile.AssetFileFlag.ExtendDLC)
                 continue;
             //本地没有该文件或md5不同
-            if (localFiles == null || !localFiles.TryGetValue(file.Key, out localMD5) || localMD5 != assetFile.md5)
+            if (localFiles == null || !localFiles.TryGetValue(file.Key, out localFile) || localFile.md5Code != netFile.md5Code)
             {
-                if (file.Key.Contains("001"))
+                if (file.Value.fileFlag.HasFlag(AssetFile.AssetFileFlag.Dll))
                     m_UpdateCShare = true;
 
-                m_DownloadList.Add(file.Key);
+                if (!m_DownloadList.Contains(file.Value.bundleName))
+                    m_DownloadList.Add(file.Value.bundleName);
             }
         }
 
@@ -106,6 +107,8 @@ public class ProcedureUpdateVersion : FSM_Status<ProcedureLaunchProcess>
         if (m_DownloadList.Count > 0)
         { 
             m_DownloadList.Add("version.txt");
+            m_DownloadList.Add("assetManifest.json");
+            m_DownloadList.Add("buildingFile.json");
             m_IsNeedUpdate = true;
             m_FileDownloadQueue = new AssetFileDownloadQueue();
         }

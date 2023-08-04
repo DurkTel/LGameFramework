@@ -21,6 +21,8 @@ namespace GameCore.Asset
         public static string s_NetServerPath = "https://00-1256518392.cos.ap-guangzhou.myqcloud.com/Test/android/";
 #endif
 
+        public static string s_BuildInPath = Application.streamingAssetsPath + "/A_AssetBundles/";
+
         public static string s_LuaBuildTemp = Application.dataPath + "/LuaTemp/";
 
         public static string s_AudioBuildPath = "Assets/ArtModules/Audio";

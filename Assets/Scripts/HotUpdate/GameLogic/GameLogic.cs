@@ -12,7 +12,7 @@ public class GameLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameEntry.GetModule<FMCrossPlatformInput>().InitGameInput();
+        //GameEntry.GetModule<FMCrossPlatformInput>().InitGameInput();
 
 
         //GameEntry.GetModule<FMEventManager>().Register(FMEventRegister.INPUT_DISPATCH_HANDLE_BUTTON, EventTest);
