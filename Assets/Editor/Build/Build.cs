@@ -8,14 +8,13 @@ using System.Linq;
 using System.Text;
 using GameCore.Asset;
 using LGameFramework.GameBase;
+using GluonGui.WorkspaceWindow.Views.WorkspaceExplorer;
 
 public class Build : EditorWindow
 {
     private const string RREFS_BUILD_OUT_PAHT = "RREFS_BUILD_OUT_PAHT";
     private const string RREFS_BUILD_TARGET = "RREFS_BUILD_TARGET";
-    private const string RREFS_BUILD_Options = "RREFS_BUILD_Options";
 
-    private static string s_outPutNameLua = "000.asset";
     private static string s_outPutNameCSharp = "001.asset";
     private static string s_outPutNameDev = "002";
 
@@ -91,10 +90,15 @@ public class Build : EditorWindow
         EditorGUILayout.EndHorizontal();
 
 
-        EditorGUILayout.HelpBox("第四步：生成资源清单、版本文件", MessageType.Info);
+        EditorGUILayout.HelpBox("第四步：生成资源清单", MessageType.Info);
         if (GUILayout.Button("更新资源清单"))
         {
             BuildManifest(m_LbuildParameter);
+        }
+
+        EditorGUILayout.HelpBox("第五步：修改资源清单里的首包TAG后 生成版本文件", MessageType.Info);
+        if (GUILayout.Button("生成版本文件"))
+        {
             BuildVersion(m_LbuildParameter);
         }
 
@@ -104,12 +108,37 @@ public class Build : EditorWindow
 
         //}
 
-        if (GUILayout.Button("复制到streamingAssetsPath"))
+        if (GUILayout.Button("复制到首包streamingAssetsPath"))
         {
+            string buildPath = Application.dataPath + "/../A_AssetBundles";
+
+            AssetManifest_Bundle assetManifest = GetAssetManifest();
+            string formPath = Path.Combine(m_LbuildParameter.buildOutPath, m_LbuildParameter.buildTarget.ToString());
+
+            foreach (var file in assetManifest.bundleList)
+            {
+                if (file.fileFlag.HasFlag(AssetBundleInfo.AssetFileFlag.Build)
+                    || file.fileFlag.HasFlag(AssetBundleInfo.AssetFileFlag.Dll))
+                {
+                    string fullPath = Path.Combine(buildPath, file.assetPath);
+                    if (!Directory.Exists(Path.GetDirectoryName(fullPath)))
+                        Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
+
+                    FileUtil.CopyFileOrDirectory(Path.Combine(formPath, file.assetPath), fullPath);
+                }
+            }
+
+            FileUtil.CopyFileOrDirectory(Path.Combine(formPath, "assetManifest.json"), Path.Combine(buildPath, "assetManifest.json"));
+            FileUtil.CopyFileOrDirectory(Path.Combine(formPath, "buildingFile.json"), Path.Combine(buildPath, "buildingFile.json"));
+            FileUtil.CopyFileOrDirectory(Path.Combine(formPath, "version.txt"), Path.Combine(buildPath, "version.txt"));
+
+
             string path = Path.Combine(Application.streamingAssetsPath, m_LbuildParameter.buildTarget.ToString());
             if (Directory.Exists(path))
                 Directory.Delete(path, true);
-            FileUtil.CopyFileOrDirectory(Path.Combine(m_LbuildParameter.buildOutPath, m_LbuildParameter.buildTarget.ToString()), path);
+
+            FileUtil.CopyFileOrDirectory(formPath, path);
+
             AssetDatabase.Refresh();
         }
     }

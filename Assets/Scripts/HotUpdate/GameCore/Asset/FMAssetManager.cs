@@ -232,7 +232,7 @@ namespace GameCore.Asset
         /// <param name="abName">°üÃû</param>
         public AssetBundleRecord GetAssetBundle(string abName)
         {
-            return m_AllAB[abName];
+            return m_AllAB.ContainsKey(abName) ? m_AllAB[abName] : null;
         }
 
         /// <summary>
@@ -278,7 +278,7 @@ namespace GameCore.Asset
                         break;
                 }
 
-                loader.Module = this;
+                loader.AssetModule = this;
                 m_AssetLoaders.Add(assetName, loader);
             }
 
@@ -308,7 +308,7 @@ namespace GameCore.Asset
                         break;
                 }
 
-                loader.Module = this;
+                loader.AssetModule = this;
                 loader.Update();
                 m_AssetLoaders.Add(assetName, loader);
             }
@@ -340,7 +340,7 @@ namespace GameCore.Asset
             if (!m_AssetLoaders.ContainsKey(abName))
             {
                 Loader loader = new AssetBundleLoader(abName, typeof(AssetBundleLoader), async);
-                loader.Module = this;
+                loader.AssetModule = this;
                 loader.Update();
                 m_AssetLoaders.Add(abName, loader);
             }

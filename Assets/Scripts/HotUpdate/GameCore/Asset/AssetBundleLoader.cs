@@ -27,13 +27,9 @@ namespace GameCore.Asset
         /// </summary>
         private AssetBundleRecord m_AssetRecord;
         /// <summary>
-        /// 下载中列表
+        /// 下载器
         /// </summary>
-        private Dictionary<string, AssetFileDownloader> m_DownloadingMap;
-        /// <summary>
-        /// 下载完成列表
-        /// </summary>
-        private List<string> m_DownloadCompleteList;
+        private AssetFileDownloader m_AssetDownloader;
 
         public override void Dispose()
         {
@@ -51,13 +47,13 @@ namespace GameCore.Asset
         /// <returns></returns>
         public override string GetAssetPath(string bundleName)
         {
-            if (m_DownloadingMap != null && m_DownloadingMap.ContainsKey(bundleName)) return null;
+            if (m_AssetDownloader != null) return null;
 
-            string path = Module.GetAssetManifest_Bundle().GetPath(bundleName);
-            string filePath = Path.Combine(Module.GamePath.downloadDataPath.AssetPath, path);
+            string path = AssetModule.GetAssetManifest_Bundle().GetPath(bundleName);
+            string filePath = Path.Combine(AssetModule.GamePath.downloadDataPath.AssetPath, path);
             //先去判断下载路径是否有
             if (!File.Exists(filePath))
-                filePath = Path.Combine(Module.GamePath.buildingPath.AssetPath, path); //再判断首包路径
+                filePath = Path.Combine(AssetModule.GamePath.buildingPath.AssetPath, path); //再判断首包路径
 
             //都没有 文件异常 重新从资源服务器下载
             if (!File.Exists(filePath))
@@ -73,7 +69,7 @@ namespace GameCore.Asset
         /// <returns></returns>
         public uint GetCRC(string bundleName)
         {
-            return Module.GetAssetManifest_Bundle().GetCRC(bundleName);
+            return AssetModule.GetAssetManifest_Bundle().GetCRC(bundleName);
         }
 
         /// <summary>
@@ -81,13 +77,11 @@ namespace GameCore.Asset
         /// </summary>
         private void TryDownloadFile(string fileName)
         {
-            if (m_DownloadingMap != null && m_DownloadingMap.ContainsKey(fileName)) return;
-            string path = Module.GetAssetManifest_Bundle().GetPath(fileName);
-            string serverPath = Path.Combine(Module.GamePath.serverDataPath.AssetPath, path);
-            string downloadPath = Path.Combine(Module.GamePath.downloadDataPath.AssetPath, path);
-            AssetFileDownloader downloader = Module.EnqueueDownload(serverPath, downloadPath);
-            m_DownloadingMap ??= new Dictionary<string, AssetFileDownloader>();
-            m_DownloadingMap.Add(fileName, downloader);
+            if (m_AssetDownloader != null) return;
+            string path = AssetModule.GetAssetManifest_Bundle().GetPath(fileName);
+            string serverPath = Path.Combine(AssetModule.GamePath.serverDataPath.AssetPath, path);
+            string downloadPath = Path.Combine(AssetModule.GamePath.downloadDataPath.AssetPath, path);
+            m_AssetDownloader = AssetModule.EnqueueDownload(serverPath, downloadPath);
         }
 
         /// <summary>
@@ -97,12 +91,12 @@ namespace GameCore.Asset
         /// <returns></returns>
         public List<string> GetAbsentDependsName(string bundleName)
         {
-            string[] result = Module.GetAssetManifest_Bundle().GetDependsName(bundleName);
+            string[] result = AssetModule.GetAssetManifest_Bundle().GetDependsName(bundleName);
             List<string> ret = result.ToList();
             AssetBundleRecord record;
             for (int i = ret.Count - 1; i >= 0; i--)
             {
-                if (Module.TryGetAssetBundle(result[i], out record))
+                if (AssetModule.TryGetAssetBundle(result[i], out record))
                 {
                     ret.RemoveAt(i);
                     record.DpendsReferenceCount++; //已经加载过了 引用计数加1
@@ -117,21 +111,11 @@ namespace GameCore.Asset
         /// </summary>
         /// <param name="abName"></param>
         /// <returns></returns>
-        private AssetBundleRecord Load(string abName)
+        private AssetBundleRecord Load(string abPath, uint crc)
         {
-            AssetBundleRecord assetBundle;
-
-            if (!Module.TryGetAssetBundle(abName, out assetBundle))
-            {
-                string path = GetAssetPath(abName);
-                if (path == null)
-                {
-                    Debug.LogError("同步加载AB时发生文件异常！");
-                    return null;
-                }
-                uint crc = GetCRC(abName);
-                assetBundle = Module.AddAssetBundle(abName, AssetBundle.LoadFromFile(path, crc));
-            }
+            AssetBundle bundle = AssetBundle.LoadFromFile(abPath, crc);
+            if (bundle == null) return null;
+            AssetBundleRecord assetBundle = AssetModule.AddAssetBundle(m_AssetName, bundle);
 
             return assetBundle;
         }
@@ -139,26 +123,16 @@ namespace GameCore.Asset
         /// <summary>
         /// 异步加载AB包
         /// </summary>
-        /// <param name="abName"></param>
+        /// <param name="abPath"></param>
         /// <returns></returns>
-        private AssetBundleRecord LoadAsync(string abName)
+        private AssetBundleRecord LoadAsync(string abPath, uint crc)
         {
-            AssetBundleRecord assetBundle;
-            if (!Module.TryGetAssetBundle(abName, out assetBundle))
+            AssetBundleRecord assetBundle = null;
+            m_BundleRequest ??= AssetBundle.LoadFromFileAsync(abPath, crc);
+            if (m_BundleRequest.isDone && m_BundleRequest.assetBundle != null)
             {
-                string path = GetAssetPath(abName);
-                if (path == null)
-                {
-                    TryDownloadFile(abName);
-                    return null;
-                }
-                uint crc = GetCRC(abName);
-                m_BundleRequest ??= AssetBundle.LoadFromFileAsync(path, crc);
-                if (m_BundleRequest.isDone)
-                { 
-                    assetBundle = Module.AddAssetBundle(abName, m_BundleRequest.assetBundle);
-                    assetBundle.IsAssetLoading = true;
-                }
+                assetBundle = AssetModule.AddAssetBundle(m_AssetName, m_BundleRequest.assetBundle);
+                assetBundle.IsAssetLoading = true;
             }
 
             return assetBundle;
@@ -169,40 +143,47 @@ namespace GameCore.Asset
             if (m_IsDone || m_Error)
                 return;
 
-            if (m_DownloadingMap != null && m_DownloadingMap.Count > 0)
+            if (m_AssetDownloader != null)
             {
-                foreach (var item in m_DownloadingMap)
-                {
-                    if (item.Value.IsDone)
-                    {
-                        m_DownloadCompleteList ??= new List<string>();
-                        m_DownloadCompleteList.Add(item.Key);
-                    }
-                }
+                if (!m_AssetDownloader.IsDone)
+                    return;
 
-                if (m_DownloadCompleteList != null && m_DownloadCompleteList.Count > 0)
-                {
-                    foreach (string key in m_DownloadCompleteList)
-                    {
-                        m_DownloadingMap.Remove(key);
-                    }
-                    m_DownloadCompleteList.Clear();
-                }
+                m_AssetDownloader = null;
+                m_BundleRequest = null;
             }
 
-            if (!Module.TryGetAssetBundle(m_AssetName, out m_AssetRecord))
+            if (!AssetModule.TryGetAssetBundle(m_AssetName, out m_AssetRecord))
             {
                 if (string.IsNullOrEmpty(m_AssetName) || string.IsNullOrEmpty(m_AssetName))
                 {
                     m_Error = true;
-                    Module.RemoveAssetLoader(m_AssetName);
+                    AssetModule.RemoveAssetLoader(m_AssetName);
                     return;
                 }
 
-                if (m_Async)
-                    m_AssetRecord = LoadAsync(m_AssetName);
-                else
-                    m_AssetRecord = Load(m_AssetName);
+                if (!AssetModule.TryGetAssetBundle(m_AssetName, out m_AssetRecord))
+                {
+                    string path = GetAssetPath(m_AssetName);
+                    if (path == null) //文件丢失
+                    {
+                        Debug.LogError("文件丢失，尝试重新下载");
+                        TryDownloadFile(m_AssetName);
+                        return;
+                    }
+
+                    uint crc = GetCRC(m_AssetName);
+
+                    if (m_Async)
+                        m_AssetRecord = LoadAsync(path, crc);
+                    else
+                        m_AssetRecord = Load(path, crc);
+                }
+
+                if ((!m_Async && m_AssetRecord == null) || m_Async && m_BundleRequest.isDone && m_BundleRequest.assetBundle == null)
+                {
+                    Debug.LogError("文件校验失败，尝试重新下载");
+                    TryDownloadFile(m_AssetName);
+                }
 
             }
 

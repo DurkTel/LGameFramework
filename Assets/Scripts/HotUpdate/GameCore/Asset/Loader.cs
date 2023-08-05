@@ -8,7 +8,7 @@ namespace GameCore.Asset
 {
     public abstract class Loader : IEnumerator
     {
-        public FMAssetManager Module { get; set; }
+        public FMAssetManager AssetModule { get; set; }
 
         protected string m_AssetName;
         public string AssetName { get { return m_AssetName; } }

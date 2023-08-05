@@ -43,12 +43,12 @@ namespace GameCore.Asset
 
         public override string GetAssetPath(string bundleName)
         {
-            return Module.GetAssetManifest_Bundle().GetPath(bundleName);
+            return AssetModule.GetAssetManifest_Bundle().GetPath(bundleName);
         }
 
         public string GetBundleName(string assetName)
         {
-            return Module.GetAssetManifest_Bundle().GetBundleName(assetName);
+            return AssetModule.GetAssetManifest_Bundle().GetBundleName(assetName);
         }
 
         /// <summary>
@@ -60,11 +60,13 @@ namespace GameCore.Asset
         /// <returns></returns>
         private UnityEngine.Object Load(string abName, string assetName, Type type)
         {
-            if (!Module.TryGetAssetBundle(abName, out m_AssetRecord))
+            if (!AssetModule.TryGetAssetBundle(abName, out m_AssetRecord))
             {
-                Module.LoadAssetBundle(abName, false);
-                m_AssetRecord = Module.GetAssetBundle(abName);
+                AssetModule.LoadAssetBundle(abName, false);
+                m_AssetRecord = AssetModule.GetAssetBundle(abName);
             }
+
+            if (m_AssetRecord == null || m_AssetRecord.AssetBundle == null) return null;
 
             UnityEngine.Object obj = m_AssetRecord.AssetBundle.LoadAsset(assetName, type);
 
@@ -81,9 +83,9 @@ namespace GameCore.Asset
         private AssetBundleRequest LoadAsync(string abName, string assetName, Type type)
         {
             //走进来代表没加载/下载完
-            if (!Module.TryGetAssetBundle(abName, out m_AssetRecord))
+            if (!AssetModule.TryGetAssetBundle(abName, out m_AssetRecord))
             {
-                Module.LoadAssetBundle(abName, true);
+                AssetModule.LoadAssetBundle(abName, true);
                 return null;
             }
 
@@ -102,7 +104,7 @@ namespace GameCore.Asset
                 if (string.IsNullOrEmpty(m_BundleName) || string.IsNullOrEmpty(m_AssetName))
                 {
                     m_Error = true;
-                    Module.RemoveAssetLoader(m_AssetName);
+                    AssetModule.RemoveAssetLoader(m_AssetName);
                     return;
                 }
 

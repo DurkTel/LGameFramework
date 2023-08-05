@@ -52,7 +52,7 @@ namespace GameCore.Asset
                 if (path == "")
                 {
                     m_Error = true;
-                    Module.RemoveAssetLoader(m_AssetName);
+                    AssetModule.RemoveAssetLoader(m_AssetName);
                     return;
                 }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -34,24 +35,25 @@ namespace LGameFramework.GameBase
         /// 启动更新资源表示在游戏启动时检测更新的资源
         /// 扩展资源表示用到的时候再去下载
         /// </summary>
+        [Flags]
         public enum AssetFileFlag : int
         {
             /// <summary>
             /// 首包资源
             /// </summary>
-            Build = 0,
+            Build = 1,
             /// <summary>
             /// 代码资源
             /// </summary>
-            Dll = 1,
+            Dll = 2,
             /// <summary>
             /// 启动更新资源
             /// </summary>
-            LaunchDownload = 2,
+            LaunchDownload = 4,
             /// <summary>
             /// 扩展资源
             /// </summary>
-            ExtendDLC = 4,
+            ExtendDLC = 8,
         }
 
         /// <summary>
