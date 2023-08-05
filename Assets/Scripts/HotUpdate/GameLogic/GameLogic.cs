@@ -1,14 +1,8 @@
 using GameCore;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using GameCore.Asset;
-using GameCore.Entity;
 using System;
 using LGameFramework.GameCore.Input;
-using System.Linq;
-using GameCore.GUI;
-
 public class GameLogic : MonoBehaviour
 {
     GameObject tmep;
@@ -20,7 +14,11 @@ public class GameLogic : MonoBehaviour
 
 
         //GameEntry.GetModule<FMEventManager>().Register(FMEventRegister.INPUT_DISPATCH_HANDLE_BUTTON, EventTest);
-        tmep = GameEntry.GetModule<FMAssetManager>().LoadAsset<GameObject>("Default_Loading_GUI.prefab");
+        Loader loader = GameEntry.GetModule<FMAssetManager>().LoadAssetAsync<GameObject>("Default_Loading_GUI.prefab");
+        loader.onComplete = (p) =>
+        {
+            tmep = p.GetInstantiate<GameObject>();
+        };
     }
 
     // Update is called once per frame

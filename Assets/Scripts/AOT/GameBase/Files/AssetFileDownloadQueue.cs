@@ -35,18 +35,19 @@ namespace LGameFramework.GameBase
             m_Pause = value;
         }
 
-        public void Enqueue(string downloadURL, string downloadPath)
+        public AssetFileDownloader Enqueue(string downloadURL, string downloadPath)
         {
             AssetFileDownloader assetFileDownloader = Pool<AssetFileDownloader>.Get();
             assetFileDownloader.SetData(downloadURL, downloadPath);
-            Enqueue(assetFileDownloader);
+            return Enqueue(assetFileDownloader);
         }
 
-        public void Enqueue(AssetFileDownloader loader)
+        public AssetFileDownloader Enqueue(AssetFileDownloader loader)
         {
             m_DownloaderQueuePrepare ??= new Queue<AssetFileDownloader>();
             m_DownloaderQueuePrepare.Enqueue(loader);
             DownloadStart();
+            return loader;
         }
 
         private void DownloadStart()

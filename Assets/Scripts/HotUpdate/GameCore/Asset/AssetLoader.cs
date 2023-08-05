@@ -1,100 +1,138 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
-using UnityEngine.Analytics;
-using UnityEngine.Events;
 
 namespace GameCore.Asset
 {
-    public abstract class AssetLoader : IEnumerator
+    public class AssetLoader : Loader
     {
-        public FMAssetManager Module { get; set; }
-
-        protected string m_AssetName;
-        public string AssetName { get { return m_AssetName; } }
-
-        protected System.Type m_AssetType;
-        public System.Type AssetType { get { return m_AssetType; } }
-
-        protected bool m_IsDone;
-        public bool IsDone { get { return m_IsDone; } }
-
-        protected float m_Progress;
-        public float Progress { get { return m_Progress; } }
-
-        protected int m_Priority;
-        public int Priority { get { return m_Priority; } }
-
-        protected bool m_Async;
-        public bool Async { get { return m_Async; } }
-
-        protected bool m_Error;
-        public bool Error { get { return m_Error; } }
-
-        protected Object m_RawObject;
-
-        protected AssetCache.RawObjectInfo m_RawObjectInfo;
-        public AssetCache.RawObjectInfo RawObjectInfo { get { return m_RawObjectInfo; } }
-
-        public object Current { get; }
-
-        public UnityAction<float> onProgress;
-
-        public UnityAction<AssetLoader> onComplete;
-
-        public AssetLoader(string assetName)
+        public AssetLoader(string assetName) : base(assetName)
         {
-            this.m_AssetName = assetName;
-            this.m_AssetType = typeof(Object);
         }
-        public AssetLoader(string assetName, System.Type assetType, bool async)
+
+        public AssetLoader(string assetName, System.Type assetType, bool async) : base(assetName, assetType, async)
         {
             this.m_AssetName = assetName;
             this.m_AssetType = assetType;
             this.m_Async = async;
         }
-
-        public abstract void Update();
-
-        public abstract string GetAssetPath(string assetName);
-
-        public abstract void Dispose();
-
-        public virtual T GetRawObject<T>() where T : Object
+        /// <summary>
+        /// 资源加载
+        /// </summary>
+        private AssetBundleRequest m_AssetRequest;
+        /// <summary>
+        /// 包名
+        /// </summary>
+        private string m_BundleName;
+        /// <summary>
+        /// AB包
+        /// </summary>
+        private AssetBundleRecord m_AssetRecord;
+        public override void Dispose()
         {
-            if (!m_IsDone)
+            m_Error = false;
+            m_IsDone = false;
+            m_Async = false;
+            m_RawObject = null;
+            m_AssetName = null;
+            m_BundleName = null;
+            m_AssetType = null;
+            onProgress = null;
+            onComplete = null;
+            m_AssetRequest = null;
+        }
+
+        public override string GetAssetPath(string bundleName)
+        {
+            return Module.GetAssetManifest_Bundle().GetPath(bundleName);
+        }
+
+        public string GetBundleName(string assetName)
+        {
+            return Module.GetAssetManifest_Bundle().GetBundleName(assetName);
+        }
+
+        /// <summary>
+        /// 同步加载资源
+        /// </summary>
+        /// <param name="abName"></param>
+        /// <param name="assetName"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        private UnityEngine.Object Load(string abName, string assetName, Type type)
+        {
+            if (!Module.TryGetAssetBundle(abName, out m_AssetRecord))
             {
-                Debug.LogError("资源未加载完成，就尝试获取源对象");
+                Module.LoadAssetBundle(abName, false);
+                m_AssetRecord = Module.GetAssetBundle(abName);
+            }
+
+            UnityEngine.Object obj = m_AssetRecord.AssetBundle.LoadAsset(assetName, type);
+
+            return obj;
+        }
+
+        /// <summary>
+        /// 异步加载资源
+        /// </summary>
+        /// <param name="abName"></param>
+        /// <param name="assetName"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        private AssetBundleRequest LoadAsync(string abName, string assetName, Type type)
+        {
+            //走进来代表没加载/下载完
+            if (!Module.TryGetAssetBundle(abName, out m_AssetRecord))
+            {
+                Module.LoadAssetBundle(abName, true);
                 return null;
             }
 
-            AssetCache.RawObjectInfo rawObject = AssetCache.GetRawObject(m_AssetName);
-            return rawObject as T;
+            m_AssetRecord.IsAssetLoading = true;
+            return m_AssetRecord.AssetBundle.LoadAssetAsync(assetName, type);
         }
 
-        public virtual T GetInstantiate<T>() where T : Object
+        public override void Update()
         {
-            if (!m_IsDone)
+            if (m_IsDone || m_Error)
+                return;
+
+            if (!AssetCache.TryGetRawObject(m_AssetName, out m_RawObjectInfo))
             {
-                Debug.LogError("资源未加载完成，就尝试获取源对象");
-                return null;
+                m_BundleName ??= GetBundleName(m_AssetName);
+                if (string.IsNullOrEmpty(m_BundleName) || string.IsNullOrEmpty(m_AssetName))
+                {
+                    m_Error = true;
+                    Module.RemoveAssetLoader(m_AssetName);
+                    return;
+                }
+
+                if (m_Async)
+                {
+                    m_AssetRequest ??= LoadAsync(m_BundleName, m_AssetName, m_AssetType);
+
+                    if (m_AssetRequest != null && m_AssetRequest.isDone)
+                        m_RawObject = m_AssetRequest.asset;
+                }
+                else
+                {
+                    m_RawObject = Load(m_BundleName, m_AssetName, m_AssetType);
+                }
+
+                if (m_RawObject != null)
+                {
+                    m_RawObjectInfo = AssetCache.AddRawObject(m_AssetName, m_RawObject, m_BundleName);
+                    m_AssetRecord.IsAssetLoading = false;
+                    //新加载出源资源
+                    m_AssetRecord.RawReferenceCount++;
+                }
+            }
+            else
+            {
+                m_RawObject = m_RawObjectInfo.rawObject;
             }
 
-            AssetCache.RawObjectInfo rawObject = AssetCache.GetRawObject(m_AssetName);
-            Object instance = Object.Instantiate(rawObject.rawObject);
-            AssetCache.AddInstanceObject(instance.GetInstanceID(), instance, rawObject);
 
-            return instance as T;
-        }
-
-        public bool MoveNext()
-        {
-            return !m_IsDone;
-        }
-
-        public void Reset()
-        {
-
+            m_IsDone = m_RawObject != null;
         }
     }
 }

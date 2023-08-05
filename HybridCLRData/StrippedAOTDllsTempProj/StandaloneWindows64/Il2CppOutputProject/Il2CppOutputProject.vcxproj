@@ -49,6 +49,8 @@
     </ClCompile>
     <ClCompile Include="Source\GenericMethods__12.cpp">
     </ClCompile>
+    <ClCompile Include="Source\GenericMethods__13.cpp">
+    </ClCompile>
     <ClCompile Include="Source\GenericMethods__2.cpp">
     </ClCompile>
     <ClCompile Include="Source\GenericMethods__3.cpp">
@@ -157,6 +159,12 @@
     </ClCompile>
     <ClCompile Include="Source\Generics__5.cpp">
     </ClCompile>
+    <ClCompile Include="Source\Generics__50.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__51.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\Generics__52.cpp">
+    </ClCompile>
     <ClCompile Include="Source\Generics__6.cpp">
     </ClCompile>
     <ClCompile Include="Source\Generics__7.cpp">
@@ -222,6 +230,10 @@
     <ClCompile Include="Source\mscorlib__21.cpp">
     </ClCompile>
     <ClCompile Include="Source\mscorlib__22.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\mscorlib__23.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\mscorlib__24.cpp">
     </ClCompile>
     <ClCompile Include="Source\mscorlib__3.cpp">
     </ClCompile>
@@ -318,8 +330,6 @@
     <ClCompile Include="Source\UnityEngine.CoreModule__1.cpp">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.CoreModule__2.cpp">
-    </ClCompile>
-    <ClCompile Include="Source\UnityEngine.CoreModule__3.cpp">
     </ClCompile>
     <ClCompile Include="Source\UnityEngine.cpp">
     </ClCompile>

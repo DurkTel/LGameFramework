@@ -261,6 +261,8 @@ struct PlatformNotSupportedException_tD2BD7EB9278518AA5FE8AE75AD5D0D4298A4631A;
 struct PropertyInfo_t;
 // System.Reflection.RuntimeAssembly
 struct RuntimeAssembly_tA26A4DE82E77826DFC3D58AD976BCFC6BCA918AF;
+// Microsoft.Win32.SafeHandles.SafeFileHandle
+struct SafeFileHandle_t033FA6AAAC65F4BB25F4CBA9A242A58C95CD406E;
 // Microsoft.Win32.SafeHandles.SafeFindHandle
 struct SafeFindHandle_t3DD1D95C2F73C2D4F7F5DADC54024FD982FBE7E1;
 // System.Runtime.InteropServices.SafeHandle
@@ -345,7 +347,9 @@ IL2CPP_EXTERN_C RuntimeClass* Comparison_1_t9348BD07A42E0B64874D56D54EB3C5984E62
 IL2CPP_EXTERN_C RuntimeClass* ContractionComparer_t1CE1C4539C6840E11BB0D3F7E5C5BE815A40144B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Contraction_tAF10226C6FA2A0D9BE367AA4354E0145837F0540_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* DependencyInjector_tB5CBF00D172A8E073EBC53D983F229EF86399C9F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* DllNotFoundException_t8CAE636A394C482C9FCF38FB7B7929506319D534_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Exception_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* FormatException_tCD210E92627903FFEDAAA706C08FB6222B4D012B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* IAttrList_tF7C959E78AD6798B49CC725D67B2684D625EAE74_il2cpp_TypeInfo_var;
@@ -358,6 +362,7 @@ IL2CPP_EXTERN_C RuntimeClass* Int32U5BU5D_t19C97395396A72ECAF310612F0760F1650603
 IL2CPP_EXTERN_C RuntimeClass* Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* IntPtr_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Kernel32_t0EC757E8E73ADAB954114191A7ED5AF01A0DDDC4_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Level2Map_t5D4D125900566ECEC690FF07AF3EABF34F7A7EC1_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* List_1_t4B07534C6EDA44BFBF4CD81E023B10C2692A5258_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* List_1_t5CAE2B09460C18583E8D73B71F73B8D58CE5DC07_il2cpp_TypeInfo_var;
@@ -380,6 +385,7 @@ IL2CPP_EXTERN_C RuntimeClass* RuntimeEventHandle_t2EE549FFF9A46DFAEC860C2EA65742
 IL2CPP_EXTERN_C RuntimeClass* RuntimeObject_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* RuntimePropertyHandle_tF29419B6B585E14B11225E0AAE12911E93447C48_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Runtime_tCE6A44C19FEF6A8D28F17A01934A7989D46E6CAE_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* SafeFileHandle_t033FA6AAAC65F4BB25F4CBA9A242A58C95CD406E_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* SafeFindHandle_t3DD1D95C2F73C2D4F7F5DADC54024FD982FBE7E1_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* SafeLibraryHandle_t72AE86F4E8EF15BF14A3BF38199005108E0A0295_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* SafeRegistryHandle_tE1299DE3CB586878E1B1FF4469F01903A526B0FF_il2cpp_TypeInfo_var;
@@ -535,6 +541,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mB63183A9151F4345A9DD444A7
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* MSCompatUnicodeTable_BuildTailoringTables_m799DB61E22220EB93396E091DE35ABB161061BBA_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* MSCompatUnicodeTable_GetResource_mCDCAFD999C324BD03A0F6159C097D98D0004C861_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Marshal_SizeOf_TisCOPYFILE2_EXTENDED_PARAMETERS_t46E685B836B24155D76C9DA9185A67EECA0008F4_mB69D4B23AE0784C528FEC3FA4294F7A68D70C6ED_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* MemoryMarshal_GetReference_TisChar_t521A6F19B456D956AF452D926C32709DC03D6B17_m7FA6FA19030FDE5E3810FBFFD0FD8D6D36172527_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* MemoryMarshal_GetReference_TisChar_t521A6F19B456D956AF452D926C32709DC03D6B17_mE4C181D41EF4A4EC432CD3610B2969041E6F2F7A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NtDll_CreateFile_m876F81B2987B502DA48BEA32CA6F152C5950F196_RuntimeMethod_var;
@@ -1304,6 +1311,13 @@ struct Char_t521A6F19B456D956AF452D926C32709DC03D6B17
 	Il2CppChar ___m_value_0;
 };
 
+// System.DateTime
+struct DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D 
+{
+	// System.UInt64 System.DateTime::_dateData
+	uint64_t ____dateData_46;
+};
+
 // System.Double
 struct Double_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F 
 {
@@ -1581,6 +1595,21 @@ struct UriScheme_t6B786086C95A0192D655D1576DCD35D7B26CD794_marshaled_com
 	int32_t ___defaultPort_2;
 };
 
+// Interop/Kernel32/FILE_BASIC_INFO
+struct FILE_BASIC_INFO_t843AC45590918BDE7AC555D801A2EB5F9106DA7A 
+{
+	// System.Int64 Interop/Kernel32/FILE_BASIC_INFO::CreationTime
+	int64_t ___CreationTime_0;
+	// System.Int64 Interop/Kernel32/FILE_BASIC_INFO::LastAccessTime
+	int64_t ___LastAccessTime_1;
+	// System.Int64 Interop/Kernel32/FILE_BASIC_INFO::LastWriteTime
+	int64_t ___LastWriteTime_2;
+	// System.Int64 Interop/Kernel32/FILE_BASIC_INFO::ChangeTime
+	int64_t ___ChangeTime_3;
+	// System.UInt32 Interop/Kernel32/FILE_BASIC_INFO::FileAttributes
+	uint32_t ___FileAttributes_4;
+};
+
 // Interop/Kernel32/FILE_TIME
 struct FILE_TIME_tBD950B410C18B85474477EEA8F3651A2BD367965 
 {
@@ -1723,6 +1752,15 @@ struct ValueTuple_2_t0B36EAE3D771867E9A834093B8A35742A5BAA0C3
 	int32_t ___Item1_0;
 	// T2 System.ValueTuple`2::Item2
 	intptr_t ___Item2_1;
+};
+
+// System.DateTimeOffset
+struct DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4 
+{
+	// System.DateTime System.DateTimeOffset::_dateTime
+	DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ____dateTime_3;
+	// System.Int16 System.DateTimeOffset::_offsetMinutes
+	int16_t ____offsetMinutes_4;
 };
 
 // System.Delegate
@@ -2097,6 +2135,21 @@ struct RemoteClass_t8F343021C09FCE40A298F94523C6E988DD3E3DD0
 	uint32_t ___interface_count_4;
 };
 
+// Interop/Kernel32/COPYFILE2_EXTENDED_PARAMETERS
+struct COPYFILE2_EXTENDED_PARAMETERS_t46E685B836B24155D76C9DA9185A67EECA0008F4 
+{
+	// System.UInt32 Interop/Kernel32/COPYFILE2_EXTENDED_PARAMETERS::dwSize
+	uint32_t ___dwSize_0;
+	// System.UInt32 Interop/Kernel32/COPYFILE2_EXTENDED_PARAMETERS::dwCopyFlags
+	uint32_t ___dwCopyFlags_1;
+	// System.IntPtr Interop/Kernel32/COPYFILE2_EXTENDED_PARAMETERS::pfCancel
+	intptr_t ___pfCancel_2;
+	// System.IntPtr Interop/Kernel32/COPYFILE2_EXTENDED_PARAMETERS::pProgressRoutine
+	intptr_t ___pProgressRoutine_3;
+	// System.IntPtr Interop/Kernel32/COPYFILE2_EXTENDED_PARAMETERS::pvCallbackContext
+	intptr_t ___pvCallbackContext_4;
+};
+
 // Interop/Kernel32/REG_TZI_FORMAT
 struct REG_TZI_FORMAT_t501A04F34D18E2DEAB451EEC5E583D070FE036E3 
 {
@@ -2391,6 +2444,11 @@ struct OutOfMemoryException_tE6DC2F937EC4A8699271D5151C4DF83BDE99EE7F  : public 
 {
 };
 
+// Microsoft.Win32.SafeHandles.SafeFileHandle
+struct SafeFileHandle_t033FA6AAAC65F4BB25F4CBA9A242A58C95CD406E  : public SafeHandleZeroOrMinusOneIsInvalid_tC152552D137451170B3B1A304227B0ECADB65629
+{
+};
+
 // Microsoft.Win32.SafeHandles.SafeFindHandle
 struct SafeFindHandle_t3DD1D95C2F73C2D4F7F5DADC54024FD982FBE7E1  : public SafeHandleZeroOrMinusOneIsInvalid_tC152552D137451170B3B1A304227B0ECADB65629
 {
@@ -2415,6 +2473,19 @@ struct SmallXmlParserException_t49EDAE5290024E0707864CCCFE1266C5AE5475C7  : publ
 	int32_t ___column_19;
 };
 
+// System.TypeLoadException
+struct TypeLoadException_t6333E3083F7BFF1A582969E6F67ACBA8B0035C32  : public SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295
+{
+	// System.String System.TypeLoadException::ClassName
+	String_t* ___ClassName_18;
+	// System.String System.TypeLoadException::AssemblyName
+	String_t* ___AssemblyName_19;
+	// System.String System.TypeLoadException::MessageArg
+	String_t* ___MessageArg_20;
+	// System.Int32 System.TypeLoadException::ResourceId
+	int32_t ___ResourceId_21;
+};
+
 // System.ArgumentNullException
 struct ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129  : public ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263
 {
@@ -2425,6 +2496,11 @@ struct ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F  : 
 {
 	// System.Object System.ArgumentOutOfRangeException::_actualValue
 	RuntimeObject* ____actualValue_19;
+};
+
+// System.DllNotFoundException
+struct DllNotFoundException_t8CAE636A394C482C9FCF38FB7B7929506319D534  : public TypeLoadException_t6333E3083F7BFF1A582969E6F67ACBA8B0035C32
+{
 };
 
 // System.PlatformNotSupportedException
@@ -2841,6 +2917,11 @@ struct Uri_tDE16110D04BB22922863F9FB4735F61CD0175923_StaticFields
 // Interop/BCrypt
 
 // Interop/Kernel32
+struct Kernel32_t0EC757E8E73ADAB954114191A7ED5AF01A0DDDC4_StaticFields
+{
+	// System.Boolean Interop/Kernel32::useUWPFallback
+	bool ___useUWPFallback_0;
+};
 
 // Interop/Kernel32
 
@@ -3009,6 +3090,10 @@ struct TextReader_tB8D43017CB6BE1633E5A86D64E7757366507C1F7_StaticFields
 
 // Mono.Security.Uri/UriScheme
 
+// Interop/Kernel32/FILE_BASIC_INFO
+
+// Interop/Kernel32/FILE_BASIC_INFO
+
 // Interop/Kernel32/FILE_TIME
 
 // Interop/Kernel32/FILE_TIME
@@ -3052,6 +3137,19 @@ struct TextReader_tB8D43017CB6BE1633E5A86D64E7757366507C1F7_StaticFields
 // System.ValueTuple`2<System.Int32,System.IntPtr>
 
 // System.ValueTuple`2<System.Int32,System.IntPtr>
+
+// System.DateTimeOffset
+struct DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4_StaticFields
+{
+	// System.DateTimeOffset System.DateTimeOffset::MinValue
+	DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4 ___MinValue_0;
+	// System.DateTimeOffset System.DateTimeOffset::MaxValue
+	DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4 ___MaxValue_1;
+	// System.DateTimeOffset System.DateTimeOffset::UnixEpoch
+	DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4 ___UnixEpoch_2;
+};
+
+// System.DateTimeOffset
 
 // System.Exception
 struct Exception_t_StaticFields
@@ -3118,6 +3216,10 @@ struct TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4_StaticFields
 // Mono.RuntimeStructs/RemoteClass
 
 // Mono.RuntimeStructs/RemoteClass
+
+// Interop/Kernel32/COPYFILE2_EXTENDED_PARAMETERS
+
+// Interop/Kernel32/COPYFILE2_EXTENDED_PARAMETERS
 
 // Interop/Kernel32/REG_TZI_FORMAT
 
@@ -3228,6 +3330,10 @@ struct Type_t_StaticFields
 
 // System.OutOfMemoryException
 
+// Microsoft.Win32.SafeHandles.SafeFileHandle
+
+// Microsoft.Win32.SafeHandles.SafeFileHandle
+
 // Microsoft.Win32.SafeHandles.SafeFindHandle
 
 // Microsoft.Win32.SafeHandles.SafeFindHandle
@@ -3251,6 +3357,10 @@ struct Type_t_StaticFields
 // System.ArgumentOutOfRangeException
 
 // System.ArgumentOutOfRangeException
+
+// System.DllNotFoundException
+
+// System.DllNotFoundException
 
 // System.PlatformNotSupportedException
 
@@ -3709,6 +3819,8 @@ struct UriSchemeU5BU5D_t0698F6E387EF28E39CFE7D4CFCEDD931475E2E88  : public Runti
 };
 
 
+// System.Int32 System.Runtime.InteropServices.Marshal::SizeOf<Interop/Kernel32/COPYFILE2_EXTENDED_PARAMETERS>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Marshal_SizeOf_TisCOPYFILE2_EXTENDED_PARAMETERS_t46E685B836B24155D76C9DA9185A67EECA0008F4_mB69D4B23AE0784C528FEC3FA4294F7A68D70C6ED_gshared (const RuntimeMethod* method) ;
 // System.Void System.Span`1<System.Char>::.ctor(System.Void*,System.Int32)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Span_1__ctor_m835590E344B05AF6AF00A78E92C4175BD781A3D2_gshared_inline (Span_1_tEDDF15FCF9EC6DEBA0F696BAACDDBAB9D92C252D* __this, void* ___0_pointer, int32_t ___1_length, const RuntimeMethod* method) ;
 // System.Int32 System.Span`1<System.Char>::get_Length()
@@ -3764,14 +3876,37 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t BCrypt_BCryptGenRandom_mD6BF995AB9D8
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OutOfMemoryException__ctor_m2CDADA05A6304090686E8D5E3E99A1596FAF5951 (OutOfMemoryException_tE6DC2F937EC4A8699271D5151C4DF83BDE99EE7F* __this, const RuntimeMethod* method) ;
 // System.Void System.InvalidOperationException::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InvalidOperationException__ctor_m1BE9BD198B904AA1D94F4B10DA88077DFD44B7A5 (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* __this, const RuntimeMethod* method) ;
+// System.Int32 System.Runtime.InteropServices.Marshal::SizeOf<Interop/Kernel32/COPYFILE2_EXTENDED_PARAMETERS>()
+inline int32_t Marshal_SizeOf_TisCOPYFILE2_EXTENDED_PARAMETERS_t46E685B836B24155D76C9DA9185A67EECA0008F4_mB69D4B23AE0784C528FEC3FA4294F7A68D70C6ED (const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (const RuntimeMethod*))Marshal_SizeOf_TisCOPYFILE2_EXTENDED_PARAMETERS_t46E685B836B24155D76C9DA9185A67EECA0008F4_mB69D4B23AE0784C528FEC3FA4294F7A68D70C6ED_gshared)(method);
+}
+// System.Int32 Interop/Kernel32::CopyFile2(System.String,System.String,Interop/Kernel32/COPYFILE2_EXTENDED_PARAMETERS&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Kernel32_CopyFile2_m424D188F9B8B314F4FD5DDDB5D3277E764A15412 (String_t* ___0_pwszExistingFileName, String_t* ___1_pwszNewFileName, COPYFILE2_EXTENDED_PARAMETERS_t46E685B836B24155D76C9DA9185A67EECA0008F4* ___2_pExtendedParameters, const RuntimeMethod* method) ;
+// System.Int32 System.IO.Win32Marshal::TryMakeWin32ErrorCodeFromHR(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Win32Marshal_TryMakeWin32ErrorCodeFromHR_m4DF476CCA209056C657454582142FA5A80C5685C (int32_t ___0_hr, const RuntimeMethod* method) ;
+// System.Int32 Interop/Kernel32::CopyFileUWP(System.String,System.String,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Kernel32_CopyFileUWP_m08C48AFA05CCA0251819BCEBE66CEEDF79336811 (String_t* ___0_src, String_t* ___1_dst, bool ___2_failIfExists, const RuntimeMethod* method) ;
+// System.Boolean Interop/Kernel32::CopyFileEx(System.String,System.String,System.IntPtr,System.IntPtr,System.Int32&,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_CopyFileEx_mE5EDE4623E3859BB55FE788417736606CAA71B68 (String_t* ___0_src, String_t* ___1_dst, intptr_t ___2_progressRoutine, intptr_t ___3_progressData, int32_t* ___4_cancel, int32_t ___5_flags, const RuntimeMethod* method) ;
+// System.Int32 System.Runtime.InteropServices.Marshal::GetLastWin32Error()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Marshal_GetLastWin32Error_mCD7EBA7503BF36F46DB58D98E96101FB67684379 (const RuntimeMethod* method) ;
 // System.Void Microsoft.Win32.SafeHandles.SafeLibraryHandle::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeLibraryHandle__ctor_m3D033C124BDF67924DC1C71AB17F5377B2223996 (SafeLibraryHandle_t72AE86F4E8EF15BF14A3BF38199005108E0A0295* __this, const RuntimeMethod* method) ;
+// System.String System.IO.PathInternal::EnsureExtendedPrefixIfNeeded(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PathInternal_EnsureExtendedPrefixIfNeeded_m21B2789AA85AA22861D01CABB704013F5E2103D3 (String_t* ___0_path, const RuntimeMethod* method) ;
+// System.Boolean Interop/Kernel32::CopyFileExPrivate(System.String,System.String,System.IntPtr,System.IntPtr,System.Int32&,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_CopyFileExPrivate_m02A6ED52CD1B05B260FF1C2BA6D7864BC99F0EE4 (String_t* ___0_src, String_t* ___1_dst, intptr_t ___2_progressRoutine, intptr_t ___3_progressData, int32_t* ___4_cancel, int32_t ___5_flags, const RuntimeMethod* method) ;
 // System.String System.IO.PathInternal::EnsureExtendedPrefix(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PathInternal_EnsureExtendedPrefix_m353F7DE7912D0FE91F76602A8E7970BDFC6F2279 (String_t* ___0_path, const RuntimeMethod* method) ;
 // System.Boolean Interop/Kernel32::CreateDirectoryPrivate(System.String,Interop/Kernel32/SECURITY_ATTRIBUTES&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_CreateDirectoryPrivate_m1613F80DBD6BCF6784F6795179D2F0C474C29E10 (String_t* ___0_path, SECURITY_ATTRIBUTES_t52F010063D5470F5CC695E87D1A9AC4632CED64F* ___1_lpSecurityAttributes, const RuntimeMethod* method) ;
-// System.String System.IO.PathInternal::EnsureExtendedPrefixIfNeeded(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PathInternal_EnsureExtendedPrefixIfNeeded_m21B2789AA85AA22861D01CABB704013F5E2103D3 (String_t* ___0_path, const RuntimeMethod* method) ;
+// System.IntPtr Interop/Kernel32::CreateFile_IntPtr(System.String,System.Int32,System.IO.FileShare,System.IO.FileMode,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t Kernel32_CreateFile_IntPtr_mAAA188F1C96AFB99460C027EE7E384CDE1CA3FA2 (String_t* ___0_lpFileName, int32_t ___1_dwDesiredAccess, int32_t ___2_dwShareMode, int32_t ___3_dwCreationDisposition, int32_t ___4_dwFlagsAndAttributes, const RuntimeMethod* method) ;
+// System.Void Microsoft.Win32.SafeHandles.SafeFileHandle::.ctor(System.IntPtr,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeFileHandle__ctor_mDF2AFEC596DE2F6BD8FBB977135DAC23703213A2 (SafeFileHandle_t033FA6AAAC65F4BB25F4CBA9A242A58C95CD406E* __this, intptr_t ___0_preexistingHandle, bool ___1_ownsHandle, const RuntimeMethod* method) ;
+// System.Boolean Interop/Kernel32::CloseHandle(System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_CloseHandle_mFDD023808A27EDEE8BC11B3A755A43B7E3D7C820 (intptr_t ___0_handle, const RuntimeMethod* method) ;
 // System.IntPtr Interop/Kernel32::CreateFilePrivate(System.String,System.Int32,System.IO.FileShare,Interop/Kernel32/SECURITY_ATTRIBUTES*,System.IO.FileMode,System.Int32,System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t Kernel32_CreateFilePrivate_m9167D1BDD22744ABB179E5B3CF0098B5AE6066B4 (String_t* ___0_lpFileName, int32_t ___1_dwDesiredAccess, int32_t ___2_dwShareMode, SECURITY_ATTRIBUTES_t52F010063D5470F5CC695E87D1A9AC4632CED64F* ___3_securityAttrs, int32_t ___4_dwCreationDisposition, int32_t ___5_dwFlagsAndAttributes, intptr_t ___6_hTemplateFile, const RuntimeMethod* method) ;
 // System.Boolean Interop/Kernel32::DeleteFilePrivate(System.String)
@@ -3820,10 +3955,20 @@ inline String_t* Span_1_ToString_m12316C6CDC05E2F49EA4BDAD78FD7F1718E6E980 (Span
 {
 	return ((  String_t* (*) (Span_1_tEDDF15FCF9EC6DEBA0F696BAACDDBAB9D92C252D*, const RuntimeMethod*))Span_1_ToString_m12316C6CDC05E2F49EA4BDAD78FD7F1718E6E980_gshared)(__this, method);
 }
-// System.Int32 System.Runtime.InteropServices.Marshal::GetLastWin32Error()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Marshal_GetLastWin32Error_mCD7EBA7503BF36F46DB58D98E96101FB67684379 (const RuntimeMethod* method) ;
 // System.Boolean Interop/Kernel32::GetFileAttributesExPrivate(System.String,Interop/Kernel32/GET_FILEEX_INFO_LEVELS,Interop/Kernel32/WIN32_FILE_ATTRIBUTE_DATA&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_GetFileAttributesExPrivate_m33BFCF7A4B139B0E641754F050770699CF1B0E50 (String_t* ___0_name, uint32_t ___1_fileInfoLevel, WIN32_FILE_ATTRIBUTE_DATA_tD093F8658579DA72CCD2E158A681DDE37834F73B* ___2_lpFileInformation, const RuntimeMethod* method) ;
+// System.Boolean Interop/Kernel32::MoveFileExPrivate(System.String,System.String,System.UInt32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_MoveFileExPrivate_m002B024E5378E8B99CC3025768F1B7A50FFC52F0 (String_t* ___0_src, String_t* ___1_dst, uint32_t ___2_flags, const RuntimeMethod* method) ;
+// System.Boolean Interop/Kernel32::ReplaceFilePrivate(System.String,System.String,System.String,System.Int32,System.IntPtr,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_ReplaceFilePrivate_mF1295E77590C63F19CCE319F1E4A1E2A46A23083 (String_t* ___0_replacedFileName, String_t* ___1_replacementFileName, String_t* ___2_backupFileName, int32_t ___3_dwReplaceFlags, intptr_t ___4_lpExclude, intptr_t ___5_lpReserved, const RuntimeMethod* method) ;
+// System.Boolean Interop/Kernel32::SetFileAttributesPrivate(System.String,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_SetFileAttributesPrivate_mB1E844BF268191B43410DEABC08EDECEB323F8FD (String_t* ___0_name, int32_t ___1_attr, const RuntimeMethod* method) ;
+// System.Void System.Runtime.InteropServices.SafeHandle::DangerousAddRef(System.Boolean&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922 (SafeHandle_tC1A4DA80DA89B867CC011B707A07275230321BF7* __this, bool* ___0_success, const RuntimeMethod* method) ;
+// System.Void System.Runtime.InteropServices.SafeHandle::DangerousRelease()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E (SafeHandle_tC1A4DA80DA89B867CC011B707A07275230321BF7* __this, const RuntimeMethod* method) ;
+// System.Boolean Interop/Kernel32::SetFileInformationByHandle(Microsoft.Win32.SafeHandles.SafeFileHandle,Interop/Kernel32/FILE_INFO_BY_HANDLE_CLASS,Interop/Kernel32/FILE_BASIC_INFO&,System.UInt32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_SetFileInformationByHandle_mDD40D71609D6712CE0F35762F100549675B56D70 (SafeFileHandle_t033FA6AAAC65F4BB25F4CBA9A242A58C95CD406E* ___0_hFile, uint32_t ___1_FileInformationClass, FILE_BASIC_INFO_t843AC45590918BDE7AC555D801A2EB5F9106DA7A* ___2_lpFileInformation, uint32_t ___3_dwBufferSize, const RuntimeMethod* method) ;
 // System.Int32 System.Runtime.CompilerServices.RuntimeHelpers::get_OffsetToStringData()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RuntimeHelpers_get_OffsetToStringData_m90A5D27EF88BE9432BF7093B7D7E7A0ACB0A8FBD (const RuntimeMethod* method) ;
 // System.Int32 System.String::get_Length()
@@ -3846,12 +3991,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TIME_ZONE_INFORMATION__ctor_mFEE2E952524
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TIME_ZONE_INFORMATION_GetStandardName_m2DD2660A62A026A728437C2BF88A2FF09328D08F (TIME_ZONE_INFORMATION_tF749E0DC737FF8A4C16BFD9FEA530A0D4F5A29A5* __this, const RuntimeMethod* method) ;
 // System.String Interop/Kernel32/TIME_ZONE_INFORMATION::GetDaylightName()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TIME_ZONE_INFORMATION_GetDaylightName_mA271FA71E881FCE2B3355F24B95FE3C1F227035D (TIME_ZONE_INFORMATION_tF749E0DC737FF8A4C16BFD9FEA530A0D4F5A29A5* __this, const RuntimeMethod* method) ;
+// System.Int64 Interop/Kernel32/FILE_TIME::ToTicks()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t FILE_TIME_ToTicks_m00582CA0E51E542526ECA498602CD545C8057F1F (FILE_TIME_tBD950B410C18B85474477EEA8F3651A2BD367965* __this, const RuntimeMethod* method) ;
+// System.DateTimeOffset System.DateTimeOffset::FromFileTime(System.Int64)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4 DateTimeOffset_FromFileTime_m91913654F9CA7F5367A35D1E25E321D7735CC32C (int64_t ___0_fileTime, const RuntimeMethod* method) ;
+// System.DateTimeOffset Interop/Kernel32/FILE_TIME::ToDateTimeOffset()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4 FILE_TIME_ToDateTimeOffset_m9F1846CD1F5AC8B3465718BBC419B622AB917B1F (FILE_TIME_tBD950B410C18B85474477EEA8F3651A2BD367965* __this, const RuntimeMethod* method) ;
 // System.Void Interop/Kernel32/WIN32_FILE_ATTRIBUTE_DATA::PopulateFrom(Interop/Kernel32/WIN32_FIND_DATA&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WIN32_FILE_ATTRIBUTE_DATA_PopulateFrom_mFDC867C91453AA607FDF9D1E478D09FB8B462958 (WIN32_FILE_ATTRIBUTE_DATA_tD093F8658579DA72CCD2E158A681DDE37834F73B* __this, WIN32_FIND_DATA_t0A641A00D0B2241B84A2B556D57E9A741B499A0A* ___0_findData, const RuntimeMethod* method) ;
-// System.Void System.Runtime.InteropServices.SafeHandle::DangerousAddRef(System.Boolean&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922 (SafeHandle_tC1A4DA80DA89B867CC011B707A07275230321BF7* __this, bool* ___0_success, const RuntimeMethod* method) ;
-// System.Void System.Runtime.InteropServices.SafeHandle::DangerousRelease()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E (SafeHandle_tC1A4DA80DA89B867CC011B707A07275230321BF7* __this, const RuntimeMethod* method) ;
 // T& System.Runtime.InteropServices.MemoryMarshal::GetReference<System.Char>(System.ReadOnlySpan`1<T>)
 inline Il2CppChar* MemoryMarshal_GetReference_TisChar_t521A6F19B456D956AF452D926C32709DC03D6B17_mE4C181D41EF4A4EC432CD3610B2969041E6F2F7A (ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1 ___0_span, const RuntimeMethod* method)
 {
@@ -4567,6 +4714,12 @@ IL2CPP_EXTERN_C uint32_t DEFAULT_CALL GetTimeZoneInformation(TIME_ZONE_INFORMATI
 IL2CPP_EXTERN_C int32_t DEFAULT_CALL CloseHandle(intptr_t);
 #endif
 #if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
+IL2CPP_EXTERN_C int32_t DEFAULT_CALL CopyFile2(Il2CppChar*, Il2CppChar*, COPYFILE2_EXTENDED_PARAMETERS_t46E685B836B24155D76C9DA9185A67EECA0008F4*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
+IL2CPP_EXTERN_C int32_t DEFAULT_CALL CopyFileExW(Il2CppChar*, Il2CppChar*, intptr_t, intptr_t, int32_t*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
 IL2CPP_EXTERN_C int32_t DEFAULT_CALL CreateDirectoryW(Il2CppChar*, SECURITY_ATTRIBUTES_t52F010063D5470F5CC695E87D1A9AC4632CED64F*);
 #endif
 #if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
@@ -4586,6 +4739,18 @@ IL2CPP_EXTERN_C int32_t DEFAULT_CALL GetFileAttributesExW(Il2CppChar*, uint32_t,
 #endif
 #if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
 IL2CPP_EXTERN_C int32_t DEFAULT_CALL GetFileInformationByHandleEx(intptr_t, uint32_t, intptr_t, uint32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
+IL2CPP_EXTERN_C int32_t DEFAULT_CALL MoveFileExW(Il2CppChar*, Il2CppChar*, uint32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
+IL2CPP_EXTERN_C int32_t DEFAULT_CALL ReplaceFileW(Il2CppChar*, Il2CppChar*, Il2CppChar*, int32_t, intptr_t, intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
+IL2CPP_EXTERN_C int32_t DEFAULT_CALL SetFileAttributesW(Il2CppChar*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
+IL2CPP_EXTERN_C int32_t DEFAULT_CALL SetFileInformationByHandle(void*, uint32_t, FILE_BASIC_INFO_t843AC45590918BDE7AC555D801A2EB5F9106DA7A*, uint32_t);
 #endif
 #if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
 IL2CPP_EXTERN_C int32_t DEFAULT_CALL SetThreadErrorMode(uint32_t, uint32_t*);
@@ -4691,6 +4856,177 @@ IL_0025:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Int32 Interop/Kernel32::CopyFileUWP(System.String,System.String,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Kernel32_CopyFileUWP_m08C48AFA05CCA0251819BCEBE66CEEDF79336811 (String_t* ___0_src, String_t* ___1_dst, bool ___2_failIfExists, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Marshal_SizeOf_TisCOPYFILE2_EXTENDED_PARAMETERS_t46E685B836B24155D76C9DA9185A67EECA0008F4_mB69D4B23AE0784C528FEC3FA4294F7A68D70C6ED_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Marshal_tD976A56A90263C3CE2B780D4B1CADADE2E70B4A7_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint32_t V_0 = 0;
+	COPYFILE2_EXTENDED_PARAMETERS_t46E685B836B24155D76C9DA9185A67EECA0008F4 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	COPYFILE2_EXTENDED_PARAMETERS_t46E685B836B24155D76C9DA9185A67EECA0008F4 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	int32_t G_B3_0 = 0;
+	{
+		bool L_0 = ___2_failIfExists;
+		if (L_0)
+		{
+			goto IL_0006;
+		}
+	}
+	{
+		G_B3_0 = 0;
+		goto IL_0007;
+	}
+
+IL_0006:
+	{
+		G_B3_0 = 1;
+	}
+
+IL_0007:
+	{
+		V_0 = G_B3_0;
+		il2cpp_codegen_initobj((&V_2), sizeof(COPYFILE2_EXTENDED_PARAMETERS_t46E685B836B24155D76C9DA9185A67EECA0008F4));
+		il2cpp_codegen_runtime_class_init_inline(Marshal_tD976A56A90263C3CE2B780D4B1CADADE2E70B4A7_il2cpp_TypeInfo_var);
+		int32_t L_1;
+		L_1 = Marshal_SizeOf_TisCOPYFILE2_EXTENDED_PARAMETERS_t46E685B836B24155D76C9DA9185A67EECA0008F4_mB69D4B23AE0784C528FEC3FA4294F7A68D70C6ED(Marshal_SizeOf_TisCOPYFILE2_EXTENDED_PARAMETERS_t46E685B836B24155D76C9DA9185A67EECA0008F4_mB69D4B23AE0784C528FEC3FA4294F7A68D70C6ED_RuntimeMethod_var);
+		(&V_2)->___dwSize_0 = L_1;
+		uint32_t L_2 = V_0;
+		(&V_2)->___dwCopyFlags_1 = L_2;
+		COPYFILE2_EXTENDED_PARAMETERS_t46E685B836B24155D76C9DA9185A67EECA0008F4 L_3 = V_2;
+		V_1 = L_3;
+		String_t* L_4 = ___0_src;
+		String_t* L_5 = ___1_dst;
+		int32_t L_6;
+		L_6 = Kernel32_CopyFile2_m424D188F9B8B314F4FD5DDDB5D3277E764A15412(L_4, L_5, (&V_1), NULL);
+		int32_t L_7;
+		L_7 = Win32Marshal_TryMakeWin32ErrorCodeFromHR_m4DF476CCA209056C657454582142FA5A80C5685C(L_6, NULL);
+		return L_7;
+	}
+}
+// System.Int32 Interop/Kernel32::CopyFile(System.String,System.String,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Kernel32_CopyFile_m92AC6FE3B52D479CF360CACB7D2C75C2B983CF7D (String_t* ___0_src, String_t* ___1_dst, bool ___2_failIfExists, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtr_t_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Kernel32_t0EC757E8E73ADAB954114191A7ED5AF01A0DDDC4_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Marshal_tD976A56A90263C3CE2B780D4B1CADADE2E70B4A7_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	int32_t V_2 = 0;
+	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
+	int32_t G_B3_0 = 0;
+	{
+		bool L_0 = ___2_failIfExists;
+		if (L_0)
+		{
+			goto IL_0006;
+		}
+	}
+	{
+		G_B3_0 = 0;
+		goto IL_0007;
+	}
+
+IL_0006:
+	{
+		G_B3_0 = 1;
+	}
+
+IL_0007:
+	{
+		V_0 = G_B3_0;
+		V_1 = 0;
+		bool L_1 = ((Kernel32_t0EC757E8E73ADAB954114191A7ED5AF01A0DDDC4_StaticFields*)il2cpp_codegen_static_fields_for(Kernel32_t0EC757E8E73ADAB954114191A7ED5AF01A0DDDC4_il2cpp_TypeInfo_var))->___useUWPFallback_0;
+		if (!L_1)
+		{
+			goto IL_001a;
+		}
+	}
+	{
+		String_t* L_2 = ___0_src;
+		String_t* L_3 = ___1_dst;
+		bool L_4 = ___2_failIfExists;
+		int32_t L_5;
+		L_5 = Kernel32_CopyFileUWP_m08C48AFA05CCA0251819BCEBE66CEEDF79336811(L_2, L_3, L_4, NULL);
+		return L_5;
+	}
+
+IL_001a:
+	{
+	}
+	try
+	{// begin try (depth: 1)
+		{
+			String_t* L_6 = ___0_src;
+			String_t* L_7 = ___1_dst;
+			intptr_t L_8 = ((IntPtr_t_StaticFields*)il2cpp_codegen_static_fields_for(IntPtr_t_il2cpp_TypeInfo_var))->___Zero_1;
+			intptr_t L_9 = ((IntPtr_t_StaticFields*)il2cpp_codegen_static_fields_for(IntPtr_t_il2cpp_TypeInfo_var))->___Zero_1;
+			int32_t L_10 = V_0;
+			bool L_11;
+			L_11 = Kernel32_CopyFileEx_mE5EDE4623E3859BB55FE788417736606CAA71B68(L_6, L_7, L_8, L_9, (&V_1), L_10, NULL);
+			if (L_11)
+			{
+				goto IL_0039_1;
+			}
+		}
+		{
+			il2cpp_codegen_runtime_class_init_inline(Marshal_tD976A56A90263C3CE2B780D4B1CADADE2E70B4A7_il2cpp_TypeInfo_var);
+			int32_t L_12;
+			L_12 = Marshal_GetLastWin32Error_mCD7EBA7503BF36F46DB58D98E96101FB67684379(NULL);
+			V_2 = L_12;
+			goto IL_004f;
+		}
+
+IL_0039_1:
+		{
+			goto IL_004d;
+		}
+	}// end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&DllNotFoundException_t8CAE636A394C482C9FCF38FB7B7929506319D534_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
+		{
+			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
+			goto CATCH_003b;
+		}
+		throw e;
+	}
+
+CATCH_003b:
+	{// begin catch(System.DllNotFoundException)
+		((Kernel32_t0EC757E8E73ADAB954114191A7ED5AF01A0DDDC4_StaticFields*)il2cpp_codegen_static_fields_for(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Kernel32_t0EC757E8E73ADAB954114191A7ED5AF01A0DDDC4_il2cpp_TypeInfo_var))))->___useUWPFallback_0 = (bool)1;
+		String_t* L_13 = ___0_src;
+		String_t* L_14 = ___1_dst;
+		bool L_15 = ___2_failIfExists;
+		int32_t L_16;
+		L_16 = Kernel32_CopyFileUWP_m08C48AFA05CCA0251819BCEBE66CEEDF79336811(L_13, L_14, L_15, NULL);
+		V_2 = L_16;
+		IL2CPP_POP_ACTIVE_EXCEPTION();
+		goto IL_004f;
+	}// end catch (depth: 1)
+
+IL_004d:
+	{
+		return 0;
+	}
+
+IL_004f:
+	{
+		int32_t L_17 = V_2;
+		return L_17;
+	}
+}
 // System.Boolean Interop/Kernel32::FreeLibrary(System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_FreeLibrary_mD37BF4DEA121402FE41BADA68C7594E9A4D12C7C (intptr_t ___0_hModule, const RuntimeMethod* method) 
 {
@@ -4882,6 +5218,111 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_CloseHandle_mFDD023808A27EDEE8B
 
 	return static_cast<bool>(returnValue);
 }
+// System.Int32 Interop/Kernel32::CopyFile2(System.String,System.String,Interop/Kernel32/COPYFILE2_EXTENDED_PARAMETERS&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Kernel32_CopyFile2_m424D188F9B8B314F4FD5DDDB5D3277E764A15412 (String_t* ___0_pwszExistingFileName, String_t* ___1_pwszNewFileName, COPYFILE2_EXTENDED_PARAMETERS_t46E685B836B24155D76C9DA9185A67EECA0008F4* ___2_pExtendedParameters, const RuntimeMethod* method) 
+{
+	typedef int32_t (DEFAULT_CALL *PInvokeFunc) (Il2CppChar*, Il2CppChar*, COPYFILE2_EXTENDED_PARAMETERS_t46E685B836B24155D76C9DA9185A67EECA0008F4*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_kernel32_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(Il2CppChar*) + sizeof(Il2CppChar*) + sizeof(COPYFILE2_EXTENDED_PARAMETERS_t46E685B836B24155D76C9DA9185A67EECA0008F4*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("kernel32.dll"), "CopyFile2", IL2CPP_CALL_DEFAULT, CHARSET_UNICODE, parameterSize, false);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	// Marshaling of parameter '___0_pwszExistingFileName' to native representation
+	Il2CppChar* ____0_pwszExistingFileName_marshaled = NULL;
+	if (___0_pwszExistingFileName != NULL)
+	{
+		____0_pwszExistingFileName_marshaled = &___0_pwszExistingFileName->____firstChar_5;
+	}
+
+	// Marshaling of parameter '___1_pwszNewFileName' to native representation
+	Il2CppChar* ____1_pwszNewFileName_marshaled = NULL;
+	if (___1_pwszNewFileName != NULL)
+	{
+		____1_pwszNewFileName_marshaled = &___1_pwszNewFileName->____firstChar_5;
+	}
+
+	// Native function invocation
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(CopyFile2)(____0_pwszExistingFileName_marshaled, ____1_pwszNewFileName_marshaled, ___2_pExtendedParameters);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_pwszExistingFileName_marshaled, ____1_pwszNewFileName_marshaled, ___2_pExtendedParameters);
+	#endif
+
+	return returnValue;
+}
+// System.Boolean Interop/Kernel32::CopyFileExPrivate(System.String,System.String,System.IntPtr,System.IntPtr,System.Int32&,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_CopyFileExPrivate_m02A6ED52CD1B05B260FF1C2BA6D7864BC99F0EE4 (String_t* ___0_src, String_t* ___1_dst, intptr_t ___2_progressRoutine, intptr_t ___3_progressData, int32_t* ___4_cancel, int32_t ___5_flags, const RuntimeMethod* method) 
+{
+	typedef int32_t (DEFAULT_CALL *PInvokeFunc) (Il2CppChar*, Il2CppChar*, intptr_t, intptr_t, int32_t*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_kernel32_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(Il2CppChar*) + sizeof(Il2CppChar*) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(int32_t*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("kernel32.dll"), "CopyFileExW", IL2CPP_CALL_DEFAULT, CHARSET_UNICODE, parameterSize, false);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	// Marshaling of parameter '___0_src' to native representation
+	Il2CppChar* ____0_src_marshaled = NULL;
+	if (___0_src != NULL)
+	{
+		____0_src_marshaled = &___0_src->____firstChar_5;
+	}
+
+	// Marshaling of parameter '___1_dst' to native representation
+	Il2CppChar* ____1_dst_marshaled = NULL;
+	if (___1_dst != NULL)
+	{
+		____1_dst_marshaled = &___1_dst->____firstChar_5;
+	}
+
+	// Native function invocation
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(CopyFileExW)(____0_src_marshaled, ____1_dst_marshaled, ___2_progressRoutine, ___3_progressData, ___4_cancel, ___5_flags);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_src_marshaled, ____1_dst_marshaled, ___2_progressRoutine, ___3_progressData, ___4_cancel, ___5_flags);
+	#endif
+	il2cpp_codegen_marshal_store_last_error();
+
+	return static_cast<bool>(returnValue);
+}
+// System.Boolean Interop/Kernel32::CopyFileEx(System.String,System.String,System.IntPtr,System.IntPtr,System.Int32&,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_CopyFileEx_mE5EDE4623E3859BB55FE788417736606CAA71B68 (String_t* ___0_src, String_t* ___1_dst, intptr_t ___2_progressRoutine, intptr_t ___3_progressData, int32_t* ___4_cancel, int32_t ___5_flags, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PathInternal_t40910AF78E21C3A6C83D095423B3EADE9AC5261C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___0_src;
+		il2cpp_codegen_runtime_class_init_inline(PathInternal_t40910AF78E21C3A6C83D095423B3EADE9AC5261C_il2cpp_TypeInfo_var);
+		String_t* L_1;
+		L_1 = PathInternal_EnsureExtendedPrefixIfNeeded_m21B2789AA85AA22861D01CABB704013F5E2103D3(L_0, NULL);
+		___0_src = L_1;
+		String_t* L_2 = ___1_dst;
+		String_t* L_3;
+		L_3 = PathInternal_EnsureExtendedPrefixIfNeeded_m21B2789AA85AA22861D01CABB704013F5E2103D3(L_2, NULL);
+		___1_dst = L_3;
+		String_t* L_4 = ___0_src;
+		String_t* L_5 = ___1_dst;
+		intptr_t L_6 = ___2_progressRoutine;
+		intptr_t L_7 = ___3_progressData;
+		int32_t* L_8 = ___4_cancel;
+		int32_t L_9 = ___5_flags;
+		bool L_10;
+		L_10 = Kernel32_CopyFileExPrivate_m02A6ED52CD1B05B260FF1C2BA6D7864BC99F0EE4(L_4, L_5, L_6, L_7, L_8, L_9, NULL);
+		return L_10;
+	}
+}
 // System.Boolean Interop/Kernel32::CreateDirectoryPrivate(System.String,Interop/Kernel32/SECURITY_ATTRIBUTES&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_CreateDirectoryPrivate_m1613F80DBD6BCF6784F6795179D2F0C474C29E10 (String_t* ___0_path, SECURITY_ATTRIBUTES_t52F010063D5470F5CC695E87D1A9AC4632CED64F* ___1_lpSecurityAttributes, const RuntimeMethod* method) 
 {
@@ -4965,6 +5406,62 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t Kernel32_CreateFilePrivate_m9167D1BD
 	il2cpp_codegen_marshal_store_last_error();
 
 	return returnValue;
+}
+// Microsoft.Win32.SafeHandles.SafeFileHandle Interop/Kernel32::CreateFile(System.String,System.Int32,System.IO.FileShare,System.IO.FileMode,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SafeFileHandle_t033FA6AAAC65F4BB25F4CBA9A242A58C95CD406E* Kernel32_CreateFile_m763CB60D9FBE174A77D0B0691B5A589B1425BA38 (String_t* ___0_lpFileName, int32_t ___1_dwDesiredAccess, int32_t ___2_dwShareMode, int32_t ___3_dwCreationDisposition, int32_t ___4_dwFlagsAndAttributes, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SafeFileHandle_t033FA6AAAC65F4BB25F4CBA9A242A58C95CD406E_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	intptr_t V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	SafeFileHandle_t033FA6AAAC65F4BB25F4CBA9A242A58C95CD406E* V_1 = NULL;
+	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
+	{
+		String_t* L_0 = ___0_lpFileName;
+		int32_t L_1 = ___1_dwDesiredAccess;
+		int32_t L_2 = ___2_dwShareMode;
+		int32_t L_3 = ___3_dwCreationDisposition;
+		int32_t L_4 = ___4_dwFlagsAndAttributes;
+		intptr_t L_5;
+		L_5 = Kernel32_CreateFile_IntPtr_mAAA188F1C96AFB99460C027EE7E384CDE1CA3FA2(L_0, L_1, L_2, L_3, L_4, NULL);
+		V_0 = L_5;
+	}
+	try
+	{// begin try (depth: 1)
+		intptr_t L_6 = V_0;
+		SafeFileHandle_t033FA6AAAC65F4BB25F4CBA9A242A58C95CD406E* L_7 = (SafeFileHandle_t033FA6AAAC65F4BB25F4CBA9A242A58C95CD406E*)il2cpp_codegen_object_new(SafeFileHandle_t033FA6AAAC65F4BB25F4CBA9A242A58C95CD406E_il2cpp_TypeInfo_var);
+		NullCheck(L_7);
+		SafeFileHandle__ctor_mDF2AFEC596DE2F6BD8FBB977135DAC23703213A2(L_7, L_6, (bool)1, NULL);
+		V_1 = L_7;
+		goto IL_0020;
+	}// end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&RuntimeObject_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
+		{
+			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
+			goto CATCH_0016;
+		}
+		throw e;
+	}
+
+CATCH_0016:
+	{// begin catch(System.Object)
+		intptr_t L_8 = V_0;
+		bool L_9;
+		L_9 = Kernel32_CloseHandle_mFDD023808A27EDEE8BC11B3A755A43B7E3D7C820(L_8, NULL);
+		IL2CPP_RETHROW_MANAGED_EXCEPTION(IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));
+	}// end catch (depth: 1)
+
+IL_0020:
+	{
+		SafeFileHandle_t033FA6AAAC65F4BB25F4CBA9A242A58C95CD406E* L_10 = V_1;
+		return L_10;
+	}
 }
 // System.IntPtr Interop/Kernel32::CreateFile_IntPtr(System.String,System.Int32,System.IO.FileShare,System.IO.FileMode,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t Kernel32_CreateFile_IntPtr_mAAA188F1C96AFB99460C027EE7E384CDE1CA3FA2 (String_t* ___0_lpFileName, int32_t ___1_dwDesiredAccess, int32_t ___2_dwShareMode, int32_t ___3_dwCreationDisposition, int32_t ___4_dwFlagsAndAttributes, const RuntimeMethod* method) 
@@ -5462,6 +5959,267 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_GetFileInformationByHandleEx_m8
 
 	return static_cast<bool>(returnValue);
 }
+// System.Boolean Interop/Kernel32::MoveFileExPrivate(System.String,System.String,System.UInt32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_MoveFileExPrivate_m002B024E5378E8B99CC3025768F1B7A50FFC52F0 (String_t* ___0_src, String_t* ___1_dst, uint32_t ___2_flags, const RuntimeMethod* method) 
+{
+	typedef int32_t (DEFAULT_CALL *PInvokeFunc) (Il2CppChar*, Il2CppChar*, uint32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_kernel32_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(Il2CppChar*) + sizeof(Il2CppChar*) + sizeof(uint32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("kernel32.dll"), "MoveFileExW", IL2CPP_CALL_DEFAULT, CHARSET_UNICODE, parameterSize, false);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	// Marshaling of parameter '___0_src' to native representation
+	Il2CppChar* ____0_src_marshaled = NULL;
+	if (___0_src != NULL)
+	{
+		____0_src_marshaled = &___0_src->____firstChar_5;
+	}
+
+	// Marshaling of parameter '___1_dst' to native representation
+	Il2CppChar* ____1_dst_marshaled = NULL;
+	if (___1_dst != NULL)
+	{
+		____1_dst_marshaled = &___1_dst->____firstChar_5;
+	}
+
+	// Native function invocation
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(MoveFileExW)(____0_src_marshaled, ____1_dst_marshaled, ___2_flags);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_src_marshaled, ____1_dst_marshaled, ___2_flags);
+	#endif
+	il2cpp_codegen_marshal_store_last_error();
+
+	return static_cast<bool>(returnValue);
+}
+// System.Boolean Interop/Kernel32::MoveFile(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_MoveFile_m9A189B61B87DA30DC4EFE5EA3849DE4840BAC0A2 (String_t* ___0_src, String_t* ___1_dst, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PathInternal_t40910AF78E21C3A6C83D095423B3EADE9AC5261C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___0_src;
+		il2cpp_codegen_runtime_class_init_inline(PathInternal_t40910AF78E21C3A6C83D095423B3EADE9AC5261C_il2cpp_TypeInfo_var);
+		String_t* L_1;
+		L_1 = PathInternal_EnsureExtendedPrefixIfNeeded_m21B2789AA85AA22861D01CABB704013F5E2103D3(L_0, NULL);
+		___0_src = L_1;
+		String_t* L_2 = ___1_dst;
+		String_t* L_3;
+		L_3 = PathInternal_EnsureExtendedPrefixIfNeeded_m21B2789AA85AA22861D01CABB704013F5E2103D3(L_2, NULL);
+		___1_dst = L_3;
+		String_t* L_4 = ___0_src;
+		String_t* L_5 = ___1_dst;
+		bool L_6;
+		L_6 = Kernel32_MoveFileExPrivate_m002B024E5378E8B99CC3025768F1B7A50FFC52F0(L_4, L_5, 2, NULL);
+		return L_6;
+	}
+}
+// System.Boolean Interop/Kernel32::ReplaceFilePrivate(System.String,System.String,System.String,System.Int32,System.IntPtr,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_ReplaceFilePrivate_mF1295E77590C63F19CCE319F1E4A1E2A46A23083 (String_t* ___0_replacedFileName, String_t* ___1_replacementFileName, String_t* ___2_backupFileName, int32_t ___3_dwReplaceFlags, intptr_t ___4_lpExclude, intptr_t ___5_lpReserved, const RuntimeMethod* method) 
+{
+	typedef int32_t (DEFAULT_CALL *PInvokeFunc) (Il2CppChar*, Il2CppChar*, Il2CppChar*, int32_t, intptr_t, intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_kernel32_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(Il2CppChar*) + sizeof(Il2CppChar*) + sizeof(Il2CppChar*) + sizeof(int32_t) + sizeof(intptr_t) + sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("kernel32.dll"), "ReplaceFileW", IL2CPP_CALL_DEFAULT, CHARSET_UNICODE, parameterSize, false);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	// Marshaling of parameter '___0_replacedFileName' to native representation
+	Il2CppChar* ____0_replacedFileName_marshaled = NULL;
+	if (___0_replacedFileName != NULL)
+	{
+		____0_replacedFileName_marshaled = &___0_replacedFileName->____firstChar_5;
+	}
+
+	// Marshaling of parameter '___1_replacementFileName' to native representation
+	Il2CppChar* ____1_replacementFileName_marshaled = NULL;
+	if (___1_replacementFileName != NULL)
+	{
+		____1_replacementFileName_marshaled = &___1_replacementFileName->____firstChar_5;
+	}
+
+	// Marshaling of parameter '___2_backupFileName' to native representation
+	Il2CppChar* ____2_backupFileName_marshaled = NULL;
+	if (___2_backupFileName != NULL)
+	{
+		____2_backupFileName_marshaled = &___2_backupFileName->____firstChar_5;
+	}
+
+	// Native function invocation
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(ReplaceFileW)(____0_replacedFileName_marshaled, ____1_replacementFileName_marshaled, ____2_backupFileName_marshaled, ___3_dwReplaceFlags, ___4_lpExclude, ___5_lpReserved);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_replacedFileName_marshaled, ____1_replacementFileName_marshaled, ____2_backupFileName_marshaled, ___3_dwReplaceFlags, ___4_lpExclude, ___5_lpReserved);
+	#endif
+	il2cpp_codegen_marshal_store_last_error();
+
+	return static_cast<bool>(returnValue);
+}
+// System.Boolean Interop/Kernel32::ReplaceFile(System.String,System.String,System.String,System.Int32,System.IntPtr,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_ReplaceFile_m23BF898D2DC8FA8FACB1FC7C4E1657C16674973B (String_t* ___0_replacedFileName, String_t* ___1_replacementFileName, String_t* ___2_backupFileName, int32_t ___3_dwReplaceFlags, intptr_t ___4_lpExclude, intptr_t ___5_lpReserved, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PathInternal_t40910AF78E21C3A6C83D095423B3EADE9AC5261C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___0_replacedFileName;
+		il2cpp_codegen_runtime_class_init_inline(PathInternal_t40910AF78E21C3A6C83D095423B3EADE9AC5261C_il2cpp_TypeInfo_var);
+		String_t* L_1;
+		L_1 = PathInternal_EnsureExtendedPrefixIfNeeded_m21B2789AA85AA22861D01CABB704013F5E2103D3(L_0, NULL);
+		___0_replacedFileName = L_1;
+		String_t* L_2 = ___1_replacementFileName;
+		String_t* L_3;
+		L_3 = PathInternal_EnsureExtendedPrefixIfNeeded_m21B2789AA85AA22861D01CABB704013F5E2103D3(L_2, NULL);
+		___1_replacementFileName = L_3;
+		String_t* L_4 = ___2_backupFileName;
+		String_t* L_5;
+		L_5 = PathInternal_EnsureExtendedPrefixIfNeeded_m21B2789AA85AA22861D01CABB704013F5E2103D3(L_4, NULL);
+		___2_backupFileName = L_5;
+		String_t* L_6 = ___0_replacedFileName;
+		String_t* L_7 = ___1_replacementFileName;
+		String_t* L_8 = ___2_backupFileName;
+		int32_t L_9 = ___3_dwReplaceFlags;
+		intptr_t L_10 = ___4_lpExclude;
+		intptr_t L_11 = ___5_lpReserved;
+		bool L_12;
+		L_12 = Kernel32_ReplaceFilePrivate_mF1295E77590C63F19CCE319F1E4A1E2A46A23083(L_6, L_7, L_8, L_9, L_10, L_11, NULL);
+		return L_12;
+	}
+}
+// System.Boolean Interop/Kernel32::SetFileAttributesPrivate(System.String,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_SetFileAttributesPrivate_mB1E844BF268191B43410DEABC08EDECEB323F8FD (String_t* ___0_name, int32_t ___1_attr, const RuntimeMethod* method) 
+{
+	typedef int32_t (DEFAULT_CALL *PInvokeFunc) (Il2CppChar*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_kernel32_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(Il2CppChar*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("kernel32.dll"), "SetFileAttributesW", IL2CPP_CALL_DEFAULT, CHARSET_UNICODE, parameterSize, false);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	// Marshaling of parameter '___0_name' to native representation
+	Il2CppChar* ____0_name_marshaled = NULL;
+	if (___0_name != NULL)
+	{
+		____0_name_marshaled = &___0_name->____firstChar_5;
+	}
+
+	// Native function invocation
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(SetFileAttributesW)(____0_name_marshaled, ___1_attr);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_name_marshaled, ___1_attr);
+	#endif
+	il2cpp_codegen_marshal_store_last_error();
+
+	return static_cast<bool>(returnValue);
+}
+// System.Boolean Interop/Kernel32::SetFileAttributes(System.String,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_SetFileAttributes_mABFB7633D22B3003CA01A76C78F27A62D68ECFF8 (String_t* ___0_name, int32_t ___1_attr, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PathInternal_t40910AF78E21C3A6C83D095423B3EADE9AC5261C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___0_name;
+		il2cpp_codegen_runtime_class_init_inline(PathInternal_t40910AF78E21C3A6C83D095423B3EADE9AC5261C_il2cpp_TypeInfo_var);
+		String_t* L_1;
+		L_1 = PathInternal_EnsureExtendedPrefixIfNeeded_m21B2789AA85AA22861D01CABB704013F5E2103D3(L_0, NULL);
+		___0_name = L_1;
+		String_t* L_2 = ___0_name;
+		int32_t L_3 = ___1_attr;
+		bool L_4;
+		L_4 = Kernel32_SetFileAttributesPrivate_mB1E844BF268191B43410DEABC08EDECEB323F8FD(L_2, L_3, NULL);
+		return L_4;
+	}
+}
+// System.Boolean Interop/Kernel32::SetFileInformationByHandle(Microsoft.Win32.SafeHandles.SafeFileHandle,Interop/Kernel32/FILE_INFO_BY_HANDLE_CLASS,Interop/Kernel32/FILE_BASIC_INFO&,System.UInt32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_SetFileInformationByHandle_mDD40D71609D6712CE0F35762F100549675B56D70 (SafeFileHandle_t033FA6AAAC65F4BB25F4CBA9A242A58C95CD406E* ___0_hFile, uint32_t ___1_FileInformationClass, FILE_BASIC_INFO_t843AC45590918BDE7AC555D801A2EB5F9106DA7A* ___2_lpFileInformation, uint32_t ___3_dwBufferSize, const RuntimeMethod* method) 
+{
+	typedef int32_t (DEFAULT_CALL *PInvokeFunc) (void*, uint32_t, FILE_BASIC_INFO_t843AC45590918BDE7AC555D801A2EB5F9106DA7A*, uint32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_kernel32_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint32_t) + sizeof(FILE_BASIC_INFO_t843AC45590918BDE7AC555D801A2EB5F9106DA7A*) + sizeof(uint32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("kernel32.dll"), "SetFileInformationByHandle", IL2CPP_CALL_DEFAULT, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	// Marshaling of parameter '___0_hFile' to native representation
+	void* ____0_hFile_marshaled = NULL;
+	if (___0_hFile == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("hFile"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_hFile = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_hFile, (&___safeHandle_reference_incremented_for____0_hFile), NULL);
+	____0_hFile_marshaled = reinterpret_cast<void*>((___0_hFile)->___handle_0);
+
+	// Native function invocation
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(SetFileInformationByHandle)(____0_hFile_marshaled, ___1_FileInformationClass, ___2_lpFileInformation, ___3_dwBufferSize);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_hFile_marshaled, ___1_FileInformationClass, ___2_lpFileInformation, ___3_dwBufferSize);
+	#endif
+	il2cpp_codegen_marshal_store_last_error();
+
+	// Marshaling cleanup of parameter '___0_hFile' native representation
+	if (___safeHandle_reference_incremented_for____0_hFile)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_hFile, NULL);
+	}
+
+	return static_cast<bool>(returnValue);
+}
+// System.Boolean Interop/Kernel32::SetFileTime(Microsoft.Win32.SafeHandles.SafeFileHandle,System.Int64,System.Int64,System.Int64,System.Int64,System.UInt32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_SetFileTime_m2F58A3D8F064080C88665755C03883C5C74938EE (SafeFileHandle_t033FA6AAAC65F4BB25F4CBA9A242A58C95CD406E* ___0_hFile, int64_t ___1_creationTime, int64_t ___2_lastAccessTime, int64_t ___3_lastWriteTime, int64_t ___4_changeTime, uint32_t ___5_fileAttributes, const RuntimeMethod* method) 
+{
+	FILE_BASIC_INFO_t843AC45590918BDE7AC555D801A2EB5F9106DA7A V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	FILE_BASIC_INFO_t843AC45590918BDE7AC555D801A2EB5F9106DA7A V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	{
+		il2cpp_codegen_initobj((&V_1), sizeof(FILE_BASIC_INFO_t843AC45590918BDE7AC555D801A2EB5F9106DA7A));
+		int64_t L_0 = ___1_creationTime;
+		(&V_1)->___CreationTime_0 = L_0;
+		int64_t L_1 = ___2_lastAccessTime;
+		(&V_1)->___LastAccessTime_1 = L_1;
+		int64_t L_2 = ___3_lastWriteTime;
+		(&V_1)->___LastWriteTime_2 = L_2;
+		int64_t L_3 = ___4_changeTime;
+		(&V_1)->___ChangeTime_3 = L_3;
+		uint32_t L_4 = ___5_fileAttributes;
+		(&V_1)->___FileAttributes_4 = L_4;
+		FILE_BASIC_INFO_t843AC45590918BDE7AC555D801A2EB5F9106DA7A L_5 = V_1;
+		V_0 = L_5;
+		SafeFileHandle_t033FA6AAAC65F4BB25F4CBA9A242A58C95CD406E* L_6 = ___0_hFile;
+		uint32_t L_7 = sizeof(FILE_BASIC_INFO_t843AC45590918BDE7AC555D801A2EB5F9106DA7A);
+		bool L_8;
+		L_8 = Kernel32_SetFileInformationByHandle_mDD40D71609D6712CE0F35762F100549675B56D70(L_6, 0, (&V_0), L_7, NULL);
+		return L_8;
+	}
+}
 // System.Boolean Interop/Kernel32::SetThreadErrorMode(System.UInt32,System.UInt32&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_SetThreadErrorMode_mDE6DC1CB22D61EEF3A5BE8066B5B248C764EDF03 (uint32_t ___0_dwNewMode, uint32_t* ___1_lpOldMode, const RuntimeMethod* method) 
 {
@@ -5878,6 +6636,67 @@ IL2CPP_EXTERN_C  String_t* TIME_ZONE_INFORMATION_GetDaylightName_mA271FA71E881FC
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Int64 Interop/Kernel32/FILE_TIME::ToTicks()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t FILE_TIME_ToTicks_m00582CA0E51E542526ECA498602CD545C8057F1F (FILE_TIME_tBD950B410C18B85474477EEA8F3651A2BD367965* __this, const RuntimeMethod* method) 
+{
+	{
+		uint32_t L_0 = __this->___dwHighDateTime_1;
+		uint32_t L_1 = __this->___dwLowDateTime_0;
+		return ((int64_t)il2cpp_codegen_add(((int64_t)(((int64_t)(uint64_t)L_0)<<((int32_t)32))), ((int64_t)(uint64_t)L_1)));
+	}
+}
+IL2CPP_EXTERN_C  int64_t FILE_TIME_ToTicks_m00582CA0E51E542526ECA498602CD545C8057F1F_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	FILE_TIME_tBD950B410C18B85474477EEA8F3651A2BD367965* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<FILE_TIME_tBD950B410C18B85474477EEA8F3651A2BD367965*>(__this + _offset);
+	int64_t _returnValue;
+	_returnValue = FILE_TIME_ToTicks_m00582CA0E51E542526ECA498602CD545C8057F1F(_thisAdjusted, method);
+	return _returnValue;
+}
+// System.DateTimeOffset Interop/Kernel32/FILE_TIME::ToDateTimeOffset()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4 FILE_TIME_ToDateTimeOffset_m9F1846CD1F5AC8B3465718BBC419B622AB917B1F (FILE_TIME_tBD950B410C18B85474477EEA8F3651A2BD367965* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int64_t L_0;
+		L_0 = FILE_TIME_ToTicks_m00582CA0E51E542526ECA498602CD545C8057F1F(__this, NULL);
+		il2cpp_codegen_runtime_class_init_inline(DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4_il2cpp_TypeInfo_var);
+		DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4 L_1;
+		L_1 = DateTimeOffset_FromFileTime_m91913654F9CA7F5367A35D1E25E321D7735CC32C(L_0, NULL);
+		return L_1;
+	}
+}
+IL2CPP_EXTERN_C  DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4 FILE_TIME_ToDateTimeOffset_m9F1846CD1F5AC8B3465718BBC419B622AB917B1F_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	FILE_TIME_tBD950B410C18B85474477EEA8F3651A2BD367965* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<FILE_TIME_tBD950B410C18B85474477EEA8F3651A2BD367965*>(__this + _offset);
+	DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4 _returnValue;
+	_returnValue = FILE_TIME_ToDateTimeOffset_m9F1846CD1F5AC8B3465718BBC419B622AB917B1F(_thisAdjusted, method);
+	return _returnValue;
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

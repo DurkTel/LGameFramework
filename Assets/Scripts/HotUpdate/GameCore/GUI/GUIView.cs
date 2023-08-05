@@ -63,7 +63,7 @@ namespace GameCore.GUI
             m_IsLoading = true;
         }
 
-        public virtual void OnLoadComplete(AssetLoader loader)
+        public virtual void OnLoadComplete(Loader loader)
         {
             m_IsLoading = false;
             m_PrefabInstantiate = loader.GetInstantiate<GameObject>();

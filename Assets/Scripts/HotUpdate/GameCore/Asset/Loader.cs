@@ -40,7 +40,7 @@ namespace GameCore.Asset
 
         public UnityAction<float> onProgress;
 
-        public UnityAction<AssetLoader> onComplete;
+        public UnityAction<Loader> onComplete;
 
         public Loader(string assetName)
         {

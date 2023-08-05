@@ -182,14 +182,7 @@ namespace GameCore.Asset
             //AB包模式下计算引用
             if (FMAssetManager.AssetLoadMode == AssetLoadMode.AssetBundle)
             {
-                AssetManifest_Bundle assetManifest = AssetModule.GetAssetManifest_Bundle();
-                string[] result = assetManifest.GetDependsName(rawInfo.bundleName);
-                //这个资源被卸载 被这个资源依赖的AB包引用计数减1
                 AssetBundleRecord record;
-                foreach (string abName in result)
-                    if (AssetModule.TryGetAssetBundle(abName, out record))
-                        record.DpendsReferenceCount--;
-
                 //这个资源的AB引用减1
                 if (AssetModule.TryGetAssetBundle(rawInfo.bundleName, out record))
                     record.RawReferenceCount--;

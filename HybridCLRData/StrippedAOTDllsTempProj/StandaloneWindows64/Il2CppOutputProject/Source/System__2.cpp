@@ -8160,7 +8160,7 @@ IL_0010:
 		L_3 = Console_get_Error_m0132A8360914E80AD6EEF7A353BC1C75A29AE4BF_inline(NULL);
 		String_t* L_4 = V_0;
 		NullCheck(L_3);
-		VirtualActionInvoker1< String_t* >::Invoke(15 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_3, L_4);
+		VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_3, L_4);
 		return;
 	}
 }
@@ -15294,7 +15294,7 @@ CATCH_0010_1:
 				L_1 = Console_get_Error_m0132A8360914E80AD6EEF7A353BC1C75A29AE4BF_inline(NULL);
 				Exception_t* L_2 = V_0;
 				NullCheck(L_1);
-				VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(16 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral0E61FF61231964FC6CBD063C402EC91E0C7A4B6E)), L_2);
+				VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(18 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral0E61FF61231964FC6CBD063C402EC91E0C7A4B6E)), L_2);
 				IL2CPP_POP_ACTIVE_EXCEPTION();
 				goto IL_002a;
 			}// end catch (depth: 2)

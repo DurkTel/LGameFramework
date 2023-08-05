@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace GameCore.Asset
 {
-    public class AssetEditorLoader : AssetLoader
+    public class AssetEditorLoader : Loader
     {
         public AssetEditorLoader(string assetName) : base(assetName)
         {

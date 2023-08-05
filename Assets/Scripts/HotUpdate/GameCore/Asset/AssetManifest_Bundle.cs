@@ -1,7 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using UnityEngine;
 using LGameFramework.GameBase;
 
@@ -47,6 +44,15 @@ namespace GameCore.Asset
 
             Debug.LogWarning("资源清单中没有名为：" + bundleName + "的资源，请更新资源清单或检查资源名称");
             return string.Empty;
+        }
+
+        public uint GetCRC(string bundleName)
+        {
+            if (bundleMap.ContainsKey(bundleName))
+                return bundleMap[bundleName].crc;
+
+            Debug.LogWarning("资源清单中没有名为：" + bundleName + "的资源，请更新资源清单或检查资源名称");
+            return default;
         }
 
         public string GetBundleName(string assetName)

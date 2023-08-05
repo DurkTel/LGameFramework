@@ -1,7 +1,4 @@
-using GameCore;
 using LGameFramework.GameBase;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,7 +6,7 @@ using UnityEngine;
 
 namespace GameCore.Asset
 {
-    public class AssetBundleLoader : AssetLoader
+    public class AssetBundleLoader : Loader
     {
         public AssetBundleLoader(string assetName) : base(assetName)
         {
@@ -22,60 +19,75 @@ namespace GameCore.Asset
             this.m_Async = async;
         }
         /// <summary>
-        /// 依赖包体加载
-        /// </summary>
-        private AssetBundleCreateRequest m_DependsBundleRequest;
-        /// <summary>
         /// 资源包体加载
         /// </summary>
         private AssetBundleCreateRequest m_BundleRequest;
-        /// <summary>
-        /// 资源加载
-        /// </summary>
-        private AssetBundleRequest m_AssetRequest;
-        /// <summary>
-        /// 包名
-        /// </summary>
-        private string m_BundleName;
         /// <summary>
         /// AB包
         /// </summary>
         private AssetBundleRecord m_AssetRecord;
         /// <summary>
-        /// 加载此资源需要的未加载的依赖包
+        /// 下载中列表
         /// </summary>
-        private List<string> m_NeedDepends;
+        private Dictionary<string, AssetFileDownloader> m_DownloadingMap;
         /// <summary>
-        /// 是否下载中
+        /// 下载完成列表
         /// </summary>
-        private bool m_IsDownloading;
+        private List<string> m_DownloadCompleteList;
 
         public override void Dispose()
         {
-            m_IsDownloading = false;
             m_Error = false;
             m_IsDone = false;
             m_Async = false;
-            m_RawObject = null;
             m_AssetName = null;
-            m_BundleName = null;
-            m_AssetType = null;
-            onProgress = null;
-            onComplete = null;
-            m_AssetRequest = null;
             m_AssetRecord = null;
-            m_NeedDepends.Clear();
-            m_NeedDepends = null;
         }
 
+        /// <summary>
+        /// 获取AB包路径
+        /// </summary>
+        /// <param name="bundleName"></param>
+        /// <returns></returns>
         public override string GetAssetPath(string bundleName)
         {
-            return Module.GetAssetManifest_Bundle().GetPath(bundleName);
+            if (m_DownloadingMap != null && m_DownloadingMap.ContainsKey(bundleName)) return null;
+
+            string path = Module.GetAssetManifest_Bundle().GetPath(bundleName);
+            string filePath = Path.Combine(Module.GamePath.downloadDataPath.AssetPath, path);
+            //先去判断下载路径是否有
+            if (!File.Exists(filePath))
+                filePath = Path.Combine(Module.GamePath.buildingPath.AssetPath, path); //再判断首包路径
+
+            //都没有 文件异常 重新从资源服务器下载
+            if (!File.Exists(filePath))
+                return null;
+
+            return filePath;
         }
 
-        public string GetBundleName(string assetName)
+        /// <summary>
+        /// 获取CRC校验码
+        /// </summary>
+        /// <param name="bundleName"></param>
+        /// <returns></returns>
+        public uint GetCRC(string bundleName)
         {
-            return Module.GetAssetManifest_Bundle().GetBundleName(assetName);
+            return Module.GetAssetManifest_Bundle().GetCRC(bundleName);
+        }
+
+        /// <summary>
+        /// 文件异常 尝试重新从资源服务器下载
+        /// </summary>
+        private void TryDownloadFile(string fileName)
+        {
+            if (m_DownloadingMap != null && m_DownloadingMap.ContainsKey(fileName)) return;
+            string path = Module.GetAssetManifest_Bundle().GetPath(fileName);
+            string serverPath = Path.Combine(Module.GamePath.serverDataPath.AssetPath, path);
+            string downloadPath = Path.Combine(Module.GamePath.downloadDataPath.AssetPath, path);
+            AssetFileDownloader downloader = Module.EnqueueDownload(serverPath, downloadPath);
+            m_DownloadingMap ??= new Dictionary<string, AssetFileDownloader>();
+            m_DownloadingMap.Add(fileName, downloader);
         }
 
         /// <summary>
@@ -101,97 +113,55 @@ namespace GameCore.Asset
         }
 
         /// <summary>
-        /// 异步加载该资源的依赖包
-        /// </summary>
-        /// <param name="bundleName"></param>
-        /// <returns></returns>
-        private bool LoadDependenciesAsync(string bundleName)
-        {
-            m_NeedDepends ??= GetAbsentDependsName(bundleName);
-
-            if (m_NeedDepends.Count > 0 && m_DependsBundleRequest == null)
-            {
-                string dependName = m_NeedDepends[0];
-                m_DependsBundleRequest = AssetBundle.LoadFromFileAsync(Path.Combine(Module.GamePath.downloadDataPath.AssetPath, GetAssetPath(dependName)));
-            }
-
-            if (m_DependsBundleRequest != null && m_DependsBundleRequest.isDone)
-            {
-                AssetBundleRecord record = Module.AddAssetBundle(m_NeedDepends[0], m_DependsBundleRequest.assetBundle);
-                record.DpendsReferenceCount++;
-                m_NeedDepends.RemoveAt(0);
-                m_DependsBundleRequest = null;
-            }
-
-            return m_NeedDepends.Count <= 0;
-        }
-
-        /// <summary>
-        /// 同步加载该资源的依赖包
-        /// </summary>
-        /// <param name="bundleName"></param>
-        private void LoadDependencies(string bundleName)
-        {
-            m_NeedDepends = GetAbsentDependsName(bundleName);
-            foreach (string dependPath in m_NeedDepends)
-            {
-                AssetBundle ab = AssetBundle.LoadFromFile(Path.Combine(Module.GamePath.downloadDataPath.AssetPath, GetAssetPath(dependPath)));
-                AssetBundleRecord record = Module.AddAssetBundle(m_NeedDepends[0], ab);
-                record.DpendsReferenceCount++;
-            }
-            m_NeedDepends.Clear();
-        }
-
-        /// <summary>
-        /// 同步加载资源
+        /// 同步加载AB包
         /// </summary>
         /// <param name="abName"></param>
-        /// <param name="assetName"></param>
-        /// <param name="type"></param>
         /// <returns></returns>
-        private UnityEngine.Object Load(string abName, string assetName, Type type)
+        private AssetBundleRecord Load(string abName)
         {
-            if (!Module.TryGetAssetBundle(abName, out m_AssetRecord))
+            AssetBundleRecord assetBundle;
+
+            if (!Module.TryGetAssetBundle(abName, out assetBundle))
             {
-                string assetPath = GetAssetPath(abName);
-                string abPath = Path.Combine(Module.GamePath.buildingPath.AssetPath, assetPath);
-                if (!File.Exists(abPath))
+                string path = GetAssetPath(abName);
+                if (path == null)
                 {
-                    abPath = Path.Combine(Module.GamePath.downloadDataPath.AssetPath, assetPath);
-                    if (!File.Exists(abPath))
-                    {
-                        Module.EnqueueDownload(Path.Combine(Module.GamePath.downloadDataPath.AssetPath, assetPath), abPath);
-                        m_IsDownloading = true;
-                    }
+                    Debug.LogError("同步加载AB时发生文件异常！");
+                    return null;
                 }
-                m_AssetRecord = Module.AddAssetBundle(abName, AssetBundle.LoadFromFile(abPath));
+                uint crc = GetCRC(abName);
+                assetBundle = Module.AddAssetBundle(abName, AssetBundle.LoadFromFile(path, crc));
             }
 
-            UnityEngine.Object obj = m_AssetRecord.AssetBundle.LoadAsset(assetName, type);
-
-            return obj;
+            return assetBundle;
         }
 
         /// <summary>
-        /// 异步加载资源
+        /// 异步加载AB包
         /// </summary>
         /// <param name="abName"></param>
-        /// <param name="assetName"></param>
-        /// <param name="type"></param>
         /// <returns></returns>
-        private AssetBundleRequest LoadAsync(string abName, string assetName, Type type)
+        private AssetBundleRecord LoadAsync(string abName)
         {
-            if (!Module.TryGetAssetBundle(abName, out m_AssetRecord))
+            AssetBundleRecord assetBundle;
+            if (!Module.TryGetAssetBundle(abName, out assetBundle))
             {
-                m_BundleRequest ??= AssetBundle.LoadFromFileAsync(Path.Combine(Module.GamePath.downloadDataPath.AssetPath, GetAssetPath(abName)));
-                if (m_BundleRequest.isDone)
-                    m_AssetRecord = Module.AddAssetBundle(abName, m_BundleRequest.assetBundle);
-                else
+                string path = GetAssetPath(abName);
+                if (path == null)
+                {
+                    TryDownloadFile(abName);
                     return null;
+                }
+                uint crc = GetCRC(abName);
+                m_BundleRequest ??= AssetBundle.LoadFromFileAsync(path, crc);
+                if (m_BundleRequest.isDone)
+                { 
+                    assetBundle = Module.AddAssetBundle(abName, m_BundleRequest.assetBundle);
+                    assetBundle.IsAssetLoading = true;
+                }
             }
 
-            m_AssetRecord.IsAssetLoading = true;
-            return m_AssetRecord.AssetBundle.LoadAssetAsync(assetName, type);
+            return assetBundle;
         }
 
         public override void Update()
@@ -199,10 +169,30 @@ namespace GameCore.Asset
             if (m_IsDone || m_Error)
                 return;
 
-            if (!AssetCache.TryGetRawObject(m_AssetName, out m_RawObjectInfo))
+            if (m_DownloadingMap != null && m_DownloadingMap.Count > 0)
             {
-                m_BundleName ??= GetBundleName(m_AssetName);
-                if (string.IsNullOrEmpty(m_BundleName) || string.IsNullOrEmpty(m_AssetName))
+                foreach (var item in m_DownloadingMap)
+                {
+                    if (item.Value.IsDone)
+                    {
+                        m_DownloadCompleteList ??= new List<string>();
+                        m_DownloadCompleteList.Add(item.Key);
+                    }
+                }
+
+                if (m_DownloadCompleteList != null && m_DownloadCompleteList.Count > 0)
+                {
+                    foreach (string key in m_DownloadCompleteList)
+                    {
+                        m_DownloadingMap.Remove(key);
+                    }
+                    m_DownloadCompleteList.Clear();
+                }
+            }
+
+            if (!Module.TryGetAssetBundle(m_AssetName, out m_AssetRecord))
+            {
+                if (string.IsNullOrEmpty(m_AssetName) || string.IsNullOrEmpty(m_AssetName))
                 {
                     m_Error = true;
                     Module.RemoveAssetLoader(m_AssetName);
@@ -210,37 +200,13 @@ namespace GameCore.Asset
                 }
 
                 if (m_Async)
-                {
-                    if (!LoadDependenciesAsync(m_BundleName))
-                        return;
-
-                    m_AssetRequest ??= LoadAsync(m_BundleName, m_AssetName, m_AssetType);
-
-                    if (m_AssetRequest != null && m_AssetRequest.isDone)
-                        m_RawObject = m_AssetRequest.asset;
-                }
+                    m_AssetRecord = LoadAsync(m_AssetName);
                 else
-                {
-                    LoadDependencies(m_BundleName);
+                    m_AssetRecord = Load(m_AssetName);
 
-                    m_RawObject = Load(m_BundleName, m_AssetName, m_AssetType);
-                }
-
-                if (m_RawObject != null)
-                {
-                    m_RawObjectInfo = AssetCache.AddRawObject(m_AssetName, m_RawObject, m_BundleName);
-                    m_AssetRecord.IsAssetLoading = false;
-                    //新加载出源资源
-                    m_AssetRecord.RawReferenceCount++;
-                }
-            }
-            else
-            {
-                m_RawObject = m_RawObjectInfo.rawObject;
             }
 
-
-            m_IsDone = m_RawObject != null;
+            m_IsDone = m_AssetRecord != null && m_AssetRecord.AssetBundle != null;
         }
     }
 }

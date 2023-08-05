@@ -64,10 +64,8 @@ struct Action_1_tE8693FF0E67CDBA52BAFB211BFF1844D076ABAFB;
 struct Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA;
 // System.Collections.Generic.Dictionary`2<ProcedureLaunchProcess,GameBase.FSM.FSM_Status`1<ProcedureLaunchProcess>>
 struct Dictionary_2_tFD684061C974B60298103F176D950CA6F814FC59;
-// System.Collections.Generic.Dictionary`2<System.String,LGameFramework.GameBase.AssetFile>
-struct Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1;
-// System.Collections.Generic.Dictionary`2<System.String,System.String>
-struct Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83;
+// System.Collections.Generic.Dictionary`2<System.String,LGameFramework.GameBase.AssetBundleInfo>
+struct Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA;
 // GameBase.FSM.FSM_StateMachine`1<System.Int32Enum>
 struct FSM_StateMachine_1_tA00CFD7B700A6EC31771B7EA9EBF74D6F2933F92;
 // GameBase.FSM.FSM_StateMachine`1<ProcedureLaunchProcess>
@@ -82,32 +80,24 @@ struct IEnumerable_1_t349E66EC5F09B881A8E52EE40A1AB9EC60E08E44;
 struct IEqualityComparer_1_tAE94C8F24AD5B94D4EE85CA9FC59E3409D41CAF7;
 // GameBase.FSM.IFSM_Machine`1<ProcedureLaunchProcess>
 struct IFSM_Machine_1_tDAD178AE60E63943B1E9AE6C50382824D9715340;
-// System.Collections.Generic.Dictionary`2/KeyCollection<System.String,LGameFramework.GameBase.AssetFile>
-struct KeyCollection_t176FA0D46EB3004781A06BE01D1EAC85EC6254E6;
-// System.Collections.Generic.Dictionary`2/KeyCollection<System.String,System.String>
-struct KeyCollection_t2EDD317F5771E575ACB63527B5AFB71291040342;
+// System.Collections.Generic.Dictionary`2/KeyCollection<System.String,LGameFramework.GameBase.AssetBundleInfo>
+struct KeyCollection_t5AF343F9641DA47BA178B352E6F3ADFA28CEA6AE;
 // System.Collections.Generic.List`1<GameBase.FSM.FSM_Transition`1<ProcedureLaunchProcess>>
 struct List_1_tACEE0DE4E425A5B20D153AC587ABF90EFC95ECB2;
-// System.Collections.Generic.List`1<LGameFramework.GameBase.AssetFile>
-struct List_1_tE12999C9C64EBCCD4F81ED9CC5989E46B0A61BC2;
 // System.Collections.Generic.List`1<LGameFramework.GameBase.AssetFileDownloader>
 struct List_1_tB17812479988EED86D6D0FCF7424F41FEC175756;
 // System.Collections.Generic.List`1<System.Object>
 struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D;
 // System.Collections.Generic.List`1<System.String>
 struct List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD;
+// System.Collections.Generic.List`1<LGameFramework.GameBase.GamePathSetting/FilePathStruct>
+struct List_1_tDFF17E466A9A0D010CA6B6265EE5528055A64DC6;
 // System.Collections.Generic.Queue`1<LGameFramework.GameBase.AssetFileDownloader>
 struct Queue_1_t9C0F14A00EBBB8D904EDB2CF581EEA06FDEB9020;
-// System.Collections.Generic.Dictionary`2/ValueCollection<System.String,LGameFramework.GameBase.AssetFile>
-struct ValueCollection_t93950BCDC2194FA931E183426E5BCECEA64D060D;
-// System.Collections.Generic.Dictionary`2/ValueCollection<System.String,System.String>
-struct ValueCollection_t238D0D2427C6B841A01F522A41540165A2C4AE76;
-// System.Collections.Generic.Dictionary`2/Entry<System.String,LGameFramework.GameBase.AssetFile>[]
-struct EntryU5BU5D_tE71D2096EDAE59C91725307BFA1545E951FCDBAC;
-// System.Collections.Generic.Dictionary`2/Entry<System.String,System.String>[]
-struct EntryU5BU5D_t1AF33AD0B7330843448956EC4277517081658AE7;
-// LGameFramework.GameBase.AssetFile[]
-struct AssetFileU5BU5D_tA2A76456FB918FE8611A805C725581281580A7EA;
+// System.Collections.Generic.Dictionary`2/ValueCollection<System.String,LGameFramework.GameBase.AssetBundleInfo>
+struct ValueCollection_t7816C3FF3585E38AD278A748A7C7B9F4E9D99098;
+// System.Collections.Generic.Dictionary`2/Entry<System.String,LGameFramework.GameBase.AssetBundleInfo>[]
+struct EntryU5BU5D_t332F43DAE5B5E1418831250AB6E5E24D8571A6CD;
 // LGameFramework.GameBase.AssetFileDownloader[]
 struct AssetFileDownloaderU5BU5D_t0FADB52DFA056A2F8C68867A0B1FE699CEED30F1;
 // System.Byte[]
@@ -136,10 +126,12 @@ struct AOTGenericReferences_t7B8F9CD83F1EE53810C6F841826105D9416EA7C1;
 struct Assembly_t;
 // UnityEngine.AssetBundle
 struct AssetBundle_tB38418819A49060CD738CB21541649340F082943;
-// LGameFramework.GameBase.AssetFile
-struct AssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F;
+// LGameFramework.GameBase.AssetBundleInfo
+struct AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760;
 // LGameFramework.GameBase.AssetFileDownloadQueue
 struct AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620;
+// LGameFramework.GameBase.AssetFileDownloader
+struct AssetFileDownloader_tBBB0747F4710B98462AE7A01DC95D371BE62DC46;
 // System.AsyncCallback
 struct AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C;
 // UnityEngine.AsyncOperation
@@ -170,6 +162,8 @@ struct GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95;
 struct GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206;
 // UnityEngine.GameObject
 struct GameObject_t76FEDD663AB33C991A9C9A23129337651094216F;
+// LGameFramework.GameBase.GamePathSetting
+struct GamePathSetting_t90635FDBB458D9776877AD87389060E85997AD77;
 // System.IAsyncResult
 struct IAsyncResult_t7B9B5A0ECB35DCEC31B8A8122C37D687369253B5;
 // System.Collections.IDictionary
@@ -220,13 +214,13 @@ struct UploadHandler_t7E504B1A83346248A0C8C4AF73A893226CB83EF6;
 struct Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E;
 // System.Void
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
+// System.Net.WebClient
+struct WebClient_tDAF482E6631A91D5FDF2138E6932A323B913F268;
 // UnityEngine.Application/LogCallback
 struct LogCallback_tCFFF3C009186124A6A83A1E6BB7E360C5674C413;
 
 IL2CPP_EXTERN_C RuntimeClass* AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Exception_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* FSM_StateMachine_1_tFE85E579591E8BDFEFB8961AFC568BCA625CB204_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580_il2cpp_TypeInfo_var;
@@ -239,71 +233,54 @@ IL2CPP_EXTERN_C RuntimeClass* LogCallback_tCFFF3C009186124A6A83A1E6BB7E360C5674C
 IL2CPP_EXTERN_C RuntimeClass* Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ProcedureLaunchProcess_tF0B1C809223C9E119389B48893E3D5B498EE5C7C_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C String_t* _stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD;
-IL2CPP_EXTERN_C String_t* _stringLiteral0335C65EEF6379144CEBFCCFBA3673189514186C;
 IL2CPP_EXTERN_C String_t* _stringLiteral09B11B6CC411D8B9FFB75EAAE9A35B2AF248CE40;
 IL2CPP_EXTERN_C String_t* _stringLiteral0B34DFC38793BF0AF6DEA9A94F7CCB4150E999A6;
-IL2CPP_EXTERN_C String_t* _stringLiteral111B53623550025C4B973B78391734E3A2225B69;
 IL2CPP_EXTERN_C String_t* _stringLiteral1788F1F97AD86A3245D2B1A0D860E2E4504B62BD;
 IL2CPP_EXTERN_C String_t* _stringLiteral1BA46D2FDED261D9EBFFC277917E32CC44A3F821;
 IL2CPP_EXTERN_C String_t* _stringLiteral225BE7524111A905CE72776BC9F4CAF219EE2F68;
 IL2CPP_EXTERN_C String_t* _stringLiteral32A8C30FD78739DA19BDB219CBEB9D0F435A681E;
-IL2CPP_EXTERN_C String_t* _stringLiteral3AC0ADA0D9BF6C6397C71857226CBA06D9E6EB0E;
+IL2CPP_EXTERN_C String_t* _stringLiteral39ABCACBD25286BD4E86E33A02DA30FBEA49B182;
 IL2CPP_EXTERN_C String_t* _stringLiteral58F2819662FABE76C91AAA1741BA17EBED7727FD;
 IL2CPP_EXTERN_C String_t* _stringLiteral5C3EE31A245F14716837552067C7D6821200E399;
-IL2CPP_EXTERN_C String_t* _stringLiteral6D2D60FB81DB361B60B9512761B3ED9FF250BB96;
 IL2CPP_EXTERN_C String_t* _stringLiteral7094FE88B820757078A9A94C4B8EEC6E1817FD6C;
-IL2CPP_EXTERN_C String_t* _stringLiteral76F7C7443CB3517391B0A64BEF466531CBC73B1D;
+IL2CPP_EXTERN_C String_t* _stringLiteral70DC673A7344F4CD8C84EF58757850C27DBB339B;
 IL2CPP_EXTERN_C String_t* _stringLiteral7D471082F5A6328C3C4D67E395680924339A90FE;
 IL2CPP_EXTERN_C String_t* _stringLiteral82CD69B64763074792EC4032E1D5F857B9C51848;
 IL2CPP_EXTERN_C String_t* _stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1;
 IL2CPP_EXTERN_C String_t* _stringLiteral891ACA98569F599A249CA88A6079F67391F0E55F;
 IL2CPP_EXTERN_C String_t* _stringLiteral9287B297BFAEBB8024A5A051EFE496E7861878F3;
 IL2CPP_EXTERN_C String_t* _stringLiteral946BD80B231F5776B5307B385889C9ABB57D3D53;
+IL2CPP_EXTERN_C String_t* _stringLiteral9980B772556B9D308DEA397D279C8A13D402ABB6;
 IL2CPP_EXTERN_C String_t* _stringLiteralA3F029047BA90CC134023587DF7DCF444B38D009;
 IL2CPP_EXTERN_C String_t* _stringLiteralA51126750FB4D4B5A93C9EC054C39C6FB4ADA925;
 IL2CPP_EXTERN_C String_t* _stringLiteralAC8FBFB7139DCC09A330338E4364B7EBF1FA5A85;
-IL2CPP_EXTERN_C String_t* _stringLiteralB76D5C58815C411866C77C4A4AB50D7DFC4B7E5F;
+IL2CPP_EXTERN_C String_t* _stringLiteralB7AE5B957F2B332FFED981CD5A87CB7B19B43BD4;
 IL2CPP_EXTERN_C String_t* _stringLiteralC4B7DEF3C6177E52FCB905A14C0574507AD998EE;
-IL2CPP_EXTERN_C String_t* _stringLiteralC8BFC9FC654E0D1FDE0321DFA9A01EB546F912B2;
-IL2CPP_EXTERN_C String_t* _stringLiteralCD4D4791E5EE81C61DFD1E4DEE0168129EFECE39;
 IL2CPP_EXTERN_C String_t* _stringLiteralD517C7CD0B15AC7D7FED8521FC3CE0FC3C729432;
 IL2CPP_EXTERN_C String_t* _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
-IL2CPP_EXTERN_C String_t* _stringLiteralE280D065A824A791F8305234D3E093FC9A5A90C7;
+IL2CPP_EXTERN_C String_t* _stringLiteralE42BC8B34DED3954887AE578B6CF1390229CE4A6;
+IL2CPP_EXTERN_C String_t* _stringLiteralEB3162236B0885447A08938F9E9EA8B70E3CE844;
 IL2CPP_EXTERN_C String_t* _stringLiteralEC4C5477D8BA260A27C36AFD7E8C1C289169E9CF;
-IL2CPP_EXTERN_C String_t* _stringLiteralF7CA5FAB589D3DC3133B2E7E319FFFBE10480422;
 IL2CPP_EXTERN_C const RuntimeMethod* AssetBundle_LoadAllAssets_TisTextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69_m94F2B7D52876437A8B2F2955B61A6D6E68D88192_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_m00DC0364909A9507473458A9D3A30C04C185B55C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ConsoleToScreen_Log_mA5DDFAB65C29E797A1C47CD29C6C83E3163A52EA_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_Add_m38577F8B05FB86EA818222B31C646CEA00FC6792_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_GetEnumerator_m660B966EF921340FDEF6FCB04DB287384C7BDAF1_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_TryGetValue_mA86D965CB5F74CE8675B7995C61945BEB6E594CB_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2__ctor_m768E076F1E804CE4959F4E71D3E6A9ADE2F55052_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2__ctor_mB14B78BB570EE640E6519BD18E1B4EEB5CBC0B30_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_GetEnumerator_mDAC471D4AE2C5DDDDD76407B03D54B58C1C35A47_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_TryGetValue_m81A8885E30E5BFD48BAB5411809FBD2195D761E8_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_m5830C7B8053BF1AC660157CCD70F3E358719610B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_m592BCCE7B7933454DED2130C810F059F8D85B1D7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_m7798FBBBF3C5FCBC875E45B1F69F860B07A10500_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_mB29CA80469B0BC64A6B55A8B94ECE58A2407BD98_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_m490C66215F745351442D1C804CAB969F59C1BFE4_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_m1ECBF8AA45E71A6B3D9348C8A76E327048F80622_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_mECD6B9205382594ACAEFEF769F90E58E5BA4ECD9_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m5EFA29989ABE3C1157E4E52441A9B420B9B996E6_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_mA48DC39CB2D22EA87B7E910C2D86B5F8B2D24944_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FSM_DataBase_GetData_TisDictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_m556495C58F472B151E608512C2157FCD1648BB4D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FSM_DataBase_GetData_TisDictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1_m8B729CED0AD1175D60D4E3AB0AB552F55FE393D3_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m4ACEF49AE68581D2CE9BE7F1745723EA2401CB8B_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* FSM_DataBase_GetData_TisDictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA_m9BF56EADB592F5C28440EAD3CE462220320299E5_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* FSM_DataBase_GetData_TisString_t_m2E9E7C4864D14107D32F67E484B977FC9CF3DA45_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FSM_DataBase_SetData_TisDictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_m723DBF2BA1382B3FD696D97DBDA6D70FC825A529_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FSM_DataBase_SetData_TisDictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1_m5532B0F8D631BABCD9F91693EE5E124BA32F0BC5_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* FSM_DataBase_SetData_TisDictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA_mDAE86AC809861A53181D6A2184EDF96D3B6F49C7_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* FSM_DataBase_SetData_TisString_t_m0AFEF6EAC45D0F6876CCE8C2A1294A848F1F29C2_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* FSM_StateMachine_1_AddStatus_TisProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_m25ED97E4492FBF0BDB347F085106B50DC43F93E9_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* FSM_StateMachine_1_AddStatus_TisProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_mDEF92A0E4363A35E58ACFD5C7AFCAB87B4227D41_RuntimeMethod_var;
@@ -314,18 +291,21 @@ IL2CPP_EXTERN_C const RuntimeMethod* FSM_StateMachine_1_ChangeState_m3A12F101B29
 IL2CPP_EXTERN_C const RuntimeMethod* FSM_StateMachine_1__ctor_m2C042DF0016C7F6CD4B8EF04C0F3C30AAC68CA6E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* FSM_Status_1__ctor_m876DF93817215EF38E17A73E957ECCD13D045C83_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisFSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D_m71C564C6B077486A3C132791BC2995453B5472B6_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* KeyValuePair_2_get_Key_m74ED8F124B9754CF75E4FC3F437BD669CC57E0EA_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* KeyValuePair_2_get_Value_m2B2FE5D059DF47EB275B90F4B24C9DB1C43384EF_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* LJsonUtility_FromJsonToList_TisAssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F_mF2B48458F31A68608485D75E57A3209CA66A1D45_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* GameSetting_1_Get_m20A60CE23518EECAEDE3E68ABA5405111E49D6DC_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* GameSetting_1_Get_m77DD18C98B26B74DC79F56550CDB08F9D7FA6940_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* GameSetting_1_Init_m23A59AB8D3DB73E820492B9F2DB68596F63335F6_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* GameSetting_1_Init_m3BC6707E501C978C0F78B3D30DD48F565E75B42D_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* JsonHelper_FromJsonToDictionary_TisString_t_TisAssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760_m5216B6F3AE8D23A23E637A8672EAE8C800D2C4DC_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* KeyValuePair_2_get_Key_m70A38BF5083D72C13BB3DD841780FC0F5E9EBFB2_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* KeyValuePair_2_get_Value_m187523401919D29F6826C11ECA71B3EF04C048AC_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Clear_mC6C7AEBB0F980A717A87C0D12377984A464F0934_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_m6CC84A47180083294C36821CA426ABEDEDF90890_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_Contains_m359254483BE42CAD4DCA8FBAFB87473FB4CF00E1_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_m7692B5F182858B7D5C72C920D09AD48738D1E70D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_RemoveRange_m33A351ADA40CDA64143F349FACB5993E95C41C7A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m504138B7699BE68921AD73E2E4FD012C8BA9F45E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* ScriptableObject_CreateInstance_TisGameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206_m151D79BB2C6D504993BEC5790BC29B5DE24979C6_RuntimeMethod_var;
 struct CertificateHandler_t148B524FA5DB39F3ABADB181CD420FC505C33804_marshaled_com;
 struct Delegate_t_marshaled_com;
 struct Delegate_t_marshaled_pinvoke;
@@ -358,13 +338,13 @@ struct U3CModuleU3E_tBB65183F1134474D09FF49B95625D25472B9BA8B
 {
 };
 
-// System.Collections.Generic.Dictionary`2<System.String,LGameFramework.GameBase.AssetFile>
-struct Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1  : public RuntimeObject
+// System.Collections.Generic.Dictionary`2<System.String,LGameFramework.GameBase.AssetBundleInfo>
+struct Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA  : public RuntimeObject
 {
 	// System.Int32[] System.Collections.Generic.Dictionary`2::_buckets
 	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets_0;
 	// System.Collections.Generic.Dictionary`2/Entry<TKey,TValue>[] System.Collections.Generic.Dictionary`2::_entries
-	EntryU5BU5D_tE71D2096EDAE59C91725307BFA1545E951FCDBAC* ____entries_1;
+	EntryU5BU5D_t332F43DAE5B5E1418831250AB6E5E24D8571A6CD* ____entries_1;
 	// System.Int32 System.Collections.Generic.Dictionary`2::_count
 	int32_t ____count_2;
 	// System.Int32 System.Collections.Generic.Dictionary`2::_freeList
@@ -376,34 +356,9 @@ struct Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1  : public RuntimeO
 	// System.Collections.Generic.IEqualityComparer`1<TKey> System.Collections.Generic.Dictionary`2::_comparer
 	RuntimeObject* ____comparer_6;
 	// System.Collections.Generic.Dictionary`2/KeyCollection<TKey,TValue> System.Collections.Generic.Dictionary`2::_keys
-	KeyCollection_t176FA0D46EB3004781A06BE01D1EAC85EC6254E6* ____keys_7;
+	KeyCollection_t5AF343F9641DA47BA178B352E6F3ADFA28CEA6AE* ____keys_7;
 	// System.Collections.Generic.Dictionary`2/ValueCollection<TKey,TValue> System.Collections.Generic.Dictionary`2::_values
-	ValueCollection_t93950BCDC2194FA931E183426E5BCECEA64D060D* ____values_8;
-	// System.Object System.Collections.Generic.Dictionary`2::_syncRoot
-	RuntimeObject* ____syncRoot_9;
-};
-
-// System.Collections.Generic.Dictionary`2<System.String,System.String>
-struct Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83  : public RuntimeObject
-{
-	// System.Int32[] System.Collections.Generic.Dictionary`2::_buckets
-	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets_0;
-	// System.Collections.Generic.Dictionary`2/Entry<TKey,TValue>[] System.Collections.Generic.Dictionary`2::_entries
-	EntryU5BU5D_t1AF33AD0B7330843448956EC4277517081658AE7* ____entries_1;
-	// System.Int32 System.Collections.Generic.Dictionary`2::_count
-	int32_t ____count_2;
-	// System.Int32 System.Collections.Generic.Dictionary`2::_freeList
-	int32_t ____freeList_3;
-	// System.Int32 System.Collections.Generic.Dictionary`2::_freeCount
-	int32_t ____freeCount_4;
-	// System.Int32 System.Collections.Generic.Dictionary`2::_version
-	int32_t ____version_5;
-	// System.Collections.Generic.IEqualityComparer`1<TKey> System.Collections.Generic.Dictionary`2::_comparer
-	RuntimeObject* ____comparer_6;
-	// System.Collections.Generic.Dictionary`2/KeyCollection<TKey,TValue> System.Collections.Generic.Dictionary`2::_keys
-	KeyCollection_t2EDD317F5771E575ACB63527B5AFB71291040342* ____keys_7;
-	// System.Collections.Generic.Dictionary`2/ValueCollection<TKey,TValue> System.Collections.Generic.Dictionary`2::_values
-	ValueCollection_t238D0D2427C6B841A01F522A41540165A2C4AE76* ____values_8;
+	ValueCollection_t7816C3FF3585E38AD278A748A7C7B9F4E9D99098* ____values_8;
 	// System.Object System.Collections.Generic.Dictionary`2::_syncRoot
 	RuntimeObject* ____syncRoot_9;
 };
@@ -427,19 +382,6 @@ struct FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4  : public RuntimeO
 	Action_1_t3AA9DE1C50EF96F83F0AD56CD59226414CE7B9A1* ___m_OnEnter_6;
 	// System.Action`1<GameBase.FSM.FSM_Status`1<TStateId>> GameBase.FSM.FSM_Status`1::m_OnExit
 	Action_1_t3AA9DE1C50EF96F83F0AD56CD59226414CE7B9A1* ___m_OnExit_7;
-};
-
-// System.Collections.Generic.List`1<LGameFramework.GameBase.AssetFile>
-struct List_1_tE12999C9C64EBCCD4F81ED9CC5989E46B0A61BC2  : public RuntimeObject
-{
-	// T[] System.Collections.Generic.List`1::_items
-	AssetFileU5BU5D_tA2A76456FB918FE8611A805C725581281580A7EA* ____items_1;
-	// System.Int32 System.Collections.Generic.List`1::_size
-	int32_t ____size_2;
-	// System.Int32 System.Collections.Generic.List`1::_version
-	int32_t ____version_3;
-	// System.Object System.Collections.Generic.List`1::_syncRoot
-	RuntimeObject* ____syncRoot_4;
 };
 
 // System.Collections.Generic.List`1<LGameFramework.GameBase.AssetFileDownloader>
@@ -494,25 +436,27 @@ struct Assembly_t_marshaled_com
 {
 };
 
-// LGameFramework.GameBase.AssetFile
-struct AssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F  : public RuntimeObject
+// LGameFramework.GameBase.AssetBundleInfo
+struct AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760  : public RuntimeObject
 {
-	// System.String LGameFramework.GameBase.AssetFile::assetName
-	String_t* ___assetName_0;
-	// System.String LGameFramework.GameBase.AssetFile::assetPath
+	// System.String LGameFramework.GameBase.AssetBundleInfo::bundleName
+	String_t* ___bundleName_0;
+	// System.String LGameFramework.GameBase.AssetBundleInfo::assetPath
 	String_t* ___assetPath_1;
-	// System.String LGameFramework.GameBase.AssetFile::bundleName
-	String_t* ___bundleName_2;
-	// System.String LGameFramework.GameBase.AssetFile::md5Code
-	String_t* ___md5Code_3;
-	// System.Int32 LGameFramework.GameBase.AssetFile::size
-	int32_t ___size_4;
-	// System.Int32 LGameFramework.GameBase.AssetFile::priority
-	int32_t ___priority_5;
-	// System.Collections.Generic.List`1<System.String> LGameFramework.GameBase.AssetFile::dependencieBundleNames
-	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___dependencieBundleNames_6;
-	// LGameFramework.GameBase.AssetFile/AssetFileFlag LGameFramework.GameBase.AssetFile::fileFlag
-	int32_t ___fileFlag_7;
+	// System.String LGameFramework.GameBase.AssetBundleInfo::md5Code
+	String_t* ___md5Code_2;
+	// System.Int32 LGameFramework.GameBase.AssetBundleInfo::size
+	int32_t ___size_3;
+	// System.Int32 LGameFramework.GameBase.AssetBundleInfo::priority
+	int32_t ___priority_4;
+	// System.UInt32 LGameFramework.GameBase.AssetBundleInfo::crc
+	uint32_t ___crc_5;
+	// System.String[] LGameFramework.GameBase.AssetBundleInfo::dependencieBundleNames
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___dependencieBundleNames_6;
+	// System.String[] LGameFramework.GameBase.AssetBundleInfo::allFiles
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___allFiles_7;
+	// LGameFramework.GameBase.AssetBundleInfo/AssetFileFlag LGameFramework.GameBase.AssetBundleInfo::fileFlag
+	int32_t ___fileFlag_8;
 };
 
 // LGameFramework.GameBase.AssetFileDownloadQueue
@@ -526,6 +470,23 @@ struct AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620  : publi
 	Queue_1_t9C0F14A00EBBB8D904EDB2CF581EEA06FDEB9020* ___m_DownloaderQueuePrepare_2;
 	// System.Collections.Generic.List`1<LGameFramework.GameBase.AssetFileDownloader> LGameFramework.GameBase.AssetFileDownloadQueue::m_DownloadingCurrent
 	List_1_tB17812479988EED86D6D0FCF7424F41FEC175756* ___m_DownloadingCurrent_3;
+};
+
+// LGameFramework.GameBase.AssetFileDownloader
+struct AssetFileDownloader_tBBB0747F4710B98462AE7A01DC95D371BE62DC46  : public RuntimeObject
+{
+	// System.Object LGameFramework.GameBase.AssetFileDownloader::m_Current
+	RuntimeObject* ___m_Current_0;
+	// System.String LGameFramework.GameBase.AssetFileDownloader::m_DownloadURL
+	String_t* ___m_DownloadURL_1;
+	// System.String LGameFramework.GameBase.AssetFileDownloader::m_DownloadPath
+	String_t* ___m_DownloadPath_2;
+	// System.Single LGameFramework.GameBase.AssetFileDownloader::m_Progress
+	float ___m_Progress_3;
+	// System.Boolean LGameFramework.GameBase.AssetFileDownloader::m_IsDone
+	bool ___m_IsDone_4;
+	// System.Net.WebClient LGameFramework.GameBase.AssetFileDownloader::m_WebClient
+	WebClient_tDAF482E6631A91D5FDF2138E6932A323B913F268* ___m_WebClient_5;
 };
 
 // System.MarshalByRefObject
@@ -590,19 +551,6 @@ struct YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D_marshaled_com
 {
 };
 
-// System.Collections.Generic.List`1/Enumerator<LGameFramework.GameBase.AssetFile>
-struct Enumerator_tB4D0F90A8FB78E8A234ADEE2B2795E08626FAE2C 
-{
-	// System.Collections.Generic.List`1<T> System.Collections.Generic.List`1/Enumerator::_list
-	List_1_tE12999C9C64EBCCD4F81ED9CC5989E46B0A61BC2* ____list_0;
-	// System.Int32 System.Collections.Generic.List`1/Enumerator::_index
-	int32_t ____index_1;
-	// System.Int32 System.Collections.Generic.List`1/Enumerator::_version
-	int32_t ____version_2;
-	// T System.Collections.Generic.List`1/Enumerator::_current
-	AssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F* ____current_3;
-};
-
 // System.Collections.Generic.List`1/Enumerator<System.Object>
 struct Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A 
 {
@@ -655,13 +603,13 @@ struct KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230
 	RuntimeObject* ___value_1;
 };
 
-// System.Collections.Generic.KeyValuePair`2<System.String,LGameFramework.GameBase.AssetFile>
-struct KeyValuePair_2_tC1B7927D299042E14CC8B96EC525A65E5009BE9F 
+// System.Collections.Generic.KeyValuePair`2<System.String,LGameFramework.GameBase.AssetBundleInfo>
+struct KeyValuePair_2_tF49673347BC4455B4E13AD20AD95DD75639372AC 
 {
 	// TKey System.Collections.Generic.KeyValuePair`2::key
 	String_t* ___key_0;
 	// TValue System.Collections.Generic.KeyValuePair`2::value
-	AssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F* ___value_1;
+	AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760* ___value_1;
 };
 
 // System.Boolean
@@ -754,55 +702,11 @@ struct MethodBase_t  : public MemberInfo_t
 {
 };
 
-// ProcedureCheckLocalFile
-struct ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3  : public FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4
-{
-	// System.Collections.Generic.Dictionary`2<System.String,System.String> ProcedureCheckLocalFile::m_LocalFiles
-	Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___m_LocalFiles_10;
-	// System.Collections.Generic.Dictionary`2<System.String,LGameFramework.GameBase.AssetFile> ProcedureCheckLocalFile::m_NetFiles
-	Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1* ___m_NetFiles_11;
-	// UnityEngine.Networking.UnityWebRequest ProcedureCheckLocalFile::m_WebRequest
-	UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* ___m_WebRequest_12;
-	// UnityEngine.Networking.UnityWebRequestAsyncOperation ProcedureCheckLocalFile::m_WebRequestAsync
-	UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* ___m_WebRequestAsync_13;
-};
-
-// ProcedureCheckVersion
-struct ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52  : public FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4
-{
-	// System.String ProcedureCheckVersion::m_LocalVersion
-	String_t* ___m_LocalVersion_10;
-	// System.String ProcedureCheckVersion::m_NetVersion
-	String_t* ___m_NetVersion_11;
-	// UnityEngine.Networking.UnityWebRequest ProcedureCheckVersion::m_WebRequest
-	UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* ___m_WebRequest_12;
-	// UnityEngine.Networking.UnityWebRequestAsyncOperation ProcedureCheckVersion::m_WebRequestAsync
-	UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* ___m_WebRequestAsync_13;
-};
-
-// ProcedureGameEntry
-struct ProcedureGameEntry_t8958C2851A91A4AEF12AA392A45B1D67D35F4F16  : public FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4
-{
-};
-
 // ProcedureLaunch
 struct ProcedureLaunch_t700AC00FC3AB7594159CB1DF8955098DD069967C  : public FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4
 {
 	// LGameFramework.GameBase.GameLaunchSetting ProcedureLaunch::m_Setting
 	GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206* ___m_Setting_8;
-};
-
-// ProcedureUpdateVersion
-struct ProcedureUpdateVersion_tC398E933B8CD9AF0671218D0D72C13295FB8314E  : public FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4
-{
-	// System.Boolean ProcedureUpdateVersion::m_IsNeedUpdate
-	bool ___m_IsNeedUpdate_8;
-	// System.Boolean ProcedureUpdateVersion::m_UpdateCShare
-	bool ___m_UpdateCShare_9;
-	// System.Collections.Generic.List`1<System.String> ProcedureUpdateVersion::m_DownloadList
-	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___m_DownloadList_10;
-	// LGameFramework.GameBase.AssetFileDownloadQueue ProcedureUpdateVersion::m_FileDownloadQueue
-	AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620* ___m_FileDownloadQueue_11;
 };
 
 // UnityEngine.Quaternion
@@ -861,6 +765,27 @@ struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915
 	};
 };
 
+// LGameFramework.GameBase.GamePathSetting/SpecialPathStruct
+struct SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337 
+{
+	// LGameFramework.GameBase.GamePathSetting/SpecialPath LGameFramework.GameBase.GamePathSetting/SpecialPathStruct::pathPrefix
+	int32_t ___pathPrefix_0;
+	// System.String LGameFramework.GameBase.GamePathSetting/SpecialPathStruct::m_AssetPath
+	String_t* ___m_AssetPath_1;
+};
+// Native definition for P/Invoke marshalling of LGameFramework.GameBase.GamePathSetting/SpecialPathStruct
+struct SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337_marshaled_pinvoke
+{
+	int32_t ___pathPrefix_0;
+	char* ___m_AssetPath_1;
+};
+// Native definition for COM marshalling of LGameFramework.GameBase.GamePathSetting/SpecialPathStruct
+struct SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337_marshaled_com
+{
+	int32_t ___pathPrefix_0;
+	Il2CppChar* ___m_AssetPath_1;
+};
+
 // Interop/Kernel32/FILE_TIME
 struct FILE_TIME_tBD950B410C18B85474477EEA8F3651A2BD367965 
 {
@@ -885,17 +810,17 @@ struct Enumerator_tEA93FE2B778D098F590CA168BEFC4CD85D73A6B9
 	int32_t ____getEnumeratorRetType_4;
 };
 
-// System.Collections.Generic.Dictionary`2/Enumerator<System.String,LGameFramework.GameBase.AssetFile>
-struct Enumerator_t0385EF61BFB3958FF00B3158C8DCCD8C4F9A0F9F 
+// System.Collections.Generic.Dictionary`2/Enumerator<System.String,LGameFramework.GameBase.AssetBundleInfo>
+struct Enumerator_t2F285A5F651E4421FEB1F4F8A6523E2693919161 
 {
 	// System.Collections.Generic.Dictionary`2<TKey,TValue> System.Collections.Generic.Dictionary`2/Enumerator::_dictionary
-	Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1* ____dictionary_0;
+	Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* ____dictionary_0;
 	// System.Int32 System.Collections.Generic.Dictionary`2/Enumerator::_version
 	int32_t ____version_1;
 	// System.Int32 System.Collections.Generic.Dictionary`2/Enumerator::_index
 	int32_t ____index_2;
 	// System.Collections.Generic.KeyValuePair`2<TKey,TValue> System.Collections.Generic.Dictionary`2/Enumerator::_current
-	KeyValuePair_2_tC1B7927D299042E14CC8B96EC525A65E5009BE9F ____current_3;
+	KeyValuePair_2_tF49673347BC4455B4E13AD20AD95DD75639372AC ____current_3;
 	// System.Int32 System.Collections.Generic.Dictionary`2/Enumerator::_getEnumeratorRetType
 	int32_t ____getEnumeratorRetType_4;
 };
@@ -1169,6 +1094,55 @@ struct UploadHandler_t7E504B1A83346248A0C8C4AF73A893226CB83EF6_marshaled_com
 	intptr_t ___m_Ptr_0;
 };
 
+// LGameFramework.GameBase.GamePathSetting/FilePathStruct
+struct FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35 
+{
+	// UnityEngine.RuntimePlatform LGameFramework.GameBase.GamePathSetting/FilePathStruct::platform
+	int32_t ___platform_0;
+	// System.String LGameFramework.GameBase.GamePathSetting/FilePathStruct::buildingFileName
+	String_t* ___buildingFileName_1;
+	// System.String LGameFramework.GameBase.GamePathSetting/FilePathStruct::assetManifestFileName
+	String_t* ___assetManifestFileName_2;
+	// System.String LGameFramework.GameBase.GamePathSetting/FilePathStruct::versionFileName
+	String_t* ___versionFileName_3;
+	// LGameFramework.GameBase.GamePathSetting/SpecialPathStruct LGameFramework.GameBase.GamePathSetting/FilePathStruct::downloadDataPath
+	SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337 ___downloadDataPath_4;
+	// LGameFramework.GameBase.GamePathSetting/SpecialPathStruct LGameFramework.GameBase.GamePathSetting/FilePathStruct::serverDataPath
+	SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337 ___serverDataPath_5;
+	// LGameFramework.GameBase.GamePathSetting/SpecialPathStruct LGameFramework.GameBase.GamePathSetting/FilePathStruct::buildingPath
+	SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337 ___buildingPath_6;
+	// LGameFramework.GameBase.GamePathSetting/SpecialPathStruct LGameFramework.GameBase.GamePathSetting/FilePathStruct::hotUpdateDllPath
+	SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337 ___hotUpdateDllPath_7;
+	// System.String[] LGameFramework.GameBase.GamePathSetting/FilePathStruct::hotUpdateDll
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___hotUpdateDll_8;
+};
+// Native definition for P/Invoke marshalling of LGameFramework.GameBase.GamePathSetting/FilePathStruct
+struct FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35_marshaled_pinvoke
+{
+	int32_t ___platform_0;
+	char* ___buildingFileName_1;
+	char* ___assetManifestFileName_2;
+	char* ___versionFileName_3;
+	SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337_marshaled_pinvoke ___downloadDataPath_4;
+	SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337_marshaled_pinvoke ___serverDataPath_5;
+	SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337_marshaled_pinvoke ___buildingPath_6;
+	SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337_marshaled_pinvoke ___hotUpdateDllPath_7;
+	char** ___hotUpdateDll_8;
+};
+// Native definition for COM marshalling of LGameFramework.GameBase.GamePathSetting/FilePathStruct
+struct FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35_marshaled_com
+{
+	int32_t ___platform_0;
+	Il2CppChar* ___buildingFileName_1;
+	Il2CppChar* ___assetManifestFileName_2;
+	Il2CppChar* ___versionFileName_3;
+	SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337_marshaled_com ___downloadDataPath_4;
+	SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337_marshaled_com ___serverDataPath_5;
+	SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337_marshaled_com ___buildingPath_6;
+	SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337_marshaled_com ___hotUpdateDllPath_7;
+	Il2CppChar** ___hotUpdateDll_8;
+};
+
 // Interop/Kernel32/WIN32_FILE_ATTRIBUTE_DATA
 struct WIN32_FILE_ATTRIBUTE_DATA_tD093F8658579DA72CCD2E158A681DDE37834F73B 
 {
@@ -1302,6 +1276,58 @@ struct MulticastDelegate_t_marshaled_com : public Delegate_t_marshaled_com
 	Delegate_t_marshaled_com** ___delegates_13;
 };
 
+// ProcedureCheckLocalFile
+struct ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3  : public FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4
+{
+	// System.Collections.Generic.Dictionary`2<System.String,LGameFramework.GameBase.AssetBundleInfo> ProcedureCheckLocalFile::m_LocalFiles
+	Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* ___m_LocalFiles_10;
+	// System.Collections.Generic.Dictionary`2<System.String,LGameFramework.GameBase.AssetBundleInfo> ProcedureCheckLocalFile::m_NetFiles
+	Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* ___m_NetFiles_11;
+	// UnityEngine.Networking.UnityWebRequest ProcedureCheckLocalFile::m_WebRequest
+	UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* ___m_WebRequest_12;
+	// UnityEngine.Networking.UnityWebRequestAsyncOperation ProcedureCheckLocalFile::m_WebRequestAsync
+	UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* ___m_WebRequestAsync_13;
+	// LGameFramework.GameBase.GamePathSetting/FilePathStruct ProcedureCheckLocalFile::m_GamePath
+	FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35 ___m_GamePath_14;
+};
+
+// ProcedureCheckVersion
+struct ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52  : public FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4
+{
+	// System.String ProcedureCheckVersion::m_LocalVersion
+	String_t* ___m_LocalVersion_10;
+	// System.String ProcedureCheckVersion::m_NetVersion
+	String_t* ___m_NetVersion_11;
+	// UnityEngine.Networking.UnityWebRequest ProcedureCheckVersion::m_WebRequest
+	UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* ___m_WebRequest_12;
+	// UnityEngine.Networking.UnityWebRequestAsyncOperation ProcedureCheckVersion::m_WebRequestAsync
+	UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* ___m_WebRequestAsync_13;
+	// LGameFramework.GameBase.GamePathSetting/FilePathStruct ProcedureCheckVersion::m_GamePath
+	FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35 ___m_GamePath_14;
+};
+
+// ProcedureGameEntry
+struct ProcedureGameEntry_t8958C2851A91A4AEF12AA392A45B1D67D35F4F16  : public FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4
+{
+	// LGameFramework.GameBase.GamePathSetting/FilePathStruct ProcedureGameEntry::m_GamePath
+	FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35 ___m_GamePath_8;
+};
+
+// ProcedureUpdateVersion
+struct ProcedureUpdateVersion_tC398E933B8CD9AF0671218D0D72C13295FB8314E  : public FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4
+{
+	// System.Boolean ProcedureUpdateVersion::m_IsNeedUpdate
+	bool ___m_IsNeedUpdate_8;
+	// System.Boolean ProcedureUpdateVersion::m_UpdateCShare
+	bool ___m_UpdateCShare_9;
+	// System.Collections.Generic.List`1<System.String> ProcedureUpdateVersion::m_DownloadList
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___m_DownloadList_10;
+	// LGameFramework.GameBase.AssetFileDownloadQueue ProcedureUpdateVersion::m_FileDownloadQueue
+	AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620* ___m_FileDownloadQueue_11;
+	// LGameFramework.GameBase.GamePathSetting/FilePathStruct ProcedureUpdateVersion::m_GamePath
+	FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35 ___m_GamePath_12;
+};
+
 // UnityEngine.ScriptableObject
 struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
 {
@@ -1394,6 +1420,21 @@ struct Action_1_t3AA9DE1C50EF96F83F0AD56CD59226414CE7B9A1  : public MulticastDel
 {
 };
 
+// GameSetting`1<LGameFramework.GameBase.GameLaunchSetting>
+struct GameSetting_1_tA339F7D4269DC6A2CAF43CD94EE66CCDAC9B9AF8  : public ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A
+{
+};
+
+// GameSetting`1<LGameFramework.GameBase.GamePathSetting>
+struct GameSetting_1_t32D6F738F573D1546397C778B1854A9D5C6E883E  : public ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A
+{
+};
+
+// GameSetting`1<System.Object>
+struct GameSetting_1_t775031D67363373C85FDE3F4EE883ED43AC52C5A  : public ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A
+{
+};
+
 // UnityEngine.Behaviour
 struct Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA  : public Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3
 {
@@ -1404,24 +1445,31 @@ struct DirectoryInfo_tEAEEC018EB49B4A71907FFEAFE935FAA8F9C1FE2  : public FileSys
 {
 };
 
-// LGameFramework.GameBase.GameLaunchSetting
-struct GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206  : public ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A
-{
-	// System.Int32 LGameFramework.GameBase.GameLaunchSetting::frameRate
-	int32_t ___frameRate_4;
-	// System.Single LGameFramework.GameBase.GameLaunchSetting::gameSpeed
-	float ___gameSpeed_5;
-	// System.Boolean LGameFramework.GameBase.GameLaunchSetting::runInBackground
-	bool ___runInBackground_6;
-	// System.Boolean LGameFramework.GameBase.GameLaunchSetting::neverSleep
-	bool ___neverSleep_7;
-	// LGameFramework.GameBase.GameLaunchSetting/AssetLoadMode LGameFramework.GameBase.GameLaunchSetting::assetLoadMode
-	int32_t ___assetLoadMode_8;
-};
-
 // UnityEngine.Application/LogCallback
 struct LogCallback_tCFFF3C009186124A6A83A1E6BB7E360C5674C413  : public MulticastDelegate_t
 {
+};
+
+// LGameFramework.GameBase.GameLaunchSetting
+struct GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206  : public GameSetting_1_tA339F7D4269DC6A2CAF43CD94EE66CCDAC9B9AF8
+{
+	// System.Int32 LGameFramework.GameBase.GameLaunchSetting::frameRate
+	int32_t ___frameRate_5;
+	// System.Single LGameFramework.GameBase.GameLaunchSetting::gameSpeed
+	float ___gameSpeed_6;
+	// System.Boolean LGameFramework.GameBase.GameLaunchSetting::runInBackground
+	bool ___runInBackground_7;
+	// System.Boolean LGameFramework.GameBase.GameLaunchSetting::neverSleep
+	bool ___neverSleep_8;
+	// LGameFramework.GameBase.GameLaunchSetting/AssetLoadMode LGameFramework.GameBase.GameLaunchSetting::assetLoadMode
+	int32_t ___assetLoadMode_9;
+};
+
+// LGameFramework.GameBase.GamePathSetting
+struct GamePathSetting_t90635FDBB458D9776877AD87389060E85997AD77  : public GameSetting_1_t32D6F738F573D1546397C778B1854A9D5C6E883E
+{
+	// System.Collections.Generic.List`1<LGameFramework.GameBase.GamePathSetting/FilePathStruct> LGameFramework.GameBase.GamePathSetting::filePathStructs
+	List_1_tDFF17E466A9A0D010CA6B6265EE5528055A64DC6* ___filePathStructs_5;
 };
 
 // UnityEngine.MonoBehaviour
@@ -1457,36 +1505,25 @@ struct FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D  : public MonoBeha
 // ProcedureLauncher
 struct ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// LGameFramework.GameBase.GameLaunchSetting ProcedureLauncher::launchSetting
-	GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206* ___launchSetting_5;
 	// ProcedureFSM ProcedureLauncher::m_Procedure
-	ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF* ___m_Procedure_6;
+	ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF* ___m_Procedure_5;
+	// LGameFramework.GameBase.GameLaunchSetting ProcedureLauncher::m_GameLaunchSetting
+	GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206* ___m_GameLaunchSetting_6;
+	// LGameFramework.GameBase.GamePathSetting ProcedureLauncher::m_GamePathSetting
+	GamePathSetting_t90635FDBB458D9776877AD87389060E85997AD77* ___m_GamePathSetting_7;
 };
 
 // <Module>
 
 // <Module>
 
-// System.Collections.Generic.Dictionary`2<System.String,LGameFramework.GameBase.AssetFile>
+// System.Collections.Generic.Dictionary`2<System.String,LGameFramework.GameBase.AssetBundleInfo>
 
-// System.Collections.Generic.Dictionary`2<System.String,LGameFramework.GameBase.AssetFile>
-
-// System.Collections.Generic.Dictionary`2<System.String,System.String>
-
-// System.Collections.Generic.Dictionary`2<System.String,System.String>
+// System.Collections.Generic.Dictionary`2<System.String,LGameFramework.GameBase.AssetBundleInfo>
 
 // GameBase.FSM.FSM_Status`1<ProcedureLaunchProcess>
 
 // GameBase.FSM.FSM_Status`1<ProcedureLaunchProcess>
-
-// System.Collections.Generic.List`1<LGameFramework.GameBase.AssetFile>
-struct List_1_tE12999C9C64EBCCD4F81ED9CC5989E46B0A61BC2_StaticFields
-{
-	// T[] System.Collections.Generic.List`1::s_emptyArray
-	AssetFileU5BU5D_tA2A76456FB918FE8611A805C725581281580A7EA* ___s_emptyArray_5;
-};
-
-// System.Collections.Generic.List`1<LGameFramework.GameBase.AssetFile>
 
 // System.Collections.Generic.List`1<LGameFramework.GameBase.AssetFileDownloader>
 struct List_1_tB17812479988EED86D6D0FCF7424F41FEC175756_StaticFields
@@ -1519,13 +1556,17 @@ struct List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_StaticFields
 
 // System.Reflection.Assembly
 
-// LGameFramework.GameBase.AssetFile
+// LGameFramework.GameBase.AssetBundleInfo
 
-// LGameFramework.GameBase.AssetFile
+// LGameFramework.GameBase.AssetBundleInfo
+
+// LGameFramework.GameBase.AssetFileDownloadQueue
 
 // LGameFramework.GameBase.AssetFileDownloadQueue
 
-// LGameFramework.GameBase.AssetFileDownloadQueue
+// LGameFramework.GameBase.AssetFileDownloader
+
+// LGameFramework.GameBase.AssetFileDownloader
 
 // ProcedureLaunchPath
 struct ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields
@@ -1534,10 +1575,12 @@ struct ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticField
 	String_t* ___localDataPath_0;
 	// System.String ProcedureLaunchPath::s_NetServerPath
 	String_t* ___s_NetServerPath_1;
+	// System.String ProcedureLaunchPath::s_BuildInPath
+	String_t* ___s_BuildInPath_2;
 	// System.String ProcedureLaunchPath::s_HotUpdateDll
-	String_t* ___s_HotUpdateDll_2;
+	String_t* ___s_HotUpdateDll_3;
 	// System.String[] ProcedureLaunchPath::s_HotUpdateDllName
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___s_HotUpdateDllName_3;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___s_HotUpdateDllName_4;
 };
 
 // ProcedureLaunchPath
@@ -1550,10 +1593,6 @@ struct String_t_StaticFields
 };
 
 // System.String
-
-// System.Collections.Generic.List`1/Enumerator<LGameFramework.GameBase.AssetFile>
-
-// System.Collections.Generic.List`1/Enumerator<LGameFramework.GameBase.AssetFile>
 
 // System.Collections.Generic.List`1/Enumerator<System.Object>
 
@@ -1576,9 +1615,9 @@ struct FSM_StateMachine_1_tFE85E579591E8BDFEFB8961AFC568BCA625CB204_StaticFields
 
 // System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>
 
-// System.Collections.Generic.KeyValuePair`2<System.String,LGameFramework.GameBase.AssetFile>
+// System.Collections.Generic.KeyValuePair`2<System.String,LGameFramework.GameBase.AssetBundleInfo>
 
-// System.Collections.Generic.KeyValuePair`2<System.String,LGameFramework.GameBase.AssetFile>
+// System.Collections.Generic.KeyValuePair`2<System.String,LGameFramework.GameBase.AssetBundleInfo>
 
 // System.Boolean
 struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_StaticFields
@@ -1641,39 +1680,9 @@ struct Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6_StaticFields
 
 // System.Reflection.MethodBase
 
-// ProcedureCheckLocalFile
-struct ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_StaticFields
-{
-	// System.String ProcedureCheckLocalFile::localFilesName
-	String_t* ___localFilesName_8;
-	// System.String ProcedureCheckLocalFile::netFilesName
-	String_t* ___netFilesName_9;
-};
-
-// ProcedureCheckLocalFile
-
-// ProcedureCheckVersion
-struct ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_StaticFields
-{
-	// System.String ProcedureCheckVersion::localVersionName
-	String_t* ___localVersionName_8;
-	// System.String ProcedureCheckVersion::netVersionName
-	String_t* ___netVersionName_9;
-};
-
-// ProcedureCheckVersion
-
-// ProcedureGameEntry
-
-// ProcedureGameEntry
-
 // ProcedureLaunch
 
 // ProcedureLaunch
-
-// ProcedureUpdateVersion
-
-// ProcedureUpdateVersion
 
 // UnityEngine.Quaternion
 struct Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974_StaticFields
@@ -1723,13 +1732,17 @@ struct Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields
 
 // System.Void
 
-// System.Collections.Generic.Dictionary`2/Enumerator<System.Object,System.Object>
+// LGameFramework.GameBase.GamePathSetting/SpecialPathStruct
+
+// LGameFramework.GameBase.GamePathSetting/SpecialPathStruct
 
 // System.Collections.Generic.Dictionary`2/Enumerator<System.Object,System.Object>
 
-// System.Collections.Generic.Dictionary`2/Enumerator<System.String,LGameFramework.GameBase.AssetFile>
+// System.Collections.Generic.Dictionary`2/Enumerator<System.Object,System.Object>
 
-// System.Collections.Generic.Dictionary`2/Enumerator<System.String,LGameFramework.GameBase.AssetFile>
+// System.Collections.Generic.Dictionary`2/Enumerator<System.String,LGameFramework.GameBase.AssetBundleInfo>
+
+// System.Collections.Generic.Dictionary`2/Enumerator<System.String,LGameFramework.GameBase.AssetBundleInfo>
 
 // UnityEngine.AsyncOperation
 
@@ -1765,6 +1778,10 @@ struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_StaticFields
 
 // ProcedureFSM
 
+// LGameFramework.GameBase.GamePathSetting/FilePathStruct
+
+// LGameFramework.GameBase.GamePathSetting/FilePathStruct
+
 // UnityEngine.AssetBundle
 
 // UnityEngine.AssetBundle
@@ -1787,6 +1804,22 @@ struct GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580_StaticFields
 // UnityEngine.GameObject
 
 // UnityEngine.GameObject
+
+// ProcedureCheckLocalFile
+
+// ProcedureCheckLocalFile
+
+// ProcedureCheckVersion
+
+// ProcedureCheckVersion
+
+// ProcedureGameEntry
+
+// ProcedureGameEntry
+
+// ProcedureUpdateVersion
+
+// ProcedureUpdateVersion
 
 // UnityEngine.TextAsset
 
@@ -1825,17 +1858,30 @@ struct Type_t_StaticFields
 
 // System.Action`1<GameBase.FSM.FSM_Status`1<ProcedureLaunchProcess>>
 
+// GameSetting`1<System.Object>
+struct GameSetting_1_t775031D67363373C85FDE3F4EE883ED43AC52C5A_StaticFields
+{
+	// T GameSetting`1::m_Value
+	RuntimeObject* ___m_Value_4;
+};
+
+// GameSetting`1<System.Object>
+
 // System.IO.DirectoryInfo
 
 // System.IO.DirectoryInfo
+
+// UnityEngine.Application/LogCallback
+
+// UnityEngine.Application/LogCallback
 
 // LGameFramework.GameBase.GameLaunchSetting
 
 // LGameFramework.GameBase.GameLaunchSetting
 
-// UnityEngine.Application/LogCallback
+// LGameFramework.GameBase.GamePathSetting
 
-// UnityEngine.Application/LogCallback
+// LGameFramework.GameBase.GamePathSetting
 
 // UnityEngine.MonoBehaviour
 
@@ -1854,11 +1900,6 @@ struct Type_t_StaticFields
 // GameBase.FSM.FSM_DataBase
 
 // ProcedureLauncher
-struct ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_StaticFields
-{
-	// System.String ProcedureLauncher::procedureMarkHead
-	String_t* ___procedureMarkHead_4;
-};
 
 // ProcedureLauncher
 #ifdef __clang__
@@ -2012,18 +2053,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_RemoveRange_m0D2A25C95EFDC6E9CD22B663D9633426B51E3699_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, int32_t ___0_index, int32_t ___1_count, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<System.Object>::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
-// System.Collections.Generic.List`1<T> LJsonUtility::FromJsonToList<System.Object>(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* LJsonUtility_FromJsonToList_TisRuntimeObject_m91C1F563F068947AB3D83A86A1ACB2C4FD5E69C0_gshared (String_t* ___0_json, const RuntimeMethod* method) ;
-// System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<System.Object>::GetEnumerator()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1/Enumerator<System.Object>::Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
-// T System.Collections.Generic.List`1/Enumerator<System.Object>::get_Current()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.Dictionary`2<System.Object,System.Object>::Add(TKey,TValue)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___0_key, RuntimeObject* ___1_value, const RuntimeMethod* method) ;
-// System.Boolean System.Collections.Generic.List`1/Enumerator<System.Object>::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
+// System.Collections.Generic.Dictionary`2<T,V> LGameFramework.GameBase.JsonHelper::FromJsonToDictionary<System.Object,System.Object>(System.String,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* JsonHelper_FromJsonToDictionary_TisRuntimeObject_TisRuntimeObject_m7CBFE5E92FCE6930B521D6223248A21CD4C72881_gshared (String_t* ___0_json, bool ___1_decrypt, const RuntimeMethod* method) ;
 // System.Void GameBase.FSM.FSM_DataBase::SetData<System.Object>(System.String,T)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FSM_DataBase_SetData_TisRuntimeObject_m7EEB75624502E9F08BD1D68FD91A7050D93D6A65_gshared (FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* __this, String_t* ___0_dataName, RuntimeObject* ___1_data, const RuntimeMethod* method) ;
 // T GameBase.FSM.FSM_DataBase::GetData<System.Object>(System.String)
@@ -2042,14 +2073,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_TryGetValue_mD15380A4ED7CDE
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) ;
 // System.Boolean System.Collections.Generic.Dictionary`2/Enumerator<System.Object,System.Object>::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mCD4950A75FFADD54AF354D48C6C0DB0B5A22A5F4_gshared (Enumerator_tEA93FE2B778D098F590CA168BEFC4CD85D73A6B9* __this, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.Dictionary`2<System.Object,System.Object>::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, const RuntimeMethod* method) ;
+// T GameSetting`1<System.Object>::Get()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameSetting_1_Get_m44DAA0CE478389D6F20473FD1C93C012500D4CD5_gshared (const RuntimeMethod* method) ;
 // System.Void GameBase.FSM.FSM_Status`1<System.Int32Enum>::.ctor(System.Action`1<GameBase.FSM.FSM_Status`1<TStateId>>,System.Action`1<GameBase.FSM.FSM_Status`1<TStateId>>,System.Action`1<GameBase.FSM.FSM_Status`1<TStateId>>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FSM_Status_1__ctor_mE3BF333E588D0FD0458399B1C1A5336F234F54E3_gshared (FSM_Status_1_tC0EFD939C1F5D64DC72BB77974B570F3D9CE20A3* __this, Action_1_tF9D9C9F774164A2075AC1D49D76FDBB34B87509A* ___0_onEnter, Action_1_tF9D9C9F774164A2075AC1D49D76FDBB34B87509A* ___1_onExit, Action_1_tF9D9C9F774164A2075AC1D49D76FDBB34B87509A* ___2_onAction, const RuntimeMethod* method) ;
-// T UnityEngine.Component::GetComponent<System.Object>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
-// T UnityEngine.ScriptableObject::CreateInstance<System.Object>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ScriptableObject_CreateInstance_TisRuntimeObject_mC07BE383F5EF546F4191035A679930852BC19BDA_gshared (const RuntimeMethod* method) ;
+// System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<System.Object>::GetEnumerator()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1/Enumerator<System.Object>::Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
+// T System.Collections.Generic.List`1/Enumerator<System.Object>::get_Current()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
+// System.Boolean System.Collections.Generic.List`1/Enumerator<System.Object>::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
+// System.Void GameSetting`1<System.Object>::Init(T)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GameSetting_1_Init_mE3FD6314A6AEA20E39F0639BADFD2AFC3DFF5E81_gshared_inline (RuntimeObject* ___0_instance, const RuntimeMethod* method) ;
 // T UnityEngine.GameObject::AddComponent<System.Object>()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 // System.Void GameBase.FSM.FSM_StateMachine`1<System.Int32Enum>::AddStatus<System.Object>(TStateId)
@@ -2060,6 +2097,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FSM_StateMachine_1_ChangeState_mAE1FA27D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FSM_StateMachine_1__ctor_m920FD5E43649D535D3F71D005F0B787C700644CB_gshared (FSM_StateMachine_1_tA00CFD7B700A6EC31771B7EA9EBF74D6F2933F92* __this, const RuntimeMethod* method) ;
 // T[] UnityEngine.AssetBundle::LoadAllAssets<System.Object>()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* AssetBundle_LoadAllAssets_TisRuntimeObject_m11AD3CC703881F7388E89C5F5930BB9409753570_gshared (AssetBundle_tB38418819A49060CD738CB21541649340F082943* __this, const RuntimeMethod* method) ;
+// System.Boolean System.Collections.Generic.List`1<System.Object>::Contains(T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool List_1_Contains_m4C9139C2A6B23E9343D3F87807B32C6E2CFE660D_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<System.Object>::Clear()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
 
@@ -2133,42 +2172,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnityWebRequest_get_result_mEF83848C5
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* UnityWebRequest_get_downloadHandler_m1AA91B23D9D594A4F4FE2975FC356C508528F1D5 (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* __this, const RuntimeMethod* method) ;
 // System.String UnityEngine.Networking.DownloadHandler::get_text()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8 (DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* __this, const RuntimeMethod* method) ;
-// System.Collections.Generic.List`1<T> LJsonUtility::FromJsonToList<LGameFramework.GameBase.AssetFile>(System.String)
-inline List_1_tE12999C9C64EBCCD4F81ED9CC5989E46B0A61BC2* LJsonUtility_FromJsonToList_TisAssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F_mF2B48458F31A68608485D75E57A3209CA66A1D45 (String_t* ___0_json, const RuntimeMethod* method)
+// System.Collections.Generic.Dictionary`2<T,V> LGameFramework.GameBase.JsonHelper::FromJsonToDictionary<System.String,LGameFramework.GameBase.AssetBundleInfo>(System.String,System.Boolean)
+inline Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* JsonHelper_FromJsonToDictionary_TisString_t_TisAssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760_m5216B6F3AE8D23A23E637A8672EAE8C800D2C4DC (String_t* ___0_json, bool ___1_decrypt, const RuntimeMethod* method)
 {
-	return ((  List_1_tE12999C9C64EBCCD4F81ED9CC5989E46B0A61BC2* (*) (String_t*, const RuntimeMethod*))LJsonUtility_FromJsonToList_TisRuntimeObject_m91C1F563F068947AB3D83A86A1ACB2C4FD5E69C0_gshared)(___0_json, method);
+	return ((  Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* (*) (String_t*, bool, const RuntimeMethod*))JsonHelper_FromJsonToDictionary_TisRuntimeObject_TisRuntimeObject_m7CBFE5E92FCE6930B521D6223248A21CD4C72881_gshared)(___0_json, ___1_decrypt, method);
 }
-// System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<LGameFramework.GameBase.AssetFile>::GetEnumerator()
-inline Enumerator_tB4D0F90A8FB78E8A234ADEE2B2795E08626FAE2C List_1_GetEnumerator_m6CC84A47180083294C36821CA426ABEDEDF90890 (List_1_tE12999C9C64EBCCD4F81ED9CC5989E46B0A61BC2* __this, const RuntimeMethod* method)
+// System.Void GameBase.FSM.FSM_DataBase::SetData<System.Collections.Generic.Dictionary`2<System.String,LGameFramework.GameBase.AssetBundleInfo>>(System.String,T)
+inline void FSM_DataBase_SetData_TisDictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA_mDAE86AC809861A53181D6A2184EDF96D3B6F49C7 (FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* __this, String_t* ___0_dataName, Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* ___1_data, const RuntimeMethod* method)
 {
-	return ((  Enumerator_tB4D0F90A8FB78E8A234ADEE2B2795E08626FAE2C (*) (List_1_tE12999C9C64EBCCD4F81ED9CC5989E46B0A61BC2*, const RuntimeMethod*))List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared)(__this, method);
-}
-// System.Void System.Collections.Generic.List`1/Enumerator<LGameFramework.GameBase.AssetFile>::Dispose()
-inline void Enumerator_Dispose_m7798FBBBF3C5FCBC875E45B1F69F860B07A10500 (Enumerator_tB4D0F90A8FB78E8A234ADEE2B2795E08626FAE2C* __this, const RuntimeMethod* method)
-{
-	((  void (*) (Enumerator_tB4D0F90A8FB78E8A234ADEE2B2795E08626FAE2C*, const RuntimeMethod*))Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared)(__this, method);
-}
-// T System.Collections.Generic.List`1/Enumerator<LGameFramework.GameBase.AssetFile>::get_Current()
-inline AssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F* Enumerator_get_Current_m5EFA29989ABE3C1157E4E52441A9B420B9B996E6_inline (Enumerator_tB4D0F90A8FB78E8A234ADEE2B2795E08626FAE2C* __this, const RuntimeMethod* method)
-{
-	return ((  AssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F* (*) (Enumerator_tB4D0F90A8FB78E8A234ADEE2B2795E08626FAE2C*, const RuntimeMethod*))Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline)(__this, method);
-}
-// System.Void System.Collections.Generic.Dictionary`2<System.String,LGameFramework.GameBase.AssetFile>::Add(TKey,TValue)
-inline void Dictionary_2_Add_m38577F8B05FB86EA818222B31C646CEA00FC6792 (Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1* __this, String_t* ___0_key, AssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F* ___1_value, const RuntimeMethod* method)
-{
-	((  void (*) (Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1*, String_t*, AssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F*, const RuntimeMethod*))Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_gshared)(__this, ___0_key, ___1_value, method);
-}
-// System.Boolean System.Collections.Generic.List`1/Enumerator<LGameFramework.GameBase.AssetFile>::MoveNext()
-inline bool Enumerator_MoveNext_mECD6B9205382594ACAEFEF769F90E58E5BA4ECD9 (Enumerator_tB4D0F90A8FB78E8A234ADEE2B2795E08626FAE2C* __this, const RuntimeMethod* method)
-{
-	return ((  bool (*) (Enumerator_tB4D0F90A8FB78E8A234ADEE2B2795E08626FAE2C*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
-}
-// System.String System.String::Concat(System.String,System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m9E3155FB84015C823606188F53B47CB44C444991 (String_t* ___0_str0, String_t* ___1_str1, const RuntimeMethod* method) ;
-// System.Void GameBase.FSM.FSM_DataBase::SetData<System.Collections.Generic.Dictionary`2<System.String,LGameFramework.GameBase.AssetFile>>(System.String,T)
-inline void FSM_DataBase_SetData_TisDictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1_m5532B0F8D631BABCD9F91693EE5E124BA32F0BC5 (FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* __this, String_t* ___0_dataName, Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1* ___1_data, const RuntimeMethod* method)
-{
-	((  void (*) (FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D*, String_t*, Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1*, const RuntimeMethod*))FSM_DataBase_SetData_TisRuntimeObject_m7EEB75624502E9F08BD1D68FD91A7050D93D6A65_gshared)(__this, ___0_dataName, ___1_data, method);
+	((  void (*) (FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D*, String_t*, Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA*, const RuntimeMethod*))FSM_DataBase_SetData_TisRuntimeObject_m7EEB75624502E9F08BD1D68FD91A7050D93D6A65_gshared)(__this, ___0_dataName, ___1_data, method);
 }
 // T GameBase.FSM.FSM_DataBase::GetData<System.String>(System.String)
 inline String_t* FSM_DataBase_GetData_TisString_t_m2E9E7C4864D14107D32F67E484B977FC9CF3DA45 (FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* __this, String_t* ___0_name, const RuntimeMethod* method)
@@ -2177,79 +2189,58 @@ inline String_t* FSM_DataBase_GetData_TisString_t_m2E9E7C4864D14107D32F67E484B97
 }
 // System.Boolean System.String::op_Inequality(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_op_Inequality_m8C940F3CFC42866709D7CA931B3D77B4BE94BCB6 (String_t* ___0_a, String_t* ___1_b, const RuntimeMethod* method) ;
-// System.Collections.Generic.Dictionary`2/Enumerator<TKey,TValue> System.Collections.Generic.Dictionary`2<System.String,LGameFramework.GameBase.AssetFile>::GetEnumerator()
-inline Enumerator_t0385EF61BFB3958FF00B3158C8DCCD8C4F9A0F9F Dictionary_2_GetEnumerator_m660B966EF921340FDEF6FCB04DB287384C7BDAF1 (Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1* __this, const RuntimeMethod* method)
+// System.Collections.Generic.Dictionary`2/Enumerator<TKey,TValue> System.Collections.Generic.Dictionary`2<System.String,LGameFramework.GameBase.AssetBundleInfo>::GetEnumerator()
+inline Enumerator_t2F285A5F651E4421FEB1F4F8A6523E2693919161 Dictionary_2_GetEnumerator_mDAC471D4AE2C5DDDDD76407B03D54B58C1C35A47 (Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* __this, const RuntimeMethod* method)
 {
-	return ((  Enumerator_t0385EF61BFB3958FF00B3158C8DCCD8C4F9A0F9F (*) (Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1*, const RuntimeMethod*))Dictionary_2_GetEnumerator_m52AB12790B0B9B46B1DFB1F861C9DBEAB07C1FDA_gshared)(__this, method);
+	return ((  Enumerator_t2F285A5F651E4421FEB1F4F8A6523E2693919161 (*) (Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA*, const RuntimeMethod*))Dictionary_2_GetEnumerator_m52AB12790B0B9B46B1DFB1F861C9DBEAB07C1FDA_gshared)(__this, method);
 }
-// System.Void System.Collections.Generic.Dictionary`2/Enumerator<System.String,LGameFramework.GameBase.AssetFile>::Dispose()
-inline void Enumerator_Dispose_mB29CA80469B0BC64A6B55A8B94ECE58A2407BD98 (Enumerator_t0385EF61BFB3958FF00B3158C8DCCD8C4F9A0F9F* __this, const RuntimeMethod* method)
+// System.Void System.Collections.Generic.Dictionary`2/Enumerator<System.String,LGameFramework.GameBase.AssetBundleInfo>::Dispose()
+inline void Enumerator_Dispose_m5830C7B8053BF1AC660157CCD70F3E358719610B (Enumerator_t2F285A5F651E4421FEB1F4F8A6523E2693919161* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Enumerator_t0385EF61BFB3958FF00B3158C8DCCD8C4F9A0F9F*, const RuntimeMethod*))Enumerator_Dispose_mEA5E01B81EB943B7003D87CEC1B6040524F0402C_gshared)(__this, method);
+	((  void (*) (Enumerator_t2F285A5F651E4421FEB1F4F8A6523E2693919161*, const RuntimeMethod*))Enumerator_Dispose_mEA5E01B81EB943B7003D87CEC1B6040524F0402C_gshared)(__this, method);
 }
-// System.Collections.Generic.KeyValuePair`2<TKey,TValue> System.Collections.Generic.Dictionary`2/Enumerator<System.String,LGameFramework.GameBase.AssetFile>::get_Current()
-inline KeyValuePair_2_tC1B7927D299042E14CC8B96EC525A65E5009BE9F Enumerator_get_Current_mA48DC39CB2D22EA87B7E910C2D86B5F8B2D24944_inline (Enumerator_t0385EF61BFB3958FF00B3158C8DCCD8C4F9A0F9F* __this, const RuntimeMethod* method)
+// System.Collections.Generic.KeyValuePair`2<TKey,TValue> System.Collections.Generic.Dictionary`2/Enumerator<System.String,LGameFramework.GameBase.AssetBundleInfo>::get_Current()
+inline KeyValuePair_2_tF49673347BC4455B4E13AD20AD95DD75639372AC Enumerator_get_Current_m4ACEF49AE68581D2CE9BE7F1745723EA2401CB8B_inline (Enumerator_t2F285A5F651E4421FEB1F4F8A6523E2693919161* __this, const RuntimeMethod* method)
 {
-	return ((  KeyValuePair_2_tC1B7927D299042E14CC8B96EC525A65E5009BE9F (*) (Enumerator_t0385EF61BFB3958FF00B3158C8DCCD8C4F9A0F9F*, const RuntimeMethod*))Enumerator_get_Current_mE3475384B761E1C7971D3639BD09117FE8363422_gshared_inline)(__this, method);
+	return ((  KeyValuePair_2_tF49673347BC4455B4E13AD20AD95DD75639372AC (*) (Enumerator_t2F285A5F651E4421FEB1F4F8A6523E2693919161*, const RuntimeMethod*))Enumerator_get_Current_mE3475384B761E1C7971D3639BD09117FE8363422_gshared_inline)(__this, method);
 }
-// TKey System.Collections.Generic.KeyValuePair`2<System.String,LGameFramework.GameBase.AssetFile>::get_Key()
-inline String_t* KeyValuePair_2_get_Key_m74ED8F124B9754CF75E4FC3F437BD669CC57E0EA_inline (KeyValuePair_2_tC1B7927D299042E14CC8B96EC525A65E5009BE9F* __this, const RuntimeMethod* method)
+// TKey System.Collections.Generic.KeyValuePair`2<System.String,LGameFramework.GameBase.AssetBundleInfo>::get_Key()
+inline String_t* KeyValuePair_2_get_Key_m70A38BF5083D72C13BB3DD841780FC0F5E9EBFB2_inline (KeyValuePair_2_tF49673347BC4455B4E13AD20AD95DD75639372AC* __this, const RuntimeMethod* method)
 {
-	return ((  String_t* (*) (KeyValuePair_2_tC1B7927D299042E14CC8B96EC525A65E5009BE9F*, const RuntimeMethod*))KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_gshared_inline)(__this, method);
+	return ((  String_t* (*) (KeyValuePair_2_tF49673347BC4455B4E13AD20AD95DD75639372AC*, const RuntimeMethod*))KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_gshared_inline)(__this, method);
 }
-// System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.String>::TryGetValue(TKey,TValue&)
-inline bool Dictionary_2_TryGetValue_mA86D965CB5F74CE8675B7995C61945BEB6E594CB (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* __this, String_t* ___0_key, String_t** ___1_value, const RuntimeMethod* method)
+// System.Boolean System.Collections.Generic.Dictionary`2<System.String,LGameFramework.GameBase.AssetBundleInfo>::TryGetValue(TKey,TValue&)
+inline bool Dictionary_2_TryGetValue_m81A8885E30E5BFD48BAB5411809FBD2195D761E8 (Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* __this, String_t* ___0_key, AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760** ___1_value, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*, String_t*, String_t**, const RuntimeMethod*))Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849_gshared)(__this, ___0_key, ___1_value, method);
+	return ((  bool (*) (Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA*, String_t*, AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760**, const RuntimeMethod*))Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849_gshared)(__this, ___0_key, ___1_value, method);
 }
-// TValue System.Collections.Generic.KeyValuePair`2<System.String,LGameFramework.GameBase.AssetFile>::get_Value()
-inline AssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F* KeyValuePair_2_get_Value_m2B2FE5D059DF47EB275B90F4B24C9DB1C43384EF_inline (KeyValuePair_2_tC1B7927D299042E14CC8B96EC525A65E5009BE9F* __this, const RuntimeMethod* method)
+// TValue System.Collections.Generic.KeyValuePair`2<System.String,LGameFramework.GameBase.AssetBundleInfo>::get_Value()
+inline AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760* KeyValuePair_2_get_Value_m187523401919D29F6826C11ECA71B3EF04C048AC_inline (KeyValuePair_2_tF49673347BC4455B4E13AD20AD95DD75639372AC* __this, const RuntimeMethod* method)
 {
-	return ((  AssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F* (*) (KeyValuePair_2_tC1B7927D299042E14CC8B96EC525A65E5009BE9F*, const RuntimeMethod*))KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_gshared_inline)(__this, method);
+	return ((  AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760* (*) (KeyValuePair_2_tF49673347BC4455B4E13AD20AD95DD75639372AC*, const RuntimeMethod*))KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_gshared_inline)(__this, method);
 }
-// System.Boolean System.Collections.Generic.Dictionary`2/Enumerator<System.String,LGameFramework.GameBase.AssetFile>::MoveNext()
-inline bool Enumerator_MoveNext_m490C66215F745351442D1C804CAB969F59C1BFE4 (Enumerator_t0385EF61BFB3958FF00B3158C8DCCD8C4F9A0F9F* __this, const RuntimeMethod* method)
+// System.Boolean System.Collections.Generic.Dictionary`2/Enumerator<System.String,LGameFramework.GameBase.AssetBundleInfo>::MoveNext()
+inline bool Enumerator_MoveNext_m1ECBF8AA45E71A6B3D9348C8A76E327048F80622 (Enumerator_t2F285A5F651E4421FEB1F4F8A6523E2693919161* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Enumerator_t0385EF61BFB3958FF00B3158C8DCCD8C4F9A0F9F*, const RuntimeMethod*))Enumerator_MoveNext_mCD4950A75FFADD54AF354D48C6C0DB0B5A22A5F4_gshared)(__this, method);
+	return ((  bool (*) (Enumerator_t2F285A5F651E4421FEB1F4F8A6523E2693919161*, const RuntimeMethod*))Enumerator_MoveNext_mCD4950A75FFADD54AF354D48C6C0DB0B5A22A5F4_gshared)(__this, method);
 }
-// System.Void System.Collections.Generic.Dictionary`2<System.String,System.String>::.ctor()
-inline void Dictionary_2__ctor_m768E076F1E804CE4959F4E71D3E6A9ADE2F55052 (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* __this, const RuntimeMethod* method)
+// T GameSetting`1<LGameFramework.GameBase.GamePathSetting>::Get()
+inline GamePathSetting_t90635FDBB458D9776877AD87389060E85997AD77* GameSetting_1_Get_m20A60CE23518EECAEDE3E68ABA5405111E49D6DC (const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*, const RuntimeMethod*))Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_gshared)(__this, method);
+	return ((  GamePathSetting_t90635FDBB458D9776877AD87389060E85997AD77* (*) (const RuntimeMethod*))GameSetting_1_Get_m44DAA0CE478389D6F20473FD1C93C012500D4CD5_gshared)(method);
 }
-// System.Void System.Collections.Generic.Dictionary`2<System.String,LGameFramework.GameBase.AssetFile>::.ctor()
-inline void Dictionary_2__ctor_mB14B78BB570EE640E6519BD18E1B4EEB5CBC0B30 (Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1* __this, const RuntimeMethod* method)
-{
-	((  void (*) (Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1*, const RuntimeMethod*))Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_gshared)(__this, method);
-}
-// System.Boolean System.IO.Directory::Exists(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Directory_Exists_m3D125E9E88C291CF11113444F961A64DD83AE1C7 (String_t* ___0_path, const RuntimeMethod* method) ;
-// System.IO.DirectoryInfo System.IO.Directory::CreateDirectory(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DirectoryInfo_tEAEEC018EB49B4A71907FFEAFE935FAA8F9C1FE2* Directory_CreateDirectory_m16EC5CE8561A997C6635E06DC24C77590F29D94F (String_t* ___0_path, const RuntimeMethod* method) ;
-// System.String[] System.IO.Directory::GetFiles(System.String,System.String,System.IO.SearchOption)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* Directory_GetFiles_mC195B04DA9630D79180C0E85AFFFF9FEF0DB49B9 (String_t* ___0_path, String_t* ___1_searchPattern, int32_t ___2_searchOption, const RuntimeMethod* method) ;
-// System.String System.IO.Path::GetExtension(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Path_GetExtension_m6FEAA9E14451BFD210B9D1AEC2430C813F570FE5 (String_t* ___0_path, const RuntimeMethod* method) ;
-// System.Boolean System.String::op_Equality(System.String,System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1 (String_t* ___0_a, String_t* ___1_b, const RuntimeMethod* method) ;
-// System.String System.String::Substring(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Substring_m6BA4A3FA3800FE92662D0847CC8E1EEF940DF472 (String_t* __this, int32_t ___0_startIndex, const RuntimeMethod* method) ;
-// System.String System.String::Replace(System.String,System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Replace_mABDB7003A1D0AEDCAE9FF85E3DFFFBA752D2A166 (String_t* __this, String_t* ___0_oldValue, String_t* ___1_newValue, const RuntimeMethod* method) ;
-// System.String Utility::GetMD5(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Utility_GetMD5_m8936EBFED59AEF24482A3857240A5DD95C8D64B8 (String_t* ___0_file, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.Dictionary`2<System.String,System.String>::Add(TKey,TValue)
-inline void Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13 (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* __this, String_t* ___0_key, String_t* ___1_value, const RuntimeMethod* method)
-{
-	((  void (*) (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*, String_t*, String_t*, const RuntimeMethod*))Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_gshared)(__this, ___0_key, ___1_value, method);
-}
-// System.Void GameBase.FSM.FSM_DataBase::SetData<System.Collections.Generic.Dictionary`2<System.String,System.String>>(System.String,T)
-inline void FSM_DataBase_SetData_TisDictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_m723DBF2BA1382B3FD696D97DBDA6D70FC825A529 (FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* __this, String_t* ___0_dataName, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___1_data, const RuntimeMethod* method)
-{
-	((  void (*) (FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D*, String_t*, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*, const RuntimeMethod*))FSM_DataBase_SetData_TisRuntimeObject_m7EEB75624502E9F08BD1D68FD91A7050D93D6A65_gshared)(__this, ___0_dataName, ___1_data, method);
-}
+// LGameFramework.GameBase.GamePathSetting/FilePathStruct LGameFramework.GameBase.GamePathSetting::CurrentPlatform()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35 GamePathSetting_CurrentPlatform_mF6B080B988CA3FCB199D700A9294971DE46EEE06 (GamePathSetting_t90635FDBB458D9776877AD87389060E85997AD77* __this, const RuntimeMethod* method) ;
+// System.String LGameFramework.GameBase.GamePathSetting/SpecialPathStruct::get_AssetPath()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SpecialPathStruct_get_AssetPath_m3472DD23FCF8E176133DD18235710CDC8E1B6D26 (SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337* __this, const RuntimeMethod* method) ;
 // System.String System.IO.Path::Combine(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE (String_t* ___0_path1, String_t* ___1_path2, const RuntimeMethod* method) ;
+// System.Boolean System.IO.File::Exists(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool File_Exists_m95E329ABBE3EAD6750FE1989BBA6884457136D4A (String_t* ___0_path, const RuntimeMethod* method) ;
+// System.String System.IO.File::ReadAllText(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* File_ReadAllText_mA4A939F853D573379F7129AFDC469B91E9747BAA (String_t* ___0_path, const RuntimeMethod* method) ;
+// System.Boolean System.String::IsNullOrEmpty(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478 (String_t* ___0_value, const RuntimeMethod* method) ;
 // UnityEngine.Networking.UnityWebRequest UnityEngine.Networking.UnityWebRequest::Get(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* UnityWebRequest_Get_m1A332EE069BB5052368307F254A5A7627BB5FD86 (String_t* ___0_uri, const RuntimeMethod* method) ;
 // UnityEngine.Networking.UnityWebRequestAsyncOperation UnityEngine.Networking.UnityWebRequest::SendWebRequest()
@@ -2266,10 +2257,8 @@ inline void FSM_DataBase_SetData_TisString_t_m0AFEF6EAC45D0F6876CCE8C2A1294A848F
 {
 	((  void (*) (FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D*, String_t*, String_t*, const RuntimeMethod*))FSM_DataBase_SetData_TisRuntimeObject_m7EEB75624502E9F08BD1D68FD91A7050D93D6A65_gshared)(__this, ___0_dataName, ___1_data, method);
 }
-// System.Boolean System.IO.File::Exists(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool File_Exists_m95E329ABBE3EAD6750FE1989BBA6884457136D4A (String_t* ___0_path, const RuntimeMethod* method) ;
-// System.String System.IO.File::ReadAllText(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* File_ReadAllText_mA4A939F853D573379F7129AFDC469B91E9747BAA (String_t* ___0_path, const RuntimeMethod* method) ;
+// System.String System.String::Concat(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m9E3155FB84015C823606188F53B47CB44C444991 (String_t* ___0_str0, String_t* ___1_str1, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Debug::Log(System.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
 // System.Void ProcedureGameEntry::LoadMetadataForAOTAssemblies()
@@ -2305,6 +2294,8 @@ inline String_t* Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11
 {
 	return ((  String_t* (*) (Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1*, const RuntimeMethod*))Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline)(__this, method);
 }
+// System.String System.String::Format(System.String,System.Object,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987 (String_t* ___0_format, RuntimeObject* ___1_arg0, RuntimeObject* ___2_arg1, const RuntimeMethod* method) ;
 // HybridCLR.LoadImageErrorCode HybridCLR.RuntimeApi::LoadMetadataForAOTAssembly(System.Byte[],HybridCLR.HomologousImageMode)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RuntimeApi_LoadMetadataForAOTAssembly_mE1E398132DBF86D7DE042300E1EE6AC37B7649D8 (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_dllBytes, int32_t ___1_mode, const RuntimeMethod* method) ;
 // System.String System.String::Format(System.String,System.Object,System.Object,System.Object)
@@ -2314,10 +2305,10 @@ inline bool Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED (Enume
 {
 	return ((  bool (*) (Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
 }
-// T UnityEngine.Component::GetComponent<ProcedureLauncher>()
-inline ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1* Component_GetComponent_TisProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_m00DC0364909A9507473458A9D3A30C04C185B55C (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
+// T GameSetting`1<LGameFramework.GameBase.GameLaunchSetting>::Get()
+inline GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206* GameSetting_1_Get_m77DD18C98B26B74DC79F56550CDB08F9D7FA6940 (const RuntimeMethod* method)
 {
-	return ((  ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
+	return ((  GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206* (*) (const RuntimeMethod*))GameSetting_1_Get_m44DAA0CE478389D6F20473FD1C93C012500D4CD5_gshared)(method);
 }
 // System.Void UnityEngine.Application::set_targetFrameRate(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Application_set_targetFrameRate_mB90EEA60DAE55CD71C38D4B7DFDBE2B34EA6B46F (int32_t ___0_value, const RuntimeMethod* method) ;
@@ -2327,12 +2318,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Time_set_timeScale_mEF84EE4B2376A4583876
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Application_set_runInBackground_m4CD0DF59011994C4DB76D7A2FE7A02BC07B4AF67 (bool ___0_value, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Screen::set_sleepTimeout(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Screen_set_sleepTimeout_mB375970159A73BB484A2B5E62A943330B83ABF9A (int32_t ___0_value, const RuntimeMethod* method) ;
-// System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_x, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___1_y, const RuntimeMethod* method) ;
-// T UnityEngine.ScriptableObject::CreateInstance<LGameFramework.GameBase.GameLaunchSetting>()
-inline GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206* ScriptableObject_CreateInstance_TisGameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206_m151D79BB2C6D504993BEC5790BC29B5DE24979C6 (const RuntimeMethod* method)
+// System.Void GameSetting`1<LGameFramework.GameBase.GameLaunchSetting>::Init(T)
+inline void GameSetting_1_Init_m23A59AB8D3DB73E820492B9F2DB68596F63335F6_inline (GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206* ___0_instance, const RuntimeMethod* method)
 {
-	return ((  GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206* (*) (const RuntimeMethod*))ScriptableObject_CreateInstance_TisRuntimeObject_mC07BE383F5EF546F4191035A679930852BC19BDA_gshared)(method);
+	((  void (*) (GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206*, const RuntimeMethod*))GameSetting_1_Init_mE3FD6314A6AEA20E39F0639BADFD2AFC3DFF5E81_gshared_inline)(___0_instance, method);
+}
+// System.Void GameSetting`1<LGameFramework.GameBase.GamePathSetting>::Init(T)
+inline void GameSetting_1_Init_m3BC6707E501C978C0F78B3D30DD48F565E75B42D_inline (GamePathSetting_t90635FDBB458D9776877AD87389060E85997AD77* ___0_instance, const RuntimeMethod* method)
+{
+	((  void (*) (GamePathSetting_t90635FDBB458D9776877AD87389060E85997AD77*, const RuntimeMethod*))GameSetting_1_Init_mE3FD6314A6AEA20E39F0639BADFD2AFC3DFF5E81_gshared_inline)(___0_instance, method);
 }
 // System.Void ProcedureFSM::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureFSM__ctor_mD53F279AF5CE96885888E305E747DDC164D3FB07 (ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF* __this, const RuntimeMethod* method) ;
@@ -2408,6 +2402,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mA8DBB4C2516B9723C5A4
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void File_Delete_mE29829DA504F3E1B8BCB78F21E2862C9ED7EC386 (String_t* ___0_path, const RuntimeMethod* method) ;
 // System.String System.IO.Path::GetDirectoryName(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Path_GetDirectoryName_m428BADBE493A3927B51A13DEF658929B430516F6 (String_t* ___0_path, const RuntimeMethod* method) ;
+// System.Boolean System.IO.Directory::Exists(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Directory_Exists_m3D125E9E88C291CF11113444F961A64DD83AE1C7 (String_t* ___0_path, const RuntimeMethod* method) ;
+// System.IO.DirectoryInfo System.IO.Directory::CreateDirectory(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DirectoryInfo_tEAEEC018EB49B4A71907FFEAFE935FAA8F9C1FE2* Directory_CreateDirectory_m16EC5CE8561A997C6635E06DC24C77590F29D94F (String_t* ___0_path, const RuntimeMethod* method) ;
 // System.Byte[] UnityEngine.TextAsset::get_bytes()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* TextAsset_get_bytes_m244B31755642C9623B570FC96B9A04523B1E5178 (TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* __this, const RuntimeMethod* method) ;
 // System.Void System.IO.File::WriteAllBytes(System.String,System.Byte[])
@@ -2418,22 +2416,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Resources_UnloadAsset_m4828D1393356C0520
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssetBundle_Unload_m0A189871E61A0D6735A2B41B3360A1F0677B636B (AssetBundle_tB38418819A49060CD738CB21541649340F082943* __this, bool ___0_unloadAllLoadedObjects, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Debug::LogError(System.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2 (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
-// T GameBase.FSM.FSM_DataBase::GetData<System.Collections.Generic.Dictionary`2<System.String,LGameFramework.GameBase.AssetFile>>(System.String)
-inline Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1* FSM_DataBase_GetData_TisDictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1_m8B729CED0AD1175D60D4E3AB0AB552F55FE393D3 (FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* __this, String_t* ___0_name, const RuntimeMethod* method)
+// T GameBase.FSM.FSM_DataBase::GetData<System.Collections.Generic.Dictionary`2<System.String,LGameFramework.GameBase.AssetBundleInfo>>(System.String)
+inline Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* FSM_DataBase_GetData_TisDictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA_m9BF56EADB592F5C28440EAD3CE462220320299E5 (FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* __this, String_t* ___0_name, const RuntimeMethod* method)
 {
-	return ((  Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1* (*) (FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D*, String_t*, const RuntimeMethod*))FSM_DataBase_GetData_TisRuntimeObject_m276F195D770B2195E13278EE79B5B63B0DCFDBE0_gshared)(__this, ___0_name, method);
+	return ((  Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* (*) (FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D*, String_t*, const RuntimeMethod*))FSM_DataBase_GetData_TisRuntimeObject_m276F195D770B2195E13278EE79B5B63B0DCFDBE0_gshared)(__this, ___0_name, method);
 }
-// T GameBase.FSM.FSM_DataBase::GetData<System.Collections.Generic.Dictionary`2<System.String,System.String>>(System.String)
-inline Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* FSM_DataBase_GetData_TisDictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_m556495C58F472B151E608512C2157FCD1648BB4D (FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* __this, String_t* ___0_name, const RuntimeMethod* method)
+// System.Boolean System.Collections.Generic.List`1<System.String>::Contains(T)
+inline bool List_1_Contains_m359254483BE42CAD4DCA8FBAFB87473FB4CF00E1 (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* __this, String_t* ___0_item, const RuntimeMethod* method)
 {
-	return ((  Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* (*) (FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D*, String_t*, const RuntimeMethod*))FSM_DataBase_GetData_TisRuntimeObject_m276F195D770B2195E13278EE79B5B63B0DCFDBE0_gshared)(__this, ___0_name, method);
+	return ((  bool (*) (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*, String_t*, const RuntimeMethod*))List_1_Contains_m4C9139C2A6B23E9343D3F87807B32C6E2CFE660D_gshared)(__this, ___0_item, method);
 }
-// System.Boolean System.String::Contains(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_Contains_m6D77B121FADA7CA5F397C0FABB65DA62DF03B6C3 (String_t* __this, String_t* ___0_value, const RuntimeMethod* method) ;
 // System.Void LGameFramework.GameBase.AssetFileDownloadQueue::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssetFileDownloadQueue__ctor_mBBF3B302DAE29BE07C43E4F5BCA4577ADE02E45D (AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620* __this, const RuntimeMethod* method) ;
-// System.Void LGameFramework.GameBase.AssetFileDownloadQueue::Enqueue(System.String,System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssetFileDownloadQueue_Enqueue_m5EFBF92E9332C6226D1858096655C6DAC8EB58FD (AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620* __this, String_t* ___0_downloadURL, String_t* ___1_downloadPath, const RuntimeMethod* method) ;
+// System.String System.String::Replace(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Replace_mABDB7003A1D0AEDCAE9FF85E3DFFFBA752D2A166 (String_t* __this, String_t* ___0_oldValue, String_t* ___1_newValue, const RuntimeMethod* method) ;
+// LGameFramework.GameBase.AssetFileDownloader LGameFramework.GameBase.AssetFileDownloadQueue::Enqueue(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AssetFileDownloader_tBBB0747F4710B98462AE7A01DC95D371BE62DC46* AssetFileDownloadQueue_Enqueue_m8702B60BB1C75618CA8DC8A68ADB4AAC6DCBA237 (AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620* __this, String_t* ___0_downloadURL, String_t* ___1_downloadPath, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<System.String>::Clear()
 inline void List_1_Clear_mC6C7AEBB0F980A717A87C0D12377984A464F0934_inline (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* __this, const RuntimeMethod* method)
 {
@@ -2793,43 +2791,36 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureCheckLocalFile_OnAction_m1B1307
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_Add_m38577F8B05FB86EA818222B31C646CEA00FC6792_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_GetEnumerator_m660B966EF921340FDEF6FCB04DB287384C7BDAF1_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_TryGetValue_mA86D965CB5F74CE8675B7995C61945BEB6E594CB_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m7798FBBBF3C5FCBC875E45B1F69F860B07A10500_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_mB29CA80469B0BC64A6B55A8B94ECE58A2407BD98_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m490C66215F745351442D1C804CAB969F59C1BFE4_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mECD6B9205382594ACAEFEF769F90E58E5BA4ECD9_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m5EFA29989ABE3C1157E4E52441A9B420B9B996E6_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_mA48DC39CB2D22EA87B7E910C2D86B5F8B2D24944_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_GetEnumerator_mDAC471D4AE2C5DDDDD76407B03D54B58C1C35A47_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_TryGetValue_m81A8885E30E5BFD48BAB5411809FBD2195D761E8_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m5830C7B8053BF1AC660157CCD70F3E358719610B_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m1ECBF8AA45E71A6B3D9348C8A76E327048F80622_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m4ACEF49AE68581D2CE9BE7F1745723EA2401CB8B_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FSM_DataBase_GetData_TisString_t_m2E9E7C4864D14107D32F67E484B977FC9CF3DA45_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FSM_DataBase_SetData_TisDictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1_m5532B0F8D631BABCD9F91693EE5E124BA32F0BC5_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FSM_DataBase_SetData_TisDictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA_mDAE86AC809861A53181D6A2184EDF96D3B6F49C7_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IFSM_Machine_1_tDAD178AE60E63943B1E9AE6C50382824D9715340_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KeyValuePair_2_get_Key_m74ED8F124B9754CF75E4FC3F437BD669CC57E0EA_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KeyValuePair_2_get_Value_m2B2FE5D059DF47EB275B90F4B24C9DB1C43384EF_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&LJsonUtility_FromJsonToList_TisAssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F_mF2B48458F31A68608485D75E57A3209CA66A1D45_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m6CC84A47180083294C36821CA426ABEDEDF90890_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonHelper_FromJsonToDictionary_TisString_t_TisAssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760_m5216B6F3AE8D23A23E637A8672EAE8C800D2C4DC_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KeyValuePair_2_get_Key_m70A38BF5083D72C13BB3DD841780FC0F5E9EBFB2_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KeyValuePair_2_get_Value_m187523401919D29F6826C11ECA71B3EF04C048AC_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral39ABCACBD25286BD4E86E33A02DA30FBEA49B182);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral70DC673A7344F4CD8C84EF58757850C27DBB339B);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralEB3162236B0885447A08938F9E9EA8B70E3CE844);
 		s_Il2CppMethodInitialized = true;
 	}
 	String_t* V_0 = NULL;
-	bool V_1 = false;
-	Enumerator_tB4D0F90A8FB78E8A234ADEE2B2795E08626FAE2C V_2;
-	memset((&V_2), 0, sizeof(V_2));
-	AssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F* V_3 = NULL;
-	String_t* V_4 = NULL;
-	Enumerator_t0385EF61BFB3958FF00B3158C8DCCD8C4F9A0F9F V_5;
+	String_t* V_1 = NULL;
+	bool V_2 = false;
+	AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760* V_3 = NULL;
+	Enumerator_t2F285A5F651E4421FEB1F4F8A6523E2693919161 V_4;
+	memset((&V_4), 0, sizeof(V_4));
+	KeyValuePair_2_tF49673347BC4455B4E13AD20AD95DD75639372AC V_5;
 	memset((&V_5), 0, sizeof(V_5));
-	KeyValuePair_2_tC1B7927D299042E14CC8B96EC525A65E5009BE9F V_6;
-	memset((&V_6), 0, sizeof(V_6));
 	{
 		// if (m_WebRequestAsync != null && m_WebRequestAsync.isDone)
 		UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_0 = __this->___m_WebRequestAsync_13;
 		if (!L_0)
 		{
-			goto IL_016e;
+			goto IL_0122;
 		}
 	}
 	{
@@ -2839,7 +2830,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureCheckLocalFile_OnAction_m1B1307
 		L_2 = AsyncOperation_get_isDone_m68A0682777E2132FC033182E9F50303566AA354D(L_1, NULL);
 		if (!L_2)
 		{
-			goto IL_016e;
+			goto IL_0122;
 		}
 	}
 	{
@@ -2875,195 +2866,127 @@ IL_003b:
 		NullCheck(L_8);
 		String_t* L_9;
 		L_9 = DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8(L_8, NULL);
-		// List<AssetFile> assetFiles = LJsonUtility.FromJsonToList<AssetFile>(str);
-		List_1_tE12999C9C64EBCCD4F81ED9CC5989E46B0A61BC2* L_10;
-		L_10 = LJsonUtility_FromJsonToList_TisAssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F_mF2B48458F31A68608485D75E57A3209CA66A1D45(L_9, LJsonUtility_FromJsonToList_TisAssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F_mF2B48458F31A68608485D75E57A3209CA66A1D45_RuntimeMethod_var);
-		// foreach (AssetFile assetFile in assetFiles)
-		NullCheck(L_10);
-		Enumerator_tB4D0F90A8FB78E8A234ADEE2B2795E08626FAE2C L_11;
-		L_11 = List_1_GetEnumerator_m6CC84A47180083294C36821CA426ABEDEDF90890(L_10, List_1_GetEnumerator_m6CC84A47180083294C36821CA426ABEDEDF90890_RuntimeMethod_var);
-		V_2 = L_11;
-	}
-	{
-		auto __finallyBlock = il2cpp::utils::Finally([&]
-		{
-
-FINALLY_007d:
-			{// begin finally (depth: 1)
-				Enumerator_Dispose_m7798FBBBF3C5FCBC875E45B1F69F860B07A10500((&V_2), Enumerator_Dispose_m7798FBBBF3C5FCBC875E45B1F69F860B07A10500_RuntimeMethod_var);
-				return;
-			}// end finally (depth: 1)
-		});
-		try
-		{// begin try (depth: 1)
-			{
-				goto IL_0072_1;
-			}
-
-IL_0058_1:
-			{
-				// foreach (AssetFile assetFile in assetFiles)
-				AssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F* L_12;
-				L_12 = Enumerator_get_Current_m5EFA29989ABE3C1157E4E52441A9B420B9B996E6_inline((&V_2), Enumerator_get_Current_m5EFA29989ABE3C1157E4E52441A9B420B9B996E6_RuntimeMethod_var);
-				V_3 = L_12;
-				// m_NetFiles.Add(assetFile.assetPath, assetFile);
-				Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1* L_13 = __this->___m_NetFiles_11;
-				AssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F* L_14 = V_3;
-				NullCheck(L_14);
-				String_t* L_15 = L_14->___assetPath_1;
-				AssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F* L_16 = V_3;
-				NullCheck(L_13);
-				Dictionary_2_Add_m38577F8B05FB86EA818222B31C646CEA00FC6792(L_13, L_15, L_16, Dictionary_2_Add_m38577F8B05FB86EA818222B31C646CEA00FC6792_RuntimeMethod_var);
-			}
-
-IL_0072_1:
-			{
-				// foreach (AssetFile assetFile in assetFiles)
-				bool L_17;
-				L_17 = Enumerator_MoveNext_mECD6B9205382594ACAEFEF769F90E58E5BA4ECD9((&V_2), Enumerator_MoveNext_mECD6B9205382594ACAEFEF769F90E58E5BA4ECD9_RuntimeMethod_var);
-				if (L_17)
-				{
-					goto IL_0058_1;
-				}
-			}
-			{
-				goto IL_008b;
-			}
-		}// end try (depth: 1)
-		catch(Il2CppExceptionWrapper& e)
-		{
-			__finallyBlock.StoreException(e.ex);
-		}
-	}
-
-IL_008b:
-	{
+		V_0 = L_9;
+		// m_NetFiles = JsonHelper.FromJsonToDictionary<string, AssetBundleInfo>(str, true);
+		String_t* L_10 = V_0;
+		Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* L_11;
+		L_11 = JsonHelper_FromJsonToDictionary_TisString_t_TisAssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760_m5216B6F3AE8D23A23E637A8672EAE8C800D2C4DC(L_10, (bool)1, JsonHelper_FromJsonToDictionary_TisString_t_TisAssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760_m5216B6F3AE8D23A23E637A8672EAE8C800D2C4DC_RuntimeMethod_var);
+		__this->___m_NetFiles_11 = L_11;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_NetFiles_11), (void*)L_11);
 		// dataBase.SetData(ProcedureLauncher.procedureMarkHead + netFilesName, m_NetFiles);
-		FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* L_18 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___dataBase_3;
-		il2cpp_codegen_runtime_class_init_inline(ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var);
-		String_t* L_19 = ((ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var))->___procedureMarkHead_4;
-		il2cpp_codegen_runtime_class_init_inline(ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_il2cpp_TypeInfo_var);
-		String_t* L_20 = ((ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_il2cpp_TypeInfo_var))->___netFilesName_9;
-		String_t* L_21;
-		L_21 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_19, L_20, NULL);
-		Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1* L_22 = __this->___m_NetFiles_11;
-		NullCheck(L_18);
-		FSM_DataBase_SetData_TisDictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1_m5532B0F8D631BABCD9F91693EE5E124BA32F0BC5(L_18, L_21, L_22, FSM_DataBase_SetData_TisDictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1_m5532B0F8D631BABCD9F91693EE5E124BA32F0BC5_RuntimeMethod_var);
+		FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* L_12 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___dataBase_3;
+		Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* L_13 = __this->___m_NetFiles_11;
+		NullCheck(L_12);
+		FSM_DataBase_SetData_TisDictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA_mDAE86AC809861A53181D6A2184EDF96D3B6F49C7(L_12, _stringLiteral70DC673A7344F4CD8C84EF58757850C27DBB339B, L_13, FSM_DataBase_SetData_TisDictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA_mDAE86AC809861A53181D6A2184EDF96D3B6F49C7_RuntimeMethod_var);
 		// string localVersion = dataBase.GetData<string>(ProcedureLauncher.procedureMarkHead + ProcedureCheckVersion.localVersionName);
-		FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* L_23 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___dataBase_3;
-		String_t* L_24 = ((ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var))->___procedureMarkHead_4;
-		il2cpp_codegen_runtime_class_init_inline(ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_il2cpp_TypeInfo_var);
-		String_t* L_25 = ((ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_il2cpp_TypeInfo_var))->___localVersionName_8;
-		String_t* L_26;
-		L_26 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_24, L_25, NULL);
-		NullCheck(L_23);
-		String_t* L_27;
-		L_27 = FSM_DataBase_GetData_TisString_t_m2E9E7C4864D14107D32F67E484B977FC9CF3DA45(L_23, L_26, FSM_DataBase_GetData_TisString_t_m2E9E7C4864D14107D32F67E484B977FC9CF3DA45_RuntimeMethod_var);
+		FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* L_14 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___dataBase_3;
+		NullCheck(L_14);
+		String_t* L_15;
+		L_15 = FSM_DataBase_GetData_TisString_t_m2E9E7C4864D14107D32F67E484B977FC9CF3DA45(L_14, _stringLiteral39ABCACBD25286BD4E86E33A02DA30FBEA49B182, FSM_DataBase_GetData_TisString_t_m2E9E7C4864D14107D32F67E484B977FC9CF3DA45_RuntimeMethod_var);
 		// string netVersion = dataBase.GetData<string>(ProcedureLauncher.procedureMarkHead + ProcedureCheckVersion.netVersionName);
-		FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* L_28 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___dataBase_3;
-		String_t* L_29 = ((ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var))->___procedureMarkHead_4;
-		String_t* L_30 = ((ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_il2cpp_TypeInfo_var))->___netVersionName_9;
-		String_t* L_31;
-		L_31 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_29, L_30, NULL);
-		NullCheck(L_28);
-		String_t* L_32;
-		L_32 = FSM_DataBase_GetData_TisString_t_m2E9E7C4864D14107D32F67E484B977FC9CF3DA45(L_28, L_31, FSM_DataBase_GetData_TisString_t_m2E9E7C4864D14107D32F67E484B977FC9CF3DA45_RuntimeMethod_var);
-		V_0 = L_32;
+		FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* L_16 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___dataBase_3;
+		NullCheck(L_16);
+		String_t* L_17;
+		L_17 = FSM_DataBase_GetData_TisString_t_m2E9E7C4864D14107D32F67E484B977FC9CF3DA45(L_16, _stringLiteralEB3162236B0885447A08938F9E9EA8B70E3CE844, FSM_DataBase_GetData_TisString_t_m2E9E7C4864D14107D32F67E484B977FC9CF3DA45_RuntimeMethod_var);
+		V_1 = L_17;
 		// bool needUpdate = localVersion != netVersion;
-		String_t* L_33 = V_0;
-		bool L_34;
-		L_34 = String_op_Inequality_m8C940F3CFC42866709D7CA931B3D77B4BE94BCB6(L_27, L_33, NULL);
-		V_1 = L_34;
+		String_t* L_18 = V_1;
+		bool L_19;
+		L_19 = String_op_Inequality_m8C940F3CFC42866709D7CA931B3D77B4BE94BCB6(L_15, L_18, NULL);
+		V_2 = L_19;
 		// if (!needUpdate)
-		bool L_35 = V_1;
-		if (L_35)
+		bool L_20 = V_2;
+		if (L_20)
 		{
-			goto IL_0152;
+			goto IL_0106;
 		}
 	}
 	{
-		// foreach (var file in m_NetFiles)
-		Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1* L_36 = __this->___m_NetFiles_11;
-		NullCheck(L_36);
-		Enumerator_t0385EF61BFB3958FF00B3158C8DCCD8C4F9A0F9F L_37;
-		L_37 = Dictionary_2_GetEnumerator_m660B966EF921340FDEF6FCB04DB287384C7BDAF1(L_36, Dictionary_2_GetEnumerator_m660B966EF921340FDEF6FCB04DB287384C7BDAF1_RuntimeMethod_var);
-		V_5 = L_37;
+		// foreach (var nextFile in m_NetFiles)
+		Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* L_21 = __this->___m_NetFiles_11;
+		NullCheck(L_21);
+		Enumerator_t2F285A5F651E4421FEB1F4F8A6523E2693919161 L_22;
+		L_22 = Dictionary_2_GetEnumerator_mDAC471D4AE2C5DDDDD76407B03D54B58C1C35A47(L_21, Dictionary_2_GetEnumerator_mDAC471D4AE2C5DDDDD76407B03D54B58C1C35A47_RuntimeMethod_var);
+		V_4 = L_22;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0144:
+FINALLY_00f8:
 			{// begin finally (depth: 1)
-				Enumerator_Dispose_mB29CA80469B0BC64A6B55A8B94ECE58A2407BD98((&V_5), Enumerator_Dispose_mB29CA80469B0BC64A6B55A8B94ECE58A2407BD98_RuntimeMethod_var);
+				Enumerator_Dispose_m5830C7B8053BF1AC660157CCD70F3E358719610B((&V_4), Enumerator_Dispose_m5830C7B8053BF1AC660157CCD70F3E358719610B_RuntimeMethod_var);
 				return;
 			}// end finally (depth: 1)
 		});
 		try
 		{// begin try (depth: 1)
 			{
-				goto IL_0139_1;
+				goto IL_00ed_1;
 			}
 
-IL_00f9_1:
+IL_00a9_1:
 			{
-				// foreach (var file in m_NetFiles)
-				KeyValuePair_2_tC1B7927D299042E14CC8B96EC525A65E5009BE9F L_38;
-				L_38 = Enumerator_get_Current_mA48DC39CB2D22EA87B7E910C2D86B5F8B2D24944_inline((&V_5), Enumerator_get_Current_mA48DC39CB2D22EA87B7E910C2D86B5F8B2D24944_RuntimeMethod_var);
-				V_6 = L_38;
-				// if (m_LocalFiles == null || !m_LocalFiles.TryGetValue(file.Key, out localMD5) || localMD5 != file.Value.md5Code)
-				Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_39 = __this->___m_LocalFiles_10;
-				if (!L_39)
+				// foreach (var nextFile in m_NetFiles)
+				KeyValuePair_2_tF49673347BC4455B4E13AD20AD95DD75639372AC L_23;
+				L_23 = Enumerator_get_Current_m4ACEF49AE68581D2CE9BE7F1745723EA2401CB8B_inline((&V_4), Enumerator_get_Current_m4ACEF49AE68581D2CE9BE7F1745723EA2401CB8B_RuntimeMethod_var);
+				V_5 = L_23;
+				// if (m_LocalFiles == null || !m_LocalFiles.TryGetValue(nextFile.Key, out localFile)
+				//     || localFile.md5Code != nextFile.Value.md5Code)
+				Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* L_24 = __this->___m_LocalFiles_10;
+				if (!L_24)
 				{
-					goto IL_0135_1;
+					goto IL_00e9_1;
 				}
 			}
 			{
-				Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_40 = __this->___m_LocalFiles_10;
-				String_t* L_41;
-				L_41 = KeyValuePair_2_get_Key_m74ED8F124B9754CF75E4FC3F437BD669CC57E0EA_inline((&V_6), KeyValuePair_2_get_Key_m74ED8F124B9754CF75E4FC3F437BD669CC57E0EA_RuntimeMethod_var);
-				NullCheck(L_40);
-				bool L_42;
-				L_42 = Dictionary_2_TryGetValue_mA86D965CB5F74CE8675B7995C61945BEB6E594CB(L_40, L_41, (&V_4), Dictionary_2_TryGetValue_mA86D965CB5F74CE8675B7995C61945BEB6E594CB_RuntimeMethod_var);
-				if (!L_42)
+				Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* L_25 = __this->___m_LocalFiles_10;
+				String_t* L_26;
+				L_26 = KeyValuePair_2_get_Key_m70A38BF5083D72C13BB3DD841780FC0F5E9EBFB2_inline((&V_5), KeyValuePair_2_get_Key_m70A38BF5083D72C13BB3DD841780FC0F5E9EBFB2_RuntimeMethod_var);
+				NullCheck(L_25);
+				bool L_27;
+				L_27 = Dictionary_2_TryGetValue_m81A8885E30E5BFD48BAB5411809FBD2195D761E8(L_25, L_26, (&V_3), Dictionary_2_TryGetValue_m81A8885E30E5BFD48BAB5411809FBD2195D761E8_RuntimeMethod_var);
+				if (!L_27)
 				{
-					goto IL_0135_1;
+					goto IL_00e9_1;
 				}
 			}
 			{
-				String_t* L_43 = V_4;
-				AssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F* L_44;
-				L_44 = KeyValuePair_2_get_Value_m2B2FE5D059DF47EB275B90F4B24C9DB1C43384EF_inline((&V_6), KeyValuePair_2_get_Value_m2B2FE5D059DF47EB275B90F4B24C9DB1C43384EF_RuntimeMethod_var);
-				NullCheck(L_44);
-				String_t* L_45 = L_44->___md5Code_3;
-				bool L_46;
-				L_46 = String_op_Inequality_m8C940F3CFC42866709D7CA931B3D77B4BE94BCB6(L_43, L_45, NULL);
-				if (!L_46)
+				AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760* L_28 = V_3;
+				NullCheck(L_28);
+				String_t* L_29 = L_28->___md5Code_2;
+				AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760* L_30;
+				L_30 = KeyValuePair_2_get_Value_m187523401919D29F6826C11ECA71B3EF04C048AC_inline((&V_5), KeyValuePair_2_get_Value_m187523401919D29F6826C11ECA71B3EF04C048AC_RuntimeMethod_var);
+				NullCheck(L_30);
+				String_t* L_31 = L_30->___md5Code_2;
+				bool L_32;
+				L_32 = String_op_Inequality_m8C940F3CFC42866709D7CA931B3D77B4BE94BCB6(L_29, L_31, NULL);
+				if (!L_32)
 				{
-					goto IL_0139_1;
+					goto IL_00ed_1;
 				}
 			}
 
-IL_0135_1:
+IL_00e9_1:
 			{
 				// needUpdate = true;
-				V_1 = (bool)1;
+				V_2 = (bool)1;
 				// break;
-				goto IL_0152;
+				goto IL_0106;
 			}
 
-IL_0139_1:
+IL_00ed_1:
 			{
-				// foreach (var file in m_NetFiles)
-				bool L_47;
-				L_47 = Enumerator_MoveNext_m490C66215F745351442D1C804CAB969F59C1BFE4((&V_5), Enumerator_MoveNext_m490C66215F745351442D1C804CAB969F59C1BFE4_RuntimeMethod_var);
-				if (L_47)
+				// foreach (var nextFile in m_NetFiles)
+				bool L_33;
+				L_33 = Enumerator_MoveNext_m1ECBF8AA45E71A6B3D9348C8A76E327048F80622((&V_4), Enumerator_MoveNext_m1ECBF8AA45E71A6B3D9348C8A76E327048F80622_RuntimeMethod_var);
+				if (L_33)
 				{
-					goto IL_00f9_1;
+					goto IL_00a9_1;
 				}
 			}
 			{
-				goto IL_0152;
+				goto IL_0106;
 			}
 		}// end try (depth: 1)
 		catch(Il2CppExceptionWrapper& e)
@@ -3072,32 +2995,32 @@ IL_0139_1:
 		}
 	}
 
-IL_0152:
+IL_0106:
 	{
 		// if (needUpdate)
-		bool L_48 = V_1;
-		if (!L_48)
+		bool L_34 = V_2;
+		if (!L_34)
 		{
-			goto IL_0162;
+			goto IL_0116;
 		}
 	}
 	{
 		// subMachine.ChangeState(ProcedureLaunchProcess.UpdateVersion);
-		RuntimeObject* L_49 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___subMachine_1;
-		NullCheck(L_49);
-		InterfaceActionInvoker1< int32_t >::Invoke(0 /* System.Void GameBase.FSM.IFSM_Machine`1<ProcedureLaunchProcess>::ChangeState(TStateId) */, IFSM_Machine_1_tDAD178AE60E63943B1E9AE6C50382824D9715340_il2cpp_TypeInfo_var, L_49, 3);
+		RuntimeObject* L_35 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___subMachine_1;
+		NullCheck(L_35);
+		InterfaceActionInvoker1< int32_t >::Invoke(0 /* System.Void GameBase.FSM.IFSM_Machine`1<ProcedureLaunchProcess>::ChangeState(TStateId) */, IFSM_Machine_1_tDAD178AE60E63943B1E9AE6C50382824D9715340_il2cpp_TypeInfo_var, L_35, 3);
 		return;
 	}
 
-IL_0162:
+IL_0116:
 	{
 		// subMachine.ChangeState(ProcedureLaunchProcess.GameEntry);
-		RuntimeObject* L_50 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___subMachine_1;
-		NullCheck(L_50);
-		InterfaceActionInvoker1< int32_t >::Invoke(0 /* System.Void GameBase.FSM.IFSM_Machine`1<ProcedureLaunchProcess>::ChangeState(TStateId) */, IFSM_Machine_1_tDAD178AE60E63943B1E9AE6C50382824D9715340_il2cpp_TypeInfo_var, L_50, 4);
+		RuntimeObject* L_36 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___subMachine_1;
+		NullCheck(L_36);
+		InterfaceActionInvoker1< int32_t >::Invoke(0 /* System.Void GameBase.FSM.IFSM_Machine`1<ProcedureLaunchProcess>::ChangeState(TStateId) */, IFSM_Machine_1_tDAD178AE60E63943B1E9AE6C50382824D9715340_il2cpp_TypeInfo_var, L_36, 4);
 	}
 
-IL_016e:
+IL_0122:
 	{
 		// }
 		return;
@@ -3109,181 +3032,142 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureCheckLocalFile_OnEnter_m81B8541
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2__ctor_m768E076F1E804CE4959F4E71D3E6A9ADE2F55052_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2__ctor_mB14B78BB570EE640E6519BD18E1B4EEB5CBC0B30_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FSM_DataBase_SetData_TisDictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_m723DBF2BA1382B3FD696D97DBDA6D70FC825A529_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FSM_DataBase_SetData_TisDictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA_mDAE86AC809861A53181D6A2184EDF96D3B6F49C7_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameSetting_1_Get_m20A60CE23518EECAEDE3E68ABA5405111E49D6DC_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonHelper_FromJsonToDictionary_TisString_t_TisAssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760_m5216B6F3AE8D23A23E637A8672EAE8C800D2C4DC_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral09B11B6CC411D8B9FFB75EAAE9A35B2AF248CE40);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3AC0ADA0D9BF6C6397C71857226CBA06D9E6EB0E);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6D2D60FB81DB361B60B9512761B3ED9FF250BB96);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE280D065A824A791F8305234D3E093FC9A5A90C7);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE42BC8B34DED3954887AE578B6CF1390229CE4A6);
 		s_Il2CppMethodInitialized = true;
 	}
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* V_0 = NULL;
-	int32_t V_1 = 0;
-	String_t* V_2 = NULL;
+	String_t* V_0 = NULL;
+	String_t* V_1 = NULL;
 	{
-		// m_LocalFiles ??= new Dictionary<string, string>();
-		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_0 = __this->___m_LocalFiles_10;
-		if (L_0)
+		// m_GamePath = GamePathSetting.Get().CurrentPlatform();
+		GamePathSetting_t90635FDBB458D9776877AD87389060E85997AD77* L_0;
+		L_0 = GameSetting_1_Get_m20A60CE23518EECAEDE3E68ABA5405111E49D6DC(GameSetting_1_Get_m20A60CE23518EECAEDE3E68ABA5405111E49D6DC_RuntimeMethod_var);
+		NullCheck(L_0);
+		FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35 L_1;
+		L_1 = GamePathSetting_CurrentPlatform_mF6B080B988CA3FCB199D700A9294971DE46EEE06(L_0, NULL);
+		__this->___m_GamePath_14 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___m_GamePath_14))->___buildingFileName_1), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___m_GamePath_14))->___assetManifestFileName_2), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___m_GamePath_14))->___versionFileName_3), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&__this->___m_GamePath_14))->___downloadDataPath_4))->___m_AssetPath_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&__this->___m_GamePath_14))->___serverDataPath_5))->___m_AssetPath_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&__this->___m_GamePath_14))->___buildingPath_6))->___m_AssetPath_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&__this->___m_GamePath_14))->___hotUpdateDllPath_7))->___m_AssetPath_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___m_GamePath_14))->___hotUpdateDll_8), (void*)NULL);
+		#endif
+		// string buildPath = Path.Combine(m_GamePath.downloadDataPath.AssetPath, m_GamePath.buildingFileName);
+		FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35* L_2 = (FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35*)(&__this->___m_GamePath_14);
+		SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337* L_3 = (SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337*)(&L_2->___downloadDataPath_4);
+		String_t* L_4;
+		L_4 = SpecialPathStruct_get_AssetPath_m3472DD23FCF8E176133DD18235710CDC8E1B6D26(L_3, NULL);
+		FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35* L_5 = (FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35*)(&__this->___m_GamePath_14);
+		String_t* L_6 = L_5->___buildingFileName_1;
+		il2cpp_codegen_runtime_class_init_inline(Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
+		String_t* L_7;
+		L_7 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_4, L_6, NULL);
+		V_0 = L_7;
+		// if (!File.Exists(buildPath))
+		String_t* L_8 = V_0;
+		bool L_9;
+		L_9 = File_Exists_m95E329ABBE3EAD6750FE1989BBA6884457136D4A(L_8, NULL);
+		if (L_9)
 		{
-			goto IL_0013;
+			goto IL_005a;
 		}
 	}
 	{
-		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_1 = (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*)il2cpp_codegen_object_new(Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_il2cpp_TypeInfo_var);
-		NullCheck(L_1);
-		Dictionary_2__ctor_m768E076F1E804CE4959F4E71D3E6A9ADE2F55052(L_1, Dictionary_2__ctor_m768E076F1E804CE4959F4E71D3E6A9ADE2F55052_RuntimeMethod_var);
-		__this->___m_LocalFiles_10 = L_1;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_LocalFiles_10), (void*)L_1);
-	}
-
-IL_0013:
-	{
-		// m_NetFiles ??= new Dictionary<string, AssetFile>();
-		Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1* L_2 = __this->___m_NetFiles_11;
-		if (L_2)
-		{
-			goto IL_0026;
-		}
-	}
-	{
-		Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1* L_3 = (Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1*)il2cpp_codegen_object_new(Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1_il2cpp_TypeInfo_var);
-		NullCheck(L_3);
-		Dictionary_2__ctor_mB14B78BB570EE640E6519BD18E1B4EEB5CBC0B30(L_3, Dictionary_2__ctor_mB14B78BB570EE640E6519BD18E1B4EEB5CBC0B30_RuntimeMethod_var);
-		__this->___m_NetFiles_11 = L_3;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_NetFiles_11), (void*)L_3);
-	}
-
-IL_0026:
-	{
-		// if (!Directory.Exists(ProcedureLaunchPath.localDataPath))
-		il2cpp_codegen_runtime_class_init_inline(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var);
-		String_t* L_4 = ((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___localDataPath_0;
-		bool L_5;
-		L_5 = Directory_Exists_m3D125E9E88C291CF11113444F961A64DD83AE1C7(L_4, NULL);
-		if (L_5)
-		{
-			goto IL_003d;
-		}
-	}
-	{
-		// Directory.CreateDirectory(ProcedureLaunchPath.localDataPath);
-		il2cpp_codegen_runtime_class_init_inline(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var);
-		String_t* L_6 = ((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___localDataPath_0;
-		DirectoryInfo_tEAEEC018EB49B4A71907FFEAFE935FAA8F9C1FE2* L_7;
-		L_7 = Directory_CreateDirectory_m16EC5CE8561A997C6635E06DC24C77590F29D94F(L_6, NULL);
-	}
-
-IL_003d:
-	{
-		// string[] paths = Directory.GetFiles(ProcedureLaunchPath.localDataPath, "*", SearchOption.AllDirectories);
-		il2cpp_codegen_runtime_class_init_inline(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var);
-		String_t* L_8 = ((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___localDataPath_0;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_9;
-		L_9 = Directory_GetFiles_mC195B04DA9630D79180C0E85AFFFF9FEF0DB49B9(L_8, _stringLiteralE280D065A824A791F8305234D3E093FC9A5A90C7, 1, NULL);
-		// foreach (string path in paths)
-		V_0 = L_9;
-		V_1 = 0;
-		goto IL_009c;
-	}
-
-IL_0052:
-	{
-		// foreach (string path in paths)
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_10 = V_0;
-		int32_t L_11 = V_1;
-		NullCheck(L_10);
-		int32_t L_12 = L_11;
-		String_t* L_13 = (L_10)->GetAt(static_cast<il2cpp_array_size_t>(L_12));
-		V_2 = L_13;
-		// if (Path.GetExtension(path) == ".txt" /*|| Path.GetDirectoryName(path).Contains("002")*/)
-		String_t* L_14 = V_2;
+		// buildPath = Path.Combine(m_GamePath.buildingPath.AssetPath, m_GamePath.buildingFileName);
+		FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35* L_10 = (FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35*)(&__this->___m_GamePath_14);
+		SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337* L_11 = (SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337*)(&L_10->___buildingPath_6);
+		String_t* L_12;
+		L_12 = SpecialPathStruct_get_AssetPath_m3472DD23FCF8E176133DD18235710CDC8E1B6D26(L_11, NULL);
+		FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35* L_13 = (FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35*)(&__this->___m_GamePath_14);
+		String_t* L_14 = L_13->___buildingFileName_1;
 		il2cpp_codegen_runtime_class_init_inline(Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
 		String_t* L_15;
-		L_15 = Path_GetExtension_m6FEAA9E14451BFD210B9D1AEC2430C813F570FE5(L_14, NULL);
-		bool L_16;
-		L_16 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_15, _stringLiteral6D2D60FB81DB361B60B9512761B3ED9FF250BB96, NULL);
-		if (L_16)
+		L_15 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_12, L_14, NULL);
+		V_0 = L_15;
+	}
+
+IL_005a:
+	{
+		// if (File.Exists(buildPath))
+		String_t* L_16 = V_0;
+		bool L_17;
+		L_17 = File_Exists_m95E329ABBE3EAD6750FE1989BBA6884457136D4A(L_16, NULL);
+		if (!L_17)
 		{
-			goto IL_0098;
+			goto IL_007e;
 		}
 	}
 	{
-		// m_LocalFiles.Add(path.Substring(ProcedureLaunchPath.localDataPath.Length).Replace("\\", "/"), Utility.GetMD5(path));
-		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_17 = __this->___m_LocalFiles_10;
-		String_t* L_18 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var);
-		String_t* L_19 = ((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___localDataPath_0;
-		NullCheck(L_19);
-		int32_t L_20;
-		L_20 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_19, NULL);
-		NullCheck(L_18);
-		String_t* L_21;
-		L_21 = String_Substring_m6BA4A3FA3800FE92662D0847CC8E1EEF940DF472(L_18, L_20, NULL);
-		NullCheck(L_21);
-		String_t* L_22;
-		L_22 = String_Replace_mABDB7003A1D0AEDCAE9FF85E3DFFFBA752D2A166(L_21, _stringLiteral09B11B6CC411D8B9FFB75EAAE9A35B2AF248CE40, _stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1, NULL);
-		String_t* L_23 = V_2;
-		String_t* L_24;
-		L_24 = Utility_GetMD5_m8936EBFED59AEF24482A3857240A5DD95C8D64B8(L_23, NULL);
-		NullCheck(L_17);
-		Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13(L_17, L_22, L_24, Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13_RuntimeMethod_var);
-	}
-
-IL_0098:
-	{
-		int32_t L_25 = V_1;
-		V_1 = ((int32_t)il2cpp_codegen_add(L_25, 1));
-	}
-
-IL_009c:
-	{
-		// foreach (string path in paths)
-		int32_t L_26 = V_1;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_27 = V_0;
-		NullCheck(L_27);
-		if ((((int32_t)L_26) < ((int32_t)((int32_t)(((RuntimeArray*)L_27)->max_length)))))
+		// string allData = File.ReadAllText(buildPath);
+		String_t* L_18 = V_0;
+		String_t* L_19;
+		L_19 = File_ReadAllText_mA4A939F853D573379F7129AFDC469B91E9747BAA(L_18, NULL);
+		V_1 = L_19;
+		// if (!string.IsNullOrEmpty(allData))
+		String_t* L_20 = V_1;
+		bool L_21;
+		L_21 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_20, NULL);
+		if (L_21)
 		{
-			goto IL_0052;
+			goto IL_007e;
 		}
 	}
+	{
+		// m_LocalFiles = JsonHelper.FromJsonToDictionary<string, AssetBundleInfo>(allData, true);
+		String_t* L_22 = V_1;
+		Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* L_23;
+		L_23 = JsonHelper_FromJsonToDictionary_TisString_t_TisAssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760_m5216B6F3AE8D23A23E637A8672EAE8C800D2C4DC(L_22, (bool)1, JsonHelper_FromJsonToDictionary_TisString_t_TisAssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760_m5216B6F3AE8D23A23E637A8672EAE8C800D2C4DC_RuntimeMethod_var);
+		__this->___m_LocalFiles_10 = L_23;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_LocalFiles_10), (void*)L_23);
+	}
+
+IL_007e:
 	{
 		// dataBase.SetData(ProcedureLauncher.procedureMarkHead + localFilesName, m_LocalFiles);
-		FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* L_28 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___dataBase_3;
-		il2cpp_codegen_runtime_class_init_inline(ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var);
-		String_t* L_29 = ((ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var))->___procedureMarkHead_4;
-		il2cpp_codegen_runtime_class_init_inline(ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_il2cpp_TypeInfo_var);
-		String_t* L_30 = ((ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_il2cpp_TypeInfo_var))->___localFilesName_8;
-		String_t* L_31;
-		L_31 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_29, L_30, NULL);
-		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_32 = __this->___m_LocalFiles_10;
-		NullCheck(L_28);
-		FSM_DataBase_SetData_TisDictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_m723DBF2BA1382B3FD696D97DBDA6D70FC825A529(L_28, L_31, L_32, FSM_DataBase_SetData_TisDictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_m723DBF2BA1382B3FD696D97DBDA6D70FC825A529_RuntimeMethod_var);
-		// m_WebRequest = UnityWebRequest.Get(Path.Combine(ProcedureLaunchPath.s_NetServerPath, "file.txt"));
-		il2cpp_codegen_runtime_class_init_inline(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var);
-		String_t* L_33 = ((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___s_NetServerPath_1;
+		FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* L_24 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___dataBase_3;
+		Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* L_25 = __this->___m_LocalFiles_10;
+		NullCheck(L_24);
+		FSM_DataBase_SetData_TisDictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA_mDAE86AC809861A53181D6A2184EDF96D3B6F49C7(L_24, _stringLiteralE42BC8B34DED3954887AE578B6CF1390229CE4A6, L_25, FSM_DataBase_SetData_TisDictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA_mDAE86AC809861A53181D6A2184EDF96D3B6F49C7_RuntimeMethod_var);
+		// m_WebRequest = UnityWebRequest.Get(Path.Combine(m_GamePath.serverDataPath.AssetPath, m_GamePath.buildingFileName));
+		FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35* L_26 = (FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35*)(&__this->___m_GamePath_14);
+		SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337* L_27 = (SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337*)(&L_26->___serverDataPath_5);
+		String_t* L_28;
+		L_28 = SpecialPathStruct_get_AssetPath_m3472DD23FCF8E176133DD18235710CDC8E1B6D26(L_27, NULL);
+		FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35* L_29 = (FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35*)(&__this->___m_GamePath_14);
+		String_t* L_30 = L_29->___buildingFileName_1;
 		il2cpp_codegen_runtime_class_init_inline(Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
-		String_t* L_34;
-		L_34 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_33, _stringLiteral3AC0ADA0D9BF6C6397C71857226CBA06D9E6EB0E, NULL);
-		UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_35;
-		L_35 = UnityWebRequest_Get_m1A332EE069BB5052368307F254A5A7627BB5FD86(L_34, NULL);
-		__this->___m_WebRequest_12 = L_35;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_WebRequest_12), (void*)L_35);
+		String_t* L_31;
+		L_31 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_28, L_30, NULL);
+		UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_32;
+		L_32 = UnityWebRequest_Get_m1A332EE069BB5052368307F254A5A7627BB5FD86(L_31, NULL);
+		__this->___m_WebRequest_12 = L_32;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_WebRequest_12), (void*)L_32);
 		// m_WebRequestAsync = m_WebRequest.SendWebRequest();
-		UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_36 = __this->___m_WebRequest_12;
-		NullCheck(L_36);
-		UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_37;
-		L_37 = UnityWebRequest_SendWebRequest_mA3CD13983BAA5074A0640EDD661B1E46E6DB6C13(L_36, NULL);
-		__this->___m_WebRequestAsync_13 = L_37;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_WebRequestAsync_13), (void*)L_37);
+		UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_33 = __this->___m_WebRequest_12;
+		NullCheck(L_33);
+		UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_34;
+		L_34 = UnityWebRequest_SendWebRequest_mA3CD13983BAA5074A0640EDD661B1E46E6DB6C13(L_33, NULL);
+		__this->___m_WebRequestAsync_13 = L_34;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_WebRequestAsync_13), (void*)L_34);
 		// }
 		return;
 	}
@@ -3332,27 +3216,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureCheckLocalFile__ctor_mCBC3083B0
 		return;
 	}
 }
-// System.Void ProcedureCheckLocalFile::.cctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureCheckLocalFile__cctor_m8E99C16E310D84489295564227823890CC09295D (const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral111B53623550025C4B973B78391734E3A2225B69);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB76D5C58815C411866C77C4A4AB50D7DFC4B7E5F);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// public static string localFilesName = "LocalFiles";
-		((ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_il2cpp_TypeInfo_var))->___localFilesName_8 = _stringLiteral111B53623550025C4B973B78391734E3A2225B69;
-		Il2CppCodeGenWriteBarrier((void**)(&((ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_il2cpp_TypeInfo_var))->___localFilesName_8), (void*)_stringLiteral111B53623550025C4B973B78391734E3A2225B69);
-		// public static string netFilesName = "NetFiles";
-		((ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_il2cpp_TypeInfo_var))->___netFilesName_9 = _stringLiteralB76D5C58815C411866C77C4A4AB50D7DFC4B7E5F;
-		Il2CppCodeGenWriteBarrier((void**)(&((ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_il2cpp_TypeInfo_var))->___netFilesName_9), (void*)_stringLiteralB76D5C58815C411866C77C4A4AB50D7DFC4B7E5F);
-		return;
-	}
-}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -3369,8 +3232,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureCheckVersion_OnAction_m493416A9
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FSM_DataBase_SetData_TisString_t_m0AFEF6EAC45D0F6876CCE8C2A1294A848F1F29C2_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IFSM_Machine_1_tDAD178AE60E63943B1E9AE6C50382824D9715340_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralEB3162236B0885447A08938F9E9EA8B70E3CE844);
 		s_Il2CppMethodInitialized = true;
 	}
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* V_0 = NULL;
@@ -3396,7 +3258,7 @@ IL_0009:
 		L_2 = AsyncOperation_get_isDone_m68A0682777E2132FC033182E9F50303566AA354D(L_1, NULL);
 		if (!L_2)
 		{
-			goto IL_0089;
+			goto IL_007f;
 		}
 	}
 	{
@@ -3449,22 +3311,16 @@ IL_0036:
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_NetVersion_11), (void*)L_14);
 		// dataBase.SetData(ProcedureLauncher.procedureMarkHead + netVersionName, m_NetVersion);
 		FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* L_15 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___dataBase_3;
-		il2cpp_codegen_runtime_class_init_inline(ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var);
-		String_t* L_16 = ((ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var))->___procedureMarkHead_4;
-		il2cpp_codegen_runtime_class_init_inline(ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_il2cpp_TypeInfo_var);
-		String_t* L_17 = ((ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_il2cpp_TypeInfo_var))->___netVersionName_9;
-		String_t* L_18;
-		L_18 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_16, L_17, NULL);
-		String_t* L_19 = __this->___m_NetVersion_11;
+		String_t* L_16 = __this->___m_NetVersion_11;
 		NullCheck(L_15);
-		FSM_DataBase_SetData_TisString_t_m0AFEF6EAC45D0F6876CCE8C2A1294A848F1F29C2(L_15, L_18, L_19, FSM_DataBase_SetData_TisString_t_m0AFEF6EAC45D0F6876CCE8C2A1294A848F1F29C2_RuntimeMethod_var);
+		FSM_DataBase_SetData_TisString_t_m0AFEF6EAC45D0F6876CCE8C2A1294A848F1F29C2(L_15, _stringLiteralEB3162236B0885447A08938F9E9EA8B70E3CE844, L_16, FSM_DataBase_SetData_TisString_t_m0AFEF6EAC45D0F6876CCE8C2A1294A848F1F29C2_RuntimeMethod_var);
 		// subMachine.ChangeState(ProcedureLaunchProcess.CheckLocalFile);
-		RuntimeObject* L_20 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___subMachine_1;
-		NullCheck(L_20);
-		InterfaceActionInvoker1< int32_t >::Invoke(0 /* System.Void GameBase.FSM.IFSM_Machine`1<ProcedureLaunchProcess>::ChangeState(TStateId) */, IFSM_Machine_1_tDAD178AE60E63943B1E9AE6C50382824D9715340_il2cpp_TypeInfo_var, L_20, 2);
+		RuntimeObject* L_17 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___subMachine_1;
+		NullCheck(L_17);
+		InterfaceActionInvoker1< int32_t >::Invoke(0 /* System.Void GameBase.FSM.IFSM_Machine`1<ProcedureLaunchProcess>::ChangeState(TStateId) */, IFSM_Machine_1_tDAD178AE60E63943B1E9AE6C50382824D9715340_il2cpp_TypeInfo_var, L_17, 2);
 	}
 
-IL_0089:
+IL_007f:
 	{
 		// }
 		return;
@@ -3478,10 +3334,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureCheckVersion_OnEnter_mACA7E95F8
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FSM_DataBase_SetData_TisString_t_m0AFEF6EAC45D0F6876CCE8C2A1294A848F1F29C2_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0335C65EEF6379144CEBFCCFBA3673189514186C);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameSetting_1_Get_m20A60CE23518EECAEDE3E68ABA5405111E49D6DC_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral39ABCACBD25286BD4E86E33A02DA30FBEA49B182);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral58F2819662FABE76C91AAA1741BA17EBED7727FD);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
 		s_Il2CppMethodInitialized = true;
@@ -3489,80 +3343,111 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureCheckVersion_OnEnter_mACA7E95F8
 	String_t* V_0 = NULL;
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* V_1 = NULL;
 	{
+		// m_GamePath = GamePathSetting.Get().CurrentPlatform();
+		GamePathSetting_t90635FDBB458D9776877AD87389060E85997AD77* L_0;
+		L_0 = GameSetting_1_Get_m20A60CE23518EECAEDE3E68ABA5405111E49D6DC(GameSetting_1_Get_m20A60CE23518EECAEDE3E68ABA5405111E49D6DC_RuntimeMethod_var);
+		NullCheck(L_0);
+		FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35 L_1;
+		L_1 = GamePathSetting_CurrentPlatform_mF6B080B988CA3FCB199D700A9294971DE46EEE06(L_0, NULL);
+		__this->___m_GamePath_14 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___m_GamePath_14))->___buildingFileName_1), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___m_GamePath_14))->___assetManifestFileName_2), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___m_GamePath_14))->___versionFileName_3), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&__this->___m_GamePath_14))->___downloadDataPath_4))->___m_AssetPath_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&__this->___m_GamePath_14))->___serverDataPath_5))->___m_AssetPath_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&__this->___m_GamePath_14))->___buildingPath_6))->___m_AssetPath_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&__this->___m_GamePath_14))->___hotUpdateDllPath_7))->___m_AssetPath_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___m_GamePath_14))->___hotUpdateDll_8), (void*)NULL);
+		#endif
 		// m_LocalVersion = "";
 		__this->___m_LocalVersion_10 = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_LocalVersion_10), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		// string filePath = ProcedureLaunchPath.localDataPath + "version.txt";
-		il2cpp_codegen_runtime_class_init_inline(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var);
-		String_t* L_0 = ((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___localDataPath_0;
-		String_t* L_1;
-		L_1 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_0, _stringLiteral0335C65EEF6379144CEBFCCFBA3673189514186C, NULL);
-		V_0 = L_1;
+		// string filePath = m_GamePath.downloadDataPath.AssetPath + m_GamePath.versionFileName;
+		FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35* L_2 = (FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35*)(&__this->___m_GamePath_14);
+		SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337* L_3 = (SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337*)(&L_2->___downloadDataPath_4);
+		String_t* L_4;
+		L_4 = SpecialPathStruct_get_AssetPath_m3472DD23FCF8E176133DD18235710CDC8E1B6D26(L_3, NULL);
+		FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35* L_5 = (FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35*)(&__this->___m_GamePath_14);
+		String_t* L_6 = L_5->___versionFileName_3;
+		String_t* L_7;
+		L_7 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_4, L_6, NULL);
+		V_0 = L_7;
 		// if (File.Exists(filePath))
-		String_t* L_2 = V_0;
-		bool L_3;
-		L_3 = File_Exists_m95E329ABBE3EAD6750FE1989BBA6884457136D4A(L_2, NULL);
-		if (!L_3)
+		String_t* L_8 = V_0;
+		bool L_9;
+		L_9 = File_Exists_m95E329ABBE3EAD6750FE1989BBA6884457136D4A(L_8, NULL);
+		if (!L_9)
 		{
-			goto IL_003d;
+			goto IL_005e;
 		}
 	}
 	{
 		// string str = File.ReadAllText(filePath);
-		String_t* L_4 = V_0;
-		String_t* L_5;
-		L_5 = File_ReadAllText_mA4A939F853D573379F7129AFDC469B91E9747BAA(L_4, NULL);
+		String_t* L_10 = V_0;
+		String_t* L_11;
+		L_11 = File_ReadAllText_mA4A939F853D573379F7129AFDC469B91E9747BAA(L_10, NULL);
 		// string[] data = str.Split('|');
-		NullCheck(L_5);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6;
-		L_6 = String_Split_m9530B73D02054692283BF35C3A27C8F2230946F4(L_5, ((int32_t)124), 0, NULL);
-		V_1 = L_6;
+		NullCheck(L_11);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_12;
+		L_12 = String_Split_m9530B73D02054692283BF35C3A27C8F2230946F4(L_11, ((int32_t)124), 0, NULL);
+		V_1 = L_12;
 		// m_LocalVersion = data[1];
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_7 = V_1;
-		NullCheck(L_7);
-		int32_t L_8 = 1;
-		String_t* L_9 = (L_7)->GetAt(static_cast<il2cpp_array_size_t>(L_8));
-		__this->___m_LocalVersion_10 = L_9;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_LocalVersion_10), (void*)L_9);
-		goto IL_0047;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_13 = V_1;
+		NullCheck(L_13);
+		int32_t L_14 = 1;
+		String_t* L_15 = (L_13)->GetAt(static_cast<il2cpp_array_size_t>(L_14));
+		__this->___m_LocalVersion_10 = L_15;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_LocalVersion_10), (void*)L_15);
+		goto IL_0068;
 	}
 
-IL_003d:
+IL_005e:
 	{
 		// Debug.Log("?????");
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral58F2819662FABE76C91AAA1741BA17EBED7727FD, NULL);
 	}
 
-IL_0047:
+IL_0068:
 	{
 		// dataBase.SetData(ProcedureLauncher.procedureMarkHead + localVersionName, m_LocalVersion);
-		FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* L_10 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___dataBase_3;
-		il2cpp_codegen_runtime_class_init_inline(ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var);
-		String_t* L_11 = ((ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var))->___procedureMarkHead_4;
-		il2cpp_codegen_runtime_class_init_inline(ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_il2cpp_TypeInfo_var);
-		String_t* L_12 = ((ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_il2cpp_TypeInfo_var))->___localVersionName_8;
-		String_t* L_13;
-		L_13 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_11, L_12, NULL);
-		String_t* L_14 = __this->___m_LocalVersion_10;
-		NullCheck(L_10);
-		FSM_DataBase_SetData_TisString_t_m0AFEF6EAC45D0F6876CCE8C2A1294A848F1F29C2(L_10, L_13, L_14, FSM_DataBase_SetData_TisString_t_m0AFEF6EAC45D0F6876CCE8C2A1294A848F1F29C2_RuntimeMethod_var);
-		// m_WebRequest = UnityWebRequest.Get(ProcedureLaunchPath.s_NetServerPath + "version.txt");
-		il2cpp_codegen_runtime_class_init_inline(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var);
-		String_t* L_15 = ((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___s_NetServerPath_1;
-		String_t* L_16;
-		L_16 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_15, _stringLiteral0335C65EEF6379144CEBFCCFBA3673189514186C, NULL);
-		UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_17;
-		L_17 = UnityWebRequest_Get_m1A332EE069BB5052368307F254A5A7627BB5FD86(L_16, NULL);
-		__this->___m_WebRequest_12 = L_17;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_WebRequest_12), (void*)L_17);
+		FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* L_16 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___dataBase_3;
+		String_t* L_17 = __this->___m_LocalVersion_10;
+		NullCheck(L_16);
+		FSM_DataBase_SetData_TisString_t_m0AFEF6EAC45D0F6876CCE8C2A1294A848F1F29C2(L_16, _stringLiteral39ABCACBD25286BD4E86E33A02DA30FBEA49B182, L_17, FSM_DataBase_SetData_TisString_t_m0AFEF6EAC45D0F6876CCE8C2A1294A848F1F29C2_RuntimeMethod_var);
+		// m_WebRequest = UnityWebRequest.Get(m_GamePath.serverDataPath.AssetPath + m_GamePath.versionFileName);
+		FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35* L_18 = (FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35*)(&__this->___m_GamePath_14);
+		SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337* L_19 = (SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337*)(&L_18->___serverDataPath_5);
+		String_t* L_20;
+		L_20 = SpecialPathStruct_get_AssetPath_m3472DD23FCF8E176133DD18235710CDC8E1B6D26(L_19, NULL);
+		FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35* L_21 = (FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35*)(&__this->___m_GamePath_14);
+		String_t* L_22 = L_21->___versionFileName_3;
+		String_t* L_23;
+		L_23 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_20, L_22, NULL);
+		UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_24;
+		L_24 = UnityWebRequest_Get_m1A332EE069BB5052368307F254A5A7627BB5FD86(L_23, NULL);
+		__this->___m_WebRequest_12 = L_24;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_WebRequest_12), (void*)L_24);
 		// m_WebRequestAsync = m_WebRequest.SendWebRequest();
-		UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_18 = __this->___m_WebRequest_12;
-		NullCheck(L_18);
-		UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_19;
-		L_19 = UnityWebRequest_SendWebRequest_mA3CD13983BAA5074A0640EDD661B1E46E6DB6C13(L_18, NULL);
-		__this->___m_WebRequestAsync_13 = L_19;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_WebRequestAsync_13), (void*)L_19);
+		UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_25 = __this->___m_WebRequest_12;
+		NullCheck(L_25);
+		UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_26;
+		L_26 = UnityWebRequest_SendWebRequest_mA3CD13983BAA5074A0640EDD661B1E46E6DB6C13(L_25, NULL);
+		__this->___m_WebRequestAsync_13 = L_26;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_WebRequestAsync_13), (void*)L_26);
 		// }
 		return;
 	}
@@ -3611,27 +3496,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureCheckVersion__ctor_m5707063E066
 		return;
 	}
 }
-// System.Void ProcedureCheckVersion::.cctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureCheckVersion__cctor_mD2F440EBA398A4957D2501AB96D844D6CCC66304 (const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral76F7C7443CB3517391B0A64BEF466531CBC73B1D);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF7CA5FAB589D3DC3133B2E7E319FFFBE10480422);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// public static string localVersionName = "LocalVersion";
-		((ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_il2cpp_TypeInfo_var))->___localVersionName_8 = _stringLiteral76F7C7443CB3517391B0A64BEF466531CBC73B1D;
-		Il2CppCodeGenWriteBarrier((void**)(&((ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_il2cpp_TypeInfo_var))->___localVersionName_8), (void*)_stringLiteral76F7C7443CB3517391B0A64BEF466531CBC73B1D);
-		// public static string netVersionName = "NetVersion";
-		((ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_il2cpp_TypeInfo_var))->___netVersionName_9 = _stringLiteralF7CA5FAB589D3DC3133B2E7E319FFFBE10480422;
-		Il2CppCodeGenWriteBarrier((void**)(&((ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_il2cpp_TypeInfo_var))->___netVersionName_9), (void*)_stringLiteralF7CA5FAB589D3DC3133B2E7E319FFFBE10480422);
-		return;
-	}
-}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -3646,6 +3510,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureGameEntry_OnEnter_mE0CCD7021823
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameSetting_1_Get_m20A60CE23518EECAEDE3E68ABA5405111E49D6DC_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral32A8C30FD78739DA19BDB219CBEB9D0F435A681E);
@@ -3660,90 +3525,119 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureGameEntry_OnEnter_mE0CCD7021823
 	String_t* V_3 = NULL;
 	Assembly_t* V_4 = NULL;
 	{
+		// m_GamePath = GamePathSetting.Get().CurrentPlatform();
+		GamePathSetting_t90635FDBB458D9776877AD87389060E85997AD77* L_0;
+		L_0 = GameSetting_1_Get_m20A60CE23518EECAEDE3E68ABA5405111E49D6DC(GameSetting_1_Get_m20A60CE23518EECAEDE3E68ABA5405111E49D6DC_RuntimeMethod_var);
+		NullCheck(L_0);
+		FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35 L_1;
+		L_1 = GamePathSetting_CurrentPlatform_mF6B080B988CA3FCB199D700A9294971DE46EEE06(L_0, NULL);
+		__this->___m_GamePath_8 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___m_GamePath_8))->___buildingFileName_1), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___m_GamePath_8))->___assetManifestFileName_2), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___m_GamePath_8))->___versionFileName_3), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&__this->___m_GamePath_8))->___downloadDataPath_4))->___m_AssetPath_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&__this->___m_GamePath_8))->___serverDataPath_5))->___m_AssetPath_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&__this->___m_GamePath_8))->___buildingPath_6))->___m_AssetPath_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&__this->___m_GamePath_8))->___hotUpdateDllPath_7))->___m_AssetPath_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___m_GamePath_8))->___hotUpdateDll_8), (void*)NULL);
+		#endif
 		// LoadMetadataForAOTAssemblies();
 		ProcedureGameEntry_LoadMetadataForAOTAssemblies_mCC68BC801F4CA6D09B4105011632AB75FFB35AAC(__this, NULL);
 		// Assembly coreAssembly = null;
 		V_0 = (Assembly_t*)NULL;
-		// foreach (var dll in ProcedureLaunchPath.s_HotUpdateDllName)
-		il2cpp_codegen_runtime_class_init_inline(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_0 = ((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___s_HotUpdateDllName_3;
-		V_1 = L_0;
+		// foreach (var dll in m_GamePath.hotUpdateDll)
+		FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35* L_2 = (FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35*)(&__this->___m_GamePath_8);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_3 = L_2->___hotUpdateDll_8;
+		V_1 = L_3;
 		V_2 = 0;
-		goto IL_0047;
+		goto IL_005d;
 	}
 
-IL_0012:
+IL_0028:
 	{
-		// foreach (var dll in ProcedureLaunchPath.s_HotUpdateDllName)
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_1 = V_1;
-		int32_t L_2 = V_2;
-		NullCheck(L_1);
-		int32_t L_3 = L_2;
-		String_t* L_4 = (L_1)->GetAt(static_cast<il2cpp_array_size_t>(L_3));
-		V_3 = L_4;
+		// foreach (var dll in m_GamePath.hotUpdateDll)
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_4 = V_1;
+		int32_t L_5 = V_2;
+		NullCheck(L_4);
+		int32_t L_6 = L_5;
+		String_t* L_7 = (L_4)->GetAt(static_cast<il2cpp_array_size_t>(L_6));
+		V_3 = L_7;
 		// var assembly = Assembly.Load(File.ReadAllBytes($"{ProcedureLaunchPath.s_HotUpdateDll}/{dll}.bytes"));
 		il2cpp_codegen_runtime_class_init_inline(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var);
-		String_t* L_5 = ((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___s_HotUpdateDll_2;
-		String_t* L_6 = V_3;
-		String_t* L_7;
-		L_7 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(L_5, _stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1, L_6, _stringLiteralEC4C5477D8BA260A27C36AFD7E8C1C289169E9CF, NULL);
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_8;
-		L_8 = File_ReadAllBytes_m704CBBA3F130C94F5A3E0BE2A93D9E9D79DC3E24(L_7, NULL);
-		Assembly_t* L_9;
-		L_9 = Assembly_Load_mD9E9CED2EFF8BBE97ACDE83FB8ED492D1E42E975(L_8, NULL);
-		V_4 = L_9;
+		String_t* L_8 = ((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___s_HotUpdateDll_3;
+		String_t* L_9 = V_3;
+		String_t* L_10;
+		L_10 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(L_8, _stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1, L_9, _stringLiteralEC4C5477D8BA260A27C36AFD7E8C1C289169E9CF, NULL);
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_11;
+		L_11 = File_ReadAllBytes_m704CBBA3F130C94F5A3E0BE2A93D9E9D79DC3E24(L_10, NULL);
+		Assembly_t* L_12;
+		L_12 = Assembly_Load_mD9E9CED2EFF8BBE97ACDE83FB8ED492D1E42E975(L_11, NULL);
+		V_4 = L_12;
 		// if (coreAssembly == null)
-		Assembly_t* L_10 = V_0;
-		bool L_11;
-		L_11 = Assembly_op_Equality_m1E2666F9D0537F02AB32F14B4458C98C4851CEAB(L_10, (Assembly_t*)NULL, NULL);
-		if (!L_11)
+		Assembly_t* L_13 = V_0;
+		bool L_14;
+		L_14 = Assembly_op_Equality_m1E2666F9D0537F02AB32F14B4458C98C4851CEAB(L_13, (Assembly_t*)NULL, NULL);
+		if (!L_14)
 		{
-			goto IL_0043;
+			goto IL_0059;
 		}
 	}
 	{
 		// coreAssembly = assembly;
-		Assembly_t* L_12 = V_4;
-		V_0 = L_12;
+		Assembly_t* L_15 = V_4;
+		V_0 = L_15;
 	}
 
-IL_0043:
+IL_0059:
 	{
-		int32_t L_13 = V_2;
-		V_2 = ((int32_t)il2cpp_codegen_add(L_13, 1));
+		int32_t L_16 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_16, 1));
 	}
 
-IL_0047:
+IL_005d:
 	{
-		// foreach (var dll in ProcedureLaunchPath.s_HotUpdateDllName)
-		int32_t L_14 = V_2;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_15 = V_1;
-		NullCheck(L_15);
-		if ((((int32_t)L_14) < ((int32_t)((int32_t)(((RuntimeArray*)L_15)->max_length)))))
+		// foreach (var dll in m_GamePath.hotUpdateDll)
+		int32_t L_17 = V_2;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_18 = V_1;
+		NullCheck(L_18);
+		if ((((int32_t)L_17) < ((int32_t)((int32_t)(((RuntimeArray*)L_18)->max_length)))))
 		{
-			goto IL_0012;
+			goto IL_0028;
 		}
 	}
 	{
 		// Type type = coreAssembly.GetType("GameCore.GameEntry");
-		Assembly_t* L_16 = V_0;
-		NullCheck(L_16);
-		Type_t* L_17;
-		L_17 = VirtualFuncInvoker1< Type_t*, String_t* >::Invoke(16 /* System.Type System.Reflection.Assembly::GetType(System.String) */, L_16, _stringLiteral32A8C30FD78739DA19BDB219CBEB9D0F435A681E);
+		Assembly_t* L_19 = V_0;
+		NullCheck(L_19);
+		Type_t* L_20;
+		L_20 = VirtualFuncInvoker1< Type_t*, String_t* >::Invoke(16 /* System.Type System.Reflection.Assembly::GetType(System.String) */, L_19, _stringLiteral32A8C30FD78739DA19BDB219CBEB9D0F435A681E);
 		// type.GetMethod("Instantiate").Invoke(null, null);
-		NullCheck(L_17);
-		MethodInfo_t* L_18;
-		L_18 = Type_GetMethod_m66AD062187F19497DBCA900823B0C268322DC231(L_17, _stringLiteralD517C7CD0B15AC7D7FED8521FC3CE0FC3C729432, NULL);
-		NullCheck(L_18);
-		RuntimeObject* L_19;
-		L_19 = MethodBase_Invoke_mEEF3218648F111A8C338001A7804091A0747C826(L_18, NULL, (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)NULL, NULL);
-		// UnityEngine.Object.Destroy(dataBase.gameObject);
-		FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* L_20 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___dataBase_3;
 		NullCheck(L_20);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_21;
-		L_21 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_20, NULL);
+		MethodInfo_t* L_21;
+		L_21 = Type_GetMethod_m66AD062187F19497DBCA900823B0C268322DC231(L_20, _stringLiteralD517C7CD0B15AC7D7FED8521FC3CE0FC3C729432, NULL);
+		NullCheck(L_21);
+		RuntimeObject* L_22;
+		L_22 = MethodBase_Invoke_mEEF3218648F111A8C338001A7804091A0747C826(L_21, NULL, (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)NULL, NULL);
+		// UnityEngine.Object.Destroy(dataBase.gameObject);
+		FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* L_23 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___dataBase_3;
+		NullCheck(L_23);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_24;
+		L_24 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_23, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_21, NULL);
+		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_24, NULL);
 		// }
 		return;
 	}
@@ -3764,13 +3658,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureGameEntry_LoadMetadataForAOTAss
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&LoadImageErrorCode_tC778A2553ADB45B8C61EFE26C20837C23894FEB3_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0B34DFC38793BF0AF6DEA9A94F7CCB4150E999A6);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1BA46D2FDED261D9EBFFC277917E32CC44A3F821);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral946BD80B231F5776B5307B385889C9ABB57D3D53);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9980B772556B9D308DEA397D279C8A13D402ABB6);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA3F029047BA90CC134023587DF7DCF444B38D009);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralEC4C5477D8BA260A27C36AFD7E8C1C289169E9CF);
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
@@ -3810,7 +3702,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureGameEntry_LoadMetadataForAOTAss
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_008c:
+FINALLY_008d:
 			{// begin finally (depth: 1)
 				Enumerator_Dispose_m592BCCE7B7933454DED2130C810F059F8D85B1D7((&V_1), Enumerator_Dispose_m592BCCE7B7933454DED2130C810F059F8D85B1D7_RuntimeMethod_var);
 				return;
@@ -3819,7 +3711,7 @@ FINALLY_008c:
 		try
 		{// begin try (depth: 1)
 			{
-				goto IL_0081_1;
+				goto IL_0082_1;
 			}
 
 IL_0030_1:
@@ -3828,58 +3720,58 @@ IL_0030_1:
 				String_t* L_5;
 				L_5 = Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_inline((&V_1), Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_RuntimeMethod_var);
 				V_2 = L_5;
-				// string path = $"{ProcedureLaunchPath.s_HotUpdateDll}/{aotDllName}.bytes";
-				il2cpp_codegen_runtime_class_init_inline(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var);
-				String_t* L_6 = ((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___s_HotUpdateDll_2;
-				String_t* L_7 = V_2;
-				String_t* L_8;
-				L_8 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(L_6, _stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1, L_7, _stringLiteralEC4C5477D8BA260A27C36AFD7E8C1C289169E9CF, NULL);
-				V_3 = L_8;
+				// string path = $"{m_GamePath.hotUpdateDll}/{aotDllName}.bytes";
+				FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35* L_6 = (FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35*)(&__this->___m_GamePath_8);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_7 = L_6->___hotUpdateDll_8;
+				String_t* L_8 = V_2;
+				String_t* L_9;
+				L_9 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral9980B772556B9D308DEA397D279C8A13D402ABB6, (RuntimeObject*)L_7, L_8, NULL);
+				V_3 = L_9;
 				// if (!File.Exists(path))
-				String_t* L_9 = V_3;
-				bool L_10;
-				L_10 = File_Exists_m95E329ABBE3EAD6750FE1989BBA6884457136D4A(L_9, NULL);
-				if (!L_10)
+				String_t* L_10 = V_3;
+				bool L_11;
+				L_11 = File_Exists_m95E329ABBE3EAD6750FE1989BBA6884457136D4A(L_10, NULL);
+				if (!L_11)
 				{
-					goto IL_0081_1;
+					goto IL_0082_1;
 				}
 			}
 			{
 				// byte[] dllBytes = File.ReadAllBytes(path);
-				String_t* L_11 = V_3;
-				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_12;
-				L_12 = File_ReadAllBytes_m704CBBA3F130C94F5A3E0BE2A93D9E9D79DC3E24(L_11, NULL);
+				String_t* L_12 = V_3;
+				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_13;
+				L_13 = File_ReadAllBytes_m704CBBA3F130C94F5A3E0BE2A93D9E9D79DC3E24(L_12, NULL);
 				// LoadImageErrorCode err = RuntimeApi.LoadMetadataForAOTAssembly(dllBytes, mode);
-				int32_t L_13 = V_0;
-				int32_t L_14;
-				L_14 = RuntimeApi_LoadMetadataForAOTAssembly_mE1E398132DBF86D7DE042300E1EE6AC37B7649D8(L_12, L_13, NULL);
-				V_4 = L_14;
+				int32_t L_14 = V_0;
+				int32_t L_15;
+				L_15 = RuntimeApi_LoadMetadataForAOTAssembly_mE1E398132DBF86D7DE042300E1EE6AC37B7649D8(L_13, L_14, NULL);
+				V_4 = L_15;
 				// Debug.Log($"LoadMetadataForAOTAssembly:{aotDllName}. mode:{mode} ret:{err}");
-				String_t* L_15 = V_2;
-				int32_t L_16 = V_0;
-				int32_t L_17 = L_16;
-				RuntimeObject* L_18 = Box(HomologousImageMode_tEC0F0043F595B001580D833592AE9E7FD4744548_il2cpp_TypeInfo_var, &L_17);
-				int32_t L_19 = V_4;
-				int32_t L_20 = L_19;
-				RuntimeObject* L_21 = Box(LoadImageErrorCode_tC778A2553ADB45B8C61EFE26C20837C23894FEB3_il2cpp_TypeInfo_var, &L_20);
-				String_t* L_22;
-				L_22 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteral1BA46D2FDED261D9EBFFC277917E32CC44A3F821, L_15, L_18, L_21, NULL);
+				String_t* L_16 = V_2;
+				int32_t L_17 = V_0;
+				int32_t L_18 = L_17;
+				RuntimeObject* L_19 = Box(HomologousImageMode_tEC0F0043F595B001580D833592AE9E7FD4744548_il2cpp_TypeInfo_var, &L_18);
+				int32_t L_20 = V_4;
+				int32_t L_21 = L_20;
+				RuntimeObject* L_22 = Box(LoadImageErrorCode_tC778A2553ADB45B8C61EFE26C20837C23894FEB3_il2cpp_TypeInfo_var, &L_21);
+				String_t* L_23;
+				L_23 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteral1BA46D2FDED261D9EBFFC277917E32CC44A3F821, L_16, L_19, L_22, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_22, NULL);
+				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_23, NULL);
 			}
 
-IL_0081_1:
+IL_0082_1:
 			{
 				// foreach (var aotDllName in aotMetaAssemblyFiles)
-				bool L_23;
-				L_23 = Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED((&V_1), Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED_RuntimeMethod_var);
-				if (L_23)
+				bool L_24;
+				L_24 = Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED((&V_1), Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED_RuntimeMethod_var);
+				if (L_24)
 				{
 					goto IL_0030_1;
 				}
 			}
 			{
-				goto IL_009a;
+				goto IL_009b;
 			}
 		}// end try (depth: 1)
 		catch(Il2CppExceptionWrapper& e)
@@ -3888,7 +3780,7 @@ IL_0081_1:
 		}
 	}
 
-IL_009a:
+IL_009b:
 	{
 		// }
 		return;
@@ -3930,7 +3822,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureLaunch_OnAction_m16740232958A89
 		// switch (m_Setting.assetLoadMode)
 		GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206* L_0 = __this->___m_Setting_8;
 		NullCheck(L_0);
-		int32_t L_1 = L_0->___assetLoadMode_8;
+		int32_t L_1 = L_0->___assetLoadMode_9;
 		V_0 = L_1;
 		int32_t L_2 = V_0;
 		if (!L_2)
@@ -3975,55 +3867,51 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureLaunch_OnEnter_mA0FA50C27C112C0
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_m00DC0364909A9507473458A9D3A30C04C185B55C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameSetting_1_Get_m77DD18C98B26B74DC79F56550CDB08F9D7FA6940_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t G_B3_0 = 0;
 	{
-		// m_Setting = dataBase.GetComponent<ProcedureLauncher>().launchSetting;
-		FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* L_0 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___dataBase_3;
-		NullCheck(L_0);
-		ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1* L_1;
-		L_1 = Component_GetComponent_TisProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_m00DC0364909A9507473458A9D3A30C04C185B55C(L_0, Component_GetComponent_TisProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_m00DC0364909A9507473458A9D3A30C04C185B55C_RuntimeMethod_var);
-		NullCheck(L_1);
-		GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206* L_2 = L_1->___launchSetting_5;
-		__this->___m_Setting_8 = L_2;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Setting_8), (void*)L_2);
+		// m_Setting = GameLaunchSetting.Get();
+		GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206* L_0;
+		L_0 = GameSetting_1_Get_m77DD18C98B26B74DC79F56550CDB08F9D7FA6940(GameSetting_1_Get_m77DD18C98B26B74DC79F56550CDB08F9D7FA6940_RuntimeMethod_var);
+		__this->___m_Setting_8 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Setting_8), (void*)L_0);
 		// Application.targetFrameRate = m_Setting.frameRate;
+		GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206* L_1 = __this->___m_Setting_8;
+		NullCheck(L_1);
+		int32_t L_2 = L_1->___frameRate_5;
+		Application_set_targetFrameRate_mB90EEA60DAE55CD71C38D4B7DFDBE2B34EA6B46F(L_2, NULL);
+		// Time.timeScale = m_Setting.gameSpeed;
 		GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206* L_3 = __this->___m_Setting_8;
 		NullCheck(L_3);
-		int32_t L_4 = L_3->___frameRate_4;
-		Application_set_targetFrameRate_mB90EEA60DAE55CD71C38D4B7DFDBE2B34EA6B46F(L_4, NULL);
-		// Time.timeScale = m_Setting.gameSpeed;
+		float L_4 = L_3->___gameSpeed_6;
+		Time_set_timeScale_mEF84EE4B2376A458387648079B426B267862D331(L_4, NULL);
+		// Application.runInBackground = m_Setting.runInBackground;
 		GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206* L_5 = __this->___m_Setting_8;
 		NullCheck(L_5);
-		float L_6 = L_5->___gameSpeed_5;
-		Time_set_timeScale_mEF84EE4B2376A458387648079B426B267862D331(L_6, NULL);
-		// Application.runInBackground = m_Setting.runInBackground;
+		bool L_6 = L_5->___runInBackground_7;
+		Application_set_runInBackground_m4CD0DF59011994C4DB76D7A2FE7A02BC07B4AF67(L_6, NULL);
+		// Screen.sleepTimeout = m_Setting.neverSleep ? SleepTimeout.NeverSleep : SleepTimeout.SystemSetting;
 		GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206* L_7 = __this->___m_Setting_8;
 		NullCheck(L_7);
-		bool L_8 = L_7->___runInBackground_6;
-		Application_set_runInBackground_m4CD0DF59011994C4DB76D7A2FE7A02BC07B4AF67(L_8, NULL);
-		// Screen.sleepTimeout = m_Setting.neverSleep ? SleepTimeout.NeverSleep : SleepTimeout.SystemSetting;
-		GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206* L_9 = __this->___m_Setting_8;
-		NullCheck(L_9);
-		bool L_10 = L_9->___neverSleep_7;
-		if (L_10)
+		bool L_8 = L_7->___neverSleep_8;
+		if (L_8)
 		{
-			goto IL_0057;
+			goto IL_004c;
 		}
 	}
 	{
 		G_B3_0 = ((int32_t)-2);
-		goto IL_0058;
+		goto IL_004d;
 	}
 
-IL_0057:
+IL_004c:
 	{
 		G_B3_0 = (-1);
 	}
 
-IL_0058:
+IL_004d:
 	{
 		Screen_set_sleepTimeout_mB375970159A73BB484A2B5E62A943330B83ABF9A(G_B3_0, NULL);
 		// }
@@ -4072,72 +3960,58 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureLauncher_Awake_mA9530B416DA4A69
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FSM_StateMachine_1_AddStatus_TisProcedureLaunch_t700AC00FC3AB7594159CB1DF8955098DD069967C_mA609C1A42D7A9E2E9D754D3615EAA1989D36777C_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FSM_StateMachine_1_AddStatus_TisProcedureUpdateVersion_tC398E933B8CD9AF0671218D0D72C13295FB8314E_mAFB55F997EAF2BBC03C6DC06DBA78F0CF7C39032_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_AddComponent_TisFSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D_m71C564C6B077486A3C132791BC2995453B5472B6_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameSetting_1_Init_m23A59AB8D3DB73E820492B9F2DB68596F63335F6_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameSetting_1_Init_m3BC6707E501C978C0F78B3D30DD48F565E75B42D_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ScriptableObject_CreateInstance_TisGameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206_m151D79BB2C6D504993BEC5790BC29B5DE24979C6_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// if (launchSetting == null)
-		GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206* L_0 = __this->___launchSetting_5;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_1;
-		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_1)
-		{
-			goto IL_0019;
-		}
-	}
-	{
-		// launchSetting = ScriptableObject.CreateInstance<GameLaunchSetting>();
-		GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206* L_2;
-		L_2 = ScriptableObject_CreateInstance_TisGameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206_m151D79BB2C6D504993BEC5790BC29B5DE24979C6(ScriptableObject_CreateInstance_TisGameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206_m151D79BB2C6D504993BEC5790BC29B5DE24979C6_RuntimeMethod_var);
-		__this->___launchSetting_5 = L_2;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___launchSetting_5), (void*)L_2);
-	}
-
-IL_0019:
-	{
+		// GameLaunchSetting.Init(m_GameLaunchSetting);
+		GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206* L_0 = __this->___m_GameLaunchSetting_6;
+		GameSetting_1_Init_m23A59AB8D3DB73E820492B9F2DB68596F63335F6_inline(L_0, GameSetting_1_Init_m23A59AB8D3DB73E820492B9F2DB68596F63335F6_RuntimeMethod_var);
+		// GamePathSetting.Init(m_GamePathSetting);
+		GamePathSetting_t90635FDBB458D9776877AD87389060E85997AD77* L_1 = __this->___m_GamePathSetting_7;
+		GameSetting_1_Init_m3BC6707E501C978C0F78B3D30DD48F565E75B42D_inline(L_1, GameSetting_1_Init_m3BC6707E501C978C0F78B3D30DD48F565E75B42D_RuntimeMethod_var);
 		// m_Procedure = new ProcedureFSM();
-		ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF* L_3 = (ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF*)il2cpp_codegen_object_new(ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF_il2cpp_TypeInfo_var);
-		NullCheck(L_3);
-		ProcedureFSM__ctor_mD53F279AF5CE96885888E305E747DDC164D3FB07(L_3, NULL);
-		__this->___m_Procedure_6 = L_3;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Procedure_6), (void*)L_3);
+		ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF* L_2 = (ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF*)il2cpp_codegen_object_new(ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF_il2cpp_TypeInfo_var);
+		NullCheck(L_2);
+		ProcedureFSM__ctor_mD53F279AF5CE96885888E305E747DDC164D3FB07(L_2, NULL);
+		__this->___m_Procedure_5 = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Procedure_5), (void*)L_2);
 		// m_Procedure.dataBase = gameObject.AddComponent<FSM_DataBase>();
-		ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF* L_4 = __this->___m_Procedure_6;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5;
-		L_5 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
-		NullCheck(L_5);
-		FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* L_6;
-		L_6 = GameObject_AddComponent_TisFSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D_m71C564C6B077486A3C132791BC2995453B5472B6(L_5, GameObject_AddComponent_TisFSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D_m71C564C6B077486A3C132791BC2995453B5472B6_RuntimeMethod_var);
+		ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF* L_3 = __this->___m_Procedure_5;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4;
+		L_4 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_4);
-		((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)L_4)->___dataBase_3 = L_6;
-		Il2CppCodeGenWriteBarrier((void**)(&((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)L_4)->___dataBase_3), (void*)L_6);
+		FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* L_5;
+		L_5 = GameObject_AddComponent_TisFSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D_m71C564C6B077486A3C132791BC2995453B5472B6(L_4, GameObject_AddComponent_TisFSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D_m71C564C6B077486A3C132791BC2995453B5472B6_RuntimeMethod_var);
+		NullCheck(L_3);
+		((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)L_3)->___dataBase_3 = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)L_3)->___dataBase_3), (void*)L_5);
 		// m_Procedure.AddStatus<ProcedureLaunch>(ProcedureLaunchProcess.Launch);
-		ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF* L_7 = __this->___m_Procedure_6;
-		NullCheck(L_7);
-		FSM_StateMachine_1_AddStatus_TisProcedureLaunch_t700AC00FC3AB7594159CB1DF8955098DD069967C_mA609C1A42D7A9E2E9D754D3615EAA1989D36777C(L_7, 0, FSM_StateMachine_1_AddStatus_TisProcedureLaunch_t700AC00FC3AB7594159CB1DF8955098DD069967C_mA609C1A42D7A9E2E9D754D3615EAA1989D36777C_RuntimeMethod_var);
+		ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF* L_6 = __this->___m_Procedure_5;
+		NullCheck(L_6);
+		FSM_StateMachine_1_AddStatus_TisProcedureLaunch_t700AC00FC3AB7594159CB1DF8955098DD069967C_mA609C1A42D7A9E2E9D754D3615EAA1989D36777C(L_6, 0, FSM_StateMachine_1_AddStatus_TisProcedureLaunch_t700AC00FC3AB7594159CB1DF8955098DD069967C_mA609C1A42D7A9E2E9D754D3615EAA1989D36777C_RuntimeMethod_var);
 		// m_Procedure.AddStatus<ProcedureCheckVersion>(ProcedureLaunchProcess.CheckVersion);
-		ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF* L_8 = __this->___m_Procedure_6;
-		NullCheck(L_8);
-		FSM_StateMachine_1_AddStatus_TisProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_mDEF92A0E4363A35E58ACFD5C7AFCAB87B4227D41(L_8, 1, FSM_StateMachine_1_AddStatus_TisProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_mDEF92A0E4363A35E58ACFD5C7AFCAB87B4227D41_RuntimeMethod_var);
+		ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF* L_7 = __this->___m_Procedure_5;
+		NullCheck(L_7);
+		FSM_StateMachine_1_AddStatus_TisProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_mDEF92A0E4363A35E58ACFD5C7AFCAB87B4227D41(L_7, 1, FSM_StateMachine_1_AddStatus_TisProcedureCheckVersion_t902016E7EE624E41E530F43B3EEFDEF6388F4E52_mDEF92A0E4363A35E58ACFD5C7AFCAB87B4227D41_RuntimeMethod_var);
 		// m_Procedure.AddStatus<ProcedureCheckLocalFile>(ProcedureLaunchProcess.CheckLocalFile);
-		ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF* L_9 = __this->___m_Procedure_6;
-		NullCheck(L_9);
-		FSM_StateMachine_1_AddStatus_TisProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_m25ED97E4492FBF0BDB347F085106B50DC43F93E9(L_9, 2, FSM_StateMachine_1_AddStatus_TisProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_m25ED97E4492FBF0BDB347F085106B50DC43F93E9_RuntimeMethod_var);
+		ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF* L_8 = __this->___m_Procedure_5;
+		NullCheck(L_8);
+		FSM_StateMachine_1_AddStatus_TisProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_m25ED97E4492FBF0BDB347F085106B50DC43F93E9(L_8, 2, FSM_StateMachine_1_AddStatus_TisProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_m25ED97E4492FBF0BDB347F085106B50DC43F93E9_RuntimeMethod_var);
 		// m_Procedure.AddStatus<ProcedureUpdateVersion>(ProcedureLaunchProcess.UpdateVersion);
-		ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF* L_10 = __this->___m_Procedure_6;
-		NullCheck(L_10);
-		FSM_StateMachine_1_AddStatus_TisProcedureUpdateVersion_tC398E933B8CD9AF0671218D0D72C13295FB8314E_mAFB55F997EAF2BBC03C6DC06DBA78F0CF7C39032(L_10, 3, FSM_StateMachine_1_AddStatus_TisProcedureUpdateVersion_tC398E933B8CD9AF0671218D0D72C13295FB8314E_mAFB55F997EAF2BBC03C6DC06DBA78F0CF7C39032_RuntimeMethod_var);
+		ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF* L_9 = __this->___m_Procedure_5;
+		NullCheck(L_9);
+		FSM_StateMachine_1_AddStatus_TisProcedureUpdateVersion_tC398E933B8CD9AF0671218D0D72C13295FB8314E_mAFB55F997EAF2BBC03C6DC06DBA78F0CF7C39032(L_9, 3, FSM_StateMachine_1_AddStatus_TisProcedureUpdateVersion_tC398E933B8CD9AF0671218D0D72C13295FB8314E_mAFB55F997EAF2BBC03C6DC06DBA78F0CF7C39032_RuntimeMethod_var);
 		// m_Procedure.AddStatus<ProcedureGameEntry>(ProcedureLaunchProcess.GameEntry);
-		ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF* L_11 = __this->___m_Procedure_6;
-		NullCheck(L_11);
-		FSM_StateMachine_1_AddStatus_TisProcedureGameEntry_t8958C2851A91A4AEF12AA392A45B1D67D35F4F16_mE76696EC08F84BA4EF3882455CE91E5BB07C3DF9(L_11, 4, FSM_StateMachine_1_AddStatus_TisProcedureGameEntry_t8958C2851A91A4AEF12AA392A45B1D67D35F4F16_mE76696EC08F84BA4EF3882455CE91E5BB07C3DF9_RuntimeMethod_var);
+		ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF* L_10 = __this->___m_Procedure_5;
+		NullCheck(L_10);
+		FSM_StateMachine_1_AddStatus_TisProcedureGameEntry_t8958C2851A91A4AEF12AA392A45B1D67D35F4F16_mE76696EC08F84BA4EF3882455CE91E5BB07C3DF9(L_10, 4, FSM_StateMachine_1_AddStatus_TisProcedureGameEntry_t8958C2851A91A4AEF12AA392A45B1D67D35F4F16_mE76696EC08F84BA4EF3882455CE91E5BB07C3DF9_RuntimeMethod_var);
 		// m_Procedure.OnInit();
-		ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF* L_12 = __this->___m_Procedure_6;
-		NullCheck(L_12);
-		VirtualActionInvoker0::Invoke(5 /* System.Void GameBase.FSM.FSM_Status`1<ProcedureLaunchProcess>::OnInit() */, L_12);
+		ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF* L_11 = __this->___m_Procedure_5;
+		NullCheck(L_11);
+		VirtualActionInvoker0::Invoke(5 /* System.Void GameBase.FSM.FSM_Status`1<ProcedureLaunchProcess>::OnInit() */, L_11);
 		// }
 		return;
 	}
@@ -4147,7 +4021,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureLauncher_Update_m6646F961932AF8
 {
 	{
 		// m_Procedure.OnAction();
-		ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF* L_0 = __this->___m_Procedure_6;
+		ProcedureFSM_t8EB1FD9EF24B7FDBD13E5EFBB36E59A8A60A73FF* L_0 = __this->___m_Procedure_5;
 		NullCheck(L_0);
 		VirtualActionInvoker0::Invoke(6 /* System.Void GameBase.FSM.FSM_Status`1<ProcedureLaunchProcess>::OnAction() */, L_0);
 		// }
@@ -4159,23 +4033,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureLauncher__ctor_mBE42A3B81F0D6BC
 {
 	{
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
-		return;
-	}
-}
-// System.Void ProcedureLauncher::.cctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureLauncher__cctor_m550A3B5A742D2841FAA3580EF78EA15BC519EE6B (const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralCD4D4791E5EE81C61DFD1E4DEE0168129EFECE39);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// public static string procedureMarkHead = "Procedure_";
-		((ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var))->___procedureMarkHead_4 = _stringLiteralCD4D4791E5EE81C61DFD1E4DEE0168129EFECE39;
-		Il2CppCodeGenWriteBarrier((void**)(&((ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var))->___procedureMarkHead_4), (void*)_stringLiteralCD4D4791E5EE81C61DFD1E4DEE0168129EFECE39);
 		return;
 	}
 }
@@ -4259,6 +4116,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureLaunchPath__cctor_mEA5974035553
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral7D471082F5A6328C3C4D67E395680924339A90FE);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral82CD69B64763074792EC4032E1D5F857B9C51848);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral891ACA98569F599A249CA88A6079F67391F0E55F);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB7AE5B957F2B332FFED981CD5A87CB7B19B43BD4);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC4B7DEF3C6177E52FCB905A14C0574507AD998EE);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -4277,24 +4135,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureLaunchPath__cctor_mEA5974035553
 		L_3 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_2, _stringLiteralC4B7DEF3C6177E52FCB905A14C0574507AD998EE, NULL);
 		((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___s_NetServerPath_1 = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___s_NetServerPath_1), (void*)L_3);
-		// public static string s_HotUpdateDll = localDataPath + "/dll/";
-		String_t* L_4 = ((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___localDataPath_0;
+		// public static string s_BuildInPath = Application.streamingAssetsPath + "/A_AssetBundles/";
+		String_t* L_4;
+		L_4 = Application_get_streamingAssetsPath_mB904BCD9A7A4F18A52C175DE4A81F5DC3010CDB5(NULL);
 		String_t* L_5;
-		L_5 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_4, _stringLiteral891ACA98569F599A249CA88A6079F67391F0E55F, NULL);
-		((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___s_HotUpdateDll_2 = L_5;
-		Il2CppCodeGenWriteBarrier((void**)(&((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___s_HotUpdateDll_2), (void*)L_5);
+		L_5 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_4, _stringLiteralB7AE5B957F2B332FFED981CD5A87CB7B19B43BD4, NULL);
+		((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___s_BuildInPath_2 = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___s_BuildInPath_2), (void*)L_5);
+		// public static string s_HotUpdateDll = localDataPath + "/dll/";
+		String_t* L_6 = ((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___localDataPath_0;
+		String_t* L_7;
+		L_7 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_6, _stringLiteral891ACA98569F599A249CA88A6079F67391F0E55F, NULL);
+		((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___s_HotUpdateDll_3 = L_7;
+		Il2CppCodeGenWriteBarrier((void**)(&((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___s_HotUpdateDll_3), (void*)L_7);
 		// public static string[] s_HotUpdateDllName = new string[] { "Assembly-GameCore.dll", "Assembly-GameLogic.dll" };
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)2);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_7 = L_6;
-		NullCheck(L_7);
-		ArrayElementTypeCheck (L_7, _stringLiteral225BE7524111A905CE72776BC9F4CAF219EE2F68);
-		(L_7)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral225BE7524111A905CE72776BC9F4CAF219EE2F68);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_8 = L_7;
-		NullCheck(L_8);
-		ArrayElementTypeCheck (L_8, _stringLiteral7D471082F5A6328C3C4D67E395680924339A90FE);
-		(L_8)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)_stringLiteral7D471082F5A6328C3C4D67E395680924339A90FE);
-		((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___s_HotUpdateDllName_3 = L_8;
-		Il2CppCodeGenWriteBarrier((void**)(&((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___s_HotUpdateDllName_3), (void*)L_8);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_8 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)2);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_9 = L_8;
+		NullCheck(L_9);
+		ArrayElementTypeCheck (L_9, _stringLiteral225BE7524111A905CE72776BC9F4CAF219EE2F68);
+		(L_9)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral225BE7524111A905CE72776BC9F4CAF219EE2F68);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_10 = L_9;
+		NullCheck(L_10);
+		ArrayElementTypeCheck (L_10, _stringLiteral7D471082F5A6328C3C4D67E395680924339A90FE);
+		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)_stringLiteral7D471082F5A6328C3C4D67E395680924339A90FE);
+		((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___s_HotUpdateDllName_4 = L_10;
+		Il2CppCodeGenWriteBarrier((void**)(&((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___s_HotUpdateDllName_4), (void*)L_10);
 		return;
 	}
 }
@@ -4317,7 +4182,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureUpdateVersion_OnAction_m44FB317
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IFSM_Machine_1_tDAD178AE60E63943B1E9AE6C50382824D9715340_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m504138B7699BE68921AD73E2E4FD012C8BA9F45E_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1788F1F97AD86A3245D2B1A0D860E2E4504B62BD);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral5C3EE31A245F14716837552067C7D6821200E399);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9287B297BFAEBB8024A5A051EFE496E7861878F3);
@@ -4374,7 +4238,7 @@ IL_0013:
 		L_5 = List_1_get_Count_m504138B7699BE68921AD73E2E4FD012C8BA9F45E_inline(L_4, List_1_get_Count_m504138B7699BE68921AD73E2E4FD012C8BA9F45E_RuntimeMethod_var);
 		if ((((int32_t)L_5) > ((int32_t)0)))
 		{
-			goto IL_0136;
+			goto IL_014c;
 		}
 	}
 
@@ -4387,153 +4251,157 @@ IL_0031:
 		bool L_6 = __this->___m_UpdateCShare_9;
 		if (!L_6)
 		{
-			goto IL_012a;
+			goto IL_0140;
 		}
 	}
 	{
-		// string path = Path.Combine(ProcedureLaunchPath.localDataPath, "001/001.asset");
-		il2cpp_codegen_runtime_class_init_inline(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var);
-		String_t* L_7 = ((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___localDataPath_0;
+		// string path = Path.Combine(m_GamePath.downloadDataPath.AssetPath, "001/001.asset");
+		FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35* L_7 = (FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35*)(&__this->___m_GamePath_12);
+		SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337* L_8 = (SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337*)(&L_7->___downloadDataPath_4);
+		String_t* L_9;
+		L_9 = SpecialPathStruct_get_AssetPath_m3472DD23FCF8E176133DD18235710CDC8E1B6D26(L_8, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
-		String_t* L_8;
-		L_8 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_7, _stringLiteralAC8FBFB7139DCC09A330338E4364B7EBF1FA5A85, NULL);
-		V_0 = L_8;
+		String_t* L_10;
+		L_10 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_9, _stringLiteralAC8FBFB7139DCC09A330338E4364B7EBF1FA5A85, NULL);
+		V_0 = L_10;
 		// if (File.Exists(path))
-		String_t* L_9 = V_0;
-		bool L_10;
-		L_10 = File_Exists_m95E329ABBE3EAD6750FE1989BBA6884457136D4A(L_9, NULL);
-		if (!L_10)
+		String_t* L_11 = V_0;
+		bool L_12;
+		L_12 = File_Exists_m95E329ABBE3EAD6750FE1989BBA6884457136D4A(L_11, NULL);
+		if (!L_12)
 		{
-			goto IL_012a;
+			goto IL_0140;
 		}
 	}
 	try
 	{// begin try (depth: 1)
 		{
 			// AssetBundle ab = AssetBundle.LoadFromFile(path);
-			String_t* L_11 = V_0;
-			AssetBundle_tB38418819A49060CD738CB21541649340F082943* L_12;
-			L_12 = AssetBundle_LoadFromFile_mAFD7B0E8F0A0A88E9BB60180EBA0A99B8B3F2629(L_11, NULL);
-			V_1 = L_12;
+			String_t* L_13 = V_0;
+			AssetBundle_tB38418819A49060CD738CB21541649340F082943* L_14;
+			L_14 = AssetBundle_LoadFromFile_mAFD7B0E8F0A0A88E9BB60180EBA0A99B8B3F2629(L_13, NULL);
+			V_1 = L_14;
 			// TextAsset[] texts = ab.LoadAllAssets<TextAsset>();
-			AssetBundle_tB38418819A49060CD738CB21541649340F082943* L_13 = V_1;
-			NullCheck(L_13);
-			TextAssetU5BU5D_t36E72C271245C06AE024E4E06CD5B60A7D24FBBD* L_14;
-			L_14 = AssetBundle_LoadAllAssets_TisTextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69_m94F2B7D52876437A8B2F2955B61A6D6E68D88192(L_13, AssetBundle_LoadAllAssets_TisTextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69_m94F2B7D52876437A8B2F2955B61A6D6E68D88192_RuntimeMethod_var);
-			// string dllPath = ProcedureLaunchPath.s_HotUpdateDll;
-			il2cpp_codegen_runtime_class_init_inline(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var);
-			String_t* L_15 = ((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___s_HotUpdateDll_2;
-			V_2 = L_15;
+			AssetBundle_tB38418819A49060CD738CB21541649340F082943* L_15 = V_1;
+			NullCheck(L_15);
+			TextAssetU5BU5D_t36E72C271245C06AE024E4E06CD5B60A7D24FBBD* L_16;
+			L_16 = AssetBundle_LoadAllAssets_TisTextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69_m94F2B7D52876437A8B2F2955B61A6D6E68D88192(L_15, AssetBundle_LoadAllAssets_TisTextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69_m94F2B7D52876437A8B2F2955B61A6D6E68D88192_RuntimeMethod_var);
+			// string dllPath = m_GamePath.hotUpdateDllPath.AssetPath;
+			FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35* L_17 = (FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35*)(&__this->___m_GamePath_12);
+			SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337* L_18 = (SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337*)(&L_17->___hotUpdateDllPath_7);
+			String_t* L_19;
+			L_19 = SpecialPathStruct_get_AssetPath_m3472DD23FCF8E176133DD18235710CDC8E1B6D26(L_18, NULL);
+			V_2 = L_19;
 			// foreach (var text in texts)
-			V_3 = L_14;
+			V_3 = L_16;
 			V_4 = 0;
-			goto IL_00f6_1;
+			goto IL_010c_1;
 		}
 
-IL_007a_1:
+IL_0090_1:
 		{
 			// foreach (var text in texts)
-			TextAssetU5BU5D_t36E72C271245C06AE024E4E06CD5B60A7D24FBBD* L_16 = V_3;
-			int32_t L_17 = V_4;
-			NullCheck(L_16);
-			int32_t L_18 = L_17;
-			TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* L_19 = (L_16)->GetAt(static_cast<il2cpp_array_size_t>(L_18));
-			V_5 = L_19;
+			TextAssetU5BU5D_t36E72C271245C06AE024E4E06CD5B60A7D24FBBD* L_20 = V_3;
+			int32_t L_21 = V_4;
+			NullCheck(L_20);
+			int32_t L_22 = L_21;
+			TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* L_23 = (L_20)->GetAt(static_cast<il2cpp_array_size_t>(L_22));
+			V_5 = L_23;
 			// string savePath = Path.Combine(dllPath, string.Format("{0}.dll.bytes", text.name));
-			String_t* L_20 = V_2;
-			TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* L_21 = V_5;
-			NullCheck(L_21);
-			String_t* L_22;
-			L_22 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_21, NULL);
-			String_t* L_23;
-			L_23 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral9287B297BFAEBB8024A5A051EFE496E7861878F3, L_22, NULL);
-			il2cpp_codegen_runtime_class_init_inline(Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
-			String_t* L_24;
-			L_24 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_20, L_23, NULL);
-			V_6 = L_24;
-			// Debug.Log("????Dll:" + text.name);
+			String_t* L_24 = V_2;
 			TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* L_25 = V_5;
 			NullCheck(L_25);
 			String_t* L_26;
 			L_26 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_25, NULL);
 			String_t* L_27;
-			L_27 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral5C3EE31A245F14716837552067C7D6821200E399, L_26, NULL);
+			L_27 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral9287B297BFAEBB8024A5A051EFE496E7861878F3, L_26, NULL);
+			il2cpp_codegen_runtime_class_init_inline(Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
+			String_t* L_28;
+			L_28 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_24, L_27, NULL);
+			V_6 = L_28;
+			// Debug.Log("????Dll:" + text.name);
+			TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* L_29 = V_5;
+			NullCheck(L_29);
+			String_t* L_30;
+			L_30 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_29, NULL);
+			String_t* L_31;
+			L_31 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral5C3EE31A245F14716837552067C7D6821200E399, L_30, NULL);
 			il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-			Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_27, NULL);
+			Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_31, NULL);
 			// if (File.Exists(savePath))
-			String_t* L_28 = V_6;
-			bool L_29;
-			L_29 = File_Exists_m95E329ABBE3EAD6750FE1989BBA6884457136D4A(L_28, NULL);
-			if (!L_29)
+			String_t* L_32 = V_6;
+			bool L_33;
+			L_33 = File_Exists_m95E329ABBE3EAD6750FE1989BBA6884457136D4A(L_32, NULL);
+			if (!L_33)
 			{
-				goto IL_00c1_1;
+				goto IL_00d7_1;
 			}
 		}
 		{
 			// File.Delete(savePath);
-			String_t* L_30 = V_6;
-			File_Delete_mE29829DA504F3E1B8BCB78F21E2862C9ED7EC386(L_30, NULL);
-			goto IL_00db_1;
+			String_t* L_34 = V_6;
+			File_Delete_mE29829DA504F3E1B8BCB78F21E2862C9ED7EC386(L_34, NULL);
+			goto IL_00f1_1;
 		}
 
-IL_00c1_1:
+IL_00d7_1:
 		{
 			// string parent = Path.GetDirectoryName(savePath);
-			String_t* L_31 = V_6;
+			String_t* L_35 = V_6;
 			il2cpp_codegen_runtime_class_init_inline(Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
-			String_t* L_32;
-			L_32 = Path_GetDirectoryName_m428BADBE493A3927B51A13DEF658929B430516F6(L_31, NULL);
-			V_7 = L_32;
+			String_t* L_36;
+			L_36 = Path_GetDirectoryName_m428BADBE493A3927B51A13DEF658929B430516F6(L_35, NULL);
+			V_7 = L_36;
 			// if (!Directory.Exists(parent))
-			String_t* L_33 = V_7;
-			bool L_34;
-			L_34 = Directory_Exists_m3D125E9E88C291CF11113444F961A64DD83AE1C7(L_33, NULL);
-			if (L_34)
+			String_t* L_37 = V_7;
+			bool L_38;
+			L_38 = Directory_Exists_m3D125E9E88C291CF11113444F961A64DD83AE1C7(L_37, NULL);
+			if (L_38)
 			{
-				goto IL_00db_1;
+				goto IL_00f1_1;
 			}
 		}
 		{
 			// Directory.CreateDirectory(parent);
-			String_t* L_35 = V_7;
-			DirectoryInfo_tEAEEC018EB49B4A71907FFEAFE935FAA8F9C1FE2* L_36;
-			L_36 = Directory_CreateDirectory_m16EC5CE8561A997C6635E06DC24C77590F29D94F(L_35, NULL);
+			String_t* L_39 = V_7;
+			DirectoryInfo_tEAEEC018EB49B4A71907FFEAFE935FAA8F9C1FE2* L_40;
+			L_40 = Directory_CreateDirectory_m16EC5CE8561A997C6635E06DC24C77590F29D94F(L_39, NULL);
 		}
 
-IL_00db_1:
+IL_00f1_1:
 		{
 			// File.WriteAllBytes(savePath, text.bytes);
-			String_t* L_37 = V_6;
-			TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* L_38 = V_5;
-			NullCheck(L_38);
-			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_39;
-			L_39 = TextAsset_get_bytes_m244B31755642C9623B570FC96B9A04523B1E5178(L_38, NULL);
-			File_WriteAllBytes_mC491031DA14AA9B591F62D6AD0181D090E081077(L_37, L_39, NULL);
+			String_t* L_41 = V_6;
+			TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* L_42 = V_5;
+			NullCheck(L_42);
+			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_43;
+			L_43 = TextAsset_get_bytes_m244B31755642C9623B570FC96B9A04523B1E5178(L_42, NULL);
+			File_WriteAllBytes_mC491031DA14AA9B591F62D6AD0181D090E081077(L_41, L_43, NULL);
 			// Resources.UnloadAsset(text);
-			TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* L_40 = V_5;
-			Resources_UnloadAsset_m4828D1393356C052061C66403B1437F7D7E21908(L_40, NULL);
-			int32_t L_41 = V_4;
-			V_4 = ((int32_t)il2cpp_codegen_add(L_41, 1));
+			TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* L_44 = V_5;
+			Resources_UnloadAsset_m4828D1393356C052061C66403B1437F7D7E21908(L_44, NULL);
+			int32_t L_45 = V_4;
+			V_4 = ((int32_t)il2cpp_codegen_add(L_45, 1));
 		}
 
-IL_00f6_1:
+IL_010c_1:
 		{
 			// foreach (var text in texts)
-			int32_t L_42 = V_4;
-			TextAssetU5BU5D_t36E72C271245C06AE024E4E06CD5B60A7D24FBBD* L_43 = V_3;
-			NullCheck(L_43);
-			if ((((int32_t)L_42) < ((int32_t)((int32_t)(((RuntimeArray*)L_43)->max_length)))))
+			int32_t L_46 = V_4;
+			TextAssetU5BU5D_t36E72C271245C06AE024E4E06CD5B60A7D24FBBD* L_47 = V_3;
+			NullCheck(L_47);
+			if ((((int32_t)L_46) < ((int32_t)((int32_t)(((RuntimeArray*)L_47)->max_length)))))
 			{
-				goto IL_007a_1;
+				goto IL_0090_1;
 			}
 		}
 		{
 			// ab.Unload(true);
-			AssetBundle_tB38418819A49060CD738CB21541649340F082943* L_44 = V_1;
-			NullCheck(L_44);
-			AssetBundle_Unload_m0A189871E61A0D6735A2B41B3360A1F0677B636B(L_44, (bool)1, NULL);
+			AssetBundle_tB38418819A49060CD738CB21541649340F082943* L_48 = V_1;
+			NullCheck(L_48);
+			AssetBundle_Unload_m0A189871E61A0D6735A2B41B3360A1F0677B636B(L_48, (bool)1, NULL);
 			// }
-			goto IL_012a;
+			goto IL_0140;
 		}
 	}// end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
@@ -4541,64 +4409,64 @@ IL_00f6_1:
 		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
 		{
 			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
-			goto CATCH_0109;
+			goto CATCH_011f;
 		}
 		throw e;
 	}
 
-CATCH_0109:
+CATCH_011f:
 	{// begin catch(System.Exception)
 		{
 			// catch (System.Exception e)
 			V_8 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));
 			// Debug.LogError("????DLL???!!!" + e);
-			Exception_t* L_45 = V_8;
-			Exception_t* L_46 = L_45;
-			G_B15_0 = L_46;
+			Exception_t* L_49 = V_8;
+			Exception_t* L_50 = L_49;
+			G_B15_0 = L_50;
 			G_B15_1 = ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7094FE88B820757078A9A94C4B8EEC6E1817FD6C));
-			if (L_46)
+			if (L_50)
 			{
-				G_B16_0 = L_46;
+				G_B16_0 = L_50;
 				G_B16_1 = ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7094FE88B820757078A9A94C4B8EEC6E1817FD6C));
-				goto IL_0119;
+				goto IL_012f;
 			}
 		}
 		{
 			G_B17_0 = ((String_t*)(NULL));
 			G_B17_1 = G_B15_1;
-			goto IL_011e;
+			goto IL_0134;
 		}
 
-IL_0119:
+IL_012f:
 		{
 			NullCheck(G_B16_0);
-			String_t* L_47;
-			L_47 = VirtualFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, G_B16_0);
-			G_B17_0 = L_47;
+			String_t* L_51;
+			L_51 = VirtualFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, G_B16_0);
+			G_B17_0 = L_51;
 			G_B17_1 = G_B16_1;
 		}
 
-IL_011e:
+IL_0134:
 		{
-			String_t* L_48;
-			L_48 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(G_B17_1, G_B17_0, NULL);
+			String_t* L_52;
+			L_52 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(G_B17_1, G_B17_0, NULL);
 			il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
-			Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_48, NULL);
+			Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_52, NULL);
 			// }
 			IL2CPP_POP_ACTIVE_EXCEPTION();
-			goto IL_012a;
+			goto IL_0140;
 		}
 	}// end catch (depth: 1)
 
-IL_012a:
+IL_0140:
 	{
 		// subMachine.ChangeState(ProcedureLaunchProcess.GameEntry);
-		RuntimeObject* L_49 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___subMachine_1;
-		NullCheck(L_49);
-		InterfaceActionInvoker1< int32_t >::Invoke(0 /* System.Void GameBase.FSM.IFSM_Machine`1<ProcedureLaunchProcess>::ChangeState(TStateId) */, IFSM_Machine_1_tDAD178AE60E63943B1E9AE6C50382824D9715340_il2cpp_TypeInfo_var, L_49, 4);
+		RuntimeObject* L_53 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___subMachine_1;
+		NullCheck(L_53);
+		InterfaceActionInvoker1< int32_t >::Invoke(0 /* System.Void GameBase.FSM.IFSM_Machine`1<ProcedureLaunchProcess>::ChangeState(TStateId) */, IFSM_Machine_1_tDAD178AE60E63943B1E9AE6C50382824D9715340_il2cpp_TypeInfo_var, L_53, 4);
 	}
 
-IL_0136:
+IL_014c:
 	{
 		// }
 		return;
@@ -4611,40 +4479,38 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureUpdateVersion_OnEnter_mEBCC1D50
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_GetEnumerator_m660B966EF921340FDEF6FCB04DB287384C7BDAF1_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_TryGetValue_mA86D965CB5F74CE8675B7995C61945BEB6E594CB_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_GetEnumerator_mDAC471D4AE2C5DDDDD76407B03D54B58C1C35A47_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_TryGetValue_m81A8885E30E5BFD48BAB5411809FBD2195D761E8_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m5830C7B8053BF1AC660157CCD70F3E358719610B_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m592BCCE7B7933454DED2130C810F059F8D85B1D7_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_mB29CA80469B0BC64A6B55A8B94ECE58A2407BD98_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m490C66215F745351442D1C804CAB969F59C1BFE4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m1ECBF8AA45E71A6B3D9348C8A76E327048F80622_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_mA48DC39CB2D22EA87B7E910C2D86B5F8B2D24944_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FSM_DataBase_GetData_TisDictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_m556495C58F472B151E608512C2157FCD1648BB4D_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FSM_DataBase_GetData_TisDictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1_m8B729CED0AD1175D60D4E3AB0AB552F55FE393D3_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KeyValuePair_2_get_Key_m74ED8F124B9754CF75E4FC3F437BD669CC57E0EA_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KeyValuePair_2_get_Value_m2B2FE5D059DF47EB275B90F4B24C9DB1C43384EF_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m4ACEF49AE68581D2CE9BE7F1745723EA2401CB8B_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FSM_DataBase_GetData_TisDictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA_m9BF56EADB592F5C28440EAD3CE462220320299E5_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameSetting_1_Get_m20A60CE23518EECAEDE3E68ABA5405111E49D6DC_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KeyValuePair_2_get_Key_m70A38BF5083D72C13BB3DD841780FC0F5E9EBFB2_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KeyValuePair_2_get_Value_m187523401919D29F6826C11ECA71B3EF04C048AC_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Contains_m359254483BE42CAD4DCA8FBAFB87473FB4CF00E1_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m7692B5F182858B7D5C72C920D09AD48738D1E70D_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0335C65EEF6379144CEBFCCFBA3673189514186C);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral09B11B6CC411D8B9FFB75EAAE9A35B2AF248CE40);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral70DC673A7344F4CD8C84EF58757850C27DBB339B);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC8BFC9FC654E0D1FDE0321DFA9A01EB546F912B2);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE42BC8B34DED3954887AE578B6CF1390229CE4A6);
 		s_Il2CppMethodInitialized = true;
 	}
-	Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1* V_0 = NULL;
-	Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* V_1 = NULL;
-	String_t* V_2 = NULL;
-	AssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F* V_3 = NULL;
-	Enumerator_t0385EF61BFB3958FF00B3158C8DCCD8C4F9A0F9F V_4;
+	Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* V_0 = NULL;
+	Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* V_1 = NULL;
+	AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760* V_2 = NULL;
+	AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760* V_3 = NULL;
+	Enumerator_t2F285A5F651E4421FEB1F4F8A6523E2693919161 V_4;
 	memset((&V_4), 0, sizeof(V_4));
-	KeyValuePair_2_tC1B7927D299042E14CC8B96EC525A65E5009BE9F V_5;
+	KeyValuePair_2_tF49673347BC4455B4E13AD20AD95DD75639372AC V_5;
 	memset((&V_5), 0, sizeof(V_5));
 	Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1 V_6;
 	memset((&V_6), 0, sizeof(V_6));
@@ -4653,149 +4519,172 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProcedureUpdateVersion_OnEnter_mEBCC1D50
 	String_t* V_9 = NULL;
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
 	{
-		// m_DownloadList = new List<string>();
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_0 = (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*)il2cpp_codegen_object_new(List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_il2cpp_TypeInfo_var);
+		// m_GamePath = GamePathSetting.Get().CurrentPlatform();
+		GamePathSetting_t90635FDBB458D9776877AD87389060E85997AD77* L_0;
+		L_0 = GameSetting_1_Get_m20A60CE23518EECAEDE3E68ABA5405111E49D6DC(GameSetting_1_Get_m20A60CE23518EECAEDE3E68ABA5405111E49D6DC_RuntimeMethod_var);
 		NullCheck(L_0);
-		List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E(L_0, List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E_RuntimeMethod_var);
-		__this->___m_DownloadList_10 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_DownloadList_10), (void*)L_0);
+		FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35 L_1;
+		L_1 = GamePathSetting_CurrentPlatform_mF6B080B988CA3FCB199D700A9294971DE46EEE06(L_0, NULL);
+		__this->___m_GamePath_12 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___m_GamePath_12))->___buildingFileName_1), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___m_GamePath_12))->___assetManifestFileName_2), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___m_GamePath_12))->___versionFileName_3), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&__this->___m_GamePath_12))->___downloadDataPath_4))->___m_AssetPath_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&__this->___m_GamePath_12))->___serverDataPath_5))->___m_AssetPath_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&__this->___m_GamePath_12))->___buildingPath_6))->___m_AssetPath_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&__this->___m_GamePath_12))->___hotUpdateDllPath_7))->___m_AssetPath_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___m_GamePath_12))->___hotUpdateDll_8), (void*)NULL);
+		#endif
+		// m_DownloadList = new List<string>();
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_2 = (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*)il2cpp_codegen_object_new(List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_il2cpp_TypeInfo_var);
+		NullCheck(L_2);
+		List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E(L_2, List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E_RuntimeMethod_var);
+		__this->___m_DownloadList_10 = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_DownloadList_10), (void*)L_2);
 	}
 	try
 	{// begin try (depth: 1)
-		// netFiles = dataBase.GetData<Dictionary<string, AssetFile>>(ProcedureLauncher.procedureMarkHead + ProcedureCheckLocalFile.netFilesName);
-		FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* L_1 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___dataBase_3;
-		il2cpp_codegen_runtime_class_init_inline(ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var);
-		String_t* L_2 = ((ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var))->___procedureMarkHead_4;
-		il2cpp_codegen_runtime_class_init_inline(ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_il2cpp_TypeInfo_var);
-		String_t* L_3 = ((ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_il2cpp_TypeInfo_var))->___netFilesName_9;
-		String_t* L_4;
-		L_4 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_2, L_3, NULL);
-		NullCheck(L_1);
-		Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1* L_5;
-		L_5 = FSM_DataBase_GetData_TisDictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1_m8B729CED0AD1175D60D4E3AB0AB552F55FE393D3(L_1, L_4, FSM_DataBase_GetData_TisDictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1_m8B729CED0AD1175D60D4E3AB0AB552F55FE393D3_RuntimeMethod_var);
-		V_0 = L_5;
-		// localFiles = dataBase.GetData<Dictionary<string, string>>(ProcedureLauncher.procedureMarkHead + ProcedureCheckLocalFile.localFilesName);
-		FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* L_6 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___dataBase_3;
-		String_t* L_7 = ((ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLauncher_t13DBD7A21F41F8164FC267413ACEB00CD7CA99B1_il2cpp_TypeInfo_var))->___procedureMarkHead_4;
-		String_t* L_8 = ((ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureCheckLocalFile_t4851C8CD1AC0B798877FAB741DA077DD7975C4B3_il2cpp_TypeInfo_var))->___localFilesName_8;
-		String_t* L_9;
-		L_9 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_7, L_8, NULL);
-		NullCheck(L_6);
-		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_10;
-		L_10 = FSM_DataBase_GetData_TisDictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_m556495C58F472B151E608512C2157FCD1648BB4D(L_6, L_9, FSM_DataBase_GetData_TisDictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_m556495C58F472B151E608512C2157FCD1648BB4D_RuntimeMethod_var);
-		V_1 = L_10;
+		// netFiles = dataBase.GetData<Dictionary<string, AssetBundleInfo>>(ProcedureLauncher.procedureMarkHead + ProcedureCheckLocalFile.netFilesName);
+		FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* L_3 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___dataBase_3;
+		NullCheck(L_3);
+		Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* L_4;
+		L_4 = FSM_DataBase_GetData_TisDictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA_m9BF56EADB592F5C28440EAD3CE462220320299E5(L_3, _stringLiteral70DC673A7344F4CD8C84EF58757850C27DBB339B, FSM_DataBase_GetData_TisDictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA_m9BF56EADB592F5C28440EAD3CE462220320299E5_RuntimeMethod_var);
+		V_0 = L_4;
+		// localFiles = dataBase.GetData<Dictionary<string, AssetBundleInfo>>(ProcedureLauncher.procedureMarkHead + ProcedureCheckLocalFile.localFilesName);
+		FSM_DataBase_tFE3F2EF2B383130C649018106B9663CC0857807D* L_5 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___dataBase_3;
+		NullCheck(L_5);
+		Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* L_6;
+		L_6 = FSM_DataBase_GetData_TisDictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA_m9BF56EADB592F5C28440EAD3CE462220320299E5(L_5, _stringLiteralE42BC8B34DED3954887AE578B6CF1390229CE4A6, FSM_DataBase_GetData_TisDictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA_m9BF56EADB592F5C28440EAD3CE462220320299E5_RuntimeMethod_var);
+		V_1 = L_6;
 		// }
-		goto IL_0052;
+		goto IL_004e;
 	}// end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
 		{
 			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
-			goto CATCH_0043;
+			goto CATCH_003f;
 		}
 		throw e;
 	}
 
-CATCH_0043:
+CATCH_003f:
 	{// begin catch(System.Exception)
 		// catch (System.Exception)
 		// subMachine.ChangeState(ProcedureLaunchProcess.ProcedureError);
-		RuntimeObject* L_11 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___subMachine_1;
-		NullCheck(L_11);
-		InterfaceActionInvoker1< int32_t >::Invoke(0 /* System.Void GameBase.FSM.IFSM_Machine`1<ProcedureLaunchProcess>::ChangeState(TStateId) */, ((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&IFSM_Machine_1_tDAD178AE60E63943B1E9AE6C50382824D9715340_il2cpp_TypeInfo_var)), L_11, 5);
+		RuntimeObject* L_7 = ((FSM_Status_1_tE24763F7D42C078C27B6EEC314FF887CD6E366E4*)__this)->___subMachine_1;
+		NullCheck(L_7);
+		InterfaceActionInvoker1< int32_t >::Invoke(0 /* System.Void GameBase.FSM.IFSM_Machine`1<ProcedureLaunchProcess>::ChangeState(TStateId) */, ((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&IFSM_Machine_1_tDAD178AE60E63943B1E9AE6C50382824D9715340_il2cpp_TypeInfo_var)), L_7, 5);
 		// throw;
 		IL2CPP_RETHROW_MANAGED_EXCEPTION(IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));
 	}// end catch (depth: 1)
 
-IL_0052:
+IL_004e:
 	{
 		// foreach (var file in netFiles)
-		Dictionary_2_t7F80FA10CA3C769BB6F27823DC8FE8DE9A7570E1* L_12 = V_0;
-		NullCheck(L_12);
-		Enumerator_t0385EF61BFB3958FF00B3158C8DCCD8C4F9A0F9F L_13;
-		L_13 = Dictionary_2_GetEnumerator_m660B966EF921340FDEF6FCB04DB287384C7BDAF1(L_12, Dictionary_2_GetEnumerator_m660B966EF921340FDEF6FCB04DB287384C7BDAF1_RuntimeMethod_var);
-		V_4 = L_13;
+		Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* L_8 = V_0;
+		NullCheck(L_8);
+		Enumerator_t2F285A5F651E4421FEB1F4F8A6523E2693919161 L_9;
+		L_9 = Dictionary_2_GetEnumerator_mDAC471D4AE2C5DDDDD76407B03D54B58C1C35A47(L_8, Dictionary_2_GetEnumerator_mDAC471D4AE2C5DDDDD76407B03D54B58C1C35A47_RuntimeMethod_var);
+		V_4 = L_9;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_00d1:
+FINALLY_00ff:
 			{// begin finally (depth: 1)
-				Enumerator_Dispose_mB29CA80469B0BC64A6B55A8B94ECE58A2407BD98((&V_4), Enumerator_Dispose_mB29CA80469B0BC64A6B55A8B94ECE58A2407BD98_RuntimeMethod_var);
+				Enumerator_Dispose_m5830C7B8053BF1AC660157CCD70F3E358719610B((&V_4), Enumerator_Dispose_m5830C7B8053BF1AC660157CCD70F3E358719610B_RuntimeMethod_var);
 				return;
 			}// end finally (depth: 1)
 		});
 		try
 		{// begin try (depth: 1)
 			{
-				goto IL_00c6_1;
+				goto IL_00f1_1;
 			}
 
-IL_005c_1:
+IL_005b_1:
 			{
 				// foreach (var file in netFiles)
-				KeyValuePair_2_tC1B7927D299042E14CC8B96EC525A65E5009BE9F L_14;
-				L_14 = Enumerator_get_Current_mA48DC39CB2D22EA87B7E910C2D86B5F8B2D24944_inline((&V_4), Enumerator_get_Current_mA48DC39CB2D22EA87B7E910C2D86B5F8B2D24944_RuntimeMethod_var);
-				V_5 = L_14;
-				// assetFile = file.Value;
-				AssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F* L_15;
-				L_15 = KeyValuePair_2_get_Value_m2B2FE5D059DF47EB275B90F4B24C9DB1C43384EF_inline((&V_5), KeyValuePair_2_get_Value_m2B2FE5D059DF47EB275B90F4B24C9DB1C43384EF_RuntimeMethod_var);
-				V_3 = L_15;
-				// if ((assetFile.fileFlag & AssetFile.AssetFileFlag.ExtendDLC) == AssetFile.AssetFileFlag.ExtendDLC)
-				AssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F* L_16 = V_3;
-				NullCheck(L_16);
-				int32_t L_17 = L_16->___fileFlag_7;
-				if ((((int32_t)((int32_t)((int32_t)L_17&4))) == ((int32_t)4)))
+				KeyValuePair_2_tF49673347BC4455B4E13AD20AD95DD75639372AC L_10;
+				L_10 = Enumerator_get_Current_m4ACEF49AE68581D2CE9BE7F1745723EA2401CB8B_inline((&V_4), Enumerator_get_Current_m4ACEF49AE68581D2CE9BE7F1745723EA2401CB8B_RuntimeMethod_var);
+				V_5 = L_10;
+				// netFile = file.Value;
+				AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760* L_11;
+				L_11 = KeyValuePair_2_get_Value_m187523401919D29F6826C11ECA71B3EF04C048AC_inline((&V_5), KeyValuePair_2_get_Value_m187523401919D29F6826C11ECA71B3EF04C048AC_RuntimeMethod_var);
+				V_3 = L_11;
+				// if (netFile.fileFlag == AssetBundleInfo.AssetFileFlag.ExtendDLC)
+				AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760* L_12 = V_3;
+				NullCheck(L_12);
+				int32_t L_13 = L_12->___fileFlag_8;
+				if ((((int32_t)L_13) == ((int32_t)4)))
 				{
-					goto IL_00c6_1;
+					goto IL_00f1_1;
 				}
 			}
 			{
-				// if (localFiles == null || !localFiles.TryGetValue(file.Key, out localMD5) || localMD5 != assetFile.md5Code)
-				Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_18 = V_1;
-				if (!L_18)
+				// if (localFiles == null || !localFiles.TryGetValue(file.Key, out localFile) || localFile.md5Code != netFile.md5Code)
+				Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* L_14 = V_1;
+				if (!L_14)
 				{
-					goto IL_009a_1;
+					goto IL_009c_1;
 				}
 			}
 			{
-				Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_19 = V_1;
-				String_t* L_20;
-				L_20 = KeyValuePair_2_get_Key_m74ED8F124B9754CF75E4FC3F437BD669CC57E0EA_inline((&V_5), KeyValuePair_2_get_Key_m74ED8F124B9754CF75E4FC3F437BD669CC57E0EA_RuntimeMethod_var);
-				NullCheck(L_19);
-				bool L_21;
-				L_21 = Dictionary_2_TryGetValue_mA86D965CB5F74CE8675B7995C61945BEB6E594CB(L_19, L_20, (&V_2), Dictionary_2_TryGetValue_mA86D965CB5F74CE8675B7995C61945BEB6E594CB_RuntimeMethod_var);
-				if (!L_21)
+				Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* L_15 = V_1;
+				String_t* L_16;
+				L_16 = KeyValuePair_2_get_Key_m70A38BF5083D72C13BB3DD841780FC0F5E9EBFB2_inline((&V_5), KeyValuePair_2_get_Key_m70A38BF5083D72C13BB3DD841780FC0F5E9EBFB2_RuntimeMethod_var);
+				NullCheck(L_15);
+				bool L_17;
+				L_17 = Dictionary_2_TryGetValue_m81A8885E30E5BFD48BAB5411809FBD2195D761E8(L_15, L_16, (&V_2), Dictionary_2_TryGetValue_m81A8885E30E5BFD48BAB5411809FBD2195D761E8_RuntimeMethod_var);
+				if (!L_17)
 				{
-					goto IL_009a_1;
+					goto IL_009c_1;
 				}
 			}
 			{
-				String_t* L_22 = V_2;
-				AssetFile_tAB1087AC09B602E4D6552C5BFCF536F2AB22158F* L_23 = V_3;
-				NullCheck(L_23);
-				String_t* L_24 = L_23->___md5Code_3;
-				bool L_25;
-				L_25 = String_op_Inequality_m8C940F3CFC42866709D7CA931B3D77B4BE94BCB6(L_22, L_24, NULL);
-				if (!L_25)
+				AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760* L_18 = V_2;
+				NullCheck(L_18);
+				String_t* L_19 = L_18->___md5Code_2;
+				AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760* L_20 = V_3;
+				NullCheck(L_20);
+				String_t* L_21 = L_20->___md5Code_2;
+				bool L_22;
+				L_22 = String_op_Inequality_m8C940F3CFC42866709D7CA931B3D77B4BE94BCB6(L_19, L_21, NULL);
+				if (!L_22)
 				{
-					goto IL_00c6_1;
+					goto IL_00f1_1;
 				}
 			}
 
-IL_009a_1:
+IL_009c_1:
 			{
-				// if (file.Key.Contains("001"))
-				String_t* L_26;
-				L_26 = KeyValuePair_2_get_Key_m74ED8F124B9754CF75E4FC3F437BD669CC57E0EA_inline((&V_5), KeyValuePair_2_get_Key_m74ED8F124B9754CF75E4FC3F437BD669CC57E0EA_RuntimeMethod_var);
-				NullCheck(L_26);
-				bool L_27;
-				L_27 = String_Contains_m6D77B121FADA7CA5F397C0FABB65DA62DF03B6C3(L_26, _stringLiteralC8BFC9FC654E0D1FDE0321DFA9A01EB546F912B2, NULL);
+				// if (file.Value.fileFlag.HasFlag(AssetBundleInfo.AssetFileFlag.Dll))
+				AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760* L_23;
+				L_23 = KeyValuePair_2_get_Value_m187523401919D29F6826C11ECA71B3EF04C048AC_inline((&V_5), KeyValuePair_2_get_Value_m187523401919D29F6826C11ECA71B3EF04C048AC_RuntimeMethod_var);
+				NullCheck(L_23);
+				int32_t L_24 = L_23->___fileFlag_8;
+				int32_t L_25 = L_24;
+				int32_t L_26 = 1;
+				bool L_27 = il2cpp_codegen_enum_has_flag((int32_t)L_25, (int32_t)L_26);
 				if (!L_27)
 				{
-					goto IL_00b4_1;
+					goto IL_00c1_1;
 				}
 			}
 			{
@@ -4803,28 +4692,45 @@ IL_009a_1:
 				__this->___m_UpdateCShare_9 = (bool)1;
 			}
 
-IL_00b4_1:
+IL_00c1_1:
 			{
-				// m_DownloadList.Add(file.Key);
+				// if (!m_DownloadList.Contains(file.Value.assetPath))
 				List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_28 = __this->___m_DownloadList_10;
-				String_t* L_29;
-				L_29 = KeyValuePair_2_get_Key_m74ED8F124B9754CF75E4FC3F437BD669CC57E0EA_inline((&V_5), KeyValuePair_2_get_Key_m74ED8F124B9754CF75E4FC3F437BD669CC57E0EA_RuntimeMethod_var);
+				AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760* L_29;
+				L_29 = KeyValuePair_2_get_Value_m187523401919D29F6826C11ECA71B3EF04C048AC_inline((&V_5), KeyValuePair_2_get_Value_m187523401919D29F6826C11ECA71B3EF04C048AC_RuntimeMethod_var);
+				NullCheck(L_29);
+				String_t* L_30 = L_29->___assetPath_1;
 				NullCheck(L_28);
-				List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_inline(L_28, L_29, List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_RuntimeMethod_var);
-			}
-
-IL_00c6_1:
-			{
-				// foreach (var file in netFiles)
-				bool L_30;
-				L_30 = Enumerator_MoveNext_m490C66215F745351442D1C804CAB969F59C1BFE4((&V_4), Enumerator_MoveNext_m490C66215F745351442D1C804CAB969F59C1BFE4_RuntimeMethod_var);
-				if (L_30)
+				bool L_31;
+				L_31 = List_1_Contains_m359254483BE42CAD4DCA8FBAFB87473FB4CF00E1(L_28, L_30, List_1_Contains_m359254483BE42CAD4DCA8FBAFB87473FB4CF00E1_RuntimeMethod_var);
+				if (L_31)
 				{
-					goto IL_005c_1;
+					goto IL_00f1_1;
 				}
 			}
 			{
-				goto IL_00df;
+				// m_DownloadList.Add(file.Value.assetPath);
+				List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_32 = __this->___m_DownloadList_10;
+				AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760* L_33;
+				L_33 = KeyValuePair_2_get_Value_m187523401919D29F6826C11ECA71B3EF04C048AC_inline((&V_5), KeyValuePair_2_get_Value_m187523401919D29F6826C11ECA71B3EF04C048AC_RuntimeMethod_var);
+				NullCheck(L_33);
+				String_t* L_34 = L_33->___assetPath_1;
+				NullCheck(L_32);
+				List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_inline(L_32, L_34, List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_RuntimeMethod_var);
+			}
+
+IL_00f1_1:
+			{
+				// foreach (var file in netFiles)
+				bool L_35;
+				L_35 = Enumerator_MoveNext_m1ECBF8AA45E71A6B3D9348C8A76E327048F80622((&V_4), Enumerator_MoveNext_m1ECBF8AA45E71A6B3D9348C8A76E327048F80622_RuntimeMethod_var);
+				if (L_35)
+				{
+					goto IL_005b_1;
+				}
+			}
+			{
+				goto IL_010d;
 			}
 		}// end try (depth: 1)
 		catch(Il2CppExceptionWrapper& e)
@@ -4833,13 +4739,13 @@ IL_00c6_1:
 		}
 	}
 
-IL_00df:
+IL_010d:
 	{
 		// if (localFiles == null)
-		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_31 = V_1;
-		if (L_31)
+		Dictionary_2_t6F59DBC38F539608D6B9C220934154F25735C1AA* L_36 = V_1;
+		if (L_36)
 		{
-			goto IL_00e9;
+			goto IL_0117;
 		}
 	}
 	{
@@ -4847,47 +4753,61 @@ IL_00df:
 		__this->___m_UpdateCShare_9 = (bool)1;
 	}
 
-IL_00e9:
+IL_0117:
 	{
 		// if (m_DownloadList.Count > 0)
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_32 = __this->___m_DownloadList_10;
-		NullCheck(L_32);
-		int32_t L_33;
-		L_33 = List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_inline(L_32, List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_RuntimeMethod_var);
-		if ((((int32_t)L_33) <= ((int32_t)0)))
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_37 = __this->___m_DownloadList_10;
+		NullCheck(L_37);
+		int32_t L_38;
+		L_38 = List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_inline(L_37, List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_RuntimeMethod_var);
+		if ((((int32_t)L_38) <= ((int32_t)0)))
 		{
-			goto IL_0119;
+			goto IL_0179;
 		}
 	}
 	{
-		// m_DownloadList.Add("version.txt");
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_34 = __this->___m_DownloadList_10;
-		NullCheck(L_34);
-		List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_inline(L_34, _stringLiteral0335C65EEF6379144CEBFCCFBA3673189514186C, List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_RuntimeMethod_var);
+		// m_DownloadList.Add(m_GamePath.versionFileName);
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_39 = __this->___m_DownloadList_10;
+		FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35* L_40 = (FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35*)(&__this->___m_GamePath_12);
+		String_t* L_41 = L_40->___versionFileName_3;
+		NullCheck(L_39);
+		List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_inline(L_39, L_41, List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_RuntimeMethod_var);
+		// m_DownloadList.Add(m_GamePath.assetManifestFileName);
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_42 = __this->___m_DownloadList_10;
+		FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35* L_43 = (FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35*)(&__this->___m_GamePath_12);
+		String_t* L_44 = L_43->___assetManifestFileName_2;
+		NullCheck(L_42);
+		List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_inline(L_42, L_44, List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_RuntimeMethod_var);
+		// m_DownloadList.Add(m_GamePath.buildingFileName);
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_45 = __this->___m_DownloadList_10;
+		FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35* L_46 = (FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35*)(&__this->___m_GamePath_12);
+		String_t* L_47 = L_46->___buildingFileName_1;
+		NullCheck(L_45);
+		List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_inline(L_45, L_47, List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_RuntimeMethod_var);
 		// m_IsNeedUpdate = true;
 		__this->___m_IsNeedUpdate_8 = (bool)1;
 		// m_FileDownloadQueue = new AssetFileDownloadQueue();
-		AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620* L_35 = (AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620*)il2cpp_codegen_object_new(AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620_il2cpp_TypeInfo_var);
-		NullCheck(L_35);
-		AssetFileDownloadQueue__ctor_mBBF3B302DAE29BE07C43E4F5BCA4577ADE02E45D(L_35, NULL);
-		__this->___m_FileDownloadQueue_11 = L_35;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_FileDownloadQueue_11), (void*)L_35);
+		AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620* L_48 = (AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620*)il2cpp_codegen_object_new(AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620_il2cpp_TypeInfo_var);
+		NullCheck(L_48);
+		AssetFileDownloadQueue__ctor_mBBF3B302DAE29BE07C43E4F5BCA4577ADE02E45D(L_48, NULL);
+		__this->___m_FileDownloadQueue_11 = L_48;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_FileDownloadQueue_11), (void*)L_48);
 	}
 
-IL_0119:
+IL_0179:
 	{
 		// foreach (var assetName in m_DownloadList)
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_36 = __this->___m_DownloadList_10;
-		NullCheck(L_36);
-		Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1 L_37;
-		L_37 = List_1_GetEnumerator_m7692B5F182858B7D5C72C920D09AD48738D1E70D(L_36, List_1_GetEnumerator_m7692B5F182858B7D5C72C920D09AD48738D1E70D_RuntimeMethod_var);
-		V_6 = L_37;
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_49 = __this->___m_DownloadList_10;
+		NullCheck(L_49);
+		Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1 L_50;
+		L_50 = List_1_GetEnumerator_m7692B5F182858B7D5C72C920D09AD48738D1E70D(L_49, List_1_GetEnumerator_m7692B5F182858B7D5C72C920D09AD48738D1E70D_RuntimeMethod_var);
+		V_6 = L_50;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0185:
+FINALLY_01fc:
 			{// begin finally (depth: 1)
 				Enumerator_Dispose_m592BCCE7B7933454DED2130C810F059F8D85B1D7((&V_6), Enumerator_Dispose_m592BCCE7B7933454DED2130C810F059F8D85B1D7_RuntimeMethod_var);
 				return;
@@ -4896,55 +4816,61 @@ FINALLY_0185:
 		try
 		{// begin try (depth: 1)
 			{
-				goto IL_017a_1;
+				goto IL_01f1_1;
 			}
 
-IL_0128_1:
+IL_0188_1:
 			{
 				// foreach (var assetName in m_DownloadList)
-				String_t* L_38;
-				L_38 = Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_inline((&V_6), Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_RuntimeMethod_var);
-				V_7 = L_38;
-				// string url = Path.Combine(ProcedureLaunchPath.s_NetServerPath, assetName.Replace("\\", "/"));
-				il2cpp_codegen_runtime_class_init_inline(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var);
-				String_t* L_39 = ((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___s_NetServerPath_1;
-				String_t* L_40 = V_7;
-				NullCheck(L_40);
-				String_t* L_41;
-				L_41 = String_Replace_mABDB7003A1D0AEDCAE9FF85E3DFFFBA752D2A166(L_40, _stringLiteral09B11B6CC411D8B9FFB75EAAE9A35B2AF248CE40, _stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1, NULL);
+				String_t* L_51;
+				L_51 = Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_inline((&V_6), Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_RuntimeMethod_var);
+				V_7 = L_51;
+				// string url = Path.Combine(m_GamePath.serverDataPath.AssetPath, assetName.Replace("\\", "/"));
+				FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35* L_52 = (FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35*)(&__this->___m_GamePath_12);
+				SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337* L_53 = (SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337*)(&L_52->___serverDataPath_5);
+				String_t* L_54;
+				L_54 = SpecialPathStruct_get_AssetPath_m3472DD23FCF8E176133DD18235710CDC8E1B6D26(L_53, NULL);
+				String_t* L_55 = V_7;
+				NullCheck(L_55);
+				String_t* L_56;
+				L_56 = String_Replace_mABDB7003A1D0AEDCAE9FF85E3DFFFBA752D2A166(L_55, _stringLiteral09B11B6CC411D8B9FFB75EAAE9A35B2AF248CE40, _stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
-				String_t* L_42;
-				L_42 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_39, L_41, NULL);
-				V_8 = L_42;
-				// string localPath = Path.Combine(ProcedureLaunchPath.localDataPath, assetName).Replace("\\", "/");
-				String_t* L_43 = ((ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_StaticFields*)il2cpp_codegen_static_fields_for(ProcedureLaunchPath_tDC58EF369545685BF2ADEE279A0624B400BC7753_il2cpp_TypeInfo_var))->___localDataPath_0;
-				String_t* L_44 = V_7;
-				String_t* L_45;
-				L_45 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_43, L_44, NULL);
-				NullCheck(L_45);
-				String_t* L_46;
-				L_46 = String_Replace_mABDB7003A1D0AEDCAE9FF85E3DFFFBA752D2A166(L_45, _stringLiteral09B11B6CC411D8B9FFB75EAAE9A35B2AF248CE40, _stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1, NULL);
-				V_9 = L_46;
+				String_t* L_57;
+				L_57 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_54, L_56, NULL);
+				V_8 = L_57;
+				// string localPath = Path.Combine(m_GamePath.downloadDataPath.AssetPath, assetName).Replace("\\", "/");
+				FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35* L_58 = (FilePathStruct_t65A14226D56E2BE3BD39DBAD23F4F2DF35CBCD35*)(&__this->___m_GamePath_12);
+				SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337* L_59 = (SpecialPathStruct_t3E7BC00BD8A6CE6FA1B40705ECB9CD11010BB337*)(&L_58->___downloadDataPath_4);
+				String_t* L_60;
+				L_60 = SpecialPathStruct_get_AssetPath_m3472DD23FCF8E176133DD18235710CDC8E1B6D26(L_59, NULL);
+				String_t* L_61 = V_7;
+				String_t* L_62;
+				L_62 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_60, L_61, NULL);
+				NullCheck(L_62);
+				String_t* L_63;
+				L_63 = String_Replace_mABDB7003A1D0AEDCAE9FF85E3DFFFBA752D2A166(L_62, _stringLiteral09B11B6CC411D8B9FFB75EAAE9A35B2AF248CE40, _stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1, NULL);
+				V_9 = L_63;
 				// m_FileDownloadQueue.Enqueue(url, localPath);
-				AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620* L_47 = __this->___m_FileDownloadQueue_11;
-				String_t* L_48 = V_8;
-				String_t* L_49 = V_9;
-				NullCheck(L_47);
-				AssetFileDownloadQueue_Enqueue_m5EFBF92E9332C6226D1858096655C6DAC8EB58FD(L_47, L_48, L_49, NULL);
+				AssetFileDownloadQueue_t68C3DB1E188D3C9B6CF8F194930B783CA3D71620* L_64 = __this->___m_FileDownloadQueue_11;
+				String_t* L_65 = V_8;
+				String_t* L_66 = V_9;
+				NullCheck(L_64);
+				AssetFileDownloader_tBBB0747F4710B98462AE7A01DC95D371BE62DC46* L_67;
+				L_67 = AssetFileDownloadQueue_Enqueue_m8702B60BB1C75618CA8DC8A68ADB4AAC6DCBA237(L_64, L_65, L_66, NULL);
 			}
 
-IL_017a_1:
+IL_01f1_1:
 			{
 				// foreach (var assetName in m_DownloadList)
-				bool L_50;
-				L_50 = Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED((&V_6), Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED_RuntimeMethod_var);
-				if (L_50)
+				bool L_68;
+				L_68 = Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED((&V_6), Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED_RuntimeMethod_var);
+				if (L_68)
 				{
-					goto IL_0128_1;
+					goto IL_0188_1;
 				}
 			}
 			{
-				goto IL_0193;
+				goto IL_020a;
 			}
 		}// end try (depth: 1)
 		catch(Il2CppExceptionWrapper& e)
@@ -4953,7 +4879,7 @@ IL_017a_1:
 		}
 	}
 
-IL_0193:
+IL_020a:
 	{
 		// }
 		return;
@@ -5140,13 +5066,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) 
-{
-	{
-		RuntimeObject* L_0 = __this->____current_3;
-		return L_0;
-	}
-}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230 Enumerator_get_Current_mE3475384B761E1C7971D3639BD09117FE8363422_gshared_inline (Enumerator_tEA93FE2B778D098F590CA168BEFC4CD85D73A6B9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5166,6 +5085,24 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get
 	{
 		RuntimeObject* L_0 = __this->___value_1;
 		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->____current_3;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GameSetting_1_Init_mE3FD6314A6AEA20E39F0639BADFD2AFC3DFF5E81_gshared_inline (RuntimeObject* ___0_instance, const RuntimeMethod* method) 
+{
+	{
+		// m_Value = instance;
+		RuntimeObject* L_0 = ___0_instance;
+		((GameSetting_1_t775031D67363373C85FDE3F4EE883ED43AC52C5A_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 0)))->___m_Value_4 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((GameSetting_1_t775031D67363373C85FDE3F4EE883ED43AC52C5A_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 0)))->___m_Value_4), (void*)L_0);
+		// }
+		return;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 

@@ -2,7 +2,15 @@
 <linker>
   <assembly fullname="Assembly-GameBase">
     <type fullname="DictionaryEx`2" preserve="all" />
-    <type fullname="LGameFramework.GameBase.AssetFile" preserve="all" />
+    <type fullname="GameSetting`1" preserve="all" />
+    <type fullname="LGameFramework.GameBase.AssetBundleInfo" preserve="all" />
+    <type fullname="LGameFramework.GameBase.AssetFileDownloader" preserve="all" />
+    <type fullname="LGameFramework.GameBase.AssetFileDownloadQueue" preserve="all" />
+    <type fullname="LGameFramework.GameBase.AssetFileInfo" preserve="all" />
+    <type fullname="LGameFramework.GameBase.GamePathSetting" preserve="all" />
+    <type fullname="LGameFramework.GameBase.GamePathSetting/FilePathStruct" preserve="all" />
+    <type fullname="LGameFramework.GameBase.GamePathSetting/SpecialPathStruct" preserve="all" />
+    <type fullname="LGameFramework.GameBase.JsonHelper" preserve="all" />
     <type fullname="LGameFramework.GameBase.Pool.Pool`1" preserve="all" />
   </assembly>
   <assembly fullname="mscorlib">
@@ -29,6 +37,7 @@
     <type fullname="System.EventHandler`1" preserve="all" />
     <type fullname="System.IDisposable" preserve="all" />
     <type fullname="System.Int32" preserve="all" />
+    <type fullname="System.IO.File" preserve="all" />
     <type fullname="System.IO.Path" preserve="all" />
     <type fullname="System.Nullable`1" preserve="all" />
     <type fullname="System.Object" preserve="all" />
@@ -52,6 +61,9 @@
     <type fullname="System.Collections.Generic.LinkedListNode`1" preserve="all" />
     <type fullname="System.Collections.Generic.Queue`1" preserve="all" />
     <type fullname="System.Diagnostics.Stopwatch" preserve="all" />
+  </assembly>
+  <assembly fullname="System.Core">
+    <type fullname="System.Linq.Enumerable" preserve="all" />
   </assembly>
   <assembly fullname="Unity.InputSystem">
     <type fullname="UnityEngine.InputSystem.IInputActionCollection" preserve="all" />
@@ -83,7 +95,6 @@
     <type fullname="UnityEngine.AudioListener" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.CoreModule">
-    <type fullname="UnityEngine.Application" preserve="all" />
     <type fullname="UnityEngine.AsyncOperation" preserve="all" />
     <type fullname="UnityEngine.BoundingSphere" preserve="all" />
     <type fullname="UnityEngine.Camera" preserve="all" />
@@ -101,6 +112,7 @@
     <type fullname="UnityEngine.Events.UnityEvent`1" preserve="all" />
     <type fullname="UnityEngine.GameObject" preserve="all" />
     <type fullname="UnityEngine.ISerializationCallbackReceiver" preserve="all" />
+    <type fullname="UnityEngine.KeyCode" preserve="all" />
     <type fullname="UnityEngine.LayerMask" preserve="all" />
     <type fullname="UnityEngine.Material" preserve="all" />
     <type fullname="UnityEngine.Mathf" preserve="all" />
@@ -120,6 +132,9 @@
     <type fullname="UnityEngine.Vector2" preserve="all" />
     <type fullname="UnityEngine.Vector2Int" preserve="all" />
     <type fullname="UnityEngine.Vector3" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.InputLegacyModule">
+    <type fullname="UnityEngine.Input" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.Physics2DModule">
     <type fullname="UnityEngine.Rigidbody2D" preserve="all" />

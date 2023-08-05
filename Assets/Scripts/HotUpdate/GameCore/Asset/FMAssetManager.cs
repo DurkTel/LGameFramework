@@ -25,7 +25,11 @@ namespace GameCore.Asset
         /// <summary>
         /// 正在加载的资源加载器
         /// </summary>
-        private DictionaryEx<string, AssetLoader> m_AssetLoaders = new DictionaryEx<string, AssetLoader>();
+        private DictionaryEx<string, Loader> m_AssetLoaders = new DictionaryEx<string, Loader>();
+        /// <summary>
+        /// 正在加载的AB加载器
+        /// </summary>
+        private List<AssetBundleLoader> m_AssetBundleLoader;
         /// <summary>
         /// 加载完成的列表
         /// </summary>
@@ -63,9 +67,25 @@ namespace GameCore.Asset
             if (m_FileDownloadQueue != null)
                 m_FileDownloadQueue.Update();
 
+            if (m_AssetBundleLoader != null && m_AssetBundleLoader.Count > 0)
+            {
+                AssetBundleLoader abLoader;
+                for (int i = m_AssetBundleLoader.Count; i > 0; i--)
+                {
+                    abLoader = m_AssetBundleLoader[i];
+                    abLoader.Update();
+                    if (abLoader.IsDone)
+                    {
+                        abLoader.onComplete?.Invoke(abLoader);
+                        abLoader.Dispose();
+                        m_AssetBundleLoader.RemoveAt(i);
+                    }
+                }
+            }
+
             if (m_AssetLoaders.Count <= 0) return;
 
-            AssetLoader loader;
+            Loader loader;
 
             //更新当前每个加载器的进度
             for (int i = 0; i < m_AssetLoaders.keyList.Count; i++)
@@ -110,6 +130,7 @@ namespace GameCore.Asset
                 if (m_WaitDestroyABList.Contains(abName))
                     continue;
 
+                //依赖引用为0 且源对象引用为0 且不在加载资源中 准备开始卸载
                 if (record.DpendsReferenceCount <= 0 && record.RawReferenceCount <= 0 && !record.IsAssetLoading)
                 {
                     record.BeginDestroyTime = unscaleDeltaTime;
@@ -127,10 +148,21 @@ namespace GameCore.Asset
                     Pool<AssetBundleRecord>.Release(record);
                     m_WaitDestroyABList.RemoveAt(i);
                     m_AllAB.Remove(abName);
+
+                    //减少依赖引用
+                    AssetManifest_Bundle assetManifest = GetAssetManifest_Bundle();
+                    string[] depends = assetManifest.GetDependsName(abName);
+                    foreach (string depend in depends)
+                        if (TryGetAssetBundle(depend, out record))
+                            record.DpendsReferenceCount--;
                 }
             }
         }
 
+        /// <summary>
+        /// 获取资源清单
+        /// </summary>
+        /// <returns></returns>
         public AssetManifest_Bundle GetAssetManifest_Bundle()
         {
             if (m_FileManifest == null)
@@ -195,6 +227,15 @@ namespace GameCore.Asset
         }
 
         /// <summary>
+        /// 获取一个AB包
+        /// </summary>
+        /// <param name="abName">包名</param>
+        public AssetBundleRecord GetAssetBundle(string abName)
+        {
+            return m_AllAB[abName];
+        }
+
+        /// <summary>
         /// 是否存在这个AB包
         /// </summary>
         /// <param name="abName"></param>
@@ -204,7 +245,13 @@ namespace GameCore.Asset
             return m_AllAB.ContainsKey(abName);
         }
 
-        public AssetLoader LoadAssetAsync<T>(string assetName)
+        /// <summary>
+        /// 异步加载
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="assetName"></param>
+        /// <returns></returns>
+        public Loader LoadAssetAsync<T>(string assetName)
         {
             return LoadAssetAsync(assetName, typeof(T));
         }
@@ -215,16 +262,16 @@ namespace GameCore.Asset
         /// <param name="assetName"></param>
         /// <param name="type"></param>
         /// <returns></returns>
-        public AssetLoader LoadAssetAsync(string assetName, Type type)
+        public Loader LoadAssetAsync(string assetName, Type type)
         {
-            AssetLoader loader;
+            Loader loader;
 
             if (!m_AssetLoaders.TryGetValue(assetName, out loader))
             {
                 switch (s_AssetLoadMode)
                 {
                     case AssetLoadMode.AssetBundle:
-                        loader = new AssetBundleLoader(assetName.ToLower(), type, true);
+                        loader = new AssetLoader(assetName.ToLower(), type, true);
                         break;
                     case AssetLoadMode.Editor:
                         loader = new AssetEditorLoader(assetName, type);
@@ -247,14 +294,14 @@ namespace GameCore.Asset
         /// <returns></returns>
         public T LoadAsset<T>(string assetName) where T : UnityEngine.Object
         {
-            AssetLoader loader;
+            Loader loader;
 
             if (!m_AssetLoaders.TryGetValue(assetName, out loader))
             {
                 switch (s_AssetLoadMode)
                 {
                     case AssetLoadMode.AssetBundle:
-                        loader = new AssetBundleLoader(assetName.ToLower(), typeof(T), false);
+                        loader = new AssetLoader(assetName.ToLower(), typeof(T), false);
                         break;
                     case AssetLoadMode.Editor:
                         loader = new AssetEditorLoader(assetName, typeof(T));
@@ -272,10 +319,37 @@ namespace GameCore.Asset
             return loader.GetRawObject<T>();
         }
 
-        public void EnqueueDownload(string downloadURL, string downloadPath)
+        /// <summary>
+        /// 加载AB包
+        /// </summary>
+        /// <param name="abName">包名</param>
+        /// <param name="async">是否异步</param>
+        public void LoadAssetBundle(string abName, bool async)
+        {
+            string[] depends = GetAssetManifest_Bundle().GetDependsName(abName);
+            foreach (string depend in depends)
+            {
+                LoadAssetBundleInternal(depend, async);
+            }
+
+            LoadAssetBundleInternal(abName, async);
+        }
+
+        private void LoadAssetBundleInternal(string abName, bool async)
+        {
+            if (!m_AssetLoaders.ContainsKey(abName))
+            {
+                Loader loader = new AssetBundleLoader(abName, typeof(AssetBundleLoader), async);
+                loader.Module = this;
+                loader.Update();
+                m_AssetLoaders.Add(abName, loader);
+            }
+        }
+
+        public AssetFileDownloader EnqueueDownload(string downloadURL, string downloadPath)
         {
             m_FileDownloadQueue ??= new AssetFileDownloadQueue();
-            m_FileDownloadQueue.Enqueue(downloadURL, downloadPath);
+            return m_FileDownloadQueue.Enqueue(downloadURL, downloadPath);
         }
 
         /// <summary>
@@ -284,7 +358,7 @@ namespace GameCore.Asset
         /// <param name="assetName"></param>
         public void RemoveAssetLoader(string assetName)
         {
-            if (m_AssetLoaders.TryGetValue(assetName, out AssetLoader loader))
+            if (m_AssetLoaders.TryGetValue(assetName, out Loader loader))
             {
                 loader.Dispose();
                 m_AssetLoaders.Remove(assetName);

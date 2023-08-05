@@ -140,7 +140,7 @@ namespace GameCore.GUI
 
             layer.AddView(view);
 
-            AssetLoader loader = m_AssetModule.LoadAssetAsync<GameObject>(view.PrefabName);
+            Loader loader = m_AssetModule.LoadAssetAsync<GameObject>(view.PrefabName);
             loader.onComplete = (loader) => { view.OnLoadComplete(loader); };
             return view as T;
         }

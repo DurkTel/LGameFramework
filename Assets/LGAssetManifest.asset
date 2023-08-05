@@ -904,10 +904,10 @@ MonoBehaviour:
   bundleList:
   - bundleName: 001.asset
     assetPath: 001/001.asset
-    md5Code: 1aeb61654faa50cb1fef2b4ac4df6a0b
-    size: 46280
+    md5Code: 0ce9f4343d532ecb9229cd6f93ffa2be
+    size: 47490
     priority: 0
-    crc: 1106022251
+    crc: 3131137019
     dependencieBundleNames: []
     allFiles:
     - assembly-gamecore.dll
