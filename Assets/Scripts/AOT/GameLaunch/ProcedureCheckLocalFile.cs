@@ -6,17 +6,19 @@ using UnityEngine.Networking;
 
 public class ProcedureCheckLocalFile : FSM_Status<ProcedureLaunchProcess>
 {
-    public static string localFilesName = "LocalFiles";
+    public const string localFilesName = "LocalFiles";
 
-    public static string netFilesName = "NetFiles";
+    public const string netFilesName = "NetFiles";
 
-    private Dictionary<string, AssetFile> m_LocalFiles;
+    private Dictionary<string, AssetBundleInfo> m_LocalFiles;
 
-    private Dictionary<string, AssetFile> m_NetFiles;
+    private Dictionary<string, AssetBundleInfo> m_NetFiles;
 
     private UnityWebRequest m_WebRequest;
 
     private UnityWebRequestAsyncOperation m_WebRequestAsync;
+
+    private GamePathSetting.FilePathStruct m_GamePath;
 
     public override void OnAction()
     {
@@ -29,7 +31,7 @@ public class ProcedureCheckLocalFile : FSM_Status<ProcedureLaunchProcess>
             }
 
             string str = m_WebRequest.downloadHandler.text;
-            m_NetFiles = JsonHelper.FromJsonToDictionary<string, AssetFile>(str, true);
+            m_NetFiles = JsonHelper.FromJsonToDictionary<string, AssetBundleInfo>(str, true);
 
             dataBase.SetData(ProcedureLauncher.procedureMarkHead + netFilesName, m_NetFiles);
 
@@ -40,10 +42,7 @@ public class ProcedureCheckLocalFile : FSM_Status<ProcedureLaunchProcess>
             //版本号相同 检查文件差异
             if (!needUpdate)
             {
-
-
-
-                AssetFile localFile;
+                AssetBundleInfo localFile;
                 foreach (var nextFile in m_NetFiles)
                 {
                     //本地没有该文件或md5不同
@@ -65,20 +64,21 @@ public class ProcedureCheckLocalFile : FSM_Status<ProcedureLaunchProcess>
 
     public override void OnEnter()
     {
-        string buildPath = Path.Combine(ProcedureLaunchPath.localDataPath, "buildingFile.json");
+        m_GamePath = GamePathSetting.Get().CurrentPlatform();
+        string buildPath = Path.Combine(m_GamePath.downloadDataPath.AssetPath, m_GamePath.buildingFileName);
         if (!File.Exists(buildPath))
-            buildPath = Path.Combine(ProcedureLaunchPath.s_BuildInPath, "buildingFile.json");
+            buildPath = Path.Combine(m_GamePath.buildingPath.AssetPath, m_GamePath.buildingFileName);
 
         if (File.Exists(buildPath))
         {
             string allData = File.ReadAllText(buildPath);
             if (!string.IsNullOrEmpty(allData))
-                m_LocalFiles = JsonHelper.FromJsonToDictionary<string, AssetFile>(allData, true);
+                m_LocalFiles = JsonHelper.FromJsonToDictionary<string, AssetBundleInfo>(allData, true);
         }
 
         dataBase.SetData(ProcedureLauncher.procedureMarkHead + localFilesName, m_LocalFiles);
 
-        m_WebRequest = UnityWebRequest.Get(Path.Combine(ProcedureLaunchPath.s_NetServerPath, "buildingFile.json"));
+        m_WebRequest = UnityWebRequest.Get(Path.Combine(m_GamePath.serverDataPath.AssetPath, m_GamePath.buildingFileName));
         m_WebRequestAsync = m_WebRequest.SendWebRequest();
 
     }

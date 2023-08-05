@@ -9,16 +9,34 @@ using LGameFramework.GameBase;
 /// </summary>
 public class ProcedureLauncher : MonoBehaviour
 {
-    public static string procedureMarkHead = "Procedure_";
+    /// <summary>
+    /// 记录标识
+    /// </summary>
+    public const string procedureMarkHead = "Procedure_";
 
-    public GameLaunchSetting launchSetting;
-
+    /// <summary>
+    /// 流程状态机
+    /// </summary>
     private ProcedureFSM m_Procedure;
+
+    /// <summary>
+    /// 启动设置
+    /// </summary>
+    [SerializeField]
+    private GameLaunchSetting m_GameLaunchSetting;
+
+    /// <summary>
+    /// 路径设置
+    /// </summary>
+    [SerializeField]
+    private GamePathSetting m_GamePathSetting;
+
 
     private void Awake()
     {
-        if (launchSetting == null)
-            launchSetting = ScriptableObject.CreateInstance<GameLaunchSetting>();
+        //如果有挂载就用挂载的实例 没有就用默认的
+        GameLaunchSetting.Init(m_GameLaunchSetting);
+        GamePathSetting.Init(m_GamePathSetting);
 
         m_Procedure = new ProcedureFSM();
         m_Procedure.dataBase = gameObject.AddComponent<FSM_DataBase>();

@@ -1,11 +1,12 @@
+using PlasticGui.WorkspaceWindow;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace LGameFramework.GameBase
 {
-    [CreateAssetMenu(fileName = "Launch Settings", menuName = "LGameFramework/Launch Settings")]
-    public class GameLaunchSetting : ScriptableObject
+    [CreateAssetMenu(fileName = "Launch Setting", menuName = "LGameFramework/Launch Setting")]
+    public class GameLaunchSetting : GameSetting<GameLaunchSetting>
     {
         /// <summary>
         /// 游戏帧数
@@ -31,8 +32,6 @@ namespace LGameFramework.GameBase
         /// 资源加载模式
         /// </summary>
         public AssetLoadMode assetLoadMode = AssetLoadMode.AssetBundle;
-
-
 
         public enum AssetLoadMode
         { 

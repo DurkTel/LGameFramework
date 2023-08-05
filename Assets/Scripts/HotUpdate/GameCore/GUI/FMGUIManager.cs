@@ -74,23 +74,23 @@ namespace GameCore.GUI
         }
 
 
-        internal bool IsShowIng<T>()
+        public bool IsShowIng<T>()
         { 
             Type viewType = typeof(T);
             return m_AllViewDict.ContainsKey(viewType);
         }
 
-        internal bool IsCanOpenView<T>()
+        public bool IsCanOpenView<T>()
         {
             return true;
         }
 
-        internal bool CloseView<T>() where T : GUIView
+        public bool CloseView<T>() where T : GUIView
         {
             return CloseView(typeof(T));
         }
 
-        internal bool CloseView(Type type)
+        public bool CloseView(Type type)
         {
             GUIView view;
             if (m_AllViewDict.TryGetValue(type, out view))
@@ -102,7 +102,7 @@ namespace GameCore.GUI
             return false;
         }
 
-        internal T OpenView<T>() where T : GUIView, new()
+        public T OpenView<T>() where T : GUIView, new()
         {
             GUIView view = null;
             if (!IsCanOpenView<T>()) return null;

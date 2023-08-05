@@ -19,6 +19,8 @@ public class Build : EditorWindow
     private static string s_outPutNameCSharp = "001.asset";
     private static string s_outPutNameDev = "002";
 
+    public static string[] s_HotUpdateDllName = new string[] { "Assembly-GameCore.dll", "Assembly-GameLogic.dll" };
+
     private LBuildParameter m_LbuildParameter;
 
     [MenuItem("LGame/LBuild")]
@@ -237,13 +239,13 @@ public class Build : EditorWindow
 
         BuildUtility.CollectionFile(list, "Assets/ArtModules/GameLogic.prefab");
 
-        CollectionAudio(ref list, AssetDefine.s_AudioBuildPath);
+        CollectionAudio(ref list, BuildPath.s_AudioBuildPath);
 
-        CollectionEffect(ref list, AssetDefine.s_EffectBuildPath);
+        CollectionEffect(ref list, BuildPath.s_EffectBuildPath);
 
-        CollectionUI(ref list, AssetDefine.s_GuiBuildPath);
+        CollectionUI(ref list, BuildPath.s_GuiBuildPath);
 
-        CollectionFont(ref list, AssetDefine.s_FontBuildPath);
+        CollectionFont(ref list, BuildPath.s_FontBuildPath);
 
         if (BuildWriteInfo(list, buildParameter.buildOutPath, BuildAssetBundleOptions.ChunkBasedCompression, buildParameter.buildTarget, buildParameter.clearFolder, s_outPutNameDev))
             Debug.Log("打包Dev成功~  ^^_");
@@ -439,11 +441,11 @@ public class Build : EditorWindow
         HybridCLR.Editor.Commands.CompileDllCommand.CompileDll(buildParameter.buildTarget);
         AssetDatabase.Refresh();
 
-        string[] deleteArray = new string[ProcedureLaunchPath.s_HotUpdateDllName.Length];
+        string[] deleteArray = new string[s_HotUpdateDllName.Length];
 
-        for (int i = 0; i < ProcedureLaunchPath.s_HotUpdateDllName.Length; i++)
+        for (int i = 0; i < s_HotUpdateDllName.Length; i++)
         {
-            string dll = ProcedureLaunchPath.s_HotUpdateDllName[i];
+            string dll = s_HotUpdateDllName[i];
             string dllPath = Application.dataPath + "/../HybridCLRData/HotUpdateDlls/" + buildParameter.buildTarget.ToString() + "/" + dll;
 
             if (File.Exists(dllPath))
@@ -503,44 +505,44 @@ public class Build : EditorWindow
         string[] allDir = Directory.GetDirectories(path);
         foreach (var childDir in allDir)
         {
-            string fileName = Path.GetFileNameWithoutExtension(childDir);
+            string childDirName = Path.GetFileNameWithoutExtension(childDir);
             //if (fileName == "000" || fileName == "001")
             //    continue;
 
-            string manifestPath = Path.Combine(childDir, fileName);
+            string manifestPath = Path.Combine(childDir, childDirName);
             AssetBundle manifestAB = AssetBundle.LoadFromFile(manifestPath);
             if (manifestAB == null)
                 continue;
 
             AssetBundleManifest manifest = manifestAB.LoadAsset<AssetBundleManifest>("assetbundlemanifest");
             string[] allAB = manifest.GetAllAssetBundles();
-            foreach (var abPath in allAB)
+            foreach (var abName in allAB)
             {
-                string newABName = fileName + "/" + abPath;
-
-                AssetBundle ab = AssetBundle.LoadFromFile(Path.Combine(path, newABName));
+                string fullABName = childDirName + "/" + abName;
+                string fullABPath = Path.Combine(path, fullABName);
+                AssetBundle ab = AssetBundle.LoadFromFile(fullABPath);
 
                 //获得依赖
-                List<string> dependBundleNames = manifest.GetAllDependencies(abPath).ToList<string>();
-                List<string> newDependBundleNames = new List<string>(0);
-                if (dependBundleNames != null && dependBundleNames.Count > 0)
+                string[] dependBundleNames = manifest.GetAllDependencies(abName);
+                string[] newDependBundleNames = new string[dependBundleNames.Length];
+                if (dependBundleNames != null && dependBundleNames.Length > 0)
                 {
-                    foreach (var depend in dependBundleNames)
-                    {
-                        newDependBundleNames.Add(fileName + "/" + depend);
-                    }
+                    for (int i = 0; i < dependBundleNames.Length; i++)
+                        newDependBundleNames[i] = Path.GetFileName(dependBundleNames[i]);
                 }
+                uint crc = 0;
+                AssetBundleInfo assetBundleInfo = AssetBundleInfo.GetAssetBundleInfo(abName, fullABName, fullABPath);
+                assetBundleInfo.dependencieBundleNames = newDependBundleNames;
+                if (BuildPipeline.GetCRCForAssetBundle(fullABPath, out crc))
+                    assetBundleInfo.crc = crc;
 
                 string[] allAsset = ab.GetAllAssetNames();
-                uint crc = 0;
+                assetBundleInfo.allFiles = allAsset;
+                assetManifest.AddAssetBundle(assetBundleInfo);
+
                 foreach (var assetName in allAsset)
                 {
-                    string fullPath = Path.Combine(path, newABName);
-                    AssetFile file = AssetFile.GetAssetFile(assetName, fullPath);
-                    file.bundleName = newABName;
-                    file.dependencieBundleNames = newDependBundleNames;
-                    if (BuildPipeline.GetCRCForAssetBundle(fullPath, out crc))
-                        file.crc = crc;
+                    AssetFileInfo file = AssetFileInfo.GetAssetFile(assetName, abName);
                     assetManifest.Add(file);
                 }
 
@@ -589,17 +591,17 @@ public class Build : EditorWindow
             File.Delete(versionPath);
 
 
-        Dictionary<string, AssetFile> buildingFile = new Dictionary<string, AssetFile>();
+        Dictionary<string, AssetBundleInfo> buildingFile = new Dictionary<string, AssetBundleInfo>();
         AssetManifest_Bundle assetManifest = GetAssetManifest();
 
-        foreach (var file in assetManifest.assetList)
+        foreach (var file in assetManifest.bundleList)
         {
-            if (file.fileFlag.HasFlag(AssetFile.AssetFileFlag.Build)
-                || file.fileFlag.HasFlag(AssetFile.AssetFileFlag.Dll))
-                buildingFile.Add(file.assetName, file);
+            if (file.fileFlag.HasFlag(AssetBundleInfo.AssetFileFlag.Build)
+                || file.fileFlag.HasFlag(AssetBundleInfo.AssetFileFlag.Dll))
+                buildingFile.Add(file.bundleName, file);
         }
 
-        string str = JsonHelper.ToJason<string, AssetFile>(buildingFile, true);
+        string str = JsonHelper.ToJason<string, AssetBundleInfo>(buildingFile, true);
         File.WriteAllText(filePath, str);
         File.WriteAllText(versionPath, "version|1.00");
         AssetDatabase.Refresh();

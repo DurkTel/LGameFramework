@@ -1,8 +1,10 @@
 using GameCore;
+using LGameFramework.GameBase;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 
 namespace GameCore.Asset
@@ -43,9 +45,14 @@ namespace GameCore.Asset
         /// 加载此资源需要的未加载的依赖包
         /// </summary>
         private List<string> m_NeedDepends;
+        /// <summary>
+        /// 是否下载中
+        /// </summary>
+        private bool m_IsDownloading;
 
         public override void Dispose()
         {
+            m_IsDownloading = false;
             m_Error = false;
             m_IsDone = false;
             m_Async = false;
@@ -61,9 +68,9 @@ namespace GameCore.Asset
             m_NeedDepends = null;
         }
 
-        public override string GetAssetPath(string assetName)
+        public override string GetAssetPath(string bundleName)
         {
-            return Module.GetAssetManifest_Bundle().GetPath(assetName);
+            return Module.GetAssetManifest_Bundle().GetPath(bundleName);
         }
 
         public string GetBundleName(string assetName)
@@ -76,35 +83,36 @@ namespace GameCore.Asset
         /// </summary>
         /// <param name="assetName"></param>
         /// <returns></returns>
-        public List<string> GetAbsentDependsName(string assetName)
+        public List<string> GetAbsentDependsName(string bundleName)
         {
-            List<string> result = Module.GetAssetManifest_Bundle().GetDependsName(assetName);
+            string[] result = Module.GetAssetManifest_Bundle().GetDependsName(bundleName);
+            List<string> ret = result.ToList();
             AssetBundleRecord record;
-            for (int i = result.Count - 1; i >= 0; i--)
+            for (int i = ret.Count - 1; i >= 0; i--)
             {
                 if (Module.TryGetAssetBundle(result[i], out record))
                 {
-                    result.RemoveAt(i);
+                    ret.RemoveAt(i);
                     record.DpendsReferenceCount++; //已经加载过了 引用计数加1
                 }
             }
 
-            return result;
+            return ret;
         }
 
         /// <summary>
         /// 异步加载该资源的依赖包
         /// </summary>
-        /// <param name="assetName"></param>
+        /// <param name="bundleName"></param>
         /// <returns></returns>
-        private bool LoadDependenciesAsync(string assetName)
+        private bool LoadDependenciesAsync(string bundleName)
         {
-            m_NeedDepends ??= GetAbsentDependsName(assetName);
+            m_NeedDepends ??= GetAbsentDependsName(bundleName);
 
             if (m_NeedDepends.Count > 0 && m_DependsBundleRequest == null)
             {
                 string dependName = m_NeedDepends[0];
-                m_DependsBundleRequest = AssetBundle.LoadFromFileAsync(Path.Combine(AssetDefine.localDataPath, dependName));
+                m_DependsBundleRequest = AssetBundle.LoadFromFileAsync(Path.Combine(Module.GamePath.downloadDataPath.AssetPath, GetAssetPath(dependName)));
             }
 
             if (m_DependsBundleRequest != null && m_DependsBundleRequest.isDone)
@@ -121,13 +129,13 @@ namespace GameCore.Asset
         /// <summary>
         /// 同步加载该资源的依赖包
         /// </summary>
-        /// <param name="assetName"></param>
-        private void LoadDependencies(string assetName)
+        /// <param name="bundleName"></param>
+        private void LoadDependencies(string bundleName)
         {
-            m_NeedDepends = GetAbsentDependsName(assetName);
+            m_NeedDepends = GetAbsentDependsName(bundleName);
             foreach (string dependPath in m_NeedDepends)
             {
-                AssetBundle ab = AssetBundle.LoadFromFile(Path.Combine(AssetDefine.localDataPath, dependPath));
+                AssetBundle ab = AssetBundle.LoadFromFile(Path.Combine(Module.GamePath.downloadDataPath.AssetPath, GetAssetPath(dependPath)));
                 AssetBundleRecord record = Module.AddAssetBundle(m_NeedDepends[0], ab);
                 record.DpendsReferenceCount++;
             }
@@ -144,7 +152,20 @@ namespace GameCore.Asset
         private UnityEngine.Object Load(string abName, string assetName, Type type)
         {
             if (!Module.TryGetAssetBundle(abName, out m_AssetRecord))
-                m_AssetRecord = Module.AddAssetBundle(abName, AssetBundle.LoadFromFile(Path.Combine(AssetDefine.localDataPath, abName)));
+            {
+                string assetPath = GetAssetPath(abName);
+                string abPath = Path.Combine(Module.GamePath.buildingPath.AssetPath, assetPath);
+                if (!File.Exists(abPath))
+                {
+                    abPath = Path.Combine(Module.GamePath.downloadDataPath.AssetPath, assetPath);
+                    if (!File.Exists(abPath))
+                    {
+                        Module.EnqueueDownload(Path.Combine(Module.GamePath.downloadDataPath.AssetPath, assetPath), abPath);
+                        m_IsDownloading = true;
+                    }
+                }
+                m_AssetRecord = Module.AddAssetBundle(abName, AssetBundle.LoadFromFile(abPath));
+            }
 
             UnityEngine.Object obj = m_AssetRecord.AssetBundle.LoadAsset(assetName, type);
 
@@ -162,7 +183,7 @@ namespace GameCore.Asset
         {
             if (!Module.TryGetAssetBundle(abName, out m_AssetRecord))
             {
-                m_BundleRequest ??= AssetBundle.LoadFromFileAsync(Path.Combine(AssetDefine.localDataPath, abName));
+                m_BundleRequest ??= AssetBundle.LoadFromFileAsync(Path.Combine(Module.GamePath.downloadDataPath.AssetPath, GetAssetPath(abName)));
                 if (m_BundleRequest.isDone)
                     m_AssetRecord = Module.AddAssetBundle(abName, m_BundleRequest.assetBundle);
                 else
@@ -190,7 +211,7 @@ namespace GameCore.Asset
 
                 if (m_Async)
                 {
-                    if (!LoadDependenciesAsync(m_AssetName))
+                    if (!LoadDependenciesAsync(m_BundleName))
                         return;
 
                     m_AssetRequest ??= LoadAsync(m_BundleName, m_AssetName, m_AssetType);
@@ -200,14 +221,14 @@ namespace GameCore.Asset
                 }
                 else
                 {
-                    LoadDependencies(m_AssetName);
+                    LoadDependencies(m_BundleName);
 
                     m_RawObject = Load(m_BundleName, m_AssetName, m_AssetType);
                 }
 
                 if (m_RawObject != null)
                 {
-                    m_RawObjectInfo = AssetCache.AddRawObject(m_AssetName, m_RawObject);
+                    m_RawObjectInfo = AssetCache.AddRawObject(m_AssetName, m_RawObject, m_BundleName);
                     m_AssetRecord.IsAssetLoading = false;
                     //新加载出源资源
                     m_AssetRecord.RawReferenceCount++;

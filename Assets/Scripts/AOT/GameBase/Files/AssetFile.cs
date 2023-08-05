@@ -4,7 +4,30 @@ using System.IO;
 namespace LGameFramework.GameBase
 {
     [System.Serializable]
-    public class AssetFile
+    public class AssetFileInfo
+    {
+        /// <summary>
+        /// 资源名称
+        /// </summary>
+        public string assetName;
+
+        /// <summary>
+        /// 所属AB包名
+        /// </summary>
+        public string bundleName;
+
+        public static AssetFileInfo GetAssetFile(string assetName, string bundleName)
+        {
+            AssetFileInfo file = new AssetFileInfo();
+            file.assetName = Path.GetFileName(assetName);
+            file.bundleName = Path.GetFileName(bundleName) ;
+            return file;
+        }
+    }
+
+
+    [System.Serializable]
+    public class AssetBundleInfo
     {
         /// <summary>
         /// 首包资源表示初始包体自带的资源
@@ -32,19 +55,14 @@ namespace LGameFramework.GameBase
         }
 
         /// <summary>
-        /// 资源名称
+        /// 所属AB包名
         /// </summary>
-        public string assetName;
+        public string bundleName;
 
         /// <summary>
         /// 资源路径
         /// </summary>
         public string assetPath;
-
-        /// <summary>
-        /// 所属AB包名
-        /// </summary>
-        public string bundleName;
 
         /// <summary>
         /// 资源MD5码记录
@@ -67,25 +85,30 @@ namespace LGameFramework.GameBase
         public uint crc;
 
         /// <summary>
-        /// 该资源依赖的其他AB包名
+        /// 该AB包依赖的其他AB包名
         /// </summary>
-        public List<string> dependencieBundleNames;
+        public string[] dependencieBundleNames;
+
+        /// <summary>
+        /// 该AB包包含的资源
+        /// </summary>
+        public string[] allFiles;
 
         /// <summary>
         /// 资源标识
         /// </summary>
         public AssetFileFlag fileFlag = AssetFileFlag.Build;
 
-        public static AssetFile GetAssetFile(string assetName, string assetPath)
+        public static AssetBundleInfo GetAssetBundleInfo(string bundleName, string assetPath, string fullPath)
         {
             assetPath = assetPath.Replace("\\", "/");
-            AssetFile file = new AssetFile();
-            file.assetName = Path.GetFileName(assetName);
+            fullPath = fullPath.Replace("\\", "/");
+            AssetBundleInfo file = new AssetBundleInfo();
+            file.bundleName = Path.GetFileName(bundleName);
             file.assetPath = assetPath;
-            file.md5Code = Utility.GetMD5(assetPath);
-            file.size = Utility.GetFileSize(assetPath);
+            file.md5Code = Utility.GetMD5(fullPath);
+            file.size = Utility.GetFileSize(fullPath);
             return file;
         }
     }
-
 }

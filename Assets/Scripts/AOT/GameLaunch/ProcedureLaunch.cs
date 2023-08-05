@@ -1,7 +1,5 @@
 using GameBase.FSM;
 using LGameFramework.GameBase;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ProcedureLaunch : FSM_Status<ProcedureLaunchProcess>
@@ -25,7 +23,7 @@ public class ProcedureLaunch : FSM_Status<ProcedureLaunchProcess>
 
     public override void OnEnter()
     {
-        m_Setting = dataBase.GetComponent<ProcedureLauncher>().launchSetting;
+        m_Setting = GameLaunchSetting.Get();
 
         Application.targetFrameRate = m_Setting.frameRate;
         Time.timeScale = m_Setting.gameSpeed;

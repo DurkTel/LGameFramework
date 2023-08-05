@@ -435,7 +435,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fadf61765d9d79e4a8c91f480a3964c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchSetting: {fileID: 11400000, guid: f6e53c78e21955849b483ae978363b8f, type: 2}
+  m_GameLaunchSetting: {fileID: 11400000, guid: f6e53c78e21955849b483ae978363b8f, type: 2}
+  m_GamePathSetting: {fileID: 11400000, guid: 5f82c99337a64564986eb974b880e5da, type: 2}
 --- !u!1 &2030215316
 GameObject:
   m_ObjectHideFlags: 0

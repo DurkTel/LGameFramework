@@ -11,13 +11,15 @@ namespace GameCore.Asset
     {
         public static string s_AbPath = "Assets/LGAssetManifest.asset";
 
-        public List<AssetFile> assetList = new List<AssetFile>(5000);
+        public List<AssetFileInfo> assetList = new List<AssetFileInfo>(5000);
 
-        public Dictionary<string, AssetFile> assetMap = new Dictionary<string, AssetFile>(5000);
+        public Dictionary<string, AssetFileInfo> assetMap = new Dictionary<string, AssetFileInfo>(5000);
 
-        public Dictionary<string, List<string>> dependsMap = new Dictionary<string, List<string>>(5000);
+        public List<AssetBundleInfo> bundleList = new List<AssetBundleInfo>(5000);
 
-        public void Add(AssetFile file)
+        public Dictionary<string, AssetBundleInfo> bundleMap = new Dictionary<string, AssetBundleInfo>(1000);
+
+        public void Add(AssetFileInfo file)
         {
             if (assetMap.ContainsKey(file.assetName))
                 assetMap[file.assetName] = file;
@@ -30,12 +32,20 @@ namespace GameCore.Asset
             return assetMap.ContainsKey(assetName);
         }
 
-        public string GetPath(string assetName)
+        public void AddAssetBundle(AssetBundleInfo bundleInfo)
         {
-            if (assetMap.ContainsKey(assetName))
-                return assetMap[assetName].assetPath;
+            if (bundleMap.ContainsKey(bundleInfo.bundleName))
+                bundleMap[bundleInfo.bundleName] = bundleInfo;
+            else
+                bundleMap.Add(bundleInfo.bundleName, bundleInfo);   
+        }
 
-            Debug.LogWarning("资源清单中没有名为：" + assetName + "的资源，请更新资源清单或检查资源名称");
+        public string GetPath(string bundleName)
+        {
+            if (bundleMap.ContainsKey(bundleName))
+                return bundleMap[bundleName].assetPath;
+
+            Debug.LogWarning("资源清单中没有名为：" + bundleName + "的资源，请更新资源清单或检查资源名称");
             return string.Empty;
         }
 
@@ -48,28 +58,19 @@ namespace GameCore.Asset
             return string.Empty;
         }
 
-        public List<string> GetDependsName(string assetName)
+        public string[] GetDependsName(string bundleName)
         {
-            if (assetMap.ContainsKey(assetName))
-                return assetMap[assetName].dependencieBundleNames;
+            if (bundleMap.ContainsKey(bundleName))
+                return bundleMap[bundleName].dependencieBundleNames;
 
-            Debug.LogWarning("资源清单中没有名为：" + assetName + "的资源，请更新资源清单或检查资源名称");
-            return default;
-        }
-
-        public List<string> GetBundleDepends(string bundleName)
-        {
-            if (dependsMap.ContainsKey(bundleName))
-                return dependsMap[bundleName];
-
-            Debug.LogWarning("资源清单中没有名为：" + bundleName + "的包，请更新资源清单或检查资源名称");
+            Debug.LogWarning("资源清单中没有名为：" + bundleName + "的资源，请更新资源清单或检查资源名称");
             return default;
         }
 
         public void Clear()
         {
             assetMap.Clear();
-            dependsMap.Clear();
+            bundleMap.Clear();
         }
 
         public void OnAfterDeserialize()
@@ -78,9 +79,12 @@ namespace GameCore.Asset
             {
                 if (!this.assetMap.ContainsKey(item.assetName))
                     this.assetMap.Add(item.assetName, item);
+            }
 
-                if (!this.dependsMap.ContainsKey(item.bundleName))
-                    this.dependsMap.Add(item.bundleName, item.dependencieBundleNames);
+            foreach (var item in bundleList)
+            {
+                if (!this.bundleMap.ContainsKey(item.bundleName))
+                    this.bundleMap.Add(item.bundleName, item);
             }
         }
 
@@ -89,6 +93,10 @@ namespace GameCore.Asset
             assetList.Clear();
             foreach (var item in this.assetMap)
                 assetList.Add(item.Value);
+
+            bundleList.Clear();
+            foreach (var item in this.bundleMap)
+                bundleList.Add(item.Value);
         }
     }
 }

@@ -1,6 +1,4 @@
-using GameCore;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -21,6 +19,8 @@ namespace GameCore.Asset
         internal override int Priority { get { return 99; } }
         internal override GameObject GameObject { get; set; }
         internal override Transform Transform { get; set; }
+
+        internal GamePathSetting.FilePathStruct GamePath { get; set; }
 
         /// <summary>
         /// 正在加载的资源加载器
@@ -46,14 +46,23 @@ namespace GameCore.Asset
         /// 等待释放ab包的时间
         /// </summary>
         private float m_WaitDestroyTime;
+        /// <summary>
+        /// 文件下载器
+        /// </summary>
+        private AssetFileDownloadQueue m_FileDownloadQueue;
+
 
         internal override void OnInit()
         {
             s_AssetLoadMode = AssetLoadMode.AssetBundle;
+            GamePath = GamePathSetting.Get().CurrentPlatform();
         }
 
         internal override void Update(float deltaTime, float unscaledTime)
         {
+            if (m_FileDownloadQueue != null)
+                m_FileDownloadQueue.Update();
+
             if (m_AssetLoaders.Count <= 0) return;
 
             AssetLoader loader;
@@ -127,9 +136,9 @@ namespace GameCore.Asset
             if (m_FileManifest == null)
             {
                 m_FileManifest = ScriptableObject.CreateInstance<AssetManifest_Bundle>();
-                string path = Path.Combine(AssetDefine.localDataPath, "assetManifest.json");
+                string path = Path.Combine(GamePath.downloadDataPath.AssetPath, GamePath.assetManifestFileName);
                 if(!File.Exists(path))
-                    path = Path.Combine(AssetDefine.s_BuildInPath, "assetManifest.json");
+                    path = Path.Combine(GamePath.buildingPath.AssetPath, GamePath.assetManifestFileName);
 
                 string allData = File.ReadAllText(path);
                 if (!string.IsNullOrEmpty(allData))
@@ -261,6 +270,12 @@ namespace GameCore.Asset
                 return loader.GetInstantiate<T>();
 
             return loader.GetRawObject<T>();
+        }
+
+        public void EnqueueDownload(string downloadURL, string downloadPath)
+        {
+            m_FileDownloadQueue ??= new AssetFileDownloadQueue();
+            m_FileDownloadQueue.Enqueue(downloadURL, downloadPath);
         }
 
         /// <summary>

@@ -10,6 +10,7 @@ namespace GameCore.Asset
         {
             public Object rawObject;
             public string asstName;
+            public string bundleName;
             public int referenceCount;
         }
         public class InstanceObjectInfo
@@ -77,7 +78,7 @@ namespace GameCore.Asset
         /// 缓存资源源对象
         /// </summary>
         /// <param name="rawObject"></param>
-        public static RawObjectInfo AddRawObject(string assetName, Object rawObject)
+        public static RawObjectInfo AddRawObject(string assetName, Object rawObject, string bundleName = "")
         {
             RawObjectInfo rawInfo;
             if (m_RawAssetMap.TryGetValue(assetName, out rawInfo))
@@ -86,6 +87,7 @@ namespace GameCore.Asset
             rawInfo = Pool<RawObjectInfo>.Get();
             rawInfo.rawObject = rawObject;
             rawInfo.asstName = assetName;
+            rawInfo.bundleName = bundleName;
 
             m_RawAssetMap.Add(assetName, rawInfo);
             m_RawNameMap.Add(rawObject, rawInfo);
@@ -181,7 +183,7 @@ namespace GameCore.Asset
             if (FMAssetManager.AssetLoadMode == AssetLoadMode.AssetBundle)
             {
                 AssetManifest_Bundle assetManifest = AssetModule.GetAssetManifest_Bundle();
-                List<string> result = assetManifest.GetDependsName(rawInfo.asstName);
+                string[] result = assetManifest.GetDependsName(rawInfo.bundleName);
                 //这个资源被卸载 被这个资源依赖的AB包引用计数减1
                 AssetBundleRecord record;
                 foreach (string abName in result)
@@ -189,7 +191,7 @@ namespace GameCore.Asset
                         record.DpendsReferenceCount--;
 
                 //这个资源的AB引用减1
-                if (AssetModule.TryGetAssetBundle(assetManifest.GetBundleName(rawInfo.asstName), out record))
+                if (AssetModule.TryGetAssetBundle(rawInfo.bundleName, out record))
                     record.RawReferenceCount--;
             }
 

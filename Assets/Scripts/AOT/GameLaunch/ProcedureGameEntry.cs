@@ -1,7 +1,7 @@
 using GameBase.FSM;
 using HybridCLR;
+using LGameFramework.GameBase;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,21 +10,25 @@ using UnityEngine;
 
 public class ProcedureGameEntry : FSM_Status<ProcedureLaunchProcess>
 {
+    private GamePathSetting.FilePathStruct m_GamePath;
+
     public override void OnEnter()
     {
+        m_GamePath = GamePathSetting.Get().CurrentPlatform();
+
         LoadMetadataForAOTAssemblies();
 
         Assembly coreAssembly = null;
 
 #if !UNITY_EDITOR
-        foreach (var dll in ProcedureLaunchPath.s_HotUpdateDllName)
+        foreach (var dll in m_GamePath.hotUpdateDll)
         {
             var assembly = Assembly.Load(File.ReadAllBytes($"{ProcedureLaunchPath.s_HotUpdateDll}/{dll}.bytes"));
             if (coreAssembly == null)
                 coreAssembly = assembly;
         }
 #else
-        foreach (var dll in ProcedureLaunchPath.s_HotUpdateDllName)
+        foreach (var dll in m_GamePath.hotUpdateDll)
         {
             string name = Path.GetFileNameWithoutExtension(dll);
             var assembly = System.AppDomain.CurrentDomain.GetAssemblies().First(a => a.GetName().Name == name);
@@ -54,7 +58,7 @@ public class ProcedureGameEntry : FSM_Status<ProcedureLaunchProcess>
         HomologousImageMode mode = HomologousImageMode.SuperSet;
         foreach (var aotDllName in aotMetaAssemblyFiles)
         {
-            string path = $"{ProcedureLaunchPath.s_HotUpdateDll}/{aotDllName}.bytes";
+            string path = $"{m_GamePath.hotUpdateDll}/{aotDllName}.bytes";
             if (!File.Exists(path))
                 continue;
 
