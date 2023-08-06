@@ -77,11 +77,6 @@ namespace LGameFramework.GameBase
         public int size;
 
         /// <summary>
-        /// 加载优先级
-        /// </summary>
-        public int priority;
-
-        /// <summary>
         /// Crc校验值
         /// </summary>
         public uint crc;

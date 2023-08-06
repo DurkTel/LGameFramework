@@ -22,20 +22,24 @@ namespace GameCore.Entity
             private List<Entity> m_Entitys; 
             public List<Entity> Entitys { get { return m_Entitys; } }
 
-            private readonly List<Entity> m_WaitCreateList;
-
-            private readonly List<Entity> m_WaitReleaseList;
+            private readonly List<EntitySkinComponent> m_WaitCreateSkinList;
 
             private readonly List<Entity> m_ReleaseList;
+
+            private readonly List<Entity> m_DestroyList;
+
+            private readonly FMEntityManager m_EntityManager;
+            public FMEntityManager EntityManager { get { return m_EntityManager; } }
             public int Count { get {  return m_Entitys.Count; } }
 
-            public EntityGroup(EntityType groupType)
+            public EntityGroup(EntityType groupType, FMEntityManager entityManager)
             {
                 m_EntityGroupType = groupType;
+                m_EntityManager = entityManager;
                 m_Entitys = new List<Entity>();
+                m_DestroyList = new List<Entity>();
+                m_WaitCreateSkinList = new List<EntitySkinComponent>();
                 m_ReleaseList = new List<Entity>();
-                m_WaitCreateList = new List<Entity>();
-                m_WaitReleaseList = new List<Entity>();
             }
 
             public void FixedUpdate(float fixedDeltaTime, float unscaledTime)
@@ -55,52 +59,58 @@ namespace GameCore.Entity
 
                 foreach (Entity entity in m_Entitys)
                 {
-                    entity.CullGroupUpdate(deltaTime);
-                    if (entity.Visible && !entity.SkinInstantiate && !entity.SkinLoading)
+                    if (entity.Visible && entity.TryGetComponent(out EntitySkinComponent skin) && !skin.Enabled)
                     {
-                        entity.SetStatus(EntityStatus.WillCreate);
-                        m_WaitCreateList.Add(entity);
+                        skin.Enabled = true;
+                        m_WaitCreateSkinList.Add(skin);
                         continue;
                     }
-                    if (entity.Status == EntityStatus.Showed)
-                        entity.Update(deltaTime, unscaledTime);
+
+                    entity.Update(deltaTime, unscaledTime);
                 }
 
                 //一帧调一次生成
-                if (m_WaitCreateList.Count > 0 && Time.frameCount % 2 == 0)
+                if (m_WaitCreateSkinList.Count > 0 && Time.frameCount % 2 == 0)
                 {
-                    m_WaitCreateList[0].CreateSkin();
-                    m_WaitCreateList.RemoveAt(0);
+                    m_WaitCreateSkinList[0].LoadSkin();
+                    m_WaitCreateSkinList.RemoveAt(0);
                 }
             }
 
             public void LateUpdate()
             {
-                if (m_WaitReleaseList.Count <= 0) return;
-
-                Entity entity;
-                for (int i = m_WaitReleaseList.Count - 1; i >= 0; i--)
-                {
-                    entity = m_WaitReleaseList[i];
-                    if (m_WaitCreateList.Contains(entity))
-                        m_WaitCreateList.Remove(entity);
-
-                    m_WaitReleaseList.Remove(entity);
-                    m_ReleaseList.Add(entity);
-                    entity.SetStatus(EntityStatus.Released);
-                }
-
                 if (m_ReleaseList.Count <= 0) return;
 
+                Entity entity;
                 for (int i = m_ReleaseList.Count - 1; i >= 0; i--)
                 {
-                    entity = m_WaitReleaseList[i];
+                    entity = m_ReleaseList[i];
+                    //如果有等待加载外观的 移除掉
+                    if (entity.TryGetComponent(out EntitySkinComponent skin))
+                    {
+                        if (m_WaitCreateSkinList.Contains(skin))
+                            m_WaitCreateSkinList.Remove(skin);
+
+                        skin.StopLoadSkin();
+                    }
+
+                    entity.SetStatus(EntityStatus.Released);
+                    Pool<Entity>.Release(entity);
+                    m_DestroyList.Add(entity);
+                    m_ReleaseList.RemoveAt(i);
+                }
+
+                if (m_DestroyList.Count <= 0) return;
+
+                for (int i = m_DestroyList.Count - 1; i >= 0; i--)
+                {
+                    entity = m_ReleaseList[i];
                     if (entity.ReleaseTimesStamp + m_DestroyTime < Time.unscaledTime)
                         continue;
 
                     entity.Dispose();
-                    m_WaitReleaseList.Remove(entity);
-                    Pool<Entity>.Release(entity);
+                    m_DestroyList.RemoveAt(i);
+
                 }
             }
 
@@ -108,23 +118,24 @@ namespace GameCore.Entity
             {
                 m_Entitys ??= new List<Entity>();
                 Entity entity;
-                if (m_ReleaseList.Count > 0)
+                if (m_DestroyList.Count > 0)
                 {
-                    entity = m_ReleaseList[0];
-                    m_ReleaseList.RemoveAt(0);
+                    entity = m_DestroyList[0];
+                    m_DestroyList.RemoveAt(0);
                 }
                 else
                     entity = Pool<Entity>.Get();
 
+                entity.SetStatus(EntityStatus.WillCreate);
                 m_Entitys.Add(entity);
                 return entity;
             }
 
             public void ReleaseEntity(Entity entity)
             {
-                if (m_WaitReleaseList.Contains(entity)) return;
+                if (m_ReleaseList.Contains(entity)) return;
 
-                m_WaitReleaseList.Add(entity);
+                m_ReleaseList.Add(entity);
             }
 
             public void DestroyEntity()

@@ -13,14 +13,17 @@ namespace GameCore.Entity
         internal override Transform Transform { get; set; }
 
         private EntityCullingGroup m_CullingGroup;
+        public EntityCullingGroup CullingGroup { get { return m_CullingGroup; } }
 
         private Dictionary<int, Entity> m_EntityMap;
 
         private Dictionary<EntityType, EntityGroup> m_EntityGroupMap;
 
-        private Transform m_Enable;
+        private Transform m_EnableContainer;
+        public Transform EnableContainer { get { return m_EnableContainer; } }
 
-        private Transform m_Disable;
+        private Transform m_DisableContainer;
+        public Transform DisableContainer { get { return m_DisableContainer; } }
 
         internal override void OnInit()
         {
@@ -28,10 +31,10 @@ namespace GameCore.Entity
             m_CullingGroup.targetCamera = OrbitCamera.regularCamera;
             m_EntityMap = new Dictionary<int, Entity>();
             m_EntityGroupMap = new Dictionary<EntityType, EntityGroup>();
-            m_Enable = new GameObject("EnableEntitys").transform;
-            m_Disable = new GameObject("DisableEntitys").transform;
-            m_Enable.SetParentZero(Transform);
-            m_Disable.SetParentZero(Transform);
+            m_EnableContainer = new GameObject("EnableEntitys").transform;
+            m_DisableContainer = new GameObject("DisableEntitys").transform;
+            m_EnableContainer.SetParentZero(Transform);
+            m_DisableContainer.SetParentZero(Transform);
         }
 
         internal override void Update(float deltaTime, float unscaledTime)
@@ -65,7 +68,7 @@ namespace GameCore.Entity
             EntityGroup group;
             if (!m_EntityGroupMap.TryGetValue(etype, out group))
             {
-                group = new EntityGroup(etype);
+                group = new EntityGroup(etype, this);
                 m_EntityGroupMap.Add(etype, group);
             }
             return group;
@@ -88,9 +91,7 @@ namespace GameCore.Entity
 
             int eid = ++m_GUID;
             entity.OnInit(eid, etype, group);
-            entity.Transform.SetParentZero(m_Enable);
             m_EntityMap.Add(eid, entity);
-            m_CullingGroup.AddCullingObject(entity);
             return entity;
         }
 
@@ -101,9 +102,8 @@ namespace GameCore.Entity
             {
                 entity.SetStatus(EntityStatus.WillRelease);
                 entity.Release();
-                entity.Transform.SetParent(m_Disable);
+                entity.Transform.SetParent(m_DisableContainer);
                 entity.Transform.localPosition = new Vector3(0, -99999, 0);
-                m_CullingGroup.RemoveCullingObject(entity);
                 return true;
             }
 

@@ -47,6 +47,7 @@ namespace GameCore.Asset
         /// <returns></returns>
         public override string GetAssetPath(string bundleName)
         {
+            //正在下载中
             if (m_AssetDownloader != null) return null;
 
             string path = AssetModule.GetAssetManifest_Bundle().GetPath(bundleName);
@@ -113,7 +114,7 @@ namespace GameCore.Asset
         /// <returns></returns>
         private AssetBundleRecord Load(string abPath, uint crc)
         {
-            AssetBundle bundle = AssetBundle.LoadFromFile(abPath, crc);
+            AssetBundle bundle = AssetBundle.LoadFromFile(abPath, crc, 4);
             if (bundle == null) return null;
             AssetBundleRecord assetBundle = AssetModule.AddAssetBundle(m_AssetName, bundle);
 
@@ -128,7 +129,7 @@ namespace GameCore.Asset
         private AssetBundleRecord LoadAsync(string abPath, uint crc)
         {
             AssetBundleRecord assetBundle = null;
-            m_BundleRequest ??= AssetBundle.LoadFromFileAsync(abPath, crc);
+            m_BundleRequest ??= AssetBundle.LoadFromFileAsync(abPath, crc, 4);
             if (m_BundleRequest.isDone && m_BundleRequest.assetBundle != null)
             {
                 assetBundle = AssetModule.AddAssetBundle(m_AssetName, m_BundleRequest.assetBundle);
@@ -149,6 +150,7 @@ namespace GameCore.Asset
                     return;
 
                 m_AssetDownloader = null;
+                //下载完成 重新请求加载
                 m_BundleRequest = null;
             }
 
@@ -166,7 +168,7 @@ namespace GameCore.Asset
                     string path = GetAssetPath(m_AssetName);
                     if (path == null) //文件丢失
                     {
-                        Debug.LogError("文件丢失，尝试重新下载");
+                        Debug.LogWarning(string.Format("文件丢失，尝试重新下载：文件名{0}，文件路径{1}", m_AssetName, path));
                         TryDownloadFile(m_AssetName);
                         return;
                     }
@@ -181,7 +183,7 @@ namespace GameCore.Asset
 
                 if ((!m_Async && m_AssetRecord == null) || m_Async && m_BundleRequest.isDone && m_BundleRequest.assetBundle == null)
                 {
-                    Debug.LogError("文件校验失败，尝试重新下载");
+                    Debug.LogWarning(string.Format("文件校验失败，尝试重新下载：文件名{0}", m_AssetName));
                     TryDownloadFile(m_AssetName);
                 }
 

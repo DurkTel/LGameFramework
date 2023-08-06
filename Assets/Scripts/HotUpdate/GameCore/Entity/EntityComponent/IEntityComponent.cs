@@ -16,6 +16,11 @@ namespace GameCore.Entity
         int Priority { get; }
 
         /// <summary>
+        /// 挂载实体
+        /// </summary>
+        Entity Entity { get; }
+
+        /// <summary>
         /// 游戏物体
         /// </summary>
         GameObject GameObject { get; }
@@ -50,8 +55,8 @@ namespace GameCore.Entity
         void FixedUpdate(float fixedDeltaTime, float unscaledTime);
 
         /// <summary>
-        /// 销毁
+        /// 回收
         /// </summary>
-        void OnDestroy();
+        void Release();
     }
 }

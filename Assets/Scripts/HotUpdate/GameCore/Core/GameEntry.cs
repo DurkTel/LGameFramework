@@ -13,6 +13,8 @@ namespace GameCore
 
         private static readonly LinkedList<FrameworkModule> s_AllFrameworkModule = new LinkedList<FrameworkModule>();
 
+        private static readonly Dictionary<Type, FrameworkModule> s_AllFrameworkModuleDict = new Dictionary<Type, FrameworkModule>();
+
         private void OnEnable()
         {
             foreach (FrameworkModule module in s_AllFrameworkModule)
@@ -63,15 +65,8 @@ namespace GameCore
         /// <returns></returns>
         public static T GetModule<T>() where T : FrameworkModule, new()
         {
-            Type interfaceType = typeof(T);
-
-            foreach (FrameworkModule module in s_AllFrameworkModule)
-            {
-                if (module.GetType() == interfaceType)
-                {
-                    return module as T;
-                }
-            }
+            if (s_AllFrameworkModuleDict.TryGetValue(typeof(T), out var module))
+                return module as T;
 
             return CreateModule<T>();
         }
@@ -89,6 +84,8 @@ namespace GameCore
             module.OnInit();
             DontDestroyOnLoad(module.GameObject);
             module.Transform.SetParentZero(m_GameRoot);
+
+            s_AllFrameworkModuleDict.Add(typeof(T), module);
 
             LinkedListNode<FrameworkModule> current = s_AllFrameworkModule.First;
 

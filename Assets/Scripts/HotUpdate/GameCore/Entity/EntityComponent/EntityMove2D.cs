@@ -1,9 +1,7 @@
-using GameCore.Entity;
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
-namespace GameCore
+namespace GameCore.Entity
 {
     public class EntityMove2D : IEntityComponent
     {
@@ -25,9 +23,11 @@ namespace GameCore
         public float MoveSpeed { get { return m_MoveSpeed; } }
 
         private Rigidbody2D m_Rigidbody;
-        public Rigidbody2D Rigidbody { get { return m_Rigidbody; } }    
+        public Rigidbody2D Rigidbody { get { return m_Rigidbody; } }
 
-        public void OnInit(Entity.Entity entity)
+        public Entity Entity => throw new System.NotImplementedException();
+
+        public void OnInit(Entity entity)
         {
             m_GameObject = entity.GameObject;
             m_Transform = entity.Transform;
@@ -44,7 +44,7 @@ namespace GameCore
             Move(fixedDeltaTime);
         }
 
-        public void OnDestroy()
+        public void Dispose()
         {
             
         }
@@ -60,5 +60,9 @@ namespace GameCore
             m_Rigidbody.velocity = m_MoveDirection * m_MoveSpeed * deltaTime;
         }
 
+        public void Release()
+        {
+            
+        }
     }
 }

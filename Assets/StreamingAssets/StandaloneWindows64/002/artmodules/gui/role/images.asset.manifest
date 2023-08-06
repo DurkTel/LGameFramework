@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1737557677
+CRC: 926243746
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: cacdd66c8e7d1c8e844b2546da3de755
+    Hash: 85b4c7641872c17aef4dad228c2dd2f1
   TypeTreeHash:
     serializedVersion: 2
     Hash: f267fd2d8bcb1179236b6179ac5313bc
@@ -15,6 +15,7 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
+- Assets/ArtModules/GUI/Role/Images/saber_fashion_91.png
 - Assets/ArtModules/GUI/Role/Images/role_back_4.png
 - Assets/ArtModules/GUI/Role/Images/role_back_1.png
 - Assets/ArtModules/GUI/Role/Images/role_back_2.png

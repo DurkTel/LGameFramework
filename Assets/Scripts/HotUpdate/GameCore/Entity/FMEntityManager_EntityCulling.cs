@@ -8,13 +8,6 @@ namespace GameCore.Entity
 {
     public sealed partial class FMEntityManager
     {
-        public interface ICulling
-        {
-            EntityCullingGroup CullingGroup { get; set; }
-            void OnCullingVisible(bool visible);
-            void OnCullingDistance(int lod, int lodMax);
-        }
-
         public sealed class EntityCullingGroup
         {
 
@@ -25,7 +18,7 @@ namespace GameCore.Entity
             private BoundingSphere[] m_BoundingSpheres;
             public BoundingSphere[] BoundingSpheres { get { return m_BoundingSpheres; } }
 
-            private readonly ICulling[] m_ICullings;
+            private readonly EntityCullingComponent[] m_ICullings;
 
             private int m_CullingIndex;
 
@@ -35,10 +28,10 @@ namespace GameCore.Entity
 
             private Transform m_ReferenceTransform = null;
 
-            private readonly Dictionary<ICulling, int> m_CullingObjectDic;
+            private readonly Dictionary<EntityCullingComponent, int> m_CullingObjectDic;
             public float[] Distances { get { return m_Distances; } set { m_Distances = value; CullingGroup.SetBoundingDistances(value); } }
-            public UnityAction<ICulling, bool> OnVisibleEvent { get; set; }
-            public UnityAction<ICulling, int, int> OnDistanceEvent { get; set; }
+            public UnityAction<EntityCullingComponent, bool> OnVisibleEvent { get; set; }
+            public UnityAction<EntityCullingComponent, int, int> OnDistanceEvent { get; set; }
 
             public Camera targetCamera
             {
@@ -68,14 +61,14 @@ namespace GameCore.Entity
                 CullingGroup.enabled = true;
                 CullingGroup.onStateChanged += StateChanged;
 
-                m_CullingObjectDic = new Dictionary<ICulling, int>();
+                m_CullingObjectDic = new Dictionary<EntityCullingComponent, int>();
 
                 //按最大数值初始化
                 m_BoundingSpheres = new BoundingSphere[m_CapacitySize];
                 Vector3 pos = new Vector3(0, -99999, 0);
                 for (int i = 0; i < m_BoundingSpheres.Length; i++)
                     m_BoundingSpheres[i].position = pos; //放在一边备用
-                m_ICullings = new ICulling[m_CapacitySize];
+                m_ICullings = new EntityCullingComponent[m_CapacitySize];
                 CullingGroup.SetBoundingSpheres(m_BoundingSpheres);
                 CullingGroup.SetBoundingSphereCount(m_CapacitySize);
                 CullingGroup.SetBoundingDistances(m_Distances);
@@ -85,7 +78,7 @@ namespace GameCore.Entity
             {
                 if (sphere.isVisible && sphere.hasBecomeVisible)
                 {
-                    ICulling culling = m_ICullings[sphere.index];
+                    EntityCullingComponent culling = m_ICullings[sphere.index];
                     if (culling != null)
                     {
                         culling.OnCullingVisible(true);
@@ -94,7 +87,7 @@ namespace GameCore.Entity
                 }
                 else if (sphere.hasBecomeInvisible)
                 {
-                    ICulling culling = m_ICullings[sphere.index];
+                    EntityCullingComponent culling = m_ICullings[sphere.index];
                     if (culling != null)
                     {
                         culling.OnCullingVisible(false);
@@ -104,7 +97,7 @@ namespace GameCore.Entity
 
                 if (sphere.previousDistance != sphere.currentDistance && m_Distances != null && m_Distances.Length > 0)
                 {
-                    ICulling culling = m_ICullings[sphere.index];
+                    EntityCullingComponent culling = m_ICullings[sphere.index];
                     if (culling != null)
                     {
                         culling.OnCullingDistance(sphere.currentDistance, m_Distances.Length);
@@ -113,7 +106,7 @@ namespace GameCore.Entity
                 }
             }
 
-            public void AddCullingObject(ICulling cullingObject)
+            public void AddCullingObject(EntityCullingComponent cullingObject)
             {
                 if (m_CullingObjectDic.ContainsKey(cullingObject))
                 {
@@ -143,7 +136,7 @@ namespace GameCore.Entity
                 cullingObject.CullingGroup = this;
             }
 
-            public void RemoveCullingObject(ICulling cullingObject)
+            public void RemoveCullingObject(EntityCullingComponent cullingObject)
             {
                 int index = GetCullingObjectIndex(cullingObject);
                 if (index < 0 || index > m_BoundingSpheres.Length)
@@ -156,7 +149,7 @@ namespace GameCore.Entity
                 cullingObject.CullingGroup = null;
             }
 
-            public void UpdateBoundingSphere(ICulling cullingObject, Vector3 pos, float radius)
+            public void UpdateBoundingSphere(EntityCullingComponent cullingObject, Vector3 pos, float radius)
             {
                 int index = GetCullingObjectIndex(cullingObject);
                 if (index < 0 || index > m_BoundingSpheres.Length)
@@ -169,7 +162,7 @@ namespace GameCore.Entity
 
             }
 
-            public int GetDistance(ICulling cullingObject)
+            public int GetDistance(EntityCullingComponent cullingObject)
             {
                 int index = GetCullingObjectIndex(cullingObject);
                 if (index < 0 || index > m_BoundingSpheres.Length)
@@ -180,7 +173,7 @@ namespace GameCore.Entity
 
             }
 
-            public bool IsVisible(ICulling cullingObject)
+            public bool IsVisible(EntityCullingComponent cullingObject)
             {
                 int index = -1;
                 if (m_CullingObjectDic.TryGetValue(cullingObject, out index))
@@ -189,7 +182,7 @@ namespace GameCore.Entity
                 return false;
             }
 
-            private int GetCullingObjectIndex(ICulling cullingObject)
+            private int GetCullingObjectIndex(EntityCullingComponent cullingObject)
             {
                 int index = -1;
                 m_CullingObjectDic.TryGetValue(cullingObject, out index);

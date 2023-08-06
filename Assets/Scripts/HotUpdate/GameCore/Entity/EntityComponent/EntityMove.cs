@@ -47,6 +47,8 @@ namespace GameCore.Entity
         public bool EnableGravity { get; set; }
         public float Gravity { get; set; }
 
+        public Entity Entity => throw new System.NotImplementedException();
+
         public LayerMask groundLayer;
 
         #region ÇúÏßÔË¶¯
@@ -338,7 +340,12 @@ namespace GameCore.Entity
             return relative;
         }
 
-        public void OnDestroy()
+        public void Dispose()
+        {
+            
+        }
+
+        public void Release()
         {
             
         }

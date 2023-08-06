@@ -20,9 +20,11 @@ public class Build : EditorWindow
 
     public static string[] s_HotUpdateDllName = new string[] { "Assembly-GameCore.dll", "Assembly-GameLogic.dll" };
 
+    private static List<byte> s_RandomByteList = new List<byte>(4);
+
     private LBuildParameter m_LbuildParameter;
 
-    [MenuItem("LGame/LBuild")]
+    [MenuItem("LGame/Build")]
     private static void OpenGUI()
     {
         Build resetPivot = (Build)EditorWindow.GetWindow(typeof(Build));
@@ -108,9 +110,12 @@ public class Build : EditorWindow
 
         //}
 
-        if (GUILayout.Button("复制到首包streamingAssetsPath"))
+        if (GUILayout.Button("复制首包到streamingAssetsPath"))
         {
+
             string buildPath = Application.dataPath + "/../A_AssetBundles";
+            if (Directory.Exists(buildPath))
+                Directory.Delete(buildPath, true);
 
             AssetManifest_Bundle assetManifest = GetAssetManifest();
             string formPath = Path.Combine(m_LbuildParameter.buildOutPath, m_LbuildParameter.buildTarget.ToString());
@@ -132,6 +137,8 @@ public class Build : EditorWindow
             FileUtil.CopyFileOrDirectory(Path.Combine(formPath, "buildingFile.json"), Path.Combine(buildPath, "buildingFile.json"));
             FileUtil.CopyFileOrDirectory(Path.Combine(formPath, "version.txt"), Path.Combine(buildPath, "version.txt"));
 
+
+            //应该上传服务器 这里先传在streamingAssets做测试
 
             string path = Path.Combine(Application.streamingAssetsPath, m_LbuildParameter.buildTarget.ToString());
             if (Directory.Exists(path))
@@ -520,6 +527,8 @@ public class Build : EditorWindow
         string assetJson = JsonHelper.ToJason(assetManifest, true);
         File.WriteAllText(Path.Combine(buildParameter.buildOutPath, targetName, "assetManifest.json"), assetJson);
 
+        AssetBundleOffset(buildParameter);
+
         AssetDatabase.Refresh();
 
     }
@@ -539,6 +548,7 @@ public class Build : EditorWindow
             //    continue;
 
             string manifestPath = Path.Combine(childDir, childDirName);
+            
             AssetBundle manifestAB = AssetBundle.LoadFromFile(manifestPath);
             if (manifestAB == null)
                 continue;
@@ -634,8 +644,40 @@ public class Build : EditorWindow
         File.WriteAllText(filePath, str);
         File.WriteAllText(versionPath, "version|1.00");
         AssetDatabase.Refresh();
+        Debug.Log("生成版本文件完成");
 
     }
     #endregion
 
+
+    #region AB包偏移 做个简单的加密
+    public static void AssetBundleOffset(LBuildParameter buildParameter)
+    {
+        string path = Path.Combine(buildParameter.buildOutPath, buildParameter.buildTarget.ToString());
+
+        string[] allFiles = Directory.GetFiles(path, "*.asset", SearchOption.AllDirectories);
+        foreach (var childFile in allFiles)
+        {
+            if (File.Exists(childFile))
+            {
+                byte[] bytes = File.ReadAllBytes(childFile);
+
+                List<byte> byteList = new List<byte>(bytes);
+
+                s_RandomByteList.Clear();
+
+                for (byte i = 0; i < 4; i++)
+                {
+                    byte b = (byte)(UnityEngine.Random.Range(0.0f, 1.0f) * (float)byte.MaxValue);
+                    s_RandomByteList.Add(b);
+                }
+
+                byteList.InsertRange(0, s_RandomByteList);
+
+                File.WriteAllBytes(childFile, byteList.ToArray());
+            }
+        }
+        Debug.Log("AB包偏移加密完成，偏移字节数为4");
+    }
+    #endregion
 }
