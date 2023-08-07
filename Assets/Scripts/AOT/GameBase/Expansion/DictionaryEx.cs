@@ -11,6 +11,11 @@ public class DictionaryEx<K, V> : Dictionary<K, V>
         keyList = new List<K>();
     }
 
+    public DictionaryEx(int capacity) : base(capacity)
+    { 
+        keyList = new List<K>(capacity);
+    }
+
     public new void Add(K key, V value)
     {
         if (!keyList.Contains(key))

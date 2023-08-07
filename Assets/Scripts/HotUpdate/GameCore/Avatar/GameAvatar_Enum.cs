@@ -1,16 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 namespace GameCore.Avatar
 {
-    public partial class Avatar
+    public partial class GameAvatar
     {
         /// <summary>
         /// Avatar部位枚举
         /// </summary>
         public enum AvatarPartType
-        { 
+        {
+            /// <summary>
+            /// 骨骼
+            /// </summary>
+            Skeleton,
             /// <summary>
             /// 身体
             /// </summary>
@@ -20,9 +21,17 @@ namespace GameCore.Avatar
             /// </summary>
             Head,
             /// <summary>
-            /// 武器
+            /// 头发
             /// </summary>
-            Weapon,
+            Hair,
+            /// <summary>
+            /// 手
+            /// </summary>
+            Hand,
+            /// <summary>
+            /// 腿
+            /// </summary>
+            Leg,
             /// <summary>
             /// 末位标识
             /// </summary>

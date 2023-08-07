@@ -7,35 +7,15 @@ namespace GameCore.Entity
     public partial class Entity
     {
         /// <summary>
-        /// 实体id
+        /// 实体数据
         /// </summary>
-        private int m_EntityId;
-        public int EntityId { get { return m_EntityId; } }
-        /// <summary>
-        /// 实体类型
-        /// </summary>
-        private EntityType m_EntityType;
-        public EntityType EntityType { get { return m_EntityType; } }
-        /// <summary>
-        /// 实体状态
-        /// </summary>
-        private EntityStatus m_Status;
-        public EntityStatus Status { get { return m_Status; } }
+        private EntityData m_EntityData;
+        public EntityData EntityData { get { return m_EntityData; } }
         /// <summary>
         /// 所属实体组
         /// </summary>
         private EntityGroup m_EntityGroup;
         public EntityGroup EntityGroup { get { return m_EntityGroup; } }
-        /// <summary>
-        /// 生成时间戳
-        /// </summary>
-        private float m_CreateTimeStamp;
-        public float CreateTimeStamp { get { return m_CreateTimeStamp; } }
-        /// <summary>
-        /// 回事时间戳
-        /// </summary>
-        private float m_ReleaseTimeStamp;
-        public float ReleaseTimesStamp { get { return m_ReleaseTimeStamp; } }
         /// <summary>
         /// 当前游戏对象
         /// </summary>
@@ -46,6 +26,11 @@ namespace GameCore.Entity
         /// </summary>
         private Transform m_Transform;
         public Transform Transform { get { return m_Transform; } }
+        /// <summary>
+        /// 容器
+        /// </summary>
+        private Transform m_Container;
+        public Transform Container { get { return m_Container; } }
         /// <summary>
         /// 脏状态
         /// </summary>
@@ -72,9 +57,9 @@ namespace GameCore.Entity
 
         public void OnInit(int eid, EntityType etype, EntityGroup egroup)
         {
-            m_EntityId = eid;
-            m_EntityType = etype;
-            m_Status = EntityStatus.Inited;
+            m_EntityData.EntityId = eid;
+            m_EntityData.EntityType = etype;
+            m_EntityData.Status = EntityStatus.Inited;
             m_EntityGroup = egroup;
 
             CreateContainer();
@@ -113,10 +98,16 @@ namespace GameCore.Entity
         {
             Debug.Log("实例化实体容器");
             m_GameObject ??= new GameObject();
-            m_GameObject.name = string.Format("Entity_{0}_{1}", m_EntityType, m_EntityId);
+            m_GameObject.name = string.Format("Entity_{0}_{1}", m_EntityData.EntityType, m_EntityData.EntityId);
             m_Transform = m_GameObject.transform;
-            m_CreateTimeStamp = Time.unscaledTime;
+            m_EntityData.CreateTimeStamp = Time.unscaledTime;
             m_Transform.SetParentZero(m_EntityGroup.EntityManager.EnableContainer);
+
+            if (m_Container == null)
+            { 
+                m_Container = new GameObject("Container").transform;
+                m_Container.SetParentZero(m_Transform);
+            }
 
             Visible = true;
             SetStatus(EntityStatus.Created);
@@ -124,7 +115,7 @@ namespace GameCore.Entity
 
         public void SetStatus(EntityStatus status)
         {
-            m_Status = status;
+            m_EntityData.Status = status;
         }
 
         public void Release()
@@ -141,7 +132,7 @@ namespace GameCore.Entity
             }
 
             m_EntityGroup.ReleaseEntity(this);
-            m_ReleaseTimeStamp = Time.unscaledTime;
+            m_EntityData.ReleaseTimeStamp = Time.unscaledTime;
         }
 
 

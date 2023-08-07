@@ -1,5 +1,5 @@
-using System.Xml;
 using UnityEngine;
+using GameCore.Avatar;
 
 namespace GameCore.Entity
 {
@@ -25,23 +25,23 @@ namespace GameCore.Entity
         private Entity m_Entity;
         public Entity Entity { get { return m_Entity; } }
         /// <summary>
-        /// 外观是否实例化完成
+        /// 模型替身系统
         /// </summary>
-        private bool m_SkinInstantiate;
-        public bool SkinInstantiate { get { return m_SkinInstantiate; } }
+        private GameAvatar m_Avatar;
+        public GameAvatar Avatar { get { return m_Avatar; } }
         /// <summary>
         /// 外观是否加载中
         /// </summary>
-        private bool m_SkinLoading;
-        public bool SkinLoading { get { return m_SkinLoading; } }
+        public bool SkinLoading { get { return Avatar.IsLoading; } }
 
         public void OnInit(Entity entity)
         {
             m_Enabled = false;
-            m_SkinLoading = false;
             m_Entity = entity;
             m_Transform = entity.Transform;
             m_GameObject = entity.GameObject;
+            m_Avatar = entity.Container.TryAddComponent<GameAvatar>();
+            m_Avatar.OnLoadComplete.AddListener(SkinLoadComplete);
         }
 
         public void Update(float deltaTime, float unscaledTime)
@@ -56,6 +56,7 @@ namespace GameCore.Entity
 
         public void Release()
         {
+            m_Avatar.OnLoadComplete.RemoveListener(SkinLoadComplete);
 
         }
 
@@ -67,18 +68,17 @@ namespace GameCore.Entity
         public virtual void LoadSkin()
         {
             Debug.Log("开始加载外观");
-            m_SkinLoading = true;
-            SkinLoadComplete();
+            m_Avatar.AddPart(GameAvatar.AvatarPartType.Skeleton, "common_character_bone.prefab");
         }
 
-        public virtual void SkinLoadComplete()
+        public virtual void SkinLoadComplete(GameAvatar.AvatarPartType partType)
         {
-            m_SkinLoading = false;
+            
         }
 
         public virtual void StopLoadSkin()
         {
-            m_SkinLoading = false;
+            
         }
 
     }

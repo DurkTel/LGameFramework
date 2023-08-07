@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 1570067440
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: cb4b49fd3e37158f5a3b9d44c0eae309
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b649770dc02cfa35e9771f5c85979896
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 210
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/ArtModules/Model/Skeleton/common_double_bone.prefab
+- Assets/ArtModules/Model/Skeleton/common_character_bone.prefab
+- Assets/ArtModules/Model/Skeleton/common_single_bone.prefab
+Dependencies: []

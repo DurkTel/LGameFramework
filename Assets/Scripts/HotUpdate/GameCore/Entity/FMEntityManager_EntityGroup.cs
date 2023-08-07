@@ -48,7 +48,7 @@ namespace GameCore.Entity
 
                 foreach (Entity entity in m_Entitys)
                 {
-                    if (entity.Status == EntityStatus.Showed)
+                    if (entity.EntityData.Status == EntityStatus.Showed)
                         entity.FixedUpdate(fixedDeltaTime, unscaledTime);
                 }
             }
@@ -105,7 +105,7 @@ namespace GameCore.Entity
                 for (int i = m_DestroyList.Count - 1; i >= 0; i--)
                 {
                     entity = m_ReleaseList[i];
-                    if (entity.ReleaseTimesStamp + m_DestroyTime < Time.unscaledTime)
+                    if (entity.EntityData.ReleaseTimeStamp + m_DestroyTime < Time.unscaledTime)
                         continue;
 
                     entity.Dispose();

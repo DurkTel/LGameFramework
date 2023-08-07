@@ -899,6 +899,12 @@ MonoBehaviour:
     bundleName: gui_createrole_view.asset
   - assetName: gui_default_view.prefab
     bundleName: gui_default_view.asset
+  - assetName: common_character_bone.prefab
+    bundleName: skeleton.asset
+  - assetName: common_double_bone.prefab
+    bundleName: skeleton.asset
+  - assetName: common_single_bone.prefab
+    bundleName: skeleton.asset
   bundleList:
   - bundleName: gameaudiomixer.asset
     assetPath: 002/artmodules/audio/gameaudiomixer.asset
@@ -1508,4 +1514,15 @@ MonoBehaviour:
     dependencieBundleNames: []
     allFiles:
     - gui_default_view.prefab
+    fileFlag: 1
+  - bundleName: skeleton.asset
+    assetPath: 002/artmodules/model/skeleton.asset
+    md5Code: ec67fdf67cdd67b4970cb362051cbaa6
+    size: 2770
+    crc: 1570067440
+    dependencieBundleNames: []
+    allFiles:
+    - common_character_bone.prefab
+    - common_double_bone.prefab
+    - common_single_bone.prefab
     fileFlag: 1

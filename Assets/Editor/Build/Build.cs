@@ -283,6 +283,9 @@ public class Build : EditorWindow
 
         CollectionFont(ref list, BuildPath.s_FontBuildPath);
 
+        CollectionEffect(ref list, BuildPath.s_ModelBuildPath);
+
+
         if (BuildWriteInfo(list, buildParameter.buildOutPath, BuildAssetBundleOptions.ChunkBasedCompression, buildParameter.buildTarget, buildParameter.clearFolder, s_outPutNameDev))
             Debug.Log("打包Dev成功~  ^^_");
     }
