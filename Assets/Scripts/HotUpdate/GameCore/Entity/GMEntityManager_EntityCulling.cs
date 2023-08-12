@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 namespace GameCore.Entity
 {
-    public sealed partial class FMEntityManager
+    public sealed partial class GMEntityManager
     {
         public sealed class EntityCullingGroup
         {

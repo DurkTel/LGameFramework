@@ -1,5 +1,6 @@
 using GameCore.Asset;
 using UnityEngine;
+using UnityEngine.Animations;
 
 namespace GameCore.Avatar
 {
@@ -19,7 +20,7 @@ namespace GameCore.Avatar
                 get { return m_AssetName; } 
                 set 
                 {
-                    if (m_AssetName != value)
+                    if (m_AssetName != value && string.IsNullOrEmpty(m_AssetName))
                     {
                         m_AssetName = value;
                         Dirty = true;
@@ -27,8 +28,8 @@ namespace GameCore.Avatar
                 } 
             }
 
-            private Object m_Asset;
-            public Object Asset { get { return m_Asset; } }
+            private GameObject m_Asset;
+            public GameObject Asset { get { return m_Asset; } }
 
             private GameAvatar m_Avatar;
             public GameAvatar Avatar { get { return m_Avatar; } }
@@ -38,9 +39,9 @@ namespace GameCore.Avatar
 
             private Loader m_Loader;
             public Loader Loader { get { return m_Loader; } }
-            public bool IsDone { get { return m_Loader == null; } }  
+            public bool IsDone { get { return m_Loader == null && m_Asset != null; } }  
 
-            private FMAssetManager m_AssetModule;
+            private GMAssetManager m_AssetModule;
             public void OnInit(GameAvatar avatar, AvatarPartType partType)
             {
                 m_Avatar = avatar;
@@ -52,29 +53,30 @@ namespace GameCore.Avatar
             /// </summary>
             public void LoadPartAsset()
             {
-                m_AssetModule ??= GameEntry.GetModule<FMAssetManager>();
+                m_AssetModule ??= GameEntry.GetModule<GMAssetManager>();
                 m_Loader = m_AssetModule.LoadAssetAsync<GameObject>(m_AssetName);
                 m_Loader.onComplete = LoadComplete;
             }
 
             public void LoadComplete(Loader loader)
             {
-                if (loader.AssetType == typeof(GameObject))
-                    m_Asset = loader.GetInstantiate<GameObject>();
-                else
-                    m_Asset = loader.GetRawObject<Object>();
-
-                if (m_PartType != AvatarPartType.Skeleton)
-                    UpdateConstranint();
-                else
-                    (m_Asset as GameObject).transform.SetParentZero(m_Avatar.Root);
-
+                m_Asset = loader.GetInstantiate<GameObject>();
                 m_Loader = null;
+
+                UpdateConstranint();
+                m_Asset.transform.SetParentZero(m_Avatar.Root);
             }
 
             public void UpdateConstranint()
-            { 
-                
+            {
+                if (m_PartType == AvatarPartType.Skeleton || !IsDone) return;
+                Transform bone = m_Asset.transform.GetChild(0);
+                ParentConstraint constraint = bone.TryAddComponent<ParentConstraint>();
+                ConstraintSource cs = new ConstraintSource();
+                cs.sourceTransform = Avatar.m_AllSkeletonBone[bone.name];
+                cs.weight = 1.0f;
+                constraint.AddSource(cs);
+                constraint.constraintActive = true;
             }
         }
     }

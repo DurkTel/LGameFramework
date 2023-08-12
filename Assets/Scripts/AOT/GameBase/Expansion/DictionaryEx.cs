@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DictionaryEx<K, V> : Dictionary<K, V>
+public class DictionaryEx<TKey, TValue> : Dictionary<TKey, TValue>
 {
-    public List<K> keyList;
+    public List<TKey> keyList;
 
     public DictionaryEx()
     {
-        keyList = new List<K>();
+        keyList = new List<TKey>();
     }
 
     public DictionaryEx(int capacity) : base(capacity)
     { 
-        keyList = new List<K>(capacity);
+        keyList = new List<TKey>(capacity);
     }
 
-    public new void Add(K key, V value)
+    public new void Add(TKey key, TValue value)
     {
         if (!keyList.Contains(key))
             keyList.Add(key);
@@ -29,7 +29,7 @@ public class DictionaryEx<K, V> : Dictionary<K, V>
         base.Add(key, value);
     }
 
-    public new bool Remove(K key)
+    public new bool Remove(TKey key)
     {
         keyList.Remove(key);
         return base.Remove(key);
@@ -39,7 +39,7 @@ public class DictionaryEx<K, V> : Dictionary<K, V>
     {
         if (index > 0 && index < keyList.Count - 1)
         {
-            K key = keyList[index];
+            TKey key = keyList[index];
             if (key != null && keyList.Remove(key))
             {
                 return base.Remove(key);
@@ -51,7 +51,7 @@ public class DictionaryEx<K, V> : Dictionary<K, V>
         return false;
     }
 
-    public new bool ContainsKey(K key)
+    public new bool ContainsKey(TKey key)
     {
         if (keyList.Contains(key) && base.ContainsKey(key))
             return true;

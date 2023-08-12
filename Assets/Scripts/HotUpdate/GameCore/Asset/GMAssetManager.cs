@@ -12,7 +12,7 @@ namespace GameCore.Asset
         AssetBundle,
         Editor
     }
-    public class FMAssetManager : FrameworkModule
+    public class GMAssetManager : FrameworkModule
     {
         private static AssetLoadMode s_AssetLoadMode;
         public static AssetLoadMode AssetLoadMode { get { return s_AssetLoadMode; } }

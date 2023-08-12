@@ -22,7 +22,7 @@ namespace GameCore.GUI
 
         private Dictionary<Type, GUIView> m_AllViewDict = new Dictionary<Type, GUIView>(50);
 
-        private FMAssetManager m_AssetModule;
+        private GMAssetManager m_AssetModule;
 
         private Dictionary<GUIView, float> m_WaitDestroy;
 
@@ -37,7 +37,7 @@ namespace GameCore.GUI
 
         internal override void OnInit()
         {
-            m_AssetModule = GameEntry.GetModule<FMAssetManager>();
+            m_AssetModule = GameEntry.GetModule<GMAssetManager>();
 
             InitializeCamera();
 

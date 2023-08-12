@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using LGameFramework.GameBase.Pool;
+using System.Collections.Generic;
 using UnityEngine;
-using static GameCore.Entity.FMEntityManager;
+using static GameCore.Entity.GMEntityManager;
 
 namespace GameCore.Entity
 {
@@ -32,6 +33,11 @@ namespace GameCore.Entity
         private Transform m_Container;
         public Transform Container { get { return m_Container; } }
         /// <summary>
+        /// 子实体 用于动态挂接其他实体
+        /// </summary>
+        private List<Entity> m_ChildEntities;
+        public List<Entity> ChildEntities { get { return m_ChildEntities; } }
+        /// <summary>
         /// 脏状态
         /// </summary>
         private bool m_Dirty;
@@ -57,6 +63,7 @@ namespace GameCore.Entity
 
         public void OnInit(int eid, EntityType etype, EntityGroup egroup)
         {
+            m_EntityData = Pool<EntityData>.Get();
             m_EntityData.EntityId = eid;
             m_EntityData.EntityType = etype;
             m_EntityData.Status = EntityStatus.Inited;
@@ -75,7 +82,7 @@ namespace GameCore.Entity
                     component = m_EntityComponents[componentType];
                     component.Update(deltaTime, unscaledTime);
                 }
-            }    
+            }
         }
 
         public void FixedUpdate(float fixedDeltaTime, float unscaledTime)
@@ -89,33 +96,6 @@ namespace GameCore.Entity
                     component.FixedUpdate(fixedDeltaTime, unscaledTime);
                 }
             }
-        }
-
-        /// <summary>
-        /// 生成载体容器
-        /// </summary>
-        public void CreateContainer()
-        {
-            Debug.Log("实例化实体容器");
-            m_GameObject ??= new GameObject();
-            m_GameObject.name = string.Format("Entity_{0}_{1}", m_EntityData.EntityType, m_EntityData.EntityId);
-            m_Transform = m_GameObject.transform;
-            m_EntityData.CreateTimeStamp = Time.unscaledTime;
-            m_Transform.SetParentZero(m_EntityGroup.EntityManager.EnableContainer);
-
-            if (m_Container == null)
-            { 
-                m_Container = new GameObject("Container").transform;
-                m_Container.SetParentZero(m_Transform);
-            }
-
-            Visible = true;
-            SetStatus(EntityStatus.Created);
-        }
-
-        public void SetStatus(EntityStatus status)
-        {
-            m_EntityData.Status = status;
         }
 
         public void Release()
@@ -135,10 +115,36 @@ namespace GameCore.Entity
             m_EntityData.ReleaseTimeStamp = Time.unscaledTime;
         }
 
-
         public void Dispose()
         {
             Object.Destroy(m_GameObject);
+        }
+
+        /// <summary>
+        /// 生成载体容器
+        /// </summary>
+        public void CreateContainer()
+        {
+            Debug.Log("实例化实体容器");
+            m_GameObject ??= new GameObject();
+            m_GameObject.name = string.Format("Entity_{0}_{1}", m_EntityData.EntityType, m_EntityData.EntityId);
+            m_Transform = m_GameObject.transform;
+            m_EntityData.CreateTimeStamp = Time.unscaledTime;
+            m_Transform.SetParentZero(m_EntityGroup.EntityManager.EnableContainer);
+
+            if (m_Container == null)
+            {
+                m_Container = new GameObject("Container").transform;
+                m_Container.SetParentZero(m_Transform);
+            }
+
+            Visible = true;
+            SetStatus(EntityStatus.Created);
+        }
+
+        public void SetStatus(EntityStatus status)
+        {
+            m_EntityData.Status = status;
         }
 
         /// <summary>
@@ -166,6 +172,27 @@ namespace GameCore.Entity
             bool has = m_EntityComponents.TryGetValue(typeof(T), out IEntityComponent icomponent);
             component = icomponent as T;
             return has;
+        }
+
+        /// <summary>
+        /// 添加子实体
+        /// </summary>
+        /// <param name="entity"></param>
+        public void AddChildEntity(Entity entity)
+        {
+            m_ChildEntities ??= new List<Entity>();
+            if (m_ChildEntities.Contains(entity)) return;
+            m_ChildEntities.Add(entity);
+        }
+
+        /// <summary>
+        /// 移除子实体
+        /// </summary>
+        /// <param name="entity"></param>
+        public void RemoveChildEntity(Entity entity)
+        {
+            if (m_ChildEntities == null || !m_ChildEntities.Contains(entity)) return;
+            m_ChildEntities.Remove(entity);
         }
     }
 }

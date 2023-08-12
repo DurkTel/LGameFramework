@@ -34,7 +34,7 @@ namespace GameCore.Entity
         /// </summary>
         private int m_CullingLod;
         public int CullingLod { get { return m_CullingLod; } }
-        public FMEntityManager.EntityCullingGroup CullingGroup { get; set; }
+        public GMEntityManager.EntityCullingGroup CullingGroup { get; set; }
 
 
         public void OnInit(Entity entity)

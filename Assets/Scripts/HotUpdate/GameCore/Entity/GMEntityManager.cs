@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace GameCore.Entity
 {
-    public sealed partial class FMEntityManager : FrameworkModule
+    public sealed partial class GMEntityManager : FrameworkModule
     {
         private static int m_GUID = 0;
         internal override int Priority => 3;

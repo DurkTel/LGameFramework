@@ -7,7 +7,7 @@ using LGameFramework.GameBase.Pool;
 
 namespace GameCore.Entity
 {
-    public sealed partial class FMEntityManager : FrameworkModule
+    public sealed partial class GMEntityManager : FrameworkModule
     {
         /// <summary>
         /// ÊµÌå×é
@@ -28,11 +28,11 @@ namespace GameCore.Entity
 
             private readonly List<Entity> m_DestroyList;
 
-            private readonly FMEntityManager m_EntityManager;
-            public FMEntityManager EntityManager { get { return m_EntityManager; } }
+            private readonly GMEntityManager m_EntityManager;
+            public GMEntityManager EntityManager { get { return m_EntityManager; } }
             public int Count { get {  return m_Entitys.Count; } }
 
-            public EntityGroup(EntityType groupType, FMEntityManager entityManager)
+            public EntityGroup(EntityType groupType, GMEntityManager entityManager)
             {
                 m_EntityGroupType = groupType;
                 m_EntityManager = entityManager;
@@ -95,6 +95,7 @@ namespace GameCore.Entity
                     }
 
                     entity.SetStatus(EntityStatus.Released);
+                    Pool<EntityData>.Release(entity.EntityData);
                     Pool<Entity>.Release(entity);
                     m_DestroyList.Add(entity);
                     m_ReleaseList.RemoveAt(i);
@@ -126,7 +127,6 @@ namespace GameCore.Entity
                 else
                     entity = Pool<Entity>.Get();
 
-                entity.SetStatus(EntityStatus.WillCreate);
                 m_Entitys.Add(entity);
                 return entity;
             }

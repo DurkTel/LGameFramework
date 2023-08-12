@@ -68,7 +68,9 @@ namespace GameCore.Entity
         public virtual void LoadSkin()
         {
             Debug.Log("开始加载外观");
-            m_Avatar.AddPart(GameAvatar.AvatarPartType.Skeleton, "common_character_bone.prefab");
+            foreach (var asset in m_Entity.EntityData.SkinAssetNames)
+                m_Avatar.AddPart(asset.Key, asset.Value);
+
         }
 
         public virtual void SkinLoadComplete(GameAvatar.AvatarPartType partType)

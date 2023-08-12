@@ -1,7 +1,8 @@
+using GameCore.Avatar;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static GameCore.Entity.FMEntityManager;
+using static GameCore.Entity.GMEntityManager;
 
 namespace GameCore.Entity
 {
@@ -32,5 +33,21 @@ namespace GameCore.Entity
         /// </summary>
         private float m_ReleaseTimeStamp;
         public float ReleaseTimeStamp { get { return m_ReleaseTimeStamp; } set { m_ReleaseTimeStamp = value; } }
+        /// <summary>
+        /// 皮肤部位资源字典
+        /// </summary>
+        private Dictionary<GameAvatar.AvatarPartType, string> m_SkinAssetNames;
+        public Dictionary<GameAvatar.AvatarPartType, string> SkinAssetNames { get { return m_SkinAssetNames; } }
+
+
+
+        /// <summary>
+        /// 设置皮肤部位资源
+        /// </summary>
+        public void SetSkinAssetName(GameAvatar.AvatarPartType partType, string assetName)
+        {
+            m_SkinAssetNames ??= new Dictionary<GameAvatar.AvatarPartType, string>();
+            m_SkinAssetNames[partType] = assetName;
+        }
     }
 }

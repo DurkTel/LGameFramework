@@ -34,7 +34,7 @@ namespace GameCore
         private void Awake()
         {
             OrbitCamera.Initialize();
-            GameObject gameLogic = GetModule<Asset.FMAssetManager>().LoadAsset<GameObject>("GameLogic.prefab");
+            GameObject gameLogic = GetModule<Asset.GMAssetManager>().LoadAsset<GameObject>("GameLogic.prefab");
             DontDestroyOnLoad(gameLogic);
         }
 

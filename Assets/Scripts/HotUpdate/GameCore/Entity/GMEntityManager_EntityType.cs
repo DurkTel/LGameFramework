@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace GameCore.Entity
 {
-    public sealed partial class FMEntityManager : FrameworkModule
+    public sealed partial class GMEntityManager : FrameworkModule
     {
         /// <summary>
         /// 实体类型。

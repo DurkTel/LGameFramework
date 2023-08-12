@@ -19,13 +19,13 @@ namespace GameCore.Asset
             public RawObjectInfo rawObjectInfo;
         }
 
-        private static FMAssetManager m_AssetModule;
-        public static FMAssetManager AssetModule
+        private static GMAssetManager m_AssetModule;
+        public static GMAssetManager AssetModule
         {
             get
             {
                 if (m_AssetModule == null)
-                    m_AssetModule = GameEntry.GetModule<FMAssetManager>();
+                    m_AssetModule = GameEntry.GetModule<GMAssetManager>();
 
                 return m_AssetModule;
             }
@@ -180,7 +180,7 @@ namespace GameCore.Asset
                 return;
 
             //AB包模式下计算引用
-            if (FMAssetManager.AssetLoadMode == AssetLoadMode.AssetBundle)
+            if (GMAssetManager.AssetLoadMode == AssetLoadMode.AssetBundle)
             {
                 AssetBundleRecord record;
                 //这个资源的AB引用减1

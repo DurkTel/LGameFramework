@@ -23,7 +23,7 @@ namespace GameCore.Avatar
         /// <summary>
         /// 所有骨骼的变换组件
         /// </summary>
-        private Transform[] m_AllSkeletonBone;
+        private Dictionary<string, Transform> m_AllSkeletonBone;
         /// <summary>
         /// 当前正在加载的部位
         /// </summary>
@@ -63,7 +63,10 @@ namespace GameCore.Avatar
                 if (m_LoadingPart.PartType == AvatarPartType.Skeleton)
                 {
                     Transform tra = (m_LoadingPart.Asset as GameObject).transform;
-                    m_AllSkeletonBone = tra.GetComponentsInChildren<Transform>();
+                    Transform[] temp = tra.GetComponentsInChildren<Transform>();
+                    m_AllSkeletonBone = new Dictionary<string, Transform>(temp.Length);
+                    foreach (Transform t in temp)
+                        m_AllSkeletonBone[t.name.Replace("(copy)", "")] = t;
 
                     //骨骼更新了 刷新一下部件的约束
                     foreach (var part in m_PartDict.Values)
@@ -75,7 +78,7 @@ namespace GameCore.Avatar
             }
         }
 
-        public void AddPart(AvatarPartType partType, string assetName)
+        public void AddPart(AvatarPartType partType, string assetName = null)
         {
             GameAvatarPart part = Pool<GameAvatarPart>.Get();
             part.OnInit(this, partType);
@@ -91,6 +94,12 @@ namespace GameCore.Avatar
                 return null;
 
             return m_PartDict[partType];
+        }
+
+        public void UpdatePartAsset(AvatarPartType partType, string assetName)
+        {
+            if (m_PartDict.ContainsKey(partType))
+                m_PartDict[partType].AssetName = assetName;
         }
 
         public void UpdatePart(AvatarPartType partType, string assetName)
