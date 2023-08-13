@@ -1,4 +1,6 @@
 
+using System.Collections.Generic;
+
 namespace LGameFramework.GameBase.Pool
 {
     /// <summary>
@@ -34,6 +36,37 @@ namespace LGameFramework.GameBase.Pool
         public static void Remove(int count)
         {
             s_ObjectPool.Remove(count);
+        }
+    }
+
+    /// <summary>
+    /// ×Öµä³Ø
+    /// </summary>
+    /// <typeparam name="TKey"></typeparam>
+    /// <typeparam name="TValue"></typeparam>
+    public class DictionaryPool<TKey, TValue>
+    {
+        public static Dictionary<TKey, TValue> Get()
+        {
+            return Pool<Dictionary<TKey, TValue>>.Get();
+        }
+
+        public static void Release(Dictionary<TKey, TValue> toRelease)
+        {
+            Pool<Dictionary<TKey, TValue>>.Release(toRelease);
+        }
+    }
+
+    public class ListPool<TValue>
+    {
+        public static List<TValue> Get()
+        {
+            return Pool<List<TValue>>.Get();
+        }
+
+        public static void Release(List<TValue> toRelease)
+        {
+            Pool<List<TValue>>.Release(toRelease);
         }
     }
 }

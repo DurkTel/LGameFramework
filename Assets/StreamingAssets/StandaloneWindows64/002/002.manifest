@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 3150402985
+CRC: 1508902003
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -67,9 +67,13 @@ AssetBundleManifest:
       Name: artmodules/fonts.asset
       Dependencies: {}
     Info_20:
-      Name: artmodules/model/skeleton.asset
+      Name: artmodules/model/models.asset
       Dependencies:
         Dependency_0: artmodules/model/testart.asset
     Info_21:
+      Name: artmodules/model/skeleton.asset
+      Dependencies:
+        Dependency_0: artmodules/model/models.asset
+    Info_22:
       Name: artmodules/model/testart.asset
       Dependencies: {}

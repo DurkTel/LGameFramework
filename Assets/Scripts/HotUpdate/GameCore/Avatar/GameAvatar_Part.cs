@@ -1,4 +1,5 @@
 using GameCore.Asset;
+using LGameFramework.GameBase.Pool;
 using UnityEngine;
 using UnityEngine.Animations;
 
@@ -48,6 +49,27 @@ namespace GameCore.Avatar
                 m_PartType = partType;
             }
 
+            public void Release()
+            {
+                m_Avatar = null;
+                m_AssetName = null;
+            }
+
+            public void Dispose()
+            {
+                if (m_Loader != null)
+                {
+                    m_Loader.Dispose();
+                    m_Loader = null;
+                }
+
+                if (m_Asset != null)
+                {
+                    m_AssetModule.Destroy(m_Asset);
+                    m_Asset = null;
+                }
+            }
+
             /// <summary>
             /// 加载部位资源
             /// </summary>
@@ -60,7 +82,15 @@ namespace GameCore.Avatar
 
             public void LoadComplete(Loader loader)
             {
-                m_Asset = loader.GetInstantiate<GameObject>();
+                //新资源加载完成后 清除之前的
+                if (m_Asset != null && m_Asset.name.Replace("(Clone)", "") != m_AssetName.Replace(".prefab", ""))
+                { 
+                    m_AssetModule.Destroy(m_Asset);
+                    m_Asset = null;
+                }
+
+                //同一资源不需要重复实例化
+                m_Asset ??= loader.GetInstantiate<GameObject>();
                 m_Loader = null;
 
                 UpdateConstranint();
@@ -69,14 +99,18 @@ namespace GameCore.Avatar
 
             public void UpdateConstranint()
             {
-                if (m_PartType == AvatarPartType.Skeleton || !IsDone) return;
-                Transform bone = m_Asset.transform.GetChild(0);
-                ParentConstraint constraint = bone.TryAddComponent<ParentConstraint>();
-                ConstraintSource cs = new ConstraintSource();
-                cs.sourceTransform = Avatar.m_AllSkeletonBone[bone.name];
-                cs.weight = 1.0f;
-                constraint.AddSource(cs);
-                constraint.constraintActive = true;
+                if (m_PartType == AvatarPartType.Skeleton || Avatar.m_AllSkeletonBone == null || !IsDone) return;
+                int childNum = m_Asset.transform.childCount;
+                for (int i = 0; i < childNum; i++)
+                {
+                    Transform bone = m_Asset.transform.GetChild(i);
+                    ParentConstraint constraint = bone.TryAddComponent<ParentConstraint>();
+                    ConstraintSource cs = new ConstraintSource();
+                    cs.sourceTransform = Avatar.m_AllSkeletonBone[bone.name];
+                    cs.weight = 1.0f;
+                    constraint.AddSource(cs);
+                    constraint.constraintActive = true;
+                }
             }
         }
     }

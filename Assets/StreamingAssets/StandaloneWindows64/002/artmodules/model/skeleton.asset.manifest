@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 4083204613
+CRC: 1720458821
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b817a1b828e74a6f172304a0e1cca37a
+    Hash: 14a69f662d50e5ec70ea0949b90843d3
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 75d6f180493e13d6865e47677ae8abab
+    Hash: 0bf2e01e14484df24a5d0aecbc29cacf
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -21,18 +21,10 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 95
   Script: {instanceID: 0}
-- Class: 210
-  Script: {instanceID: 0}
 - Class: 212
-  Script: {instanceID: 0}
-- Class: 213
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/ArtModules/Model/Skeleton/unit000.prefab
-- Assets/ArtModules/Model/Skeleton/common_double_bone.prefab
-- Assets/ArtModules/Model/Skeleton/hair_2.prefab
-- Assets/ArtModules/Model/Skeleton/common_character_bone.prefab
-- Assets/ArtModules/Model/Skeleton/common_single_bone.prefab
 Dependencies:
-- E:/UnityBuild/AssetBundle/StandaloneWindows64/002/artmodules/model/testart.asset
+- E:/UnityBuild/AssetBundle/StandaloneWindows64/002/artmodules/model/models.asset

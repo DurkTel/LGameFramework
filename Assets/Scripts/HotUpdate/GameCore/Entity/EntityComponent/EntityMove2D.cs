@@ -44,7 +44,7 @@ namespace GameCore.Entity
             Move(fixedDeltaTime);
         }
 
-        public void Dispose()
+        public void Release()
         {
             
         }
@@ -60,9 +60,9 @@ namespace GameCore.Entity
             m_Rigidbody.velocity = m_MoveDirection * m_MoveSpeed * deltaTime;
         }
 
-        public void Release()
+        public void Dispose()
         {
-            
+            throw new System.NotImplementedException();
         }
     }
 }

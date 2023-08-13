@@ -55,5 +55,10 @@ namespace GameCore.Entity
         /// ªÿ ’
         /// </summary>
         void Release();
+
+        /// <summary>
+        /// œ˙ªŸ
+        /// </summary>
+        void Dispose();
     }
 }

@@ -61,7 +61,7 @@ namespace GameCore.Entity
         private DictionaryEx<System.Type, IEntityComponent> m_EntityComponents;
         public DictionaryEx<System.Type, IEntityComponent> EntityComponents { get { return m_EntityComponents; } }
 
-        public void OnInit(int eid, EntityType etype, EntityGroup egroup)
+        public virtual void OnInit(int eid, EntityType etype, EntityGroup egroup)
         {
             m_EntityData = Pool<EntityData>.Get();
             m_EntityData.EntityId = eid;
@@ -72,7 +72,7 @@ namespace GameCore.Entity
             CreateContainer();
         }
 
-        public void Update(float deltaTime, float unscaledTime)
+        public virtual void Update(float deltaTime, float unscaledTime)
         {
             if (m_EntityComponents != null && m_EntityComponents.Count > 0)
             {
@@ -85,7 +85,7 @@ namespace GameCore.Entity
             }
         }
 
-        public void FixedUpdate(float fixedDeltaTime, float unscaledTime)
+        public virtual void FixedUpdate(float fixedDeltaTime, float unscaledTime)
         {
             if (m_EntityComponents != null && m_EntityComponents.Count > 0)
             {
@@ -98,7 +98,7 @@ namespace GameCore.Entity
             }
         }
 
-        public void Release()
+        public virtual void Release()
         {
             if (m_EntityComponents != null && m_EntityComponents.Count > 0)
             {
@@ -108,16 +108,28 @@ namespace GameCore.Entity
                     component = m_EntityComponents[componentType];
                     component.Release();
                 }
-                m_EntityComponents.Clear();
             }
 
             m_EntityGroup.ReleaseEntity(this);
             m_EntityData.ReleaseTimeStamp = Time.unscaledTime;
+            m_EntityData.Release();
         }
 
-        public void Dispose()
+        public virtual void Dispose()
         {
+            if (m_EntityComponents != null && m_EntityComponents.Count > 0)
+            {
+                IEntityComponent component;
+                foreach (var componentType in m_EntityComponents.keyList)
+                {
+                    component = m_EntityComponents[componentType];
+                    component.Dispose();
+                }
+            }
             Object.Destroy(m_GameObject);
+            m_GameObject = null;
+            m_Transform = null;
+            m_EntityData = null;
         }
 
         /// <summary>
@@ -142,6 +154,10 @@ namespace GameCore.Entity
             SetStatus(EntityStatus.Created);
         }
 
+        /// <summary>
+        /// 设置实体状态
+        /// </summary>
+        /// <param name="status"></param>
         public void SetStatus(EntityStatus status)
         {
             m_EntityData.Status = status;
@@ -151,13 +167,16 @@ namespace GameCore.Entity
         /// 添加实体组件
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public void AddComponent<T>() where T : IEntityComponent, new()
+        public void AddComponent<T>() where T : class, IEntityComponent, new()
         {
             m_EntityComponents ??= new DictionaryEx<System.Type, IEntityComponent>();
-            IEntityComponent entityComponent = new T();
+            if (!TryGetComponent(out T entityComponent))
+            {
+                entityComponent = new T();
+                m_EntityComponents?.Add(typeof(T), entityComponent);
+                m_EntityComponents.keyList.Sort(delegate (System.Type a, System.Type b) { return m_EntityComponents[a].Priority - m_EntityComponents[b].Priority; });
+            }
             entityComponent.OnInit(this);
-            m_EntityComponents.Add(typeof(T), entityComponent);
-            m_EntityComponents.keyList.Sort(delegate (System.Type a, System.Type b) { return m_EntityComponents[a].Priority - m_EntityComponents[b].Priority; });
         }
 
         /// <summary>

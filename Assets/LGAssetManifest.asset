@@ -899,14 +899,20 @@ MonoBehaviour:
     bundleName: gui_createrole_view.asset
   - assetName: gui_default_view.prefab
     bundleName: gui_default_view.asset
-  - assetName: common_character_bone.prefab
-    bundleName: skeleton.asset
-  - assetName: common_double_bone.prefab
-    bundleName: skeleton.asset
-  - assetName: common_single_bone.prefab
-    bundleName: skeleton.asset
-  - assetName: hair_2.prefab
-    bundleName: skeleton.asset
+  - assetName: animationnewcontroller.controller
+    bundleName: models.asset
+  - assetName: normalanimator.controller
+    bundleName: models.asset
+  - assetName: unit000_body.prefab
+    bundleName: models.asset
+  - assetName: unit000_hair.prefab
+    bundleName: models.asset
+  - assetName: unit000_hand.prefab
+    bundleName: models.asset
+  - assetName: unit000_head.prefab
+    bundleName: models.asset
+  - assetName: unit000_leg.prefab
+    bundleName: models.asset
   - assetName: unit000.prefab
     bundleName: skeleton.asset
   - assetName: armor_4.png
@@ -915,12 +921,14 @@ MonoBehaviour:
     bundleName: testart.asset
   - assetName: human_1.png
     bundleName: testart.asset
+  - assetName: new_cloth_01.png
+    bundleName: testart.asset
   - assetName: new_pant_11.png
     bundleName: testart.asset
   bundleList:
   - bundleName: gameaudiomixer.asset
     assetPath: 002/artmodules/audio/gameaudiomixer.asset
-    md5Code: 6fbbad484fef621695a19e9a07ed3ea0
+    md5Code: 2b8872a0e1aee6daaf0bf84b9a7b22df
     size: 3806
     crc: 1941339419
     dependencieBundleNames: []
@@ -929,7 +937,7 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: city.asset
     assetPath: 002/artmodules/audio/music/city.asset
-    md5Code: b83effc8914aad81adff8e17266ef9c3
+    md5Code: 93e199d9c947042da11d3b96aa15f0df
     size: 1481041
     crc: 392263555
     dependencieBundleNames: []
@@ -938,7 +946,7 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: copy.asset
     assetPath: 002/artmodules/audio/music/copy.asset
-    md5Code: 7ec608588f982a0979cef70d9eff6684
+    md5Code: 44d15b85f75f2c1553f538029cfd100e
     size: 2704968
     crc: 2188829967
     dependencieBundleNames: []
@@ -948,7 +956,7 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: goblin.asset
     assetPath: 002/artmodules/audio/sound/goblin.asset
-    md5Code: 233594acfd25ce95c506e867cf15512f
+    md5Code: df00398563c12f2f443b754927327ad0
     size: 184413
     crc: 3758353313
     dependencieBundleNames: []
@@ -976,7 +984,7 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: swordman.asset
     assetPath: 002/artmodules/audio/sound/swordman.asset
-    md5Code: c4e42522320cf3cf0b40e4abc33c4c80
+    md5Code: 96f31c347b1091074082f44221dcdc1b
     size: 3440659
     crc: 60420296
     dependencieBundleNames: []
@@ -1360,7 +1368,7 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: darkhiteffect.asset
     assetPath: 002/artmodules/effect/darkhiteffect.asset
-    md5Code: 13195f4f9b6f1adb5bf9b358624d3f70
+    md5Code: 512fbac5f51aebf566c60f10eceb2b30
     size: 68753
     crc: 1386579840
     dependencieBundleNames: []
@@ -1391,7 +1399,7 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: fonts.asset
     assetPath: 002/artmodules/fonts.asset
-    md5Code: 2d85b43dd7b06227c883c5a8abfc4734
+    md5Code: b312d0726e76a2c6faa33f25fdc74294
     size: 2838421
     crc: 3514579903
     dependencieBundleNames: []
@@ -1401,7 +1409,7 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: gamelogic.asset
     assetPath: 002/artmodules/gamelogic.asset
-    md5Code: 06d10339fead41eb138383ea484056b6
+    md5Code: 9460e250fc9bf0b54eaac98752b78471
     size: 2290
     crc: 2588450703
     dependencieBundleNames: []
@@ -1410,7 +1418,7 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: images.asset
     assetPath: 002/artmodules/gui/role/images.asset
-    md5Code: 3df6613321d92f4b1f852a3338005a49
+    md5Code: 18537e00f14561be219155a0a8476030
     size: 10283
     crc: 926243746
     dependencieBundleNames: []
@@ -1423,7 +1431,7 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: roleicon.asset
     assetPath: 002/artmodules/gui/role/images/roleicon.asset
-    md5Code: 54626da9a97e98af19f3b9bef4ef343d
+    md5Code: 3a592391a81dcc711d8c8bbd154b8b73
     size: 41853
     crc: 1142916516
     dependencieBundleNames: []
@@ -1435,7 +1443,7 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: create_role_bg_1.asset
     assetPath: 002/artmodules/gui/role/images/single/create_role_bg_1.asset
-    md5Code: b8ef216a3804c6e7d6dc66fb4d4bce93
+    md5Code: edac0079a926e513d686c95186cf7076
     size: 291582
     crc: 3378734213
     dependencieBundleNames: []
@@ -1444,7 +1452,7 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: create_role_bg_2.asset
     assetPath: 002/artmodules/gui/role/images/single/create_role_bg_2.asset
-    md5Code: 45571f84602f0c5441907daa7dff28a5
+    md5Code: 508fcd95e01797c9f3eb32d2c05c4a45
     size: 332673
     crc: 1027264494
     dependencieBundleNames: []
@@ -1453,7 +1461,7 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: create_role_bg_3.asset
     assetPath: 002/artmodules/gui/role/images/single/create_role_bg_3.asset
-    md5Code: 1ac3e5ef40cb29837de2778ca71dd9b0
+    md5Code: 55b69a25b956c7282e00f8bb0f988af3
     size: 275822
     crc: 1177256715
     dependencieBundleNames: []
@@ -1462,7 +1470,7 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: create_role_bg_4.asset
     assetPath: 002/artmodules/gui/role/images/single/create_role_bg_4.asset
-    md5Code: 44bd35f86bb1a265bd788bf0fdb4280c
+    md5Code: c2477b0cf468eb23832090ea146e216f
     size: 245353
     crc: 685618133
     dependencieBundleNames: []
@@ -1471,7 +1479,7 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: create_role_bg_5.asset
     assetPath: 002/artmodules/gui/role/images/single/create_role_bg_5.asset
-    md5Code: 5f823987ebc8c9546cc8ea143c9ed8e5
+    md5Code: d561704d15154cc8d7f3dad186651e55
     size: 266293
     crc: 2075664502
     dependencieBundleNames: []
@@ -1480,7 +1488,7 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: create_role_bg_6.asset
     assetPath: 002/artmodules/gui/role/images/single/create_role_bg_6.asset
-    md5Code: b531791c8f205eecda057c210e4fdd89
+    md5Code: 91c213eae8b48a2eb66fba479ec6884f
     size: 281963
     crc: 926479514
     dependencieBundleNames: []
@@ -1489,7 +1497,7 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: role_live2d_1_0.asset
     assetPath: 002/artmodules/gui/role/images/single/live2d/role_live2d_1_0.asset
-    md5Code: 3277dd938d1cfdcf9a25f4e1cef83ae9
+    md5Code: 1b5e14fba6d333bb6ee651c21a732f11
     size: 259846
     crc: 2420260573
     dependencieBundleNames: []
@@ -1498,7 +1506,7 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: default_loading_gui.asset
     assetPath: 002/artmodules/gui/role/prefabs/default_loading_gui.asset
-    md5Code: bfe5ec231987e707c8f38bcbe33abed1
+    md5Code: 86de112158724edb62fa166d22b9b542
     size: 5481
     crc: 10541763
     dependencieBundleNames:
@@ -1511,7 +1519,7 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: gui_createrole_view.asset
     assetPath: 002/artmodules/gui/role/prefabs/gui_createrole_view.asset
-    md5Code: f6042b7b12afde37e611a353c62559e3
+    md5Code: 30d44315bf12fadbb3bc73f4643e4e4c
     size: 8733
     crc: 4176595238
     dependencieBundleNames: []
@@ -1520,36 +1528,50 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: gui_default_view.asset
     assetPath: 002/artmodules/gui/role/prefabs/gui_default_view.asset
-    md5Code: 02be477c3871e78023999a2f77158573
+    md5Code: 13b65c482e494dfa27060618ec76b2a6
     size: 4533
     crc: 3042067884
     dependencieBundleNames: []
     allFiles:
     - gui_default_view.prefab
     fileFlag: 1
-  - bundleName: skeleton.asset
-    assetPath: 002/artmodules/model/skeleton.asset
-    md5Code: 58be4186c62957cf99de9875447e6486
-    size: 32188
-    crc: 4083204613
+  - bundleName: models.asset
+    assetPath: 002/artmodules/model/models.asset
+    md5Code: bc654ff540acb7b6b8e9b586a0bcacdc
+    size: 10503
+    crc: 3760080058
     dependencieBundleNames:
     - testart.asset
     allFiles:
-    - common_character_bone.prefab
-    - common_double_bone.prefab
-    - common_single_bone.prefab
-    - hair_2.prefab
+    - animationnewcontroller.controller
+    - normalanimator.controller
+    - unit000_body.prefab
+    - unit000_hair.prefab
+    - unit000_hand.prefab
+    - unit000_head.prefab
+    - unit000_leg.prefab
+    fileFlag: 1
+  - bundleName: skeleton.asset
+    assetPath: 002/artmodules/model/skeleton.asset
+    md5Code: e6bb1a6add51bca74d1b2d3bb41ed06e
+    size: 27188
+    crc: 1720458821
+    dependencieBundleNames:
+    - models.asset
+    - testart.asset
+    allFiles:
     - unit000.prefab
     fileFlag: 1
   - bundleName: testart.asset
     assetPath: 002/artmodules/model/testart.asset
-    md5Code: d8992db7c3769f715834be63f8b9e217
-    size: 6668
-    crc: 3963033677
+    md5Code: 3ad714beda4572245c7e4a8e5081427e
+    size: 7417
+    crc: 2354161570
     dependencieBundleNames: []
     allFiles:
     - armor_4.png
     - hair_2.png
     - human_1.png
+    - new_cloth_01.png
     - new_pant_11.png
     fileFlag: 1

@@ -1,4 +1,5 @@
 using GameCore.Avatar;
+using LGameFramework.GameBase.Pool;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,14 +40,21 @@ namespace GameCore.Entity
         private Dictionary<GameAvatar.AvatarPartType, string> m_SkinAssetNames;
         public Dictionary<GameAvatar.AvatarPartType, string> SkinAssetNames { get { return m_SkinAssetNames; } }
 
-
+        public void Release()
+        {
+            DictionaryPool<GameAvatar.AvatarPartType, string>.Release(m_SkinAssetNames);
+            m_SkinAssetNames.Clear();
+            m_SkinAssetNames = null;
+            m_CreateTimeStamp = 0f;
+            m_EntityId = 0;
+        }
 
         /// <summary>
         /// 设置皮肤部位资源
         /// </summary>
         public void SetSkinAssetName(GameAvatar.AvatarPartType partType, string assetName)
         {
-            m_SkinAssetNames ??= new Dictionary<GameAvatar.AvatarPartType, string>();
+            m_SkinAssetNames ??= DictionaryPool<GameAvatar.AvatarPartType, string>.Get();
             m_SkinAssetNames[partType] = assetName;
         }
     }

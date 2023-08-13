@@ -1,5 +1,6 @@
 using UnityEngine;
 using GameCore.Avatar;
+using static GameCore.Avatar.GameAvatar;
 
 namespace GameCore.Entity
 {
@@ -42,6 +43,7 @@ namespace GameCore.Entity
             m_GameObject = entity.GameObject;
             m_Avatar = entity.Container.TryAddComponent<GameAvatar>();
             m_Avatar.OnLoadComplete.AddListener(SkinLoadComplete);
+            m_Avatar.OnInit();
         }
 
         public void Update(float deltaTime, float unscaledTime)
@@ -57,19 +59,35 @@ namespace GameCore.Entity
         public void Release()
         {
             m_Avatar.OnLoadComplete.RemoveListener(SkinLoadComplete);
-
+            m_Avatar.Release();
+            m_Entity = null;
+            m_Transform = null;
+            m_GameObject = null;
+            m_Enabled = false;
         }
 
         public void Dispose()
         {
-
+            m_Avatar.Dispose();
+            m_Avatar = null;
         }
 
         public virtual void LoadSkin()
         {
+            if (m_Avatar == null || m_Entity == null) return;
             Debug.Log("开始加载外观");
+            GameAvatarPart part;
             foreach (var asset in m_Entity.EntityData.SkinAssetNames)
-                m_Avatar.AddPart(asset.Key, asset.Value);
+            {
+                part = m_Avatar.GetPart(asset.Key);
+                if (part == null)
+                    m_Avatar.AddPart(asset.Key, asset.Value);
+                else
+                {
+                    part.OnInit(m_Avatar, asset.Key);
+                    m_Avatar.UpdatePart(asset.Key, asset.Value);
+                }
+            }
 
         }
 

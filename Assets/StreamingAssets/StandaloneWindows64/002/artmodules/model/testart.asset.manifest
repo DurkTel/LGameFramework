@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3963033677
+CRC: 2354161570
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: cad25e9b7ea124e32ce6ed87e2b8ac2a
+    Hash: 16752f293f580a54f43a4e850177c555
   TypeTreeHash:
     serializedVersion: 2
     Hash: f267fd2d8bcb1179236b6179ac5313bc
@@ -15,6 +15,7 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
+- Assets/ArtModules/Model/TestArt/New_Cloth_01.png
 - Assets/ArtModules/Model/TestArt/Human_1.png
 - Assets/ArtModules/Model/TestArt/Armor_4.png
 - Assets/ArtModules/Model/TestArt/hair_2.png

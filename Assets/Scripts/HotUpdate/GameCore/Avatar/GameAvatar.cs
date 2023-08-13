@@ -10,6 +10,7 @@ namespace GameCore.Avatar
     /// </summary>
     public partial class GameAvatar : MonoBehaviour
     {
+        private Vector3 hidePosition = new Vector3(9999, 9999, 9999);
         /// <summary>
         /// 部位字典
         /// </summary>
@@ -33,14 +34,28 @@ namespace GameCore.Avatar
         /// </summary>
         public bool IsLoading { get { return m_LoadingPart != null; } }
         /// <summary>
+        /// 是否显示
+        /// </summary>
+        private bool m_Visible;
+        public bool Visible
+        {
+            get { return m_Visible; }
+            set 
+            { 
+                m_Visible = value;
+                m_Root.transform.position = m_Visible ? Vector3.zero : hidePosition;
+            }
+        }
+        /// <summary>
         /// 加载完成回调
         /// </summary>
         public UnityEvent<AvatarPartType> OnLoadComplete = new UnityEvent<AvatarPartType>();
 
-        private void Start()
+        public void OnInit()
         {
-            m_Root = transform;
-            gameObject.name = "GameAvatar";
+            m_Root ??= new GameObject("GameAvatar").transform;
+            m_Root.SetParentZero(transform);
+            Visible = true;
         }
 
         private void Update()
@@ -62,11 +77,11 @@ namespace GameCore.Avatar
             {
                 if (m_LoadingPart.PartType == AvatarPartType.Skeleton)
                 {
-                    Transform tra = (m_LoadingPart.Asset as GameObject).transform;
+                    Transform tra = m_LoadingPart.Asset.transform;
                     Transform[] temp = tra.GetComponentsInChildren<Transform>();
                     m_AllSkeletonBone = new Dictionary<string, Transform>(temp.Length);
                     foreach (Transform t in temp)
-                        m_AllSkeletonBone[t.name.Replace("(copy)", "")] = t;
+                        m_AllSkeletonBone[t.name.Replace("(Clone)", "")] = t;
 
                     //骨骼更新了 刷新一下部件的约束
                     foreach (var part in m_PartDict.Values)
@@ -78,19 +93,45 @@ namespace GameCore.Avatar
             }
         }
 
+        public void Release()
+        {
+            if (m_PartDict != null)
+            {
+                foreach (var part in m_PartDict.Values)
+                    part.Release();
+            }
+            m_AllSkeletonBone = null;
+        }
+
+        public void Dispose()
+        {
+            if (m_PartDict != null)
+            {
+                foreach (var part in m_PartDict.Values)
+                {
+                    part.Dispose();
+                    Pool<GameAvatarPart>.Release(part);
+                }
+                DictionaryPool<AvatarPartType, GameAvatarPart>.Release(m_PartDict);
+                m_PartDict.Clear();
+                m_PartDict = null;
+            }
+            m_Root = null;
+        }
+
         public void AddPart(AvatarPartType partType, string assetName = null)
         {
             GameAvatarPart part = Pool<GameAvatarPart>.Get();
             part.OnInit(this, partType);
             part.AssetName = assetName;
 
-            m_PartDict ??= new Dictionary<AvatarPartType, GameAvatarPart>((int)AvatarPartType.End);
+            m_PartDict ??= DictionaryPool<AvatarPartType, GameAvatarPart>.Get();
             m_PartDict.Add(partType, part);
         }
 
         public GameAvatarPart GetPart(AvatarPartType partType)
         {
-            if (!m_PartDict.ContainsKey(partType))
+            if (m_PartDict == null || !m_PartDict.ContainsKey(partType))
                 return null;
 
             return m_PartDict[partType];

@@ -14,7 +14,7 @@ namespace GameCore.Entity
         /// </summary>
         public sealed class EntityGroup
         {
-            private readonly float m_DestroyTime = 60f;
+            private readonly float m_DestroyTime = 5f;
 
             private readonly EntityType m_EntityGroupType;
             public EntityType EntityGroupType { get { return m_EntityGroupType; } } 
@@ -55,19 +55,21 @@ namespace GameCore.Entity
 
             public void Update(float deltaTime, float unscaledTime)
             {
-                if (m_Entitys.Count < 0) return;
-
-                foreach (Entity entity in m_Entitys)
+                if (m_Entitys.Count > 0)
                 {
-                    if (entity.Visible && entity.TryGetComponent(out EntitySkinComponent skin) && !skin.Enabled)
+                    foreach (Entity entity in m_Entitys)
                     {
-                        skin.Enabled = true;
-                        m_WaitCreateSkinList.Add(skin);
-                        continue;
-                    }
+                        if (entity.Visible && entity.TryGetComponent(out EntitySkinComponent skin) && !skin.Enabled)
+                        {
+                            skin.Enabled = true;
+                            m_WaitCreateSkinList.Add(skin);
+                            continue;
+                        }
 
-                    entity.Update(deltaTime, unscaledTime);
+                        entity.Update(deltaTime, unscaledTime);
+                    }
                 }
+
 
                 //一帧调一次生成
                 if (m_WaitCreateSkinList.Count > 0 && Time.frameCount % 2 == 0)
@@ -79,40 +81,43 @@ namespace GameCore.Entity
 
             public void LateUpdate()
             {
-                if (m_ReleaseList.Count <= 0) return;
-
                 Entity entity;
-                for (int i = m_ReleaseList.Count - 1; i >= 0; i--)
+                if (m_ReleaseList.Count > 0)
                 {
-                    entity = m_ReleaseList[i];
-                    //如果有等待加载外观的 移除掉
-                    if (entity.TryGetComponent(out EntitySkinComponent skin))
+                    for (int i = m_ReleaseList.Count - 1; i >= 0; i--)
                     {
-                        if (m_WaitCreateSkinList.Contains(skin))
-                            m_WaitCreateSkinList.Remove(skin);
+                        entity = m_ReleaseList[i];
+                        //如果有等待加载外观的 移除掉
+                        if (entity.TryGetComponent(out EntitySkinComponent skin))
+                        {
+                            if (m_WaitCreateSkinList.Contains(skin))
+                                m_WaitCreateSkinList.Remove(skin);
 
-                        skin.StopLoadSkin();
+                            skin.StopLoadSkin();
+                        }
+
+
+                        entity.SetStatus(EntityStatus.Released);
+                        m_DestroyList.Add(entity);
+                        m_ReleaseList.RemoveAt(i);
                     }
-
-                    entity.SetStatus(EntityStatus.Released);
-                    Pool<EntityData>.Release(entity.EntityData);
-                    Pool<Entity>.Release(entity);
-                    m_DestroyList.Add(entity);
-                    m_ReleaseList.RemoveAt(i);
                 }
 
-                if (m_DestroyList.Count <= 0) return;
-
-                for (int i = m_DestroyList.Count - 1; i >= 0; i--)
+                if (m_DestroyList.Count > 0)
                 {
-                    entity = m_ReleaseList[i];
-                    if (entity.EntityData.ReleaseTimeStamp + m_DestroyTime < Time.unscaledTime)
-                        continue;
+                    for (int i = m_DestroyList.Count - 1; i >= 0; i--)
+                    {
+                        entity = m_DestroyList[i];
+                        if (Time.unscaledTime < entity.EntityData.ReleaseTimeStamp + m_DestroyTime)
+                            continue;
 
-                    entity.Dispose();
-                    m_DestroyList.RemoveAt(i);
-
+                        Pool<Entity>.Release(entity);
+                        Pool<EntityData>.Release(entity.EntityData);
+                        entity.Dispose();
+                        m_DestroyList.RemoveAt(i);
+                    }
                 }
+
             }
 
             public Entity AddEntity()
@@ -136,6 +141,7 @@ namespace GameCore.Entity
                 if (m_ReleaseList.Contains(entity)) return;
 
                 m_ReleaseList.Add(entity);
+                m_Entitys.Remove(entity);
             }
 
             public void DestroyEntity()
