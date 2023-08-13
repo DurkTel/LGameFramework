@@ -1,25 +1,36 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using System.IO;
 using System;
-using System.Linq;
-using System.Text;
 using GameCore.Asset;
 using LGameFramework.GameBase;
-using GluonGui.WorkspaceWindow.Views.WorkspaceExplorer;
 
 public class Build : EditorWindow
 {
+    /// <summary>
+    /// 默认打包路径
+    /// </summary>
     private const string RREFS_BUILD_OUT_PAHT = "RREFS_BUILD_OUT_PAHT";
+    /// <summary>
+    /// 默认打包平台
+    /// </summary>
     private const string RREFS_BUILD_TARGET = "RREFS_BUILD_TARGET";
-
+    /// <summary>
+    /// C#包名
+    /// </summary>
     private static string s_outPutNameCSharp = "001.asset";
+    /// <summary>
+    /// 其他资源包名
+    /// </summary>
     private static string s_outPutNameDev = "002";
-
+    /// <summary>
+    /// 需要进行热更的DLL名字
+    /// </summary>
     public static string[] s_HotUpdateDllName = new string[] { "Assembly-GameCore.dll", "Assembly-GameLogic.dll" };
-
+    /// <summary>
+    /// 随机字节 用于加密AB包
+    /// </summary>
     private static List<byte> s_RandomByteList = new List<byte>(4);
 
     private LBuildParameter m_LbuildParameter;
@@ -28,7 +39,7 @@ public class Build : EditorWindow
     private static void OpenGUI()
     {
         Build resetPivot = (Build)EditorWindow.GetWindow(typeof(Build));
-        resetPivot.titleContent = new GUIContent("AssetBundle Build流程");
+        resetPivot.titleContent = new GUIContent("AssetBundle Build");
         resetPivot.minSize = new Vector2(1000, 500);
         resetPivot.Show();
     }
@@ -73,15 +84,10 @@ public class Build : EditorWindow
         EditorGUILayout.HelpBox("第三步：打包对应资源", MessageType.Info);
 
         EditorGUILayout.BeginHorizontal();
-        //if (GUILayout.Button("Build Lua"))
-        //{
-        //    BuildLua(m_LbuildParameter);
-        //}
 
         if (GUILayout.Button("Build Dll"))
         {
-            //BuildDll(m_LbuildParameter);
-            BuildIl2cpp(m_LbuildParameter);
+            BuildCShareBytes(m_LbuildParameter);
         }
 
         if (GUILayout.Button("Build Dev"))
@@ -103,12 +109,6 @@ public class Build : EditorWindow
         {
             BuildVersion(m_LbuildParameter);
         }
-
-        //EditorGUILayout.HelpBox("第五步：生成上传更新资源", MessageType.Info);
-        //if (GUILayout.Button("上传资源"))
-        //{
-
-        //}
 
         if (GUILayout.Button("复制首包到streamingAssetsPath"))
         {
@@ -147,19 +147,22 @@ public class Build : EditorWindow
             FileUtil.CopyFileOrDirectory(formPath, path);
 
             AssetDatabase.Refresh();
+            Debug.Log("复制完成");
         }
     }
 
-
-    public static bool BuildWriteInfo(List<AssetBundleBuild> list, string outPath, BuildAssetBundleOptions options, BuildTarget target, bool isClearFolder, string childFolder = "")
+    /// <summary>
+    /// AB打包写入
+    /// </summary>
+    /// <param name="list"></param>
+    /// <param name="outPath"></param>
+    /// <param name="options"></param>
+    /// <param name="target"></param>
+    /// <param name="childFolder"></param>
+    /// <returns></returns>
+    public static bool BuildWriteInfo(List<AssetBundleBuild> list, string outPath, BuildAssetBundleOptions options, BuildTarget target, string childFolder = "")
     {
         options = options | BuildAssetBundleOptions.DisableLoadAssetByFileNameWithExtension;
-        if (isClearFolder)
-        {
-            if (Directory.Exists(outPath))
-                Directory.Delete(outPath, true);
-        }
-
 
         string outPutPath = Path.Combine(outPath, target.ToString());
         if (!string.IsNullOrEmpty(childFolder))
@@ -209,68 +212,16 @@ public class Build : EditorWindow
         public bool clearFolder;
     }
 
-    #region 打包lua
-    //private static void BuildLua(LBuildParameter buildParameter)
-    //{
-    //    string project = BuildUtility.GetProjectPath(AssetDefine.s_LuaBuildTemp);
-    //    //先清空临时文件夹
-    //    if (AssetDatabase.IsValidFolder(project))
-    //        AssetDatabase.DeleteAsset(project);
-
-    //    AssetDatabase.Refresh();
-
-    //    AssetBundleBuild abb_luaCode = new AssetBundleBuild();
-    //    abb_luaCode.assetBundleName = s_outPutNameLua;
-    //    abb_luaCode.assetNames = new string[0];
-    //    abb_luaCode.addressableNames = new string[0];
-
-    //    string[] allLuas = Directory.GetFiles(AssetDefine.s_LuaPath, "*.lua", SearchOption.AllDirectories);
-    //    //lua文件夹
-    //    int sidx = AssetDefine.s_LuaPath.Length;
-    //    //项目文件夹Dev根目录
-    //    int psidx = Application.dataPath.Length - 6;
-    //    //要复制到的路径
-    //    string projectFolder = AssetDefine.s_LuaBuildTemp;
-
-    //    for (int i = 0; i < allLuas.Length; i++)
-    //    {
-    //        //lua文件在lua文件夹的路径
-    //        string relative = allLuas[i].Substring(sidx);
-    //        //lua文件在lua临时文件夹的路径
-    //        string projectPath = Path.Combine(projectFolder, relative);
-    //        projectPath = projectPath.Replace(Path.GetExtension(projectPath), ".txt");
-    //        string dirPath = Path.GetDirectoryName(projectPath);
-
-    //        if (!Directory.Exists(dirPath))
-    //            Directory.CreateDirectory(dirPath);
-
-    //        FileUtil.CopyFileOrDirectory(allLuas[i], projectPath);
-
-    //        //实际路径与加载路径名
-    //        string assetPath = projectPath.Substring(psidx).Replace("\\", "/");
-    //        string addressPath = projectPath.Substring(AssetDefine.s_LuaBuildTemp.Length).Replace("/", ".");
-
-    //        ArrayUtility.Add<string>(ref abb_luaCode.assetNames, assetPath);
-    //        ArrayUtility.Add<string>(ref abb_luaCode.addressableNames, addressPath);
-    //    }
-
-    //    AssetDatabase.Refresh();
-
-    //    BuildAssetBundleOptions options = BuildAssetBundleOptions.None |
-    //                                      BuildAssetBundleOptions.IgnoreTypeTreeChanges |
-    //                                      BuildAssetBundleOptions.DisableLoadAssetByFileNameWithExtension;
-
-    //    if (BuildWriteInfo(new List<AssetBundleBuild>() { abb_luaCode }, buildParameter.buildOutPath, options, buildParameter.buildTarget, buildParameter.clearFolder, Path.GetFileNameWithoutExtension(s_outPutNameLua)))
-    //        Debug.Log("打包Lua成功~   ^^_");
-
-    //    AssetDatabase.DeleteAsset(project);
-    //    AssetDatabase.Refresh();
-    //}
-    #endregion
-
     #region 打包资源
     private static void BuildDevelopment(LBuildParameter buildParameter)
     {
+        if (buildParameter.clearFolder && Directory.Exists(Path.Combine(buildParameter.buildOutPath, buildParameter.buildTarget.ToString())))
+            Directory.Delete(Path.Combine(buildParameter.buildOutPath, buildParameter.buildTarget.ToString()), true);
+
+        //记录当前AB包
+        Dictionary<string, string> record = new Dictionary<string, string>();
+        AssetBundleRecord(buildParameter, ref record);
+
         List<AssetBundleBuild> list = new List<AssetBundleBuild>();
 
         BuildUtility.CollectionFile(list, "Assets/ArtModules/GameLogic.prefab");
@@ -285,9 +236,11 @@ public class Build : EditorWindow
 
         CollectionEffect(ref list, BuildPath.s_ModelBuildPath);
 
-
-        if (BuildWriteInfo(list, buildParameter.buildOutPath, BuildAssetBundleOptions.ChunkBasedCompression, buildParameter.buildTarget, buildParameter.clearFolder, s_outPutNameDev))
+        if (BuildWriteInfo(list, buildParameter.buildOutPath, BuildAssetBundleOptions.ChunkBasedCompression, buildParameter.buildTarget, s_outPutNameDev))
             Debug.Log("打包Dev成功~  ^^_");
+
+        //将新增/修改后的AB进行加密
+        AssetBundleOffset(buildParameter, record);
     }
 
     /// <summary>
@@ -421,53 +374,8 @@ public class Build : EditorWindow
 
     #endregion
 
-    #region 打包Dll
-    //private static void BuildDll(LBuildParameter buildParameter)
-    //{
-    //    AssetBundleBuild abb = new AssetBundleBuild();
-    //    abb.assetBundleName = s_outPutNameCSharp;
-    //    abb.assetNames = new string[0];
-    //    abb.addressableNames = new string[0];
-
-    //    PlayerSettings.SetScriptingBackend(BuildTargetGroup.Android, ScriptingImplementation.Mono2x);
-    //    AssetDatabase.Refresh();
-    //    EditorApplication.ExecuteMenuItem("XLua/Generate Code");
-    //    AssetDatabase.Refresh();
-
-    //    string[] dllNames = new string[] { "Assembly-CSharp.dll" };
-    //    string dllPath;
-    //    foreach (string dll in dllNames)
-    //    {
-    //        dllPath = Path.Combine(Application.dataPath, string.Format("../Library/ScriptAssemblies/{0}", dll));
-
-    //        if (File.Exists(dllPath))
-    //        {
-    //            string projectPath = string.Format("Assets/{0}", dll.Replace(".dll", ".bytes"));
-    //            string targetPath = BuildUtility.GetFullPath(projectPath);
-
-    //            if (File.Exists(projectPath))
-    //                AssetDatabase.DeleteAsset(projectPath);
-
-    //            FileUtil.CopyFileOrDirectory(dllPath, targetPath);
-
-    //            byte[] bytes = File.ReadAllBytes(dllPath);
-
-    //            File.WriteAllBytes(targetPath, bytes);
-    //            ArrayUtility.Add<string>(ref abb.assetNames, projectPath);
-    //            ArrayUtility.Add<string>(ref abb.addressableNames, dll);
-    //        }
-    //    }
-
-    //    AssetDatabase.Refresh();
-
-
-    //    if (BuildWriteInfo(new List<AssetBundleBuild>() { abb }, buildParameter.buildOutPath, BuildAssetBundleOptions.ChunkBasedCompression, buildParameter.buildTarget, buildParameter.clearFolder, Path.GetFileNameWithoutExtension(s_outPutNameCSharp)))
-    //        Debug.Log("打包Dll成功~  ^^_");
-    //}
-    #endregion
-
-    #region 打包il2cpp
-    private static void BuildIl2cpp(LBuildParameter buildParameter)
+    #region 打包代码
+    private static void BuildCShareBytes(LBuildParameter buildParameter)
     {
         AssetBundleBuild abb = new AssetBundleBuild();
         abb.assetBundleName = s_outPutNameCSharp;
@@ -509,7 +417,7 @@ public class Build : EditorWindow
 
         AssetDatabase.Refresh();
 
-        if (BuildWriteInfo(new List<AssetBundleBuild>() { abb }, buildParameter.buildOutPath, BuildAssetBundleOptions.ChunkBasedCompression, buildParameter.buildTarget, buildParameter.clearFolder, Path.GetFileNameWithoutExtension(s_outPutNameCSharp)))
+        if (BuildWriteInfo(new List<AssetBundleBuild>() { abb }, buildParameter.buildOutPath, BuildAssetBundleOptions.ChunkBasedCompression, buildParameter.buildTarget, Path.GetFileNameWithoutExtension(s_outPutNameCSharp)))
             Debug.Log("打包Dll成功~  ^^_");
 
 
@@ -530,7 +438,6 @@ public class Build : EditorWindow
         string assetJson = JsonHelper.ToJason(assetManifest, true);
         File.WriteAllText(Path.Combine(buildParameter.buildOutPath, targetName, "assetManifest.json"), assetJson);
 
-        AssetBundleOffset(buildParameter);
 
         AssetDatabase.Refresh();
 
@@ -547,9 +454,6 @@ public class Build : EditorWindow
         foreach (var childDir in allDir)
         {
             string childDirName = Path.GetFileNameWithoutExtension(childDir);
-            //if (fileName == "000" || fileName == "001")
-            //    continue;
-
             string manifestPath = Path.Combine(childDir, childDirName);
             
             AssetBundle manifestAB = AssetBundle.LoadFromFile(manifestPath);
@@ -562,7 +466,6 @@ public class Build : EditorWindow
             {
                 string fullABName = childDirName + "/" + abName;
                 string fullABPath = Path.Combine(path, fullABName);
-                AssetBundle ab = AssetBundle.LoadFromFile(fullABPath);
 
                 //获得依赖
                 string[] dependBundleNames = manifest.GetAllDependencies(abName);
@@ -572,12 +475,13 @@ public class Build : EditorWindow
                     for (int i = 0; i < dependBundleNames.Length; i++)
                         newDependBundleNames[i] = Path.GetFileName(dependBundleNames[i]);
                 }
-                uint crc = 0;
                 AssetBundleInfo assetBundleInfo = AssetBundleInfo.GetAssetBundleInfo(abName, fullABName, fullABPath);
                 assetBundleInfo.dependencieBundleNames = newDependBundleNames;
+                uint crc = 0;
                 if (BuildPipeline.GetCRCForAssetBundle(fullABPath, out crc))
                     assetBundleInfo.crc = crc;
 
+                AssetBundle ab = AssetBundle.LoadFromFile(fullABPath, crc, 4);
                 string[] allAsset = ab.GetAllAssetNames();
                 assetBundleInfo.allFiles = allAsset;
                 assetManifest.AddAssetBundle(assetBundleInfo);
@@ -654,33 +558,60 @@ public class Build : EditorWindow
 
 
     #region AB包偏移 做个简单的加密
-    public static void AssetBundleOffset(LBuildParameter buildParameter)
+    public static void AssetBundleOffset(LBuildParameter buildParameter, Dictionary<string, string> record)
     {
         string path = Path.Combine(buildParameter.buildOutPath, buildParameter.buildTarget.ToString());
 
         string[] allFiles = Directory.GetFiles(path, "*.asset", SearchOption.AllDirectories);
         foreach (var childFile in allFiles)
         {
-            if (File.Exists(childFile))
+            if (!File.Exists(childFile))
+                continue;
+
+            if (record != null && record.TryGetValue(childFile, out string md5) && md5 == Utility.GetMD5(childFile))
+                continue;
+
+            byte[] bytes = File.ReadAllBytes(childFile);
+
+            List<byte> byteList = new List<byte>(bytes);
+
+            s_RandomByteList.Clear();
+
+            for (byte i = 0; i < 4; i++)
             {
-                byte[] bytes = File.ReadAllBytes(childFile);
-
-                List<byte> byteList = new List<byte>(bytes);
-
-                s_RandomByteList.Clear();
-
-                for (byte i = 0; i < 4; i++)
-                {
-                    byte b = (byte)(UnityEngine.Random.Range(0.0f, 1.0f) * (float)byte.MaxValue);
-                    s_RandomByteList.Add(b);
-                }
-
-                byteList.InsertRange(0, s_RandomByteList);
-
-                File.WriteAllBytes(childFile, byteList.ToArray());
+                byte b = (byte)(UnityEngine.Random.Range(0.0f, 1.0f) * (float)byte.MaxValue);
+                s_RandomByteList.Add(b);
             }
+
+            byteList.InsertRange(0, s_RandomByteList);
+
+            File.WriteAllBytes(childFile, byteList.ToArray());
         }
         Debug.Log("AB包偏移加密完成，偏移字节数为4");
+    }
+
+    /// <summary>
+    /// 记录当前已有AB MD5码 用于分辨是否新打的
+    /// </summary>
+    /// <param name="buildParameter"></param>
+    /// <param name="record"></param>
+    public static void AssetBundleRecord(LBuildParameter buildParameter, ref Dictionary<string, string> record)
+    {
+        record.Clear();
+        string path = Path.Combine(buildParameter.buildOutPath, buildParameter.buildTarget.ToString());
+        if (!Directory.Exists(path))
+            Directory.CreateDirectory(path);
+
+        string[] allFiles = Directory.GetFiles(path, "*.asset", SearchOption.AllDirectories);
+        foreach (var childFile in allFiles)
+        {
+            if (File.Exists(childFile))
+            {
+                string md5 = Utility.GetMD5(childFile);
+                record.Add(childFile, md5);
+                //record.Add(childFile.Substring(path.Length + s_outPutNameDev.Length + 2), md5);
+            }
+        }
     }
     #endregion
 }

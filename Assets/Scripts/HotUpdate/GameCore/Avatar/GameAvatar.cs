@@ -6,7 +6,7 @@ using UnityEngine.Events;
 namespace GameCore.Avatar
 {
     /// <summary>
-    /// 模型替身系统
+    /// 模型换装替身系统
     /// </summary>
     public partial class GameAvatar : MonoBehaviour
     {
