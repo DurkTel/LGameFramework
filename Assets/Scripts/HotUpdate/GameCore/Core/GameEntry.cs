@@ -85,6 +85,14 @@ namespace GameCore
             DontDestroyOnLoad(module.GameObject);
             module.Transform.SetParentZero(m_GameRoot);
 
+#if UNITY_EDITOR
+            //添加管理模块的编辑器脚本 便于观察数据等
+            string moduleHelper = typeof(T).FullName + "Helper";
+            Type type = Type.GetType(moduleHelper);
+            if (type != null)
+                (module.GameObject.AddComponent(type) as IFrameworkEditorHelper<T>).Attach(module);
+#endif
+
             s_AllFrameworkModuleDict.Add(typeof(T), module);
 
             LinkedListNode<FrameworkModule> current = s_AllFrameworkModule.First;
@@ -93,9 +101,7 @@ namespace GameCore
             while (current != null)
             {
                 if (module.Priority > current.Value.Priority)
-                {
                     break;
-                }
 
                 current = current.Next;
             }

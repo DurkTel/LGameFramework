@@ -24,7 +24,12 @@ namespace GameCore.Avatar
                     if (m_AssetName != value && string.IsNullOrEmpty(m_AssetName))
                     {
                         m_AssetName = value;
-                        Dirty = true;
+                        //已经不是脏数据才添加 如果是代表已经等待刷新了 此时已无需再次添加
+                        if (!m_Dirty)
+                        {
+                            m_Dirty = true;
+                            m_Avatar.AddDirtyToRefresh(this);
+                        }
                     }
                 } 
             }

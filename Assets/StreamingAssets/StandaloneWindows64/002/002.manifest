@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 1508902003
+CRC: 2594315083
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -76,4 +76,7 @@ AssetBundleManifest:
         Dependency_0: artmodules/model/models.asset
     Info_22:
       Name: artmodules/model/testart.asset
+      Dependencies: {}
+    Info_23:
+      Name: artmodules/scriptobject/gamesetting.asset
       Dependencies: {}

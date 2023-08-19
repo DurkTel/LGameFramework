@@ -1,4 +1,5 @@
 using LGameFramework.GameBase;
+using LGameFramework.GameBase.Pool;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -8,16 +9,6 @@ namespace GameCore.Asset
 {
     public class AssetBundleLoader : Loader
     {
-        public AssetBundleLoader(string assetName) : base(assetName)
-        {
-        }
-
-        public AssetBundleLoader(string assetName, System.Type assetType, bool async) : base(assetName, assetType, async)
-        {
-            this.m_AssetName = assetName;
-            this.m_AssetType = assetType;
-            this.m_Async = async;
-        }
         /// <summary>
         /// 资源包体加载
         /// </summary>
@@ -30,6 +21,17 @@ namespace GameCore.Asset
         /// 下载器
         /// </summary>
         private AssetFileDownloader m_AssetDownloader;
+        /// <summary>
+        /// 是否被动加载
+        /// </summary>
+        private bool m_IsPassive;
+
+        public virtual void SetData(string assetName, bool async, bool passive)
+        {
+            this.m_AssetName = assetName;
+            this.m_IsPassive = passive;
+            this.m_Async = async;
+        }
 
         public override void Dispose()
         {
@@ -38,6 +40,9 @@ namespace GameCore.Asset
             m_Async = false;
             m_AssetName = null;
             m_AssetRecord = null;
+            m_AssetDownloader = null;
+            m_BundleRequest = null;
+            Pool<AssetBundleLoader>.Release(this);
         }
 
         /// <summary>
@@ -118,6 +123,10 @@ namespace GameCore.Asset
             if (bundle == null) return null;
             AssetBundleRecord assetBundle = AssetModule.AddAssetBundle(m_AssetName, bundle);
 
+            //如果是被动加载 引用计数+1
+            if (m_IsPassive)
+                assetBundle.DpendsReferenceCount++;
+
             return assetBundle;
         }
 
@@ -134,6 +143,10 @@ namespace GameCore.Asset
             {
                 assetBundle = AssetModule.AddAssetBundle(m_AssetName, m_BundleRequest.assetBundle);
                 assetBundle.IsAssetLoading = true;
+
+                //如果是被动加载 引用计数+1
+                if (m_IsPassive)
+                    assetBundle.DpendsReferenceCount++;
             }
 
             return assetBundle;
@@ -149,6 +162,7 @@ namespace GameCore.Asset
                 if (!m_AssetDownloader.IsDone)
                     return;
 
+                m_AssetDownloader.Dispose();
                 m_AssetDownloader = null;
                 //下载完成 重新请求加载
                 m_BundleRequest = null;
@@ -163,23 +177,20 @@ namespace GameCore.Asset
                     return;
                 }
 
-                if (!AssetModule.TryGetAssetBundle(m_AssetName, out m_AssetRecord))
+                string path = GetAssetPath(m_AssetName);
+                if (path == null) //文件丢失
                 {
-                    string path = GetAssetPath(m_AssetName);
-                    if (path == null) //文件丢失
-                    {
-                        Debug.LogWarning(string.Format("文件丢失，尝试重新下载：文件名{0}，文件路径{1}", m_AssetName, path));
-                        TryDownloadFile(m_AssetName);
-                        return;
-                    }
-
-                    uint crc = GetCRC(m_AssetName);
-
-                    if (m_Async)
-                        m_AssetRecord = LoadAsync(path, crc);
-                    else
-                        m_AssetRecord = Load(path, crc);
+                    Debug.LogWarning(string.Format("文件丢失，尝试重新下载：文件名{0}，文件路径{1}", m_AssetName, path));
+                    TryDownloadFile(m_AssetName);
+                    return;
                 }
+
+                uint crc = GetCRC(m_AssetName);
+
+                if (m_Async)
+                    m_AssetRecord = LoadAsync(path, crc);
+                else
+                    m_AssetRecord = Load(path, crc);
 
                 if ((!m_Async && m_AssetRecord == null) || m_Async && m_BundleRequest.isDone && m_BundleRequest.assetBundle == null)
                 {

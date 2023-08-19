@@ -58,8 +58,8 @@ namespace GameCore.Entity
         /// <summary>
         /// 实体组件
         /// </summary>
-        private DictionaryEx<System.Type, IEntityComponent> m_EntityComponents;
-        public DictionaryEx<System.Type, IEntityComponent> EntityComponents { get { return m_EntityComponents; } }
+        private GameDictionary<System.Type, IEntityComponent> m_EntityComponents;
+        public GameDictionary<System.Type, IEntityComponent> EntityComponents { get { return m_EntityComponents; } }
 
         public virtual void OnInit(int eid, EntityType etype, EntityGroup egroup)
         {
@@ -169,7 +169,7 @@ namespace GameCore.Entity
         /// <typeparam name="T"></typeparam>
         public void AddComponent<T>() where T : class, IEntityComponent, new()
         {
-            m_EntityComponents ??= new DictionaryEx<System.Type, IEntityComponent>();
+            m_EntityComponents ??= new GameDictionary<System.Type, IEntityComponent>();
             if (!TryGetComponent(out T entityComponent))
             {
                 entityComponent = new T();

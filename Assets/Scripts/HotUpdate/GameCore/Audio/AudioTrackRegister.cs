@@ -8,7 +8,7 @@ namespace GameCore.Audio
 
         public struct AudioParam
         {
-            public AudioParam(bool isLoop, AuidioPlayMode playMode)
+            public AudioParam(bool isLoop, AudioPlayMode playMode)
             {
                 this.isLoop = isLoop;
                 this.playMode = playMode;
@@ -16,35 +16,35 @@ namespace GameCore.Audio
 
             public bool isLoop;
 
-            public AuidioPlayMode playMode;
+            public AudioPlayMode playMode;
         }
 
         public static Dictionary<string, AudioParam> audioTrack = new Dictionary<string, AudioParam>()
-    {
         {
-            "TalkAudio", new AudioParam(false, AuidioPlayMode.Single)
-        },
-        {
-            "CityLoopAudio", new AudioParam(true, AuidioPlayMode.Single)
-        },
-        {
-            "CopyLoopAudio", new AudioParam(true, AuidioPlayMode.Single)
-        },
-        {
-            "HitAudio", new AudioParam(false, AuidioPlayMode.Multiple)
-        },
-        {
-            "HurtAudio", new AudioParam(false, AuidioPlayMode.Multiple)
-        },
-        {
-            "OtherAudio", new AudioParam(false, AuidioPlayMode.Multiple)
-        },
-        {
-            "UiLoopAudio", new AudioParam(true, AuidioPlayMode.Single)
-        },
-        {
-            "UiEffectAudio", new AudioParam(false, AuidioPlayMode.Multiple)
-        },
-    };
+            {
+                "TalkAudio", new AudioParam(false, AudioPlayMode.Single)
+            },
+            {
+                "CityLoopAudio", new AudioParam(true, AudioPlayMode.Single)
+            },
+            {
+                "CopyLoopAudio", new AudioParam(true, AudioPlayMode.Single)
+            },
+            {
+                "HitAudio", new AudioParam(false, AudioPlayMode.Multiple)
+            },
+            {
+                "HurtAudio", new AudioParam(false, AudioPlayMode.Multiple)
+            },
+            {
+                "OtherAudio", new AudioParam(false, AudioPlayMode.Multiple)
+            },
+            {
+                "UiLoopAudio", new AudioParam(true, AudioPlayMode.Single)
+            },
+            {
+                "UiEffectAudio", new AudioParam(false, AudioPlayMode.Multiple)
+            },
+        };
     }
 }

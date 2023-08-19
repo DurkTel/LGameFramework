@@ -12,7 +12,11 @@ namespace GameCore.Audio
 {
     public class GMAudioManager : FrameworkModule
     {
+        private AudioSetting m_AudioSetting;
+        public AudioSetting AudioSetting { get { return m_AudioSetting; } }
+
         private AudioMixer m_AudioMixer;
+        public AudioMixer AudioMixer { get { return m_AudioMixer; } }
 
         private Dictionary<string, AudioMixerGroup> m_AudioMixerGroups;
         public Dictionary<string, AudioMixerGroup> AudioMixerGroups { get { return m_AudioMixerGroups; } }
@@ -30,21 +34,23 @@ namespace GameCore.Audio
             m_AudioMixerGroups = new Dictionary<string, AudioMixerGroup>();
             m_AudioGroups = new Dictionary<string, AudioGroup>();
 
+            m_AudioSetting = AudioSetting.GetFormAssetBundle();
             m_AudioMixer = GameEntry.GetModule<GMAssetManager>().LoadAsset<AudioMixer>("GameAudioMixer.mixer");
 
-            AudioTrackRegister.AudioParam param;
             AudioMixerGroup[] audioMixerGroup = m_AudioMixer.FindMatchingGroups("Master");
-            foreach (var group in audioMixerGroup)
+            AudioMixerGroup group;
+            AudioSetting.AudioParam param;
+            for (int i = 0; i < m_AudioSetting.audioParam.Length; i++)
             {
+                group = audioMixerGroup[i];
+                param = m_AudioSetting.audioParam[i];
+
                 AudioMixerGroups.Add(group.name, group);
-                if (AudioTrackRegister.audioTrack.TryGetValue(group.name, out param))
-                {
-                    GameObject temp = new GameObject(string.Format("[{0}]", group.name));
-                    temp.transform.SetParent(Transform);
-                    AudioGroup audioGroup = new AudioGroup();
-                    audioGroup.OnInit(temp, group, param);
-                    AudioGroups.Add(group.name, audioGroup);
-                }
+                GameObject temp = new GameObject(string.Format("[{0}]", group.name));
+                temp.transform.SetParent(Transform);
+                AudioGroup audioGroup = new AudioGroup();
+                audioGroup.OnInit(temp, group, param);
+                m_AudioGroups.Add(group.name, audioGroup);
             }
         }
 
@@ -57,7 +63,7 @@ namespace GameCore.Audio
         public bool Play(string audioGroupName, string assetName)
         {
             AudioGroup audioGroup;
-            if (AudioGroups.TryGetValue(audioGroupName, out audioGroup))
+            if (m_AudioGroups.TryGetValue(audioGroupName, out audioGroup))
             {
                 audioGroup.Play(assetName);
                 return true;
@@ -70,7 +76,7 @@ namespace GameCore.Audio
         public bool Play(string audioGroupName, AudioClip audioClip)
         {
             AudioGroup audioGroup;
-            if (AudioGroups.TryGetValue(audioGroupName, out audioGroup))
+            if (m_AudioGroups.TryGetValue(audioGroupName, out audioGroup))
             {
                 audioGroup.Play(audioClip);
                 return true;
@@ -82,7 +88,7 @@ namespace GameCore.Audio
         public bool IsPlaying(string AudioGroupName, string assetName)
         {
             AudioGroup audioGroup;
-            if (AudioGroups.TryGetValue(AudioGroupName, out audioGroup))
+            if (m_AudioGroups.TryGetValue(AudioGroupName, out audioGroup))
                 return audioGroup.IsPlaying(assetName);
 
             return false;
@@ -91,7 +97,7 @@ namespace GameCore.Audio
         public bool IsPlaying(string AudioGroupName, AudioClip audioClip)
         {
             AudioGroup audioGroup;
-            if (AudioGroups.TryGetValue(AudioGroupName, out audioGroup))
+            if (m_AudioGroups.TryGetValue(AudioGroupName, out audioGroup))
                 return audioGroup.IsPlaying(audioClip);
 
             return false;
@@ -100,7 +106,7 @@ namespace GameCore.Audio
         public bool Delete(string AudioGroupName, AudioClip audioClip)
         {
             AudioGroup audioGroup;
-            if (AudioGroups.TryGetValue(AudioGroupName, out audioGroup))
+            if (m_AudioGroups.TryGetValue(AudioGroupName, out audioGroup))
                 return audioGroup.Delete(audioClip);
 
             return false;
@@ -109,7 +115,7 @@ namespace GameCore.Audio
         public bool Delete(string AudioGroupName, string assetName)
         {
             AudioGroup audioGroup;
-            if (AudioGroups.TryGetValue(AudioGroupName, out audioGroup))
+            if (m_AudioGroups.TryGetValue(AudioGroupName, out audioGroup))
                 return audioGroup.Delete(assetName);
 
             return false;

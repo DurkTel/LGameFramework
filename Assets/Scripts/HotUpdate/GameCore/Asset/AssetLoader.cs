@@ -1,20 +1,11 @@
-﻿using System;
+﻿using LGameFramework.GameBase.Pool;
+using System;
 using UnityEngine;
 
 namespace GameCore.Asset
 {
     public class AssetLoader : Loader
     {
-        public AssetLoader(string assetName) : base(assetName)
-        {
-        }
-
-        public AssetLoader(string assetName, System.Type assetType, bool async) : base(assetName, assetType, async)
-        {
-            this.m_AssetName = assetName;
-            this.m_AssetType = assetType;
-            this.m_Async = async;
-        }
         /// <summary>
         /// 资源加载
         /// </summary>
@@ -27,11 +18,16 @@ namespace GameCore.Asset
         /// AB包
         /// </summary>
         private AssetBundleRecord m_AssetRecord;
+        /// <summary>
+        /// 是否加载中
+        /// </summary>
+        private bool m_IsLoading;
         public override void Dispose()
         {
             m_Error = false;
             m_IsDone = false;
             m_Async = false;
+            m_IsLoading = false;
             m_RawObject = null;
             m_AssetName = null;
             m_BundleName = null;
@@ -39,6 +35,7 @@ namespace GameCore.Asset
             onProgress = null;
             onComplete = null;
             m_AssetRequest = null;
+            Pool<AssetLoader>.Release(this);
         }
 
         public override string GetAssetPath(string bundleName)
@@ -85,7 +82,12 @@ namespace GameCore.Asset
             //走进来代表没加载/下载完
             if (!AssetModule.TryGetAssetBundle(abName, out m_AssetRecord))
             {
-                AssetModule.LoadAssetBundle(abName, true);
+                if (!m_IsLoading)
+                { 
+                    AssetModule.LoadAssetBundle(abName, true);
+                    m_IsLoading = true;
+                }
+
                 return null;
             }
 

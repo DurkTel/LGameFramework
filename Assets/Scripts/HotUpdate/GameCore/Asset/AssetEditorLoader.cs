@@ -1,3 +1,4 @@
+using LGameFramework.GameBase.Pool;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,13 +11,12 @@ namespace GameCore.Asset
 {
     public class AssetEditorLoader : Loader
     {
-        public AssetEditorLoader(string assetName) : base(assetName)
-        {
-        }
-
         //编辑模式下加载没有异步
-        public AssetEditorLoader(string assetName, Type assetType) : base(assetName, assetType, false)
+        public override void SetData(string assetName, System.Type assetType, bool async)
         {
+            this.m_AssetName = assetName;
+            this.m_AssetType = assetType;
+            this.m_Async = false;
         }
 
         public override void Dispose()
@@ -29,6 +29,7 @@ namespace GameCore.Asset
             m_AssetType = null;
             onProgress = null;
             onComplete = null;
+            Pool<AssetEditorLoader>.Release(this);
         }
 
         public override string GetAssetPath(string assetName)

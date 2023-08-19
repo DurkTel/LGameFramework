@@ -32,10 +32,12 @@ namespace GameCore.Asset
         }
 
         private static Dictionary<string, RawObjectInfo> m_RawAssetMap = new Dictionary<string, RawObjectInfo>();
+        public static Dictionary<string , RawObjectInfo> RawAssetMap { get { return m_RawAssetMap; } }  
 
         private static Dictionary<Object, RawObjectInfo> m_RawNameMap = new Dictionary<Object, RawObjectInfo>();
 
         private static Dictionary<int, InstanceObjectInfo> m_InstanceAssetMap = new Dictionary<int, InstanceObjectInfo>();
+        public static Dictionary<int, InstanceObjectInfo> InstanceAssetMap { get { return m_InstanceAssetMap; } }
 
         /// <summary>
         /// »º´æÊµÀý¶ÔÏó

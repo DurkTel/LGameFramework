@@ -925,10 +925,16 @@ MonoBehaviour:
     bundleName: testart.asset
   - assetName: new_pant_11.png
     bundleName: testart.asset
+  - assetName: audiosetting.asset
+    bundleName: gamesetting.asset
+  - assetName: filepathsetting.asset
+    bundleName: gamesetting.asset
+  - assetName: launchsetting.asset
+    bundleName: gamesetting.asset
   bundleList:
   - bundleName: gameaudiomixer.asset
     assetPath: 002/artmodules/audio/gameaudiomixer.asset
-    md5Code: 2b8872a0e1aee6daaf0bf84b9a7b22df
+    md5Code: 0c85328f4ac32dcd38a34c425945aa80
     size: 3806
     crc: 1941339419
     dependencieBundleNames: []
@@ -1574,4 +1580,15 @@ MonoBehaviour:
     - human_1.png
     - new_cloth_01.png
     - new_pant_11.png
+    fileFlag: 1
+  - bundleName: gamesetting.asset
+    assetPath: 002/artmodules/scriptobject/gamesetting.asset
+    md5Code: b6739c75ad5ab8c65d6a5c87f58967fa
+    size: 3146
+    crc: 3804194850
+    dependencieBundleNames: []
+    allFiles:
+    - audiosetting.asset
+    - filepathsetting.asset
+    - launchsetting.asset
     fileFlag: 1

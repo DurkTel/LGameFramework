@@ -7,7 +7,7 @@ namespace GameCore.Audio
 {
     public class AudioGroup
     {
-        public enum AuidioPlayMode
+        public enum AudioPlayMode
         {
             /// <summary>
             /// 是否允许多个声音同时播放 true的话切断当前 播放下一个
@@ -22,8 +22,9 @@ namespace GameCore.Audio
             /// </summary>
             Multiple,
         }
-        private AuidioPlayMode m_PlayMode;
-        public AuidioPlayMode PlayMode { get { return m_PlayMode; } }
+
+        private AudioPlayMode m_PlayMode;
+        public AudioPlayMode PlayMode { get { return m_PlayMode; } }
 
         private AudioMixerGroup m_AudioMixerGroup;
         public AudioMixerGroup AudioMixerGroup { get { return m_AudioMixerGroup; } }
@@ -43,7 +44,7 @@ namespace GameCore.Audio
         private Transform m_Transform;
         public Transform Transform { get { return m_Transform; } }
 
-        public void OnInit(GameObject gameObject, AudioMixerGroup mixerGroup, AudioTrackRegister.AudioParam param)
+        public void OnInit(GameObject gameObject, AudioMixerGroup mixerGroup, AudioSetting.AudioParam param)
         {
             m_GameObject = gameObject;
             m_Transform = gameObject.transform;
@@ -111,9 +112,9 @@ namespace GameCore.Audio
         {
             AudioObject ao = null;
 
-            if (PlayMode == AuidioPlayMode.Multiple || (PlayMode == AuidioPlayMode.Only && ActiveAudios.Count <= 0))
+            if (PlayMode == AudioPlayMode.Multiple || (PlayMode == AudioPlayMode.Only && ActiveAudios.Count <= 0))
                 ao = GetAudioObjectFromUnActive();
-            else if (PlayMode == AuidioPlayMode.Single)
+            else if (PlayMode == AudioPlayMode.Single)
                 ao = GetAudioObjectFromActive();
 
             return ao;
@@ -195,7 +196,8 @@ namespace GameCore.Audio
                 {
                     if (!m_ActiveAudios[i].AudioSource.isPlaying)
                     {
-                        UnActiveAudios.Add(m_ActiveAudios[i]);
+                        m_UnActiveAudios ??= new List<AudioObject>();
+                        m_UnActiveAudios.Add(m_ActiveAudios[i]);
                         m_ActiveAudios.RemoveAt(i);
                     }
                 }

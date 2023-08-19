@@ -236,6 +236,9 @@ public class Build : EditorWindow
 
         CollectionEffect(ref list, BuildPath.s_ModelBuildPath);
 
+        CollectionEffect(ref list, BuildPath.s_ScriptObjectBuildPath);
+
+
         if (BuildWriteInfo(list, buildParameter.buildOutPath, BuildAssetBundleOptions.ChunkBasedCompression, buildParameter.buildTarget, s_outPutNameDev))
             Debug.Log("打包Dev成功~  ^^_");
 

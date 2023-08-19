@@ -85,7 +85,7 @@ namespace GameCore.Entity
                 else
                 {
                     part.OnInit(m_Avatar, asset.Key);
-                    m_Avatar.UpdatePart(asset.Key, asset.Value);
+                    m_Avatar.UpdatePartAsset(asset.Key, asset.Value);
                 }
             }
 

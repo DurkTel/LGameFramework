@@ -42,12 +42,21 @@ namespace GameCore.Asset
 
         public UnityAction<Loader> onComplete;
 
-        public Loader(string assetName)
+        public virtual void SetData(string assetName)
         {
             this.m_AssetName = assetName;
             this.m_AssetType = typeof(Object);
+            this.m_Async = false;
         }
-        public Loader(string assetName, System.Type assetType, bool async)
+
+        public virtual void SetData(string assetName, System.Type assetType)
+        {
+            this.m_AssetName = assetName;
+            this.m_AssetType = assetType;
+            this.m_Async = false;
+        }
+
+        public virtual void SetData(string assetName, System.Type assetType, bool async)
         {
             this.m_AssetName = assetName;
             this.m_AssetType = assetType;
@@ -69,7 +78,7 @@ namespace GameCore.Asset
             }
 
             AssetCache.RawObjectInfo rawObject = AssetCache.GetRawObject(m_AssetName);
-            return rawObject as T;
+            return rawObject.rawObject as T;
         }
 
         public virtual T GetInstantiate<T>() where T : Object

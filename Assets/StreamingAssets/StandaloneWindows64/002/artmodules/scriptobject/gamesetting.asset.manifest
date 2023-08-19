@@ -1,0 +1,33 @@
+ManifestFileVersion: 0
+CRC: 3804194850
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 38f448c8a73fe418e3f623e48c7bef62
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 3a3b2cf1220c3f935074cea1672faea9
+HashAppended: 0
+ClassTypes:
+- Class: 114
+  Script: {fileID: 11500000, guid: 898b403fc966a404eb407f4926f31827, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7d1298936d20d8d40bdcff504626b65c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1c99fbddddfe03542bc43101ba0fae44, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 241
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Assembly-GameBase
+  ClassName: LGameFramework.GameBase.GamePathSetting/FilePathStruct
+- AssemblyName: Assembly-GameBase
+  ClassName: LGameFramework.GameBase.GamePathSetting/SpecialPathStruct
+- AssemblyName: Assembly-GameCore
+  ClassName: GameCore.Audio.AudioSetting/AudioParam
+Assets:
+- Assets/ArtModules/ScriptObject/GameSetting/FilePathSetting.asset
+- Assets/ArtModules/ScriptObject/GameSetting/AudioSetting.asset
+- Assets/ArtModules/ScriptObject/GameSetting/LaunchSetting.asset
+Dependencies: []

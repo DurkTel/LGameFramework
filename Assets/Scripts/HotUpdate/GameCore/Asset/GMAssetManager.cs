@@ -19,21 +19,23 @@ namespace GameCore.Asset
         internal override int Priority { get { return 99; } }
         internal override GameObject GameObject { get; set; }
         internal override Transform Transform { get; set; }
-
         internal GamePathSetting.FilePathStruct GamePath { get; set; }
 
         /// <summary>
         /// 正在加载的资源加载器
         /// </summary>
-        private DictionaryEx<string, Loader> m_AssetLoaders = new DictionaryEx<string, Loader>();
+        private GameDictionary<string, Loader> m_AssetLoaders;
+        public GameDictionary<string, Loader> AssetLoaders { get { return m_AssetLoaders; } } 
         /// <summary>
         /// 正在加载的AB加载器
         /// </summary>
         private List<AssetBundleLoader> m_AssetBundleLoader;
+        public List<AssetBundleLoader> AssetBundleLoader { get { return m_AssetBundleLoader; } }
         /// <summary>
         /// 加载完成的列表
         /// </summary>
-        private List<string> m_CompleteList = new List<string>();
+        private List<string> m_CompleteList;
+        public List<string> CompleteList { get { return m_CompleteList; } }
         /// <summary>
         /// ab包资源清单
         /// </summary>
@@ -41,25 +43,33 @@ namespace GameCore.Asset
         /// <summary>
         /// 所有加载过的ab包
         /// </summary>
-        private Dictionary<string, AssetBundleRecord> m_AllAB = new Dictionary<string, AssetBundleRecord>(100);
+        private Dictionary<string, AssetBundleRecord> m_AllAB;
+        public Dictionary<string, AssetBundleRecord> AllAB { get { return m_AllAB; } }
         /// <summary>
         /// 等待释放的ab包列表
         /// </summary>
-        private List<string> m_WaitDestroyABList = new List<string>(100);
+        private List<string> m_WaitDestroyABList;
+        public List<string> WaitDestroyABList { get { return m_WaitDestroyABList; } }
         /// <summary>
         /// 等待释放ab包的时间
         /// </summary>
         private float m_WaitDestroyTime;
+        public float WaitDestroyTime { get { return m_WaitDestroyTime; } }
         /// <summary>
         /// 文件下载器
         /// </summary>
         private AssetFileDownloadQueue m_FileDownloadQueue;
 
-
         internal override void OnInit()
         {
-            s_AssetLoadMode = AssetLoadMode.AssetBundle;
             GamePath = GamePathSetting.Get().CurrentPlatform();
+            s_AssetLoadMode = GameLaunchSetting.Get().assetLoadMode == GameLaunchSetting.AssetLoadMode.Editor ? AssetLoadMode.Editor : AssetLoadMode.AssetBundle;
+
+            m_AssetLoaders = new GameDictionary<string, Loader>();
+            m_CompleteList = new List<string>();
+            m_AllAB = new Dictionary<string, AssetBundleRecord>(100);
+            m_WaitDestroyABList = new List<string>(100);
+            m_WaitDestroyTime = 10f;
         }
 
         internal override void Update(float deltaTime, float unscaledTime)
@@ -271,10 +281,12 @@ namespace GameCore.Asset
                 switch (s_AssetLoadMode)
                 {
                     case AssetLoadMode.AssetBundle:
-                        loader = new AssetLoader(assetName.ToLower(), type, true);
+                        loader = Pool<AssetLoader>.Get();
+                        loader.SetData(assetName.ToLower(), type, true);
                         break;
                     case AssetLoadMode.Editor:
-                        loader = new AssetEditorLoader(assetName, type);
+                        loader = Pool<AssetEditorLoader>.Get();
+                        loader.SetData(assetName, type);
                         break;
                 }
 
@@ -301,10 +313,12 @@ namespace GameCore.Asset
                 switch (s_AssetLoadMode)
                 {
                     case AssetLoadMode.AssetBundle:
-                        loader = new AssetLoader(assetName.ToLower(), typeof(T), false);
+                        loader = Pool<AssetLoader>.Get();
+                        loader.SetData(assetName.ToLower(), typeof(T), false);
                         break;
                     case AssetLoadMode.Editor:
-                        loader = new AssetEditorLoader(assetName, typeof(T));
+                        loader = Pool<AssetEditorLoader>.Get();
+                        loader.SetData(assetName, typeof(T));
                         break;
                 }
 
@@ -327,19 +341,30 @@ namespace GameCore.Asset
         public void LoadAssetBundle(string abName, bool async)
         {
             string[] depends = GetAssetManifest_Bundle().GetDependsName(abName);
+            AssetBundleRecord record;
             foreach (string depend in depends)
             {
-                LoadAssetBundleInternal(depend, async);
+                if (!TryGetAssetBundle(depend, out record))
+                    LoadAssetBundleInternal(depend, async, true);
+                else
+                    record.DpendsReferenceCount++; //已经加载过了 引用计数加1
             }
 
             LoadAssetBundleInternal(abName, async);
         }
 
-        private void LoadAssetBundleInternal(string abName, bool async)
+        /// <summary>
+        /// 加载AB包
+        /// </summary>
+        /// <param name="abName">包名</param>
+        /// <param name="async">是否异步</param>
+        /// <param name="passive">是否被动</param>
+        private void LoadAssetBundleInternal(string abName, bool async, bool passive = false)
         {
             if (!m_AssetLoaders.ContainsKey(abName))
             {
-                Loader loader = new AssetBundleLoader(abName, typeof(AssetBundleLoader), async);
+                AssetBundleLoader loader = Pool<AssetBundleLoader>.Get();
+                loader.SetData(abName, async, passive);
                 loader.AssetModule = this;
                 loader.Update();
                 m_AssetLoaders.Add(abName, loader);
