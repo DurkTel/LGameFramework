@@ -9,7 +9,7 @@ namespace GameCore.GUI
     {
         protected override string m_PrefabName => "GUI_Default_View.prefab";
 
-        protected override FMGUIManager.UILayerLevel m_LayerLevel => FMGUIManager.UILayerLevel.MainUILayer;
+        protected override GMGUIManager.UILayerLevel m_LayerLevel => GMGUIManager.UILayerLevel.MainUILayer;
 
         public override void OnEnable()
         {

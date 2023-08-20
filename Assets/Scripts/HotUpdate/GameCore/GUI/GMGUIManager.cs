@@ -8,7 +8,7 @@ using GameCore.Asset;
 
 namespace GameCore.GUI
 {
-    public partial class FMGUIManager : FrameworkModule
+    public partial class GMGUIManager : FrameworkModule
     {
         private Camera m_UICamera;
         public Camera UICamera { get { return m_UICamera; } }

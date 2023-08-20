@@ -5,7 +5,7 @@ namespace LGameFramework.GameCore.Input
     /// <summary>
     /// 跨平台输入监听
     /// </summary>
-    public partial class FMCrossPlatformInput
+    public partial class GMCrossPlatformInput
     {
         /// <summary>
         /// 按键行为

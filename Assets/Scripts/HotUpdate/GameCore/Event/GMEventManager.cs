@@ -8,22 +8,22 @@ namespace GameCore
     /// <summary>
     /// 事件派发管理
     /// </summary>
-    public sealed partial class FMEventManager : FrameworkModule
+    public sealed partial class GMEventManager : FrameworkModule
     {
         /// <summary>
         /// 所有注册的委托
         /// </summary>
-        private Dictionary<FMEventRegister, LinkedList<EventHandler<EventArgs>>> m_EventHandlers;
+        private Dictionary<FMEventRegister, LinkedList<EventHandler<GameEventArg>>> m_EventHandlers;
 
         /// <summary>
         /// 临时变量
         /// </summary>
-        private LinkedList<EventHandler<EventArgs>> m_TempLinked;
+        private LinkedList<EventHandler<GameEventArg>> m_TempLinked;
 
         /// <summary>
         /// 当前执行到的委托
         /// </summary>
-        private LinkedListNode<EventHandler<EventArgs>> m_CurrentNode;
+        private LinkedListNode<EventHandler<GameEventArg>> m_CurrentNode;
 
         /// <summary>
         /// 需要派发的委托队列
@@ -52,7 +52,7 @@ namespace GameCore
 
         internal override void OnInit()
         {
-            m_EventHandlers = new Dictionary<FMEventRegister, LinkedList<EventHandler<EventArgs>>>();
+            m_EventHandlers = new Dictionary<FMEventRegister, LinkedList<EventHandler<GameEventArg>>>();
             m_EventQueue = new Queue<Event>();
             m_StopWatch = new System.Diagnostics.Stopwatch();
             m_AsyncMaxTime = 30; //30ms 约 30fps/s
@@ -65,8 +65,7 @@ namespace GameCore
                 m_Event ??= m_EventQueue.Dequeue();
                 if (HandleEvent(m_Event.Sender, m_Event, true))
                 {
-                    m_Event.Clear();
-                    Pool<Event>.Release(m_Event);
+                    m_Event.Dispose();
                     m_Event = null;
                 }
             }
@@ -97,7 +96,7 @@ namespace GameCore
         /// </summary>
         /// <param name="id">事件ID</param>
         /// <param name="handler">委托方法</param>
-        public void Register(FMEventRegister id, EventHandler<EventArgs> handler)
+        public void Register(FMEventRegister id, EventHandler<GameEventArg> handler)
         {
             if (handler == null)
             {
@@ -105,10 +104,10 @@ namespace GameCore
                 return;
             }
 
-            LinkedList<EventHandler<EventArgs>> linked;
+            LinkedList<EventHandler<GameEventArg>> linked;
             if (!m_EventHandlers.TryGetValue(id, out linked))
             {
-                linked = Pool<LinkedList<EventHandler<EventArgs>>>.Get();
+                linked = Pool<LinkedList<EventHandler<GameEventArg>>>.Get();
                 m_EventHandlers.Add(id, linked);
             }
 
@@ -121,13 +120,13 @@ namespace GameCore
         /// <param name="id">事件ID</param>
         /// <param name="handler">委托方法</param>
         /// <returns>移除结果</returns>
-        public bool UnRegister(FMEventRegister id, EventHandler<EventArgs> handler)
+        public bool UnRegister(FMEventRegister id, EventHandler<GameEventArg> handler)
         {
             if (m_EventHandlers.TryGetValue(id, out var linked))
             {
                 linked.Remove(handler);
                 if (linked.Count <= 0)
-                    Pool<LinkedList<EventHandler<EventArgs>>>.Release(linked);
+                    Pool<LinkedList<EventHandler<GameEventArg>>>.Release(linked);
                 return true;
             }
             return false;
@@ -139,7 +138,7 @@ namespace GameCore
         /// <param name="id">事件ID</param>
         /// <param name="sender">发布者</param>
         /// <param name="args">事件参数</param>
-        public void Dispatch(FMEventRegister id, object sender, EventArgs args)
+        public void Dispatch(FMEventRegister id, object sender, GameEventArg args)
         {
             Event eventNode = Event.Get(id, sender, args);
             m_EventQueue.Enqueue(eventNode);
@@ -151,10 +150,12 @@ namespace GameCore
         /// <param name="id">事件ID</param>
         /// <param name="sender">发布者</param>
         /// <param name="args">事件参数</param>
-        public void DispatchImmediately(FMEventRegister id, object sender, EventArgs args)
+        public void DispatchImmediately(FMEventRegister id, object sender, GameEventArg args)
         {
             Event eventNode = Event.Get(id, sender, args);
             HandleEvent(sender, eventNode, false);
+            eventNode.Dispose();
+            eventNode = null;
         }
 
         /// <summary>

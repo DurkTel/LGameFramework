@@ -11,7 +11,8 @@ namespace LGameFramework.GameBase.Pool
         /// 总对象池计数
         /// </summary>
         private static readonly Dictionary<Type, IPool> s_SubPools = new Dictionary<Type, IPool>();
-        private interface IPool
+        public static Dictionary<Type, IPool> SubPools { get { return s_SubPools; } }
+        public interface IPool
         {
             Type ReferenceType { get; }
             ICollection Collection { get; }

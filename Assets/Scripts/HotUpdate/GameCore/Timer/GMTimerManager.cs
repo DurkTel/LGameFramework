@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,7 +6,7 @@ using LGameFramework.GameBase.Pool;
 
 namespace GameCore.Timer
 {
-    public class FMTimerManager : FrameworkModule
+    public class GMTimerManager : FrameworkModule
     {
         private Dictionary<int, Timer> m_AllTimer;
 

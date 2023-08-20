@@ -36,6 +36,8 @@ namespace GameCore
             OrbitCamera.Initialize();
             GameObject gameLogic = GetModule<Asset.GMAssetManager>().LoadAsset<GameObject>("GameLogic.prefab");
             DontDestroyOnLoad(gameLogic);
+
+            AddAOTModuleHelper<GMPoolHelper>();
         }
 
         private void Update()
@@ -56,6 +58,18 @@ namespace GameCore
             {
                 module.LateUpdate(deltaTime, unscaledTime);
             }
+        }
+
+        /// <summary>
+        /// Ìí¼ÓAOTÄ£¿éÖúÊÖ
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        public void AddAOTModuleHelper<T>() where T :Component
+        {
+            GameObject game = new GameObject(typeof(T).Name);
+            game.AddComponent<T>();
+            DontDestroyOnLoad(game);
+            game.transform.SetParentZero(m_GameRoot);
         }
 
         /// <summary>

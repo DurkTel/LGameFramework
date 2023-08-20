@@ -91,28 +91,6 @@ namespace GameCore.Asset
         }
 
         /// <summary>
-        /// 获取未加载的依赖包
-        /// </summary>
-        /// <param name="assetName"></param>
-        /// <returns></returns>
-        public List<string> GetAbsentDependsName(string bundleName)
-        {
-            string[] result = AssetModule.GetAssetManifest_Bundle().GetDependsName(bundleName);
-            List<string> ret = result.ToList();
-            AssetBundleRecord record;
-            for (int i = ret.Count - 1; i >= 0; i--)
-            {
-                if (AssetModule.TryGetAssetBundle(result[i], out record))
-                {
-                    ret.RemoveAt(i);
-                    record.DpendsReferenceCount++; //已经加载过了 引用计数加1
-                }
-            }
-
-            return ret;
-        }
-
-        /// <summary>
         /// 同步加载AB包
         /// </summary>
         /// <param name="abName"></param>
@@ -142,11 +120,12 @@ namespace GameCore.Asset
             if (m_BundleRequest.isDone && m_BundleRequest.assetBundle != null)
             {
                 assetBundle = AssetModule.AddAssetBundle(m_AssetName, m_BundleRequest.assetBundle);
-                assetBundle.IsAssetLoading = true;
 
                 //如果是被动加载 引用计数+1
                 if (m_IsPassive)
                     assetBundle.DpendsReferenceCount++;
+                else
+                    assetBundle.IsAssetLoading = true;
             }
 
             return assetBundle;

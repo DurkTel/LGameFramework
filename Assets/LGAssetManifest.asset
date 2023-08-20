@@ -1583,9 +1583,9 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: gamesetting.asset
     assetPath: 002/artmodules/scriptobject/gamesetting.asset
-    md5Code: b6739c75ad5ab8c65d6a5c87f58967fa
-    size: 3146
-    crc: 3804194850
+    md5Code: c27e006d0795f8cb5594a586fa7cfc30
+    size: 3063
+    crc: 3759880104
     dependencieBundleNames: []
     allFiles:
     - audiosetting.asset

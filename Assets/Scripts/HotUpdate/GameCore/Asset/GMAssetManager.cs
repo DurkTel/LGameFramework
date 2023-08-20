@@ -341,14 +341,8 @@ namespace GameCore.Asset
         public void LoadAssetBundle(string abName, bool async)
         {
             string[] depends = GetAssetManifest_Bundle().GetDependsName(abName);
-            AssetBundleRecord record;
-            foreach (string depend in depends)
-            {
-                if (!TryGetAssetBundle(depend, out record))
-                    LoadAssetBundleInternal(depend, async, true);
-                else
-                    record.DpendsReferenceCount++; //已经加载过了 引用计数加1
-            }
+            foreach (string depend in depends) //先加载依赖
+                LoadAssetBundleInternal(depend, async, true);
 
             LoadAssetBundleInternal(abName, async);
         }
@@ -361,7 +355,8 @@ namespace GameCore.Asset
         /// <param name="passive">是否被动</param>
         private void LoadAssetBundleInternal(string abName, bool async, bool passive = false)
         {
-            if (!m_AssetLoaders.ContainsKey(abName))
+            AssetBundleRecord record;
+            if (!TryGetAssetBundle(abName, out record) && !m_AssetLoaders.ContainsKey(abName))
             {
                 AssetBundleLoader loader = Pool<AssetBundleLoader>.Get();
                 loader.SetData(abName, async, passive);
@@ -369,8 +364,19 @@ namespace GameCore.Asset
                 loader.Update();
                 m_AssetLoaders.Add(abName, loader);
             }
+            else if (passive)
+                record.DpendsReferenceCount++; //已经加载过了 引用计数加1
+
+            //如果是等待销毁的 移除标识
+            RemoveWaitDestroy(abName);
         }
 
+        /// <summary>
+        /// 添加一个待下载的资源
+        /// </summary>
+        /// <param name="downloadURL"></param>
+        /// <param name="downloadPath"></param>
+        /// <returns></returns>
         public AssetFileDownloader EnqueueDownload(string downloadURL, string downloadPath)
         {
             m_FileDownloadQueue ??= new AssetFileDownloadQueue();
@@ -388,6 +394,16 @@ namespace GameCore.Asset
                 loader.Dispose();
                 m_AssetLoaders.Remove(assetName);
             }
+        }
+
+        /// <summary>
+        /// 移除等待销毁 
+        /// </summary>
+        /// <param name="abName"></param>
+        public void RemoveWaitDestroy(string abName)
+        { 
+            if (m_WaitDestroyABList.Contains(abName))
+                m_WaitDestroyABList.Remove(abName);
         }
 
         /// <summary>

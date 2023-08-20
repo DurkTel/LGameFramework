@@ -11,12 +11,12 @@ namespace LGameFramework.GameCore.Input
     /// <summary>
     /// 跨平台输入监听
     /// </summary>
-    public partial class FMCrossPlatformInput : FrameworkModule
+    public partial class GMCrossPlatformInput : FrameworkModule
     {
         private InputControls m_InputActions;
         public InputControls InputActions { get { return m_InputActions; } }
 
-        private FMEventManager m_FMEventManager;
+        private GMEventManager m_GMEventManager;
         /// <summary>
         /// 双击的间隔时间
         /// </summary>
@@ -45,7 +45,7 @@ namespace LGameFramework.GameCore.Input
 
         internal override void OnEnable()
         {
-            m_FMEventManager ??= GameEntry.GetModule<FMEventManager>(); 
+            m_GMEventManager ??= GameEntry.GetModule<GMEventManager>(); 
             InputActions.Enable();
         }
 
@@ -108,7 +108,7 @@ namespace LGameFramework.GameCore.Input
         private void DispatchEvent(string name, InputBehaviour behaviour, InputAction action)
         {
             InputActionArgs args = InputActionArgs.Get(name, behaviour, action);
-            m_FMEventManager.DispatchImmediately(FMEventRegister.INPUT_DISPATCH_HANDLE_BUTTON, this, args);
+            m_GMEventManager.DispatchImmediately(FMEventRegister.INPUT_DISPATCH_HANDLE_BUTTON, this, args);
         }
     }
 }

@@ -112,7 +112,7 @@ namespace GameCore.Audio
         {
             AudioObject ao = null;
 
-            if (PlayMode == AudioPlayMode.Multiple || (PlayMode == AudioPlayMode.Only && ActiveAudios.Count <= 0))
+            if (PlayMode == AudioPlayMode.Multiple || (PlayMode == AudioPlayMode.Only && (m_ActiveAudios == null || m_ActiveAudios.Count <= 0)))
                 ao = GetAudioObjectFromUnActive();
             else if (PlayMode == AudioPlayMode.Single)
                 ao = GetAudioObjectFromActive();

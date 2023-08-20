@@ -5,6 +5,7 @@ using System;
 using LGameFramework.GameCore.Input;
 using GameCore.Entity;
 using GameCore.Audio;
+using GameCore.AOI;
 
 public class GameLogic : MonoBehaviour
 {
@@ -12,8 +13,9 @@ public class GameLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameEntry.GetModule<FMCrossPlatformInput>().InitGameInput();
+        GameEntry.GetModule<GMCrossPlatformInput>().InitGameInput();
         GameEntry.GetModule<GMAudioManager>().Play("CityLoopAudio", "gate_new.ogg");
+        GameEntry.GetModule<GMNGridAOIManager>().Test();
 
         //entity = GameEntry.GetModule<GMEntityManager>().AddEntity(GMEntityManager.EntityType.Unknown);
         //entity.AddComponent<EntityCullingComponent>();

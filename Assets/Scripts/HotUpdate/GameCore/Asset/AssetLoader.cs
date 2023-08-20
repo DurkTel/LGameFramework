@@ -83,11 +83,11 @@ namespace GameCore.Asset
             if (!AssetModule.TryGetAssetBundle(abName, out m_AssetRecord))
             {
                 if (!m_IsLoading)
-                { 
+                {
+                    //通知管理器加载|添加引用计数
                     AssetModule.LoadAssetBundle(abName, true);
                     m_IsLoading = true;
                 }
-
                 return null;
             }
 
@@ -112,6 +112,9 @@ namespace GameCore.Asset
 
                 if (m_Async)
                 {
+                    if (m_AssetRequest == null)
+                        AssetModule.RemoveWaitDestroy(m_BundleName);
+
                     m_AssetRequest ??= LoadAsync(m_BundleName, m_AssetName, m_AssetType);
 
                     if (m_AssetRequest != null && m_AssetRequest.isDone)
@@ -119,6 +122,7 @@ namespace GameCore.Asset
                 }
                 else
                 {
+                    AssetModule.RemoveWaitDestroy(m_BundleName);
                     m_RawObject = Load(m_BundleName, m_AssetName, m_AssetType);
                 }
 

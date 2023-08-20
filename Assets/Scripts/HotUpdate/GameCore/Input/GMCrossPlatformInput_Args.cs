@@ -1,3 +1,4 @@
+using GameCore;
 using LGameFramework.GameBase.Pool;
 using System;
 using UnityEngine;
@@ -5,9 +6,9 @@ using UnityEngine.InputSystem;
 
 namespace LGameFramework.GameCore.Input
 {
-    public partial class FMCrossPlatformInput 
+    public partial class GMCrossPlatformInput 
     {
-        public class InputActionArgs : EventArgs
+        public class InputActionArgs : GameEventArg
         {
             private string m_ActionName;
             public string ActionName { get { return m_ActionName; } }
@@ -44,6 +45,13 @@ namespace LGameFramework.GameCore.Input
                     return string.Format("按键名称{0}，按键行为{1}，按键数值{2}", ActionName, InputBehaviour, Direction);
 
                 return string.Format("按键名称{0}，按键行为{1}", ActionName, InputBehaviour);
+            }
+
+            public override void Dispose()
+            {
+                m_ActionName = null;
+                m_InputAction = null;
+                Pool<InputActionArgs>.Release(this);
             }
         }
     }

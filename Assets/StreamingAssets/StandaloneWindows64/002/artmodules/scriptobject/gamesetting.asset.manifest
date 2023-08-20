@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 3804194850
+CRC: 3759880104
 Hashes:
   AssetFileHash:
     serializedVersion: 2
@@ -16,8 +16,6 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 1c99fbddddfe03542bc43101ba0fae44, type: 3}
 - Class: 115
-  Script: {instanceID: 0}
-- Class: 241
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers:
 - AssemblyName: Assembly-GameBase
