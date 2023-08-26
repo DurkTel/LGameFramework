@@ -29,9 +29,12 @@ namespace GameCore.Entity
 
         public void OnInit(Entity entity)
         {
+            m_Enabled = true;
             m_GameObject = entity.GameObject;
             m_Transform = entity.Transform;
-            m_Rigidbody = m_GameObject.TryAddComponent<Rigidbody2D>();  
+            m_MoveSpeed = entity.EntityData.MoveSpeed;
+            m_Rigidbody = m_GameObject.TryAddComponent<Rigidbody2D>();
+            m_Rigidbody.gravityScale = 0f;
         }
 
         public void Update(float deltaTime, float unscaledTime)
@@ -55,14 +58,14 @@ namespace GameCore.Entity
         /// <param name="deltaTime"></param>
         public void Move(float deltaTime)
         {
-            if (!m_Enabled || m_MoveDirection.Equals(Vector3.zero)) return;
+            if (!m_Enabled) return;
 
             m_Rigidbody.velocity = m_MoveDirection * m_MoveSpeed * deltaTime;
         }
 
         public void Dispose()
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }

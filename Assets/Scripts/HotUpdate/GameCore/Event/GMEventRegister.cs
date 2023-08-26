@@ -10,11 +10,7 @@ namespace GameCore
         /// <summary>
         /// 输入分发-按钮
         /// </summary>
-        INPUT_DISPATCH_HANDLE_BUTTON,
-        /// <summary>
-        /// 输入分发-Vector2
-        /// </summary>
-        INPUT_DISPATCH_HANDLE_VECTOR2,
+        INPUT_DISPATCH_HANDLE,
 
     }
 }

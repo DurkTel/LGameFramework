@@ -859,8 +859,8 @@ MonoBehaviour:
     bundleName: fonts.asset
   - assetName: simsun sdf.asset
     bundleName: fonts.asset
-  - assetName: gamelogic.prefab
-    bundleName: gamelogic.asset
+  - assetName: gamemainlogic.prefab
+    bundleName: gamemainlogic.asset
   - assetName: role_back_1.png
     bundleName: images.asset
   - assetName: role_back_2.png
@@ -1413,14 +1413,14 @@ MonoBehaviour:
     - msyh sdf.asset
     - simsun sdf.asset
     fileFlag: 1
-  - bundleName: gamelogic.asset
-    assetPath: 002/artmodules/gamelogic.asset
-    md5Code: 9460e250fc9bf0b54eaac98752b78471
-    size: 2290
-    crc: 2588450703
+  - bundleName: gamemainlogic.asset
+    assetPath: 002/artmodules/gamemainlogic.asset
+    md5Code: 0404cd6196653f4e23dcb2e2a2df9503
+    size: 2300
+    crc: 2450046160
     dependencieBundleNames: []
     allFiles:
-    - gamelogic.prefab
+    - gamemainlogic.prefab
     fileFlag: 1
   - bundleName: images.asset
     assetPath: 002/artmodules/gui/role/images.asset

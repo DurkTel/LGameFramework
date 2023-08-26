@@ -34,7 +34,7 @@ namespace LGameFramework.GameCore.Input
         internal override void OnInit()
         {
             m_InputActions = new InputControls();
-            InitGameInput();
+            Initialize();
             OnEnable();
         }
 
@@ -45,7 +45,7 @@ namespace LGameFramework.GameCore.Input
 
         internal override void OnEnable()
         {
-            m_GMEventManager ??= GameEntry.GetModule<GMEventManager>(); 
+            m_GMEventManager ??= GameFrameworkEntry.GetModule<GMEventManager>(); 
             InputActions.Enable();
         }
 
@@ -54,7 +54,7 @@ namespace LGameFramework.GameCore.Input
             InputActions.Disable();
         }
 
-        public void InitGameInput()
+        public void Initialize()
         {
             ReadOnlyArray<InputActionMap> actions = InputActions.asset.actionMaps;
             foreach (var actionMap in actions)
@@ -108,7 +108,7 @@ namespace LGameFramework.GameCore.Input
         private void DispatchEvent(string name, InputBehaviour behaviour, InputAction action)
         {
             InputActionArgs args = InputActionArgs.Get(name, behaviour, action);
-            m_GMEventManager.DispatchImmediately(FMEventRegister.INPUT_DISPATCH_HANDLE_BUTTON, this, args);
+            m_GMEventManager.DispatchImmediately(FMEventRegister.INPUT_DISPATCH_HANDLE, this, args);
         }
     }
 }

@@ -35,7 +35,7 @@ namespace GameCore.Audio
             m_AudioGroups = new Dictionary<string, AudioGroup>();
 
             m_AudioSetting = AudioSetting.GetFormAssetBundle();
-            m_AudioMixer = GameEntry.GetModule<GMAssetManager>().LoadAsset<AudioMixer>("GameAudioMixer.mixer");
+            m_AudioMixer = GameFrameworkEntry.GetModule<GMAssetManager>().LoadAsset<AudioMixer>("GameAudioMixer.mixer");
 
             AudioMixerGroup[] audioMixerGroup = m_AudioMixer.FindMatchingGroups("Master");
             AudioMixerGroup group;

@@ -12,6 +12,7 @@ namespace GameCore.Entity
         public enum EntityType
         {
             Unknown,
+            LocalPlayer,
         }
 
         /// <summary>

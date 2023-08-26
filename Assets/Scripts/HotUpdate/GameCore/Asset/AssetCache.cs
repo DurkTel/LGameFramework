@@ -25,7 +25,7 @@ namespace GameCore.Asset
             get
             {
                 if (m_AssetModule == null)
-                    m_AssetModule = GameEntry.GetModule<GMAssetManager>();
+                    m_AssetModule = GameFrameworkEntry.GetModule<GMAssetManager>();
 
                 return m_AssetModule;
             }

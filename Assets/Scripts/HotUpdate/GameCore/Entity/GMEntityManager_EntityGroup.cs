@@ -4,6 +4,7 @@ using System.Security.Principal;
 using UnityEngine;
 using UnityEngine.Rendering;
 using LGameFramework.GameBase.Pool;
+using System;
 
 namespace GameCore.Entity
 {
@@ -130,7 +131,7 @@ namespace GameCore.Entity
                     m_DestroyList.RemoveAt(0);
                 }
                 else
-                    entity = Pool<Entity>.Get();
+                    entity = EntityUtility.GetEntityByType(m_EntityGroupType);
 
                 m_Entitys.Add(entity);
                 return entity;

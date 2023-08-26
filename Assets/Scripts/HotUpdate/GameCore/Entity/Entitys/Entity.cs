@@ -63,7 +63,7 @@ namespace GameCore.Entity
 
         public virtual void OnInit(int eid, EntityType etype, EntityGroup egroup)
         {
-            m_EntityData = Pool<EntityData>.Get();
+            m_EntityData = EntityUtility.InitEntityData(etype);
             m_EntityData.EntityId = eid;
             m_EntityData.EntityType = etype;
             m_EntityData.Status = EntityStatus.Inited;
@@ -167,7 +167,7 @@ namespace GameCore.Entity
         /// 添加实体组件
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public void AddComponent<T>() where T : class, IEntityComponent, new()
+        public T AddComponent<T>() where T : class, IEntityComponent, new()
         {
             m_EntityComponents ??= new GameDictionary<System.Type, IEntityComponent>();
             if (!TryGetComponent(out T entityComponent))
@@ -177,6 +177,7 @@ namespace GameCore.Entity
                 m_EntityComponents.keyList.Sort(delegate (System.Type a, System.Type b) { return m_EntityComponents[a].Priority - m_EntityComponents[b].Priority; });
             }
             entityComponent.OnInit(this);
+            return entityComponent;
         }
 
         /// <summary>

@@ -37,7 +37,7 @@ public class ProcedureGameEntry : FSM_Status<ProcedureLaunchProcess>
         }
 #endif
 
-        Type type = coreAssembly.GetType("GameCore.GameEntry");
+        Type type = coreAssembly.GetType("GameCore.GameFrameworkEntry");
         type.GetMethod("Instantiate").Invoke(null, null);
 
         //进入游戏成功 销毁启动器

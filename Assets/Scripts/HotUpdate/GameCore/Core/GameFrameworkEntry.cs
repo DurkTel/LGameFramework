@@ -7,7 +7,7 @@ namespace GameCore
     /// <summary>
     /// 游戏入口
     /// </summary>
-    public class GameEntry : MonoBehaviour
+    public class GameFrameworkEntry : MonoBehaviour
     {
         private static Transform m_GameRoot;
 
@@ -33,8 +33,7 @@ namespace GameCore
 
         private void Awake()
         {
-            OrbitCamera.Initialize();
-            GameObject gameLogic = GetModule<Asset.GMAssetManager>().LoadAsset<GameObject>("GameLogic.prefab");
+            GameObject gameLogic = GetModule<Asset.GMAssetManager>().LoadAsset<GameObject>("GameMainLogic.prefab");
             DontDestroyOnLoad(gameLogic);
 
             AddAOTModuleHelper<GMPoolHelper>();
@@ -60,16 +59,28 @@ namespace GameCore
             }
         }
 
+        private void FixedUpdate()
+        {
+            float fixedDeltaTime = Time.fixedDeltaTime;
+            float unscaledTime = Time.unscaledTime;
+            foreach (FrameworkModule module in s_AllFrameworkModule)
+            {
+                module.FixedUpdate(fixedDeltaTime, unscaledTime);
+            }
+        }
+
         /// <summary>
         /// 添加AOT模块助手
         /// </summary>
         /// <typeparam name="T"></typeparam>
         public void AddAOTModuleHelper<T>() where T :Component
         {
+#if UNITY_EDITOR
             GameObject game = new GameObject(typeof(T).Name);
             game.AddComponent<T>();
             DontDestroyOnLoad(game);
             game.transform.SetParentZero(m_GameRoot);
+#endif
         }
 
         /// <summary>
@@ -132,7 +143,7 @@ namespace GameCore
         {
             GameObject go = new GameObject("GameEntry");
             m_GameRoot = go.transform;
-            go.AddComponent<GameEntry>();
+            go.AddComponent<GameFrameworkEntry>();
             DontDestroyOnLoad(go);
             Debug.Log("游戏入口实例化完成，进入游戏");
         }

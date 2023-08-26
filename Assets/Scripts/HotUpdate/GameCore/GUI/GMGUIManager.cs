@@ -37,7 +37,7 @@ namespace GameCore.GUI
 
         internal override void OnInit()
         {
-            m_AssetModule = GameEntry.GetModule<GMAssetManager>();
+            m_AssetModule = GameFrameworkEntry.GetModule<GMAssetManager>();
 
             InitializeCamera();
 

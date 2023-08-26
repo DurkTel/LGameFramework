@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2594315083
+CRC: 1374800685
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: artmodules/gamelogic.asset
+      Name: artmodules/gamemainlogic.asset
       Dependencies: {}
     Info_1:
       Name: artmodules/audio/music/city.asset

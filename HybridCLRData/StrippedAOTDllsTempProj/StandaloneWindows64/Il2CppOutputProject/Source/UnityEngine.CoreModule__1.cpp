@@ -1445,6 +1445,8 @@ struct CreateAssetMenuAttribute_tDF668493A973633E6641C8FD2673DAE205126E9E  : pub
 	String_t* ___U3CmenuNameU3Ek__BackingField_0;
 	// System.String UnityEngine.CreateAssetMenuAttribute::<fileName>k__BackingField
 	String_t* ___U3CfileNameU3Ek__BackingField_1;
+	// System.Int32 UnityEngine.CreateAssetMenuAttribute::<order>k__BackingField
+	int32_t ___U3CorderU3Ek__BackingField_2;
 };
 
 // System.Text.DecoderReplacementFallback
@@ -19684,6 +19686,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AddComponentMenu__ctor_mFC3F5A41F4F41587
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.String UnityEngine.CreateAssetMenuAttribute::get_menuName()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* CreateAssetMenuAttribute_get_menuName_m904047B3C46809FC0B25BE696E714E3A18741447 (CreateAssetMenuAttribute_tDF668493A973633E6641C8FD2673DAE205126E9E* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CmenuNameU3Ek__BackingField_0;
+		return L_0;
+	}
+}
 // System.Void UnityEngine.CreateAssetMenuAttribute::set_menuName(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CreateAssetMenuAttribute_set_menuName_m2D51E6DFEB3D5F310A643D965304CEDD85A8FCCA (CreateAssetMenuAttribute_tDF668493A973633E6641C8FD2673DAE205126E9E* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
@@ -19694,6 +19704,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CreateAssetMenuAttribute_set_menuName_m2
 		return;
 	}
 }
+// System.String UnityEngine.CreateAssetMenuAttribute::get_fileName()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* CreateAssetMenuAttribute_get_fileName_m8A8630443A4E438BB14FF6C92FD98058AA3A210D (CreateAssetMenuAttribute_tDF668493A973633E6641C8FD2673DAE205126E9E* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CfileNameU3Ek__BackingField_1;
+		return L_0;
+	}
+}
 // System.Void UnityEngine.CreateAssetMenuAttribute::set_fileName(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CreateAssetMenuAttribute_set_fileName_mBE339C0FE5593AA2C0EE52E61AE2C3A2F1771496 (CreateAssetMenuAttribute_tDF668493A973633E6641C8FD2673DAE205126E9E* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
@@ -19701,6 +19719,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CreateAssetMenuAttribute_set_fileName_mB
 		String_t* L_0 = ___0_value;
 		__this->___U3CfileNameU3Ek__BackingField_1 = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CfileNameU3Ek__BackingField_1), (void*)L_0);
+		return;
+	}
+}
+// System.Int32 UnityEngine.CreateAssetMenuAttribute::get_order()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CreateAssetMenuAttribute_get_order_m28E3224E7B1AEE55D546F140DC908175559A7B87 (CreateAssetMenuAttribute_tDF668493A973633E6641C8FD2673DAE205126E9E* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = __this->___U3CorderU3Ek__BackingField_2;
+		return L_0;
+	}
+}
+// System.Void UnityEngine.CreateAssetMenuAttribute::set_order(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CreateAssetMenuAttribute_set_order_mCD6648DA2E94E0C9C1F462F9F00F71E4B2953AAA (CreateAssetMenuAttribute_tDF668493A973633E6641C8FD2673DAE205126E9E* __this, int32_t ___0_value, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___0_value;
+		__this->___U3CorderU3Ek__BackingField_2 = L_0;
 		return;
 	}
 }

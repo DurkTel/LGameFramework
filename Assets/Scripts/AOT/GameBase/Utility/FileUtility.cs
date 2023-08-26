@@ -2,7 +2,7 @@ using System.IO;
 using System.Text;
 using UnityEngine;
 
-public class Utility
+public class FileUtility
 {
     /// <summary>
     /// 获取文件大小

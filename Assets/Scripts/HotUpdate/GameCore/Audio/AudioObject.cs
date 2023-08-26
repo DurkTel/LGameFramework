@@ -35,7 +35,7 @@ namespace GameCore.Audio
 
         private void LoadAudioClip(string assetName)
         {
-            Loader loader = GameEntry.GetModule<GMAssetManager>().LoadAssetAsync<AudioClip>(assetName);
+            Loader loader = GameFrameworkEntry.GetModule<GMAssetManager>().LoadAssetAsync<AudioClip>(assetName);
             loader.onComplete = (p) =>
             {
                 PlayInternal(p.GetRawObject<AudioClip>());

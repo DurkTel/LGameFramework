@@ -447,16 +447,14 @@ struct AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760  : public Runti
 	String_t* ___md5Code_2;
 	// System.Int32 LGameFramework.GameBase.AssetBundleInfo::size
 	int32_t ___size_3;
-	// System.Int32 LGameFramework.GameBase.AssetBundleInfo::priority
-	int32_t ___priority_4;
 	// System.UInt32 LGameFramework.GameBase.AssetBundleInfo::crc
-	uint32_t ___crc_5;
+	uint32_t ___crc_4;
 	// System.String[] LGameFramework.GameBase.AssetBundleInfo::dependencieBundleNames
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___dependencieBundleNames_6;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___dependencieBundleNames_5;
 	// System.String[] LGameFramework.GameBase.AssetBundleInfo::allFiles
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___allFiles_7;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___allFiles_6;
 	// LGameFramework.GameBase.AssetBundleInfo/AssetFileFlag LGameFramework.GameBase.AssetBundleInfo::fileFlag
-	int32_t ___fileFlag_8;
+	int32_t ___fileFlag_7;
 };
 
 // LGameFramework.GameBase.AssetFileDownloadQueue
@@ -4631,8 +4629,8 @@ IL_005b_1:
 				// if (netFile.fileFlag == AssetBundleInfo.AssetFileFlag.ExtendDLC)
 				AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760* L_12 = V_3;
 				NullCheck(L_12);
-				int32_t L_13 = L_12->___fileFlag_8;
-				if ((((int32_t)L_13) == ((int32_t)4)))
+				int32_t L_13 = L_12->___fileFlag_7;
+				if ((((int32_t)L_13) == ((int32_t)8)))
 				{
 					goto IL_00f1_1;
 				}
@@ -4678,9 +4676,9 @@ IL_009c_1:
 				AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760* L_23;
 				L_23 = KeyValuePair_2_get_Value_m187523401919D29F6826C11ECA71B3EF04C048AC_inline((&V_5), KeyValuePair_2_get_Value_m187523401919D29F6826C11ECA71B3EF04C048AC_RuntimeMethod_var);
 				NullCheck(L_23);
-				int32_t L_24 = L_23->___fileFlag_8;
+				int32_t L_24 = L_23->___fileFlag_7;
 				int32_t L_25 = L_24;
-				int32_t L_26 = 1;
+				int32_t L_26 = 2;
 				bool L_27 = il2cpp_codegen_enum_has_flag((int32_t)L_25, (int32_t)L_26);
 				if (!L_27)
 				{

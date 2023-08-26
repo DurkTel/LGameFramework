@@ -224,7 +224,7 @@ public class Build : EditorWindow
 
         List<AssetBundleBuild> list = new List<AssetBundleBuild>();
 
-        BuildUtility.CollectionFile(list, "Assets/ArtModules/GameLogic.prefab");
+        BuildUtility.CollectionFile(list, "Assets/ArtModules/GameMainLogic.prefab");
 
         CollectionAudio(ref list, BuildPath.s_AudioBuildPath);
 
@@ -571,7 +571,7 @@ public class Build : EditorWindow
             if (!File.Exists(childFile))
                 continue;
 
-            if (record != null && record.TryGetValue(childFile, out string md5) && md5 == Utility.GetMD5(childFile))
+            if (record != null && record.TryGetValue(childFile, out string md5) && md5 == FileUtility.GetMD5(childFile))
                 continue;
 
             byte[] bytes = File.ReadAllBytes(childFile);
@@ -610,7 +610,7 @@ public class Build : EditorWindow
         {
             if (File.Exists(childFile))
             {
-                string md5 = Utility.GetMD5(childFile);
+                string md5 = FileUtility.GetMD5(childFile);
                 record.Add(childFile, md5);
                 //record.Add(childFile.Substring(path.Length + s_outPutNameDev.Length + 2), md5);
             }

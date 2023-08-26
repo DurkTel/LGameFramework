@@ -1,8 +1,7 @@
+using GameCore.AOI;
 using GameCore.Avatar;
 using LGameFramework.GameBase.Pool;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using static GameCore.Entity.GMEntityManager;
 
 namespace GameCore.Entity
@@ -35,6 +34,16 @@ namespace GameCore.Entity
         private float m_ReleaseTimeStamp;
         public float ReleaseTimeStamp { get { return m_ReleaseTimeStamp; } set { m_ReleaseTimeStamp = value; } }
         /// <summary>
+        /// AOI等级
+        /// </summary>
+        private InterestLevel m_InterestLevel;
+        public InterestLevel InterestLevel { get { return m_InterestLevel; } }
+        /// <summary>
+        /// 移动速度
+        /// </summary>
+        private float m_MoveSpeed = 20f;
+        public float MoveSpeed { get { return m_MoveSpeed; } }
+        /// <summary>
         /// 皮肤部位资源字典
         /// </summary>
         private Dictionary<GameAvatar.AvatarPartType, string> m_SkinAssetNames;
@@ -56,6 +65,11 @@ namespace GameCore.Entity
         {
             m_SkinAssetNames ??= DictionaryPool<GameAvatar.AvatarPartType, string>.Get();
             m_SkinAssetNames[partType] = assetName;
+        }
+
+        public void SetInterestLevel(InterestLevel interestLevel)
+        {
+            m_InterestLevel = interestLevel;
         }
     }
 }

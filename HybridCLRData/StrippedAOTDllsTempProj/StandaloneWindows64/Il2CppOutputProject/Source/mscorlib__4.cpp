@@ -14331,6 +14331,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotImplementedException__ctor_m8339D1A68
 		return;
 	}
 }
+// System.Void System.NotImplementedException::.ctor(System.String,System.Exception)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotImplementedException__ctor_m7D5EA9EB4644D419A13488168B8695B3630B9683 (NotImplementedException_t6366FE4DCF15094C51F4833B91A2AE68D4DA90E8* __this, String_t* ___0_message, Exception_t* ___1_inner, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = ___0_message;
+		Exception_t* L_1 = ___1_inner;
+		SystemException__ctor_m0FC84CACD2A5D66222998AA601A5C41CEC36A611(__this, L_0, L_1, NULL);
+		Exception_set_HResult_m010A171183E240EBF4F7611E924B533FAB2E471F_inline(__this, ((int32_t)-2147467263), NULL);
+		return;
+	}
+}
 // System.Void System.NotImplementedException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotImplementedException__ctor_m0AA3412C895C90C09D38F7CF9494CE7655B443E0 (NotImplementedException_t6366FE4DCF15094C51F4833B91A2AE68D4DA90E8* __this, SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* ___0_info, StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 ___1_context, const RuntimeMethod* method) 
 {

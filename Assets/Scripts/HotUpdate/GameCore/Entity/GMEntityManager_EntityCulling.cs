@@ -33,7 +33,7 @@ namespace GameCore.Entity
             public UnityAction<EntityCullingComponent, bool> OnVisibleEvent { get; set; }
             public UnityAction<EntityCullingComponent, int, int> OnDistanceEvent { get; set; }
 
-            public Camera targetCamera
+            public Camera TargetCamera
             {
                 get { return m_TargetCamera; }
                 set

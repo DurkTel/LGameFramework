@@ -9,6 +9,7 @@ namespace GameCore
     /// </summary>
     public class OrbitCamera : MonoBehaviour
     {
+        public static OrbitCamera s_OrbitCamera;
         /// <summary>
         /// 焦点
         /// </summary>
@@ -45,36 +46,35 @@ namespace GameCore
         /// <summary>
         /// 规则相机
         /// </summary>
-        public static Camera regularCamera;
+        public static Camera Camera;
 
         private Vector3 CameraHalfExtends
         {
             get
             {
                 Vector3 halfExtends;
-                halfExtends.y = regularCamera.nearClipPlane * Mathf.Tan(0.5f * Mathf.Deg2Rad * regularCamera.fieldOfView);
-                halfExtends.x = halfExtends.y * regularCamera.aspect;
+                halfExtends.y = Camera.nearClipPlane * Mathf.Tan(0.5f * Mathf.Deg2Rad * Camera.fieldOfView);
+                halfExtends.x = halfExtends.y * Camera.aspect;
                 halfExtends.z = 0f;
                 return halfExtends;
             }
         }
 
-
         public static void Initialize()
         {
             GameObject go = new GameObject("OrbitCamera");
-            go.AddComponent<OrbitCamera>();
+            go.transform.localPosition = new Vector3(0, 0, -10f);
+            s_OrbitCamera = go.AddComponent<OrbitCamera>();
             go.AddComponent<AudioListener>();
-            regularCamera = go.AddComponent<Camera>();
-            regularCamera.orthographic = true;
-            regularCamera.orthographicSize = 2f;
-            regularCamera.farClipPlane = 100f;
-            regularCamera.clearFlags = CameraClearFlags.SolidColor;
-            regularCamera.backgroundColor = Color.black;
-            regularCamera.tag = "MainCamera";
+            Camera = go.AddComponent<Camera>();
+            Camera.orthographic = true;
+            Camera.orthographicSize = 2f;
+            Camera.farClipPlane = 100f;
+            Camera.clearFlags = CameraClearFlags.SolidColor;
+            Camera.backgroundColor = Color.black;
+            Camera.tag = "MainCamera";
             DontDestroyOnLoad(go);
         }
-
 
         private void LateUpdate()
         {
@@ -86,7 +86,7 @@ namespace GameCore
             Vector3 lookDirection = lookRotation * Vector3.forward;
             Vector3 lookPosition = focusPoint - lookDirection * distance;
 
-            Vector3 rectOffset = lookDirection * regularCamera.nearClipPlane;
+            Vector3 rectOffset = lookDirection * Camera.nearClipPlane;
             Vector3 rectPosition = lookPosition + rectOffset;
             Vector3 castFrom = focus.position;
             Vector3 castLine = rectPosition - castFrom;

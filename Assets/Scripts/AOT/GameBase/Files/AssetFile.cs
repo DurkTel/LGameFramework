@@ -103,8 +103,8 @@ namespace LGameFramework.GameBase
             AssetBundleInfo file = new AssetBundleInfo();
             file.bundleName = Path.GetFileName(bundleName);
             file.assetPath = assetPath;
-            file.md5Code = Utility.GetMD5(fullPath);
-            file.size = Utility.GetFileSize(fullPath);
+            file.md5Code = FileUtility.GetMD5(fullPath);
+            file.size = FileUtility.GetFileSize(fullPath);
             return file;
         }
     }

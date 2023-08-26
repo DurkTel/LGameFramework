@@ -28,7 +28,7 @@ namespace GameCore.Entity
         internal override void OnInit()
         {
             m_CullingGroup = new EntityCullingGroup();
-            m_CullingGroup.targetCamera = OrbitCamera.regularCamera;
+            m_CullingGroup.TargetCamera = OrbitCamera.Camera;
             m_EntityMap = new Dictionary<int, Entity>();
             m_EntityGroupMap = new Dictionary<EntityType, EntityGroup>();
             m_EnableContainer = new GameObject("EnableEntitys").transform;

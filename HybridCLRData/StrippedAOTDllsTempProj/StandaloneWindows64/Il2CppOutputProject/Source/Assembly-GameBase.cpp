@@ -193,6 +193,8 @@ struct AsyncCompletedEventHandler_tCF3E9DBCBA16361DB3602FB594FEADB76702605D;
 struct AsyncOperation_t8544B75B787DAFE823AD7A7CEFEDC4AD1CB29217;
 // System.Reflection.Binder
 struct Binder_t91BFCE95A7057FADF4D8A1A342AFE52872246235;
+// LGameFramework.GameBase.CSharpUtility
+struct CSharpUtility_t764B39747639CB79F04111035B48EDC75FC19DF2;
 // System.Globalization.CodePageDataItem
 struct CodePageDataItem_t52460FA30AE37F4F26ACB81055E58002262F19F2;
 // System.ComponentModel.Component
@@ -245,6 +247,8 @@ struct FSM_Transition_tE3AFC1A95B669483FCB0C7712A36B6DF8DD4F076;
 struct FileInfo_t62782BBAFA832A78724E4CF2EE96548B8466AB1C;
 // System.IO.FileStream
 struct FileStream_t07C7222EE10B75F352B89B76E60820160FF10AD8;
+// FileUtility
+struct FileUtility_t7087E0192C26FFE73276E839A861CDF212B1D856;
 // LGameFramework.GameBase.GameLaunchSetting
 struct GameLaunchSetting_t0C14BD4D7E9F2DB0F14EA949BA3AD06AC1E66206;
 // LGameFramework.GameBase.GamePathSetting
@@ -325,8 +329,6 @@ struct UploadValuesCompletedEventHandler_t85D5296712ADB06F36627FF1193F01A2CAE880
 struct Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E;
 // System.UriParser
 struct UriParser_t920B0868286118827C08B08A15A9456AF6C19D81;
-// Utility
-struct Utility_tCBE9ACF2B450639A749C98C01F2FB4DC100114DB;
 // System.Void
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
 // System.Net.WebClient
@@ -418,6 +420,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* FSM_DataBase_SetData_TisBoolean_t09A6377A54
 IL2CPP_EXTERN_C const RuntimeMethod* FSM_StateMachine_1__ctor_m1BD22F603A420D54363B86FA84D9E8CDD473D345_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* FSM_Status_1__ctor_m467A4CC2D24C3827141C60CD5BEA9AA10160D9EA_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* FSM_Transition_1__ctor_m8400E1CB0A428BEF56B5FF7ADC9389882E32CB0B_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* FileUtility_GetMD5_mE9E620E0163ABC9E98A1968301AD5B08D12CC572_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameSetting_1__ctor_m190D77FFB9818F1B3597F35175CE3FCA8DD60386_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameSetting_1__ctor_mF7855C860904CFFE25D690720DC4E14F5586BFAC_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_m38F2AB2D577F134DD7F3BA4CC898B0A221D90D50_RuntimeMethod_var;
@@ -443,7 +446,6 @@ IL2CPP_EXTERN_C const RuntimeMethod* Queue_1_Dequeue_m6278AEE0FFCE27C1C1608830E3
 IL2CPP_EXTERN_C const RuntimeMethod* Queue_1_Enqueue_m0DB17830938D31A733B94DF3A408CF9F4DE19836_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Queue_1__ctor_m551A616064149645939015212FD9E626D6252D6D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Queue_1_get_Count_m8C3D1628DED4ADD4EBF493862DD27085FB481ED9_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Utility_GetMD5_m8936EBFED59AEF24482A3857240A5DD95C8D64B8_RuntimeMethod_var;
 struct Delegate_t_marshaled_com;
 struct Delegate_t_marshaled_pinvoke;
 struct Exception_t_marshaled_com;
@@ -667,16 +669,14 @@ struct AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760  : public Runti
 	String_t* ___md5Code_2;
 	// System.Int32 LGameFramework.GameBase.AssetBundleInfo::size
 	int32_t ___size_3;
-	// System.Int32 LGameFramework.GameBase.AssetBundleInfo::priority
-	int32_t ___priority_4;
 	// System.UInt32 LGameFramework.GameBase.AssetBundleInfo::crc
-	uint32_t ___crc_5;
+	uint32_t ___crc_4;
 	// System.String[] LGameFramework.GameBase.AssetBundleInfo::dependencieBundleNames
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___dependencieBundleNames_6;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___dependencieBundleNames_5;
 	// System.String[] LGameFramework.GameBase.AssetBundleInfo::allFiles
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___allFiles_7;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___allFiles_6;
 	// LGameFramework.GameBase.AssetBundleInfo/AssetFileFlag LGameFramework.GameBase.AssetBundleInfo::fileFlag
-	int32_t ___fileFlag_8;
+	int32_t ___fileFlag_7;
 };
 
 // LGameFramework.GameBase.AssetFileDownloadQueue
@@ -718,6 +718,11 @@ struct AssetFileInfo_t7DED5D93F5EDBBA9A58D92702D518BAA290534B2  : public Runtime
 	String_t* ___bundleName_1;
 };
 
+// LGameFramework.GameBase.CSharpUtility
+struct CSharpUtility_t764B39747639CB79F04111035B48EDC75FC19DF2  : public RuntimeObject
+{
+};
+
 // System.Text.Encoding
 struct Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095  : public RuntimeObject
 {
@@ -737,6 +742,11 @@ struct Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095  : public RuntimeObjec
 
 // System.EventArgs
 struct EventArgs_t37273F03EAC87217701DD431B190FBD84AD7C377  : public RuntimeObject
+{
+};
+
+// FileUtility
+struct FileUtility_t7087E0192C26FFE73276E839A861CDF212B1D856  : public RuntimeObject
 {
 };
 
@@ -854,11 +864,6 @@ struct Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E  : public RuntimeObject
 	UriInfo_t5F91F77A93545DDDA6BB24A609BAF5E232CC1A09* ___m_Info_18;
 	// System.Boolean System.Uri::m_iriParsing
 	bool ___m_iriParsing_19;
-};
-
-// Utility
-struct Utility_tCBE9ACF2B450639A749C98C01F2FB4DC100114DB  : public RuntimeObject
-{
 };
 
 // System.ValueType
@@ -1829,6 +1834,10 @@ struct List_1_tDFF17E466A9A0D010CA6B6265EE5528055A64DC6_StaticFields
 
 // LGameFramework.GameBase.AssetFileInfo
 
+// LGameFramework.GameBase.CSharpUtility
+
+// LGameFramework.GameBase.CSharpUtility
+
 // System.Text.Encoding
 struct Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095_StaticFields
 {
@@ -1855,6 +1864,10 @@ struct Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095_StaticFields
 };
 
 // System.Text.Encoding
+
+// FileUtility
+
+// FileUtility
 
 // System.Security.Cryptography.HashAlgorithm
 
@@ -1944,10 +1957,6 @@ struct Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E_StaticFields
 };
 
 // System.Uri
-
-// Utility
-
-// Utility
 
 // GameBase.FSM.FSM_StateMachine`1<System.String>
 struct FSM_StateMachine_1_tFABD6AA99A6DFDC7100C77745C14C62CD7EDA9E1_StaticFields
@@ -2471,8 +2480,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m484ACFB05503DE02969C4EF38A
 // System.Void System.Collections.Generic.Dictionary`2<System.Object,System.Object>::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, const RuntimeMethod* method) ;
 
-// System.Void System.Object::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
 // System.Boolean System.IO.File::Exists(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool File_Exists_m95E329ABBE3EAD6750FE1989BBA6884457136D4A (String_t* ___0_path, const RuntimeMethod* method) ;
 // System.Void System.IO.FileInfo::.ctor(System.String)
@@ -2501,6 +2508,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringBuilder_t* StringBuilder_Append_m08904D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m9E3155FB84015C823606188F53B47CB44C444991 (String_t* ___0_str0, String_t* ___1_str1, const RuntimeMethod* method) ;
 // System.Void System.Exception::.ctor(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F (Exception_t* __this, String_t* ___0_message, const RuntimeMethod* method) ;
+// System.Void System.Object::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
 // System.Void GameBase.FSM.FSM_Condition`1<System.Single>::.ctor()
 inline void FSM_Condition_1__ctor_mE53F15E2CD2C13198A14147D9E5850D8663A48C5 (FSM_Condition_1_t69CFA298493D02AEE755C42705AB30F1D6DB7263* __this, const RuntimeMethod* method)
 {
@@ -2652,10 +2661,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Path_GetFileName_mB1A8CE314EE250B06
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Replace_mABDB7003A1D0AEDCAE9FF85E3DFFFBA752D2A166 (String_t* __this, String_t* ___0_oldValue, String_t* ___1_newValue, const RuntimeMethod* method) ;
 // System.Void LGameFramework.GameBase.AssetBundleInfo::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssetBundleInfo__ctor_m540CA9F0A0F24E70CF66C480B504BDCECF56242F (AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760* __this, const RuntimeMethod* method) ;
-// System.String Utility::GetMD5(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Utility_GetMD5_m8936EBFED59AEF24482A3857240A5DD95C8D64B8 (String_t* ___0_file, const RuntimeMethod* method) ;
-// System.Int32 Utility::GetFileSize(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Utility_GetFileSize_mC7BA86E62B49CE6A70BA73052A88340231841E99 (String_t* ___0_path, const RuntimeMethod* method) ;
+// System.String FileUtility::GetMD5(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* FileUtility_GetMD5_mE9E620E0163ABC9E98A1968301AD5B08D12CC572 (String_t* ___0_file, const RuntimeMethod* method) ;
+// System.Int32 FileUtility::GetFileSize(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FileUtility_GetFileSize_m92D9E002E996B728E9A61D23A8AE67F23537D726 (String_t* ___0_path, const RuntimeMethod* method) ;
 // System.String System.IO.Path::GetDirectoryName(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Path_GetDirectoryName_m428BADBE493A3927B51A13DEF658929B430516F6 (String_t* ___0_path, const RuntimeMethod* method) ;
 // System.IO.DirectoryInfo System.IO.Directory::CreateDirectory(System.String)
@@ -2884,32 +2893,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Clear_m50BAA3751899858B097D3FF2ED3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// System.Void MobileUtility::RestartApplication()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileUtility_RestartApplication_mC3CF1B6DFEFD17E7D5B4B5917224A7E93B6FDA55 (const RuntimeMethod* method) 
-{
-	{
-		// }
-		return;
-	}
-}
-// System.Void MobileUtility::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileUtility__ctor_m1536591162EB02C523289AECBD985FBBA17E1A90 (MobileUtility_t0F14651A10E7707F8C58A2DE0FE73397C08152D8* __this, const RuntimeMethod* method) 
-{
-	{
-		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Int32 Utility::GetFileSize(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Utility_GetFileSize_mC7BA86E62B49CE6A70BA73052A88340231841E99 (String_t* ___0_path, const RuntimeMethod* method) 
+// System.Int32 FileUtility::GetFileSize(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FileUtility_GetFileSize_m92D9E002E996B728E9A61D23A8AE67F23537D726 (String_t* ___0_path, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -2947,8 +2932,8 @@ IL_000a:
 		return ((int32_t)L_4);
 	}
 }
-// System.Int32 Utility::GetDirectorySize(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Utility_GetDirectorySize_mEBADB8B9686DE1FD6BDB250B45D54DFDC86C5B41 (String_t* ___0_path, const RuntimeMethod* method) 
+// System.Int32 FileUtility::GetDirectorySize(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FileUtility_GetDirectorySize_m7C37AA0BD631D1861E39C1823C759DBC33F36CF7 (String_t* ___0_path, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -3032,8 +3017,8 @@ IL_0034:
 		return L_15;
 	}
 }
-// System.String Utility::GetMD5(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Utility_GetMD5_m8936EBFED59AEF24482A3857240A5DD95C8D64B8 (String_t* ___0_file, const RuntimeMethod* method) 
+// System.String FileUtility::GetMD5(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* FileUtility_GetMD5_mE9E620E0163ABC9E98A1968301AD5B08D12CC572 (String_t* ___0_file, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -3146,7 +3131,7 @@ CATCH_0050:
 		Exception_t* L_20 = (Exception_t*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)));
 		NullCheck(L_20);
 		Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F(L_20, L_19, NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_20, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Utility_GetMD5_m8936EBFED59AEF24482A3857240A5DD95C8D64B8_RuntimeMethod_var)));
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_20, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&FileUtility_GetMD5_mE9E620E0163ABC9E98A1968301AD5B08D12CC572_RuntimeMethod_var)));
 	}// end catch (depth: 1)
 
 IL_0069:
@@ -3156,8 +3141,32 @@ IL_0069:
 		return L_21;
 	}
 }
-// System.Void Utility::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Utility__ctor_m5C682D6BB0B4C94F29666E161C2699474DD36B3D (Utility_tCBE9ACF2B450639A749C98C01F2FB4DC100114DB* __this, const RuntimeMethod* method) 
+// System.Void FileUtility::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FileUtility__ctor_mCE07B24C09AAAB64C52F62D1BC65DC2970BC8650 (FileUtility_t7087E0192C26FFE73276E839A861CDF212B1D856* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void MobileUtility::RestartApplication()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileUtility_RestartApplication_mC3CF1B6DFEFD17E7D5B4B5917224A7E93B6FDA55 (const RuntimeMethod* method) 
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void MobileUtility::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileUtility__ctor_m1536591162EB02C523289AECBD985FBBA17E1A90 (MobileUtility_t0F14651A10E7707F8C58A2DE0FE73397C08152D8* __this, const RuntimeMethod* method) 
 {
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
@@ -3991,19 +4000,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9
 		NullCheck(L_8);
 		L_8->___assetPath_1 = L_9;
 		Il2CppCodeGenWriteBarrier((void**)(&L_8->___assetPath_1), (void*)L_9);
-		// file.md5Code = Utility.GetMD5(fullPath);
+		// file.md5Code = FileUtility.GetMD5(fullPath);
 		AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760* L_10 = L_8;
 		String_t* L_11 = ___2_fullPath;
 		String_t* L_12;
-		L_12 = Utility_GetMD5_m8936EBFED59AEF24482A3857240A5DD95C8D64B8(L_11, NULL);
+		L_12 = FileUtility_GetMD5_mE9E620E0163ABC9E98A1968301AD5B08D12CC572(L_11, NULL);
 		NullCheck(L_10);
 		L_10->___md5Code_2 = L_12;
 		Il2CppCodeGenWriteBarrier((void**)(&L_10->___md5Code_2), (void*)L_12);
-		// file.size = Utility.GetFileSize(fullPath);
+		// file.size = FileUtility.GetFileSize(fullPath);
 		AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760* L_13 = L_10;
 		String_t* L_14 = ___2_fullPath;
 		int32_t L_15;
-		L_15 = Utility_GetFileSize_mC7BA86E62B49CE6A70BA73052A88340231841E99(L_14, NULL);
+		L_15 = FileUtility_GetFileSize_m92D9E002E996B728E9A61D23A8AE67F23537D726(L_14, NULL);
 		NullCheck(L_13);
 		L_13->___size_3 = L_15;
 		// return file;
@@ -4014,6 +4023,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssetBundleInfo__ctor_m540CA9F0A0F24E70CF66C480B504BDCECF56242F (AssetBundleInfo_t12F483ECEAC2774C1E9FCA3BCDB9912BEAFF0760* __this, const RuntimeMethod* method) 
 {
 	{
+		// public AssetFileFlag fileFlag = AssetFileFlag.Build;
+		__this->___fileFlag_7 = 1;
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		return;
 	}
@@ -5143,6 +5154,22 @@ IL2CPP_EXTERN_C  String_t* SpecialPathStruct_get_AssetPath_m3472DD23FCF8E176133D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void LGameFramework.GameBase.CSharpUtility::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CSharpUtility__ctor_m8C198F750E36D7C2E578F2BDEDF116D6E7FADB9C (CSharpUtility_t764B39747639CB79F04111035B48EDC75FC19DF2* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 // System.String LGameFramework.GameBase.JsonHelper::ToJason(System.Object,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JsonHelper_ToJason_m8A11F271DAA08C470A32E171F42A18003D0FC285 (RuntimeObject* ___0_obj, bool ___1_encrypt, const RuntimeMethod* method) 
 {
@@ -5893,6 +5920,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AESEncryptor__ctor_m6E77D8950DD574A9FAED
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Collections.Generic.Dictionary`2<System.Type,LGameFramework.GameBase.Pool.Pool/IPool> LGameFramework.GameBase.Pool.Pool::get_SubPools()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_tAA8595B0BC0F05F4F6A9FB1DE8182DE3CF1A9CF9* Pool_get_SubPools_m51617CCA4F65A4EAC8D37575BD58C2A7761646EA (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Pool_t2CEF24A726DF10C2D8AC3AF0D263B37BEDEE27FD_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// public static Dictionary<Type, IPool> SubPools { get { return s_SubPools; } }
+		il2cpp_codegen_runtime_class_init_inline(Pool_t2CEF24A726DF10C2D8AC3AF0D263B37BEDEE27FD_il2cpp_TypeInfo_var);
+		Dictionary_2_tAA8595B0BC0F05F4F6A9FB1DE8182DE3CF1A9CF9* L_0 = ((Pool_t2CEF24A726DF10C2D8AC3AF0D263B37BEDEE27FD_StaticFields*)il2cpp_codegen_static_fields_for(Pool_t2CEF24A726DF10C2D8AC3AF0D263B37BEDEE27FD_il2cpp_TypeInfo_var))->___s_SubPools_0;
+		return L_0;
+	}
+}
 // System.Void LGameFramework.GameBase.Pool.Pool::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Pool__ctor_m6CCB1996462764D319A6D73FD76529F536A8972D (Pool_t2CEF24A726DF10C2D8AC3AF0D263B37BEDEE27FD* __this, const RuntimeMethod* method) 
 {

@@ -340,7 +340,7 @@ namespace LGameFramework.GameCore.Input
                 {
                     ""name"": ""left"",
                     ""id"": ""68903ec1-3e2f-4685-ade8-43e1a52ec8b0"",
-                    ""path"": ""<NimbusGamepadHid>/buttonSouth"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

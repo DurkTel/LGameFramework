@@ -80,7 +80,7 @@ namespace GameCore.Avatar
             /// </summary>
             public void LoadPartAsset()
             {
-                m_AssetModule ??= GameEntry.GetModule<GMAssetManager>();
+                m_AssetModule ??= GameFrameworkEntry.GetModule<GMAssetManager>();
                 m_Loader = m_AssetModule.LoadAssetAsync<GameObject>(m_AssetName);
                 m_Loader.onComplete = LoadComplete;
             }
