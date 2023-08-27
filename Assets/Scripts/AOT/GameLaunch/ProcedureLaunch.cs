@@ -1,6 +1,7 @@
-using GameBase.FSM;
+using LGameFramework.GameBase.FSM;
 using LGameFramework.GameBase;
 using UnityEngine;
+using LGameFramework.GameCore.Asset;
 
 public class ProcedureLaunch : FSM_Status<ProcedureLaunchProcess>
 {
@@ -11,6 +12,9 @@ public class ProcedureLaunch : FSM_Status<ProcedureLaunchProcess>
         switch (m_Setting.assetLoadMode)
         {
             case GameLaunchSetting.AssetLoadMode.Editor:
+#if UNITY_EDITOR
+                AssetManifest_Editor.RefreshEditorAssetsManifest();
+#endif
                 subMachine.ChangeState(ProcedureLaunchProcess.GameEntry);
                 break;
             case GameLaunchSetting.AssetLoadMode.AssetBundle:

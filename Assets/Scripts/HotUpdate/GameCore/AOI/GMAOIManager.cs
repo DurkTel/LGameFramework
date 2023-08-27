@@ -2,12 +2,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace GameCore.AOI
+namespace LGameFramework.GameCore.AOI
 {
     /// <summary>
     /// 九宫格AOI
     /// </summary>
-    public partial class GMAOIManager : FrameworkModule
+    public sealed partial class GMAOIManager : FrameworkModule
     {
         internal override int Priority => 1;
         internal override GameObject GameObject { get; set; }
@@ -61,7 +61,7 @@ namespace GameCore.AOI
 
         internal override void Update(float deltaTime, float unscaledTime)
         {
-            if (m_TargetElement == null) return;
+            if (m_TargetElement == null || m_TargetElement.Transform == null) return;
 
             //主目标所处格子发生变化
             if (UpdateElement(m_TargetElement))
@@ -122,7 +122,7 @@ namespace GameCore.AOI
             GridBlock block = GetBlockByElement(element);
 
             //所在格子没变
-            if (block == element.CurrentGrid)
+            if (block == element.CurrentGrid || block == null)
                 return false;
 
             //发生变化
@@ -233,6 +233,8 @@ namespace GameCore.AOI
         public GridBlock GetBlockByElement(IGridElement element)
         {
             int index = GetIndexByPosition(element.Transform.position);
+            if (index == -1) return null;
+
             return m_AllGridBlock[index];
         }
 

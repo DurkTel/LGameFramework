@@ -1,12 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem.UI;
 using System;
-using GameCore.Asset;
+using LGameFramework.GameCore.Asset;
 
-namespace GameCore.GUI
+namespace LGameFramework.GameCore.GUI
 {
     public partial class GMGUIManager : FrameworkModule
     {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameCore
+namespace LGameFramework.GameCore
 {
     public enum FMEventRegister
     {

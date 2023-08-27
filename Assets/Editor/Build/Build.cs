@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEditor;
 using System.IO;
 using System;
-using GameCore.Asset;
+using LGameFramework.GameCore.Asset;
 using LGameFramework.GameBase;
 
 public class Build : EditorWindow

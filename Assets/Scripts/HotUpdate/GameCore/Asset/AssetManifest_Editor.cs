@@ -6,11 +6,11 @@ using UnityEditor;
 #endif
 using UnityEngine;
 
-namespace GameCore.Asset
+namespace LGameFramework.GameCore.Asset
 {
     public class AssetManifest_Editor : ScriptableObject, ISerializationCallbackReceiver
     {
-        public const string editorPath = "Assets/Plugins/EditorAssetManifest.asset";
+        public const string editorPath = "Assets/LGEditorAssetManifest.asset";
         [System.Serializable]
         public class AssetInfo
         {
@@ -43,7 +43,7 @@ namespace GameCore.Asset
 
 
 #if UNITY_EDITOR
-        [MenuItem("Assets/AssetsManifest/RefreshEditorAssets")]
+        //[MenuItem("Assets/AssetsManifest/RefreshEditorAssets")]
         public static void RefreshEditorAssetsManifest()
         {
             AssetManifest_Editor assetManifest = GetAssetManifest(editorPath);

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameCore
+namespace LGameFramework.GameCore
 {
     /// <summary>
     /// 轨道相机

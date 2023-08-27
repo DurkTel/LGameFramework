@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameBase.FSM
+namespace LGameFramework.GameBase.FSM
 {
     public interface IFSM_Machine<TStateId>
     {

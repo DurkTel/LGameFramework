@@ -1,5 +1,5 @@
 
-namespace GameCore.Avatar
+namespace LGameFramework.GameCore.Avatar
 {
     public partial class GameAvatar
     {

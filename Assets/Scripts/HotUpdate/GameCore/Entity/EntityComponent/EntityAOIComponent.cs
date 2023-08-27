@@ -1,7 +1,7 @@
-using GameCore.AOI;
+using LGameFramework.GameCore.AOI;
 using UnityEngine;
 
-namespace GameCore.Entity
+namespace LGameFramework.GameCore.Entity
 {
     public class EntityAOIComponent : IEntityComponent, IGridElement
     {
@@ -49,12 +49,13 @@ namespace GameCore.Entity
 
         public void Release()
         {
-            
+
         }
 
         public void Dispose()
         {
             GameFrameworkEntry.GetModule<GMAOIManager>().RemoveElement(this);
+
         }
 
     }

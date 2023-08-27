@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace GameCore.GUI
+namespace LGameFramework.GameCore.GUI
 {
     public static class GUIExtensions
     {

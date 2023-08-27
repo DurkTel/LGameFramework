@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameCore
+namespace LGameFramework.GameCore
 {
     /// <summary>
     /// 事件派发管理

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameCore.Asset
+namespace LGameFramework.GameCore.Asset
 {
     public class GMAssetManagerHelper : MonoBehaviour, IFrameworkEditorHelper<GMAssetManager>
     {

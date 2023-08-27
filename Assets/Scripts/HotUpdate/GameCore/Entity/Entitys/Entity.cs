@@ -1,9 +1,9 @@
-﻿using LGameFramework.GameBase.Pool;
+﻿using LGameFramework.GameBase;
 using System.Collections.Generic;
 using UnityEngine;
-using static GameCore.Entity.GMEntityManager;
+using static LGameFramework.GameCore.Entity.GMEntityManager;
 
-namespace GameCore.Entity
+namespace LGameFramework.GameCore.Entity
 {
     public partial class Entity
     {
@@ -149,7 +149,7 @@ namespace GameCore.Entity
                 m_Container = new GameObject("Container").transform;
                 m_Container.SetParentZero(m_Transform);
             }
-
+            m_Container.localPosition = Vector3.zero;
             Visible = true;
             SetStatus(EntityStatus.Created);
         }

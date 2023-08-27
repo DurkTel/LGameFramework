@@ -1,9 +1,12 @@
 using LGameFramework.GameBase.Pool;
+using System;
+using System.Collections.Generic;
 
-namespace GameCore.Entity
+namespace LGameFramework.GameCore.Entity
 {
     public class EntityUtility
     {
+
         /// <summary>
         /// 根据实体类型返回实体实例
         /// </summary>

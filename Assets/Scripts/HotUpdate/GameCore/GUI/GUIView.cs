@@ -1,8 +1,8 @@
 using UnityEngine;
 using UnityEngine.Events;
-using GameCore.Asset;
+using LGameFramework.GameCore.Asset;
 
-namespace GameCore.GUI
+namespace LGameFramework.GameCore.GUI
 {
     public class GUIView : IUIBehaviour
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.Events;
 
-namespace GameCore.Asset
+namespace LGameFramework.GameCore.Asset
 {
     public abstract class Loader : IEnumerator
     {

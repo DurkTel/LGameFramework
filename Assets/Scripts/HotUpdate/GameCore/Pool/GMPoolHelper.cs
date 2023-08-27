@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace GameCore
+namespace LGameFramework.GameCore
 {
     public class GMPoolHelper : MonoBehaviour
     {

@@ -7,7 +7,7 @@ using UnityEditor;
 #endif
 using UnityEngine;
 
-namespace GameCore.Asset
+namespace LGameFramework.GameCore.Asset
 {
     public class AssetEditorLoader : Loader
     {

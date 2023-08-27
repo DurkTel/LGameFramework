@@ -16,4 +16,4 @@ MonoBehaviour:
   gameSpeed: 1
   runInBackground: 1
   neverSleep: 1
-  assetLoadMode: 1
+  assetLoadMode: 0

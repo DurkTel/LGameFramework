@@ -2,7 +2,7 @@
 using System;
 using UnityEngine;
 
-namespace GameCore.Asset
+namespace LGameFramework.GameCore.Asset
 {
     public class AssetLoader : Loader
     {
@@ -113,7 +113,7 @@ namespace GameCore.Asset
                 if (m_Async)
                 {
                     if (m_AssetRequest == null)
-                        AssetModule.RemoveWaitDestroy(m_BundleName);
+                        AssetModule.RemoveABWaitDestroy(m_BundleName);
 
                     m_AssetRequest ??= LoadAsync(m_BundleName, m_AssetName, m_AssetType);
 
@@ -122,7 +122,7 @@ namespace GameCore.Asset
                 }
                 else
                 {
-                    AssetModule.RemoveWaitDestroy(m_BundleName);
+                    AssetModule.RemoveABWaitDestroy(m_BundleName);
                     m_RawObject = Load(m_BundleName, m_AssetName, m_AssetType);
                 }
 

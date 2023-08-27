@@ -1,10 +1,10 @@
-using GameCore.AOI;
-using GameCore.Avatar;
+using LGameFramework.GameCore.AOI;
+using LGameFramework.GameCore.Avatar;
 using LGameFramework.GameBase.Pool;
 using System.Collections.Generic;
-using static GameCore.Entity.GMEntityManager;
+using static LGameFramework.GameCore.Entity.GMEntityManager;
 
-namespace GameCore.Entity
+namespace LGameFramework.GameCore.Entity
 {
     public class EntityData
     {

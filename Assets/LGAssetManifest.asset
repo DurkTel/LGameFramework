@@ -1415,9 +1415,9 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: gamemainlogic.asset
     assetPath: 002/artmodules/gamemainlogic.asset
-    md5Code: 0404cd6196653f4e23dcb2e2a2df9503
-    size: 2300
-    crc: 2450046160
+    md5Code: cf1d605bdb141290bf9e15a6e45a7ce2
+    size: 2320
+    crc: 3502536690
     dependencieBundleNames: []
     allFiles:
     - gamemainlogic.prefab
@@ -1583,9 +1583,9 @@ MonoBehaviour:
     fileFlag: 1
   - bundleName: gamesetting.asset
     assetPath: 002/artmodules/scriptobject/gamesetting.asset
-    md5Code: c27e006d0795f8cb5594a586fa7cfc30
-    size: 3063
-    crc: 3759880104
+    md5Code: 7b04881fd13741c97d49584a3c7ca416
+    size: 2961
+    crc: 593481738
     dependencieBundleNames: []
     allFiles:
     - audiosetting.asset

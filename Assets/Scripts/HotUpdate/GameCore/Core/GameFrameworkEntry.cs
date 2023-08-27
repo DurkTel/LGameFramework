@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameCore
+namespace LGameFramework.GameCore
 {
     /// <summary>
     /// ÓÎÏ·Èë¿Ú
@@ -141,7 +141,7 @@ namespace GameCore
 
         public static void Instantiate()
         {
-            GameObject go = new GameObject("GameEntry");
+            GameObject go = new GameObject("GameFrameworkEntry");
             m_GameRoot = go.transform;
             go.AddComponent<GameFrameworkEntry>();
             DontDestroyOnLoad(go);

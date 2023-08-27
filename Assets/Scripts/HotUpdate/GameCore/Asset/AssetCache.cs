@@ -2,10 +2,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using LGameFramework.GameBase.Pool;
 
-namespace GameCore.Asset
+namespace LGameFramework.GameCore.Asset
 {
-    public class AssetCache
+    /// <summary>
+    /// 资源缓存
+    /// </summary>
+    public sealed class AssetCache
     {
+        /// <summary>
+        /// 源对象资源信息
+        /// </summary>
         public class RawObjectInfo
         {
             public Object rawObject;
@@ -13,6 +19,9 @@ namespace GameCore.Asset
             public string bundleName;
             public int referenceCount;
         }
+        /// <summary>
+        /// 实例化对象信息
+        /// </summary>
         public class InstanceObjectInfo
         {
             public Object instanceObject;
@@ -24,19 +33,23 @@ namespace GameCore.Asset
         {
             get
             {
-                if (m_AssetModule == null)
-                    m_AssetModule = GameFrameworkEntry.GetModule<GMAssetManager>();
-
+                m_AssetModule ??= GameFrameworkEntry.GetModule<GMAssetManager>();
                 return m_AssetModule;
             }
         }
-
-        private static Dictionary<string, RawObjectInfo> m_RawAssetMap = new Dictionary<string, RawObjectInfo>();
+        /// <summary>
+        /// 源对象Map name2info
+        /// </summary>
+        private static readonly Dictionary<string, RawObjectInfo> m_RawAssetMap = new Dictionary<string, RawObjectInfo>();
         public static Dictionary<string , RawObjectInfo> RawAssetMap { get { return m_RawAssetMap; } }  
-
-        private static Dictionary<Object, RawObjectInfo> m_RawNameMap = new Dictionary<Object, RawObjectInfo>();
-
-        private static Dictionary<int, InstanceObjectInfo> m_InstanceAssetMap = new Dictionary<int, InstanceObjectInfo>();
+        /// <summary>
+        /// 源对象Map obj2info
+        /// </summary>
+        private static readonly Dictionary<Object, RawObjectInfo> m_RawNameMap = new Dictionary<Object, RawObjectInfo>();
+        /// <summary>
+        /// 实例化对象Map instanceId2info
+        /// </summary>
+        private static readonly Dictionary<int, InstanceObjectInfo> m_InstanceAssetMap = new Dictionary<int, InstanceObjectInfo>();
         public static Dictionary<int, InstanceObjectInfo> InstanceAssetMap { get { return m_InstanceAssetMap; } }
 
         /// <summary>
@@ -181,22 +194,8 @@ namespace GameCore.Asset
             if (rawInfo.referenceCount > 0)
                 return;
 
-            //AB包模式下计算引用
-            if (GMAssetManager.AssetLoadMode == AssetLoadMode.AssetBundle)
-            {
-                AssetBundleRecord record;
-                //这个资源的AB引用减1
-                if (AssetModule.TryGetAssetBundle(rawInfo.bundleName, out record))
-                    record.RawReferenceCount--;
-            }
-
-            //销毁源对象
-            if (rawObj is TextAsset)
-                Object.DestroyImmediate(rawObj);
-            if (!(rawObj is GameObject))
-                Resources.UnloadAsset(rawObj);
-
-            RemoveRawObject(rawInfo.asstName);
+            //等待销毁
+            AssetModule.WaitDestroyList.Add(rawInfo.asstName, Time.unscaledTime);
         }
     }
 }

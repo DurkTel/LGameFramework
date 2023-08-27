@@ -1,9 +1,9 @@
 
 
-using static GameCore.Entity.GMEntityManager;
+using static LGameFramework.GameCore.Entity.GMEntityManager;
 using static LGameFramework.GameCore.Input.GMCrossPlatformInput;
 
-namespace GameCore.Entity
+namespace LGameFramework.GameCore.Entity
 {
     public class LocalPlayerEntity : Entity
     {

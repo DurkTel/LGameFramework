@@ -1,9 +1,8 @@
-using GameCore.Asset;
-using LGameFramework.GameBase.Pool;
+using LGameFramework.GameCore.Asset;
 using UnityEngine;
 using UnityEngine.Animations;
 
-namespace GameCore.Avatar
+namespace LGameFramework.GameCore.Avatar
 {
     public partial class GameAvatar
     {

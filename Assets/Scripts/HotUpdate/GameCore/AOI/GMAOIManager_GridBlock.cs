@@ -1,12 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using static GameCore.AOI.GMAOIManager;
 
-namespace GameCore.AOI
+namespace LGameFramework.GameCore.AOI
 {
-    public partial class GMAOIManager : FrameworkModule
+    public sealed partial class GMAOIManager : FrameworkModule
     {
         /// <summary>
         /// 格子区域块
@@ -80,11 +77,11 @@ namespace GameCore.AOI
         /// <summary>
         /// 当前所在格子
         /// </summary>
-        GridBlock CurrentGrid { get; set; }
+        GMAOIManager.GridBlock CurrentGrid { get; set; }
         /// <summary>
         /// 上次所在格子
         /// </summary>
-        GridBlock LastGrid { get; set; }
+        GMAOIManager.GridBlock LastGrid { get; set; }
     }
 
     /// <summary>

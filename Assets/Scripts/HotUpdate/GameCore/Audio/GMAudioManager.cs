@@ -1,16 +1,11 @@
-using GameCore;
-using GameCore.Asset;
-using LGameFramework.GameBase.Pool;
-using System;
-using System.Collections;
+using LGameFramework.GameCore.Asset;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.Pool;
 
-namespace GameCore.Audio
+namespace LGameFramework.GameCore.Audio
 {
-    public class GMAudioManager : FrameworkModule
+    public sealed partial class GMAudioManager : FrameworkModule
     {
         private AudioSetting m_AudioSetting;
         public AudioSetting AudioSetting { get { return m_AudioSetting; } }

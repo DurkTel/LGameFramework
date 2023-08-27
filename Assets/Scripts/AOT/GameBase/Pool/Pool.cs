@@ -1,4 +1,3 @@
-
 using System.Collections.Generic;
 
 namespace LGameFramework.GameBase.Pool
@@ -38,6 +37,7 @@ namespace LGameFramework.GameBase.Pool
             s_ObjectPool.Remove(count);
         }
     }
+
 
     /// <summary>
     /// ×Öµä³Ø

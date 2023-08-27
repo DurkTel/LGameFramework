@@ -1,7 +1,7 @@
 using System.Xml;
 using UnityEngine;
 
-namespace GameCore.Entity
+namespace LGameFramework.GameCore.Entity
 {
     /// <summary>
     /// 相机剔除实体组件

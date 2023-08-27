@@ -1,9 +1,8 @@
-using GameCore.Asset;
-using System.Collections;
-using System.Collections.Generic;
+using LGameFramework.GameCore.Asset;
+using LGameFramework.GameBase;
 using UnityEngine;
 
-namespace GameCore
+namespace LGameFramework.GameCore
 {
     public class GameCoreSetting<T> : GameSetting<T> where T : ScriptableObject
     {

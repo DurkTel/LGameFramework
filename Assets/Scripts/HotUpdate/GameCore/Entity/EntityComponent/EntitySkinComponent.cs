@@ -1,8 +1,8 @@
 using UnityEngine;
-using GameCore.Avatar;
-using static GameCore.Avatar.GameAvatar;
+using LGameFramework.GameCore.Avatar;
+using static LGameFramework.GameCore.Avatar.GameAvatar;
 
-namespace GameCore.Entity
+namespace LGameFramework.GameCore.Entity
 {
     /// <summary>
     /// 实体外观组件

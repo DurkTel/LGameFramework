@@ -5,8 +5,9 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using LGameFramework.GameBase.Pool;
 using System;
+using System.Reflection;
 
-namespace GameCore.Entity
+namespace LGameFramework.GameCore.Entity
 {
     public sealed partial class GMEntityManager : FrameworkModule
     {
@@ -145,10 +146,6 @@ namespace GameCore.Entity
                 m_Entitys.Remove(entity);
             }
 
-            public void DestroyEntity()
-            { 
-                
-            }
         }
     }
 }

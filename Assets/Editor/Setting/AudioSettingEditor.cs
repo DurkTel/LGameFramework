@@ -1,9 +1,10 @@
-using GameCore.Audio;
+using LGameFramework.GameCore.Audio;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Audio;
-using static GameCore.Audio.AudioSetting;
+using static LGameFramework.GameCore.Audio.AudioSetting;
+using static LGameFramework.GameCore.Audio.GMAudioManager;
 
 [CustomEditor(typeof(AudioSetting))]
 public class AudioSettingEditor : Editor

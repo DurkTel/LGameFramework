@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace GameCore.Avatar
+namespace LGameFramework.GameCore.Avatar
 {
     /// <summary>
     /// 模型换装替身系统

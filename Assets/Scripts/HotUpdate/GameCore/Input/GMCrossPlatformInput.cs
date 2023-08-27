@@ -3,8 +3,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
 using UnityEngine.InputSystem.Utilities;
-using UnityEngine.Events;
-using GameCore;
 
 namespace LGameFramework.GameCore.Input
 {

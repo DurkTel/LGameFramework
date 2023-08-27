@@ -1,67 +1,69 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class GameDictionary<TKey, TValue> : Dictionary<TKey, TValue>
+namespace LGameFramework.GameBase
 {
-    public List<TKey> keyList;
-
-    public GameDictionary()
+    public class GameDictionary<TKey, TValue> : Dictionary<TKey, TValue>
     {
-        keyList = new List<TKey>();
-    }
+        public List<TKey> keyList;
 
-    public GameDictionary(int capacity) : base(capacity)
-    { 
-        keyList = new List<TKey>(capacity);
-    }
-
-    public new void Add(TKey key, TValue value)
-    {
-        if (!keyList.Contains(key))
-            keyList.Add(key);
-        else
-        { 
-            Debug.LogError("字典中已有相同Key值");
-            return;
-        }
-
-        base.Add(key, value);
-    }
-
-    public new bool Remove(TKey key)
-    {
-        keyList.Remove(key);
-        return base.Remove(key);
-    }
-
-    public bool RemoveAt(int index)
-    {
-        if (index > 0 && index < keyList.Count - 1)
+        public GameDictionary()
         {
-            TKey key = keyList[index];
-            if (key != null && keyList.Remove(key))
-            {
-                return base.Remove(key);
-            }
+            keyList = new List<TKey>();
         }
-        else
-            Debug.LogError("索引不存在");
 
-        return false;
-    }
+        public GameDictionary(int capacity) : base(capacity)
+        {
+            keyList = new List<TKey>(capacity);
+        }
 
-    public new bool ContainsKey(TKey key)
-    {
-        if (keyList.Contains(key) && base.ContainsKey(key))
-            return true;
+        public new void Add(TKey key, TValue value)
+        {
+            if (!keyList.Contains(key))
+                keyList.Add(key);
+            else
+            {
+                Debug.LogError("字典中已有相同Key值");
+                return;
+            }
 
-        return false;
-    }
+            base.Add(key, value);
+        }
 
-    public new void Clear()
-    {
-        keyList.Clear();
-        base.Clear();
+        public new bool Remove(TKey key)
+        {
+            keyList.Remove(key);
+            return base.Remove(key);
+        }
+
+        public bool RemoveAt(int index)
+        {
+            if (index > 0 && index < keyList.Count - 1)
+            {
+                TKey key = keyList[index];
+                if (key != null && keyList.Remove(key))
+                {
+                    return base.Remove(key);
+                }
+            }
+            else
+                Debug.LogError("索引不存在");
+
+            return false;
+        }
+
+        public new bool ContainsKey(TKey key)
+        {
+            if (keyList.Contains(key) && base.ContainsKey(key))
+                return true;
+
+            return false;
+        }
+
+        public new void Clear()
+        {
+            keyList.Clear();
+            base.Clear();
+        }
     }
 }

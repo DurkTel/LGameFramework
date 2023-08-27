@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameBase.FSM
+namespace LGameFramework.GameBase.FSM
 {
     public class FSM_DataBase : MonoBehaviour
     {

@@ -1,4 +1,4 @@
-using GameBase.FSM;
+using LGameFramework.GameBase.FSM;
 using HybridCLR;
 using LGameFramework.GameBase;
 using System;
@@ -23,7 +23,7 @@ public class ProcedureGameEntry : FSM_Status<ProcedureLaunchProcess>
 #if !UNITY_EDITOR
         foreach (var dll in m_GamePath.hotUpdateDll)
         {
-            var assembly = Assembly.Load(File.ReadAllBytes($"{ProcedureLaunchPath.s_HotUpdateDll}/{dll}.bytes"));
+            var assembly = Assembly.Load(File.ReadAllBytes($"{m_GamePath.hotUpdateDllPath}/{dll}.bytes"));
             if (coreAssembly == null)
                 coreAssembly = assembly;
         }
@@ -37,7 +37,7 @@ public class ProcedureGameEntry : FSM_Status<ProcedureLaunchProcess>
         }
 #endif
 
-        Type type = coreAssembly.GetType("GameCore.GameFrameworkEntry");
+        Type type = coreAssembly.GetType("LGameFramework.GameCore.GameFrameworkEntry");
         type.GetMethod("Instantiate").Invoke(null, null);
 
         //进入游戏成功 销毁启动器

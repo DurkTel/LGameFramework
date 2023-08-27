@@ -34,7 +34,7 @@ public class ProjectHierarchyExtension
         {"Assets/Scripts/HotUpdate/GameCore/Event",new GUIContent("事件")},
         {"Assets/Scripts/HotUpdate/GameCore/GUI",new GUIContent("UI")},
         {"Assets/Scripts/HotUpdate/GameCore/Input",new GUIContent("跨平台输入")},
-        {"Assets/Scripts/HotUpdate/GameCore/NGrid",new GUIContent("九宫格")},
+        {"Assets/Scripts/HotUpdate/GameCore/AOI",new GUIContent("感知算法")},
         {"Assets/Scripts/HotUpdate/GameCore/Pool",new GUIContent("对象池")},
         {"Assets/Scripts/HotUpdate/GameCore/Timer",new GUIContent("计时器")},
 

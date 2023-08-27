@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameCore.Entity
+namespace LGameFramework.GameCore.Entity
 {
     public sealed partial class GMEntityManager : FrameworkModule
     {

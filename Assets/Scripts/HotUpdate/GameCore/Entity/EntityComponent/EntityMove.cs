@@ -1,10 +1,6 @@
-using GameCore.Entity;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Windows;
 
-namespace GameCore.Entity
+namespace LGameFramework.GameCore.Entity
 {
     public class EntityMove : IEntityComponent
     {

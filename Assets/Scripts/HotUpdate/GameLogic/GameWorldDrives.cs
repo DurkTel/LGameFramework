@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameLogic
+namespace LGameFramework.GameLogic
 {
     /// <summary>
     /// ÊÀ½çÂß¼­ĞÄÌø

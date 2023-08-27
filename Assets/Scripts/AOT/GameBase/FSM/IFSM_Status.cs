@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace GameBase.FSM
+namespace LGameFramework.GameBase.FSM
 {
     public interface IFSM_Status<TStateID>
     {

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace GameCore.Entity
+namespace LGameFramework.GameCore.Entity
 {
     public sealed partial class GMEntityManager
     {

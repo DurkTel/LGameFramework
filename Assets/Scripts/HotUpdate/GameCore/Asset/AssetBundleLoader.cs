@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using UnityEngine;
 
-namespace GameCore.Asset
+namespace LGameFramework.GameCore.Asset
 {
     public class AssetBundleLoader : Loader
     {

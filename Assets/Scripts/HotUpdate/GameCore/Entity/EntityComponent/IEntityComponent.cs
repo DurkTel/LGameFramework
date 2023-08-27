@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace GameCore.Entity
+namespace LGameFramework.GameCore.Entity
 {
     /// <summary>
     /// 实体组件

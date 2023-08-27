@@ -1,9 +1,7 @@
-﻿using GameCore;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameCore.Entity
+namespace LGameFramework.GameCore.Entity
 {
     public sealed partial class GMEntityManager : FrameworkModule
     {
@@ -103,7 +101,7 @@ namespace GameCore.Entity
                 entity.SetStatus(EntityStatus.WillRelease);
                 entity.Release();
                 entity.Transform.SetParent(m_DisableContainer);
-                entity.Transform.localPosition = new Vector3(0, -99999, 0);
+                entity.Container.localPosition = new Vector3(0, -99999, 0);
                 return true;
             }
 

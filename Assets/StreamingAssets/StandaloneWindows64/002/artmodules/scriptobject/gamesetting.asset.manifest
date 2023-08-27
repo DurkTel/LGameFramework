@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3759880104
+CRC: 593481738
 Hashes:
   AssetFileHash:
     serializedVersion: 2
     Hash: 38f448c8a73fe418e3f623e48c7bef62
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 3a3b2cf1220c3f935074cea1672faea9
+    Hash: 23f6ddcd4218433197bbe5b7cb96acb5
 HashAppended: 0
 ClassTypes:
 - Class: 114
@@ -23,7 +23,7 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: Assembly-GameBase
   ClassName: LGameFramework.GameBase.GamePathSetting/SpecialPathStruct
 - AssemblyName: Assembly-GameCore
-  ClassName: GameCore.Audio.AudioSetting/AudioParam
+  ClassName: LGameFramework.GameCore.Audio.AudioSetting/AudioParam
 Assets:
 - Assets/ArtModules/ScriptObject/GameSetting/FilePathSetting.asset
 - Assets/ArtModules/ScriptObject/GameSetting/AudioSetting.asset

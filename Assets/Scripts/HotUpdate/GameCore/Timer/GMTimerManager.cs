@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using LGameFramework.GameBase.Pool;
 
-namespace GameCore.Timer
+namespace LGameFramework.GameCore.Timer
 {
     public class GMTimerManager : FrameworkModule
     {

@@ -1,4 +1,4 @@
-using GameCore.Asset;
+using LGameFramework.GameCore.Asset;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -149,7 +149,13 @@ public class GMAssetManagerHelperEditor : Editor
     {
         if (m_CurrentToolBarIndex1 == 0)
         {
-            EditorGUILayout.HelpBox("源对象引用为0时直接销毁，暂无等待逻辑", MessageType.Info);
+            EditorGUILayout.HelpBox("等待卸载的源对象资源", MessageType.Info);
+            OnDrawBorder(m_GMAssetManager.WaitDestroyList, (p) =>
+            {
+                KeyValuePair<string, float> info = (KeyValuePair<string, float>)p;
+                EditorGUILayout.SelectableLabel(string.Format("源对象名称：<color=#ffffff>{0}</color>", info.Key), m_Skin.label);
+                EditorGUILayout.LabelField(string.Format("卸载剩余时间：<color=#77dc60>{0}</color>", m_GMAssetManager.WaitDestroyTime - (Time.unscaledTime - info.Value)), m_Skin.label);
+            });
         }
         else
         {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace GameCore.GUI
+namespace LGameFramework.GameCore.GUI
 {
     public partial class GMGUIManager
     {

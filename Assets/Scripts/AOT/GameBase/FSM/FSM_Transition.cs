@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace GameBase.FSM
+namespace LGameFramework.GameBase.FSM
 {
     public class FSM_Transition<TStateId>
     {

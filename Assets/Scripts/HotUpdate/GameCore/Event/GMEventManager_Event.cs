@@ -1,7 +1,7 @@
 using LGameFramework.GameBase.Pool;
 using System;
 
-namespace GameCore
+namespace LGameFramework.GameCore
 {
     public sealed partial class GMEventManager
     {

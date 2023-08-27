@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-namespace GameCore.Entity
+namespace LGameFramework.GameCore.Entity
 {
     public class EntityMove2D : IEntityComponent
     {

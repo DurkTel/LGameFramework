@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace GameCore.Audio
+namespace LGameFramework.GameCore.Audio
 {
     [CreateAssetMenu(fileName = "Audio Setting", menuName = "LGameFramework/Audio Setting")]
     public class AudioSetting : GameCoreSetting<AudioSetting>
@@ -26,7 +24,7 @@ namespace GameCore.Audio
             /// <summary>
             /// 轨道播放模式
             /// </summary>
-            public AudioGroup.AudioPlayMode playMode;
+            public GMAudioManager.AudioGroup.AudioPlayMode playMode;
         }
     }
 }

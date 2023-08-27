@@ -1,9 +1,9 @@
-using GameCore.AOI;
+using LGameFramework.GameCore.AOI;
 using UnityEngine;
 
-namespace GameCore.AOI
+namespace LGameFramework.GameCore.AOI
 {
-    public class GMAOIManagerHelper : MonoBehaviour, IFrameworkEditorHelper<GMAOIManager>
+    public sealed class GMAOIManagerHelper : MonoBehaviour, IFrameworkEditorHelper<GMAOIManager>
     {
         private GMAOIManager m_DataSource;
         public GMAOIManager DataSource { get { return m_DataSource; } }

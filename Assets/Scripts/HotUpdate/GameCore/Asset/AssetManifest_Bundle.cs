@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using LGameFramework.GameBase;
 
-namespace GameCore.Asset
+namespace LGameFramework.GameCore.Asset
 {
     public class AssetManifest_Bundle : ScriptableObject, ISerializationCallbackReceiver
     {
