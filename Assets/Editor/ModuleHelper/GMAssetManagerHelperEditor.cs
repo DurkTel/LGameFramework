@@ -45,10 +45,10 @@ public class GMAssetManagerHelperEditor : Editor
 
     public override void OnInspectorGUI()
     {
-        if (GUILayout.Button(m_ShowHelper ? "关闭资源监控" : "启动资源监控"))
-            m_ShowHelper = !m_ShowHelper;
+        //if (GUILayout.Button(m_ShowHelper ? "关闭资源监控" : "启动资源监控"))
+        //    m_ShowHelper = !m_ShowHelper;
 
-        if (!m_ShowHelper) return;
+        //if (!m_ShowHelper) return;
 
         m_CurrentToolBarIndex1 = GUILayout.Toolbar(m_CurrentToolBarIndex1, s_ExtendToolBar1);
         m_CurrentToolBarIndex2 = GUILayout.Toolbar(m_CurrentToolBarIndex2, s_ExtendToolBar2);

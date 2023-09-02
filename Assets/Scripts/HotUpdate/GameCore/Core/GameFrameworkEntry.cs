@@ -15,6 +15,15 @@ namespace LGameFramework.GameCore
 
         private static readonly Dictionary<Type, FrameworkModule> s_AllFrameworkModuleDict = new Dictionary<Type, FrameworkModule>();
 
+        public static void Instantiate()
+        {
+            GameObject go = new GameObject("GameFrameworkEntry");
+            m_GameRoot = go.transform;
+            go.AddComponent<GameFrameworkEntry>();
+            DontDestroyOnLoad(go);
+            Debug.Log("游戏入口实例化完成，进入游戏");
+        }
+
         private void OnEnable()
         {
             foreach (FrameworkModule module in s_AllFrameworkModule)
@@ -137,15 +146,6 @@ namespace LGameFramework.GameCore
                 s_AllFrameworkModule.AddLast(module);
 
             return module;
-        }
-
-        public static void Instantiate()
-        {
-            GameObject go = new GameObject("GameFrameworkEntry");
-            m_GameRoot = go.transform;
-            go.AddComponent<GameFrameworkEntry>();
-            DontDestroyOnLoad(go);
-            Debug.Log("游戏入口实例化完成，进入游戏");
         }
 
         public void OnDestroy()

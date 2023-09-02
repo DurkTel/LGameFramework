@@ -28,12 +28,12 @@ namespace LGameFramework.GameCore
         /// <summary>
         /// 需要派发的委托队列
         /// </summary>
-        private Queue<Event> m_EventQueue;
+        private Queue<GameEvent> m_EventQueue;
 
         /// <summary>
         /// 需要派发的委托
         /// </summary>
-        private Event m_Event;
+        private GameEvent m_Event;
 
         /// <summary>
         /// 计时器
@@ -53,7 +53,7 @@ namespace LGameFramework.GameCore
         internal override void OnInit()
         {
             m_EventHandlers = new Dictionary<FMEventRegister, LinkedList<EventHandler<GameEventArg>>>();
-            m_EventQueue = new Queue<Event>();
+            m_EventQueue = new Queue<GameEvent>();
             m_StopWatch = new System.Diagnostics.Stopwatch();
             m_AsyncMaxTime = 30; //30ms 约 30fps/s
         }
@@ -71,7 +71,7 @@ namespace LGameFramework.GameCore
             }
         }
 
-        private bool HandleEvent(object sender, Event args, bool Async)
+        private bool HandleEvent(object sender, GameEvent args, bool Async)
         {
             if (m_CurrentNode != null || m_EventHandlers.TryGetValue(args.Id, out m_TempLinked))
             {
@@ -140,7 +140,7 @@ namespace LGameFramework.GameCore
         /// <param name="args">事件参数</param>
         public void Dispatch(FMEventRegister id, object sender, GameEventArg args)
         {
-            Event eventNode = Event.Get(id, sender, args);
+            GameEvent eventNode = GameEvent.Get(id, sender, args);
             m_EventQueue.Enqueue(eventNode);
         }
 
@@ -152,7 +152,7 @@ namespace LGameFramework.GameCore
         /// <param name="args">事件参数</param>
         public void DispatchImmediately(FMEventRegister id, object sender, GameEventArg args)
         {
-            Event eventNode = Event.Get(id, sender, args);
+            GameEvent eventNode = GameEvent.Get(id, sender, args);
             HandleEvent(sender, eventNode, false);
             eventNode.Dispose();
             eventNode = null;

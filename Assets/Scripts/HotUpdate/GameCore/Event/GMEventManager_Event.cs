@@ -8,7 +8,7 @@ namespace LGameFramework.GameCore
         /// <summary>
         /// 事件 中转器
         /// </summary>
-        private sealed class Event
+        private sealed class GameEvent
         {
             private FMEventRegister m_Id;
             public FMEventRegister Id { get { return m_Id; } }
@@ -19,9 +19,9 @@ namespace LGameFramework.GameCore
             private GameEventArg m_EventArgs;
             public GameEventArg EventArgs { get { return m_EventArgs; } }
 
-            public static Event Get(FMEventRegister id, object sender, GameEventArg e)
+            public static GameEvent Get(FMEventRegister id, object sender, GameEventArg e)
             {
-                Event eventNode = Pool<Event>.Get();
+                GameEvent eventNode = Pool<GameEvent>.Get();
                 eventNode.m_Id = id;
                 eventNode.m_Sender = sender;
                 eventNode.m_EventArgs = e;
@@ -34,7 +34,7 @@ namespace LGameFramework.GameCore
                 m_Sender = null;
                 m_EventArgs.Dispose();
                 m_EventArgs = null;
-                Pool<Event>.Release(this);
+                Pool<GameEvent>.Release(this);
             }
         }
 

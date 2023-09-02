@@ -28,10 +28,10 @@ public class GMPoolHelperEditor : Editor
 
     public override void OnInspectorGUI()
     {
-        if (GUILayout.Button(m_ShowHelper ? "关闭对象池监控" : "启动对象池监控"))
-            m_ShowHelper = !m_ShowHelper;
+        //if (GUILayout.Button(m_ShowHelper ? "关闭对象池监控" : "启动对象池监控"))
+        //    m_ShowHelper = !m_ShowHelper;
 
-        if (!m_ShowHelper) return;
+        //if (!m_ShowHelper) return;
 
         int flag = 0;
         int count = Pool.SubPools.Values.Count - 1;

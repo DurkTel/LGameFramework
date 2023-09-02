@@ -7,9 +7,9 @@ using UnityEngine.InputSystem.Utilities;
 namespace LGameFramework.GameCore.Input
 {
     /// <summary>
-    /// 跨平台输入监听
+    /// 跨平台输入系统
     /// </summary>
-    public partial class GMCrossPlatformInput : FrameworkModule
+    public partial class GMInputManager : FrameworkModule
     {
         private InputControls m_InputActions;
         public InputControls InputActions { get { return m_InputActions; } }
@@ -18,11 +18,11 @@ namespace LGameFramework.GameCore.Input
         /// <summary>
         /// 双击的间隔时间
         /// </summary>
-        public double multiTime = 0.2f;
+        public const double multiTime = 0.2f;
         /// <summary>
         /// 记录按钮行为
         /// </summary>
-        public Dictionary<string, ButtonBehaviour> buttonBehaviour = new Dictionary<string, ButtonBehaviour>();
+        public Dictionary<string, InputBehaviour> inputBehaviour = new Dictionary<string, InputBehaviour>();
 
         internal override int Priority => 1;
 
@@ -32,8 +32,21 @@ namespace LGameFramework.GameCore.Input
         internal override void OnInit()
         {
             m_InputActions = new InputControls();
-            Initialize();
             OnEnable();
+
+            LoadInputRebinds();
+            ReadOnlyArray<InputActionMap> actions = InputActions.asset.actionMaps;
+            foreach (var actionMap in actions)
+            {
+                foreach (var action in actionMap)
+                {
+                    action.started += InputHandle;
+                    action.performed += InputHandle;
+                    action.canceled += InputHandle;
+                    if (!inputBehaviour.ContainsKey(action.name))
+                        inputBehaviour.Add(action.name, new InputBehaviour(action.name, action));
+                }
+            }
         }
 
         internal override void Update(float deltaTime, float unscaledTime)
@@ -52,58 +65,42 @@ namespace LGameFramework.GameCore.Input
             InputActions.Disable();
         }
 
-        public void Initialize()
-        {
-            ReadOnlyArray<InputActionMap> actions = InputActions.asset.actionMaps;
-            foreach (var actionMap in actions)
-            {
-                foreach (var action in actionMap)
-                {
-                    action.started += InputHandle;
-                    action.performed += InputHandle;
-                    action.canceled += InputHandle;
-                    if (!buttonBehaviour.ContainsKey(action.name))
-                        buttonBehaviour.Add(action.name, new ButtonBehaviour(action.name, action));
-                }
-            }
-        }
-
         private void InputHandle(InputAction.CallbackContext context)
         {
             if (context.action.type == InputActionType.Value)
             { 
-                DispatchEvent(context.action.name, InputBehaviour.Direction, context.action);
+                DispatchEvent(context.action.name, InputMode.Direction, context.action);
                 return;
             }
 
-            buttonBehaviour[context.action.name].OnMulti = false;
+            inputBehaviour[context.action.name].OnMulti = false;
 
             if (context.phase == InputActionPhase.Started)
             {
-                DispatchEvent(context.action.name, InputBehaviour.Click, context.action);
+                DispatchEvent(context.action.name, InputMode.Click, context.action);
                 //需求要按下算一次点击，自带的双击判断是松开算一次点击，自己模拟一下
-                if (context.startTime - buttonBehaviour[context.action.name].startTime <= multiTime)
+                if (context.startTime - inputBehaviour[context.action.name].startTime <= multiTime)
                 {
-                    buttonBehaviour[context.action.name].OnMulti = true;
-                    DispatchEvent(context.action.name, InputBehaviour.DoubleClick, context.action);
+                    inputBehaviour[context.action.name].OnMulti = true;
+                    DispatchEvent(context.action.name, InputMode.DoubleClick, context.action);
                 }
-                buttonBehaviour[context.action.name].startTime = context.startTime;
+                inputBehaviour[context.action.name].startTime = context.startTime;
             }
             else if (context.phase == InputActionPhase.Performed)
             {
                 if (context.interaction is HoldInteraction)
                 {
-                    DispatchEvent(context.action.name, InputBehaviour.Hold, context.action);
+                    DispatchEvent(context.action.name, InputMode.Hold, context.action);
                 }
             }
             else if (context.phase == InputActionPhase.Canceled)
             {
-                DispatchEvent(context.action.name, InputBehaviour.Release, context.action);
+                DispatchEvent(context.action.name, InputMode.Release, context.action);
             }
 
         }
 
-        private void DispatchEvent(string name, InputBehaviour behaviour, InputAction action)
+        private void DispatchEvent(string name, InputMode behaviour, InputAction action)
         {
             InputActionArgs args = InputActionArgs.Get(name, behaviour, action);
             m_GMEventManager.DispatchImmediately(FMEventRegister.INPUT_DISPATCH_HANDLE, this, args);

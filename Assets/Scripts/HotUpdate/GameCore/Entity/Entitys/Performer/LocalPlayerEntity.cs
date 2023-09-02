@@ -1,7 +1,7 @@
 
 
 using static LGameFramework.GameCore.Entity.GMEntityManager;
-using static LGameFramework.GameCore.Input.GMCrossPlatformInput;
+using static LGameFramework.GameCore.Input.GMInputManager;
 
 namespace LGameFramework.GameCore.Entity
 {
