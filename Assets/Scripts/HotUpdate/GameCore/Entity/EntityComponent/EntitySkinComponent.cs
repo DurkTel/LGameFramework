@@ -1,6 +1,7 @@
 using UnityEngine;
 using LGameFramework.GameCore.Avatar;
 using static LGameFramework.GameCore.Avatar.GameAvatar;
+using LGameFramework.GameBase;
 
 namespace LGameFramework.GameCore.Entity
 {
@@ -75,7 +76,7 @@ namespace LGameFramework.GameCore.Entity
         public virtual void LoadSkin()
         {
             if (m_Avatar == null || m_Entity == null) return;
-            Debug.Log("开始加载外观");
+            GameLogger.INFO("开始加载外观");
             GameAvatarPart part;
             foreach (var asset in m_Entity.EntityData.SkinAssetNames)
             {

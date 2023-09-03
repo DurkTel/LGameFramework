@@ -147,7 +147,7 @@ public class Build : EditorWindow
             FileUtil.CopyFileOrDirectory(formPath, path);
 
             AssetDatabase.Refresh();
-            Debug.Log("复制完成");
+            GameLogger.DEBUG("复制完成");
         }
     }
 
@@ -240,7 +240,7 @@ public class Build : EditorWindow
 
 
         if (BuildWriteInfo(list, buildParameter.buildOutPath, BuildAssetBundleOptions.ChunkBasedCompression, buildParameter.buildTarget, s_outPutNameDev))
-            Debug.Log("打包Dev成功~  ^^_");
+            GameLogger.DEBUG("打包Dev成功~  ^^_");
 
         //将新增/修改后的AB进行加密
         AssetBundleOffset(buildParameter, record);
@@ -421,7 +421,7 @@ public class Build : EditorWindow
         AssetDatabase.Refresh();
 
         if (BuildWriteInfo(new List<AssetBundleBuild>() { abb }, buildParameter.buildOutPath, BuildAssetBundleOptions.ChunkBasedCompression, buildParameter.buildTarget, Path.GetFileNameWithoutExtension(s_outPutNameCSharp)))
-            Debug.Log("打包Dll成功~  ^^_");
+            GameLogger.DEBUG("打包Dll成功~  ^^_");
 
 
         foreach (var item in deleteArray)
@@ -506,7 +506,7 @@ public class Build : EditorWindow
         AssetDatabase.Refresh();
 
 
-        Debug.Log("更新AB资源清单完成");
+        GameLogger.DEBUG("更新AB资源清单完成");
         return assetManifest;
     }
 
@@ -554,7 +554,7 @@ public class Build : EditorWindow
         File.WriteAllText(filePath, str);
         File.WriteAllText(versionPath, "version|1.00");
         AssetDatabase.Refresh();
-        Debug.Log("生成版本文件完成");
+        GameLogger.DEBUG("生成版本文件完成");
 
     }
     #endregion
@@ -590,7 +590,7 @@ public class Build : EditorWindow
 
             File.WriteAllBytes(childFile, byteList.ToArray());
         }
-        Debug.Log("AB包偏移加密完成，偏移字节数为4");
+        GameLogger.DEBUG("AB包偏移加密完成，偏移字节数为4");
     }
 
     /// <summary>

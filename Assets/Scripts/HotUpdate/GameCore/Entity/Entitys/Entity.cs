@@ -137,7 +137,7 @@ namespace LGameFramework.GameCore.Entity
         /// </summary>
         public void CreateContainer()
         {
-            Debug.Log("实例化实体容器");
+            GameLogger.INFO("实例化实体容器");
             m_GameObject ??= new GameObject();
             m_GameObject.name = string.Format("Entity_{0}_{1}", m_EntityData.EntityType, m_EntityData.EntityId);
             m_Transform = m_GameObject.transform;

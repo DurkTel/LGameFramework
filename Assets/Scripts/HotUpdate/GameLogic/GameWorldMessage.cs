@@ -15,7 +15,7 @@ namespace LGameFramework.GameCore
             //初始化相机
             OrbitCamera.Initialize();
             //初始化本机玩家
-            OrbitCamera.s_OrbitCamera.focus = GameFrameworkEntry.GetModule<GMEntityManager>().AddEntity(GMEntityManager.EntityType.LocalPlayer).Transform;
+            OrbitCamera.s_OrbitCamera.focus = GameFrameworkEntry.GetModule<GMEntityManager>().EnterEntity(GMEntityManager.EntityType.LocalPlayer).Transform;
 
         }
 

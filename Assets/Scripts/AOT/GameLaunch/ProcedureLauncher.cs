@@ -58,7 +58,7 @@ public class ProcedureFSM : FSM_StateMachine<ProcedureLaunchProcess>
 {
     public override void ChangeState(ProcedureLaunchProcess name)
     {
-        Debug.Log("程序启动流程" + name);
+        GameLogger.INFO("程序启动流程" + name);
         base.ChangeState(name);
     }
 }

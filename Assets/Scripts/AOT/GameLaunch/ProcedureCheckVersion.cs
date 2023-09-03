@@ -53,7 +53,7 @@ public class ProcedureCheckVersion : FSM_Status<ProcedureLaunchProcess>
             m_LocalVersion = data[1];
         }
         else
-            Debug.Log("首次安装");
+            GameLogger.INFO("首次安装");
 
         dataBase.SetData(ProcedureLauncher.procedureMarkHead + localVersionName, m_LocalVersion);
 

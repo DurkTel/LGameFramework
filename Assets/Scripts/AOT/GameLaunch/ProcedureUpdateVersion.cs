@@ -23,7 +23,7 @@ public class ProcedureUpdateVersion : FSM_Status<ProcedureLaunchProcess>
 
         if (!m_IsNeedUpdate || m_FileDownloadQueue.DownloadingCurrent.Count <= 0)
         {
-            Debug.Log("更新完成");
+            GameLogger.INFO("更新完成");
             if (m_UpdateCShare)
             {
                 string path = Path.Combine(m_GamePath.downloadDataPath.AssetPath, "001/001.asset");
@@ -38,7 +38,7 @@ public class ProcedureUpdateVersion : FSM_Status<ProcedureLaunchProcess>
                         foreach (var text in texts)
                         {
                             string savePath = Path.Combine(dllPath, string.Format("{0}.dll.bytes", text.name));
-                            Debug.Log("更新Dll:" + text.name);
+                            GameLogger.INFO("更新Dll:" + text.name);
                             if (File.Exists(savePath))
                                 File.Delete(savePath);
                             else

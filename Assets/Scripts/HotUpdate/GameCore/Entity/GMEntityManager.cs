@@ -82,7 +82,12 @@ namespace LGameFramework.GameCore.Entity
             return true;
         }
 
-        public Entity AddEntity(EntityType etype)
+        /// <summary>
+        /// 实体进入
+        /// </summary>
+        /// <param name="etype"></param>
+        /// <returns></returns>
+        public Entity EnterEntity(EntityType etype)
         {
             EntityGroup group = AddEntityGroup(etype);
             Entity entity = group.AddEntity();
@@ -93,7 +98,12 @@ namespace LGameFramework.GameCore.Entity
             return entity;
         }
 
-        public bool ReleaseEntity(int entityId)
+        /// <summary>
+        /// 实体离开
+        /// </summary>
+        /// <param name="entityId"></param>
+        /// <returns></returns>
+        public bool LeaveEntity(int entityId)
         {
             Entity entity;
             if (m_EntityMap.TryGetValue(entityId, out entity))

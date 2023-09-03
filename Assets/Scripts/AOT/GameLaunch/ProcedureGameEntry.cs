@@ -65,7 +65,7 @@ public class ProcedureGameEntry : FSM_Status<ProcedureLaunchProcess>
             byte[] dllBytes = File.ReadAllBytes(path);
             // 加载assembly对应的dll，会自动为它hook。一旦aot泛型函数的native函数不存在，用解释器版本代码
             LoadImageErrorCode err = RuntimeApi.LoadMetadataForAOTAssembly(dllBytes, mode);
-            Debug.Log($"LoadMetadataForAOTAssembly:{aotDllName}. mode:{mode} ret:{err}");
+            GameLogger.INFO($"LoadMetadataForAOTAssembly:{aotDllName}. mode:{mode} ret:{err}");
         }
     }
 }

@@ -10,7 +10,7 @@ namespace LGameFramework.GameLogic
     public class GameWorldDrives
     {
         public static void Update()
-        { 
+        {
             
         }
     }

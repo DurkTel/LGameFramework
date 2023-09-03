@@ -1,3 +1,4 @@
+using LGameFramework.GameBase;
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -136,7 +137,7 @@ namespace LGameFramework.GameCore.Input
                         }
 
                         action.Enable();
-                        Debug.Log("按键重新绑定成功");
+                        GameLogger.INFO("按键重新绑定成功");
                         SaveInputRebinds();
                     });
 

@@ -1,3 +1,4 @@
+using LGameFramework.GameBase;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,7 +22,7 @@ namespace LGameFramework.GameCore
             m_GameRoot = go.transform;
             go.AddComponent<GameFrameworkEntry>();
             DontDestroyOnLoad(go);
-            Debug.Log("游戏入口实例化完成，进入游戏");
+            GameLogger.INFO("游戏入口实例化完成，进入游戏");
         }
 
         private void OnEnable()

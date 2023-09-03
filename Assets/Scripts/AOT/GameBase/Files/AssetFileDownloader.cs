@@ -86,7 +86,7 @@ namespace LGameFramework.GameBase
         protected void DownloadProgressChanged(object obj, DownloadProgressChangedEventArgs eventArgs)
         {
             m_Progress = eventArgs.ProgressPercentage;
-            Debug.Log("下载进度：" + m_DownloadPath + m_Progress);
+            GameLogger.INFO("下载进度：" + m_DownloadPath + m_Progress);
         }
 
         protected void DownloadFileCompleted(object obj, AsyncCompletedEventArgs eventArgs)
