@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
 using UnityEngine.InputSystem.Utilities;
@@ -13,8 +14,6 @@ namespace LGameFramework.GameCore.Input
     {
         private InputControls m_InputActions;
         public InputControls InputActions { get { return m_InputActions; } }
-
-        private GMEventManager m_GMEventManager;
         /// <summary>
         /// 双击的间隔时间
         /// </summary>
@@ -22,8 +21,12 @@ namespace LGameFramework.GameCore.Input
         /// <summary>
         /// 记录按钮行为
         /// </summary>
-        public Dictionary<string, InputBehaviour> inputBehaviour = new Dictionary<string, InputBehaviour>();
-
+        public Dictionary<string, InputBehaviour> inputBehaviour;
+        /// <summary>
+        /// 广播输入行为
+        /// </summary>
+        public UnityEvent<InputActionArgs> inputActionEvent;
+        
         internal override int Priority => 1;
 
         internal override GameObject GameObject { get; set; }
@@ -32,6 +35,9 @@ namespace LGameFramework.GameCore.Input
         internal override void OnInit()
         {
             m_InputActions = new InputControls();
+
+            inputBehaviour = new Dictionary<string, InputBehaviour>();
+            inputActionEvent = new UnityEvent<InputActionArgs>();
             OnEnable();
 
             LoadInputRebinds();
@@ -56,7 +62,6 @@ namespace LGameFramework.GameCore.Input
 
         internal override void OnEnable()
         {
-            m_GMEventManager ??= GameFrameworkEntry.GetModule<GMEventManager>(); 
             InputActions.Enable();
         }
 
@@ -103,7 +108,22 @@ namespace LGameFramework.GameCore.Input
         private void DispatchEvent(string name, InputMode behaviour, InputAction action)
         {
             InputActionArgs args = InputActionArgs.Get(name, behaviour, action);
-            m_GMEventManager.DispatchImmediately(FMEventRegister.INPUT_DISPATCH_HANDLE, this, args);
+            inputActionEvent.Invoke(args);
+        }
+
+        public void AddListener(UnityAction<InputActionArgs> action)
+        {
+            inputActionEvent.AddListener(action);
+        }
+
+        public void RemoveListener(UnityAction<InputActionArgs> action)
+        {
+            inputActionEvent.RemoveListener(action);
+        }
+
+        public void RemoveAllListeners()
+        {
+            inputActionEvent.RemoveAllListeners();
         }
     }
 }

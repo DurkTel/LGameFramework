@@ -58,8 +58,8 @@ namespace LGameFramework.GameCore.Entity
         /// <summary>
         /// 实体组件
         /// </summary>
-        private GameDictionary<System.Type, IEntityComponent> m_EntityComponents;
-        public GameDictionary<System.Type, IEntityComponent> EntityComponents { get { return m_EntityComponents; } }
+        private GameDictionary<System.Type, IComponent> m_EntityComponents;
+        public GameDictionary<System.Type, IComponent> EntityComponents { get { return m_EntityComponents; } }
 
         public virtual void OnInit(int eid, EntityType etype, EntityGroup egroup)
         {
@@ -76,10 +76,11 @@ namespace LGameFramework.GameCore.Entity
         {
             if (m_EntityComponents != null && m_EntityComponents.Count > 0)
             {
-                IEntityComponent component;
+                IComponent component;
                 foreach (var componentType in m_EntityComponents.keyList)
                 {
                     component = m_EntityComponents[componentType];
+                    if (!component.Enabled) continue;
                     component.Update(deltaTime, unscaledTime);
                 }
             }
@@ -89,10 +90,11 @@ namespace LGameFramework.GameCore.Entity
         {
             if (m_EntityComponents != null && m_EntityComponents.Count > 0)
             {
-                IEntityComponent component;
+                IComponent component;
                 foreach (var componentType in m_EntityComponents.keyList)
                 {
                     component = m_EntityComponents[componentType];
+                    if (!component.Enabled) continue;
                     component.FixedUpdate(fixedDeltaTime, unscaledTime);
                 }
             }
@@ -102,7 +104,7 @@ namespace LGameFramework.GameCore.Entity
         {
             if (m_EntityComponents != null && m_EntityComponents.Count > 0)
             {
-                IEntityComponent component;
+                IComponent component;
                 foreach (var componentType in m_EntityComponents.keyList)
                 {
                     component = m_EntityComponents[componentType];
@@ -119,7 +121,7 @@ namespace LGameFramework.GameCore.Entity
         {
             if (m_EntityComponents != null && m_EntityComponents.Count > 0)
             {
-                IEntityComponent component;
+                IComponent component;
                 foreach (var componentType in m_EntityComponents.keyList)
                 {
                     component = m_EntityComponents[componentType];
@@ -167,9 +169,9 @@ namespace LGameFramework.GameCore.Entity
         /// 添加实体组件
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public T AddComponent<T>() where T : class, IEntityComponent, new()
+        public T AddComponent<T>() where T : class, IComponent, new()
         {
-            m_EntityComponents ??= new GameDictionary<System.Type, IEntityComponent>();
+            m_EntityComponents ??= new GameDictionary<System.Type, IComponent>();
             if (!TryGetComponent(out T entityComponent))
             {
                 entityComponent = new T();
@@ -185,11 +187,11 @@ namespace LGameFramework.GameCore.Entity
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="component"></param>
-        public bool TryGetComponent<T>(out T component) where T : class, IEntityComponent
+        public bool TryGetComponent<T>(out T component) where T : class, IComponent
         {
             component = default(T);
             if (m_EntityComponents == null || m_EntityComponents.Count == 0) return false;
-            bool has = m_EntityComponents.TryGetValue(typeof(T), out IEntityComponent icomponent);
+            bool has = m_EntityComponents.TryGetValue(typeof(T), out IComponent icomponent);
             component = icomponent as T;
             return has;
         }

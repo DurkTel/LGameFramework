@@ -24,7 +24,7 @@ namespace LGameFramework.GameCore.Entity
             private List<Entity> m_Entitys; 
             public List<Entity> Entitys { get { return m_Entitys; } }
 
-            private readonly List<EntitySkinComponent> m_WaitCreateSkinList;
+            private readonly List<SkinComponent> m_WaitCreateSkinList;
 
             private readonly List<Entity> m_ReleaseList;
 
@@ -40,7 +40,7 @@ namespace LGameFramework.GameCore.Entity
                 m_EntityManager = entityManager;
                 m_Entitys = new List<Entity>();
                 m_DestroyList = new List<Entity>();
-                m_WaitCreateSkinList = new List<EntitySkinComponent>();
+                m_WaitCreateSkinList = new List<SkinComponent>();
                 m_ReleaseList = new List<Entity>();
             }
 
@@ -61,9 +61,9 @@ namespace LGameFramework.GameCore.Entity
                 {
                     foreach (Entity entity in m_Entitys)
                     {
-                        if (entity.Visible && entity.TryGetComponent(out EntitySkinComponent skin) && !skin.Enabled)
+                        if (entity.Visible && entity.TryGetComponent(out SkinComponent skin) && !skin.SkinIsInit)
                         {
-                            skin.Enabled = true;
+                            skin.SkinIsInit = true;
                             m_WaitCreateSkinList.Add(skin);
                             continue;
                         }
@@ -90,7 +90,7 @@ namespace LGameFramework.GameCore.Entity
                     {
                         entity = m_ReleaseList[i];
                         //如果有等待加载外观的 移除掉
-                        if (entity.TryGetComponent(out EntitySkinComponent skin))
+                        if (entity.TryGetComponent(out SkinComponent skin))
                         {
                             if (m_WaitCreateSkinList.Contains(skin))
                                 m_WaitCreateSkinList.Remove(skin);

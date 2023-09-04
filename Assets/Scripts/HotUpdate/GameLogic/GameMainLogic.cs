@@ -10,7 +10,6 @@ namespace LGameFramework.GameLogic
     /// </summary>
     public class GameMainLogic : MonoBehaviour
     {
-        public Entity Entity;
         private void Awake()
         {
             GameWorldMessage.OninitWorld();

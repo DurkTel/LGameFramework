@@ -1,4 +1,3 @@
-using System.Xml;
 using UnityEngine;
 
 namespace LGameFramework.GameCore.Entity
@@ -7,23 +6,9 @@ namespace LGameFramework.GameCore.Entity
     /// 相机剔除实体组件
     /// 拥有该组件可实现相机视线外的剔除
     /// </summary>
-    public class EntityCullingComponent : IEntityComponent
+    public class CullingComponent : AbstractComponent
     {
-        public int Priority => 1;
-
-        private Transform m_Transform;
-        public Transform Transform { get { return m_Transform; } }
-
-        private GameObject m_GameObject;
-        public GameObject GameObject { get { return m_GameObject; } }
-
-        private bool m_Enabled;
-        public bool Enabled { get { return m_Enabled; } set { m_Enabled = value; } }
-        /// <summary>
-        /// 挂载实体
-        /// </summary>
-        private Entity m_Entity;
-        public Entity Entity { get { return m_Entity; } }
+        public override int Priority => 1;
         /// <summary>
         /// 相机裁切半径
         /// </summary>
@@ -37,13 +22,10 @@ namespace LGameFramework.GameCore.Entity
         public GMEntityManager.EntityCullingGroup CullingGroup { get; set; }
 
 
-        public void OnInit(Entity entity)
+        public override void OnInit(Entity entity)
         {
-            m_Enabled = true;
-            m_Entity = entity;
+            base.OnInit(entity);
             CullingGroup = entity.EntityGroup.EntityManager.CullingGroup;
-            m_Transform = entity.Transform;
-            m_GameObject = entity.GameObject;
             m_CullingRadius = 0.5f;
 
             m_CullingLod = CullingGroup.GetDistance(this);
@@ -52,37 +34,24 @@ namespace LGameFramework.GameCore.Entity
 
         }
 
-        public void Update(float deltaTime, float unscaledTime)
+        public override void Update(float deltaTime, float unscaledTime)
         {
-            if (!m_Enabled)
-                return;
-
             CullingGroup.UpdateBoundingSphere(this, Transform.position, CullingRadius);
         }
 
-        public void FixedUpdate(float fixedDeltaTime, float unscaledTime)
-        {
-            
-        }
 
-        public void Release()
+        public override void Release()
         {
-            m_Enabled = false;
-            m_Transform = null;
-            m_GameObject = null;
+            base.Release();
             CullingGroup.RemoveCullingObject(this);
             CullingGroup = null;
         }
 
-        public void Dispose()
-        {
-            
-        }
 
         public void OnCullingVisible(bool value)
         {
-            if (!m_Enabled) return;
-            m_Entity.Visible = value;
+            if (!Enabled) return;
+            Entity.Visible = value;
         }
 
         public void OnCullingDistance(int lod, int lodMax)

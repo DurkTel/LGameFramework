@@ -96,7 +96,7 @@ namespace LGameFramework.GameCore
         /// </summary>
         /// <param name="id">事件ID</param>
         /// <param name="handler">委托方法</param>
-        public void Register(FMEventRegister id, EventHandler<GameEventArg> handler)
+        public void RegisterEvent(FMEventRegister id, EventHandler<GameEventArg> handler)
         {
             if (handler == null)
             {
@@ -120,7 +120,7 @@ namespace LGameFramework.GameCore
         /// <param name="id">事件ID</param>
         /// <param name="handler">委托方法</param>
         /// <returns>移除结果</returns>
-        public bool UnRegister(FMEventRegister id, EventHandler<GameEventArg> handler)
+        public bool UnRegisterEvent(FMEventRegister id, EventHandler<GameEventArg> handler)
         {
             if (m_EventHandlers.TryGetValue(id, out var linked))
             {

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace LGameFramework.GameCore.Entity
 {
-    public class EntityMove2D : IEntityComponent
+    public class EntityMove2D : IComponent
     {
         public int Priority => 0;
 

@@ -3,9 +3,9 @@ using UnityEngine;
 namespace LGameFramework.GameCore.Entity
 {
     /// <summary>
-    /// 实体组件
+    /// 实体组件 定义一个实体组件必须拥有的属性方法
     /// </summary>
-    public interface IEntityComponent
+    public interface IComponent
     {
         /// <summary>
         /// 组件优先级

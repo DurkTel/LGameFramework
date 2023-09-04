@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace LGameFramework.GameCore.Entity
 {
-    public class EntityMove : IEntityComponent
+    public class EntityMove : IComponent
     {
         public int Priority => 0;
 

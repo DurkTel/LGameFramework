@@ -13,17 +13,15 @@ namespace LGameFramework.GameCore.Entity
         {
             base.OnInit(eid, etype, egroup);
 
-            AddComponent<EntityAOIComponent>();
-            AddComponent<EntityCullingComponent>();
-            AddComponent<EntitySkinComponent>();
+            AddComponent<AOIComponent>();
+            AddComponent<CullingComponent>();
+            AddComponent<SkinComponent>();
+            AddComponent<InputResponseComponent>().OnInputResponse = OnResponseInput;
             m_EntityMove2D = AddComponent<EntityMove2D>();
-
-            GameFrameworkEntry.GetModule<GMEventManager>().Register(FMEventRegister.INPUT_DISPATCH_HANDLE, OnResponseMove);
         }
 
-        private void OnResponseMove(object sender, GameEventArg e)
+        private void OnResponseInput(InputActionArgs actionArgs)
         {
-            InputActionArgs actionArgs = (InputActionArgs)e;
             if (actionArgs.ActionName == "Move")
             {
                 m_EntityMove2D.MoveDirection = actionArgs.Direction;
