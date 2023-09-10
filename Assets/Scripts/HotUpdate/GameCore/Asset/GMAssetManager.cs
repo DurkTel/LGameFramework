@@ -4,6 +4,7 @@ using System.IO;
 using UnityEngine;
 using LGameFramework.GameBase.Pool;
 using LGameFramework.GameBase;
+using UnityEngine.Events;
 
 namespace LGameFramework.GameCore.Asset
 {
@@ -17,8 +18,6 @@ namespace LGameFramework.GameCore.Asset
         private static AssetLoadMode s_AssetLoadMode;
         public static AssetLoadMode AssetLoadMode { get { return s_AssetLoadMode; } }
         internal override int Priority { get { return 99; } }
-        internal override GameObject GameObject { get; set; }
-        internal override Transform Transform { get; set; }
         internal GamePathSetting.FilePathStruct GamePath { get; set; }
 
         /// <summary>
@@ -29,8 +28,8 @@ namespace LGameFramework.GameCore.Asset
         /// <summary>
         /// 正在加载的AB加载器
         /// </summary>
-        private List<AssetBundleLoader> m_AssetBundleLoader;
-        public List<AssetBundleLoader> AssetBundleLoader { get { return m_AssetBundleLoader; } }
+        private List<AssetBundleLoader> m_AssetBundleLoaders;
+        public List<AssetBundleLoader> AssetBundleLoaders { get { return m_AssetBundleLoaders; } }
         /// <summary>
         /// 加载完成的列表
         /// </summary>
@@ -84,18 +83,18 @@ namespace LGameFramework.GameCore.Asset
             if (m_FileDownloadQueue != null)
                 m_FileDownloadQueue.Update();
 
-            if (m_AssetBundleLoader != null && m_AssetBundleLoader.Count > 0)
+            if (m_AssetBundleLoaders != null && m_AssetBundleLoaders.Count > 0)
             {
                 AssetBundleLoader abLoader;
-                for (int i = m_AssetBundleLoader.Count; i > 0; i--)
+                for (int i = m_AssetBundleLoaders.Count; i > 0; i--)
                 {
-                    abLoader = m_AssetBundleLoader[i];
+                    abLoader = m_AssetBundleLoaders[i];
                     abLoader.Update();
                     if (abLoader.IsDone)
                     {
                         abLoader.onComplete?.Invoke(abLoader);
                         abLoader.Dispose();
-                        m_AssetBundleLoader.RemoveAt(i);
+                        m_AssetBundleLoaders.RemoveAt(i);
                     }
                 }
             }
@@ -183,7 +182,7 @@ namespace LGameFramework.GameCore.Asset
                 //依赖引用为0 且源对象引用为0 且不在加载资源中 准备开始卸载
                 if (record.DpendsReferenceCount <= 0 && record.RawReferenceCount <= 0 && !record.IsAssetLoading)
                 {
-                    record.BeginDestroyTime = unscaleDeltaTime;
+                    record.BeginUnloadTime = unscaleDeltaTime;
                     m_WaitDestroyABList.Add(abName);
                 }
             }
@@ -192,7 +191,7 @@ namespace LGameFramework.GameCore.Asset
             {
                 abName = m_WaitDestroyABList[i];
                 record = m_AllAB[abName];
-                if (unscaleDeltaTime - record.BeginDestroyTime >= m_WaitDestroyTime)
+                if (unscaleDeltaTime - record.BeginUnloadTime >= m_WaitDestroyTime)
                 {
                     record.Unload(true);
                     Pool<AssetBundleRecord>.Release(record);
@@ -347,6 +346,12 @@ namespace LGameFramework.GameCore.Asset
         public Loader LoadAssetAsync<T>(string assetName)
         {
             return LoadAssetAsync(assetName, typeof(T));
+        }
+
+        public void LoadAssetAsync<T>(string assetName, UnityAction<Loader> callBack)
+        {
+            Loader loader = LoadAssetAsync(assetName, typeof(T));
+            loader.onComplete = callBack;
         }
 
         /// <summary>

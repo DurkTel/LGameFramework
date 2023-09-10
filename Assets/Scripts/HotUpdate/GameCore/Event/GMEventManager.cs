@@ -45,8 +45,6 @@ namespace LGameFramework.GameCore
         /// </summary>
         private long m_AsyncMaxTime;
         internal override int Priority => 1;
-        internal override GameObject GameObject { get; set; }
-        internal override Transform Transform { get; set; }
 
         public int AllEventHandlersCout { get { return m_EventHandlers.Count; } }
 

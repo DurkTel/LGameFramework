@@ -130,13 +130,13 @@ public class GMAssetManagerHelperEditor : Editor
         }
         else
         {
-            if (m_GMAssetManager.AssetBundleLoader == null || m_GMAssetManager.AssetBundleLoader.Count == 0)
+            if (m_GMAssetManager.AssetBundleLoaders == null || m_GMAssetManager.AssetBundleLoaders.Count == 0)
             {
                 EditorGUILayout.HelpBox("无加载中的AssetBundle", MessageType.Warning);
                 return;
             }
             EditorGUILayout.HelpBox("加载中的AssetBundle", MessageType.Info);
-            OnDrawBorder(m_GMAssetManager.AssetBundleLoader, (p) =>
+            OnDrawBorder(m_GMAssetManager.AssetBundleLoaders, (p) =>
             {
                 AssetBundleLoader info = (AssetBundleLoader)p;
                 EditorGUILayout.SelectableLabel(string.Format("AssetBundle路径：<color=#77dc60>{0}</color>", info.AssetName), m_Skin.label);
@@ -169,7 +169,7 @@ public class GMAssetManagerHelperEditor : Editor
             {
                 string info = (string)p;
                 EditorGUILayout.SelectableLabel(string.Format("AssetBundle名称：<color=#ffffff>{0}</color>", info), m_Skin.label);
-                EditorGUILayout.LabelField(string.Format("卸载剩余时间：<color=#77dc60>{0}</color>", m_GMAssetManager.WaitDestroyTime - (Time.unscaledTime - m_GMAssetManager.AllAB[info].BeginDestroyTime)), m_Skin.label);
+                EditorGUILayout.LabelField(string.Format("卸载剩余时间：<color=#77dc60>{0}</color>", m_GMAssetManager.WaitDestroyTime - (Time.unscaledTime - m_GMAssetManager.AllAB[info].BeginUnloadTime)), m_Skin.label);
             });
         }
     }

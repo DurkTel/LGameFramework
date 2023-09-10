@@ -13,11 +13,7 @@ namespace LGameFramework.GameCore.Timer
         private Dictionary<int, Timer> m_WaitAdd;
 
         private List<int> m_WaitRemove;
-
         internal override int Priority => 3;
-
-        internal override GameObject GameObject { get; set; }
-        internal override Transform Transform { get; set; }
 
         internal override void OnInit()
         {

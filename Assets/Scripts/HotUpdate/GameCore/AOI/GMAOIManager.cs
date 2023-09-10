@@ -10,12 +10,10 @@ namespace LGameFramework.GameCore.AOI
     public sealed partial class GMAOIManager : FrameworkModule
     {
         internal override int Priority => 1;
-        internal override GameObject GameObject { get; set; }
-        internal override Transform Transform { get; set; }
         /// <summary>
         /// 九宫格的轴向
         /// </summary>
-        private AOIAxis m_Axis = AOIAxis.XY;
+        private AOIAxis m_Axis = AOIAxis.XYZ;
         public AOIAxis Axis { get {  return m_Axis; } }
         /// <summary>
         /// 一个格子的大小

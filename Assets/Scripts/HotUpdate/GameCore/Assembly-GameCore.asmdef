@@ -3,7 +3,8 @@
     "rootNamespace": "LGameFramework.GameCore",
     "references": [
         "GUID:75469ad4d38634e559750d17036d5f7c",
-        "GUID:3072bfba8acc8ff4ca4c09cf933bdd1e"
+        "GUID:3072bfba8acc8ff4ca4c09cf933bdd1e",
+        "GUID:d60799ab2a985554ea1a39cd38695018"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

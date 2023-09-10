@@ -14,7 +14,7 @@ namespace LGameFramework.GameCore.Asset
         /// </summary>
         private AssetBundleCreateRequest m_BundleRequest;
         /// <summary>
-        /// AB包
+        /// 资源包的信息
         /// </summary>
         private AssetBundleRecord m_AssetRecord;
         /// <summary>

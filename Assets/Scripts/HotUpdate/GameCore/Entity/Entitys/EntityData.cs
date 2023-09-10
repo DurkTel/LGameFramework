@@ -3,6 +3,7 @@ using LGameFramework.GameCore.Avatar;
 using LGameFramework.GameBase.Pool;
 using System.Collections.Generic;
 using static LGameFramework.GameCore.Entity.GMEntityManager;
+using System.Numerics;
 
 namespace LGameFramework.GameCore.Entity
 {
@@ -48,6 +49,11 @@ namespace LGameFramework.GameCore.Entity
         /// </summary>
         private Dictionary<GameAvatar.AvatarPartType, string> m_SkinAssetNames;
         public Dictionary<GameAvatar.AvatarPartType, string> SkinAssetNames { get { return m_SkinAssetNames; } }
+        /// <summary>
+        /// ¶¯»­»úÃû³Æ
+        /// </summary>
+        private string m_AnimatorControllerName;
+        public string AnimatorControllerName { get { return m_AnimatorControllerName; } set { m_AnimatorControllerName = value; } }
 
         public void Release()
         {

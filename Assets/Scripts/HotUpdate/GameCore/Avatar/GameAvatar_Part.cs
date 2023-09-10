@@ -1,4 +1,5 @@
 using LGameFramework.GameCore.Asset;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
 
@@ -104,16 +105,32 @@ namespace LGameFramework.GameCore.Avatar
             public void UpdateConstranint()
             {
                 if (m_PartType == AvatarPartType.Skeleton || Avatar.m_AllSkeletonBone == null || !IsDone) return;
-                int childNum = m_Asset.transform.childCount;
-                for (int i = 0; i < childNum; i++)
+                SkinnedMeshRenderer[] skinned = m_Asset.GetComponentsInChildren<SkinnedMeshRenderer>();
+                List<Transform> newBones = new List<Transform>();
+                foreach (SkinnedMeshRenderer skin in skinned)
                 {
-                    Transform bone = m_Asset.transform.GetChild(i);
-                    ParentConstraint constraint = bone.TryAddComponent<ParentConstraint>();
-                    ConstraintSource cs = new ConstraintSource();
-                    cs.sourceTransform = Avatar.m_AllSkeletonBone[bone.name];
-                    cs.weight = 1.0f;
-                    constraint.AddSource(cs);
-                    constraint.constraintActive = true;
+                    newBones.Clear();
+                    if (skin.rootBone == null)
+                    {
+                        ParentConstraint constraint = skin.gameObject.TryAddComponent<ParentConstraint>();
+                        ConstraintSource cs = new ConstraintSource();
+                        cs.sourceTransform = Avatar.m_AllSkeletonBone[skin.gameObject.name];
+                        cs.weight = 1.0f;
+                        constraint.AddSource(cs);
+                        constraint.constraintActive = true;
+                    }
+                    else
+                    {
+                        skin.rootBone = Avatar.m_AllSkeletonBone[skin.rootBone.name];
+                        Transform rootBone = skin.transform.GetChild(0);
+                        int count = rootBone.childCount;
+                        for (int i = 0; i < count; i++)
+                        {
+                            Transform bone = rootBone.transform.GetChild(i);
+                            newBones.Add(Avatar.m_AllSkeletonBone[bone.gameObject.name]);
+                        }
+                        skin.bones = newBones.ToArray();
+                    }
                 }
             }
         }

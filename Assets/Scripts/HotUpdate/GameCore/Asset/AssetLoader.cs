@@ -43,6 +43,11 @@ namespace LGameFramework.GameCore.Asset
             return AssetModule.GetAssetManifest_Bundle().GetPath(bundleName);
         }
 
+        /// <summary>
+        /// 获取AB包名称
+        /// </summary>
+        /// <param name="assetName">资源名称</param>
+        /// <returns>AB包名称</returns>
         public string GetBundleName(string assetName)
         {
             return AssetModule.GetAssetManifest_Bundle().GetBundleName(assetName);

@@ -58,7 +58,7 @@ namespace LGameFramework.GameCore.Asset
                 if (path.StartsWith("Assets"))
                 {
                     string ex = Path.GetExtension(path);
-                    if (ex != ".meta" && ex != ".cs")
+                    if (ex != ".meta" && ex != ".cs" && ex != ".FBX" && ex != ".fbx")
                     {
                         assetManifest.Add(path);
                     }

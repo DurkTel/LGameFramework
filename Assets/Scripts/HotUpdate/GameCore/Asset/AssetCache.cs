@@ -14,9 +14,21 @@ namespace LGameFramework.GameCore.Asset
         /// </summary>
         public class RawObjectInfo
         {
+            /// <summary>
+            /// 源对象
+            /// </summary>
             public Object rawObject;
+            /// <summary>
+            /// 资源名称
+            /// </summary>
             public string asstName;
+            /// <summary>
+            /// 资源包名称
+            /// </summary>
             public string bundleName;
+            /// <summary>
+            /// 源对象引用计数
+            /// </summary>
             public int referenceCount;
         }
         /// <summary>
@@ -24,7 +36,13 @@ namespace LGameFramework.GameCore.Asset
         /// </summary>
         public class InstanceObjectInfo
         {
+            /// <summary>
+            /// 实例化对象
+            /// </summary>
             public Object instanceObject;
+            /// <summary>
+            /// 源对象资源信息
+            /// </summary>
             public RawObjectInfo rawObjectInfo;
         }
 
@@ -111,7 +129,7 @@ namespace LGameFramework.GameCore.Asset
         }
 
         /// <summary>
-        /// 删除缓存资源
+        /// 移除缓存资源
         /// </summary>
         /// <param name="assetName"></param>
         /// <returns></returns>

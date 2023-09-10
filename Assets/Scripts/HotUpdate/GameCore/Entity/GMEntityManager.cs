@@ -1,14 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using LGameFramework.GameBase;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace LGameFramework.GameCore.Entity
 {
     public sealed partial class GMEntityManager : FrameworkModule
     {
-        private static int m_GUID = 0;
+        private GameUid m_EntityUID;
         internal override int Priority => 3;
-        internal override GameObject GameObject { get; set; }
-        internal override Transform Transform { get; set; }
 
         private EntityCullingGroup m_CullingGroup;
         public EntityCullingGroup CullingGroup { get { return m_CullingGroup; } }
@@ -25,8 +24,9 @@ namespace LGameFramework.GameCore.Entity
 
         internal override void OnInit()
         {
+            m_EntityUID = new GameUid();
             m_CullingGroup = new EntityCullingGroup();
-            m_CullingGroup.TargetCamera = OrbitCamera.Camera;
+            m_CullingGroup.TargetCamera = GameFrameworkEntry.GetModule<OrbitCamera>().RegularCamera;
             m_EntityMap = new Dictionary<int, Entity>();
             m_EntityGroupMap = new Dictionary<EntityType, EntityGroup>();
             m_EnableContainer = new GameObject("EnableEntitys").transform;
@@ -92,7 +92,7 @@ namespace LGameFramework.GameCore.Entity
             EntityGroup group = AddEntityGroup(etype);
             Entity entity = group.AddEntity();
 
-            int eid = ++m_GUID;
+            int eid = m_EntityUID.Uid;
             entity.OnInit(eid, etype, group);
             m_EntityMap.Add(eid, entity);
             return entity;

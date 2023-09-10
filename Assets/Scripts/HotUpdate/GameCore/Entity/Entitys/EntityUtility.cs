@@ -42,12 +42,13 @@ namespace LGameFramework.GameCore.Entity
                     break;
                 case GMEntityManager.EntityType.LocalPlayer:
                     entityData.SetInterestLevel(AOI.InterestLevel.LocalTarget);
-                    entityData.SetSkinAssetName(Avatar.GameAvatar.AvatarPartType.Hair, "unit000_hair.prefab");
-                    entityData.SetSkinAssetName(Avatar.GameAvatar.AvatarPartType.Skeleton, "unit000.prefab");
-                    entityData.SetSkinAssetName(Avatar.GameAvatar.AvatarPartType.Hand, "unit000_hand.prefab");
-                    entityData.SetSkinAssetName(Avatar.GameAvatar.AvatarPartType.Head, "unit000_head.prefab");
-                    entityData.SetSkinAssetName(Avatar.GameAvatar.AvatarPartType.Body, "unit000_body.prefab");
-                    entityData.SetSkinAssetName(Avatar.GameAvatar.AvatarPartType.Leg, "unit000_leg.prefab");
+                    entityData.SetSkinAssetName(Avatar.GameAvatar.AvatarPartType.Skeleton, "kohaku_skeleton.prefab");
+                    entityData.SetSkinAssetName(Avatar.GameAvatar.AvatarPartType.Hair, "kohaku_A_hair.prefab");
+                    entityData.SetSkinAssetName(Avatar.GameAvatar.AvatarPartType.Hand, "kohaku_A_hand.prefab");
+                    entityData.SetSkinAssetName(Avatar.GameAvatar.AvatarPartType.Head, "kohaku_A_head.prefab");
+                    entityData.SetSkinAssetName(Avatar.GameAvatar.AvatarPartType.Body, "kohaku_A_body.prefab");
+                    entityData.SetSkinAssetName(Avatar.GameAvatar.AvatarPartType.Leg, "kohaku_A_leg.prefab");
+                    entityData.AnimatorControllerName = "CharacterController.controller";
                     break;
             }
             return entityData;

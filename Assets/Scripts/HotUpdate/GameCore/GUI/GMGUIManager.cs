@@ -28,11 +28,7 @@ namespace LGameFramework.GameCore.GUI
         private List<GUIView> m_DestroyList;
 
         private int m_OffsetOrder = 1000;
-
         internal override int Priority => 2;
-
-        internal override GameObject GameObject { get; set; }
-        internal override Transform Transform { get; set; }
 
         internal override void OnInit()
         {

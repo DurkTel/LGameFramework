@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace LGameFramework.GameBase
@@ -17,16 +18,24 @@ namespace LGameFramework.GameBase
             keyList = new List<TKey>(capacity);
         }
 
+        public new TValue this[TKey k]
+        {
+            get 
+            { 
+                return base[k]; 
+            }
+            set 
+            {
+                if (ContainsKey(k))
+                    base[k] = value;
+                else
+                    Add(k, value);
+            }
+        }
+
         public new void Add(TKey key, TValue value)
         {
-            if (!keyList.Contains(key))
-                keyList.Add(key);
-            else
-            {
-                Debug.LogError("字典中已有相同Key值");
-                return;
-            }
-
+            keyList.Add(key);
             base.Add(key, value);
         }
 
@@ -46,16 +55,6 @@ namespace LGameFramework.GameBase
                     return base.Remove(key);
                 }
             }
-            else
-                Debug.LogError("索引不存在");
-
-            return false;
-        }
-
-        public new bool ContainsKey(TKey key)
-        {
-            if (keyList.Contains(key) && base.ContainsKey(key))
-                return true;
 
             return false;
         }
@@ -64,6 +63,21 @@ namespace LGameFramework.GameBase
         {
             keyList.Clear();
             base.Clear();
+        }
+
+        public void Sort()
+        { 
+            keyList.Sort();
+        }
+
+        public void Sort(IComparer<TKey> comparer)
+        {
+            keyList.Sort(comparer);
+        }
+
+        public void Sort(Comparison<TKey> comparer)
+        {
+            keyList.Sort(comparer);
         }
     }
 }

@@ -29,9 +29,6 @@ namespace LGameFramework.GameCore.Input
         
         internal override int Priority => 1;
 
-        internal override GameObject GameObject { get; set; }
-        internal override Transform Transform { get; set; }
-
         internal override void OnInit()
         {
             m_InputActions = new InputControls();

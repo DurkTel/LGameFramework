@@ -29,7 +29,7 @@ namespace LGameFramework.GameCore.Asset
         /// <summary>
         /// 开始等待销毁事件
         /// </summary>
-        public float BeginDestroyTime { get; set; }
+        public float BeginUnloadTime { get; set; }
 
         /// <summary>
         /// 卸载此AB包

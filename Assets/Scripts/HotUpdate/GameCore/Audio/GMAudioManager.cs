@@ -21,9 +21,6 @@ namespace LGameFramework.GameCore.Audio
 
         internal override int Priority => 2;
 
-        internal override GameObject GameObject { get; set; }
-        internal override Transform Transform { get; set; }
-
         internal override void OnInit()
         {
             m_AudioMixerGroups = new Dictionary<string, AudioMixerGroup>();

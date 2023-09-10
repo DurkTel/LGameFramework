@@ -17,12 +17,12 @@ namespace LGameFramework.GameCore
         /// <summary>
         /// 游戏物体
         /// </summary>
-        internal abstract GameObject GameObject { get; set; }
+        internal GameObject GameObject { get; set; }
 
         /// <summary>
         /// 变换组件
         /// </summary>
-        internal abstract Transform Transform { get; set; }
+        internal Transform Transform { get; set; }
 
         /// <summary>
         /// 初始化
@@ -34,13 +34,13 @@ namespace LGameFramework.GameCore
         /// </summary>
         /// <param name="deltaTime">帧更新间隔</param>
         /// <param name="unscaledTime">帧更新间隔，不受时间缩放比例影响</param>
-        internal abstract void Update(float deltaTime, float unscaledTime);
+        internal virtual void Update(float deltaTime, float unscaledTime) { }
 
         /// <summary>
         /// 延迟帧更新
         /// </summary>
         /// <param name="deltaTime">帧更新间隔</param>
-        /// <param name="unscaledTime">游戏开始后所运行的时间，不受时间缩放比例影响</param>
+        /// <param name="unscaleDeltaTime">游戏开始后所运行的时间，不受时间缩放比例影响</param>
         internal virtual void LateUpdate(float deltaTime, float unscaleDeltaTime) { }
 
 
