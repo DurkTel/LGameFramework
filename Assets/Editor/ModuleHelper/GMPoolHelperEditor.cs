@@ -1,5 +1,5 @@
 using LGameFramework.GameCore;
-using LGameFramework.GameBase.Pool;
+using LGameFramework.GameBase;
 using UnityEditor;
 using UnityEngine;
 

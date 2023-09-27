@@ -1,6 +1,6 @@
+using LGameFramework.GameBase;
 using System.Collections.Generic;
 using UnityEngine;
-using LGameFramework.GameBase.Pool;
 
 namespace LGameFramework.GameCore.Asset
 {
@@ -83,7 +83,7 @@ namespace LGameFramework.GameCore.Asset
             if (m_InstanceAssetMap.TryGetValue(instanceId, out instanceInfo))
                 return instanceInfo;
 
-            instanceInfo = Pool<InstanceObjectInfo>.Get();
+            instanceInfo = Pool.Get<InstanceObjectInfo>();
             instanceInfo.instanceObject = instanceObject;
             instanceInfo.rawObjectInfo = rawObjectInfo;
             m_InstanceAssetMap.Add(instanceId, instanceInfo);
@@ -117,7 +117,7 @@ namespace LGameFramework.GameCore.Asset
             if (m_RawAssetMap.TryGetValue(assetName, out rawInfo))
                 return rawInfo;
 
-            rawInfo = Pool<RawObjectInfo>.Get();
+            rawInfo = Pool.Get<RawObjectInfo>();
             rawInfo.rawObject = rawObject;
             rawInfo.asstName = assetName;
             rawInfo.bundleName = bundleName;

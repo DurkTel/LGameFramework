@@ -1,4 +1,4 @@
-using LGameFramework.GameBase.Pool;
+using LGameFramework.GameBase;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -70,7 +70,7 @@ namespace LGameFramework.GameCore.Audio
 
             private AudioObject Create()
             {
-                AudioObject ao = Pool<AudioObject>.Get();
+                AudioObject ao = Pool.Get<AudioObject>();
                 ao.Init(new GameObject());
                 ao.Transform.SetParent(m_Transform);
                 ao.MixerGroup = m_AudioMixerGroup;

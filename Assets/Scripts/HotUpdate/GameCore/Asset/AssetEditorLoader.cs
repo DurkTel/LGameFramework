@@ -1,11 +1,7 @@
-using LGameFramework.GameBase.Pool;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 #if UNITY_EDITOR
+using LGameFramework.GameBase;
 using UnityEditor;
 #endif
-using UnityEngine;
 
 namespace LGameFramework.GameCore.Asset
 {
@@ -29,7 +25,7 @@ namespace LGameFramework.GameCore.Asset
             m_AssetType = null;
             onProgress = null;
             onComplete = null;
-            Pool<AssetEditorLoader>.Release(this);
+            Pool.Release(this);
         }
 
         public override string GetAssetPath(string assetName)

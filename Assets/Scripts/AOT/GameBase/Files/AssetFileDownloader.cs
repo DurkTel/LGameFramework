@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.IO;
 using System.Net;
 using UnityEngine;
-using LGameFramework.GameBase.Pool;
 
 namespace LGameFramework.GameBase
 {
@@ -38,7 +37,7 @@ namespace LGameFramework.GameBase
 
             if (File.Exists(m_DownloadPath))
                 File.Delete(m_DownloadPath);
-            m_WebClient = Pool<WebClient>.Get();
+            m_WebClient = Pool.Get<WebClient>();
             m_WebClient.DownloadFileAsync(new System.Uri(m_DownloadURL), m_DownloadPath);
             m_WebClient.DownloadProgressChanged += DownloadProgressChanged;
             m_WebClient.DownloadFileCompleted += DownloadFileCompleted;
@@ -80,7 +79,7 @@ namespace LGameFramework.GameBase
             m_WebClient.CancelAsync();
             m_WebClient.Dispose();
             m_Current = null;
-            Pool<WebClient>.Release(m_WebClient);
+            Pool.Release(m_WebClient);
         }
 
         protected void DownloadProgressChanged(object obj, DownloadProgressChangedEventArgs eventArgs)

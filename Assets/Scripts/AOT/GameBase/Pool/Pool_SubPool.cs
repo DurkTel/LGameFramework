@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LGameFramework.GameBase.Pool
+namespace LGameFramework.GameBase
 {
     public partial class Pool
     {
@@ -23,10 +23,10 @@ namespace LGameFramework.GameBase.Pool
             int RemoveCount { get; }
         }
 
-        public sealed class SubPool<T> : IPool where T : class, new()
+        public sealed class SubPool : IPool
         {
             private readonly Type m_ReferenceType;
-            private readonly Stack<T> m_Stack;
+            private readonly Stack m_Stack;
             private int m_UsingCount;
             private int m_GetCount;
             private int m_ReleaseCount;
@@ -41,10 +41,10 @@ namespace LGameFramework.GameBase.Pool
             public int AddCount { get { return m_AddCount; } }
             public int RemoveCount { get { return m_RemoveCount; } }
 
-            public SubPool()
+            public SubPool(Type type)
             {
-                m_Stack = new Stack<T>();
-                m_ReferenceType = typeof(T);
+                m_Stack = new Stack();
+                m_ReferenceType = type;
                 m_UsingCount = 0;
                 m_GetCount = 0;
                 m_ReleaseCount = 0;
@@ -53,7 +53,7 @@ namespace LGameFramework.GameBase.Pool
                 s_SubPools.Add(m_ReferenceType, this);
             }
 
-            public T Get()
+            public object Get(Type type)
             {
                 m_UsingCount++;
                 m_GetCount++;
@@ -62,10 +62,22 @@ namespace LGameFramework.GameBase.Pool
                     return m_Stack.Pop();
 
                 m_AddCount++;
+                return InstanceCreator.Get(type);
+            }
+
+            public T Get<T>() where T : class, new()
+            {
+                m_UsingCount++;
+                m_GetCount++;
+
+                if (m_Stack.Count > 0)
+                    return m_Stack.Pop() as T;
+
+                m_AddCount++;
                 return new T();
             }
 
-            public void Release(T item)
+            public void Release<T>(T item) where T : class, new()
             {
                 if (m_Stack.Count > 0 && m_Stack.Contains(item))
                 {

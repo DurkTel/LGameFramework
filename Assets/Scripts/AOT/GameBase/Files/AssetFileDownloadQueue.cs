@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using LGameFramework.GameBase.Pool;
 
 namespace LGameFramework.GameBase
 {
@@ -37,7 +36,7 @@ namespace LGameFramework.GameBase
 
         public AssetFileDownloader Enqueue(string downloadURL, string downloadPath)
         {
-            AssetFileDownloader assetFileDownloader = Pool<AssetFileDownloader>.Get();
+            AssetFileDownloader assetFileDownloader = Pool.Get<AssetFileDownloader>();
             assetFileDownloader.SetData(downloadURL, downloadPath);
             return Enqueue(assetFileDownloader);
         }
@@ -77,7 +76,7 @@ namespace LGameFramework.GameBase
                 {
                     m_DownloadingCurrent.Remove(loader);
                     loader.Dispose();
-                    Pool<AssetFileDownloader>.Release(loader);
+                    Pool.Release(loader);
                     DownloadStart();
                 }
             }

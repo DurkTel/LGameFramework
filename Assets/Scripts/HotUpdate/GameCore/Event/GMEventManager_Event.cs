@@ -1,4 +1,4 @@
-using LGameFramework.GameBase.Pool;
+using LGameFramework.GameBase;
 using System;
 
 namespace LGameFramework.GameCore
@@ -21,7 +21,7 @@ namespace LGameFramework.GameCore
 
             public static GameEvent Get(FMEventRegister id, object sender, GameEventArg e)
             {
-                GameEvent eventNode = Pool<GameEvent>.Get();
+                GameEvent eventNode = Pool.Get<GameEvent>();
                 eventNode.m_Id = id;
                 eventNode.m_Sender = sender;
                 eventNode.m_EventArgs = e;
@@ -34,7 +34,7 @@ namespace LGameFramework.GameCore
                 m_Sender = null;
                 m_EventArgs.Dispose();
                 m_EventArgs = null;
-                Pool<GameEvent>.Release(this);
+                Pool.Release(this);
             }
         }
 

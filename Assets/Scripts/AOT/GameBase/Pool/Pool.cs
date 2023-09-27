@@ -1,40 +1,94 @@
+using System;
 using System.Collections.Generic;
 
-namespace LGameFramework.GameBase.Pool
+namespace LGameFramework.GameBase
 {
     /// <summary>
     /// 对象池
     /// </summary>
     /// <typeparam name="T">主要是C#类和自定义类</typeparam>
-    public partial class Pool<T> where T : class, new()
+    public partial class Pool
     {
-        private static readonly Pool.SubPool<T> s_ObjectPool = new Pool.SubPool<T>();
+        /// <summary>
+        /// 是否无效类型
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        private static bool IsInvalid(Type type)
+        {
+            return type.IsValueType;
+        }
+
+        /// <summary>
+        /// 获取对象池
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public static SubPool GetSubPool<T>() where T : class, new()
+        {
+            return GetSubPool(typeof(T));
+        }
+
+        /// <summary>
+        /// 获取对象池
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public static SubPool GetSubPool(Type type)
+        {
+            if (!SubPools.TryGetValue(type, out IPool subPool))
+                subPool = new SubPool(type);
+
+            return (SubPool)subPool;
+        }
 
         /// <summary>
         /// 从对象池获取一个实例
         /// </summary>
         /// <returns></returns>
-        public static T Get()
+        public static T Get<T>() where T : class, new()
         {
-            return s_ObjectPool.Get();
+            return GetSubPool<T>().Get<T>();
+        }
+
+        /// <summary>
+        /// 从对象池获取一个实例
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public static object Get(Type type)
+        {
+            if (IsInvalid(type)) return null;
+
+            return GetSubPool(type).Get(type);
         }
 
         /// <summary>
         /// 将实例放回到对象池中
         /// </summary>
         /// <param name="item"></param>
-        public static void Release(T item)
+        public static void Release<T>(T item) where T : class, new()
         {
-            s_ObjectPool.Release(item);
+            GetSubPool<T>().Release<T>(item);
         }
 
         /// <summary>
         /// 移除将对象池中的实例
         /// </summary>
         /// <param name="count">移除数量</param>
-        public static void Remove(int count)
+        public static void Remove<T>(int count) where T : class, new()
         {
-            s_ObjectPool.Remove(count);
+            GetSubPool<T>().Remove(count);
+        }
+
+        /// <summary>
+        /// 移除将对象池中的实例
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="count"></param>
+        public static void Remove(Type type, int count)
+        {
+            GetSubPool(type).Remove(count);
         }
     }
 
@@ -48,12 +102,12 @@ namespace LGameFramework.GameBase.Pool
     {
         public static Dictionary<TKey, TValue> Get()
         {
-            return Pool<Dictionary<TKey, TValue>>.Get();
+            return Pool.Get<Dictionary<TKey, TValue>>();
         }
 
         public static void Release(Dictionary<TKey, TValue> toRelease)
         {
-            Pool<Dictionary<TKey, TValue>>.Release(toRelease);
+            Pool.Release(toRelease);
         }
     }
 
@@ -61,12 +115,12 @@ namespace LGameFramework.GameBase.Pool
     {
         public static List<TValue> Get()
         {
-            return Pool<List<TValue>>.Get();
+            return Pool.Get<List<TValue>>();
         }
 
         public static void Release(List<TValue> toRelease)
         {
-            Pool<List<TValue>>.Release(toRelease);
+            Pool.Release(toRelease);
         }
     }
 }

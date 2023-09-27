@@ -139,6 +139,7 @@ namespace LGameFramework.GameCore
 
         internal override void LateUpdate(float deltaTime, float unscaleDeltaTime)
         {
+            if (m_Focus == null) return;
             UpdateFocusPoint();
             Quaternion lookRotation;
             if (LockonRotation() || ManualRotation() || AutoMaticRotation())

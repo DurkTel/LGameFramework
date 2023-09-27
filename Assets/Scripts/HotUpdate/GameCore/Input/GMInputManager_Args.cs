@@ -1,4 +1,4 @@
-using LGameFramework.GameBase.Pool;
+using LGameFramework.GameBase;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -33,7 +33,7 @@ namespace LGameFramework.GameCore.Input
 
             public static InputActionArgs Get(string actionName, InputMode inputBehaviour, InputAction inputAction)
             {
-                InputActionArgs args = Pool<InputActionArgs>.Get();
+                InputActionArgs args = Pool.Get<InputActionArgs>();
                 args.m_ActionName = actionName;
                 args.m_InputAction = inputAction;
                 args.m_InputMode = inputBehaviour;
@@ -52,7 +52,7 @@ namespace LGameFramework.GameCore.Input
             {
                 m_ActionName = null;
                 m_InputAction = null;
-                Pool<InputActionArgs>.Release(this);
+                Pool.Release(this);
             }
         }
     }

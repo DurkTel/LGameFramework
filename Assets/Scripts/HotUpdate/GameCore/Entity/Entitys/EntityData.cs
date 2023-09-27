@@ -1,9 +1,8 @@
 using LGameFramework.GameCore.AOI;
 using LGameFramework.GameCore.Avatar;
-using LGameFramework.GameBase.Pool;
+using LGameFramework.GameBase;
 using System.Collections.Generic;
 using static LGameFramework.GameCore.Entity.GMEntityManager;
-using System.Numerics;
 
 namespace LGameFramework.GameCore.Entity
 {

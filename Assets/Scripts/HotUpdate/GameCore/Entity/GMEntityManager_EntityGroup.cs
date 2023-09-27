@@ -1,11 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Security.Principal;
 using UnityEngine;
-using UnityEngine.Rendering;
-using LGameFramework.GameBase.Pool;
-using System;
-using System.Reflection;
+using LGameFramework.GameBase;
 
 namespace LGameFramework.GameCore.Entity
 {
@@ -113,8 +108,8 @@ namespace LGameFramework.GameCore.Entity
                         if (Time.unscaledTime < entity.EntityData.ReleaseTimeStamp + m_DestroyTime)
                             continue;
 
-                        Pool<Entity>.Release(entity);
-                        Pool<EntityData>.Release(entity.EntityData);
+                        Pool.Release(entity);
+                        Pool.Release(entity.EntityData);
                         entity.Dispose();
                         m_DestroyList.RemoveAt(i);
                     }

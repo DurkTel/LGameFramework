@@ -19,6 +19,8 @@ MonoBehaviour:
     assetPath: Assets/LGEditorAssetManifest.asset
   - assetName: GameMainLogic.prefab
     assetPath: Assets/ArtModules/GameMainLogic.prefab
+  - assetName: PostProcessResources.asset
+    assetPath: Assets/ArtModules/PostProcessResources.asset
   - assetName: main.unity
     assetPath: Assets/Scenes/main.unity
   - assetName: simsun.ttc

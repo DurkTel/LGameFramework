@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using LGameFramework.GameBase.Pool;
+using LGameFramework.GameBase;
 using LGameFramework.GameBase;
 using UnityEngine.Events;
 
@@ -194,7 +194,7 @@ namespace LGameFramework.GameCore.Asset
                 if (unscaleDeltaTime - record.BeginUnloadTime >= m_WaitDestroyTime)
                 {
                     record.Unload(true);
-                    Pool<AssetBundleRecord>.Release(record);
+                    Pool.Release(record);
                     m_WaitDestroyABList.RemoveAt(i);
                     m_AllAB.Remove(abName);
 
@@ -238,7 +238,7 @@ namespace LGameFramework.GameCore.Asset
         /// <param name="bundle">°ü</param>
         public AssetBundleRecord AddAssetBundle(string abName, AssetBundle bundle)
         {
-            AssetBundleRecord record = Pool<AssetBundleRecord>.Get();
+            AssetBundleRecord record = Pool.Get<AssetBundleRecord>();
             record.AssetBundle = bundle;
             record.BundleName = abName;
 
@@ -321,7 +321,7 @@ namespace LGameFramework.GameCore.Asset
             AssetBundleRecord record;
             if (!TryGetAssetBundle(abName, out record) && !m_AssetLoaders.ContainsKey(abName))
             {
-                AssetBundleLoader loader = Pool<AssetBundleLoader>.Get();
+                AssetBundleLoader loader = Pool.Get<AssetBundleLoader>();
                 loader.SetData(abName, async, passive);
                 loader.AssetModule = this;
                 loader.Update();
@@ -370,11 +370,11 @@ namespace LGameFramework.GameCore.Asset
                 switch (s_AssetLoadMode)
                 {
                     case AssetLoadMode.AssetBundle:
-                        loader = Pool<AssetLoader>.Get();
+                        loader = Pool.Get<AssetLoader>();
                         loader.SetData(assetName.ToLower(), type, true);
                         break;
                     case AssetLoadMode.Editor:
-                        loader = Pool<AssetEditorLoader>.Get();
+                        loader = Pool.Get<AssetEditorLoader>();
                         loader.SetData(assetName, type);
                         break;
                 }
@@ -403,11 +403,11 @@ namespace LGameFramework.GameCore.Asset
                 switch (s_AssetLoadMode)
                 {
                     case AssetLoadMode.AssetBundle:
-                        loader = Pool<AssetLoader>.Get();
+                        loader = Pool.Get<AssetLoader>();
                         loader.SetData(assetName.ToLower(), typeof(T), false);
                         break;
                     case AssetLoadMode.Editor:
-                        loader = Pool<AssetEditorLoader>.Get();
+                        loader = Pool.Get<AssetEditorLoader>();
                         loader.SetData(assetName, typeof(T));
                         break;
                 }

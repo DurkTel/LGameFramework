@@ -1,4 +1,4 @@
-using LGameFramework.GameBase.Pool;
+using LGameFramework.GameBase;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -110,7 +110,7 @@ namespace LGameFramework.GameCore.Avatar
                 foreach (var part in m_PartDict.Values)
                 {
                     part.Dispose();
-                    Pool<GameAvatarPart>.Release(part);
+                    Pool.Release(part);
                 }
                 DictionaryPool<AvatarPartType, GameAvatarPart>.Release(m_PartDict);
                 m_PartDict.Clear();
@@ -126,7 +126,7 @@ namespace LGameFramework.GameCore.Avatar
         /// <param name="assetName">×ÊÔ´Ãû³Æ</param>
         public void AddPart(AvatarPartType partType, string assetName = null)
         {
-            GameAvatarPart part = Pool<GameAvatarPart>.Get();
+            GameAvatarPart part = Pool.Get<GameAvatarPart>();
             part.OnInit(this, partType);
             part.AssetName = assetName;
 

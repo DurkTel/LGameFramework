@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using LGameFramework.GameBase.Pool;
+using LGameFramework.GameBase;
 
 namespace LGameFramework.GameCore.Timer
 {
@@ -40,7 +40,7 @@ namespace LGameFramework.GameCore.Timer
                 {
                     if (m_AllTimer.TryGetValue(key, out timer))
                     {
-                        Pool<Timer>.Release(timer);
+                        Pool.Release(timer);
                         m_AllTimer.Remove(key);
                     }
                 }
@@ -60,7 +60,7 @@ namespace LGameFramework.GameCore.Timer
 
         private Timer SetTimer(TimerType timerType, UnityAction callback, float delay, float interval, int duration)
         {
-            Timer timer = Pool<Timer>.Get();
+            Timer timer = Pool.Get<Timer>();
             timer.SetData(timerType, callback, delay, interval, duration);
             return timer;
         }

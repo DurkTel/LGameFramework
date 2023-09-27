@@ -1,4 +1,4 @@
-﻿using LGameFramework.GameBase.Pool;
+﻿using LGameFramework.GameBase;
 using System;
 using UnityEngine;
 
@@ -35,7 +35,7 @@ namespace LGameFramework.GameCore.Asset
             onProgress = null;
             onComplete = null;
             m_AssetRequest = null;
-            Pool<AssetLoader>.Release(this);
+            Pool.Release(this);
         }
 
         public override string GetAssetPath(string bundleName)

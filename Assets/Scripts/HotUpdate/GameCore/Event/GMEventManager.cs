@@ -1,4 +1,4 @@
-using LGameFramework.GameBase.Pool;
+using LGameFramework.GameBase;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -105,7 +105,7 @@ namespace LGameFramework.GameCore
             LinkedList<EventHandler<GameEventArg>> linked;
             if (!m_EventHandlers.TryGetValue(id, out linked))
             {
-                linked = Pool<LinkedList<EventHandler<GameEventArg>>>.Get();
+                linked = Pool.Get<LinkedList<EventHandler<GameEventArg>>>();
                 m_EventHandlers.Add(id, linked);
             }
 
@@ -124,7 +124,7 @@ namespace LGameFramework.GameCore
             {
                 linked.Remove(handler);
                 if (linked.Count <= 0)
-                    Pool<LinkedList<EventHandler<GameEventArg>>>.Release(linked);
+                    Pool.Release(linked);
                 return true;
             }
             return false;

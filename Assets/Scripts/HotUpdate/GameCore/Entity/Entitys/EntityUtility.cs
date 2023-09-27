@@ -1,4 +1,4 @@
-using LGameFramework.GameBase.Pool;
+using LGameFramework.GameBase;
 using System;
 using System.Collections.Generic;
 
@@ -18,10 +18,10 @@ namespace LGameFramework.GameCore.Entity
             switch (type)
             {
                 case GMEntityManager.EntityType.Unknown:
-                    entity = Pool<Entity>.Get();
+                    entity = Pool.Get<Entity>();
                     break;
                 case GMEntityManager.EntityType.LocalPlayer:
-                    entity = Pool<LocalPlayerEntity>.Get();
+                    entity = Pool.Get<LocalPlayerEntity>();
                     break;
             }
             return entity;
@@ -34,7 +34,7 @@ namespace LGameFramework.GameCore.Entity
         /// <returns></returns>
         public static EntityData InitEntityData(GMEntityManager.EntityType type)
         {
-            EntityData entityData = Pool<EntityData>.Get();
+            EntityData entityData = Pool.Get<EntityData>();
             switch (type)
             {
                 case GMEntityManager.EntityType.Unknown:

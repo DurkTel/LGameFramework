@@ -1,8 +1,5 @@
 using LGameFramework.GameBase;
-using LGameFramework.GameBase.Pool;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using UnityEngine;
 
 namespace LGameFramework.GameCore.Asset
@@ -42,7 +39,7 @@ namespace LGameFramework.GameCore.Asset
             m_AssetRecord = null;
             m_AssetDownloader = null;
             m_BundleRequest = null;
-            Pool<AssetBundleLoader>.Release(this);
+            Pool.Release(this);
         }
 
         /// <summary>
