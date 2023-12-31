@@ -1,6 +1,7 @@
 using LGameFramework.GameBase.FSM;
 using UnityEngine;
 using LGameFramework.GameBase;
+using UnityEngine.Networking;
 
 /// <summary>
 /// 流程加载器
@@ -45,6 +46,9 @@ public class ProcedureLauncher : MonoBehaviour
         m_Procedure.AddStatus<ProcedureGameEntry>(ProcedureLaunchProcess.GameEntry);
         
         m_Procedure.OnInit();
+
+        //加载页面
+        DefaultLoadingGUI.Instantiate();
     }
 
     private void Update()

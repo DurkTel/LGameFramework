@@ -1,6 +1,6 @@
-using LGameFramework.GameBase;
 using System.Collections.Generic;
 using UnityEngine;
+using LGameFramework.GameBase;
 
 namespace LGameFramework.GameCore.Asset
 {
@@ -205,7 +205,14 @@ namespace LGameFramework.GameCore.Asset
                 RemoveInstanceObject(instanceID);
             }
             else if (!m_RawNameMap.TryGetValue(obj, out rawInfo)) //如果没有实例对象 再去源对象表里取
+            {
+                //还是找不到 说明的直接new出来的 直接销毁
+                if (obj is GameObject)
+                    Object.Destroy(obj);
+                else if (obj is Material)
+                    Object.DestroyImmediate(obj);
                 return;
+            }
 
             RemoveReferenceCount(rawInfo);
 

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Net;
 using UnityEngine;
+using LGameFramework.GameBase;
 
 namespace LGameFramework.GameBase
 {

@@ -21,6 +21,7 @@ namespace LGameFramework.GameBase
             int ReleaseCount { get; }
             int AddCount { get; }
             int RemoveCount { get; }
+            int Count { get; }
         }
 
         public sealed class SubPool : IPool
@@ -40,6 +41,7 @@ namespace LGameFramework.GameBase
             public int ReleaseCount { get { return m_ReleaseCount; } }
             public int AddCount { get { return m_AddCount; } }
             public int RemoveCount { get { return m_RemoveCount; } }
+            public int Count { get { return m_Stack.Count; } }  
 
             public SubPool(Type type)
             {
@@ -79,11 +81,11 @@ namespace LGameFramework.GameBase
 
             public void Release<T>(T item) where T : class, new()
             {
-                if (m_Stack.Count > 0 && m_Stack.Contains(item))
-                {
-                    Debug.LogErrorFormat("{0}该对象池以存在此对象{1}", typeof(T).Name, item.ToString());
-                    return;
-                }
+                //if (m_Stack.Count > 0 && m_Stack.Contains(item))
+                //{
+                //    Debug.LogErrorFormat("{0}该对象池以存在此对象{1}", typeof(T).Name, item.ToString());
+                //    return;
+                //}
                 m_Stack.Push(item);
                 m_ReleaseCount++;
                 m_UsingCount--;

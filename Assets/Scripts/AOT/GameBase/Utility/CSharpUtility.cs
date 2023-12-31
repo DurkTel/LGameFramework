@@ -47,5 +47,20 @@ namespace LGameFramework.GameBase
 
             return result;
         }
+
+        /// <summary>
+        /// 在圆形区域随机一个点
+        /// </summary>
+        /// <param name="center"></param>
+        /// <param name="radius"></param>
+        /// <returns></returns>
+        public static Vector2 InCircle(Vector2 center, float radius)
+        {
+            float r = Mathf.Sqrt(Random.Range(0, radius));
+            float angle = Random.Range(0, Mathf.PI * 2);
+            Vector2 pos = new Vector2(Mathf.Cos(angle) * r, Mathf.Sin(angle) * r);
+            pos += center;
+            return pos;
+        }
     }
 }

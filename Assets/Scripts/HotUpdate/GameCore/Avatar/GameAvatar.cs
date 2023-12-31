@@ -1,4 +1,5 @@
 using LGameFramework.GameBase;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,17 +15,23 @@ namespace LGameFramework.GameCore.Avatar
         /// <summary>
         /// 部位字典
         /// </summary>
-        private Dictionary<AvatarPartType, GameAvatarPart> m_PartDict;
+        protected Dictionary<AvatarPartType, GameAvatarPart> m_PartDict;
         public Dictionary<AvatarPartType,GameAvatarPart> PartDict { get { return m_PartDict; } }
         /// <summary>
         /// 根节点
         /// </summary>
-        private Transform m_Root;
+        protected Transform m_Root;
         public Transform Root { get { return m_Root; } }
         /// <summary>
         /// 所有骨骼的变换组件
         /// </summary>
-        private Dictionary<string, Transform> m_AllSkeletonBone;
+        protected Dictionary<string, Transform> m_AllSkeletonBone;
+        public Dictionary<string, Transform> AllSkeletonBones { get { return m_AllSkeletonBone; } }
+        /// <summary>
+        /// 人形骨骼变换组件
+        /// </summary>
+        protected Dictionary<HumanBodyBones, Transform> m_HumanBones;
+        public Dictionary<HumanBodyBones, Transform> HumanBones { get { return m_HumanBones; } }
         /// <summary>
         /// 等待刷新的部位队列
         /// </summary>
@@ -37,6 +44,10 @@ namespace LGameFramework.GameCore.Avatar
         /// 是否正在加载
         /// </summary>
         public bool IsLoading { get { return m_LoadingPart != null; } }
+        /// <summary>
+        /// 是否完成
+        /// </summary>
+        public bool IsComplete { get { return m_WaitRefreshParts != null && m_WaitRefreshParts.Count == 0; } }
         /// <summary>
         /// 是否显示
         /// </summary>
@@ -51,8 +62,14 @@ namespace LGameFramework.GameCore.Avatar
             }
         }
         /// <summary>
+        /// 动画机
+        /// </summary>
+        protected Animator m_Animator;
+        public Animator Animator { get { return m_Animator; } }
+        /// <summary>
         /// 加载完成回调
         /// </summary>
+        [HideInInspector]
         public UnityEvent<AvatarPartType> OnLoadComplete = new UnityEvent<AvatarPartType>();
 
         public void OnInit()
@@ -80,6 +97,7 @@ namespace LGameFramework.GameCore.Avatar
                         part.UpdateConstranint();
                 }
 
+                OnPartLoadComplete(m_LoadingPart.PartType);
                 OnLoadComplete?.Invoke(m_LoadingPart.PartType);
                 m_LoadingPart = null;
             }
@@ -100,7 +118,18 @@ namespace LGameFramework.GameCore.Avatar
                 foreach (var part in m_PartDict.Values)
                     part.Release();
             }
-            m_AllSkeletonBone = null;
+
+            if (m_AllSkeletonBone != null)
+            {
+                m_AllSkeletonBone.Clear();
+                m_AllSkeletonBone = null;
+            }
+
+            if (m_HumanBones != null)
+            {
+                m_HumanBones.Clear();
+                m_HumanBones.Clear();
+            }
         }
 
         public void Dispose()
@@ -160,6 +189,23 @@ namespace LGameFramework.GameCore.Avatar
         }
 
         /// <summary>
+        /// 更新人形骨骼
+        /// </summary>
+        /// <param name="animator"></param>
+        public void UpdateHumanBodyBones(Animator animator)
+        { 
+            m_HumanBones ??= new Dictionary<HumanBodyBones, Transform>();
+            m_HumanBones.Clear();
+
+            for (int i = 0; i < (int)HumanBodyBones.LastBone; i++)
+            {
+                Transform bone = animator.GetBoneTransform((HumanBodyBones)i);
+                if (bone == null) continue;
+                m_HumanBones.Add((HumanBodyBones)i, bone);
+            }
+        }
+
+        /// <summary>
         /// 添加一个脏数据的部位待刷新
         /// </summary>
         /// <param name="part">部位</param>
@@ -168,5 +214,11 @@ namespace LGameFramework.GameCore.Avatar
             m_WaitRefreshParts ??= new Queue<GameAvatarPart>((int)AvatarPartType.End);
             m_WaitRefreshParts.Enqueue(part);
         }
+
+        protected virtual void OnPartLoadComplete(AvatarPartType part)
+        {
+
+        }
+
     }
 }

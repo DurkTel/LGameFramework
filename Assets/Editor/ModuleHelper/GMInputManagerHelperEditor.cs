@@ -27,7 +27,7 @@ public class GMInputManagerHelperEditor : Editor
 
     public override void OnInspectorGUI()
     {
-        EditorHelper.DrawBorder(m_GMInputManager.inputBehaviour.Values, 1, (p) =>
+        EditorHelper.DrawBorder(m_GMInputManager.inputBehaviour.Values, 1, (p, r, i) =>
         {
             InputBehaviour info = (InputBehaviour)p;
             EditorGUILayout.LabelField(string.Format("ÐÐÎªÃû³Æ£º<color=#ffffff>{0}</color>", info.ActionName), m_Skin.label);

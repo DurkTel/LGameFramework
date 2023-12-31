@@ -30,6 +30,10 @@ namespace LGameFramework.GameCore.Asset
         /// 开始等待销毁事件
         /// </summary>
         public float BeginUnloadTime { get; set; }
+        /// <summary>
+        /// 是否加载完成
+        /// </summary>
+        public bool IsLoadComplete { get { return AssetBundle != null; } }
 
         /// <summary>
         /// 卸载此AB包

@@ -87,15 +87,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "AttackEx",
-                    "type": "Button",
-                    "id": "60b8f3ba-a340-4cce-91ed-b564dc31a363",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Revenges",
                     "type": "Button",
                     "id": "70ba7767-ac93-4a12-9b3b-e65a2ce018eb",
@@ -112,13 +103,40 @@
                     "processors": "StickDeadzone",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "74ac4dc7-f9bf-4c51-8fd7-37d18651bc64",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Discard",
+                    "type": "Button",
+                    "id": "0a75a958-c26c-448b-8f87-b42aac335ca2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ZoomCamera",
+                    "type": "Value",
+                    "id": "5a491fe9-d3b1-47dc-83ba-379a018ca550",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
                 {
                     "name": "",
                     "id": "fa3e4364-c2bb-40b4-926a-3eeaca14fcab",
-                    "path": "<Keyboard>/h",
+                    "path": "<Keyboard>/k",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -150,7 +168,7 @@
                 },
                 {
                     "name": "",
-                    "id": "267021a9-1885-46ba-becc-ebc5ecafbf65",
+                    "id": "081afe9f-9bf5-44ca-97ce-a746044797af",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
                     "processors": "",
@@ -206,7 +224,7 @@
                 {
                     "name": "",
                     "id": "1afde551-1a58-4370-b65a-2037400ed28e",
-                    "path": "<Keyboard>/x",
+                    "path": "<Keyboard>/alt",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -249,17 +267,6 @@
                 },
                 {
                     "name": "",
-                    "id": "127dd225-9b4a-4394-924a-b13b4822c2ca",
-                    "path": "<Keyboard>/f",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "AttackEx",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "7ec8804f-04fe-449b-92d4-5bbb9e076ad5",
                     "path": "<Keyboard>/q",
                     "interactions": "",
@@ -272,7 +279,7 @@
                 {
                     "name": "",
                     "id": "b697bd3d-5393-48a1-8c1d-b0ea38144ccb",
-                    "path": "<AndroidJoystick>/stick",
+                    "path": "<Joystick>/stick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -334,6 +341,39 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "d03e4a9d-0874-4695-b0b3-043b7feaebbe",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "72d1f219-28b1-4879-84b1-0fb13a2ccead",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Discard",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "de2cc361-c5a0-47a7-9d23-bef2616811ee",
+                    "path": "<Mouse>/scroll",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ZoomCamera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

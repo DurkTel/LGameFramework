@@ -23,6 +23,8 @@ namespace LGameFramework.GameCore.Asset
         /// </summary>
         private bool m_IsPassive;
 
+        public override float Progress { get { return m_BundleRequest != null ? m_BundleRequest.progress : 0f; } }
+
         public virtual void SetData(string assetName, bool async, bool passive)
         {
             this.m_AssetName = assetName;
@@ -94,8 +96,7 @@ namespace LGameFramework.GameCore.Asset
         /// <returns></returns>
         private AssetBundleRecord Load(string abPath, uint crc)
         {
-            AssetBundle bundle = AssetBundle.LoadFromFile(abPath, crc, 4);
-            if (bundle == null) return null;
+            AssetBundle bundle = AssetBundle.LoadFromFile(abPath, crc);
             AssetBundleRecord assetBundle = AssetModule.AddAssetBundle(m_AssetName, bundle);
 
             //如果是被动加载 引用计数+1
@@ -112,19 +113,9 @@ namespace LGameFramework.GameCore.Asset
         /// <returns></returns>
         private AssetBundleRecord LoadAsync(string abPath, uint crc)
         {
-            AssetBundleRecord assetBundle = null;
-            m_BundleRequest ??= AssetBundle.LoadFromFileAsync(abPath, crc, 4);
-            if (m_BundleRequest.isDone && m_BundleRequest.assetBundle != null)
-            {
-                assetBundle = AssetModule.AddAssetBundle(m_AssetName, m_BundleRequest.assetBundle);
-
-                //如果是被动加载 引用计数+1
-                if (m_IsPassive)
-                    assetBundle.DpendsReferenceCount++;
-                else
-                    assetBundle.IsAssetLoading = true;
-            }
-
+            m_BundleRequest ??= AssetBundle.LoadFromFileAsync(abPath, crc);
+            AssetBundleRecord assetBundle = AssetModule.RecordAssetBundle(m_AssetName);
+            
             return assetBundle;
         }
 
@@ -167,16 +158,37 @@ namespace LGameFramework.GameCore.Asset
                     m_AssetRecord = LoadAsync(path, crc);
                 else
                     m_AssetRecord = Load(path, crc);
-
-                if ((!m_Async && m_AssetRecord == null) || m_Async && m_BundleRequest.isDone && m_BundleRequest.assetBundle == null)
-                {
-                    Debug.LogWarning(string.Format("文件校验失败，尝试重新下载：文件名{0}", m_AssetName));
-                    TryDownloadFile(m_AssetName);
-                }
-
             }
 
-            m_IsDone = m_AssetRecord != null && m_AssetRecord.AssetBundle != null;
+            UpdateProgress();
+            m_IsDone = m_AssetRecord != null && m_AssetRecord.IsLoadComplete;
+        }
+
+        private void UpdateProgress()
+        {
+            if (m_Async)
+            {
+                if (m_BundleRequest.isDone && m_BundleRequest.assetBundle != null)
+                {
+                    m_AssetRecord.AssetBundle = m_BundleRequest.assetBundle;
+
+                    //如果是被动加载 引用计数+1
+                    if (m_IsPassive)
+                        m_AssetRecord.DpendsReferenceCount++;
+                    else
+                        m_AssetRecord.IsAssetLoading = true;
+                }
+            }
+
+            if ((!m_Async && !m_AssetRecord.IsLoadComplete) || (m_Async && m_BundleRequest.isDone && m_BundleRequest.assetBundle == null))
+            {
+                Debug.LogWarning(string.Format("文件校验失败，尝试重新下载：文件名{0}", m_AssetName));
+                //移除记录 等待重新下载
+                AssetModule.RemoveAssetBundle(m_AssetName);
+                TryDownloadFile(m_AssetName);
+            }
         }
     }
+
+   
 }

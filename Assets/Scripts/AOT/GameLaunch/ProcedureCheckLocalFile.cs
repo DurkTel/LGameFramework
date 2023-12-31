@@ -3,6 +3,8 @@ using LGameFramework.GameBase;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine.Networking;
+using LGameFramework.GameCore.Asset;
+using UnityEngine;
 
 public class ProcedureCheckLocalFile : FSM_Status<ProcedureLaunchProcess>
 {
@@ -10,9 +12,9 @@ public class ProcedureCheckLocalFile : FSM_Status<ProcedureLaunchProcess>
 
     public const string netFilesName = "NetFiles";
 
-    private Dictionary<string, AssetBundleInfo> m_LocalFiles;
+    private BuildFiles m_LocalFiles;
 
-    private Dictionary<string, AssetBundleInfo> m_NetFiles;
+    private BuildFiles m_NetFiles;
 
     private UnityWebRequest m_WebRequest;
 
@@ -30,8 +32,21 @@ public class ProcedureCheckLocalFile : FSM_Status<ProcedureLaunchProcess>
                 return;
             }
 
-            string str = m_WebRequest.downloadHandler.text;
-            m_NetFiles = JsonHelper.FromJsonToDictionary<string, AssetBundleInfo>(str, true);
+            try
+            {
+                string str = m_WebRequest.downloadHandler.text;
+                m_NetFiles = ScriptableObject.CreateInstance<BuildFiles>();
+
+                JsonHelper.FromJsonOverwrite(str, m_NetFiles, true);
+            }
+            catch (System.Exception)
+            {
+                GameLogger.FATAL_FORMAT("连接错误！资源地址：{0}", m_WebRequest.url);
+                GameLogger.FATAL(m_WebRequestAsync.webRequest.error);
+                subMachine.ChangeState(ProcedureLaunchProcess.ProcedureError);
+                return;
+            }
+
 
             dataBase.SetData(ProcedureLauncher.procedureMarkHead + netFilesName, m_NetFiles);
 
@@ -43,11 +58,11 @@ public class ProcedureCheckLocalFile : FSM_Status<ProcedureLaunchProcess>
             if (!needUpdate)
             {
                 AssetBundleInfo localFile;
-                foreach (var nextFile in m_NetFiles)
+                foreach (var netFile in m_NetFiles.bundleMap)
                 {
                     //本地没有该文件或md5不同
-                    if (m_LocalFiles == null || !m_LocalFiles.TryGetValue(nextFile.Key, out localFile)
-                        || localFile.md5Code != nextFile.Value.md5Code)
+                    if (m_LocalFiles == null || !m_LocalFiles.bundleMap.TryGetValue(netFile.Key, out localFile)
+                        || localFile.md5Code != netFile.Value.md5Code)
                     {
                         needUpdate = true;
                         break;
@@ -65,7 +80,7 @@ public class ProcedureCheckLocalFile : FSM_Status<ProcedureLaunchProcess>
     public override void OnEnter()
     {
         m_GamePath = GamePathSetting.Get().CurrentPlatform();
-        string buildPath = Path.Combine(m_GamePath.downloadDataPath.AssetPath, m_GamePath.buildingFileName);
+        string buildPath = m_GamePath.downloadDataPath.AssetPath + m_GamePath.buildingFileName;
         if (!File.Exists(buildPath))
             buildPath = Path.Combine(m_GamePath.buildingPath.AssetPath, m_GamePath.buildingFileName);
 
@@ -73,12 +88,15 @@ public class ProcedureCheckLocalFile : FSM_Status<ProcedureLaunchProcess>
         {
             string allData = File.ReadAllText(buildPath);
             if (!string.IsNullOrEmpty(allData))
-                m_LocalFiles = JsonHelper.FromJsonToDictionary<string, AssetBundleInfo>(allData, true);
+            {
+                m_LocalFiles = ScriptableObject.CreateInstance<BuildFiles>();
+                JsonHelper.FromJsonOverwrite(allData, m_LocalFiles, true);
+            }
         }
 
         dataBase.SetData(ProcedureLauncher.procedureMarkHead + localFilesName, m_LocalFiles);
 
-        m_WebRequest = UnityWebRequest.Get(Path.Combine(m_GamePath.serverDataPath.AssetPath, m_GamePath.buildingFileName));
+        m_WebRequest = UnityWebRequest.Get(m_GamePath.serverDataPath.AssetPath + m_GamePath.buildingFileName);
         m_WebRequestAsync = m_WebRequest.SendWebRequest();
 
     }

@@ -33,9 +33,16 @@ namespace LGameFramework.GameCore.Audio
                 this.AudioSource = this.GameObject.TryAddComponent<AudioSource>();
             }
 
-            private void LoadAudioClip(string assetName)
+            private void LoadAudioClip(string assetName, bool immediately = false)
             {
-                Loader loader = GameFrameworkEntry.GetModule<GMAssetManager>().LoadAssetAsync<AudioClip>(assetName);
+                if (immediately)
+                {
+                    var clip = AssetUtility.LoadAsset<AudioClip>(assetName);
+                    PlayInternal(clip);
+                    return;
+                }
+
+                Loader loader = AssetUtility.LoadAssetAsync<AudioClip>(assetName);
                 loader.onComplete = (p) =>
                 {
                     PlayInternal(p.GetRawObject<AudioClip>());
@@ -51,22 +58,22 @@ namespace LGameFramework.GameCore.Audio
                     AudioSource.Play();
             }
 
-            public void Play(AudioClip clip, float volume = 1.0f, float delay = 0.0f)
+            public void Play(AudioClip clip)
             {
-                this.Volume = volume;
-                this.Delay = delay;
+                this.Volume = 1.0f;
+                this.Delay = 0f;
                 this.GameObject.name = string.Format("[{0}]¡ª[{1}]", clip.name, ++guid);
                 this.AssetName = AssetName;
                 PlayInternal(clip);
             }
 
-            public void Play(string assetName, float volume = 1.0f, float delay = 0.0f)
+            public void Play(string assetName, bool immediately = false)
             {
-                this.Volume = volume;
-                this.Delay = delay;
+                this.Volume = 1.0f;
+                this.Delay = 0f;
                 this.GameObject.name = string.Format("[{0}]¡ª[{1}]", assetName, ++guid);
                 this.AssetName = assetName;
-                LoadAudioClip(assetName);
+                LoadAudioClip(assetName, immediately);
             }
 
             public void Delete()

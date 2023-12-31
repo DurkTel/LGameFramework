@@ -9,7 +9,7 @@ namespace LGameFramework.GameCore.AOI
     /// </summary>
     public sealed partial class GMAOIManager : FrameworkModule
     {
-        internal override int Priority => 1;
+        public override int Priority => 1;
         /// <summary>
         /// 九宫格的轴向
         /// </summary>
@@ -49,7 +49,7 @@ namespace LGameFramework.GameCore.AOI
         /// 元素进出目标元素相邻格子事件
         /// </summary>
         public UnityEvent<int, bool> onNearChangerEvent;
-        internal override void OnInit()
+        public override void OnInit()
         {
             onNearChangerEvent = new UnityEvent<int, bool>();
             m_AllGridBlock = new GridBlock[m_RowCount * m_RowCount];
@@ -57,7 +57,7 @@ namespace LGameFramework.GameCore.AOI
                 m_AllGridBlock[i] = new GridBlock(GetAxisByIndex(i));
         }
 
-        internal override void Update(float deltaTime, float unscaledTime)
+        public override void Update(float deltaTime, float unscaledTime)
         {
             if (m_TargetElement == null || m_TargetElement.Transform == null) return;
 
@@ -85,7 +85,7 @@ namespace LGameFramework.GameCore.AOI
         /// 添加一个元素
         /// </summary>
         /// <param name="element"></param>
-        public void AddElement(IGridElement element)
+        internal void AddElement(IGridElement element)
         {
             UpdateElement(element);
 
@@ -106,16 +106,17 @@ namespace LGameFramework.GameCore.AOI
         /// 移除一个元素
         /// </summary>
         /// <param name="element"></param>
-        public void RemoveElement(IGridElement element)
+        internal void RemoveElement(IGridElement element)
         {
             element.CurrentGrid.RemoveElement(element);
+            m_ActiveElement.Remove(element);
         }
 
         /// <summary>
         /// 更新元素位置
         /// </summary>
         /// <param name="element"></param>
-        public bool UpdateElement(IGridElement element)
+        private bool UpdateElement(IGridElement element)
         {
             GridBlock block = GetBlockByElement(element);
 
@@ -204,7 +205,7 @@ namespace LGameFramework.GameCore.AOI
         /// </summary>
         /// <param name="element"></param>
         /// <param name="blocks"></param>
-        public void GetNearGrid(IGridElement element, ref List<GridBlock> blocks)
+        internal void GetNearGrid(IGridElement element, ref List<GridBlock> blocks)
         {
             blocks.Clear();
             int index = GetIndexByPosition(element.Transform.position);
@@ -228,7 +229,7 @@ namespace LGameFramework.GameCore.AOI
         /// </summary>
         /// <param name="element"></param>
         /// <returns></returns>
-        public GridBlock GetBlockByElement(IGridElement element)
+        internal GridBlock GetBlockByElement(IGridElement element)
         {
             int index = GetIndexByPosition(element.Transform.position);
             if (index == -1) return null;

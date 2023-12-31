@@ -10,7 +10,7 @@ namespace LGameFramework.GameCore
         {
             if (m_Value == null)
             {
-                m_Value = GameFrameworkEntry.GetModule<GMAssetManager>().LoadAsset<T>(typeof(T).Name + ".asset");
+                m_Value = AssetUtility.LoadAsset<T>(typeof(T).Name + ".asset");
                 //m_Value = CreateInstance<T>();
             }
 

@@ -135,11 +135,11 @@ namespace LGameFramework.GameCore.Audio
                 return ao;
             }
 
-            public void Play(string assetName)
+            public void Play(string assetName, bool immediately)
             {
                 AudioObject ao = GetAudioObject();
                 if (ao == null) return;
-                ao.Play(assetName);
+                ao.Play(assetName, immediately);
             }
 
             public void Play(AudioClip audioClip)

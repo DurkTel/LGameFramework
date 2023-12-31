@@ -23,7 +23,7 @@ public class ProcedureGameEntry : FSM_Status<ProcedureLaunchProcess>
 #if !UNITY_EDITOR
         foreach (var dll in m_GamePath.hotUpdateDll)
         {
-            var assembly = Assembly.Load(File.ReadAllBytes($"{m_GamePath.hotUpdateDllPath}/{dll}.bytes"));
+            var assembly = Assembly.Load(File.ReadAllBytes($"{m_GamePath.hotUpdateDllPath.AssetPath}/{dll}.bytes"));
             if (coreAssembly == null)
                 coreAssembly = assembly;
         }
@@ -38,7 +38,7 @@ public class ProcedureGameEntry : FSM_Status<ProcedureLaunchProcess>
 #endif
 
         Type type = coreAssembly.GetType("LGameFramework.GameCore.GameFrameworkEntry");
-        type.GetMethod("Instantiate").Invoke(null, null);
+        type.GetMethod("Instantiate").Invoke(null, new object[] { true });
 
         //进入游戏成功 销毁启动器
         UnityEngine.Object.Destroy(dataBase.gameObject);
@@ -48,9 +48,11 @@ public class ProcedureGameEntry : FSM_Status<ProcedureLaunchProcess>
     {
         List<string> aotMetaAssemblyFiles = new List<string>()
         {
-            "mscorlib.dll",
-            "System.dll",
+            "Assembly-GameBase.dll",
             "System.Core.dll",
+            "System.dll",
+            "UnityEngine.CoreModule.dll",
+            "mscorlib.dll",
         };
         /// 注意，补充元数据是给AOT dll补充元数据，而不是给热更新dll补充元数据。
         /// 热更新dll不缺元数据，不需要补充，如果调用LoadMetadataForAOTAssembly会返回错误
@@ -58,7 +60,7 @@ public class ProcedureGameEntry : FSM_Status<ProcedureLaunchProcess>
         HomologousImageMode mode = HomologousImageMode.SuperSet;
         foreach (var aotDllName in aotMetaAssemblyFiles)
         {
-            string path = $"{m_GamePath.hotUpdateDll}/{aotDllName}.bytes";
+            string path = $"{m_GamePath.hotUpdateDllPath.AssetPath}/{aotDllName}.bytes";
             if (!File.Exists(path))
                 continue;
 

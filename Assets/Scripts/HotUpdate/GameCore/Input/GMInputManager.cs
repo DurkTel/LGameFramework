@@ -26,10 +26,14 @@ namespace LGameFramework.GameCore.Input
         /// 广播输入行为
         /// </summary>
         public UnityEvent<InputActionArgs> inputActionEvent;
-        
-        internal override int Priority => 1;
+        /// <summary>
+        /// 输入方法注册
+        /// </summary>
+        private Dictionary<(string, InputMode), UnityAction<InputActionArgs>> m_InputRegister;
 
-        internal override void OnInit()
+        public override int Priority => 1;
+
+        public override void OnInit()
         {
             m_InputActions = new InputControls();
 
@@ -52,17 +56,17 @@ namespace LGameFramework.GameCore.Input
             }
         }
 
-        internal override void Update(float deltaTime, float unscaledTime)
+        public override void Update(float deltaTime, float unscaledTime)
         {
             
         }
 
-        internal override void OnEnable()
+        public override void OnEnable()
         {
             InputActions.Enable();
         }
 
-        internal override void OnDisable()
+        public override void OnDisable()
         {
             InputActions.Disable();
         }
@@ -70,7 +74,7 @@ namespace LGameFramework.GameCore.Input
         private void InputHandle(InputAction.CallbackContext context)
         {
             if (context.action.type == InputActionType.Value)
-            { 
+            {
                 DispatchEvent(context.action.name, InputMode.Direction, context.action);
                 return;
             }
@@ -102,25 +106,31 @@ namespace LGameFramework.GameCore.Input
 
         }
 
-        private void DispatchEvent(string name, InputMode behaviour, InputAction action)
+        internal void DispatchEvent(string name, InputMode behaviour, InputAction action)
         {
-            InputActionArgs args = InputActionArgs.Get(name, behaviour, action);
-            inputActionEvent.Invoke(args);
+            if (m_InputRegister != null && m_InputRegister.TryGetValue((name, behaviour), out UnityAction<InputActionArgs> @event))
+            {
+                InputActionArgs args = InputActionArgs.Get(name, behaviour, action);
+                @event?.Invoke(args);
+            }
         }
 
-        public void AddListener(UnityAction<InputActionArgs> action)
+        internal void RegisterListener((string, InputMode) input, UnityAction<InputActionArgs> action)
         {
-            inputActionEvent.AddListener(action);
+            m_InputRegister ??= new Dictionary<(string, InputMode), UnityAction<InputActionArgs>>();
+            m_InputRegister[input] = action;
         }
 
-        public void RemoveListener(UnityAction<InputActionArgs> action)
+        internal bool UnRegisterListener((string, InputMode) input, UnityAction<InputActionArgs> action)
         {
-            inputActionEvent.RemoveListener(action);
+            if (m_InputRegister.ContainsKey(input))
+            {
+                m_InputRegister.Remove(input);
+                return true;
+            }
+
+            return false;
         }
 
-        public void RemoveAllListeners()
-        {
-            inputActionEvent.RemoveAllListeners();
-        }
     }
 }

@@ -47,10 +47,11 @@ public class GMPoolHelperEditor : Editor
             EditorGUILayout.LabelField(string.Format("对象命名空间：<color=#ffffff>{0}</color>", item.ReferenceType.Namespace), m_Skin.label);
             EditorGUILayout.SelectableLabel(string.Format("对象类型：<color=#ffffff>{0}</color>", item.ReferenceType.Name), m_Skin.label);
             EditorGUILayout.LabelField(string.Format("使用中：<color=#77dc60>{0}</color>", item.UsingCount), m_Skin.label);
-            EditorGUILayout.LabelField(string.Format("回收池中：<color=#77dc60>{0}</color>", item.ReleaseCount), m_Skin.label);
+            EditorGUILayout.LabelField(string.Format("回收次数：<color=#77dc60>{0}</color>", item.ReleaseCount), m_Skin.label);
             EditorGUILayout.LabelField(string.Format("获取次数：<color=#77dc60>{0}</color>", item.GetCount), m_Skin.label);
             EditorGUILayout.LabelField(string.Format("添加次数：<color=#77dc60>{0}</color>", item.AddCount), m_Skin.label);
             EditorGUILayout.LabelField(string.Format("移除次数：<color=#77dc60>{0}</color>", item.RemoveCount), m_Skin.label);
+            EditorGUILayout.LabelField(string.Format("池中空闲数量：<color=#77dc60>{0}</color>", item.Count), m_Skin.label);
 
             EditorGUILayout.EndVertical();
 

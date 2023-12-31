@@ -123,4 +123,17 @@ namespace LGameFramework.GameBase
             Pool.Release(toRelease);
         }
     }
+
+    public class QueuePool<TValue>
+    {
+        public static Queue<TValue> Get()
+        {
+            return Pool.Get<Queue<TValue>>();
+        }
+
+        public static void Release(Queue<TValue> toRelease)
+        {
+            Pool.Release(toRelease);
+        }
+    }
 }

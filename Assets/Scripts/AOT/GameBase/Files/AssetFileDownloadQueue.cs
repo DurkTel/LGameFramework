@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using LGameFramework.GameBase;
 
 namespace LGameFramework.GameBase
 {

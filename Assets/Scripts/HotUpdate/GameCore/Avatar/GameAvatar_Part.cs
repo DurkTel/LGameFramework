@@ -1,4 +1,5 @@
 using LGameFramework.GameCore.Asset;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
@@ -47,7 +48,6 @@ namespace LGameFramework.GameCore.Avatar
             public Loader Loader { get { return m_Loader; } }
             public bool IsDone { get { return m_Loader == null && m_Asset != null; } }  
 
-            private GMAssetManager m_AssetModule;
             public void OnInit(GameAvatar avatar, AvatarPartType partType)
             {
                 m_Avatar = avatar;
@@ -70,7 +70,7 @@ namespace LGameFramework.GameCore.Avatar
 
                 if (m_Asset != null)
                 {
-                    m_AssetModule.Destroy(m_Asset);
+                    AssetUtility.Destroy(m_Asset);
                     m_Asset = null;
                 }
             }
@@ -80,17 +80,17 @@ namespace LGameFramework.GameCore.Avatar
             /// </summary>
             public void LoadPartAsset()
             {
-                m_AssetModule ??= GameFrameworkEntry.GetModule<GMAssetManager>();
-                m_Loader = m_AssetModule.LoadAssetAsync<GameObject>(m_AssetName);
-                m_Loader.onComplete = LoadComplete;
+                m_Loader = AssetUtility.LoadAssetAsync<GameObject>(m_AssetName);
+                m_Loader.onComplete += LoadComplete;
             }
+
 
             public void LoadComplete(Loader loader)
             {
                 //新资源加载完成后 清除之前的
                 if (m_Asset != null && m_Asset.name.Replace("(Clone)", "") != m_AssetName.Replace(".prefab", ""))
-                { 
-                    m_AssetModule.Destroy(m_Asset);
+                {
+                    AssetUtility.Destroy(m_Asset);
                     m_Asset = null;
                 }
 
@@ -99,7 +99,7 @@ namespace LGameFramework.GameCore.Avatar
                 m_Loader = null;
 
                 UpdateConstranint();
-                m_Asset.transform.SetParentZero(m_Avatar.Root);
+                m_Asset.transform.SetParentIgnore(m_Avatar.Root);
             }
 
             public void UpdateConstranint()
@@ -112,12 +112,11 @@ namespace LGameFramework.GameCore.Avatar
                     newBones.Clear();
                     if (skin.rootBone == null)
                     {
-                        ParentConstraint constraint = skin.gameObject.TryAddComponent<ParentConstraint>();
-                        ConstraintSource cs = new ConstraintSource();
-                        cs.sourceTransform = Avatar.m_AllSkeletonBone[skin.gameObject.name];
-                        cs.weight = 1.0f;
-                        constraint.AddSource(cs);
-                        constraint.constraintActive = true;
+                        skin.transform.SetParent(Avatar.m_AllSkeletonBone[skin.name]);
+                        skin.transform.localEulerAngles = Vector3.zero;
+                        skin.transform.localPosition = Vector3.zero;
+                        skin.transform.localScale = Vector3.one;    
+                        return;
                     }
                     else
                     {

@@ -7,6 +7,6 @@ namespace LGameFramework.GameBase
     public class GameUid
     {
         private int m_Uid = 0;
-        public int Uid { get { return ++m_Uid; } }
+        public int Uid { get { return m_Uid++; } }
     }
 }

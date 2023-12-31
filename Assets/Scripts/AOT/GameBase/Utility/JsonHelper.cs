@@ -121,6 +121,8 @@ namespace LGameFramework.GameBase
         public const string IV = "bcdefghijklmnopa";
         public static string Encrypt(string plainText)
         {
+            //从资源服务器下载后方法ToBase64String有The input is not a valid Base-64 string的报错 暂时屏蔽
+            return plainText;
             if (plainText == null || plainText.Length <= 0)
                 throw new ArgumentNullException("plainText");
             if (Key == null || Key.Length <= 0)
@@ -151,6 +153,9 @@ namespace LGameFramework.GameBase
 
         public static string Decrypt(string cipherStr)
         {
+            //从资源服务器下载后方法ToBase64String有The input is not a valid Base-64 string的报错 暂时屏蔽
+            return cipherStr;
+
             var cipherText = Convert.FromBase64String(cipherStr);
             if (cipherText == null || cipherText.Length <= 0)
                 throw new ArgumentNullException("cipherText");

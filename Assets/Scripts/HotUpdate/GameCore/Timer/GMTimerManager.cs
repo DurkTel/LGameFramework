@@ -13,26 +13,17 @@ namespace LGameFramework.GameCore.Timer
         private Dictionary<int, Timer> m_WaitAdd;
 
         private List<int> m_WaitRemove;
-        internal override int Priority => 3;
+        public override int Priority => 3;
 
-        internal override void OnInit()
+        public override void OnInit()
         {
             m_AllTimer = new Dictionary<int, Timer>();
             m_WaitAdd = new Dictionary<int, Timer>();
             m_WaitRemove = new List<int>();
         }
 
-        internal override void Update(float deltaTime, float unscaledTime)
+        public override void Update(float deltaTime, float unscaledTime)
         {
-            if (m_WaitAdd.Count > 0)
-            {
-                foreach (var item in m_WaitAdd)
-                {
-                    m_AllTimer.Add(item.Key, item.Value);
-                }
-                m_WaitAdd.Clear();
-            }
-
             if (m_WaitRemove.Count > 0)
             {
                 Timer timer;
@@ -45,6 +36,15 @@ namespace LGameFramework.GameCore.Timer
                     }
                 }
                 m_WaitRemove.Clear();
+            }
+
+            if (m_WaitAdd.Count > 0)
+            {
+                foreach (var item in m_WaitAdd)
+                {
+                    m_AllTimer.Add(item.Key, item.Value);
+                }
+                m_WaitAdd.Clear();
             }
 
             if (m_AllTimer.Count > 0)
@@ -65,7 +65,7 @@ namespace LGameFramework.GameCore.Timer
             return timer;
         }
 
-        public int AddTimer(UnityAction callback, float delay = 0f, float interval = 1f, int duration = 1)
+        internal int AddTimer(UnityAction callback, float delay = 0f, float interval = 1f, int duration = 1)
         {
             Timer timer = SetTimer(TimerType.NOMAL, callback, delay, interval, duration);
             int id = timer.Id;
@@ -74,7 +74,7 @@ namespace LGameFramework.GameCore.Timer
             return id;
         }
 
-        public int AddFrame(UnityAction callback, float delay = 0f, float interval = 1f, int duration = 1)
+        internal int AddFrame(UnityAction callback, float delay = 0f, float interval = 1f, int duration = 1)
         {
             Timer timer = SetTimer(TimerType.FRAME, callback, delay, interval, duration);
             int id = timer.Id;
@@ -83,7 +83,7 @@ namespace LGameFramework.GameCore.Timer
             return id;
         }
 
-        public void DelTimer(int id)
+        internal void DelTimer(int id)
         {
             m_WaitRemove.Add(id);
         }
@@ -137,6 +137,7 @@ namespace LGameFramework.GameCore.Timer
                 this.m_Duration = 0;
                 this.m_NextFrame = 0f;
                 this.m_NextTime = 0f;
+                this.m_AllCount = 0;
             }
 
             public bool Update()

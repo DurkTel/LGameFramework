@@ -3,14 +3,16 @@
     "rootNamespace": "LGameFramework.GameLogic",
     "references": [
         "GUID:3072bfba8acc8ff4ca4c09cf933bdd1e",
-        "GUID:04e9319ff17548540a73e7686f58ebb0"
+        "GUID:04e9319ff17548540a73e7686f58ebb0",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false,
+    "allowUnsafeCode": true,
     "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": false,
+    "autoReferenced": true,
     "defineConstraints": [],
     "versionDefines": [],
     "noEngineReferences": false

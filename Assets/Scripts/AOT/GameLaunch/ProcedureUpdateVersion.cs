@@ -69,14 +69,15 @@ public class ProcedureUpdateVersion : FSM_Status<ProcedureLaunchProcess>
     public override void OnEnter()
     {
         m_GamePath = GamePathSetting.Get().CurrentPlatform();
+        DefaultLoadingGUI.SetProgressText("正在检查更新文件");
 
         m_DownloadList = new List<string>();
-        Dictionary<string, AssetBundleInfo> netFiles;
-        Dictionary<string, AssetBundleInfo> localFiles;
+        BuildFiles netFiles;
+        BuildFiles localFiles;
         try
         {
-            netFiles = dataBase.GetData<Dictionary<string, AssetBundleInfo>>(ProcedureLauncher.procedureMarkHead + ProcedureCheckLocalFile.netFilesName);
-            localFiles = dataBase.GetData<Dictionary<string, AssetBundleInfo>>(ProcedureLauncher.procedureMarkHead + ProcedureCheckLocalFile.localFilesName);
+            netFiles = dataBase.GetData<BuildFiles>(ProcedureLauncher.procedureMarkHead + ProcedureCheckLocalFile.netFilesName);
+            localFiles = dataBase.GetData<BuildFiles>(ProcedureLauncher.procedureMarkHead + ProcedureCheckLocalFile.localFilesName);
         }
         catch (System.Exception)
         {
@@ -87,14 +88,14 @@ public class ProcedureUpdateVersion : FSM_Status<ProcedureLaunchProcess>
         AssetBundleInfo localFile;
         AssetBundleInfo netFile;
 
-        foreach (var file in netFiles)
+        foreach (var file in netFiles.bundleMap)
         {
             netFile = file.Value;
             //如果是扩展资源 跳过下载
             if (netFile.fileFlag == AssetBundleInfo.AssetFileFlag.ExtendDLC)
                 continue;
             //本地没有该文件或md5不同
-            if (localFiles == null || !localFiles.TryGetValue(file.Key, out localFile) || localFile.md5Code != netFile.md5Code)
+            if (localFiles == null || !localFiles.bundleMap.TryGetValue(file.Key, out localFile) || localFile.md5Code != netFile.md5Code)
             {
                 if (file.Value.fileFlag.HasFlag(AssetBundleInfo.AssetFileFlag.Dll))
                     m_UpdateCShare = true;
@@ -116,9 +117,10 @@ public class ProcedureUpdateVersion : FSM_Status<ProcedureLaunchProcess>
             m_FileDownloadQueue = new AssetFileDownloadQueue();
         }
 
+
         foreach (var assetName in m_DownloadList)
         {
-            string url = Path.Combine(m_GamePath.serverDataPath.AssetPath, assetName.Replace("\\", "/"));
+            string url = m_GamePath.serverDataPath.AssetPath + assetName.Replace("\\", "/");
             string localPath = Path.Combine(m_GamePath.downloadDataPath.AssetPath, assetName).Replace("\\", "/");
             m_FileDownloadQueue.Enqueue(url, localPath);
         }
@@ -133,7 +135,10 @@ public class ProcedureUpdateVersion : FSM_Status<ProcedureLaunchProcess>
         m_DownloadList = null;
         m_UpdateCShare = false;
 
-        m_FileDownloadQueue.Dispose();
-        m_FileDownloadQueue = null;
+        if (m_FileDownloadQueue != null)
+        {
+            m_FileDownloadQueue.Dispose();
+            m_FileDownloadQueue = null;
+        }
     }
 }

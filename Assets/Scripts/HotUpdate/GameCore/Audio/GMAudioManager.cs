@@ -19,15 +19,15 @@ namespace LGameFramework.GameCore.Audio
         private Dictionary<string, AudioGroup> m_AudioGroups;
         public Dictionary<string, AudioGroup> AudioGroups { get { return m_AudioGroups; } }
 
-        internal override int Priority => 2;
+        public override int Priority => 2;
 
-        internal override void OnInit()
+        public override void OnInit()
         {
             m_AudioMixerGroups = new Dictionary<string, AudioMixerGroup>();
             m_AudioGroups = new Dictionary<string, AudioGroup>();
 
             m_AudioSetting = AudioSetting.GetFormAssetBundle();
-            m_AudioMixer = GameFrameworkEntry.GetModule<GMAssetManager>().LoadAsset<AudioMixer>("GameAudioMixer.mixer");
+            m_AudioMixer = AssetUtility.LoadAsset<AudioMixer>("GameAudioMixer.mixer");
 
             AudioMixerGroup[] audioMixerGroup = m_AudioMixer.FindMatchingGroups("Master");
             AudioMixerGroup group;
@@ -46,18 +46,18 @@ namespace LGameFramework.GameCore.Audio
             }
         }
 
-        internal override void Update(float deltaTime, float unscaledTime)
+        public override void Update(float deltaTime, float unscaledTime)
         {
             foreach (var group in m_AudioGroups.Values)
                 group.Update();
         }
 
-        public bool Play(string audioGroupName, string assetName)
+        internal bool Play(string audioGroupName, string assetName, bool immediately = false)
         {
             AudioGroup audioGroup;
             if (m_AudioGroups.TryGetValue(audioGroupName, out audioGroup))
             {
-                audioGroup.Play(assetName);
+                audioGroup.Play(assetName, immediately);
                 return true;
             }
 
@@ -65,7 +65,7 @@ namespace LGameFramework.GameCore.Audio
             return false;
         }
 
-        public bool Play(string audioGroupName, AudioClip audioClip)
+        internal bool Play(string audioGroupName, AudioClip audioClip)
         {
             AudioGroup audioGroup;
             if (m_AudioGroups.TryGetValue(audioGroupName, out audioGroup))
@@ -77,7 +77,7 @@ namespace LGameFramework.GameCore.Audio
             return false;
         }
 
-        public bool IsPlaying(string AudioGroupName, string assetName)
+        internal bool IsPlaying(string AudioGroupName, string assetName)
         {
             AudioGroup audioGroup;
             if (m_AudioGroups.TryGetValue(AudioGroupName, out audioGroup))
@@ -86,7 +86,7 @@ namespace LGameFramework.GameCore.Audio
             return false;
         }
 
-        public bool IsPlaying(string AudioGroupName, AudioClip audioClip)
+        internal bool IsPlaying(string AudioGroupName, AudioClip audioClip)
         {
             AudioGroup audioGroup;
             if (m_AudioGroups.TryGetValue(AudioGroupName, out audioGroup))
@@ -95,7 +95,7 @@ namespace LGameFramework.GameCore.Audio
             return false;
         }
 
-        public bool Delete(string AudioGroupName, AudioClip audioClip)
+        internal bool Delete(string AudioGroupName, AudioClip audioClip)
         {
             AudioGroup audioGroup;
             if (m_AudioGroups.TryGetValue(AudioGroupName, out audioGroup))
@@ -104,7 +104,7 @@ namespace LGameFramework.GameCore.Audio
             return false;
         }
 
-        public bool Delete(string AudioGroupName, string assetName)
+        internal bool Delete(string AudioGroupName, string assetName)
         {
             AudioGroup audioGroup;
             if (m_AudioGroups.TryGetValue(AudioGroupName, out audioGroup))
@@ -113,7 +113,7 @@ namespace LGameFramework.GameCore.Audio
             return false;
         }
 
-        public void SetTotalAudio(float volume)
+        internal void SetTotalAudio(float volume)
         {
             if (AudioMixerGroups.TryGetValue("Master", out AudioMixerGroup group))
             {

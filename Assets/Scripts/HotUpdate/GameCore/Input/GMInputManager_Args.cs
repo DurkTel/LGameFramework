@@ -54,6 +54,22 @@ namespace LGameFramework.GameCore.Input
                 m_InputAction = null;
                 Pool.Release(this);
             }
+
+            public const string InputAction_Run         = "Run";
+            public const string InputAction_Look        = "Look";
+            public const string InputAction_ZoomCamera  = "ZoomCamera";
+            public const string InputAction_Walk        = "Walk";
+            public const string InputAction_Jump        = "Jump";
+            public const string InputAction_Lock        = "Lock";
+            public const string InputAction_Escape      = "Escape";
+            public const string InputAction_Weapon      = "Weapon";
+            public const string InputAction_LightAttack = "LightAttack";
+            public const string InputAction_HeavyAttack = "HeavyAttack";
+            public const string InputAction_AttackEx    = "AttackEx";
+            public const string InputAction_Revenges    = "Revenges";
+            public const string InputAction_Move        = "Move";
+            public const string InputAction_Interact    = "Interact";
+            public const string InputAction_Discard     = "Discard";
         }
     }
 }

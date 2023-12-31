@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using LGameFramework.GameBase;
-using LGameFramework.GameBase;
 using UnityEngine.Events;
+using System.Collections;
 
 namespace LGameFramework.GameCore.Asset
 {
@@ -17,7 +17,7 @@ namespace LGameFramework.GameCore.Asset
     {
         private static AssetLoadMode s_AssetLoadMode;
         public static AssetLoadMode AssetLoadMode { get { return s_AssetLoadMode; } }
-        internal override int Priority { get { return 99; } }
+        public override int Priority { get { return 99; } }
         internal GamePathSetting.FilePathStruct GamePath { get; set; }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace LGameFramework.GameCore.Asset
         private AssetFileDownloadQueue m_FileDownloadQueue;
 
         #region 生命周期函数
-        internal override void OnInit()
+        public override void OnInit()
         {
             GamePath = GamePathSetting.Get().CurrentPlatform();
             s_AssetLoadMode = GameLaunchSetting.Get().assetLoadMode == GameLaunchSetting.AssetLoadMode.Editor ? AssetLoadMode.Editor : AssetLoadMode.AssetBundle;
@@ -78,7 +78,7 @@ namespace LGameFramework.GameCore.Asset
             m_WaitDestroyTime = 10f;
         }
 
-        internal override void Update(float deltaTime, float unscaledTime)
+        public override void Update(float deltaTime, float unscaledTime)
         {
             if (m_FileDownloadQueue != null)
                 m_FileDownloadQueue.Update();
@@ -133,7 +133,7 @@ namespace LGameFramework.GameCore.Asset
             m_CompleteList.Clear();
         }
 
-        internal override void LateUpdate(float deltaTime, float unscaleDeltaTime)
+        public override void LateUpdate(float deltaTime, float unscaleDeltaTime)
         {
             //先检测需要销毁的资源
             if (m_WaitDestroyList.Count > 0)
@@ -176,7 +176,7 @@ namespace LGameFramework.GameCore.Asset
             {
                 abName = ab.Key;
                 record = ab.Value;
-                if (m_WaitDestroyABList.Contains(abName))
+                if (m_WaitDestroyABList.Contains(abName) || !record.IsLoadComplete)
                     continue;
 
                 //依赖引用为0 且源对象引用为0 且不在加载资源中 准备开始卸载
@@ -214,7 +214,7 @@ namespace LGameFramework.GameCore.Asset
         /// 获取资源清单
         /// </summary>
         /// <returns></returns>
-        public AssetManifest_Bundle GetAssetManifest_Bundle()
+        internal AssetManifest_Bundle GetAssetManifest_Bundle()
         {
             if (m_FileManifest == null)
             {
@@ -232,18 +232,35 @@ namespace LGameFramework.GameCore.Asset
         }
 
         /// <summary>
+        /// 记录一个AB包标识
+        /// </summary>
+        /// <param name="abName"></param>
+        /// <returns></returns>
+        internal AssetBundleRecord RecordAssetBundle(string abName)
+        {
+            AssetBundleRecord record;
+            if (!m_AllAB.TryGetValue(abName, out record))
+            {
+                record = Pool.Get<AssetBundleRecord>();
+                record.BundleName = abName;
+                m_AllAB.Add(abName, record);
+            }
+
+            return record;
+        }
+
+        /// <summary>
         /// 记录一个AB包
         /// </summary>
         /// <param name="abName">包名</param>
         /// <param name="bundle">包</param>
-        public AssetBundleRecord AddAssetBundle(string abName, AssetBundle bundle)
+        internal AssetBundleRecord AddAssetBundle(string abName, AssetBundle bundle)
         {
-            AssetBundleRecord record = Pool.Get<AssetBundleRecord>();
-            record.AssetBundle = bundle;
-            record.BundleName = abName;
+            AssetBundleRecord record;
+            if (!m_AllAB.TryGetValue(abName, out record))
+                record = RecordAssetBundle(abName);
 
-            if (!m_AllAB.ContainsKey(abName))
-                m_AllAB.Add(abName, record);
+            record.AssetBundle = bundle;
 
             return record;
         }
@@ -253,7 +270,7 @@ namespace LGameFramework.GameCore.Asset
         /// </summary>
         /// <param name="abName">包名</param>
         /// <returns>是否移除成功</returns>
-        public bool RemoveAssetBundle(string abName)
+        internal bool RemoveAssetBundle(string abName)
         {
             AssetBundleRecord bundle;
             if (m_AllAB.TryGetValue(abName, out bundle))
@@ -291,7 +308,7 @@ namespace LGameFramework.GameCore.Asset
         /// </summary>
         /// <param name="abName"></param>
         /// <returns></returns>
-        public bool IsExistAssetBundle(string abName)
+        internal bool IsExistAssetBundle(string abName)
         {
             return m_AllAB.ContainsKey(abName);
         }
@@ -301,13 +318,46 @@ namespace LGameFramework.GameCore.Asset
         /// </summary>
         /// <param name="abName">包名</param>
         /// <param name="async">是否异步</param>
-        public void LoadAssetBundle(string abName, bool async)
+        internal Loader LoadAssetBundle(string abName)
         {
             string[] depends = GetAssetManifest_Bundle().GetDependsName(abName);
+        
             foreach (string depend in depends) //先加载依赖
-                LoadAssetBundleInternal(depend, async, true);
+                LoadAssetBundleInternal(depend, false, true);
 
-            LoadAssetBundleInternal(abName, async);
+            return LoadAssetBundleInternal(abName, false);
+        }
+
+        /// <summary>
+        /// 异步加载AB包
+        /// </summary>
+        /// <param name="abName"></param>
+        /// <returns></returns>
+        internal Coroutine LoadAssetBundleAsync(string abName)
+        {
+            return StartCoroutine(LoadDependsAssetBundle(abName));
+        }
+
+        /// <summary>
+        /// 异步加载依赖
+        /// </summary>
+        /// <param name="abName"></param>
+        /// <returns></returns>
+        private IEnumerator LoadDependsAssetBundle(string abName)
+        {
+            string[] depends = GetAssetManifest_Bundle().GetDependsName(abName);
+            int length = depends.Length;
+            int index = 0;
+            while (index < length)
+            { 
+                var depend = depends[index];
+                Loader loader = LoadAssetBundleInternal(depend, true, true);
+                yield return loader;
+                index++;
+            }
+
+            yield return LoadAssetBundleInternal(abName, true);
+            GameLogger.DEBUG("加载完AB"+ abName);
         }
 
         /// <summary>
@@ -316,7 +366,7 @@ namespace LGameFramework.GameCore.Asset
         /// <param name="abName">包名</param>
         /// <param name="async">是否异步</param>
         /// <param name="passive">是否被动</param>
-        private void LoadAssetBundleInternal(string abName, bool async, bool passive = false)
+        private Loader LoadAssetBundleInternal(string abName, bool async, bool passive = false)
         {
             AssetBundleRecord record;
             if (!TryGetAssetBundle(abName, out record) && !m_AssetLoaders.ContainsKey(abName))
@@ -326,12 +376,15 @@ namespace LGameFramework.GameCore.Asset
                 loader.AssetModule = this;
                 loader.Update();
                 m_AssetLoaders.Add(abName, loader);
+
             }
             else if (passive)
                 record.DpendsReferenceCount++; //已经加载过了 引用计数加1
 
             //如果是等待销毁的 移除标识
             RemoveABWaitDestroy(abName);
+
+            return m_AssetLoaders.GetValueOrDefault(abName, null);
         }
 
         #endregion
@@ -343,15 +396,15 @@ namespace LGameFramework.GameCore.Asset
         /// <typeparam name="T"></typeparam>
         /// <param name="assetName"></param>
         /// <returns></returns>
-        public Loader LoadAssetAsync<T>(string assetName)
+        internal Loader LoadAssetAsync<T>(string assetName)
         {
             return LoadAssetAsync(assetName, typeof(T));
         }
 
-        public void LoadAssetAsync<T>(string assetName, UnityAction<Loader> callBack)
+        internal void LoadAssetAsync<T>(string assetName, UnityAction<Loader> callBack)
         {
             Loader loader = LoadAssetAsync(assetName, typeof(T));
-            loader.onComplete = callBack;
+            loader.onComplete += callBack;
         }
 
         /// <summary>
@@ -360,7 +413,29 @@ namespace LGameFramework.GameCore.Asset
         /// <param name="assetName"></param>
         /// <param name="type"></param>
         /// <returns></returns>
-        public Loader LoadAssetAsync(string assetName, Type type)
+        internal Loader LoadAssetAsync(string assetName, Type type)
+        {
+            return LoadAssetInternal(assetName, type, true);
+        }
+
+        /// <summary>
+        /// 同步加载
+        /// </summary>
+        /// <param name="assetName"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        internal T LoadAsset<T>(string assetName) where T : UnityEngine.Object
+        {
+            Loader loader = LoadAssetInternal(assetName, typeof(T), false);
+            loader.Update();
+
+            if (typeof(T) == typeof(GameObject))
+                return loader.GetInstantiate<T>();
+
+            return loader.GetRawObject<T>();
+        }
+
+        private Loader LoadAssetInternal(string assetName, Type type, bool async)
         {
             Loader loader;
 
@@ -371,7 +446,7 @@ namespace LGameFramework.GameCore.Asset
                 {
                     case AssetLoadMode.AssetBundle:
                         loader = Pool.Get<AssetLoader>();
-                        loader.SetData(assetName.ToLower(), type, true);
+                        loader.SetData(assetName.ToLower(), type, async);
                         break;
                     case AssetLoadMode.Editor:
                         loader = Pool.Get<AssetEditorLoader>();
@@ -383,45 +458,9 @@ namespace LGameFramework.GameCore.Asset
                 m_AssetLoaders.Add(assetName, loader);
             }
 
-
             return loader;
         }
 
-        /// <summary>
-        /// 同步加载
-        /// </summary>
-        /// <param name="assetName"></param>
-        /// <param name="type"></param>
-        /// <returns></returns>
-        public T LoadAsset<T>(string assetName) where T : UnityEngine.Object
-        {
-            Loader loader;
-
-            RemoveWaitDestroy(assetName);
-            if (!m_AssetLoaders.TryGetValue(assetName, out loader))
-            {
-                switch (s_AssetLoadMode)
-                {
-                    case AssetLoadMode.AssetBundle:
-                        loader = Pool.Get<AssetLoader>();
-                        loader.SetData(assetName.ToLower(), typeof(T), false);
-                        break;
-                    case AssetLoadMode.Editor:
-                        loader = Pool.Get<AssetEditorLoader>();
-                        loader.SetData(assetName, typeof(T));
-                        break;
-                }
-
-                loader.AssetModule = this;
-                loader.Update();
-                m_AssetLoaders.Add(assetName, loader);
-            }
-
-            if (typeof(T) == typeof(GameObject))
-                return loader.GetInstantiate<T>();
-
-            return loader.GetRawObject<T>();
-        }
 
         /// <summary>
         /// 添加一个待下载的资源
@@ -429,7 +468,7 @@ namespace LGameFramework.GameCore.Asset
         /// <param name="downloadURL"></param>
         /// <param name="downloadPath"></param>
         /// <returns></returns>
-        public AssetFileDownloader EnqueueDownload(string downloadURL, string downloadPath)
+        internal AssetFileDownloader EnqueueDownload(string downloadURL, string downloadPath)
         {
             m_FileDownloadQueue ??= new AssetFileDownloadQueue();
             return m_FileDownloadQueue.Enqueue(downloadURL, downloadPath);
@@ -439,7 +478,7 @@ namespace LGameFramework.GameCore.Asset
         /// 移除加载器
         /// </summary>
         /// <param name="assetName"></param>
-        public void RemoveAssetLoader(string assetName)
+        internal void RemoveAssetLoader(string assetName)
         {
             if (m_AssetLoaders.TryGetValue(assetName, out Loader loader))
             {
@@ -452,7 +491,7 @@ namespace LGameFramework.GameCore.Asset
         /// 移除等待销毁 
         /// </summary>
         /// <param name="abName"></param>
-        public void RemoveABWaitDestroy(string abName)
+        internal void RemoveABWaitDestroy(string abName)
         { 
             if (m_WaitDestroyABList.Contains(abName))
                 m_WaitDestroyABList.Remove(abName);
@@ -462,7 +501,7 @@ namespace LGameFramework.GameCore.Asset
         /// 移除等待销毁 
         /// </summary>
         /// <param name="name"></param>
-        public void RemoveWaitDestroy(string name)
+        internal void RemoveWaitDestroy(string name)
         {
             if (m_WaitDestroyList.ContainsKey(name))
                 m_WaitDestroyList.Remove(name);

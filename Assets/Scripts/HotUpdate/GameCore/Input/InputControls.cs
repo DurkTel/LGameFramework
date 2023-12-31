@@ -111,15 +111,6 @@ namespace LGameFramework.GameCore.Input
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""AttackEx"",
-                    ""type"": ""Button"",
-                    ""id"": ""60b8f3ba-a340-4cce-91ed-b564dc31a363"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Revenges"",
                     ""type"": ""Button"",
                     ""id"": ""70ba7767-ac93-4a12-9b3b-e65a2ce018eb"",
@@ -136,13 +127,40 @@ namespace LGameFramework.GameCore.Input
                     ""processors"": ""StickDeadzone"",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""74ac4dc7-f9bf-4c51-8fd7-37d18651bc64"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Discard"",
+                    ""type"": ""Button"",
+                    ""id"": ""0a75a958-c26c-448b-8f87-b42aac335ca2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ZoomCamera"",
+                    ""type"": ""Value"",
+                    ""id"": ""5a491fe9-d3b1-47dc-83ba-379a018ca550"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
                     ""id"": ""fa3e4364-c2bb-40b4-926a-3eeaca14fcab"",
-                    ""path"": ""<Keyboard>/h"",
+                    ""path"": ""<Keyboard>/k"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -174,7 +192,7 @@ namespace LGameFramework.GameCore.Input
                 },
                 {
                     ""name"": """",
-                    ""id"": ""267021a9-1885-46ba-becc-ebc5ecafbf65"",
+                    ""id"": ""081afe9f-9bf5-44ca-97ce-a746044797af"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -230,7 +248,7 @@ namespace LGameFramework.GameCore.Input
                 {
                     ""name"": """",
                     ""id"": ""1afde551-1a58-4370-b65a-2037400ed28e"",
-                    ""path"": ""<Keyboard>/x"",
+                    ""path"": ""<Keyboard>/alt"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -273,17 +291,6 @@ namespace LGameFramework.GameCore.Input
                 },
                 {
                     ""name"": """",
-                    ""id"": ""127dd225-9b4a-4394-924a-b13b4822c2ca"",
-                    ""path"": ""<Keyboard>/f"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""AttackEx"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""7ec8804f-04fe-449b-92d4-5bbb9e076ad5"",
                     ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
@@ -296,7 +303,7 @@ namespace LGameFramework.GameCore.Input
                 {
                     ""name"": """",
                     ""id"": ""b697bd3d-5393-48a1-8c1d-b0ea38144ccb"",
-                    ""path"": ""<AndroidJoystick>/stick"",
+                    ""path"": ""<Joystick>/stick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -358,6 +365,39 @@ namespace LGameFramework.GameCore.Input
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d03e4a9d-0874-4695-b0b3-043b7feaebbe"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""72d1f219-28b1-4879-84b1-0fb13a2ccead"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Discard"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""de2cc361-c5a0-47a7-9d23-bef2616811ee"",
+                    ""path"": ""<Mouse>/scroll"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ZoomCamera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -375,9 +415,11 @@ namespace LGameFramework.GameCore.Input
             m_GamePlay_Weapon = m_GamePlay.FindAction("Weapon", throwIfNotFound: true);
             m_GamePlay_LightAttack = m_GamePlay.FindAction("LightAttack", throwIfNotFound: true);
             m_GamePlay_HeavyAttack = m_GamePlay.FindAction("HeavyAttack", throwIfNotFound: true);
-            m_GamePlay_AttackEx = m_GamePlay.FindAction("AttackEx", throwIfNotFound: true);
             m_GamePlay_Revenges = m_GamePlay.FindAction("Revenges", throwIfNotFound: true);
             m_GamePlay_Move = m_GamePlay.FindAction("Move", throwIfNotFound: true);
+            m_GamePlay_Interact = m_GamePlay.FindAction("Interact", throwIfNotFound: true);
+            m_GamePlay_Discard = m_GamePlay.FindAction("Discard", throwIfNotFound: true);
+            m_GamePlay_ZoomCamera = m_GamePlay.FindAction("ZoomCamera", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -448,9 +490,11 @@ namespace LGameFramework.GameCore.Input
         private readonly InputAction m_GamePlay_Weapon;
         private readonly InputAction m_GamePlay_LightAttack;
         private readonly InputAction m_GamePlay_HeavyAttack;
-        private readonly InputAction m_GamePlay_AttackEx;
         private readonly InputAction m_GamePlay_Revenges;
         private readonly InputAction m_GamePlay_Move;
+        private readonly InputAction m_GamePlay_Interact;
+        private readonly InputAction m_GamePlay_Discard;
+        private readonly InputAction m_GamePlay_ZoomCamera;
         public struct GamePlayActions
         {
             private @InputControls m_Wrapper;
@@ -464,9 +508,11 @@ namespace LGameFramework.GameCore.Input
             public InputAction @Weapon => m_Wrapper.m_GamePlay_Weapon;
             public InputAction @LightAttack => m_Wrapper.m_GamePlay_LightAttack;
             public InputAction @HeavyAttack => m_Wrapper.m_GamePlay_HeavyAttack;
-            public InputAction @AttackEx => m_Wrapper.m_GamePlay_AttackEx;
             public InputAction @Revenges => m_Wrapper.m_GamePlay_Revenges;
             public InputAction @Move => m_Wrapper.m_GamePlay_Move;
+            public InputAction @Interact => m_Wrapper.m_GamePlay_Interact;
+            public InputAction @Discard => m_Wrapper.m_GamePlay_Discard;
+            public InputAction @ZoomCamera => m_Wrapper.m_GamePlay_ZoomCamera;
             public InputActionMap Get() { return m_Wrapper.m_GamePlay; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -503,15 +549,21 @@ namespace LGameFramework.GameCore.Input
                 @HeavyAttack.started += instance.OnHeavyAttack;
                 @HeavyAttack.performed += instance.OnHeavyAttack;
                 @HeavyAttack.canceled += instance.OnHeavyAttack;
-                @AttackEx.started += instance.OnAttackEx;
-                @AttackEx.performed += instance.OnAttackEx;
-                @AttackEx.canceled += instance.OnAttackEx;
                 @Revenges.started += instance.OnRevenges;
                 @Revenges.performed += instance.OnRevenges;
                 @Revenges.canceled += instance.OnRevenges;
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
+                @Discard.started += instance.OnDiscard;
+                @Discard.performed += instance.OnDiscard;
+                @Discard.canceled += instance.OnDiscard;
+                @ZoomCamera.started += instance.OnZoomCamera;
+                @ZoomCamera.performed += instance.OnZoomCamera;
+                @ZoomCamera.canceled += instance.OnZoomCamera;
             }
 
             private void UnregisterCallbacks(IGamePlayActions instance)
@@ -543,15 +595,21 @@ namespace LGameFramework.GameCore.Input
                 @HeavyAttack.started -= instance.OnHeavyAttack;
                 @HeavyAttack.performed -= instance.OnHeavyAttack;
                 @HeavyAttack.canceled -= instance.OnHeavyAttack;
-                @AttackEx.started -= instance.OnAttackEx;
-                @AttackEx.performed -= instance.OnAttackEx;
-                @AttackEx.canceled -= instance.OnAttackEx;
                 @Revenges.started -= instance.OnRevenges;
                 @Revenges.performed -= instance.OnRevenges;
                 @Revenges.canceled -= instance.OnRevenges;
                 @Move.started -= instance.OnMove;
                 @Move.performed -= instance.OnMove;
                 @Move.canceled -= instance.OnMove;
+                @Interact.started -= instance.OnInteract;
+                @Interact.performed -= instance.OnInteract;
+                @Interact.canceled -= instance.OnInteract;
+                @Discard.started -= instance.OnDiscard;
+                @Discard.performed -= instance.OnDiscard;
+                @Discard.canceled -= instance.OnDiscard;
+                @ZoomCamera.started -= instance.OnZoomCamera;
+                @ZoomCamera.performed -= instance.OnZoomCamera;
+                @ZoomCamera.canceled -= instance.OnZoomCamera;
             }
 
             public void RemoveCallbacks(IGamePlayActions instance)
@@ -580,9 +638,11 @@ namespace LGameFramework.GameCore.Input
             void OnWeapon(InputAction.CallbackContext context);
             void OnLightAttack(InputAction.CallbackContext context);
             void OnHeavyAttack(InputAction.CallbackContext context);
-            void OnAttackEx(InputAction.CallbackContext context);
             void OnRevenges(InputAction.CallbackContext context);
             void OnMove(InputAction.CallbackContext context);
+            void OnInteract(InputAction.CallbackContext context);
+            void OnDiscard(InputAction.CallbackContext context);
+            void OnZoomCamera(InputAction.CallbackContext context);
         }
     }
 }

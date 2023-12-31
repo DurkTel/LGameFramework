@@ -4,6 +4,9 @@ using LGameFramework.GameBase;
 
 namespace LGameFramework.GameCore.Asset
 {
+    /// <summary>
+    /// 资源清单
+    /// </summary>
     public class AssetManifest_Bundle : ScriptableObject, ISerializationCallbackReceiver
     {
         public static string s_AbPath = "Assets/LGAssetManifest.asset";

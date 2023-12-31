@@ -1,12 +1,18 @@
-#if UNITY_EDITOR
 using LGameFramework.GameBase;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
 #endif
+using UnityEngine;
 
 namespace LGameFramework.GameCore.Asset
 {
     public class AssetEditorLoader : Loader
     {
+        public override float Progress { get { return 1f; } }
+
         //编辑模式下加载没有异步
         public override void SetData(string assetName, System.Type assetType, bool async)
         {

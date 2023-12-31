@@ -28,6 +28,8 @@ public class ProcedureCheckVersion : FSM_Status<ProcedureLaunchProcess>
         {
             if (m_WebRequestAsync.webRequest.result != UnityWebRequest.Result.Success)
             {
+                GameLogger.FATAL_FORMAT("连接错误！资源地址：{0}", m_WebRequest.url);
+                GameLogger.FATAL(m_WebRequestAsync.webRequest.error);
                 subMachine.ChangeState(ProcedureLaunchProcess.ProcedureError);
                 return;
             }

@@ -13,7 +13,7 @@ namespace LGameFramework.GameCore
         /// <summary>
         /// 所有注册的委托
         /// </summary>
-        private Dictionary<FMEventRegister, LinkedList<EventHandler<GameEventArg>>> m_EventHandlers;
+        private Dictionary<GMEventRegister, LinkedList<EventHandler<GameEventArg>>> m_EventHandlers;
 
         /// <summary>
         /// 临时变量
@@ -44,19 +44,19 @@ namespace LGameFramework.GameCore
         /// 派发一个委托的一帧最大耗时ms 超过该值下一委托将在下一帧进行
         /// </summary>
         private long m_AsyncMaxTime;
-        internal override int Priority => 1;
+        public override int Priority => 1;
 
         public int AllEventHandlersCout { get { return m_EventHandlers.Count; } }
 
-        internal override void OnInit()
+        public override void OnInit()
         {
-            m_EventHandlers = new Dictionary<FMEventRegister, LinkedList<EventHandler<GameEventArg>>>();
+            m_EventHandlers = new Dictionary<GMEventRegister, LinkedList<EventHandler<GameEventArg>>>();
             m_EventQueue = new Queue<GameEvent>();
             m_StopWatch = new System.Diagnostics.Stopwatch();
             m_AsyncMaxTime = 30; //30ms 约 30fps/s
         }
 
-        internal override void Update(float deltaTime, float unscaledTime)
+        public override void Update(float deltaTime, float unscaledTime)
         {
             while (m_Event != null || m_EventQueue.Count > 0)
             {
@@ -94,7 +94,7 @@ namespace LGameFramework.GameCore
         /// </summary>
         /// <param name="id">事件ID</param>
         /// <param name="handler">委托方法</param>
-        public void RegisterEvent(FMEventRegister id, EventHandler<GameEventArg> handler)
+        internal void RegisterEvent(GMEventRegister id, EventHandler<GameEventArg> handler)
         {
             if (handler == null)
             {
@@ -118,7 +118,7 @@ namespace LGameFramework.GameCore
         /// <param name="id">事件ID</param>
         /// <param name="handler">委托方法</param>
         /// <returns>移除结果</returns>
-        public bool UnRegisterEvent(FMEventRegister id, EventHandler<GameEventArg> handler)
+        internal bool UnRegisterEvent(GMEventRegister id, EventHandler<GameEventArg> handler)
         {
             if (m_EventHandlers.TryGetValue(id, out var linked))
             {
@@ -136,7 +136,7 @@ namespace LGameFramework.GameCore
         /// <param name="id">事件ID</param>
         /// <param name="sender">发布者</param>
         /// <param name="args">事件参数</param>
-        public void Dispatch(FMEventRegister id, object sender, GameEventArg args)
+        internal void Dispatch(GMEventRegister id, object sender, GameEventArg args)
         {
             GameEvent eventNode = GameEvent.Get(id, sender, args);
             m_EventQueue.Enqueue(eventNode);
@@ -148,7 +148,7 @@ namespace LGameFramework.GameCore
         /// <param name="id">事件ID</param>
         /// <param name="sender">发布者</param>
         /// <param name="args">事件参数</param>
-        public void DispatchImmediately(FMEventRegister id, object sender, GameEventArg args)
+        internal void DispatchImmediately(GMEventRegister id, object sender, GameEventArg args)
         {
             GameEvent eventNode = GameEvent.Get(id, sender, args);
             HandleEvent(sender, eventNode, false);
@@ -161,7 +161,7 @@ namespace LGameFramework.GameCore
         /// </summary>
         /// <param name="id">事件ID</param>
         /// <returns>是否存在</returns>
-        public bool Exist(FMEventRegister id)
+        internal bool Exist(GMEventRegister id)
         {
             return m_EventHandlers.ContainsKey(id); 
         }

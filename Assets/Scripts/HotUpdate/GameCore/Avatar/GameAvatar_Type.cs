@@ -17,6 +17,10 @@ namespace LGameFramework.GameCore.Avatar
             /// </summary>
             Body,
             /// <summary>
+            /// 衣服
+            /// </summary>
+            Clothing,
+            /// <summary>
             /// 头部
             /// </summary>
             Head,
@@ -25,13 +29,13 @@ namespace LGameFramework.GameCore.Avatar
             /// </summary>
             Hair,
             /// <summary>
-            /// 手
+            /// 眼睛
             /// </summary>
-            Hand,
+            Eye,
             /// <summary>
-            /// 腿
+            /// 装饰
             /// </summary>
-            Leg,
+            Accessories,
             /// <summary>
             /// 末位标识
             /// </summary>

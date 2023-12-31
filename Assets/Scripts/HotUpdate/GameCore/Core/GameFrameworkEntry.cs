@@ -6,84 +6,49 @@ using UnityEngine;
 namespace LGameFramework.GameCore
 {
     /// <summary>
-    /// 游戏入口
+    /// 游戏框架入口
     /// </summary>
-    public class GameFrameworkEntry : MonoBehaviour
+    public class GameFrameworkEntry : GameEntry<GameFrameworkEntry>
     {
-        private static Transform m_GameRoot;
+        private static bool s_StartLogic;
 
-        private static readonly LinkedList<FrameworkModule> s_AllFrameworkModule = new LinkedList<FrameworkModule>();
-
-        private static readonly Dictionary<Type, FrameworkModule> s_AllFrameworkModuleDict = new Dictionary<Type, FrameworkModule>();
-
-        public static void Instantiate()
+        private Transform m_GameRoot;
+        public override Transform GameRoot { get { return m_GameRoot; } }
+        public static void Instantiate(bool logic = true)
         {
+            s_StartLogic = logic;
             GameObject go = new GameObject("GameFrameworkEntry");
-            m_GameRoot = go.transform;
-            go.AddComponent<GameFrameworkEntry>();
+            var entry = go.AddComponent<GameFrameworkEntry>();
+            entry.m_GameRoot = go.transform;
             DontDestroyOnLoad(go);
+            DefaultLoadingGUI.SetProgressText("正在进入游戏");
             GameLogger.INFO("游戏入口实例化完成，进入游戏");
         }
 
-        private void OnEnable()
+        protected void Awake()
         {
-            foreach (FrameworkModule module in s_AllFrameworkModule)
+            m_Entry = this;
+
+#if UNITY_EDITOR
+            gameObject.AddComponent<DebugHelper>();
+#endif
+
+            if (s_StartLogic)
             {
-                module.OnEnable();
+                GameObject gameLogic = AssetUtility.LoadAsset<GameObject>("GameMainLogic.prefab");
+                DontDestroyOnLoad(gameLogic);
+
+                AddAOTModuleHelper<GMPoolHelper>();
             }
-        }
 
-        private void OnDisable()
-        {
-            foreach (FrameworkModule module in s_AllFrameworkModule)
-            {
-                module.OnDisable();
-            }
-        }
-
-        private void Awake()
-        {
-            GameObject gameLogic = GetModule<Asset.GMAssetManager>().LoadAsset<GameObject>("GameMainLogic.prefab");
-            DontDestroyOnLoad(gameLogic);
-
-            AddAOTModuleHelper<GMPoolHelper>();
-        }
-
-        private void Update()
-        {
-            float deltaTime = Time.deltaTime;
-            float unscaledTime = Time.unscaledDeltaTime;
-            foreach (FrameworkModule module in s_AllFrameworkModule)
-            {
-                module.Update(deltaTime, unscaledTime);
-            }
-        }
-
-        private void LateUpdate()
-        {
-            float deltaTime = Time.deltaTime;
-            float unscaledTime = Time.unscaledTime;
-            foreach (FrameworkModule module in s_AllFrameworkModule)
-            {
-                module.LateUpdate(deltaTime, unscaledTime);
-            }
-        }
-
-        private void FixedUpdate()
-        {
-            float fixedDeltaTime = Time.fixedDeltaTime;
-            float unscaledTime = Time.unscaledTime;
-            foreach (FrameworkModule module in s_AllFrameworkModule)
-            {
-                module.FixedUpdate(fixedDeltaTime, unscaledTime);
-            }
+            GameObjectPool.OnInit();
         }
 
         /// <summary>
         /// 添加AOT模块助手
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public void AddAOTModuleHelper<T>() where T :Component
+        public void AddAOTModuleHelper<T>() where T : Component
         {
 #if UNITY_EDITOR
             GameObject game = new GameObject(typeof(T).Name);
@@ -94,67 +59,28 @@ namespace LGameFramework.GameCore
         }
 
         /// <summary>
-        /// 获取框架模块（相当于全局模块单例，获取后最好进行缓存）
+        /// 获取框架模块
         /// </summary>
         /// <typeparam name="T">模块类型</typeparam>
         /// <returns></returns>
         public static T GetModule<T>() where T : FrameworkModule, new()
         {
-            if (s_AllFrameworkModuleDict.TryGetValue(typeof(T), out var module))
-                return module as T;
+            if (m_Entry.m_WaitToAdd.Count > 0)
+            {
+                foreach (var module in m_Entry.m_WaitToAdd)
+                {
+                    if (module.GetType() == typeof(T))
+                        return (T)module;
+                }
+            }
+
+            foreach (var module in m_Entry.m_AllModule)
+            {
+                if (module.GetType() == typeof(T))
+                    return (T)module;
+            }
 
             return CreateModule<T>();
-        }
-
-        /// <summary>
-        /// 创建模块（没有对应模块实例时，去惰性生成一个）
-        /// </summary>
-        /// <typeparam name="T">模块类型</typeparam>
-        /// <returns></returns>
-        private static T CreateModule<T>() where T : FrameworkModule, new()
-        { 
-            T module = new T();
-            module.GameObject = new GameObject(typeof(T).Name);
-            module.Transform = module.GameObject.transform;
-            module.OnInit();
-            DontDestroyOnLoad(module.GameObject);
-            module.Transform.SetParentZero(m_GameRoot);
-
-#if UNITY_EDITOR
-            //添加管理模块的编辑器脚本 便于观察数据等
-            string moduleHelper = typeof(T).FullName + "Helper";
-            Type type = Type.GetType(moduleHelper);
-            if (type != null)
-                (module.GameObject.AddComponent(type) as IFrameworkEditorHelper<T>).Attach(module);
-#endif
-
-            s_AllFrameworkModuleDict.Add(typeof(T), module);
-
-            LinkedListNode<FrameworkModule> current = s_AllFrameworkModule.First;
-
-            //根据优先级选择插入的位置
-            while (current != null)
-            {
-                if (module.Priority > current.Value.Priority)
-                    break;
-
-                current = current.Next;
-            }
-
-            if (current != null)
-                s_AllFrameworkModule.AddBefore(current, module);
-            else
-                s_AllFrameworkModule.AddLast(module);
-
-            return module;
-        }
-
-        public void OnDestroy()
-        {
-            foreach (FrameworkModule module in s_AllFrameworkModule)
-            {
-                module.OnDestroy();
-            }
         }
     }
 }

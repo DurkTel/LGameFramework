@@ -27,8 +27,7 @@ namespace LGameFramework.GameCore.Asset
         /// <summary>
         /// 加载进度
         /// </summary>
-        protected float m_Progress;
-        public float Progress { get { return m_Progress; } }
+        public abstract float Progress { get; }
         /// <summary>
         /// 优先级
         /// </summary>
@@ -138,7 +137,7 @@ namespace LGameFramework.GameCore.Asset
 
         public bool MoveNext()
         {
-            return !m_IsDone;
+            return m_IsDone;
         }
 
         public void Reset()

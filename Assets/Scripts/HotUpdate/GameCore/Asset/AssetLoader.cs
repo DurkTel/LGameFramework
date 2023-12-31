@@ -22,6 +22,9 @@ namespace LGameFramework.GameCore.Asset
         /// 是否加载中
         /// </summary>
         private bool m_IsLoading;
+
+        public override float Progress { get { return m_AssetRequest != null ? m_AssetRequest.progress : 0f; } }
+
         public override void Dispose()
         {
             m_Error = false;
@@ -64,7 +67,7 @@ namespace LGameFramework.GameCore.Asset
         {
             if (!AssetModule.TryGetAssetBundle(abName, out m_AssetRecord))
             {
-                AssetModule.LoadAssetBundle(abName, false);
+                AssetModule.LoadAssetBundle(abName);
                 m_AssetRecord = AssetModule.GetAssetBundle(abName);
             }
 
@@ -85,12 +88,12 @@ namespace LGameFramework.GameCore.Asset
         private AssetBundleRequest LoadAsync(string abName, string assetName, Type type)
         {
             //走进来代表没加载/下载完
-            if (!AssetModule.TryGetAssetBundle(abName, out m_AssetRecord))
+            if (!AssetModule.TryGetAssetBundle(abName, out m_AssetRecord) || !m_AssetRecord.IsLoadComplete)
             {
                 if (!m_IsLoading)
                 {
                     //通知管理器加载|添加引用计数
-                    AssetModule.LoadAssetBundle(abName, true);
+                    AssetModule.LoadAssetBundleAsync(abName);
                     m_IsLoading = true;
                 }
                 return null;
@@ -110,6 +113,7 @@ namespace LGameFramework.GameCore.Asset
                 m_BundleName ??= GetBundleName(m_AssetName);
                 if (string.IsNullOrEmpty(m_BundleName) || string.IsNullOrEmpty(m_AssetName))
                 {
+                    GameLogger.ERROR_FORMAT("AB包加载异常，{0}该资源找不到对应AB包名", m_AssetName);
                     m_Error = true;
                     AssetModule.RemoveAssetLoader(m_AssetName);
                     return;
