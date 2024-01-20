@@ -93,25 +93,4 @@ namespace LGameFramework.GameCore.GameEntity
         /// </summary>
         Prop,
     }
-
-    /// <summary>
-    /// 实体状态
-    /// 改变实体的动画标识
-    /// </summary>
-    public enum EntityState
-    { 
-        /// <summary>
-        /// 通常
-        /// </summary>
-        Normal,
-        /// <summary>
-        /// 战斗状态
-        /// </summary>
-        Fight,
-        /// <summary>
-        /// 手持中
-        /// </summary>
-        CarryUp,
-        Death
-    }
 }

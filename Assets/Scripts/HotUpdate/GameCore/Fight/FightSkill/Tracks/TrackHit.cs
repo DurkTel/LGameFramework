@@ -16,16 +16,12 @@ namespace LGameFramework.GameCore.Fight
         public override void OnEnterClip(int index)
         {
             base.OnEnterClip(index);
-            EntityUtility.DispatchComponentEvent(Entity, GMEntityManager.ComponentEvent.OnEnableFightContactDetection,
-                CommonEventArg.Get(true, TrackGroup.GroupID, HitCount));
         }
 
         public override void OnExitClip(int index)
         {
             base.OnExitClip(index);
 
-            EntityUtility.DispatchComponentEvent(Entity, GMEntityManager.ComponentEvent.OnEnableFightContactDetection,
-                CommonEventArg.Get(false, TrackGroup.GroupID, HitCount));
         }
     }
 }

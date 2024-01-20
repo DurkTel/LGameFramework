@@ -11,8 +11,10 @@ using LGameFramework.GameLogic;
 using LGameFramework.GameLogic.GUI;
 using LGameFramework.GameLogic.Level;
 using System;
-using System.Diagnostics;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using static LGameFramework.GameCore.GameWorldMessage;
 using static LGameFramework.GameCore.Input.GMInputManager;
 
 namespace LGameFramework.GameCore
@@ -25,47 +27,28 @@ namespace LGameFramework.GameCore
 
         public static void OnInit()
         {
-            UIUtility.OpenView<LoginView>();
-
             //初始化UI
             GameLogicEntry.GetModule<GMGUIManager>();
 
             //初始化副本管理
             GameLogicEntry.GetModule<GMLevelManager>();
 
-            
+            EntityUtility.EnterEntity(new TestEntity());
         }
 
         public static void OninitWorldMessage()
         {
-            //输入监听
-            InputUtility.RegisterListener((InputActionArgs.InputAction_Look, InputMode.Direction), (p)=> 
+            TreeNode<int> rootNode = new TreeNode<int>(0);
+            rootNode.Add(new TreeNode<int>(1));
+            rootNode.Add(new TreeNode<int>(2));
+            foreach (var node in rootNode)
             {
-                GameFrameworkEntry.GetModule<GMOrbitCamera>().GetAxisInput(p.Direction);
-            });
-            InputUtility.RegisterListener((InputActionArgs.InputAction_ZoomCamera, InputMode.Direction), (p) =>
-            {
-                Vector2 input = p.Direction;
-                float delta = input.y / 960f;
-                GameFrameworkEntry.GetModule<GMOrbitCamera>().GetAxisScroll(delta);
-            });
-
-            //世界事件
-            EventUtility.RegisterEvent(GMEventRegister.SCENE_LOAD_COMPLETE, OnSceneLoadCompele);
-
+                Debug.Log(node.Data);
+            }
 
 
         }
 
 
-        private static void OnSceneLoadCompele(object sender, GameEventArg arg)
-        {
-            //var first = ((CommonEventArg)arg).GetData<bool>(1);
-            //if (first)
-            //{
-            //    EntityUtility.EnterEntity(new MainPlayerArchetype());
-            //}
-
-        }
     }
 }

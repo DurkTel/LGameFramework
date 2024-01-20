@@ -16,8 +16,6 @@ namespace LGameFramework.GameLogic
         {
             GameLogicEntry.Instantiate();
 
-            DefaultLoadingGUI.SetActive(false);
-
             GameWorldMessage.OnInit();
 
         }

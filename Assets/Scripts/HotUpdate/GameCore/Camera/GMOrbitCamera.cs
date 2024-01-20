@@ -1,5 +1,6 @@
 ﻿
 using LGameFramework.GameBase;
+using LGameFramework.GameBase.Culling;
 using LGameFramework.GameCore.Asset;
 using LGameFramework.GameCore.GameEntity;
 using UnityEngine;
@@ -87,6 +88,11 @@ namespace LGameFramework.GameCore
         /// </summary>
         private Camera m_RegularCamera;
         public Camera RegularCamera { get { return m_RegularCamera; } }
+        /// <summary>
+        /// 对象裁切组
+        /// </summary>
+        private ObjectCullingGroup m_ObjectCullingGroup;
+        public ObjectCullingGroup ObjectCullingGroup { get { return m_ObjectCullingGroup; } }
         [SerializeField]
         private bool m_InvertYAxis = true;
         [SerializeField]
@@ -131,6 +137,10 @@ namespace LGameFramework.GameCore
             m_PostProcessLayer.volumeLayer = 1;
             m_PostProcessLayer.volumeTrigger = Transform;
             m_DisableInput = false;
+
+            m_ObjectCullingGroup = new ObjectCullingGroup();
+            m_ObjectCullingGroup.TargetCamera = m_RegularCamera;
+
             //Cursor.lockState = CursorLockMode.Locked;
         }
 
@@ -171,6 +181,12 @@ namespace LGameFramework.GameCore
             }
 
             Transform.SetPositionAndRotation(lookPosition, lookRotation);
+        }
+
+        public override void OnDestroy()
+        {
+            base.OnDestroy();
+            m_ObjectCullingGroup.Dispose();
         }
 
         /// <summary>
@@ -302,11 +318,8 @@ namespace LGameFramework.GameCore
             if (m_Distance > 8f)
                 m_Distance = 8f;
 
-            int id = EntityUtility.GetMainPlayer();
+            int id = -1;
             if (id == -1) return;
-            EntityUtility.DispatchComponentEvent(EntityUtility.GetMainPlayer(),
-                GMEntityManager.ComponentEvent.OnRequestLookAt,
-                CommonEventArg.Get(Camera.main.transform, m_Distance <= 3.5f ? 1f : 0f));
         }
 
         public void SetDisableInput(bool value)

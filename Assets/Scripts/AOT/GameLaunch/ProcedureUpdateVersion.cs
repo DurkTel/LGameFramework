@@ -69,7 +69,6 @@ public class ProcedureUpdateVersion : FSM_Status<ProcedureLaunchProcess>
     public override void OnEnter()
     {
         m_GamePath = GamePathSetting.Get().CurrentPlatform();
-        DefaultLoadingGUI.SetProgressText("正在检查更新文件");
 
         m_DownloadList = new List<string>();
         BuildFiles netFiles;

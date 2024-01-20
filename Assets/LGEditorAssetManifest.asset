@@ -43,26 +43,10 @@ MonoBehaviour:
     assetPath: Assets/Editor/Resources/GUISkin.guiskin
   - assetName: link.xml
     assetPath: Assets/HybridCLRData/Generated/link.xml
-  - assetName: assetManifest.json
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/assetManifest.json
-  - assetName: buildingFile.json
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/buildingFile.json
-  - assetName: version.txt
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/version.txt
-  - assetName: TextMesh Pro User Guide 2016.pdf
-    assetPath: Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf
-  - assetName: LiberationSans - OFL.txt
-    assetPath: Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt
-  - assetName: LiberationSans.ttf
-    assetPath: Assets/TextMesh Pro/Fonts/LiberationSans.ttf
   - assetName: msyh.ttc
     assetPath: Assets/TextMesh Pro/Fonts/msyh.ttc
   - assetName: Texts.txt
     assetPath: Assets/TextMesh Pro/Fonts/Texts.txt
-  - assetName: LineBreaking Following Characters.txt
-    assetPath: Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt
-  - assetName: LineBreaking Leading Characters.txt
-    assetPath: Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt
   - assetName: TMP Settings.asset
     assetPath: Assets/TextMesh Pro/Resources/TMP Settings.asset
   - assetName: TMPro.cginc
@@ -99,12 +83,6 @@ MonoBehaviour:
     assetPath: Assets/TextMesh Pro/Shaders/TMP_SDF.shader
   - assetName: TMP_Sprite.shader
     assetPath: Assets/TextMesh Pro/Shaders/TMP_Sprite.shader
-  - assetName: EmojiOne Attribution.txt
-    assetPath: Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt
-  - assetName: EmojiOne.json
-    assetPath: Assets/TextMesh Pro/Sprites/EmojiOne.json
-  - assetName: EmojiOne.png
-    assetPath: Assets/TextMesh Pro/Sprites/EmojiOne.png
   - assetName: darkHitEffect.prefab
     assetPath: Assets/ArtModules/Effect/darkHitEffect/darkHitEffect.prefab
   - assetName: AnimationNewController.controller
@@ -139,31 +117,20 @@ MonoBehaviour:
     assetPath: Assets/ArtModules/ScriptObject/GameSetting/FilePathSetting.asset
   - assetName: LaunchSetting.asset
     assetPath: Assets/ArtModules/ScriptObject/GameSetting/LaunchSetting.asset
+  - assetName: DOTween.dll
+    assetPath: Assets/Plugins/Demigiant/DOTween/DOTween.dll
+  - assetName: DOTween.dll.mdb
+    assetPath: Assets/Plugins/Demigiant/DOTween/DOTween.dll.mdb
+  - assetName: DOTween.XML
+    assetPath: Assets/Plugins/Demigiant/DOTween/DOTween.XML
   - assetName: Assembly-GameBase.asmdef
     assetPath: Assets/Scripts/AOT/GameBase/Assembly-GameBase.asmdef
   - assetName: Assembly-GameCore.asmdef
     assetPath: Assets/Scripts/HotUpdate/GameCore/Assembly-GameCore.asmdef
   - assetName: Assembly-GameLogic.asmdef
     assetPath: Assets/Scripts/HotUpdate/GameLogic/Assembly-GameLogic.asmdef
-  - assetName: 002
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/002
-  - assetName: 002.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/002.manifest
-  - assetName: LiberationSans SDF - Drop Shadow.mat
-    assetPath: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF
-      - Drop Shadow.mat
-  - assetName: LiberationSans SDF - Fallback.asset
-    assetPath: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF
-      - Fallback.asset
-  - assetName: LiberationSans SDF - Outline.mat
-    assetPath: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF
-      - Outline.mat
-  - assetName: LiberationSans SDF.asset
-    assetPath: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
-  - assetName: EmojiOne.asset
-    assetPath: Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset
-  - assetName: Default Style Sheet.asset
-    assetPath: Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset
+  - assetName: Unity.UosCdn.Editor.asmdef
+    assetPath: Assets/Scripts/UosCdnSDK/Editor/Unity.UosCdn.Editor.asmdef
   - assetName: gate_new.ogg
     assetPath: Assets/ArtModules/Audio/Music/city/gate_new.ogg
   - assetName: forest_town.ogg
@@ -924,22 +891,6 @@ MonoBehaviour:
     assetPath: Assets/ArtModules/Scene/Texture/TrainingGround/training_ground_9.png
   - assetName: InputControls.inputactions
     assetPath: Assets/Scripts/HotUpdate/GameCore/Input/InputControls.inputactions
-  - assetName: fonts.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/fonts.asset
-  - assetName: fonts.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/fonts.asset.manifest
-  - assetName: gamelogic.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gamelogic.asset
-  - assetName: gamelogic.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gamelogic.asset.manifest
-  - assetName: gamemainlogic.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gamemainlogic.asset
-  - assetName: gamemainlogic.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gamemainlogic.asset.manifest
-  - assetName: scriptobject.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/scriptobject.asset
-  - assetName: scriptobject.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/scriptobject.asset.manifest
   - assetName: beamswda_01.ogg
     assetPath: Assets/ArtModules/Audio/Sound/swordman/weapon/beamswda_01.ogg
   - assetName: beamswda_02.ogg
@@ -1154,30 +1105,10 @@ MonoBehaviour:
     assetPath: "Assets/ArtModules/Scene/Texture/\u8D5B\u5229\u4E9A\u623F\u95F4/gate_new_glow_eff.img/8.png"
   - assetName: 9.png
     assetPath: "Assets/ArtModules/Scene/Texture/\u8D5B\u5229\u4E9A\u623F\u95F4/gate_new_glow_eff.img/9.png"
-  - assetName: gameaudiomixer.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/audio/gameaudiomixer.asset
-  - assetName: gameaudiomixer.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/audio/gameaudiomixer.asset.manifest
-  - assetName: darkhiteffect.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/effect/darkhiteffect.asset
-  - assetName: darkhiteffect.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/effect/darkhiteffect.asset.manifest
-  - assetName: models.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/model/models.asset
-  - assetName: models.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/model/models.asset.manifest
-  - assetName: skeleton.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/model/skeleton.asset
-  - assetName: skeleton.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/model/skeleton.asset.manifest
-  - assetName: testart.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/model/testart.asset
-  - assetName: testart.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/model/testart.asset.manifest
-  - assetName: gamesetting.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/scriptobject/gamesetting.asset
-  - assetName: gamesetting.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/scriptobject/gamesetting.asset.manifest
+  - assetName: LICENSE
+    assetPath: Assets/Scripts/UosCdnSDK/Editor/Package/wcs-csharp-sdk-1.0.1.0/LICENSE
+  - assetName: README.md
+    assetPath: Assets/Scripts/UosCdnSDK/Editor/Package/wcs-csharp-sdk-1.0.1.0/README.md
   - assetName: role_live2d_1_0.png
     assetPath: Assets/ArtModules/GUI/Role/Images/Single/live2d/role_live2d_1_0.png
   - assetName: back_far.img_0.png
@@ -1386,67 +1317,9 @@ MonoBehaviour:
     assetPath: Assets/ArtModules/Scene/Texture/Elvengard/sprite_map_town_04_elvengard_tile/tile_add40.img/tile_add40.img_0.png
   - assetName: tile_ex.img_0.png
     assetPath: Assets/ArtModules/Scene/Texture/Elvengard/sprite_map_town_04_elvengard_tile/tile_ex.img/tile_ex.img_0.png
-  - assetName: city.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/audio/music/city.asset
-  - assetName: city.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/audio/music/city.asset.manifest
-  - assetName: copy.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/audio/music/copy.asset
-  - assetName: copy.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/audio/music/copy.asset.manifest
-  - assetName: goblin.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/audio/sound/goblin.asset
-  - assetName: goblin.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/audio/sound/goblin.asset.manifest
-  - assetName: swordman.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/audio/sound/swordman.asset
-  - assetName: swordman.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/audio/sound/swordman.asset.manifest
-  - assetName: images.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/images.asset
-  - assetName: images.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/images.asset.manifest
-  - assetName: roleicon.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/images/roleicon.asset
-  - assetName: roleicon.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/images/roleicon.asset.manifest
-  - assetName: default_loading_gui.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/prefabs/default_loading_gui.asset
-  - assetName: default_loading_gui.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/prefabs/default_loading_gui.asset.manifest
-  - assetName: gui_createrole_view.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/prefabs/gui_createrole_view.asset
-  - assetName: gui_createrole_view.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/prefabs/gui_createrole_view.asset.manifest
-  - assetName: gui_default_view.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/prefabs/gui_default_view.asset
-  - assetName: gui_default_view.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/prefabs/gui_default_view.asset.manifest
-  - assetName: create_role_bg_1.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/images/single/create_role_bg_1.asset
-  - assetName: create_role_bg_1.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/images/single/create_role_bg_1.asset.manifest
-  - assetName: create_role_bg_2.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/images/single/create_role_bg_2.asset
-  - assetName: create_role_bg_2.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/images/single/create_role_bg_2.asset.manifest
-  - assetName: create_role_bg_3.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/images/single/create_role_bg_3.asset
-  - assetName: create_role_bg_3.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/images/single/create_role_bg_3.asset.manifest
-  - assetName: create_role_bg_4.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/images/single/create_role_bg_4.asset
-  - assetName: create_role_bg_4.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/images/single/create_role_bg_4.asset.manifest
-  - assetName: create_role_bg_5.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/images/single/create_role_bg_5.asset
-  - assetName: create_role_bg_5.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/images/single/create_role_bg_5.asset.manifest
-  - assetName: create_role_bg_6.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/images/single/create_role_bg_6.asset
-  - assetName: create_role_bg_6.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/images/single/create_role_bg_6.asset.manifest
-  - assetName: role_live2d_1_0.asset
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/images/single/live2d/role_live2d_1_0.asset
-  - assetName: role_live2d_1_0.asset.manifest
-    assetPath: Assets/StreamingAssets/StandaloneWindows64/002/artmodules/gui/role/images/single/live2d/role_live2d_1_0.asset.manifest
+  - assetName: WcsLib.sln
+    assetPath: Assets/Scripts/UosCdnSDK/Editor/Package/wcs-csharp-sdk-1.0.1.0/lib/WcsLib.sln
+  - assetName: COSXML.csproj
+    assetPath: Assets/Scripts/UosCdnSDK/Editor/Package/Tencent.QCloud.Cos.Sdk.5.4.9/src/COSXML/COSXML.csproj
+  - assetName: WcsLib.csproj
+    assetPath: Assets/Scripts/UosCdnSDK/Editor/Package/wcs-csharp-sdk-1.0.1.0/lib/WcsLib/WcsLib.csproj

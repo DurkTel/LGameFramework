@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace LGameFramework.GameCore.GameEntity
@@ -30,21 +31,7 @@ namespace LGameFramework.GameCore.GameEntity
         /// <summary>
         /// 初始化
         /// </summary>
-        void OnInit(int entity);
-
-        /// <summary>
-        /// 注册数据模型
-        /// </summary>
-        IDataModel RegisterModel<T>() where T : class, IDataModel, new();
-
-        /// <summary>
-        /// 获取属性
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <typeparam name="V"></typeparam>
-        /// <param name="property"></param>
-        /// <returns></returns>
-        V GetPropertyValue<T, V>(string property) where T : class, IDataModel, new();
+        void OnInit(int entity, Dictionary<EEntityAttribute, IProperty> attribute);
 
         /// <summary>
         /// 回收

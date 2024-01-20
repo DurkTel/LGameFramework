@@ -18,6 +18,8 @@ namespace LGameFramework.GameBase
 
         protected readonly List<GameModule> m_WaitToAdd = new List<GameModule>();
 
+        protected readonly static Comparison<GameModule> s_SortModuleFunction = SortModuleList;
+
         protected virtual void OnEnable()
         {
             foreach (GameModule module in m_AllModule)
@@ -56,7 +58,7 @@ namespace LGameFramework.GameBase
             if (m_WaitToAdd.Count > 0)
             {
                 m_AllModule.AddRange(m_WaitToAdd);
-                m_AllModule.Sort(delegate (GameModule a, GameModule b) { return a.Priority - b.Priority; });
+                m_AllModule.Sort(s_SortModuleFunction);
                 m_WaitToAdd.Clear();
             }
         }
@@ -105,6 +107,11 @@ namespace LGameFramework.GameBase
             {
                 module.OnDestroy();
             }
+        }
+
+        private static int SortModuleList(GameModule a, GameModule b)
+        {
+            return a.Priority - b.Priority;
         }
     }
 }

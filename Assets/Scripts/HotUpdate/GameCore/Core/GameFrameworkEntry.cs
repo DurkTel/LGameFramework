@@ -21,7 +21,6 @@ namespace LGameFramework.GameCore
             var entry = go.AddComponent<GameFrameworkEntry>();
             entry.m_GameRoot = go.transform;
             DontDestroyOnLoad(go);
-            DefaultLoadingGUI.SetProgressText("正在进入游戏");
             GameLogger.INFO("游戏入口实例化完成，进入游戏");
         }
 

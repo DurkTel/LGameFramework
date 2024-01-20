@@ -49,7 +49,6 @@ namespace LGameFramework.GameCore.GameScene
         {
             EventUtility.DispatchImmediately(GMEventRegister.SCENE_LOAD_BEGIN, null, CommonEventArg.Get(name));
             GameScene scene = null;
-            DefaultLoadingGUI.SetActive(true);
 
             if (!m_AllScene.TryGetValue(name, out scene))
             {
@@ -92,7 +91,6 @@ namespace LGameFramework.GameCore.GameScene
         {
             SceneManager.sceneLoaded -= OnSceneLoadComplete;
             GameLogger.DEBUG("º”‘ÿÕÍ≥…", Color.green);
-            DefaultLoadingGUI.SetActive(false);
 
             if (m_AllScene.TryGetValue(scene.name, out GameScene gameScene))
             {

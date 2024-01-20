@@ -73,6 +73,15 @@ namespace LGameFramework.GameBase
         }
 
         /// <summary>
+        /// 将实例放回到对象池中
+        /// </summary>
+        /// <param name="item"></param>
+        public static void Release(object item)
+        {
+            GetSubPool(item.GetType()).Release(item);   
+        }
+
+        /// <summary>
         /// 移除将对象池中的实例
         /// </summary>
         /// <param name="count">移除数量</param>
@@ -107,6 +116,7 @@ namespace LGameFramework.GameBase
 
         public static void Release(Dictionary<TKey, TValue> toRelease)
         {
+            toRelease.Clear();
             Pool.Release(toRelease);
         }
     }
@@ -120,6 +130,7 @@ namespace LGameFramework.GameBase
 
         public static void Release(List<TValue> toRelease)
         {
+            toRelease.Clear();
             Pool.Release(toRelease);
         }
     }
@@ -133,6 +144,7 @@ namespace LGameFramework.GameBase
 
         public static void Release(Queue<TValue> toRelease)
         {
+            toRelease.Clear();
             Pool.Release(toRelease);
         }
     }

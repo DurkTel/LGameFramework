@@ -153,7 +153,6 @@ namespace LGameFramework.GameCore
             GameEvent eventNode = GameEvent.Get(id, sender, args);
             HandleEvent(sender, eventNode, false);
             eventNode.Dispose();
-            eventNode = null;
         }
 
         /// <summary>

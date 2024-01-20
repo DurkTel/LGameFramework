@@ -46,9 +46,6 @@ public class ProcedureLauncher : MonoBehaviour
         m_Procedure.AddStatus<ProcedureGameEntry>(ProcedureLaunchProcess.GameEntry);
         
         m_Procedure.OnInit();
-
-        //º”‘ÿ“≥√Ê
-        DefaultLoadingGUI.Instantiate();
     }
 
     private void Update()

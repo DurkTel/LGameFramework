@@ -178,9 +178,6 @@ namespace LGameFramework.GameCore.Fight
             //if (attackIgnore.Contains(toEntity.EntityData.entityType))
             //    return false;
 
-            if (EntityUtility.GetEntityState(toEntity) == EntityState.Death)
-                return false;
-
             return TryMarkFightBroadId(fbId, toEntity);
         }
 

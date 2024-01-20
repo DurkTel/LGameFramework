@@ -78,12 +78,8 @@ namespace LGameFramework.GameCore.Fight
                 //伤害结算
                 fbObject.OnHit(info);
                 //通知实体作受击表现
-                EntityUtility.DispatchComponentEvent(info.ToEntityIds,
-                    GMEntityManager.ComponentEvent.OnRequestHit, CommonEventArg.Get(fbObject));
 
                 //通知实体作击中表现
-                EntityUtility.DispatchComponentEvent(fbObject.FromEntityId,
-                    GMEntityManager.ComponentEvent.OnAttackSuccess, CommonEventArg.Get(fbObject));
             }
         }
 
