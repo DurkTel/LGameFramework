@@ -148,4 +148,18 @@ namespace LGameFramework.GameBase
             Pool.Release(toRelease);
         }
     }
+
+    public class TreePool<TValue>
+    {
+        public static TreeNode<TValue> Get()
+        {
+            return Pool.Get<TreeNode<TValue>>();
+        }
+
+        public static void Release(TreeNode<TValue> toRelease)
+        {
+            toRelease.Clear();
+            Pool.Release(toRelease);
+        }
+    }
 }

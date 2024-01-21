@@ -33,20 +33,12 @@ namespace LGameFramework.GameCore
             //初始化副本管理
             GameLogicEntry.GetModule<GMLevelManager>();
 
-            EntityUtility.EnterEntity(new TestEntity());
+            EntityUtility.EnterEntity(GMEntityArchetype.s_TestEntityArchetype);
         }
 
         public static void OninitWorldMessage()
         {
-            TreeNode<int> rootNode = new TreeNode<int>(0);
-            rootNode.Add(new TreeNode<int>(1));
-            rootNode.Add(new TreeNode<int>(2));
-            foreach (var node in rootNode)
-            {
-                Debug.Log(node.Data);
-            }
-
-
+            
         }
 
 

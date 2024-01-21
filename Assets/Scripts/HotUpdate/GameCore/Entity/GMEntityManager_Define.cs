@@ -17,80 +17,12 @@ namespace LGameFramework.GameCore.GameEntity
             //[typeof(InputResponseComponent)] = 3,
         };
 
-        /// <summary>
-        /// 子实体关联骨骼
-        /// 手持
-        /// </summary>
-        public static Dictionary<ChildBindingBone, string> s_SubEntityHandBone = new Dictionary<ChildBindingBone, string>()
-        {
-            [ChildBindingBone.Normal] = "",
-            [ChildBindingBone.WeaponL] = "Prop_R",
-            [ChildBindingBone.WeaponR] = "Prop_R",
-        };
 
-        /// <summary>
-        /// 子实体关联骨骼
-        /// 收起后
-        /// </summary>
-        public static Dictionary<ChildBindingBone, string> s_SubEntityKeepBone = new Dictionary<ChildBindingBone, string>()
-        {
-            [ChildBindingBone.Normal] = "",
-            [ChildBindingBone.WeaponL] = "Prop_R_Keep",
-            [ChildBindingBone.WeaponR] = "Prop_R_Keep",
-        };
     }
 
-    /// <summary>
-    /// 实体标签
-    /// </summary>
-    public enum EntityTags
-    { 
-        /// <summary>
-        /// 没有标签
-        /// </summary>
-        Untagged,
-        /// <summary>
-        /// 主角
-        /// </summary>
-        MainPlayer,
-        /// <summary>
-        /// 其他玩家
-        /// </summary>
-        Player,
-        /// <summary>
-        /// 怪物
-        /// </summary>
-        Monster,
-        /// <summary>
-        /// 武器
-        /// </summary>
-        Weapon,
-        /// <summary>
-        /// 道具
-        /// </summary>
-        Prop,
-    }
-
-    /// <summary>
-    /// 子实体绑定枚举
-    /// </summary>
-    public enum ChildBindingBone
+    public static class GMEntityArchetype
     {
-        /// <summary>
-        /// 普通
-        /// </summary>
-        Normal,
-        /// <summary>
-        /// 左手武器
-        /// </summary>
-        WeaponL,
-        /// <summary>
-        /// 右手武器
-        /// </summary>
-        WeaponR,
-        /// <summary>
-        /// 道具
-        /// </summary>
-        Prop,
+        public static TestEntity s_TestEntityArchetype = new TestEntity();
     }
+
 }

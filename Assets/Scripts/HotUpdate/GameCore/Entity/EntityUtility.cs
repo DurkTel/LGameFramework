@@ -97,9 +97,9 @@ namespace LGameFramework.GameCore.GameEntity
         /// </summary>
         /// <param name="parentID">父实体ID</param>
         /// <param name="childID">子实体ID</param>
-        public static void AttachChild(int parentID, int childID, string attachBone = "")
+        public static void AttachChild(int parentID, int childID)
         {
-            Instance.AttachChild(parentID, childID, attachBone);
+            Instance.AttachChild(parentID, childID);
         }
 
         /// <summary>

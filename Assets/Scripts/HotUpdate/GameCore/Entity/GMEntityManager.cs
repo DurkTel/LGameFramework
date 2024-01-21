@@ -90,7 +90,6 @@ namespace LGameFramework.GameCore.GameEntity
         internal int EnterEntity(IArchetype archetype)
         {
             int entity = EnterEntity();
-            var tag = archetype.GetTags();
             archetype.OnInitData(entity);
             var coms = archetype.GetComponents();
             if (coms != null && coms.Length > 0)
@@ -143,57 +142,6 @@ namespace LGameFramework.GameCore.GameEntity
         }
 
         #endregion
-
-
-        #region 父子实体
-
-        /// <summary>
-        /// 附加子实体
-        /// </summary>
-        /// <param name="parentID">父实体ID</param>
-        /// <param name="childID">子实体ID</param>
-        internal void AttachChild(int parentID, int childID, string attachBone = "")
-        {
-            
-        }
-
-        /// <summary>
-        /// 解除子实体
-        /// </summary>
-        /// <param name="parentID">父实体ID</param>
-        /// <param name="childID">子实体ID</param>
-        /// <returns></returns>
-        internal bool RelieveChild(int parentID, int childID)
-        {
-            return false;
-        }
-
-        /// <summary>
-        /// 父子实体更新类型
-        /// </summary>
-        public enum ChildUpdateType
-        {
-            /// <summary>
-            /// 添加
-            /// </summary>
-            Add,
-            /// <summary>
-            /// 移除
-            /// </summary>
-            Remove,
-            /// <summary>
-            /// 更新属性
-            /// </summary>
-            Update,
-        }
-
-        #endregion
-
-        #region 未分类
-
-
-        #endregion
-
 
     }
 }

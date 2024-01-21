@@ -1,8 +1,6 @@
 using LGameFramework.GameBase;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace LGameFramework.GameCore.GameEntity
 {
@@ -16,7 +14,7 @@ namespace LGameFramework.GameCore.GameEntity
             command.Dispose();
         }
 
-        internal void SendCommandImmediately<T>(int entity, bool usePool) where T : Command, new()
+        internal void SendCommand<T>(int entity, bool usePool) where T : Command, new()
         {
             T command = usePool ? Pool.Get<T>() : new T();
             HandleCommand(entity, command);
@@ -48,6 +46,7 @@ namespace LGameFramework.GameCore.GameEntity
 
         public void Dispose()
         {
+            m_Entity = -1;
             m_AttributeProperty = null;
         }
     }

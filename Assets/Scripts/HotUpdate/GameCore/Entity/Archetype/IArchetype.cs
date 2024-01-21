@@ -25,10 +25,5 @@ namespace LGameFramework.GameCore.GameEntity
         /// </summary>
         /// <returns></returns>
         Type[] GetComponents();
-        /// <summary>
-        ///  µÃÂ±Í«©
-        /// </summary>
-        /// <returns></returns>
-        EntityTags GetTags();
     }
 }

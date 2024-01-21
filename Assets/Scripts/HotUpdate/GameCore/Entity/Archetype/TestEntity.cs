@@ -5,16 +5,11 @@ using UnityEngine;
 
 namespace LGameFramework.GameCore.GameEntity
 {
-    public struct TestEntity : IArchetype
+    public class TestEntity : IArchetype
     {
         public Type[] GetComponents()
         {
             return null;
-        }
-
-        public EntityTags GetTags()
-        {
-            return EntityTags.MainPlayer;
         }
 
         public void OnCustomOperation(int entity)
