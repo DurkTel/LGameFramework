@@ -1,18 +1,12 @@
-﻿
-using LGameFramework.GameBase;
-using LGameFramework.GameBase.Culling;
-using LGameFramework.GameCore.Asset;
-using LGameFramework.GameCore.GameEntity;
+﻿using LGameFramework.GameBase.Culling;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
-using static LGameFramework.GameCore.Input.GMInputManager;
 
 namespace LGameFramework.GameCore
 {
     /// <summary>
     /// 轨道相机
     /// </summary>
-    [System.Serializable]   
     public class GMOrbitCamera : FrameworkModule
     {
         /// <summary>
@@ -20,6 +14,18 @@ namespace LGameFramework.GameCore
         /// </summary>
         [SerializeField]
         private Transform m_Focus = default;
+        public Transform Focus
+        {
+            get 
+            { 
+                return m_Focus; 
+            } 
+            set
+            {
+                m_Focus = value;
+                m_FocusPoint = value.position;
+            }
+        }
         /// <summary>
         /// 锁定
         /// </summary>
@@ -93,6 +99,12 @@ namespace LGameFramework.GameCore
         /// </summary>
         private ObjectCullingGroup m_ObjectCullingGroup;
         public ObjectCullingGroup ObjectCullingGroup { get { return m_ObjectCullingGroup; } }
+        /// <summary>
+        /// 失活输入
+        /// </summary>
+        private bool m_DisableInput;
+        public bool DisableInput { get { return m_DisableInput; } set { m_DisableInput = value; } }
+
         [SerializeField]
         private bool m_InvertYAxis = true;
         [SerializeField]
@@ -110,8 +122,6 @@ namespace LGameFramework.GameCore
         public override int Priority => 999;
 
         private PostProcessLayer m_PostProcessLayer;
-
-        private bool m_DisableInput;
         private Vector3 CameraHalfExtends
         {
             get
@@ -131,23 +141,21 @@ namespace LGameFramework.GameCore
             m_RegularCamera = GameObject.TryAddComponent<Camera>();
             Transform.localRotation = Quaternion.Euler(m_OrbitAngles);
 
-            m_PostProcessLayer = GameObject.TryAddComponent<PostProcessLayer>();
-            m_PostProcessLayer.Init(AssetUtility.LoadAsset<PostProcessResources>("PostProcessResources.asset"));
-            m_PostProcessLayer.antialiasingMode = PostProcessLayer.Antialiasing.SubpixelMorphologicalAntialiasing;
-            m_PostProcessLayer.volumeLayer = 1;
-            m_PostProcessLayer.volumeTrigger = Transform;
+            var postProcess = AssetUtility.LoadAsset<PostProcessResources>("PostProcessResources.asset");
+            if (postProcess != null)
+            {
+                m_PostProcessLayer = GameObject.TryAddComponent<PostProcessLayer>();
+                m_PostProcessLayer.Init(postProcess);
+                m_PostProcessLayer.antialiasingMode = PostProcessLayer.Antialiasing.SubpixelMorphologicalAntialiasing;
+                m_PostProcessLayer.volumeLayer = 1;
+                m_PostProcessLayer.volumeTrigger = Transform;
+            }
             m_DisableInput = false;
 
             m_ObjectCullingGroup = new ObjectCullingGroup();
             m_ObjectCullingGroup.TargetCamera = m_RegularCamera;
 
             //Cursor.lockState = CursorLockMode.Locked;
-        }
-
-        public void SetFocus(Transform focus)
-        {
-            m_Focus = focus;
-            m_FocusPoint = focus.position;
         }
 
         public override void LateUpdate(float deltaTime, float unscaleDeltaTime)
@@ -292,7 +300,7 @@ namespace LGameFramework.GameCore
             return true;
         }
 
-        private static float GetAngle(Vector2 direction)
+        private float GetAngle(Vector2 direction)
         {
             float angle = Mathf.Acos(direction.y) * Mathf.Rad2Deg;
             return direction.x < 0f ? 360f - angle : angle;
@@ -320,11 +328,6 @@ namespace LGameFramework.GameCore
 
             int id = -1;
             if (id == -1) return;
-        }
-
-        public void SetDisableInput(bool value)
-        { 
-            m_DisableInput = value;   
         }
 
         /// <summary>

@@ -7,22 +7,31 @@ namespace LGameFramework.GameCore.GameEntity
     public sealed partial class GMEntityManager : FrameworkModule
     {
 
-        private void HandleCommand(int entity, Command command)
-        {
-            command.OnInit(entity, m_EntityAttributes[entity]);
-            command.Execute();
-            command.Dispose();
-        }
+        #region √¸¡Ó
 
         internal void SendCommand<T>(int entity, bool usePool) where T : Command, new()
         {
             T command = usePool ? Pool.Get<T>() : new T();
-            HandleCommand(entity, command);
+            command.OnInit(entity, m_EntityAttributes[entity]);
+            command.Execute();
+            command.Dispose();
 
             if (usePool)
                 Pool.Release(command);
         }
 
+        internal void SendCommand<T, V>(int entity, V value, bool usePool) where T : Command<V>, new() where V : struct
+        {
+            T command = usePool ? Pool.Get<T>() : new T();
+            command.OnInit(entity, m_EntityAttributes[entity]);
+            command.Execute(value);
+            command.Dispose();
+
+            if (usePool)
+                Pool.Release(command);
+        }
+
+        #endregion
     }
 
     /// <summary>
@@ -51,4 +60,16 @@ namespace LGameFramework.GameCore.GameEntity
         }
     }
 
+    /// <summary>
+    /// ≥ÈœÛ√¸¡Ó
+    /// </summary>
+    public abstract class Command<T> : Command where T : struct
+    {
+        public abstract void Execute(T value);
+
+        public override void Execute()
+        {
+
+        }
+    }
 }
